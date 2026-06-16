@@ -3,7 +3,7 @@ title: "LLMの前段に「思考状態」を分離する — VLTE-BPTM の設計
 emoji: "🧠"
 type: "tech"
 topics: ["llm", "architecture", "python", "設計", "ai"]
-published: false
+published: true
 ---
 
 > この記事は個人開発中のアーキテクチャ **VLTE-BPTM v1.6（alpha）** の設計思想と、現時点で測れている性能を「限界込み」で共有するものです。完成品の発表ではありません。むしろ「ここまで測れて、ここはまだ未確立」という現在地そのものを記事の主題にしています。
