@@ -1,0 +1,390 @@
+{
+  "schema_version": "conversation-accumulation.v1",
+  "campaign_id": "conversation-v2-readiness-2026-06",
+  "status": "collecting",
+  "started_at": "2026-06-13T15:59:23+09:00",
+  "deadline_at": "2026-06-20T23:59:59+09:00",
+  "target_case_count": 50,
+  "candidate": {
+    "adapter_kind": "deterministic_signal_extractor",
+    "adapter_version": "0.2",
+    "frozen_at": "2026-06-13T15:59:23+09:00"
+  },
+  "policy": {
+    "same_batch_tuning_allowed": false,
+    "active_sealed_v2_must_remain_unread": true,
+    "min_reviewed_cases": 40,
+    "min_end_to_end_accuracy": 0.9,
+    "max_critical_underprocessing": 0
+  },
+  "required_categories": {
+    "conversation_response": 4,
+    "indirect_explanation": 4,
+    "verify_then_build": 4,
+    "mixed_language": 4,
+    "temporal_disambiguation": 4,
+    "compound_intent": 4
+  },
+  "cases": [
+    {
+      "id": "accum-b01-001",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "conversation_response",
+      "language": "ja",
+      "input": "やあ、少し話を聞いてもらえますか。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-002",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "conversation_response",
+      "language": "ja",
+      "input": "助かりました。改めて感謝します。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-003",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "conversation_response",
+      "language": "ja",
+      "input": "計画が止まっていて、気が重いです。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-004",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "conversation_response",
+      "language": "en",
+      "input": "Good evening. I could use someone to think this through with me.",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-005",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "indirect_explanation",
+      "language": "ja",
+      "input": "この処理になる背景を知りたいです。",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-006",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "indirect_explanation",
+      "language": "ja",
+      "input": "内部で何が起きているか、順を追って知りたいです。",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-007",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "indirect_explanation",
+      "language": "en",
+      "input": "Can you help me understand the mechanism behind this cache behavior?",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-008",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "indirect_explanation",
+      "language": "en",
+      "input": "What causes this worker to retry twice?",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-009",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "verify_then_build",
+      "language": "ja",
+      "input": "依存関係を確かめた後、導入手順を作成してください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-010",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "verify_then_build",
+      "language": "en",
+      "input": "Check the assumptions first, and then produce an implementation plan.",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-011",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "verify_then_build",
+      "language": "ja",
+      "input": "仕様の整合性を確認してから、移行のタスク一覧を出してください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-012",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "verify_then_build",
+      "language": "en",
+      "input": "Validate the API contract, then create a rollout plan.",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-013",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "mixed_language",
+      "language": "mixed",
+      "input": "前提をcheckして、その上で移行planを作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-014",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "mixed_language",
+      "language": "mixed",
+      "input": "Could you この挙動の仕組みを説明して?",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-015",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "mixed_language",
+      "language": "mixed",
+      "input": "最新statusを確認して、summaryを3行でお願いします。",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-016",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "mixed_language",
+      "language": "mixed",
+      "input": "この案のalternativesを日本語でcompareしてください。",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-017",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "temporal_disambiguation",
+      "language": "ja",
+      "input": "今日はアーキテクチャの相談をしたいです。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-018",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "temporal_disambiguation",
+      "language": "ja",
+      "input": "今日の為替レートを出典付きで確認してください。",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-019",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "temporal_disambiguation",
+      "language": "ja",
+      "input": "今の気分を少し整理したいです。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-020",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "temporal_disambiguation",
+      "language": "ja",
+      "input": "現時点のAPI料金を確認してください。",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical_underprocessing": true,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-021",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "compound_intent",
+      "language": "ja",
+      "input": "要点をまとめてから、二つの案を比較してください。",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-022",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "compound_intent",
+      "language": "ja",
+      "input": "まず問題を説明し、続けて修正手順を作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-023",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "compound_intent",
+      "language": "en",
+      "input": "Summarize the incident and then compare three recovery options.",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    },
+    {
+      "id": "accum-b01-024",
+      "batch": "batch-01",
+      "collected_at": "2026-06-13T15:59:23+09:00",
+      "category": "compound_intent",
+      "language": "ja",
+      "input": "確認結果を短くまとめ、その後で実装計画を提示してください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical_underprocessing": false,
+      "review_status": "draft"
+    }
+  ]
+}

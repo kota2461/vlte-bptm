@@ -1,0 +1,111 @@
+{
+ "schema_version": "router-deployment-gate.v3",
+ "checks": {
+  "frozen_regression": {
+   "required": "raw 100%; effective may only abstain to clarify",
+   "case_count": 25,
+   "raw_misses": [],
+   "raw_accuracy": 1.0,
+   "effective_violations": [],
+   "abstained_to_clarify": 4,
+   "passed": true,
+   "macro_f1": 1.0
+  },
+  "foundation_anchors": {
+   "required": "raw 100%; effective may only abstain to clarify",
+   "case_count": 58,
+   "raw_misses": [],
+   "raw_accuracy": 1.0,
+   "effective_violations": [],
+   "abstained_to_clarify": 0,
+   "passed": true
+  },
+  "improvement_vs_deployed": {
+   "passed": true,
+   "comparisons": {
+    "validation_accuracy": {
+     "current": 0.7291666666666666,
+     "candidate": 0.7291666666666666,
+     "tolerance": 0.02,
+     "passed": true
+    },
+    "kfold_accuracy": {
+     "current": 0.779528,
+     "candidate": 0.779528,
+     "tolerance": 0.02,
+     "passed": true
+    }
+   }
+  },
+  "fixture_integrity": {
+   "items": [
+    {
+     "fixture": "pattern_router_cases_v1.json",
+     "registered": true,
+     "version": "v1.1",
+     "expected_sha256": "268829B41C5FD9F93662641EC942F83598FC5501450F867997A4FA2458862D5C",
+     "actual_sha256": "268829B41C5FD9F93662641EC942F83598FC5501450F867997A4FA2458862D5C",
+     "passed": true
+    },
+    {
+     "fixture": "foundation_anchor_suite_v1.json",
+     "registered": true,
+     "version": "v1.0",
+     "expected_sha256": "EEC7CDA1B42A186BA11011AE7A682FD035D1DFB165E5BC0AF294FB605D85804C",
+     "actual_sha256": "EEC7CDA1B42A186BA11011AE7A682FD035D1DFB165E5BC0AF294FB605D85804C",
+     "passed": true
+    }
+   ],
+   "passed": true
+  },
+  "minimum_counts": {
+   "items": [
+    {
+     "fixture": "pattern_router_cases_v1.json",
+     "min_case_count": 25,
+     "case_count": 25,
+     "route_shortfalls": {},
+     "passed": true
+    },
+    {
+     "fixture": "foundation_anchor_suite_v1.json",
+     "min_case_count": 58,
+     "case_count": 58,
+     "route_shortfalls": {},
+     "passed": true
+    }
+   ],
+   "passed": true
+  }
+ },
+ "contract_passed": true,
+ "improvement_accepted": true,
+ "passed": true,
+ "decision": "pass",
+ "registry": {
+  "path": "D:\\Thought State Register\\tests\\fixtures\\gate_fixture_registry.json",
+  "versions": {
+   "pattern_router_cases_v1.json": "v1.1",
+   "foundation_anchor_suite_v1.json": "v1.0",
+   "sealed_boundary_slice_v1.json": "v1.0",
+   "sealed_boundary_slice_v2.json": "v2.0"
+  }
+ },
+ "hashes": {
+  "candidate_sha256": "71470C5E3D97973467661E17A66F7A382FE206F288454A7F9D39D305397DDEAC",
+  "deployed_sha256": "71470C5E3D97973467661E17A66F7A382FE206F288454A7F9D39D305397DDEAC",
+  "database_sha256": "4037CFD437991FD0D06EB4311964DEFBCB5D2A72FD62AFCE980498C847A3F4FC",
+  "fixtures": {
+   "pattern_router_cases_v1.json": "268829B41C5FD9F93662641EC942F83598FC5501450F867997A4FA2458862D5C",
+   "foundation_anchor_suite_v1.json": "EEC7CDA1B42A186BA11011AE7A682FD035D1DFB165E5BC0AF294FB605D85804C"
+  }
+ },
+ "candidate_path": "D:\\Thought State Register\\build\\pattern_router_model_candidate.json",
+ "candidate_trained_at": "2026-06-12T06:49:26.745559+00:00",
+ "candidate_sample_count": 254,
+ "evaluated_at": "2026-06-13T08:53:00.353443+00:00",
+ "promotion": {
+  "promoted_at": "2026-06-13T08:53:00.363444+00:00",
+  "archived_previous": "D:\\Thought State Register\\build\\model_history\\deployed_2026-06-13T08-53-00_71470C5E.json"
+ }
+}

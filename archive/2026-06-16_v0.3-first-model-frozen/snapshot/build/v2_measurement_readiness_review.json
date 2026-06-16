@@ -1,0 +1,33 @@
+{
+  "schema_version": "v2-measurement-readiness-review.v1",
+  "reviewed_at": "2026-06-14T07:00:46.585704+00:00",
+  "candidate": {
+    "adapter_kind": "deterministic_signal_extractor",
+    "adapter_version": "0.2",
+    "frozen_at": "2026-06-13T15:59:23+09:00"
+  },
+  "decision": "blocked",
+  "sealed_fixture_opened": false,
+  "sealed_fixture": {
+    "registry_name": "pattern_language_sealed_v2.json",
+    "sha256": "c40b52a890b853367dc4907054a2b1ebca496801e342b03d9243ba36af3bb28d",
+    "case_count": 28,
+    "status": "active",
+    "measured": false,
+    "reviewed": false
+  },
+  "readiness": {
+    "case_count": 50,
+    "target_case_count": 50,
+    "reviewed_count": 50,
+    "required_reviewed_count": 40,
+    "end_to_end_route_accuracy": 0.76,
+    "required_end_to_end_route_accuracy": 0.9,
+    "critical_underprocessing": 0,
+    "allowed_critical_underprocessing": 0
+  },
+  "blocked_reasons": [
+    "accuracy_gate_not_met"
+  ],
+  "next_review_condition": "2026-06-20T23:59:59+09:00 or 50 collected cases, whichever occurs first; at least 40 human-approved cases"
+}

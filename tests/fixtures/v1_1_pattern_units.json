@@ -1,0 +1,59 @@
+{
+  "schema_version": "pattern-unit-catalog.v1",
+  "units": [
+    {
+      "unit_id": "explore",
+      "unit_type": "explore",
+      "label": "Exploration",
+      "keywords": ["idea", "explore", "new", "発想", "構想", "新しい", "検討"],
+      "action_weights": {"reply": 0.7, "explain": 0.8, "creative": 1.0},
+      "channel_schema": "novelty_and_hypothesis_features",
+      "process_mode": "horizontal"
+    },
+    {
+      "unit_id": "build",
+      "unit_type": "build",
+      "label": "Implementation",
+      "keywords": ["implement", "build", "code", "実装", "作成", "設計", "作って"],
+      "action_weights": {"reply": 0.8, "plan": 1.0, "explain": 0.6},
+      "channel_schema": "implementation_and_planning_features",
+      "process_mode": "horizontal"
+    },
+    {
+      "unit_id": "verify",
+      "unit_type": "verify",
+      "label": "Verification",
+      "keywords": ["verify", "review", "risk", "test", "レビュー", "検証", "確認", "リスク", "テスト"],
+      "action_weights": {"reply": 0.7, "verify": 1.0, "caution": 0.8},
+      "channel_schema": "evidence_risk_and_uncertainty_features",
+      "process_mode": "horizontal"
+    },
+    {
+      "unit_id": "summarize",
+      "unit_type": "summarize",
+      "label": "Compression",
+      "keywords": ["summary", "summarize", "要約", "まとめ", "短く"],
+      "action_weights": {"reply": 0.8, "summarize": 1.0},
+      "channel_schema": "salience_and_compression_features",
+      "process_mode": "horizontal"
+    },
+    {
+      "unit_id": "clarify",
+      "unit_type": "clarify",
+      "label": "Clarification",
+      "keywords": ["unclear", "ambiguous", "missing", "不明", "曖昧", "不足", "質問"],
+      "action_weights": {"reply": 0.5, "ask": 1.0, "caution": 0.5},
+      "channel_schema": "ambiguity_and_missing_information_features",
+      "process_mode": "horizontal"
+    },
+    {
+      "unit_id": "respond",
+      "unit_type": "respond",
+      "label": "Direct Response",
+      "keywords": ["hello", "thank", "good morning", "good evening", "good night", "こんにちは", "おはよう", "こんばんは", "ありがとう", "さようなら", "はじめまして", "おやすみ"],
+      "action_weights": {"reply": 1.0, "explain": 0.4},
+      "channel_schema": "speech_style_and_response_features",
+      "process_mode": "horizontal"
+    }
+  ]
+}

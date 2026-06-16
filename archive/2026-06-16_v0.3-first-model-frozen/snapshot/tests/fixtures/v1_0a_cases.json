@@ -1,0 +1,66 @@
+[
+  {
+    "name": "light_chat",
+    "input": "こんにちは",
+    "expected_profile": "light_v1",
+    "active_bit_range": [4, 10],
+    "required_units": ["respond"],
+    "expected_mode": "respond"
+  },
+  {
+    "name": "implementation_design",
+    "input": "この機能をPythonで実装して設計してください",
+    "expected_profile": "design_v1",
+    "active_bit_range": [14, 28],
+    "required_units": ["build"],
+    "expected_mode": "build"
+  },
+  {
+    "name": "deep_verification",
+    "input": "この設計のリスクと問題をレビューして検証してください",
+    "expected_profile": "deep_verify_v1",
+    "active_bit_range": [20, 36],
+    "required_units": ["verify"],
+    "expected_mode": "verify"
+  },
+  {
+    "name": "summary",
+    "input": "この文章を短く要約してください",
+    "expected_profile": "normal_v1",
+    "active_bit_range": [8, 18],
+    "required_units": ["summarize"],
+    "expected_mode": "summarize"
+  },
+  {
+    "name": "exploration",
+    "input": "新しいアイデアと代替案を検討してください",
+    "expected_profile": "normal_v1",
+    "active_bit_range": [8, 18],
+    "required_units": ["explore"],
+    "expected_mode": "explore"
+  },
+  {
+    "name": "clarification",
+    "input": "情報が不足していて曖昧なので質問してください",
+    "expected_profile": "normal_v1",
+    "active_bit_range": [8, 18],
+    "required_units": ["clarify"],
+    "expected_mode": "clarify"
+  },
+  {
+    "name": "english_greeting",
+    "input": "Hello",
+    "expected_profile": "light_v1",
+    "active_bit_range": [4, 10],
+    "required_units": ["respond"],
+    "expected_mode": "respond"
+  },
+  {
+    "name": "empty_input",
+    "input": "",
+    "expected_profile": "light_v1",
+    "active_bit_range": [4, 10],
+    "required_units": ["clarify"],
+    "expected_mode": "clarify"
+  }
+]

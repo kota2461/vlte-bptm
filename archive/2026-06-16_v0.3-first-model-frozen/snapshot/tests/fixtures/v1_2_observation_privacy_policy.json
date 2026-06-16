@@ -1,0 +1,20 @@
+{
+  "schema_version": "observation-privacy-policy.v1",
+  "storage_schema_version": "vlte-bptm.observation-store.v1",
+  "minimum_cohort_size": 8,
+  "minimum_cell_count": 3,
+  "bucket_hours": 24,
+  "retention_days": 30,
+  "immutable_buckets": true,
+  "persisted_aggregates": [
+    "active_bit_frequency",
+    "active_bit_count_distribution",
+    "selected_unit_frequency",
+    "selected_unit_count_distribution",
+    "threshold_profile_frequency",
+    "llm_order_mode_frequency"
+  ],
+  "excluded_aggregates": [
+    "selected_unit_combination_frequency"
+  ]
+}

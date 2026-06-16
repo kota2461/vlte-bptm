@@ -1,0 +1,61 @@
+{
+  "schema_version": "pattern-unit-catalog.v1",
+  "description": "Frozen Horizontal Pattern Unit catalog for VLTE-BPTM v1.1. Order is part of the reviewable catalog, while selector ranking remains score-based.",
+  "process_mode": "horizontal",
+  "units": [
+    {
+      "unit_id": "explore",
+      "unit_type": "explore",
+      "label": "Exploration",
+      "keywords": ["idea", "explore", "new", "発想", "構想", "新しい", "検討"],
+      "action_weights": {"reply": 0.7, "explain": 0.8, "creative": 1.0},
+      "channel_schema": "novelty_and_hypothesis_features",
+      "rationale": "Generate and compare alternatives without committing to an implementation."
+    },
+    {
+      "unit_id": "build",
+      "unit_type": "build",
+      "label": "Implementation",
+      "keywords": ["implement", "build", "code", "実装", "作成", "設計", "作って"],
+      "action_weights": {"reply": 0.8, "plan": 1.0, "explain": 0.6},
+      "channel_schema": "implementation_and_planning_features",
+      "rationale": "Turn an accepted intent into an implementation-oriented plan or artifact."
+    },
+    {
+      "unit_id": "verify",
+      "unit_type": "verify",
+      "label": "Verification",
+      "keywords": ["verify", "review", "risk", "test", "レビュー", "検証", "確認", "リスク", "テスト"],
+      "action_weights": {"reply": 0.7, "verify": 1.0, "caution": 0.8},
+      "channel_schema": "evidence_risk_and_uncertainty_features",
+      "rationale": "Check assumptions, evidence, risks, and correctness before concluding."
+    },
+    {
+      "unit_id": "summarize",
+      "unit_type": "summarize",
+      "label": "Compression",
+      "keywords": ["summary", "summarize", "要約", "まとめ", "短く"],
+      "action_weights": {"reply": 0.8, "summarize": 1.0},
+      "channel_schema": "salience_and_compression_features",
+      "rationale": "Compress the input while preserving required decisions and salient facts."
+    },
+    {
+      "unit_id": "clarify",
+      "unit_type": "clarify",
+      "label": "Clarification",
+      "keywords": ["unclear", "ambiguous", "missing", "不明", "曖昧", "不足", "質問"],
+      "action_weights": {"reply": 0.5, "ask": 1.0, "caution": 0.5},
+      "channel_schema": "ambiguity_and_missing_information_features",
+      "rationale": "Ask for information required to continue when the request is underspecified."
+    },
+    {
+      "unit_id": "respond",
+      "unit_type": "respond",
+      "label": "Direct Response",
+      "keywords": ["hello", "thank", "good morning", "good evening", "good night", "こんにちは", "おはよう", "こんばんは", "ありがとう", "さようなら", "はじめまして", "おやすみ"],
+      "action_weights": {"reply": 1.0, "explain": 0.4},
+      "channel_schema": "speech_style_and_response_features",
+      "rationale": "Provide the default direct response, including greetings and straightforward answers."
+    }
+  ]
+}

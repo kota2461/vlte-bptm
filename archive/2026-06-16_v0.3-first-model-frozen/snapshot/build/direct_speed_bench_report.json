@@ -1,0 +1,59 @@
+{
+  "note": "router vs no-router speed; LLM output NOT training data",
+  "base": "http://192.168.10.124:1234",
+  "heavy_model": "google/gemma-4-12b-qat",
+  "results": [
+    {
+      "input": "こんにちは",
+      "no_router": {
+        "seconds": 4.86,
+        "model": "google/gemma-4-12b-qat"
+      },
+      "router": {
+        "seconds": 0.0053,
+        "via": "direct",
+        "model": "(direct)"
+      },
+      "speedup": 908.5
+    },
+    {
+      "input": "ありがとう！",
+      "no_router": {
+        "seconds": 6.713,
+        "model": "google/gemma-4-12b-qat"
+      },
+      "router": {
+        "seconds": 0.0002,
+        "via": "direct",
+        "model": "(direct)"
+      },
+      "speedup": 27547.6
+    },
+    {
+      "input": "おはよう",
+      "no_router": {
+        "seconds": 4.815,
+        "model": "google/gemma-4-12b-qat"
+      },
+      "router": {
+        "seconds": 0.0002,
+        "via": "direct",
+        "model": "(direct)"
+      },
+      "speedup": 21402.2
+    },
+    {
+      "input": "なぜ空は青いのか教えて",
+      "no_router": {
+        "seconds": 14.947,
+        "model": "google/gemma-4-12b-qat"
+      },
+      "router": {
+        "seconds": 30.1185,
+        "via": "content",
+        "model": "google/gemma-4-e4b"
+      },
+      "speedup": 0.5
+    }
+  ]
+}

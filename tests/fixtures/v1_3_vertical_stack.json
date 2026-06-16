@@ -1,0 +1,40 @@
+{
+  "schema_version": "vertical-unit-stack.v1",
+  "output_schema_version": "vertical-unit-output.v1",
+  "max_depth": 4,
+  "root_unit_by_mode": {
+    "clarify": "clarify",
+    "build": "build",
+    "verify": "verify",
+    "summarize": "summarize",
+    "explore": "explore",
+    "explain": "respond",
+    "respond": "respond"
+  },
+  "input_dependencies": {
+    "explore": [],
+    "build": ["verify"],
+    "verify": [],
+    "summarize": [],
+    "clarify": [],
+    "respond": []
+  },
+  "verification_policy": {
+    "verifier_unit_id": "verify",
+    "required_before": ["build"]
+  },
+  "blocking_policy": {
+    "signal_unit_id": "clarify",
+    "blocks_targets": ["build"],
+    "minimum_relative_score": 0.85
+  },
+  "allowed_output_statuses": ["completed", "blocked"],
+  "stop_reasons": [
+    "unresolved_clarification",
+    "missing_dependency_output",
+    "invalid_output_contract",
+    "dependency_failed",
+    "verification_failed",
+    "unverified_assumption"
+  ]
+}

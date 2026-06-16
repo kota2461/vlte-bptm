@@ -1,0 +1,126 @@
+{
+  "schema_version": "intent-foundation-anchor-suite.v1",
+  "description": "Unambiguous per-intent anchors; raw IntentModel.predict must match. Disjoint from the measurement campaign.",
+  "cases": [
+    {
+      "input": "こんにちは、今日はいい天気ですね",
+      "intent": "respond"
+    },
+    {
+      "input": "ありがとう、とても助かりました",
+      "intent": "respond"
+    },
+    {
+      "input": "おはよう！よく眠れた？",
+      "intent": "respond"
+    },
+    {
+      "input": "了解です、また連絡しますね",
+      "intent": "respond"
+    },
+    {
+      "input": "Hi there, how is it going?",
+      "intent": "respond"
+    },
+    {
+      "input": "なぜ鉄は錆びるのか説明して",
+      "intent": "explain"
+    },
+    {
+      "input": "光合成の仕組みを教えて",
+      "intent": "explain"
+    },
+    {
+      "input": "どうして月は満ち欠けするのか教えて",
+      "intent": "explain"
+    },
+    {
+      "input": "エンジンが動く原理を説明してほしい",
+      "intent": "explain"
+    },
+    {
+      "input": "Explain why the ocean looks blue",
+      "intent": "explain"
+    },
+    {
+      "input": "引っ越しの段取りを作って",
+      "intent": "build"
+    },
+    {
+      "input": "新人向けの研修プランを作成して",
+      "intent": "build"
+    },
+    {
+      "input": "デプロイ手順のチェックリストを用意して",
+      "intent": "build"
+    },
+    {
+      "input": "会議のアジェンダのドラフトを書いて",
+      "intent": "build"
+    },
+    {
+      "input": "Make a step-by-step plan for the launch",
+      "intent": "build"
+    },
+    {
+      "input": "この計算が正しいか確認して: 8×7=54",
+      "intent": "verify"
+    },
+    {
+      "input": "この見積もりが妥当か検証して",
+      "intent": "verify"
+    },
+    {
+      "input": "合計金額が合っているか確かめて",
+      "intent": "verify"
+    },
+    {
+      "input": "この文章に誤りがないかチェックして",
+      "intent": "verify"
+    },
+    {
+      "input": "Check whether this statement is accurate",
+      "intent": "verify"
+    },
+    {
+      "input": "この記事を3行で要約して",
+      "intent": "summarize"
+    },
+    {
+      "input": "議事録の要点をまとめて",
+      "intent": "summarize"
+    },
+    {
+      "input": "長い報告書を短くまとめて",
+      "intent": "summarize"
+    },
+    {
+      "input": "この章の概要を簡潔にまとめて",
+      "intent": "summarize"
+    },
+    {
+      "input": "Summarize the key points of this report",
+      "intent": "summarize"
+    },
+    {
+      "input": "選択肢をいくつか比較して提案して",
+      "intent": "explore"
+    },
+    {
+      "input": "代替案をいくつか出してほしい",
+      "intent": "explore"
+    },
+    {
+      "input": "詳細はまだ伝えていませんが、進めてください",
+      "intent": "clarify"
+    },
+    {
+      "input": "条件が不足しています。先に質問してください",
+      "intent": "clarify"
+    },
+    {
+      "input": "Some details are not provided; ask me first",
+      "intent": "clarify"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+ "schema_version": "foundation-anchor-suite.v1",
+ "frozen_at": "2026-06-11T08:24:27.111532+00:00",
+ "selection_rule": "rating-5 patterns from tier-0 curricula (math-v1, language-v1); cases the deployed model misrouted at freeze time are excluded (ratchet) and listed under metadata.excluded",
+ "training_overlap": "all cases are approved training patterns; this suite is a self-consistency contract, not a generalization estimate",
+ "deployed_model_at_freeze": "2026-06-11T07:58:44.131450+00:00",
+ "excluded": [],
+ "cases": [
+  {
+   "source": "math-v1",
+   "input": "「7」という数字が表す量を説明してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "0という数の意味を説明してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "5と8はどちらが大きいですか",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "12と21の大小を比較してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "1から10まで順番に数えてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "23の十の位の数字は何ですか",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "偶数とは何か定義してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "3+5を計算してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "答えが8になる足し算の組み合わせをいくつか挙げてください",
+   "route": "explore"
+  },
+  {
+   "source": "math-v1",
+   "input": "3+5=9が正しいかどうか確認してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "3+5と5+3の結果が等しい理由を説明してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "9-4を計算してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "7×6を計算してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "56÷8を計算してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "1/2と1/3を通分して大小を比較してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "0.5と1/2が等しいことを確認してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "太郎は鉛筆を12本持っていて、友達に何本かあげました。残りは何本ですか",
+   "route": "clarify"
+  },
+  {
+   "source": "math-v1",
+   "input": "一次方程式 2x+3=11 を解いてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "連立方程式 x+y=10, x-y=2 を解いてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "x^2-5x+6 を因数分解してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "三角形の内角の和が180度になることを証明してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "サイコロを1回振って偶数が出る確率を求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "√2が無理数であることの証明を検証してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "鶴亀算の文章題を連立方程式で解く手順を設計してください",
+   "route": "build"
+  },
+  {
+   "source": "math-v1",
+   "input": "二次関数 y=x^2-4x+3 の頂点と最小値を求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "二次方程式 x^2+2x+k=0 が実数解を持つkの条件を求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "sin30°+cos60° の値を計算してください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "等差数列 3,7,11,... の一般項を求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "1+2+...+n = n(n+1)/2 を数学的帰納法で証明してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "関数 f(x)=x^3-3x の極値を微分を使って求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "曲線 y=x^2 とx軸およびx=1で囲まれた面積を積分で求めてください",
+   "route": "respond"
+  },
+  {
+   "source": "math-v1",
+   "input": "極限 lim(x→0) sinx/x = 1 の計算結果を検証してください",
+   "route": "verify"
+  },
+  {
+   "source": "math-v1",
+   "input": "二次方程式の解法を平方完成と判別式の二通りで比較してください",
+   "route": "explore"
+  },
+  {
+   "source": "math-v1",
+   "input": "この長い証明の要点を短く要約してください",
+   "route": "summarize"
+  },
+  {
+   "source": "math-v1",
+   "input": "三角比を使った測量問題の解法プランを設計してください",
+   "route": "build"
+  },
+  {
+   "source": "math-v1",
+   "input": "8になる別のたし算を考えてください",
+   "route": "explore"
+  },
+  {
+   "source": "language-v1",
+   "input": "こんにちは",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "おはようございます",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "ありがとうございます",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "はじめまして、よろしくお願いします",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Hello!",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Good morning!",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Thank you so much!",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Nice to meet you.",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "「猫が魚を食べた」の主語と述語を見つけてください",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "「は」と「が」の使い方の違いを比較してください",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "敬語とは何か説明してください",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "「雨が降ったので、試合は中止になった」の因果関係を説明してください",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "この段落を一文に要約してください",
+   "route": "summarize"
+  },
+  {
+   "source": "language-v1",
+   "input": "この文の敬語の使い方が正しいか確認してください",
+   "route": "verify"
+  },
+  {
+   "source": "language-v1",
+   "input": "同じ意味になる別の言い方をいくつか考えてください",
+   "route": "explore"
+  },
+  {
+   "source": "language-v1",
+   "input": "Translate \"Good morning\" into Japanese.",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "What does the word \"apple\" mean?",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Find the subject and the verb in \"The cat eats fish\".",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Compare the present tense and the past tense in English.",
+   "route": "respond"
+  },
+  {
+   "source": "language-v1",
+   "input": "Verify whether this sentence is grammatically correct: \"He go to school.\"",
+   "route": "verify"
+  },
+  {
+   "source": "language-v1",
+   "input": "Summarize this English paragraph in one sentence.",
+   "route": "summarize"
+  },
+  {
+   "source": "language-v1",
+   "input": "Suggest several different ways to say \"thank you\".",
+   "route": "explore"
+  }
+ ]
+}

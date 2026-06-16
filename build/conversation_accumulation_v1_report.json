@@ -1,0 +1,1708 @@
+{
+  "schema_version": "conversation-accumulation-report.v1",
+  "generated_at": "2026-06-14T07:00:46.441200+00:00",
+  "campaign_id": "conversation-v2-readiness-2026-06",
+  "candidate": {
+    "adapter_kind": "deterministic_signal_extractor",
+    "adapter_version": "0.2",
+    "frozen_at": "2026-06-13T15:59:23+09:00"
+  },
+  "active_sealed_v2_read": false,
+  "collection": {
+    "status": "ready_for_review",
+    "case_count": 50,
+    "target_case_count": 50,
+    "target_reached": true,
+    "deadline_at": "2026-06-20T23:59:59+09:00",
+    "deadline_reached": false,
+    "collection_stop_reached": true,
+    "reviewed_count": 50,
+    "rejected_count": 0,
+    "required_reviewed_count": 40,
+    "coverage": {
+      "conversation_response": {
+        "count": 7,
+        "required": 4,
+        "met": true
+      },
+      "indirect_explanation": {
+        "count": 9,
+        "required": 4,
+        "met": true
+      },
+      "verify_then_build": {
+        "count": 11,
+        "required": 4,
+        "met": true
+      },
+      "mixed_language": {
+        "count": 6,
+        "required": 4,
+        "met": true
+      },
+      "temporal_disambiguation": {
+        "count": 6,
+        "required": 4,
+        "met": true
+      },
+      "compound_intent": {
+        "count": 11,
+        "required": 4,
+        "met": true
+      }
+    },
+    "coverage_met": true
+  },
+  "measurements": {
+    "semantic_intent_accuracy": 0.8,
+    "processing_plan_accuracy": 0.9,
+    "end_to_end_route_accuracy": 0.76,
+    "passed": 38,
+    "failed": 12,
+    "critical_underprocessing": 0
+  },
+  "gates": {
+    "review_gate_met": true,
+    "accuracy_gate_met": false,
+    "critical_underprocessing_gate_met": true,
+    "visible_benchmark_overlap_count": 0,
+    "visible_benchmark_overlap": [],
+    "eligible_for_sealed_v2_measurement": false
+  },
+  "results": [
+    {
+      "id": "accum-b01-001",
+      "batch": "batch-01",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-002",
+      "batch": "batch-01",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.79,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-003",
+      "batch": "batch-01",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-004",
+      "batch": "batch-01",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.79,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-005",
+      "batch": "batch-01",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-006",
+      "batch": "batch-01",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-007",
+      "batch": "batch-01",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-008",
+      "batch": "batch-01",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-009",
+      "batch": "batch-01",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-010",
+      "batch": "batch-01",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-011",
+      "batch": "batch-01",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-012",
+      "batch": "batch-01",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-013",
+      "batch": "batch-01",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-014",
+      "batch": "batch-01",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-015",
+      "batch": "batch-01",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "summarize",
+          "search"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "current_information_required",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "summarize"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-016",
+      "batch": "batch-01",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "confidence": 0.81,
+        "reason_codes": [
+          "primary_explore",
+          "exploration_requested",
+          "comparison_requested"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-017",
+      "batch": "batch-01",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-018",
+      "batch": "batch-01",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "confidence": 0.8300000000000001,
+        "reason_codes": [
+          "primary_verify",
+          "current_information_required",
+          "verification_requested",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "verify"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-019",
+      "batch": "batch-01",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "current_information_required",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "respond"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": false,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-020",
+      "batch": "batch-01",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "confidence": 0.8300000000000001,
+        "reason_codes": [
+          "primary_verify",
+          "unverified_claims",
+          "current_information_required",
+          "verification_requested",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "verify"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-021",
+      "batch": "batch-01",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "comparison_requested"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-022",
+      "batch": "batch-01",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "build"
+        ],
+        "confidence": 0.8200000000000001,
+        "reason_codes": [
+          "primary_build",
+          "multiple_intents"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-023",
+      "batch": "batch-01",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "multiple_intents",
+          "comparison_requested"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b01-024",
+      "batch": "batch-01",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "summarize"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "multiple_intents"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-001",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "verify"
+        ],
+        "confidence": 0.8300000000000001,
+        "reason_codes": [
+          "primary_verify",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-002",
+      "batch": "batch-02",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-003",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": false,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-004",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-005",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-006",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.79,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": false,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-007",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "verify"
+        ],
+        "confidence": 0.8300000000000001,
+        "reason_codes": [
+          "primary_verify",
+          "unverified_claims",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-008",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-009",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "summarize"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": false,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-010",
+      "batch": "batch-02",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": false,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-011",
+      "batch": "batch-02",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "confidence": 0.8300000000000001,
+        "reason_codes": [
+          "primary_verify",
+          "unverified_claims",
+          "verification_requested",
+          "calculator_required"
+        ],
+        "vertical_execution_order": [
+          "verify"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-012",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-013",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "confidence": 0.81,
+        "reason_codes": [
+          "primary_explore",
+          "exploration_requested",
+          "comparison_requested"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-014",
+      "batch": "batch-02",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-015",
+      "batch": "batch-02",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-016",
+      "batch": "batch-02",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-017",
+      "batch": "batch-02",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-018",
+      "batch": "batch-02",
+      "category": "indirect_explanation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-019",
+      "batch": "batch-02",
+      "category": "conversation_response",
+      "review_status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "respond"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-020",
+      "batch": "batch-02",
+      "category": "verify_then_build",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ]
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-021",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "summarize"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "multiple_intents"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-022",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "explore"
+        ],
+        "confidence": 0.81,
+        "reason_codes": [
+          "primary_explore",
+          "exploration_requested"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-023",
+      "batch": "batch-02",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "confidence": 0.79,
+        "reason_codes": [
+          "primary_respond",
+          "current_information_required",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "respond"
+        ]
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-024",
+      "batch": "batch-02",
+      "category": "temporal_disambiguation",
+      "review_status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "confidence": 0.62,
+        "reason_codes": [
+          "primary_respond",
+          "current_information_required",
+          "web_search_required"
+        ],
+        "vertical_execution_order": [
+          "respond"
+        ]
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-025",
+      "batch": "batch-02",
+      "category": "mixed_language",
+      "review_status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "operations": [
+          "explain"
+        ],
+        "confidence": 0.8,
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
+        "critical_underprocessing": false
+      }
+    },
+    {
+      "id": "accum-b02-026",
+      "batch": "batch-02",
+      "category": "compound_intent",
+      "review_status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "operations": [
+          "summarize"
+        ],
+        "confidence": 0.8400000000000001,
+        "reason_codes": [
+          "primary_summarize",
+          "multiple_intents"
+        ],
+        "vertical_execution_order": null
+      },
+      "checks": {
+        "semantic_intent": false,
+        "processing_plan": true,
+        "end_to_end": false,
+        "critical_underprocessing": false
+      }
+    }
+  ]
+}

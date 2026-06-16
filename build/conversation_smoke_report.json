@@ -1,0 +1,848 @@
+{
+  "schema_version": "conversation-smoke-report.v1",
+  "generated_at": "2026-06-13T06:16:21.727881+00:00",
+  "scope": "deterministic Semantic Adapter -> Processing Router -> Core shadow; answer generation is not evaluated",
+  "active_sealed_v2_read": false,
+  "case_count": 18,
+  "metrics": {
+    "semantic_intent_accuracy": 1.0,
+    "processing_plan_accuracy": 1.0,
+    "end_to_end_route_accuracy": 1.0,
+    "passed": 18,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "conversation-01",
+      "category": "greeting",
+      "input": "こんにちは！今日は少し相談したいです。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "semantic_confidence": 0.79,
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.214726
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-02",
+      "category": "gratitude",
+      "input": "ありがとうございます。とても助かりました。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "semantic_confidence": 0.79,
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.224852
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-03",
+      "category": "explanation",
+      "input": "なぜキャッシュを使うと応答が速くなるのか説明してください。",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "semantic_confidence": 0.8,
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.259823
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-04",
+      "category": "missing_information",
+      "input": "費用を計算してください。ただし利用人数はまだ伝えていません。",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "clarify",
+        "semantic_confidence": 0.8500000000000001,
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "clarify",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_clarify",
+          "missing_required_information"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "clarify",
+        "legacy_effective_route": "clarify",
+        "legacy_confidence": 0.188274
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-05",
+      "category": "summary",
+      "input": "この打ち合わせ内容を3行で要約してください。",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "summarize",
+        "semantic_confidence": 0.8400000000000001,
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_summarize",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "summarize",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "summarize",
+        "legacy_effective_route": "summarize",
+        "legacy_confidence": 0.210615
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-06",
+      "category": "current_verification",
+      "input": "現在の料金が正しいか、出典付きで確認してください。",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "semantic_confidence": 0.8300000000000001,
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "reason_codes": [
+          "primary_verify",
+          "unverified_claims",
+          "current_information_required",
+          "verification_requested",
+          "web_search_required"
+        ],
+        "core_llm_mode": "verify",
+        "vertical_execution_order": [
+          "verify"
+        ],
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "verify",
+        "legacy_effective_route": "verify",
+        "legacy_confidence": 0.241218
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-07",
+      "category": "implementation",
+      "input": "認証機能の実装計画を作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "standard",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "build",
+        "semantic_confidence": 0.8200000000000001,
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "standard",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_build",
+          "implementation_requested"
+        ],
+        "core_llm_mode": "build",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "build",
+        "legacy_effective_route": "build",
+        "legacy_confidence": 0.262053
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-08",
+      "category": "verify_then_build",
+      "input": "前提の妥当性を検証し、その上で実装計画を作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "semantic_confidence": 0.8400000000000001,
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "core_llm_mode": "verify",
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ],
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "build",
+        "legacy_effective_route": "build",
+        "legacy_confidence": 0.227384
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-09",
+      "category": "alternatives",
+      "input": "障害を減らす複数の案を挙げて比較してください。",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "explore",
+        "semantic_confidence": 0.81,
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "reason_codes": [
+          "primary_explore",
+          "exploration_requested",
+          "comparison_requested"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": {
+          "stack_id": "respond",
+          "unit_id": "respond"
+        },
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.210086
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-10",
+      "category": "mixed_language_compound",
+      "input": "このAPI仕様を確認し、その上でimplementation planを作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "build",
+        "semantic_confidence": 0.8400000000000001,
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "reason_codes": [
+          "primary_build",
+          "verification_requested"
+        ],
+        "core_llm_mode": "verify",
+        "vertical_execution_order": [
+          "verify",
+          "build"
+        ],
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "build",
+        "legacy_effective_route": "build",
+        "legacy_confidence": 0.285021
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-11",
+      "category": "legal_current",
+      "input": "現在の法律に照らして、この契約条項が妥当か確認してください。",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "verify",
+        "semantic_confidence": 0.8300000000000001,
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "processing_class": "verified",
+        "core_mode": "vertical",
+        "reason_codes": [
+          "primary_verify",
+          "current_information_required",
+          "verification_requested",
+          "high_risk",
+          "web_search_required"
+        ],
+        "core_llm_mode": "verify",
+        "vertical_execution_order": [
+          "verify"
+        ],
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "verify",
+        "legacy_effective_route": "verify",
+        "legacy_confidence": 0.206957
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-12",
+      "category": "negative_constraint",
+      "input": "コードは不要なので、移行の作業計画だけ作ってください。",
+      "expected": {
+        "intent": "build",
+        "processing_class": "standard",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "build",
+        "semantic_confidence": 0.8200000000000001,
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "standard",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_build",
+          "implementation_requested"
+        ],
+        "core_llm_mode": "build",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "build",
+        "legacy_effective_route": "build",
+        "legacy_confidence": 0.204904
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-13",
+      "category": "indirect_explanation",
+      "input": "この挙動、どうしてこうなるんでしょうか。",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "semantic_confidence": 0.8,
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.23029
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-14",
+      "category": "emotional_conversation",
+      "input": "プロジェクトがうまく進まず、少し不安になっています。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "semantic_confidence": 0.79,
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "verify",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.215414
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-15",
+      "category": "summary_and_compare",
+      "input": "この議論を要約し、その上で選択肢のリスクを比較してください。",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "semantic_confidence": 0.8400000000000001,
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "reason_codes": [
+          "primary_summarize",
+          "multiple_intents",
+          "comparison_requested"
+        ],
+        "core_llm_mode": "summarize",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": {
+          "stack_id": "summarize",
+          "unit_id": "summarize"
+        },
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.197737
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-16",
+      "category": "direct_fact",
+      "input": "Pythonで辞書を作る記号は何ですか。",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "semantic_confidence": 0.79,
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_respond",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "summarize",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "respond",
+        "legacy_effective_route": "respond",
+        "legacy_confidence": 0.237515
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-17",
+      "category": "indirect_english_explanation",
+      "input": "Could you walk me through what makes this retry policy safe?",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "explain",
+        "semantic_confidence": 0.8,
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "economy",
+        "core_mode": "horizontal",
+        "reason_codes": [
+          "primary_explain",
+          "low_risk_direct_path"
+        ],
+        "core_llm_mode": "respond",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": null,
+        "legacy_raw_route": "verify",
+        "legacy_effective_route": "clarify",
+        "legacy_confidence": 0.18948
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    },
+    {
+      "id": "conversation-18",
+      "category": "ironic_exploration",
+      "input": "この完璧な案にも、念のためalternativesをいくつか挙げてください。",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "explore",
+        "semantic_confidence": 0.81,
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "processing_class": "deep",
+        "core_mode": "hybrid",
+        "reason_codes": [
+          "primary_explore",
+          "exploration_requested"
+        ],
+        "core_llm_mode": "clarify",
+        "vertical_execution_order": null,
+        "hybrid_next_dispatch": {
+          "stack_id": "clarify",
+          "unit_id": "clarify"
+        },
+        "legacy_raw_route": "explore",
+        "legacy_effective_route": "explore",
+        "legacy_confidence": 0.218168
+      },
+      "checks": {
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true
+      }
+    }
+  ]
+}

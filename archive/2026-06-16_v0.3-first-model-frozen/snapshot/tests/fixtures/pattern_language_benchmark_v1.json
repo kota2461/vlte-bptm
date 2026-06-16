@@ -1,0 +1,3525 @@
+{
+ "schema_version": "pattern-language-benchmark.v1",
+ "frozen_at": "2026-06-12T08:30:00+00:00",
+ "authoring_method": "specification-derived AI-assisted draft; labels reviewed and approved by the human operator on 2026-06-13; no teacher answers, logits, hidden reasoning, or copied source text",
+ "review_status": "human_reviewed",
+ "policy": "train and validation are human-reviewed and may be used for adapter analysis; the sealed split was opened during human review on 2026-06-13 and is consumed; use pattern_language_sealed_v2.json for the next sealed measurement",
+ "cases": [
+  {
+   "id": "plm-train-respond-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "HTTPの正式名称は何ですか。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 10,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-respond-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "富士山の標高を教えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 7,
+      "end": 10
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-respond-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does CPU stand for?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-respond-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Name the smallest prime number.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 8
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-respond-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この値の単位だけを短く答えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 9,
+      "end": 11
+     },
+     {
+      "signal": "direct_response_request",
+      "start": 11,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-respond-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この記号が示す意味を教えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 10,
+      "end": 13
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-respond-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Tell me the file extension used for JSON.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-respond-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Which port is normally associated with HTTPS?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 5
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-respond-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "円周率の先頭3桁を答えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 9,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-respond-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この略語の読み方を教えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 9,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-respond-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What is the result of 9 minus 4?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-respond-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Who is the author named in this citation?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 6
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explain-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "キャッシュが応答を速くする仕組みを説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 13,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explain-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "なぜ主キーが必要なのか説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 2
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explain-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain how a checksum detects corruption.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explain-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Why does indexing improve some database queries?",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 3
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explain-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この方式を採用する理由を簡潔に説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 9,
+      "end": 11
+     },
+     {
+      "signal": "short_response",
+      "start": 12,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explain-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "非同期処理が待ち時間を隠す仕組みを説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 13,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explain-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Describe how dependency injection works.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explain-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain the reason this request is idempotent.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explain-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "なぜこの検査が必要なのか教えてください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 2
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explain-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "このアルゴリズムが収束する仕組みを詳しく説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "long",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 13,
+      "end": 16
+     },
+     {
+      "signal": "long_response",
+      "start": 17,
+      "end": 20
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explain-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "How does a reverse proxy protect an application server?",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 8
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explain-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why the two results differ.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-clarify-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "見積もりを作ってください。利用者数はまだ伝えていません。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 18,
+      "end": 27
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-clarify-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "導入手順が必要ですが、対象OSはまだ決めていません。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 16,
+      "end": 25
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-clarify-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Estimate the cost, but the number of licenses was not provided.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 50,
+      "end": 62
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-clarify-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Before answering, ask me which database version is installed.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 0,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-clarify-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "必要な情報が不足しています。先に質問してください。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 6,
+      "end": 13
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 14,
+      "end": 18
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-clarify-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "移行期間を計算したいですが、データ量がまだ伝わっていません。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 19,
+      "end": 29
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-clarify-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "The estimate depends on traffic volume, which is not stated.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 49,
+      "end": 59
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-clarify-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Ask me which region to use before giving cloud commands.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 0,
+      "end": 6
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "契約額を出す前に、契約年数を聞いてください。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 14,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "対象ファイルが分かりません。先に質問してください。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 7,
+      "end": 13
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 14,
+      "end": 18
+     }
+    ],
+    "unknowns": [
+     "target_file"
+    ],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Some information is missing, so ask which environment this concerns.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 5,
+      "end": 27
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "The calculation needs a tax rate that has not been shared.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 42,
+      "end": 57
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-build-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "承認済みの案を実装手順に分解してください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 7,
+      "end": 11
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-build-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "担当者別の作業計画を作ってください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 5,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-build-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create a step-by-step rollout plan for this change.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 9,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-build-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Break down the migration into ordered tasks.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 30,
+      "end": 43
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-build-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "設定から試験までの手順を箇条書きで作ってください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 9,
+      "end": 11
+     },
+     {
+      "signal": "format_bullets",
+      "start": 12,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-build-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この仕様から導入計画を詳しく作成してください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "long",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 6,
+      "end": 10
+     },
+     {
+      "signal": "long_response",
+      "start": 11,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-build-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Turn these requirements into an implementation plan.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 32,
+      "end": 51
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-build-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Make an ordered task list for the release.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 16,
+      "end": 25
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-build-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "復旧方法は決定済みです。作業の順番を作ってください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 15,
+      "end": 17
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-build-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この変更の実装計画をJSONで出してください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 5,
+      "end": 9
+     },
+     {
+      "signal": "format_json",
+      "start": 10,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-build-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Prepare a work plan from setup through validation.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 10,
+      "end": 19
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-build-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Build a rollout plan, but do not include code.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_code"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 8,
+      "end": 20
+     },
+     {
+      "signal": "constraint_no_code",
+      "start": 26,
+      "end": 45
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-verify-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この合計が正しいか確認してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 5,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-verify-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "提示された見積もりが上限内か検証してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "verification_request",
+      "start": 14,
+      "end": 18
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-verify-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether these totals add up correctly.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-verify-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Validate the claimed result against the evidence.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 13,
+      "end": 20
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-verify-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "最新の料金か、出典付きで確認してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "current_information",
+      "start": 0,
+      "end": 2
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 7,
+      "end": 11
+     },
+     {
+      "signal": "verification_request",
+      "start": 12,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-verify-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この主張が妥当か、根拠を示して確かめてください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 2,
+      "end": 4
+     },
+     {
+      "signal": "verification_request",
+      "start": 5,
+      "end": 8
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 9,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-verify-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Confirm that the current version still supports this option.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "current_information",
+      "start": 17,
+      "end": 24
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-verify-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Make sure the proposed limit is safe.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 14,
+      "end": 22
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-verify-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "現在の法律に照らして、この契約条項を確認してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal",
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "current_information",
+      "start": 0,
+      "end": 2
+     },
+     {
+      "signal": "legal_risk",
+      "start": 3,
+      "end": 5
+     },
+     {
+      "signal": "verification_request",
+      "start": 18,
+      "end": 22
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-verify-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "報告された数値が表と一致するか確かめてください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "verification_request",
+      "start": 10,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-verify-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify today's exchange rate with sources.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "current_information",
+      "start": 7,
+      "end": 12
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 29,
+      "end": 41
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-verify-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Double-check whether the medication dose matches the prescription.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "medical",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 12
+     },
+     {
+      "signal": "medical_risk",
+      "start": 25,
+      "end": 35
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-summarize-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この議事録を3行で要約してください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 6,
+      "end": 8
+     },
+     {
+      "signal": "summary_request",
+      "start": 9,
+      "end": 11
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-summarize-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "長い説明を要点だけにまとめてください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 5,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-summarize-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize this report in one sentence.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "short_response",
+      "start": 25,
+      "end": 37
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-summarize-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense the discussion into bullet points.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_bullets",
+      "start": 29,
+      "end": 42
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-summarize-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "会議の決定事項を短くまとめてください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 8,
+      "end": 10
+     },
+     {
+      "signal": "summary_request",
+      "start": 10,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-summarize-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この記事の要点を表形式で要約してください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 5,
+      "end": 7
+     },
+     {
+      "signal": "format_table",
+      "start": 8,
+      "end": 11
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-summarize-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Recap the main decisions briefly.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "short_response",
+      "start": 25,
+      "end": 32
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-summarize-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Boil these notes down to the key points.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 4
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この調査結果を一文でまとめてください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 7,
+      "end": 9
+     },
+     {
+      "signal": "summary_request",
+      "start": 10,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "変更履歴から重要点だけを要約してください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 12,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Give me a concise summary of the incident.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 10,
+      "end": 17
+     },
+     {
+      "signal": "summary_request",
+      "start": 18,
+      "end": 25
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the findings without using a table.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explore-01",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "負荷を減らす複数の案を挙げてください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 6,
+      "end": 10
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explore-02",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "採用前に別の方法と利点を比較してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 4,
+      "end": 8
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explore-03",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Suggest several options for organizing this module.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 8,
+      "end": 23
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-train-explore-04",
+   "split": "train",
+   "source_group": "plm-v1-train-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm different approaches to improve reliability and then compare them.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explore-01",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "候補を3つ挙げ、短く比較してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 3
+     },
+     {
+      "signal": "short_response",
+      "start": 8,
+      "end": 10
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explore-02",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "いくつかの方法を表形式で整理してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "format_table",
+      "start": 8,
+      "end": 11
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explore-03",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare options for storing these events.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-validation-explore-04",
+   "split": "validation",
+   "source_group": "plm-v1-validation-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What are some other ways to reduce startup time, and then compare their trade-offs?",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 14,
+      "end": 24
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explore-01",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "認証方式の選択肢を詳しく比較してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "long",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 5,
+      "end": 8
+     },
+     {
+      "signal": "long_response",
+      "start": 9,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explore-02",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": "sealed-explore-explain-ja",
+   "language": "ja",
+   "input": "設計候補を挙げてから、それぞれの弱点も説明してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 2,
+      "end": 5
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explore-03",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": null,
+   "language": "en",
+   "input": "List possible strategies and compare their trade-offs.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 5,
+      "end": 24
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-explore-04",
+   "split": "sealed",
+   "source_group": "plm-v1-sealed-draft",
+   "contrast_group": "sealed-explore-explain-en",
+   "language": "en",
+   "input": "Offer alternatives, then briefly explain the strongest one.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 6,
+      "end": 18
+     },
+     {
+      "signal": "short_response",
+      "start": 25,
+      "end": 32
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

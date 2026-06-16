@@ -1,0 +1,13 @@
+{
+  "schema_version": "unit-selection-policy.v1",
+  "description": "Versioned Unit selection scoring policy. Weights preserve the v1.6 baseline until component-level evidence supports retuning.",
+  "weights": {
+    "routing_overlap": 0.40,
+    "channel_affinity": 0.20,
+    "keyword": 0.40
+  },
+  "respond_bias": 0.12,
+  "keyword_hit_saturation": 2,
+  "minimum_absolute_threshold": 0.12,
+  "relative_threshold_ratio": 0.68
+}

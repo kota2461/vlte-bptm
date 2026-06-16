@@ -1,0 +1,11 @@
+{
+  "schema_version": "runtime-selection-policy.v1",
+  "status": "draft",
+  "default_mode": "horizontal",
+  "automatic_activation": false,
+  "review_gate_required": true,
+  "evidence_report_schema_version": "independent-runtime-study-report.v1",
+  "class_modes": {},
+  "approved_by": null,
+  "approved_at_utc": null
+}

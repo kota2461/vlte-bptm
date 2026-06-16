@@ -1,0 +1,453 @@
+{
+  "schema_version": "pattern-language-baseline-report.v1",
+  "generated_at": "2026-06-13T05:41:32.165614+00:00",
+  "benchmark": {
+    "path": "tests\\fixtures\\pattern_language_benchmark_v1.json",
+    "sha256": "558ab43f8f64722d4ef6cb4bb73ef41b2f4812ac26c87c8c553ee7ff52d87c65",
+    "review_status": "human_reviewed",
+    "total_case_count": 84,
+    "evaluated_splits": [
+      "train",
+      "validation"
+    ],
+    "evaluated_case_count": 56,
+    "sealed_case_count": 28,
+    "sealed_status": "consumed",
+    "sealed_successor": "pattern_language_sealed_v2.json",
+    "sealed_evaluated": false
+  },
+  "adapter": {
+    "kind": "deterministic_signal_extractor",
+    "version": "0.1"
+  },
+  "data_isolation": {
+    "approved_pattern_overlap_count": 0,
+    "approved_pattern_overlap": [],
+    "active_sealed_v2_overlap_count": 0,
+    "active_sealed_v2_overlap": [],
+    "active_plm_sealed_v2_overlap_count": 0,
+    "active_plm_sealed_v2_overlap": []
+  },
+  "measurements": {
+    "train": {
+      "schema_version": "pattern-language-evaluation.v1",
+      "case_count": 28,
+      "valid_packet_rate": 1.0,
+      "intent_accuracy": 1.0,
+      "intent_macro_f1": 1.0,
+      "per_intent": {
+        "respond": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "explain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "clarify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "build": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "verify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "summarize": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "explore": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        }
+      },
+      "critical_signal_recall": 1.0,
+      "critical_signals": {
+        "missing_required_information": {
+          "recall": 1.0,
+          "support": 4
+        },
+        "contains_unverified_claims": {
+          "recall": 1.0,
+          "support": 4
+        },
+        "requires_current_information": {
+          "recall": 0.0,
+          "support": 0
+        },
+        "multiple_intents": {
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "constraint_exact_match": 1.0,
+      "operation_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "evidence_offset_validity": 1.0,
+      "confusion": {
+        "respond": {
+          "respond": 4,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "explain": {
+          "respond": 0,
+          "explain": 4,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "clarify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 4,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "build": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 4,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "verify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 4,
+          "summarize": 0,
+          "explore": 0
+        },
+        "summarize": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 4,
+          "explore": 0
+        },
+        "explore": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 4
+        }
+      },
+      "errors": []
+    },
+    "validation": {
+      "schema_version": "pattern-language-evaluation.v1",
+      "case_count": 28,
+      "valid_packet_rate": 1.0,
+      "intent_accuracy": 1.0,
+      "intent_macro_f1": 1.0,
+      "per_intent": {
+        "respond": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "explain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "clarify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "build": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "verify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "summarize": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "explore": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        }
+      },
+      "critical_signal_recall": 1.0,
+      "critical_signals": {
+        "missing_required_information": {
+          "recall": 1.0,
+          "support": 4
+        },
+        "contains_unverified_claims": {
+          "recall": 1.0,
+          "support": 3
+        },
+        "requires_current_information": {
+          "recall": 1.0,
+          "support": 2
+        },
+        "multiple_intents": {
+          "recall": 1.0,
+          "support": 1
+        }
+      },
+      "constraint_exact_match": 1.0,
+      "operation_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "evidence_offset_validity": 1.0,
+      "confusion": {
+        "respond": {
+          "respond": 4,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "explain": {
+          "respond": 0,
+          "explain": 4,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "clarify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 4,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "build": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 4,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "verify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 4,
+          "summarize": 0,
+          "explore": 0
+        },
+        "summarize": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 4,
+          "explore": 0
+        },
+        "explore": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 4
+        }
+      },
+      "errors": []
+    },
+    "visible_combined": {
+      "schema_version": "pattern-language-evaluation.v1",
+      "case_count": 56,
+      "valid_packet_rate": 1.0,
+      "intent_accuracy": 1.0,
+      "intent_macro_f1": 1.0,
+      "per_intent": {
+        "respond": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "explain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "clarify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "build": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "verify": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "summarize": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        },
+        "explore": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 8
+        }
+      },
+      "critical_signal_recall": 1.0,
+      "critical_signals": {
+        "missing_required_information": {
+          "recall": 1.0,
+          "support": 8
+        },
+        "contains_unverified_claims": {
+          "recall": 1.0,
+          "support": 7
+        },
+        "requires_current_information": {
+          "recall": 1.0,
+          "support": 2
+        },
+        "multiple_intents": {
+          "recall": 1.0,
+          "support": 2
+        }
+      },
+      "constraint_exact_match": 1.0,
+      "operation_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "evidence_offset_validity": 1.0,
+      "confusion": {
+        "respond": {
+          "respond": 8,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "explain": {
+          "respond": 0,
+          "explain": 8,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "clarify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 8,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "build": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 8,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 0
+        },
+        "verify": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 8,
+          "summarize": 0,
+          "explore": 0
+        },
+        "summarize": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 8,
+          "explore": 0
+        },
+        "explore": {
+          "respond": 0,
+          "explain": 0,
+          "clarify": 0,
+          "build": 0,
+          "verify": 0,
+          "summarize": 0,
+          "explore": 8
+        }
+      },
+      "errors": []
+    }
+  }
+}

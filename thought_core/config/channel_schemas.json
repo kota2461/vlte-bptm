@@ -1,0 +1,46 @@
+{
+  "schema_version": "pattern-channel-schemas.v1",
+  "description": "Formal v1.1 Pattern Unit channel contract. Channels are unit-local prototype-affinity indices used by selector feature scoring. Individual indices do not carry named concepts, and H/W remain non-semantic storage coordinates.",
+  "channel_count": 64,
+  "spatial_semantics": false,
+  "channel_semantics": "unit_local_prototype_affinity_only",
+  "allocation_method": "blake2b_unit_prototype.v1",
+  "units": {
+    "explore": {
+      "schema_id": "novelty_and_hypothesis_features",
+      "prototype_channels": [7, 9, 10, 11, 12, 17, 19, 21, 22, 23, 25, 28, 30, 33, 34, 36, 37, 44, 48, 50, 54, 55, 58, 59, 62],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the explore Unit's deterministic prototype-affinity set. It does not assign novelty, hypothesis, or any other concept to an individual channel index."
+    },
+    "build": {
+      "schema_id": "implementation_and_planning_features",
+      "prototype_channels": [1, 3, 4, 5, 8, 11, 12, 14, 16, 20, 23, 25, 33, 34, 35, 36, 41, 42, 44, 46, 50, 52, 54, 57, 59, 62],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the build Unit's deterministic prototype-affinity set. Individual channels are not implementation stages or planning concepts."
+    },
+    "verify": {
+      "schema_id": "evidence_risk_and_uncertainty_features",
+      "prototype_channels": [0, 2, 9, 11, 14, 15, 16, 18, 19, 21, 22, 23, 25, 26, 30, 31, 33, 35, 37, 42, 45, 49, 55, 56, 58, 61, 62],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the verify Unit's deterministic prototype-affinity set. Evidence, risk, and uncertainty are Unit-level intent labels, not per-channel meanings."
+    },
+    "summarize": {
+      "schema_id": "salience_and_compression_features",
+      "prototype_channels": [0, 2, 3, 10, 14, 16, 17, 18, 19, 21, 22, 23, 29, 32, 33, 39, 41, 43, 45, 46, 47, 51, 52, 53, 55, 58, 63],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the summarize Unit's deterministic prototype-affinity set. No channel is fixed as a salience or compression dimension."
+    },
+    "clarify": {
+      "schema_id": "ambiguity_and_missing_information_features",
+      "prototype_channels": [2, 3, 4, 6, 9, 16, 17, 18, 19, 20, 33, 36, 37, 40, 42, 45, 49, 52, 55, 56, 60],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the clarify Unit's deterministic prototype-affinity set. Ambiguity and missing information are not assigned to individual indices."
+    },
+    "respond": {
+      "schema_id": "speech_style_and_response_features",
+      "prototype_channels": [2, 3, 5, 6, 9, 10, 12, 17, 22, 25, 27, 29, 31, 33, 34, 35, 36, 38, 40, 45, 47, 48, 60, 61, 62],
+      "unassigned_channel_role": "no_named_semantics",
+      "rationale": "The schema identifies the respond Unit's deterministic prototype-affinity set. Style and response properties remain Unit-level labels without per-index semantics."
+    }
+  }
+}

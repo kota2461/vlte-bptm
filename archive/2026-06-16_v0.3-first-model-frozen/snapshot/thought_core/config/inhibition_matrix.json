@@ -1,0 +1,37 @@
+{
+  "schema_version": "inhibition-matrix.v2",
+  "description": "Route-group inhibition policy. group_matrix[source_group][target_group] expands to all Unit pairs in those groups. The expanded coefficients preserve the frozen v1.0a behavior.",
+  "groups": {
+    "implementation": ["build"],
+    "clarification": ["clarify"],
+    "compression": ["summarize"],
+    "verification": ["verify"],
+    "exploration": ["explore"],
+    "direct_response": ["respond"]
+  },
+  "group_matrix": {
+    "implementation": {
+      "direct_response": 0.20
+    },
+    "clarification": {
+      "implementation": 0.45,
+      "direct_response": 0.25
+    },
+    "compression": {
+      "exploration": 0.30
+    },
+    "verification": {
+      "implementation": 0.35,
+      "exploration": 0.20
+    }
+  },
+  "matrix": {},
+  "rationale": {
+    "implementation->direct_response": "An active implementation route mildly suppresses a plain response.",
+    "clarification->implementation": "Missing information suppresses implementation across the whole implementation group.",
+    "clarification->direct_response": "Clarification takes precedence over answering when the input is ambiguous.",
+    "compression->exploration": "Compression is convergent and suppresses divergent exploration.",
+    "verification->implementation": "Verification takes precedence over construction.",
+    "verification->exploration": "Verification keeps the system focused on checking the current artifact."
+  }
+}

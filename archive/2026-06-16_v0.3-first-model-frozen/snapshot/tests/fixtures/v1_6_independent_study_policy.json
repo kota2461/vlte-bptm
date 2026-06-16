@@ -1,0 +1,18 @@
+{
+  "schema_version": "independent-runtime-study-policy.v1",
+  "minimum_reviewers_per_case": 3,
+  "minimum_cases_per_input_class_for_policy": 20,
+  "confidence_level": 0.95,
+  "bootstrap_iterations": 2000,
+  "target_proportion_margin": 0.1,
+  "minimum_quality_gain": 0.25,
+  "maximum_cost_multiplier": 2.5,
+  "maximum_latency_multiplier": 3.0,
+  "retention_days": 30,
+  "consent_required": true,
+  "store_raw_input": false,
+  "store_raw_output": false,
+  "automatic_learning": false,
+  "review_gate_required": true,
+  "default_mode": "horizontal"
+}

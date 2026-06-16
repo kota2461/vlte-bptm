@@ -1,0 +1,31 @@
+{
+ "schema_version": "sealed-boundary-slice.v1",
+ "frozen_at": "2026-06-12T07:30:00+00:00",
+ "author": "codex (rotation authored after sealed v1 adjudication)",
+ "policy": "sealed: never used for training; one adjudication cycle, then rotate before tuning",
+ "purpose": "successor measurement slice after sealed_boundary_slice_v1 was consumed",
+ "cases": [
+  {"slice": "boundary_mirror", "group": "sbr-migration-ja-v2", "boundary": "build_respond", "language": "ja", "difficulty": "compound", "input": "移行方針は承認済みです。担当者が迷わないよう、準備から切り替え確認までを実行順に分解してください。", "route": "build"},
+  {"slice": "boundary_mirror", "group": "sbr-migration-ja-v2", "boundary": "build_respond", "language": "ja", "difficulty": "compound", "input": "承認された移行方針にはどんな利点があるのか、簡潔に説明してください。", "route": "respond"},
+  {"slice": "boundary_mirror", "group": "scv-shipping-ja-v2", "boundary": "clarify_verify", "language": "ja", "difficulty": "compound", "input": "配送費を計算してください。ただし荷物の重量と配送先はまだ伝えていません。", "route": "clarify"},
+  {"slice": "boundary_mirror", "group": "scv-shipping-ja-v2", "boundary": "clarify_verify", "language": "ja", "difficulty": "compound", "input": "荷物は12キロで配送先は大阪です。提示された配送費が料金表と一致するか確認してください。", "route": "verify"},
+  {"slice": "boundary_mirror", "group": "sbr-auth-en-v2", "boundary": "build_respond", "language": "en", "difficulty": "simple", "input": "We selected the authentication approach. Break the rollout into ordered implementation tasks.", "route": "build"},
+  {"slice": "boundary_mirror", "group": "sbr-auth-en-v2", "boundary": "build_respond", "language": "en", "difficulty": "simple", "input": "Describe why the selected authentication approach is appropriate.", "route": "respond"},
+  {"slice": "boundary_mirror", "group": "scv-capacity-en-v2", "boundary": "clarify_verify", "language": "en", "difficulty": "compound", "input": "Calculate the required storage, but I have not provided the retention period or daily volume.", "route": "clarify"},
+  {"slice": "boundary_mirror", "group": "scv-capacity-en-v2", "boundary": "clarify_verify", "language": "en", "difficulty": "compound", "input": "Retention is 90 days and daily volume is 40 GB. Verify that the proposed capacity is sufficient.", "route": "verify"},
+  {"slice": "boundary_mirror", "group": "seb-monitoring-ja-v2", "boundary": "explore_build", "language": "ja", "difficulty": "compound", "input": "監視方式を決定する前に、候補を複数挙げて長所と短所を比較してください。", "route": "explore"},
+  {"slice": "boundary_mirror", "group": "seb-monitoring-ja-v2", "boundary": "explore_build", "language": "ja", "difficulty": "compound", "input": "監視方式は決定しました。設定、通知試験、運用開始までの作業計画を作ってください。", "route": "build"},
+  {"slice": "english", "group": "sen-verify-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Check whether every subtotal matches the final amount.", "route": "verify"},
+  {"slice": "english", "group": "sen-verify-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Validate this conclusion against the evidence provided.", "route": "verify"},
+  {"slice": "english", "group": "sen-build-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Create a step-by-step delivery plan from these requirements.", "route": "build"},
+  {"slice": "english", "group": "sen-build-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Organize the remaining implementation work into executable tasks.", "route": "build"},
+  {"slice": "english", "group": "sen-clarify-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Ask which operating system I use before giving installation commands.", "route": "clarify"},
+  {"slice": "english", "group": "sen-clarify-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "The budget depends on team size, which I have not stated. Ask for it first.", "route": "clarify"},
+  {"slice": "english", "group": "sen-summarize-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Summarize the discussion in four concise bullets.", "route": "summarize"},
+  {"slice": "english", "group": "sen-summarize-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Reduce these meeting notes to the key decisions and actions.", "route": "summarize"},
+  {"slice": "english", "group": "sen-explore-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Suggest several possible ways to reduce deployment risk.", "route": "explore"},
+  {"slice": "english", "group": "sen-explore-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Compare a few alternative designs we could investigate.", "route": "explore"},
+  {"slice": "english", "group": "sen-respond-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "What does DNS stand for?", "route": "respond"},
+  {"slice": "english", "group": "sen-respond-v2", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Name the largest planet in the Solar System.", "route": "respond"}
+ ]
+}

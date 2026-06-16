@@ -1,0 +1,18 @@
+{
+  "schema_version": "horizontal-unit-mesh.v1",
+  "description": "Decision contract for Horizontal Pattern Unit voting. Integrated Unit activations contribute weighted votes to Action Vector axes. A positive control-axis vote wins before fallback reply/explain axes. Ties are resolved by the declared priority order. No weights are learned or updated automatically.",
+  "decision_method": "integrated_score_times_action_weight",
+  "normalization": "divide_all_votes_when_peak_exceeds_one",
+  "control_axis_priority": ["ask", "verify", "plan", "summarize", "creative", "caution"],
+  "fallback_axis_priority": ["reply", "explain"],
+  "axis_to_mode": {
+    "ask": "clarify",
+    "verify": "verify",
+    "plan": "build",
+    "summarize": "summarize",
+    "creative": "explore",
+    "caution": "verify",
+    "reply": "respond",
+    "explain": "explain"
+  }
+}

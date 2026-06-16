@@ -1,0 +1,24 @@
+{
+  "schema_version": "processing-plan.v1",
+  "primary_route": "verify",
+  "processing_class": "verified",
+  "core_mode": "vertical",
+  "model_class": "standard",
+  "tools": [
+    "web_search"
+  ],
+  "budgets": {
+    "max_dispatches": 2,
+    "max_output_tokens": 1024,
+    "timeout_ms": 12000,
+    "estimated_cost_units": 2.0
+  },
+  "fallback": "clarify",
+  "reason_codes": [
+    "primary_verify",
+    "unverified_claims",
+    "current_information_required",
+    "verification_requested",
+    "web_search_required"
+  ]
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.pyc.*
+.pytest_cache/
+pytest-cache-files-*/
+data/*.db
+data/*.db-*
+build/pattern_router_model.json

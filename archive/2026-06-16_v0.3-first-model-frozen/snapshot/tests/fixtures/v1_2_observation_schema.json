@@ -1,0 +1,17 @@
+{
+  "schema_version": "vlte-bptm.observation-report.v1",
+  "privacy": {
+    "raw_input_stored": false,
+    "llm_output_stored": false,
+    "automatic_learning": false
+  },
+  "required_aggregates": [
+    "active_bit_frequency",
+    "active_bit_count_distribution",
+    "selected_unit_frequency",
+    "selected_unit_combination_frequency",
+    "selected_unit_count_distribution",
+    "threshold_profile_frequency",
+    "llm_order_mode_frequency"
+  ]
+}

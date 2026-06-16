@@ -1,0 +1,42 @@
+{
+  "schema_version": "intent-hybrid-regression.v1",
+  "description": "route() primary_intent must match; marker-dominated incl. verify_then_build safety. Disjoint from the campaign.",
+  "cases": [
+    {
+      "input": "こんにちは、調子はどう？",
+      "intent": "respond"
+    },
+    {
+      "input": "なぜ空は青いのか教えて",
+      "intent": "explain"
+    },
+    {
+      "input": "セットアップ手順を作って",
+      "intent": "build"
+    },
+    {
+      "input": "この計算が合っているか確認して: 12 + 7 = 20",
+      "intent": "verify"
+    },
+    {
+      "input": "この記事を要約して",
+      "intent": "summarize"
+    },
+    {
+      "input": "計算を検算してから手順書を作って",
+      "intent": "build"
+    },
+    {
+      "input": "仕様が正しいか確認したうえで実装プランを作成して",
+      "intent": "build"
+    },
+    {
+      "input": "最近ずっと忙しくて疲れがたまっている",
+      "intent": "respond"
+    },
+    {
+      "input": "週末は家でゆっくり過ごすつもりです",
+      "intent": "respond"
+    }
+  ]
+}

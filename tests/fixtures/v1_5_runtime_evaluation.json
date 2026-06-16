@@ -1,0 +1,256 @@
+{
+  "schema_version": "runtime-evaluation-fixture.v1",
+  "rubric": {
+    "dimensions": [
+      "correctness",
+      "relevance",
+      "completeness",
+      "assumption_control",
+      "clarity"
+    ],
+    "minimum_score": 1,
+    "maximum_score": 5,
+    "blind": true
+  },
+  "cost_unit": "normalized_executor_attempt",
+  "cases": [
+    {
+      "case_id": "implementation_design",
+      "candidates": [
+        {
+          "candidate_id": "c-101",
+          "rubric_scores": {
+            "correctness": 3,
+            "relevance": 4,
+            "completeness": 3,
+            "assumption_control": 3,
+            "clarity": 4
+          },
+          "latency_ms": 100,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-102",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 4,
+            "completeness": 4,
+            "assumption_control": 5,
+            "clarity": 4
+          },
+          "latency_ms": 180,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-103",
+          "rubric_scores": {
+            "correctness": 5,
+            "relevance": 4,
+            "completeness": 5,
+            "assumption_control": 5,
+            "clarity": 4
+          },
+          "latency_ms": 240,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "c-101": "horizontal",
+        "c-102": "vertical",
+        "c-103": "hybrid"
+      },
+      "human_preferred_candidate_id": "c-103",
+      "runtime_selected_candidate_id": "c-103"
+    },
+    {
+      "case_id": "risk_verification",
+      "candidates": [
+        {
+          "candidate_id": "c-201",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 5,
+            "completeness": 4,
+            "assumption_control": 4,
+            "clarity": 5
+          },
+          "latency_ms": 90,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-202",
+          "rubric_scores": {
+            "correctness": 5,
+            "relevance": 5,
+            "completeness": 5,
+            "assumption_control": 5,
+            "clarity": 4
+          },
+          "latency_ms": 170,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-203",
+          "rubric_scores": {
+            "correctness": 5,
+            "relevance": 5,
+            "completeness": 4,
+            "assumption_control": 5,
+            "clarity": 4
+          },
+          "latency_ms": 210,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "c-201": "horizontal",
+        "c-202": "vertical",
+        "c-203": "hybrid"
+      },
+      "human_preferred_candidate_id": "c-202",
+      "runtime_selected_candidate_id": "c-203"
+    },
+    {
+      "case_id": "summary_with_uncertainty",
+      "candidates": [
+        {
+          "candidate_id": "c-301",
+          "rubric_scores": {
+            "correctness": 3,
+            "relevance": 4,
+            "completeness": 3,
+            "assumption_control": 3,
+            "clarity": 4
+          },
+          "latency_ms": 110,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": true
+        },
+        {
+          "candidate_id": "c-302",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 4,
+            "completeness": 4,
+            "assumption_control": 4,
+            "clarity": 4
+          },
+          "latency_ms": 190,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-303",
+          "rubric_scores": {
+            "correctness": 5,
+            "relevance": 5,
+            "completeness": 4,
+            "assumption_control": 5,
+            "clarity": 5
+          },
+          "latency_ms": 230,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "c-301": "horizontal",
+        "c-302": "vertical",
+        "c-303": "hybrid"
+      },
+      "human_preferred_candidate_id": "c-303",
+      "runtime_selected_candidate_id": "c-303"
+    },
+    {
+      "case_id": "alternative_comparison",
+      "candidates": [
+        {
+          "candidate_id": "c-401",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 4,
+            "completeness": 4,
+            "assumption_control": 3,
+            "clarity": 4
+          },
+          "latency_ms": 95,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-402",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 4,
+            "completeness": 5,
+            "assumption_control": 5,
+            "clarity": 4
+          },
+          "latency_ms": 175,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "c-403",
+          "rubric_scores": {
+            "correctness": 4,
+            "relevance": 5,
+            "completeness": 5,
+            "assumption_control": 5,
+            "clarity": 5
+          },
+          "latency_ms": 220,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "c-401": "horizontal",
+        "c-402": "vertical",
+        "c-403": "hybrid"
+      },
+      "human_preferred_candidate_id": "c-403",
+      "runtime_selected_candidate_id": "c-403"
+    }
+  ],
+  "hybrid_winner_reviews": [
+    {
+      "review_id": "hwr-01",
+      "runtime_winner_candidate_id": "s-02",
+      "human_preferred_candidate_id": "s-02"
+    },
+    {
+      "review_id": "hwr-02",
+      "runtime_winner_candidate_id": "s-11",
+      "human_preferred_candidate_id": "s-12"
+    },
+    {
+      "review_id": "hwr-03",
+      "runtime_winner_candidate_id": "s-21",
+      "human_preferred_candidate_id": "s-21"
+    },
+    {
+      "review_id": "hwr-04",
+      "runtime_winner_candidate_id": "s-32",
+      "human_preferred_candidate_id": "s-32"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyc.*
+.pytest_cache/
+pytest-cache-files-*/
+*.egg-info/
+
+# --- runtime data / models produced at runtime ---
+data/*.db
+data/*.db-*
+build/pattern_router_model.json
+
+# --- logs and server scratch output ---
+*.log
+*.stderr.log
+*.stdout.log
+
+# --- archive: keep only the frozen first-model snapshot ---
+archive/*
+!archive/2026-06-16_v0.3-first-model-frozen/
+!archive/2026-06-16_v0.3-first-model-frozen/**
+# strip noise back out of the kept snapshot (explicit paths override the re-include above)
+archive/2026-06-16_v0.3-first-model-frozen/**/*.log
+archive/2026-06-16_v0.3-first-model-frozen/**/__pycache__/
+archive/2026-06-16_v0.3-first-model-frozen/**/*.py[cod]

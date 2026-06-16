@@ -1,0 +1,9 @@
+{
+  "schema_version": "intent-explain-approval.v1",
+  "curriculum_id": "intent-explain-v1",
+  "verdict": "approved",
+  "approver": "project owner",
+  "approved_at": "2026-06-13",
+  "count": 24,
+  "note": "Human-approved the 24 fresh explain-intent training examples for the v0.3 intent layer. Reviewed as clearly explanation-intent (mechanism/reason), disjoint from the 50-case accumulation campaign. Authorizes their use in intent-layer training (no automatic learning; explicit approval recorded)."
+}

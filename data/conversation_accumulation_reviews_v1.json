@@ -1,0 +1,506 @@
+{
+  "schema_version": "conversation-accumulation-review-log.v1",
+  "campaign_sha256": "7ffffada289a194e3cda90c3435953d25d64ad3d5f0eaf19a86716259ddd8ea3",
+  "reviews": {
+    "accum-b01-001": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.252716+00:00"
+    },
+    "accum-b01-002": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.255091+00:00"
+    },
+    "accum-b01-003": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.256098+00:00"
+    },
+    "accum-b01-004": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.257098+00:00"
+    },
+    "accum-b01-005": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.258098+00:00"
+    },
+    "accum-b01-006": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.259098+00:00"
+    },
+    "accum-b01-007": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.260098+00:00"
+    },
+    "accum-b01-008": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.261098+00:00"
+    },
+    "accum-b01-009": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.262098+00:00"
+    },
+    "accum-b01-010": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.263097+00:00"
+    },
+    "accum-b01-011": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.264097+00:00"
+    },
+    "accum-b01-012": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.265097+00:00"
+    },
+    "accum-b01-013": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.266097+00:00"
+    },
+    "accum-b01-014": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.267097+00:00"
+    },
+    "accum-b01-015": {
+      "status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.268097+00:00"
+    },
+    "accum-b01-016": {
+      "status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.269127+00:00"
+    },
+    "accum-b01-017": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.270097+00:00"
+    },
+    "accum-b01-018": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.272097+00:00"
+    },
+    "accum-b01-019": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.273097+00:00"
+    },
+    "accum-b01-020": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.274096+00:00"
+    },
+    "accum-b01-021": {
+      "status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.275097+00:00"
+    },
+    "accum-b01-022": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.276095+00:00"
+    },
+    "accum-b01-023": {
+      "status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.277096+00:00"
+    },
+    "accum-b01-024": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.278098+00:00"
+    },
+    "accum-b02-001": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.279098+00:00"
+    },
+    "accum-b02-002": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.280098+00:00"
+    },
+    "accum-b02-003": {
+      "status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.281098+00:00"
+    },
+    "accum-b02-004": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.282099+00:00"
+    },
+    "accum-b02-005": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.283098+00:00"
+    },
+    "accum-b02-006": {
+      "status": "approved",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.284097+00:00"
+    },
+    "accum-b02-007": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.285098+00:00"
+    },
+    "accum-b02-008": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.286098+00:00"
+    },
+    "accum-b02-009": {
+      "status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.287098+00:00"
+    },
+    "accum-b02-010": {
+      "status": "approved",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.288097+00:00"
+    },
+    "accum-b02-011": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.289097+00:00"
+    },
+    "accum-b02-012": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.290097+00:00"
+    },
+    "accum-b02-013": {
+      "status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.291097+00:00"
+    },
+    "accum-b02-014": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.292097+00:00"
+    },
+    "accum-b02-015": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.293097+00:00"
+    },
+    "accum-b02-016": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.294097+00:00"
+    },
+    "accum-b02-017": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.295096+00:00"
+    },
+    "accum-b02-018": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.296098+00:00"
+    },
+    "accum-b02-019": {
+      "status": "approved",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.297097+00:00"
+    },
+    "accum-b02-020": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.298097+00:00"
+    },
+    "accum-b02-021": {
+      "status": "approved",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.299097+00:00"
+    },
+    "accum-b02-022": {
+      "status": "approved",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.300097+00:00"
+    },
+    "accum-b02-023": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.301095+00:00"
+    },
+    "accum-b02-024": {
+      "status": "approved",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.302095+00:00"
+    },
+    "accum-b02-025": {
+      "status": "approved",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.303094+00:00"
+    },
+    "accum-b02-026": {
+      "status": "approved",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "notes": "ratified 2026-06-13 approach A: decision cases b02-001/003/009 per recommendation (verify/explore/summarize); remainder per agreed policy (deliverable-primary, risk->verified, missing-premise->clarify) and original seed labels",
+      "reviewed_at": "2026-06-14T04:52:33.304094+00:00"
+    }
+  }
+}

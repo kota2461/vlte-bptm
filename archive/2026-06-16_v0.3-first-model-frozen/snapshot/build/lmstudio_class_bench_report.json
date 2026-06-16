@@ -1,0 +1,61 @@
+{
+  "note": "per-class response check; LLM output NOT training data",
+  "base": "http://192.168.10.124:1234",
+  "model": "google/gemma-4-12b-qat",
+  "problem": "3桁の正の整数のうち、各位の数字の和が9の倍数で、かつ7で割り切れるものは全部でいくつあるか、理由とともに求めてください。",
+  "correct_answer": "14",
+  "classes": [
+    {
+      "class": "economy",
+      "content_budget": 384,
+      "request_max_tokens": 1920,
+      "reasoning_allowance": 1536,
+      "seconds": 17.6,
+      "completion_tokens": 887,
+      "reasoning_tokens": 620,
+      "finish_reason": "stop",
+      "answered": true,
+      "correct": true,
+      "reply_chars": 419
+    },
+    {
+      "class": "standard",
+      "content_budget": 768,
+      "request_max_tokens": 2304,
+      "reasoning_allowance": 1536,
+      "seconds": 25.2,
+      "completion_tokens": 1271,
+      "reasoning_tokens": 787,
+      "finish_reason": "stop",
+      "answered": true,
+      "correct": true,
+      "reply_chars": 758
+    },
+    {
+      "class": "verified",
+      "content_budget": 1024,
+      "request_max_tokens": 2560,
+      "reasoning_allowance": 1536,
+      "seconds": 36.1,
+      "completion_tokens": 1814,
+      "reasoning_tokens": 1286,
+      "finish_reason": "stop",
+      "answered": true,
+      "correct": true,
+      "reply_chars": 835
+    },
+    {
+      "class": "deep",
+      "content_budget": 1536,
+      "request_max_tokens": 3072,
+      "reasoning_allowance": 1536,
+      "seconds": 29.4,
+      "completion_tokens": 1485,
+      "reasoning_tokens": 927,
+      "finish_reason": "stop",
+      "answered": true,
+      "correct": true,
+      "reply_chars": 891
+    }
+  ]
+}

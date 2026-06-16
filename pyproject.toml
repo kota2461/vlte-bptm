@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thought-state-register"
+version = "1.6.0a1"
+description = "Observable VLTE-BPTM thought-routing pipeline"
+requires-python = ">=3.10"
+
+[project.scripts]
+vlte-bptm = "thought_core.demo:main"
+vlte-observe = "thought_core.observation:main"
+vlte-runtime-eval = "thought_core.runtime_evaluation:main"
+vlte-study-eval = "thought_core.independent_study:main"
+vlte-accuracy-audit = "thought_core.accuracy_audit:main"
+pattern-lab = "pattern_learning.cli:main"
+
+[tool.setuptools.packages.find]
+include = [
+    "thought_register*",
+    "thought_core*",
+    "pattern_learning*",
+    "semantic_routing*",
+]
+
+[tool.setuptools.package-data]
+pattern_learning = ["static/*.html", "static/*.css", "static/*.js"]
+thought_core = ["config/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

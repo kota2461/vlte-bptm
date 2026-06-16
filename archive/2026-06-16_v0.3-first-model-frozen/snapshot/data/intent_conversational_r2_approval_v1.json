@@ -1,0 +1,9 @@
+{
+  "schema_version": "intent-conversational-approval.v1",
+  "curriculum_id": "intent-conversational-v2",
+  "verdict": "approved",
+  "approver": "project owner",
+  "approved_at": "2026-06-14",
+  "count": 70,
+  "note": "Human-approved the 70 round-2 conversational task-intent examples (campaign-distribution-matched style, different everyday domains, weak-intent weighted, ja+en, compound labelled by primary). Disjoint from the campaign and the existing corpus. Authorizes their use in intent-layer training (no automatic learning)."
+}

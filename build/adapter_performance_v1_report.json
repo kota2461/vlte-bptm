@@ -1,0 +1,316 @@
+{
+  "schema_version": "adapter-performance.v1",
+  "note": "draft labels (pre-review baseline); adapter not tuned to these",
+  "overall": {
+    "n": 50,
+    "semantic_intent": 0.8,
+    "processing_plan": 0.9,
+    "end_to_end": 0.76,
+    "critical_underprocessing": 0
+  },
+  "by_category": {
+    "compound_intent": {
+      "n": 11,
+      "semantic_intent": 0.7273,
+      "processing_plan": 0.8182,
+      "end_to_end": 0.6364,
+      "critical_underprocessing": 0
+    },
+    "conversation_response": {
+      "n": 7,
+      "semantic_intent": 0.8571,
+      "processing_plan": 0.8571,
+      "end_to_end": 0.8571,
+      "critical_underprocessing": 0
+    },
+    "indirect_explanation": {
+      "n": 9,
+      "semantic_intent": 0.6667,
+      "processing_plan": 1.0,
+      "end_to_end": 0.6667,
+      "critical_underprocessing": 0
+    },
+    "mixed_language": {
+      "n": 6,
+      "semantic_intent": 1.0,
+      "processing_plan": 1.0,
+      "end_to_end": 1.0,
+      "critical_underprocessing": 0
+    },
+    "temporal_disambiguation": {
+      "n": 6,
+      "semantic_intent": 0.6667,
+      "processing_plan": 0.8333,
+      "end_to_end": 0.5,
+      "critical_underprocessing": 0
+    },
+    "verify_then_build": {
+      "n": 11,
+      "semantic_intent": 0.9091,
+      "processing_plan": 0.9091,
+      "end_to_end": 0.9091,
+      "critical_underprocessing": 0
+    }
+  },
+  "by_source": {
+    "original_batch01": {
+      "n": 24,
+      "semantic_intent": 0.8333,
+      "processing_plan": 0.9583,
+      "end_to_end": 0.7917,
+      "critical_underprocessing": 0
+    },
+    "real-log": {
+      "n": 3,
+      "semantic_intent": 0.6667,
+      "processing_plan": 0.6667,
+      "end_to_end": 0.6667,
+      "critical_underprocessing": 0
+    },
+    "synthetic-contract": {
+      "n": 10,
+      "semantic_intent": 0.8,
+      "processing_plan": 0.7,
+      "end_to_end": 0.7,
+      "critical_underprocessing": 0
+    },
+    "synthetic-human-learning": {
+      "n": 13,
+      "semantic_intent": 0.7692,
+      "processing_plan": 1.0,
+      "end_to_end": 0.7692,
+      "critical_underprocessing": 0
+    }
+  },
+  "by_language": {
+    "en": {
+      "n": 11,
+      "semantic_intent": 0.8182,
+      "processing_plan": 1.0,
+      "end_to_end": 0.8182,
+      "critical_underprocessing": 0
+    },
+    "ja": {
+      "n": 33,
+      "semantic_intent": 0.7576,
+      "processing_plan": 0.8485,
+      "end_to_end": 0.697,
+      "critical_underprocessing": 0
+    },
+    "mixed": {
+      "n": 6,
+      "semantic_intent": 1.0,
+      "processing_plan": 1.0,
+      "end_to_end": 1.0,
+      "critical_underprocessing": 0
+    }
+  },
+  "latency_ms_per_request": 0.1175,
+  "miss_count": 12,
+  "misses": [
+    {
+      "id": "accum-b01-005",
+      "source": "original_batch01",
+      "category": "indirect_explanation",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "この処理になる背景を知りたいです。"
+    },
+    {
+      "id": "accum-b01-006",
+      "source": "original_batch01",
+      "category": "indirect_explanation",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "内部で何が起きているか、順を追って知りたいです。"
+    },
+    {
+      "id": "accum-b01-008",
+      "source": "original_batch01",
+      "category": "indirect_explanation",
+      "expected": {
+        "intent": "explain",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "What causes this worker to retry twice?"
+    },
+    {
+      "id": "accum-b01-019",
+      "source": "original_batch01",
+      "category": "temporal_disambiguation",
+      "expected": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical": false,
+      "input": "今の気分を少し整理したいです。"
+    },
+    {
+      "id": "accum-b01-024",
+      "source": "original_batch01",
+      "category": "compound_intent",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical": false,
+      "input": "確認結果を短くまとめ、その後で実装計画を提示してください。"
+    },
+    {
+      "id": "accum-b02-003",
+      "source": "real-log",
+      "category": "compound_intent",
+      "expected": {
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "voicevoxは遅延が気になるから代替を考えてたんだけど、CoeiroInk、OpenJTalkどっちがおすすめ？"
+    },
+    {
+      "id": "accum-b02-006",
+      "source": "synthetic-contract",
+      "category": "verify_then_build",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "解約に必要な条件がまだ共有できていないので、先に何を確認すべきか教えてください"
+    },
+    {
+      "id": "accum-b02-009",
+      "source": "synthetic-contract",
+      "category": "compound_intent",
+      "expected": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "この利用規約の責任範囲を要約して、リスクが高い箇所を洗い出してください"
+    },
+    {
+      "id": "accum-b02-010",
+      "source": "synthetic-contract",
+      "category": "conversation_response",
+      "expected": {
+        "intent": "clarify",
+        "processing_class": "clarify",
+        "core_mode": "horizontal"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "economy",
+        "core_mode": "horizontal"
+      },
+      "critical": false,
+      "input": "請求の根拠になる利用ログの置き場所が分からないので、まず質問してもらえますか"
+    },
+    {
+      "id": "accum-b02-023",
+      "source": "synthetic-human-learning",
+      "category": "temporal_disambiguation",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical": false,
+      "input": "さっき教えてもらった方法、今のバージョンでもそのまま使える？"
+    },
+    {
+      "id": "accum-b02-024",
+      "source": "synthetic-human-learning",
+      "category": "temporal_disambiguation",
+      "expected": {
+        "intent": "verify",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "actual": {
+        "intent": "respond",
+        "processing_class": "verified",
+        "core_mode": "vertical"
+      },
+      "critical": false,
+      "input": "Is the approach you suggested earlier still the recommended one as of today?"
+    },
+    {
+      "id": "accum-b02-026",
+      "source": "synthetic-human-learning",
+      "category": "compound_intent",
+      "expected": {
+        "intent": "build",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "actual": {
+        "intent": "summarize",
+        "processing_class": "deep",
+        "core_mode": "hybrid"
+      },
+      "critical": false,
+      "input": "この単元の要点を整理して、そのうえで理解度チェックの問題を作ってください"
+    }
+  ]
+}

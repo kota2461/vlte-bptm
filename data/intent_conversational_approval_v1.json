@@ -1,0 +1,9 @@
+{
+  "schema_version": "intent-conversational-approval.v1",
+  "curriculum_id": "intent-conversational-v1",
+  "verdict": "approved",
+  "approver": "project owner",
+  "approved_at": "2026-06-13",
+  "count": 60,
+  "note": "Human-approved the 60 conversational task-intent training examples (weak-intent weighted: build/verify/summarize/explore/clarify + a little explain; ja+en; compound labelled by primary). Disjoint from the 50-case campaign. Authorizes their use in intent-layer training (no automatic learning)."
+}

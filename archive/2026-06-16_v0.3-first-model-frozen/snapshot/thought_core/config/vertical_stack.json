@@ -1,0 +1,90 @@
+{
+  "schema_version": "vertical-unit-stack.v1",
+  "output_schema_version": "vertical-unit-output.v1",
+  "max_depth": 4,
+  "root_unit_by_mode": {
+    "clarify": "clarify",
+    "build": "build",
+    "verify": "verify",
+    "summarize": "summarize",
+    "explore": "explore",
+    "explain": "respond",
+    "respond": "respond"
+  },
+  "input_dependencies": {
+    "explore": [],
+    "build": ["verify"],
+    "verify": [],
+    "summarize": [],
+    "clarify": [],
+    "respond": []
+  },
+  "verification_policy": {
+    "verifier_unit_id": "verify",
+    "required_before": ["build"],
+    "failure_reason": "verification_failed"
+  },
+  "blocking_policy": {
+    "signal_unit_id": "clarify",
+    "blocks_targets": ["build"],
+    "minimum_relative_score": 0.85,
+    "failure_reason": "unresolved_clarification"
+  },
+  "common_output_fields": {
+    "schema_version": "string",
+    "unit_id": "string",
+    "status": "string",
+    "assumptions": "array",
+    "evidence": "array"
+  },
+  "output_contracts": {
+    "explore": {
+      "schema_version": "vertical-output.explore.v1",
+      "required_fields": {
+        "hypotheses": "array"
+      }
+    },
+    "build": {
+      "schema_version": "vertical-output.build.v1",
+      "required_fields": {
+        "implementation_plan": "object"
+      }
+    },
+    "verify": {
+      "schema_version": "vertical-output.verify.v1",
+      "required_fields": {
+        "verified": "boolean",
+        "verified_assumptions": "array",
+        "risk_flags": "array"
+      }
+    },
+    "summarize": {
+      "schema_version": "vertical-output.summarize.v1",
+      "required_fields": {
+        "summary": "string"
+      }
+    },
+    "clarify": {
+      "schema_version": "vertical-output.clarify.v1",
+      "required_fields": {
+        "needs_clarification": "boolean",
+        "questions": "array"
+      }
+    },
+    "respond": {
+      "schema_version": "vertical-output.respond.v1",
+      "required_fields": {
+        "response": "string"
+      }
+    }
+  },
+  "allowed_output_statuses": ["completed", "blocked"],
+  "stop_reasons": [
+    "unresolved_clarification",
+    "missing_dependency_output",
+    "invalid_output_contract",
+    "dependency_failed",
+    "verification_failed",
+    "unverified_assumption"
+  ]
+}

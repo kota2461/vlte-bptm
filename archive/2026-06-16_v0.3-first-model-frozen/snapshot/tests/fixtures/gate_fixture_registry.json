@@ -1,0 +1,80 @@
+{
+ "schema_version": "gate-fixture-registry.v1",
+  "frozen_at": "2026-06-12T07:03:28.289100+00:00",
+ "rules": [
+  "anchors are append-only; deleting or relabeling requires a new registry version, a reason, and human approval",
+  "minimum counts are monotonic: never lowered",
+  "sealed-test fixtures join this registry once introduced and rotate to a new version after being used for tuning"
+ ],
+ "fixtures": {
+  "pattern_router_cases_v1.json": {
+   "version": "v1.1",
+   "sha256": "268829B41C5FD9F93662641EC942F83598FC5501450F867997A4FA2458862D5C",
+   "min_case_count": 25,
+   "min_route_counts": {
+    "explore": 12,
+    "respond": 8,
+    "clarify": 2,
+    "verify": 1,
+    "summarize": 1,
+    "build": 1
+   },
+   "amendments": [
+    "2026-06-11 clarify_target text amended (ambiguous phrasing; see PATTERN_ROUTER_v0_1_1_spec.md)"
+   ]
+  },
+  "foundation_anchor_suite_v1.json": {
+   "version": "v1.0",
+   "sha256": "EEC7CDA1B42A186BA11011AE7A682FD035D1DFB165E5BC0AF294FB605D85804C",
+   "min_case_count": 58,
+   "min_route_counts": {
+    "respond": 39,
+    "explore": 5,
+    "verify": 8,
+    "clarify": 1,
+    "build": 2,
+    "summarize": 3
+   },
+   "amendments": []
+  },
+    "sealed_boundary_slice_v1.json": {
+      "version": "v1.0",
+      "sha256": "6E47FF0DCDB4F24003E505675478C8DE8A129B0072382B23CB5FE85A0B553E84",
+   "min_case_count": 22,
+   "min_route_counts": {
+    "build": 5,
+    "respond": 4,
+    "clarify": 4,
+    "verify": 4,
+    "explore": 3,
+    "summarize": 2
+      },
+      "role": "sealed measurement only; NOT a promotion gate check",
+      "status": "consumed",
+      "consumed_at": "2026-06-12T07:03:28.289100+00:00",
+      "consumed_for": "v0.2.3 improvement-regression adjudication",
+      "candidate_sha256": "71470C5E3D97973467661E17A66F7A382FE206F288454A7F9D39D305397DDEAC",
+      "successor": "sealed_boundary_slice_v2.json",
+      "amendments": [
+        "2026-06-12 consumed after candidate 254 was measured and the result was used for promotion adjudication"
+      ]
+    },
+    "sealed_boundary_slice_v2.json": {
+      "version": "v2.0",
+      "sha256": "410D3576DC9AA80C0C950492FF0C28207088EC5229E0D5E44B9C446D8CE3D341",
+      "min_case_count": 22,
+      "min_route_counts": {
+        "build": 5,
+        "respond": 4,
+        "clarify": 4,
+        "verify": 4,
+        "explore": 3,
+        "summarize": 2
+      },
+      "role": "sealed measurement only; NOT a promotion gate check",
+      "status": "active",
+      "predecessor": "sealed_boundary_slice_v1.json",
+      "amendments": []
+    }
+  }
+}

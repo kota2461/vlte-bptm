@@ -1,0 +1,22 @@
+{
+  "action_vector": {
+    "schema_version": "vlte-bptm.action-vector.v1",
+    "axes": ["reply", "ask", "explain", "plan", "verify", "summarize", "creative", "caution"],
+    "value_range": [0.0, 1.0]
+  },
+  "llm_order": {
+    "schema_version": "vlte-bptm.llm-order.v1",
+    "required_fields": [
+      "schema_version",
+      "mode",
+      "instruction",
+      "user_input",
+      "routing_key",
+      "action_vector_schema_version",
+      "action_vector",
+      "constraints",
+      "metadata"
+    ],
+    "modes": ["build", "clarify", "explain", "explore", "respond", "summarize", "verify"]
+  }
+}

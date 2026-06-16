@@ -1,0 +1,82 @@
+{
+  "note": "runtime end-to-end smoke; LLM output NOT training data",
+  "base": "http://192.168.10.124:1234",
+  "results": [
+    {
+      "text": null,
+      "intent": "respond",
+      "processing_class": "economy",
+      "core_mode": "horizontal",
+      "model_class": "small",
+      "model": "(direct)",
+      "request_max_tokens": 0,
+      "finish_reason": "direct",
+      "via": "direct",
+      "reply_chars": 17,
+      "tools": [],
+      "input": "こんにちは"
+    },
+    {
+      "text": null,
+      "intent": "respond",
+      "processing_class": "economy",
+      "core_mode": "horizontal",
+      "model_class": "small",
+      "model": "(direct)",
+      "request_max_tokens": 0,
+      "finish_reason": "direct",
+      "via": "direct",
+      "reply_chars": 22,
+      "tools": [],
+      "input": "ありがとう！"
+    },
+    {
+      "text": null,
+      "intent": "explain",
+      "processing_class": "economy",
+      "core_mode": "horizontal",
+      "model_class": "small",
+      "model": "google/gemma-4-e4b",
+      "request_max_tokens": 1920,
+      "finish_reason": "stop",
+      "via": "content",
+      "reply_chars": 1179,
+      "tools": [],
+      "input": "なぜ空は青いのか教えて"
+    },
+    {
+      "text": null,
+      "intent": "verify",
+      "processing_class": "verified",
+      "core_mode": "vertical",
+      "model_class": "standard",
+      "model": "google/gemma-4-12b-qat",
+      "request_max_tokens": 2560,
+      "finish_reason": "stop",
+      "via": "content",
+      "reply_chars": 47,
+      "tools": [
+        {
+          "name": "calculator",
+          "ok": true,
+          "output": "12 + 7 = 19 (主張 20 = 20 → 誤り)"
+        }
+      ],
+      "input": "この計算が合っているか確認して: 12 + 7 = 20"
+    },
+    {
+      "text": null,
+      "intent": "build",
+      "processing_class": "standard",
+      "core_mode": "horizontal",
+      "model_class": "standard",
+      "model": "google/gemma-4-12b-qat",
+      "request_max_tokens": 2304,
+      "finish_reason": "stop",
+      "via": "content",
+      "reply_chars": 2176,
+      "tools": [],
+      "input": "新しいPCのセットアップ手順を作って"
+    }
+  ]
+}

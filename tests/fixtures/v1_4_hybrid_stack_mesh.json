@@ -1,0 +1,30 @@
+{
+  "schema_version": "hybrid-stack-mesh.v1",
+  "candidate_score_method": "integrated_score_plus_covered_dependency_scores",
+  "candidate_unit_priority": [
+    "clarify",
+    "verify",
+    "build",
+    "summarize",
+    "explore",
+    "respond"
+  ],
+  "control_candidate_units": [
+    "clarify",
+    "verify",
+    "build",
+    "summarize",
+    "explore"
+  ],
+  "fallback_candidate_units": ["respond"],
+  "relative_score_threshold": 0.75,
+  "minimum_score": 0.12,
+  "budgets": {
+    "max_stacks": 2,
+    "max_total_steps": 3,
+    "max_stack_depth": 2,
+    "max_dispatches_per_call": 1
+  },
+  "scheduler": "candidate_score_then_priority",
+  "integrator": "completed_highest_candidate_score"
+}

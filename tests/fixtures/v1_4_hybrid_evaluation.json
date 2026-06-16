@@ -1,0 +1,30 @@
+[
+  {
+    "name": "implementation_and_summary",
+    "activations": {
+      "build": 0.9,
+      "summarize": 0.82,
+      "respond": 0.5
+    },
+    "horizontal_root_unit": "build",
+    "required_root_units": ["build", "summarize"]
+  },
+  {
+    "name": "exploration_and_verification",
+    "activations": {
+      "explore": 0.84,
+      "verify": 0.8,
+      "respond": 0.4
+    },
+    "horizontal_root_unit": "explore",
+    "required_root_units": ["explore", "verify"]
+  },
+  {
+    "name": "simple_response",
+    "activations": {
+      "respond": 0.7
+    },
+    "horizontal_root_unit": "respond",
+    "required_root_units": ["respond"]
+  }
+]

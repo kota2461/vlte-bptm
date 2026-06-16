@@ -1,0 +1,281 @@
+{
+  "schema_version": "independent-runtime-study.v1",
+  "study_id": "v1-6-contract-fixture",
+  "evidence_origin": "synthetic_contract_fixture",
+  "collected_at_utc": "2026-06-11T06:00:00Z",
+  "policy_schema_version": "independent-runtime-study-policy.v1",
+  "privacy": {
+    "consent_obtained": true,
+    "raw_input_stored": false,
+    "raw_output_stored": false,
+    "automatic_learning": false,
+    "retention_days": 30
+  },
+  "reviewers": [
+    {
+      "reviewer_id": "fixture-r1",
+      "independent_from_generation": false,
+      "consented": true
+    },
+    {
+      "reviewer_id": "fixture-r2",
+      "independent_from_generation": false,
+      "consented": true
+    },
+    {
+      "reviewer_id": "fixture-r3",
+      "independent_from_generation": false,
+      "consented": true
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "direct-01",
+      "input_class": "direct_response",
+      "candidates": [
+        {
+          "candidate_id": "d-a",
+          "latency_ms": 180,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "d-b",
+          "latency_ms": 100,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        },
+        {
+          "candidate_id": "d-c",
+          "latency_ms": 240,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "d-a": "vertical",
+        "d-b": "horizontal",
+        "d-c": "hybrid"
+      },
+      "runtime_selected_mode": "horizontal",
+      "reviews": [
+        {
+          "reviewer_id": "fixture-r1",
+          "preferred_candidate_id": "d-b",
+          "candidate_scores": {
+            "d-a": {"correctness": 4, "relevance": 5, "completeness": 4, "assumption_control": 4, "clarity": 4},
+            "d-b": {"correctness": 5, "relevance": 5, "completeness": 4, "assumption_control": 4, "clarity": 5},
+            "d-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r2",
+          "preferred_candidate_id": "d-b",
+          "candidate_scores": {
+            "d-a": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 5},
+            "d-b": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 4, "clarity": 5},
+            "d-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r3",
+          "preferred_candidate_id": "d-b",
+          "candidate_scores": {
+            "d-a": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4},
+            "d-b": {"correctness": 4, "relevance": 5, "completeness": 4, "assumption_control": 4, "clarity": 5},
+            "d-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4}
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "implementation-01",
+      "input_class": "implementation",
+      "candidates": [
+        {
+          "candidate_id": "i-a",
+          "latency_ms": 230,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        },
+        {
+          "candidate_id": "i-b",
+          "latency_ms": 100,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        },
+        {
+          "candidate_id": "i-c",
+          "latency_ms": 180,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "i-a": "hybrid",
+        "i-b": "horizontal",
+        "i-c": "vertical"
+      },
+      "runtime_selected_mode": "hybrid",
+      "reviews": [
+        {
+          "reviewer_id": "fixture-r1",
+          "preferred_candidate_id": "i-a",
+          "candidate_scores": {
+            "i-a": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 4},
+            "i-b": {"correctness": 3, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 4},
+            "i-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 5, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r2",
+          "preferred_candidate_id": "i-a",
+          "candidate_scores": {
+            "i-a": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 5},
+            "i-b": {"correctness": 3, "relevance": 3, "completeness": 3, "assumption_control": 3, "clarity": 4},
+            "i-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r3",
+          "preferred_candidate_id": "i-a",
+          "candidate_scores": {
+            "i-a": {"correctness": 5, "relevance": 4, "completeness": 5, "assumption_control": 5, "clarity": 4},
+            "i-b": {"correctness": 3, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 3},
+            "i-c": {"correctness": 4, "relevance": 4, "completeness": 5, "assumption_control": 4, "clarity": 4}
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "verification-01",
+      "input_class": "verification",
+      "candidates": [
+        {
+          "candidate_id": "v-a",
+          "latency_ms": 180,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "v-b",
+          "latency_ms": 230,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        },
+        {
+          "candidate_id": "v-c",
+          "latency_ms": 95,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "v-a": "vertical",
+        "v-b": "hybrid",
+        "v-c": "horizontal"
+      },
+      "runtime_selected_mode": "hybrid",
+      "reviews": [
+        {
+          "reviewer_id": "fixture-r1",
+          "preferred_candidate_id": "v-a",
+          "candidate_scores": {
+            "v-a": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 4},
+            "v-b": {"correctness": 5, "relevance": 4, "completeness": 4, "assumption_control": 5, "clarity": 4},
+            "v-c": {"correctness": 4, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r2",
+          "preferred_candidate_id": "v-a",
+          "candidate_scores": {
+            "v-a": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 5},
+            "v-b": {"correctness": 5, "relevance": 5, "completeness": 4, "assumption_control": 5, "clarity": 4},
+            "v-c": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 3, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r3",
+          "preferred_candidate_id": "v-a",
+          "candidate_scores": {
+            "v-a": {"correctness": 5, "relevance": 5, "completeness": 4, "assumption_control": 5, "clarity": 5},
+            "v-b": {"correctness": 4, "relevance": 5, "completeness": 4, "assumption_control": 5, "clarity": 4},
+            "v-c": {"correctness": 4, "relevance": 4, "completeness": 3, "assumption_control": 4, "clarity": 4}
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "synthesis-01",
+      "input_class": "synthesis",
+      "candidates": [
+        {
+          "candidate_id": "s-a",
+          "latency_ms": 105,
+          "dispatch_count": 1,
+          "estimated_cost_units": 1,
+          "fallback": true
+        },
+        {
+          "candidate_id": "s-b",
+          "latency_ms": 185,
+          "dispatch_count": 2,
+          "estimated_cost_units": 2,
+          "fallback": false
+        },
+        {
+          "candidate_id": "s-c",
+          "latency_ms": 235,
+          "dispatch_count": 3,
+          "estimated_cost_units": 3,
+          "fallback": false
+        }
+      ],
+      "reveal": {
+        "s-a": "horizontal",
+        "s-b": "vertical",
+        "s-c": "hybrid"
+      },
+      "runtime_selected_mode": "hybrid",
+      "reviews": [
+        {
+          "reviewer_id": "fixture-r1",
+          "preferred_candidate_id": "s-c",
+          "candidate_scores": {
+            "s-a": {"correctness": 3, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 4},
+            "s-b": {"correctness": 4, "relevance": 4, "completeness": 4, "assumption_control": 4, "clarity": 4},
+            "s-c": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 5}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r2",
+          "preferred_candidate_id": "s-c",
+          "candidate_scores": {
+            "s-a": {"correctness": 3, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 4},
+            "s-b": {"correctness": 4, "relevance": 5, "completeness": 4, "assumption_control": 4, "clarity": 4},
+            "s-c": {"correctness": 5, "relevance": 5, "completeness": 5, "assumption_control": 5, "clarity": 4}
+          }
+        },
+        {
+          "reviewer_id": "fixture-r3",
+          "preferred_candidate_id": "s-b",
+          "candidate_scores": {
+            "s-a": {"correctness": 4, "relevance": 4, "completeness": 3, "assumption_control": 3, "clarity": 4},
+            "s-b": {"correctness": 5, "relevance": 5, "completeness": 4, "assumption_control": 5, "clarity": 4},
+            "s-c": {"correctness": 5, "relevance": 5, "completeness": 4, "assumption_control": 5, "clarity": 4}
+          }
+        }
+      ]
+    }
+  ]
+}

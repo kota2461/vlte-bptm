@@ -1,0 +1,771 @@
+{
+  "case_count": 48,
+  "training_state": "pending-only; model not retrained",
+  "pattern_router": {
+    "correct": 27,
+    "accuracy": 0.5625,
+    "wilson95": {
+      "confidence": 0.95,
+      "lower": 0.42275,
+      "upper": 0.692987
+    },
+    "effective_correct": 25,
+    "effective_accuracy": 0.520833,
+    "abstained": 8,
+    "pair": {
+      "group_count": 24,
+      "both_correct": 8,
+      "one_correct": 11,
+      "zero_correct": 5,
+      "both_correct_rate": 0.333333
+    },
+    "breakdown": {
+      "boundary": {
+        "build_respond": {
+          "correct": 5,
+          "count": 12,
+          "accuracy": 0.416667
+        },
+        "clarify_verify": {
+          "correct": 5,
+          "count": 12,
+          "accuracy": 0.416667
+        },
+        "explore_build": {
+          "correct": 8,
+          "count": 12,
+          "accuracy": 0.666667
+        },
+        "explore_respond": {
+          "correct": 9,
+          "count": 12,
+          "accuracy": 0.75
+        }
+      },
+      "language": {
+        "en": {
+          "correct": 4,
+          "count": 16,
+          "accuracy": 0.25
+        },
+        "ja": {
+          "correct": 23,
+          "count": 32,
+          "accuracy": 0.71875
+        }
+      },
+      "difficulty": {
+        "compound": {
+          "correct": 11,
+          "count": 22,
+          "accuracy": 0.5
+        },
+        "simple": {
+          "correct": 16,
+          "count": 26,
+          "accuracy": 0.615385
+        }
+      },
+      "route": {
+        "build": {
+          "correct": 4,
+          "count": 12,
+          "accuracy": 0.333333
+        },
+        "clarify": {
+          "correct": 4,
+          "count": 6,
+          "accuracy": 0.666667
+        },
+        "explore": {
+          "correct": 9,
+          "count": 12,
+          "accuracy": 0.75
+        },
+        "respond": {
+          "correct": 9,
+          "count": 12,
+          "accuracy": 0.75
+        },
+        "verify": {
+          "correct": 1,
+          "count": 6,
+          "accuracy": 0.166667
+        }
+      }
+    },
+    "confusion": {
+      "build": {
+        "build": 4,
+        "clarify": 2,
+        "explore": 1,
+        "respond": 5,
+        "summarize": 0,
+        "verify": 0
+      },
+      "clarify": {
+        "build": 0,
+        "clarify": 4,
+        "explore": 0,
+        "respond": 2,
+        "summarize": 0,
+        "verify": 0
+      },
+      "explore": {
+        "build": 0,
+        "clarify": 0,
+        "explore": 9,
+        "respond": 3,
+        "summarize": 0,
+        "verify": 0
+      },
+      "respond": {
+        "build": 0,
+        "clarify": 0,
+        "explore": 3,
+        "respond": 9,
+        "summarize": 0,
+        "verify": 0
+      },
+      "summarize": {
+        "build": 0,
+        "clarify": 0,
+        "explore": 0,
+        "respond": 0,
+        "summarize": 0,
+        "verify": 0
+      },
+      "verify": {
+        "build": 0,
+        "clarify": 2,
+        "explore": 0,
+        "respond": 3,
+        "summarize": 0,
+        "verify": 1
+      }
+    },
+    "misses": [
+      {
+        "group": "er-solution-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "explore",
+        "effective": "explore",
+        "confidence": 0.22688903765193796,
+        "low_confidence": false,
+        "input": "別解は挙げず、指定された方針でこの問題に答えてください"
+      },
+      {
+        "group": "er-approach-en",
+        "boundary": "explore_respond",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "explore",
+        "effective": "explore",
+        "confidence": 0.20623583354583064,
+        "low_confidence": false,
+        "input": "Do not list alternatives; answer using the approach already specified."
+      },
+      {
+        "group": "er-design-en",
+        "boundary": "explore_respond",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "explore",
+        "predicted": "respond",
+        "effective": "clarify",
+        "confidence": 0.19396539711701777,
+        "low_confidence": true,
+        "input": "Generate several design directions and state the uncertainty of each."
+      },
+      {
+        "group": "br-api-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "build",
+        "predicted": "respond",
+        "effective": "clarify",
+        "confidence": 0.18703563310423876,
+        "low_confidence": true,
+        "input": "採用済みのAPI案を実装するため、作業を順番付きのタスクに分けてください"
+      },
+      {
+        "group": "br-migration-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "explore",
+        "effective": "explore",
+        "confidence": 0.19825154766066685,
+        "low_confidence": false,
+        "input": "移行方針は決まっています。停止時間を抑える実施手順を組んでください"
+      },
+      {
+        "group": "br-test-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "build",
+        "predicted": "clarify",
+        "effective": "clarify",
+        "confidence": 0.1897262770654264,
+        "low_confidence": false,
+        "input": "この仕様を実装に移すため、必要なファイル変更とテストを整理してください"
+      },
+      {
+        "group": "br-release-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "clarify",
+        "effective": "clarify",
+        "confidence": 0.1885398256184405,
+        "low_confidence": false,
+        "input": "選択済みの修正をリリースするまでのチェックリストを作ってください"
+      },
+      {
+        "group": "br-release-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "respond",
+        "predicted": "explore",
+        "effective": "explore",
+        "confidence": 0.20731327383414588,
+        "low_confidence": false,
+        "input": "チェックリストは作らず、この修正を公開する理由を答えてください"
+      },
+      {
+        "group": "br-component-en",
+        "boundary": "build_respond",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "build",
+        "predicted": "respond",
+        "effective": "clarify",
+        "confidence": 0.18751224572563405,
+        "low_confidence": true,
+        "input": "Turn the selected component design into an ordered implementation plan."
+      },
+      {
+        "group": "br-deployment-en",
+        "boundary": "build_respond",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.19822225295547347,
+        "low_confidence": false,
+        "input": "Prepare concrete deployment steps, validation checks, and rollback tasks."
+      },
+      {
+        "group": "cv-number-ja",
+        "boundary": "clarify_verify",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "verify",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.19559997160405157,
+        "low_confidence": false,
+        "input": "与えられた数値を使って計算結果が合っているか検算してください"
+      },
+      {
+        "group": "cv-format-ja",
+        "boundary": "clarify_verify",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "verify",
+        "predicted": "clarify",
+        "effective": "clarify",
+        "confidence": 0.19040919015201627,
+        "low_confidence": false,
+        "input": "出力が指定された形式と用途の条件を満たすか検証してください"
+      },
+      {
+        "group": "cv-environment-ja",
+        "boundary": "clarify_verify",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "verify",
+        "predicted": "clarify",
+        "effective": "clarify",
+        "confidence": 0.18649672631089934,
+        "low_confidence": false,
+        "input": "示されたOSとバージョンでこの実装が動作するか確認してください"
+      },
+      {
+        "group": "cv-target-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "clarify",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.2100919153567553,
+        "low_confidence": false,
+        "input": "The target is missing, so ask which artifact should be checked."
+      },
+      {
+        "group": "cv-target-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "verify",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.20126651181155,
+        "low_confidence": false,
+        "input": "Check whether the specified artifact satisfies the stated requirement."
+      },
+      {
+        "group": "cv-assumption-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "clarify",
+        "predicted": "respond",
+        "effective": "clarify",
+        "confidence": 0.18537440596890065,
+        "low_confidence": true,
+        "input": "Do not assume the missing premise; ask the user to provide it."
+      },
+      {
+        "group": "cv-assumption-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "verify",
+        "predicted": "respond",
+        "effective": "clarify",
+        "confidence": 0.1945488101140615,
+        "low_confidence": true,
+        "input": "Confirm whether the provided premise is supported by the evidence."
+      },
+      {
+        "group": "eb-architecture-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.2002441081644966,
+        "low_confidence": false,
+        "input": "Compare several architecture options without committing to one."
+      },
+      {
+        "group": "eb-architecture-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "build",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.1965677208722461,
+        "low_confidence": false,
+        "input": "Break the chosen architecture into concrete implementation tasks."
+      },
+      {
+        "group": "eb-experiment-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "explore",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.199200569790048,
+        "low_confidence": false,
+        "input": "Generate competing hypotheses and possible ways to investigate them."
+      },
+      {
+        "group": "eb-experiment-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "respond",
+        "effective": "respond",
+        "confidence": 0.209844946104621,
+        "low_confidence": false,
+        "input": "Turn the selected hypothesis into an ordered experiment plan."
+      }
+    ]
+  },
+  "core": {
+    "correct": 22,
+    "accuracy": 0.458333,
+    "wilson95": {
+      "confidence": 0.95,
+      "lower": 0.325752,
+      "upper": 0.597089
+    },
+    "pair": {
+      "group_count": 24,
+      "both_correct": 2,
+      "one_correct": 18,
+      "zero_correct": 4,
+      "both_correct_rate": 0.083333
+    },
+    "breakdown": {
+      "boundary": {
+        "build_respond": {
+          "correct": 4,
+          "count": 12,
+          "accuracy": 0.333333
+        },
+        "clarify_verify": {
+          "correct": 8,
+          "count": 12,
+          "accuracy": 0.666667
+        },
+        "explore_build": {
+          "correct": 5,
+          "count": 12,
+          "accuracy": 0.416667
+        },
+        "explore_respond": {
+          "correct": 5,
+          "count": 12,
+          "accuracy": 0.416667
+        }
+      },
+      "language": {
+        "en": {
+          "correct": 6,
+          "count": 16,
+          "accuracy": 0.375
+        },
+        "ja": {
+          "correct": 16,
+          "count": 32,
+          "accuracy": 0.5
+        }
+      },
+      "difficulty": {
+        "compound": {
+          "correct": 11,
+          "count": 22,
+          "accuracy": 0.5
+        },
+        "simple": {
+          "correct": 11,
+          "count": 26,
+          "accuracy": 0.423077
+        }
+      },
+      "route": {
+        "build": {
+          "correct": 7,
+          "count": 12,
+          "accuracy": 0.583333
+        },
+        "clarify": {
+          "correct": 5,
+          "count": 6,
+          "accuracy": 0.833333
+        },
+        "explore": {
+          "correct": 3,
+          "count": 12,
+          "accuracy": 0.25
+        },
+        "respond": {
+          "correct": 4,
+          "count": 12,
+          "accuracy": 0.333333
+        },
+        "verify": {
+          "correct": 3,
+          "count": 6,
+          "accuracy": 0.5
+        }
+      }
+    },
+    "confusion": {
+      "build": {
+        "build": 7,
+        "clarify": 0,
+        "explore": 2,
+        "respond": 1,
+        "summarize": 0,
+        "verify": 2
+      },
+      "clarify": {
+        "build": 0,
+        "clarify": 5,
+        "explore": 0,
+        "respond": 0,
+        "summarize": 0,
+        "verify": 1
+      },
+      "explore": {
+        "build": 3,
+        "clarify": 0,
+        "explore": 3,
+        "respond": 4,
+        "summarize": 1,
+        "verify": 1
+      },
+      "respond": {
+        "build": 2,
+        "clarify": 0,
+        "explore": 1,
+        "respond": 4,
+        "summarize": 3,
+        "verify": 2
+      },
+      "verify": {
+        "build": 0,
+        "clarify": 0,
+        "explore": 0,
+        "respond": 3,
+        "summarize": 0,
+        "verify": 3
+      }
+    },
+    "misses": [
+      {
+        "group": "er-naming-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "build",
+        "input": "候補は増やさず、この機能名が利用者に伝える意味を説明してください"
+      },
+      {
+        "group": "er-solution-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "build",
+        "input": "この問題を解く別々の方針を三通り考えてください"
+      },
+      {
+        "group": "er-solution-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "summarize",
+        "input": "別解は挙げず、指定された方針でこの問題に答えてください"
+      },
+      {
+        "group": "er-risk-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "explore",
+        "predicted": "respond",
+        "input": "結論を急がず、起こり得る原因を異なる観点から列挙してください"
+      },
+      {
+        "group": "er-expression-ja",
+        "boundary": "explore_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "build",
+        "input": "この案内文を別の語調で表す候補をいくつか作ってください"
+      },
+      {
+        "group": "er-approach-en",
+        "boundary": "explore_respond",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "respond",
+        "input": "List three substantially different approaches before choosing one."
+      },
+      {
+        "group": "er-design-en",
+        "boundary": "explore_respond",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "respond",
+        "predicted": "explore",
+        "input": "Explain the provided design directly without proposing new directions."
+      },
+      {
+        "group": "br-api-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "build",
+        "input": "実装手順は作らず、このAPIが何をするものか説明してください"
+      },
+      {
+        "group": "br-migration-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "explore",
+        "input": "移行方針は決まっています。停止時間を抑える実施手順を組んでください"
+      },
+      {
+        "group": "br-test-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "build",
+        "predicted": "verify",
+        "input": "この仕様を実装に移すため、必要なファイル変更とテストを整理してください"
+      },
+      {
+        "group": "br-test-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "verify",
+        "input": "変更一覧は作らず、この仕様の目的をそのまま説明してください"
+      },
+      {
+        "group": "br-release-ja",
+        "boundary": "build_respond",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "respond",
+        "predicted": "summarize",
+        "input": "チェックリストは作らず、この修正を公開する理由を答えてください"
+      },
+      {
+        "group": "br-component-en",
+        "boundary": "build_respond",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "respond",
+        "predicted": "verify",
+        "input": "Do not create a plan; explain what the selected component does."
+      },
+      {
+        "group": "br-deployment-en",
+        "boundary": "build_respond",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "respond",
+        "input": "Prepare concrete deployment steps, validation checks, and rollback tasks."
+      },
+      {
+        "group": "br-deployment-en",
+        "boundary": "build_respond",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "respond",
+        "predicted": "summarize",
+        "input": "Do not prepare deployment tasks; answer why a rollback is useful."
+      },
+      {
+        "group": "cv-url-ja",
+        "boundary": "clarify_verify",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "clarify",
+        "predicted": "verify",
+        "input": "確認対象のURLが書かれていないので、対象URLを質問してください"
+      },
+      {
+        "group": "cv-number-ja",
+        "boundary": "clarify_verify",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "verify",
+        "predicted": "respond",
+        "input": "与えられた数値を使って計算結果が合っているか検算してください"
+      },
+      {
+        "group": "cv-target-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "verify",
+        "predicted": "respond",
+        "input": "Check whether the specified artifact satisfies the stated requirement."
+      },
+      {
+        "group": "cv-assumption-en",
+        "boundary": "clarify_verify",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "verify",
+        "predicted": "respond",
+        "input": "Confirm whether the provided premise is supported by the evidence."
+      },
+      {
+        "group": "eb-storage-ja",
+        "boundary": "explore_build",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "respond",
+        "input": "保存方式を決める前に、性質の異なる候補を比較してください"
+      },
+      {
+        "group": "eb-ui-ja",
+        "boundary": "explore_build",
+        "language": "ja",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "summarize",
+        "input": "画面構成を固定せず、異なるレイアウト案を複数考えてください"
+      },
+      {
+        "group": "eb-api-ja",
+        "boundary": "explore_build",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "explore",
+        "predicted": "build",
+        "input": "APIの設計候補を広げ、各案の利点と不確実性を挙げてください"
+      },
+      {
+        "group": "eb-failure-ja",
+        "boundary": "explore_build",
+        "language": "ja",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "verify",
+        "input": "採用した回復戦略を実装・検証する作業順を組んでください"
+      },
+      {
+        "group": "eb-architecture-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "simple",
+        "route": "explore",
+        "predicted": "verify",
+        "input": "Compare several architecture options without committing to one."
+      },
+      {
+        "group": "eb-experiment-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "explore",
+        "predicted": "respond",
+        "input": "Generate competing hypotheses and possible ways to investigate them."
+      },
+      {
+        "group": "eb-experiment-en",
+        "boundary": "explore_build",
+        "language": "en",
+        "difficulty": "compound",
+        "route": "build",
+        "predicted": "explore",
+        "input": "Turn the selected hypothesis into an ordered experiment plan."
+      }
+    ]
+  }
+}

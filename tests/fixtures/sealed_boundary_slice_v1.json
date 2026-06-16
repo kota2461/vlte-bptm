@@ -1,0 +1,31 @@
+{
+ "schema_version": "sealed-boundary-slice.v1",
+ "frozen_at": "2026-06-12T00:00:00+00:00",
+ "author": "claude-fable-5 (training batch authored separately by user-provided external source)",
+ "policy": "sealed: never used for training; one pre/post comparison cycle, then rotate to v2 if referenced for tuning",
+ "purpose": "pre/post measurement for round2-user boundary batch and english round2b",
+ "cases": [
+  {"slice": "boundary_mirror", "group": "sbr-work-ja", "boundary": "build_respond", "language": "ja", "difficulty": "compound", "input": "進め方は確定しています。新人でも進められるように、作業の順番と各段階の終了条件を書き出してください。", "route": "build"},
+  {"slice": "boundary_mirror", "group": "sbr-work-ja", "boundary": "build_respond", "language": "ja", "difficulty": "compound", "input": "この進め方を採用すると何が良くなるのか、要点を教えてください。", "route": "respond"},
+  {"slice": "boundary_mirror", "group": "scv-cost-ja", "boundary": "clarify_verify", "language": "ja", "difficulty": "compound", "input": "サーバー費用を見積もってください。台数と契約年数はまだ決めていません。", "route": "clarify"},
+  {"slice": "boundary_mirror", "group": "scv-cost-ja", "boundary": "clarify_verify", "language": "ja", "difficulty": "compound", "input": "台数は8台、契約は3年です。この見積もりが上限金額に収まっているか確かめてください。", "route": "verify"},
+  {"slice": "boundary_mirror", "group": "sbr-framework-en", "boundary": "build_respond", "language": "en", "difficulty": "simple", "input": "The framework has been chosen. Split the remaining migration into concrete tasks.", "route": "build"},
+  {"slice": "boundary_mirror", "group": "sbr-framework-en", "boundary": "build_respond", "language": "en", "difficulty": "simple", "input": "Explain what advantage the chosen framework gives us.", "route": "respond"},
+  {"slice": "boundary_mirror", "group": "scv-memory-en", "boundary": "clarify_verify", "language": "en", "difficulty": "compound", "input": "Estimate the memory usage, but the dataset size has not been shared yet.", "route": "clarify"},
+  {"slice": "boundary_mirror", "group": "scv-memory-en", "boundary": "clarify_verify", "language": "en", "difficulty": "compound", "input": "The dataset size is 2 GB on the listed hardware. Check whether the claimed memory usage is realistic.", "route": "verify"},
+  {"slice": "boundary_mirror", "group": "seb-backup-ja", "boundary": "explore_build", "language": "ja", "difficulty": "compound", "input": "バックアップ方式を決める前に、いくつかの取り方とそれぞれの欠点を並べてください。", "route": "explore"},
+  {"slice": "boundary_mirror", "group": "seb-backup-ja", "boundary": "explore_build", "language": "ja", "difficulty": "compound", "input": "バックアップ方式は決まりました。導入から復元テストまでの作業手順をまとめてください。", "route": "build"},
+  {"slice": "english", "group": "sen-verify", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Double-check that the invoice total is correct.", "route": "verify"},
+  {"slice": "english", "group": "sen-verify", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Is this proof valid? Confirm each step.", "route": "verify"},
+  {"slice": "english", "group": "sen-build", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Lay out the tasks needed to ship this feature.", "route": "build"},
+  {"slice": "english", "group": "sen-build", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Turn these requirements into an ordered work plan.", "route": "build"},
+  {"slice": "english", "group": "sen-clarify", "boundary": "none", "language": "en", "difficulty": "simple", "input": "I need an estimate, but I have not told you the quantity yet, so ask.", "route": "clarify"},
+  {"slice": "english", "group": "sen-clarify", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Before answering, ask me which version we are using.", "route": "clarify"},
+  {"slice": "english", "group": "sen-summarize", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Condense this article into three bullet points.", "route": "summarize"},
+  {"slice": "english", "group": "sen-summarize", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Wrap up the main findings in one short paragraph.", "route": "summarize"},
+  {"slice": "english", "group": "sen-explore", "boundary": "none", "language": "en", "difficulty": "simple", "input": "List a few different strategies we could consider.", "route": "explore"},
+  {"slice": "english", "group": "sen-explore", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Show me more than one way to structure this code.", "route": "explore"},
+  {"slice": "english", "group": "sen-respond", "boundary": "none", "language": "en", "difficulty": "simple", "input": "Tell me what HTTP stands for.", "route": "respond"},
+  {"slice": "english", "group": "sen-respond", "boundary": "none", "language": "en", "difficulty": "simple", "input": "What is the capital of France?", "route": "respond"}
+ ]
+}

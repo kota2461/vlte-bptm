@@ -1,0 +1,34 @@
+{
+  "schema_version": "pattern-language-fixture-registry.v1",
+  "updated_at": "2026-06-13T05:45:00+00:00",
+  "rules": [
+    "human-reviewed train and validation labels are append-only",
+    "a sealed fixture is measured at most once before rotation",
+    "opening sealed cases for review consumes the fixture",
+    "sealed labels are never used for tuning before rotation"
+  ],
+  "fixtures": {
+    "pattern_language_benchmark_v1.json": {
+      "sha256": "558ab43f8f64722d4ef6cb4bb73ef41b2f4812ac26c87c8c553ee7ff52d87c65",
+      "case_count": 84,
+      "review_status": "human_reviewed",
+      "train_count": 28,
+      "validation_count": 28,
+      "sealed_count": 28,
+      "sealed_status": "consumed",
+      "sealed_consumed_at": "2026-06-13T05:36:27.150437+00:00",
+      "sealed_consumed_for": "human label review",
+      "successor": "pattern_language_sealed_v2.json",
+      "changed_label_count": 0
+    },
+    "pattern_language_sealed_v2.json": {
+      "sha256": "c40b52a890b853367dc4907054a2b1ebca496801e342b03d9243ba36af3bb28d",
+      "case_count": 28,
+      "status": "active",
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_benchmark_v1.json#sealed",
+      "measured": false,
+      "reviewed": false
+    }
+  }
+}

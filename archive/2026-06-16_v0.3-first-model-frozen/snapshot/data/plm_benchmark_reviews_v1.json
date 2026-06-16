@@ -1,0 +1,3270 @@
+{
+  "schema_version": "pattern-language-review-log.v1",
+  "benchmark_sha256": "558ab43f8f64722d4ef6cb4bb73ef41b2f4812ac26c87c8c553ee7ff52d87c65",
+  "reviews": {
+    "plm-train-respond-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-12T09:05:36.130678+00:00"
+    },
+    "plm-train-respond-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 7,
+            "end": 10
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-12T09:21:12.792028+00:00"
+    },
+    "plm-train-respond-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 9
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-12T09:23:11.374506+00:00"
+    },
+    "plm-train-respond-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-12T09:49:32.356165+00:00"
+    },
+    "plm-validation-respond-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "short_response",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "signal": "direct_response_request",
+            "start": 11,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:04.129300+00:00"
+    },
+    "plm-validation-respond-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 10,
+            "end": 13
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:11.068125+00:00"
+    },
+    "plm-validation-respond-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:21.310070+00:00"
+    },
+    "plm-validation-respond-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:23.642633+00:00"
+    },
+    "plm-train-explain-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 13,
+            "end": 16
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:25.591139+00:00"
+    },
+    "plm-train-explain-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 2
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:27.337710+00:00"
+    },
+    "plm-train-explain-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:29.848946+00:00"
+    },
+    "plm-train-explain-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:31.628041+00:00"
+    },
+    "plm-validation-explain-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "signal": "short_response",
+            "start": 12,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:33.642997+00:00"
+    },
+    "plm-validation-explain-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 13,
+            "end": 16
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:35.067258+00:00"
+    },
+    "plm-validation-explain-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 12
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:35.675652+00:00"
+    },
+    "plm-validation-explain-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:39.899055+00:00"
+    },
+    "plm-train-clarify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 18,
+            "end": 27
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:41.652867+00:00"
+    },
+    "plm-train-clarify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 16,
+            "end": 25
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:42.338915+00:00"
+    },
+    "plm-train-clarify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 50,
+            "end": 62
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:43.008479+00:00"
+    },
+    "plm-train-clarify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 0,
+            "end": 16
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:43.564295+00:00"
+    },
+    "plm-validation-clarify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 6,
+            "end": 13
+          },
+          {
+            "signal": "constraint_ask_first",
+            "start": 14,
+            "end": 18
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:44.370859+00:00"
+    },
+    "plm-validation-clarify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 19,
+            "end": 29
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:44.779107+00:00"
+    },
+    "plm-validation-clarify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 49,
+            "end": 59
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:45.275234+00:00"
+    },
+    "plm-validation-clarify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:45.810253+00:00"
+    },
+    "plm-train-build-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 7,
+            "end": 11
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:46.791054+00:00"
+    },
+    "plm-train-build-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:47.317188+00:00"
+    },
+    "plm-train-build-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 9,
+            "end": 21
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:47.929633+00:00"
+    },
+    "plm-train-build-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 30,
+            "end": 43
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:48.468014+00:00"
+    },
+    "plm-validation-build-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "signal": "format_bullets",
+            "start": 12,
+            "end": 16
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:49.587382+00:00"
+    },
+    "plm-validation-build-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 6,
+            "end": 10
+          },
+          {
+            "signal": "long_response",
+            "start": 11,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:51.330243+00:00"
+    },
+    "plm-validation-build-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 32,
+            "end": 51
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:51.897537+00:00"
+    },
+    "plm-validation-build-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 16,
+            "end": 25
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:52.348720+00:00"
+    },
+    "plm-train-verify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 5,
+            "end": 9
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:53.410820+00:00"
+    },
+    "plm-train-verify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "unverified_claim",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "signal": "verification_request",
+            "start": 14,
+            "end": 18
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:55.797364+00:00"
+    },
+    "plm-train-verify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:56.375307+00:00"
+    },
+    "plm-train-verify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "signal": "unverified_claim",
+            "start": 13,
+            "end": 20
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:56.816225+00:00"
+    },
+    "plm-validation-verify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "current_information",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "signal": "constraint_cite_sources",
+            "start": 7,
+            "end": 11
+          },
+          {
+            "signal": "verification_request",
+            "start": 12,
+            "end": 16
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:57.236187+00:00"
+    },
+    "plm-validation-verify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "unverified_claim",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "signal": "verification_request",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "signal": "constraint_cite_sources",
+            "start": 9,
+            "end": 15
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:57.708070+00:00"
+    },
+    "plm-validation-verify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 7
+          },
+          {
+            "signal": "current_information",
+            "start": 17,
+            "end": 24
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:58.806191+00:00"
+    },
+    "plm-validation-verify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "signal": "unverified_claim",
+            "start": 14,
+            "end": 22
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:59.267636+00:00"
+    },
+    "plm-train-summarize-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "short_response",
+            "start": 6,
+            "end": 8
+          },
+          {
+            "signal": "summary_request",
+            "start": 9,
+            "end": 11
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:59.536606+00:00"
+    },
+    "plm-train-summarize-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 5,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:20:59.751218+00:00"
+    },
+    "plm-train-summarize-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "signal": "short_response",
+            "start": 25,
+            "end": 37
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:00.287051+00:00"
+    },
+    "plm-train-summarize-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "signal": "format_bullets",
+            "start": 29,
+            "end": 42
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:00.847533+00:00"
+    },
+    "plm-validation-summarize-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "short_response",
+            "start": 8,
+            "end": 10
+          },
+          {
+            "signal": "summary_request",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:01.790087+00:00"
+    },
+    "plm-validation-summarize-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 5,
+            "end": 7
+          },
+          {
+            "signal": "format_table",
+            "start": 8,
+            "end": 11
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:02.287793+00:00"
+    },
+    "plm-validation-summarize-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "signal": "short_response",
+            "start": 25,
+            "end": 32
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:02.712110+00:00"
+    },
+    "plm-validation-summarize-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:03.134446+00:00"
+    },
+    "plm-train-explore-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 6,
+            "end": 10
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:03.378862+00:00"
+    },
+    "plm-train-explore-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 4,
+            "end": 8
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:03.808342+00:00"
+    },
+    "plm-train-explore-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 8,
+            "end": 23
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:04.290659+00:00"
+    },
+    "plm-train-explore-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 0,
+            "end": 10
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:05.859277+00:00"
+    },
+    "plm-validation-explore-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "signal": "short_response",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:08.267258+00:00"
+    },
+    "plm-validation-explore-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 0,
+            "end": 7
+          },
+          {
+            "signal": "format_table",
+            "start": 8,
+            "end": 11
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:08.733701+00:00"
+    },
+    "plm-validation-explore-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:09.187249+00:00"
+    },
+    "plm-validation-explore-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 14,
+            "end": 24
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:21:10.482745+00:00"
+    },
+    "plm-sealed-respond-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 9,
+            "end": 12
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:35.433191+00:00"
+    },
+    "plm-sealed-respond-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 9,
+            "end": 12
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:48.072586+00:00"
+    },
+    "plm-sealed-respond-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:51.057191+00:00"
+    },
+    "plm-sealed-respond-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "direct_response_request",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:52.883597+00:00"
+    },
+    "plm-sealed-explain-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 2
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:57.969559+00:00"
+    },
+    "plm-sealed-explain-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 13,
+            "end": 16
+          },
+          {
+            "signal": "long_response",
+            "start": 17,
+            "end": 20
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:33:59.998331+00:00"
+    },
+    "plm-sealed-explain-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:11.665369+00:00"
+    },
+    "plm-sealed-explain-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "explanation_request",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:22.072748+00:00"
+    },
+    "plm-sealed-clarify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 14,
+            "end": 21
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:29.515544+00:00"
+    },
+    "plm-sealed-clarify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 7,
+            "end": 13
+          },
+          {
+            "signal": "constraint_ask_first",
+            "start": 14,
+            "end": 18
+          }
+        ],
+        "unknowns": [
+          "target_file"
+        ],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:33.379411+00:00"
+    },
+    "plm-sealed-clarify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 5,
+            "end": 27
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:42.070733+00:00"
+    },
+    "plm-sealed-clarify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "missing_information",
+            "start": 42,
+            "end": 57
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:53.845606+00:00"
+    },
+    "plm-sealed-build-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 15,
+            "end": 17
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:34:59.568777+00:00"
+    },
+    "plm-sealed-build-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 5,
+            "end": 9
+          },
+          {
+            "signal": "format_json",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:01.870848+00:00"
+    },
+    "plm-sealed-build-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 10,
+            "end": 19
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:07.828225+00:00"
+    },
+    "plm-sealed-build-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_code"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "implementation_request",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "signal": "constraint_no_code",
+            "start": 26,
+            "end": 45
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:20.454428+00:00"
+    },
+    "plm-sealed-verify-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "current_information",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "signal": "legal_risk",
+            "start": 3,
+            "end": 5
+          },
+          {
+            "signal": "verification_request",
+            "start": 18,
+            "end": 22
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:21.632767+00:00"
+    },
+    "plm-sealed-verify-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "unverified_claim",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "signal": "verification_request",
+            "start": 10,
+            "end": 15
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:23.024781+00:00"
+    },
+    "plm-sealed-verify-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "signal": "current_information",
+            "start": 7,
+            "end": 12
+          },
+          {
+            "signal": "constraint_cite_sources",
+            "start": 29,
+            "end": 41
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:23.758147+00:00"
+    },
+    "plm-sealed-verify-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [
+          {
+            "signal": "verification_request",
+            "start": 0,
+            "end": 12
+          },
+          {
+            "signal": "medical_risk",
+            "start": 25,
+            "end": 35
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:25.872743+00:00"
+    },
+    "plm-sealed-summarize-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "short_response",
+            "start": 7,
+            "end": 9
+          },
+          {
+            "signal": "summary_request",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:27.708183+00:00"
+    },
+    "plm-sealed-summarize-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 12,
+            "end": 14
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:28.599973+00:00"
+    },
+    "plm-sealed-summarize-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "short_response",
+            "start": 10,
+            "end": 17
+          },
+          {
+            "signal": "summary_request",
+            "start": 18,
+            "end": 25
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:35:41.862197+00:00"
+    },
+    "plm-sealed-summarize-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "summary_request",
+            "start": 0,
+            "end": 9
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:36:05.456695+00:00"
+    },
+    "plm-sealed-explore-01": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "signal": "long_response",
+            "start": 9,
+            "end": 12
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:36:08.589326+00:00"
+    },
+    "plm-sealed-explore-02": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:36:14.476034+00:00"
+    },
+    "plm-sealed-explore-03": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 5,
+            "end": 24
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:36:24.863152+00:00"
+    },
+    "plm-sealed-explore-04": {
+      "status": "approved",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [
+          {
+            "signal": "exploration_request",
+            "start": 6,
+            "end": 18
+          },
+          {
+            "signal": "short_response",
+            "start": 25,
+            "end": 32
+          }
+        ],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "",
+      "reviewed_at": "2026-06-13T05:36:27.150437+00:00"
+    }
+  }
+}

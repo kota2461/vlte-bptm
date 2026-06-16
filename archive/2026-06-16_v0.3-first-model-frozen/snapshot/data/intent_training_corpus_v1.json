@@ -1,0 +1,2878 @@
+{
+ "schema_version": "intent-training-corpus.v1",
+ "generated_at": "2026-06-15T08:01:12.512490+00:00",
+ "note": "6-intent base remapped from approved Pattern DB (already human-approved as routes); explain set PENDING review. Disjoint from the 50-case accumulation campaign. Not used for training until explain is approved.",
+ "counts": {
+  "total": 408,
+  "approved": 408,
+  "pending_explain": 0,
+  "by_intent": {
+   "build": 62,
+   "clarify": 50,
+   "explain": 41,
+   "explore": 69,
+   "respond": 95,
+   "summarize": 32,
+   "verify": 59
+  }
+ },
+ "campaign_overlap_removed": [],
+ "examples": [
+  {
+   "input": "「7」という数字が表す量を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "0という数の意味を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "5と8はどちらが大きいですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "12と21の大小を比較してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "1から10まで順番に数えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "23の十の位の数字は何ですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "偶数とは何か定義してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3, 6, 9, 12 の次に来る数を答えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3+5を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3に5を足すといくつになりますか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3たす5の答えを教えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "5+3はいくつですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "りんごが3個、みかんが5個あります。果物は全部で何個ですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "6+2を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "4+4の答えはいくつですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "7+1はいくつになりますか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "答えが8になる足し算の組み合わせをいくつか挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3+5=9が正しいかどうか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "3+5と5+3の結果が等しい理由を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "9+4のような繰り上がりのある足し算の手順を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ある数に5を足すと8になります。ある数を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "数に何かを足すといくつになりますか",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "9-4を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "7×6を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "56÷8を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "1/2と1/3を通分して大小を比較してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "0.5と1/2が等しいことを確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "240円の品物を3割引で買うといくらになりますか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "時速4kmで2時間歩くと何km進みますか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "太郎は鉛筆を12本持っていて、友達に何本かあげました。残りは何本ですか",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この計算問題の解き方を順序立てて整理し、手順書を作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "一次方程式 2x+3=11 を解いてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "連立方程式 x+y=10, x-y=2 を解いてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "(x+2)(x-3) を展開してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "x^2-5x+6 を因数分解してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "三角形の内角の和が180度になることを証明してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "関数 y=2x+1 とはどのような対応関係か説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "サイコロを1回振って偶数が出る確率を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "√2が無理数であることの証明を検証してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "鶴亀算の文章題を連立方程式で解く手順を設計してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "比例と反比例の違いを比較して説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この方程式を解いてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "二次関数 y=x^2-4x+3 の頂点と最小値を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "二次方程式 x^2+2x+k=0 が実数解を持つkの条件を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "sin30°+cos60° の値を計算してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "三角関数の合成を使って sinθ+cosθ の最大値を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "2^x=8 を満たすxを求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "log_2 8 の値を求め、指数との関係を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "等差数列 3,7,11,... の一般項を求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "1+2+...+n = n(n+1)/2 を数学的帰納法で証明してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ベクトルの内積の定義を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "関数 f(x)=x^3-3x の極値を微分を使って求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "曲線 y=x^2 とx軸およびx=1で囲まれた面積を積分で求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "5人から3人を選ぶ組み合わせは何通りですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "データの平均と分散の違いを比較して説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "極限 lim(x→0) sinx/x = 1 の計算結果を検証してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "二次方程式の解法を平方完成と判別式の二通りで比較してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "確率の問題で事象が独立かどうか不明な場合、何を確認すべきか質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この長い証明の要点を短く要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "微分と積分の関係を一文で要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この単元の公式を一覧に要約してまとめてください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "数列の問題の別解をいくつか探索してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "解と係数の関係を使って x^2-5x+6=0 の解を求める手順を構成してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "三角比を使った測量問題の解法プランを設計してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ベクトルを使った証明問題の解答方針を組み立ててください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この問題は条件が不足しているので、必要な情報を質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "何を求める問題なのか曖昧なので、先に確認の質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この数学の問題の別解を考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "三角関数の問題の解き方を複数の方針で検討してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この解答のポイントを短くまとめてください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "証明の流れを簡潔にまとめて要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "答えが同じになる別の計算方法を考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "微分の問題を別のやり方で解くことを検討してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "計算結果の要点を短く要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この解答全体を3行で要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "計算結果に誤りがないか検算してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この不等式が常に成り立つか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "解答の根拠が正しいかレビューしてください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "増減表とグラフの形が正しいか検証してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "確率の問題を解く計画を立ててください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "図形の証明の方針を構成してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "方程式を解くステップを順番に組み立ててください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "文章題を式にする手順を作成してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "変数の定義が不明なので質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "求める値がどれか曖昧なので確認の質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "問題文に数値が足りないときは何が必要か質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "こんにちは",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "おはようございます",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "こんばんは",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ありがとうございます",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "さようなら、またね",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "はじめまして、よろしくお願いします",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "お元気ですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "おやすみなさい",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "久しぶりですね、元気でしたか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "今日は天気がいいですね",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Hello!",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Good morning!",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Good evening, how are you?",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Thank you so much!",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Nice to meet you.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "See you later!",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "How are you doing today?",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Long time no see!",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "「猫が魚を食べた」の主語と述語を見つけてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "「は」と「が」の使い方の違いを比較してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "敬語とは何か説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "「雨が降ったので、試合は中止になった」の因果関係を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "「行く」の丁寧語は何ですか",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ひらがなとカタカナの使い分けを説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この文章のあいまいな表現について確認の質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この段落を一文に要約してください",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この文の敬語の使い方が正しいか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "同じ意味になる別の言い方をいくつか考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "わかりやすい文章を書く手順を組み立ててください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "文の意味が二通りに読めるときは、どちらの意味か質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Translate \"Good morning\" into Japanese.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "What does the word \"apple\" mean?",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Find the subject and the verb in \"The cat eats fish\".",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Compare the present tense and the past tense in English.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain what the be-verb is.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "\"I went to school yesterday\" を日本語に訳してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "英語のbe動詞の活用を順番に挙げてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Verify whether this sentence is grammatically correct: \"He go to school.\"",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Summarize this English paragraph in one sentence.",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Please ask me questions if my English sentence is ambiguous.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Suggest several different ways to say \"thank you\".",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Build a step-by-step plan for writing a short English essay.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "8になる別のたし算を考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "答えが8になる別の足し算を挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この計算を別のやり方でも解いてみてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "別のアプローチを探してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "他の解き方はありますか",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "もっと良い解き方がないか探してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この問題を解く方法を複数考えて挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "別の視点からこの問題を考え直してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "考えられる解法をできるだけ多く列挙してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "公式を使わない別解がないか検討してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "「ありがとう」の別の言い方をいくつか挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この文をもっと丁寧な表現に言い換える案を複数考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "List several alternative ways to greet someone in English.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Brainstorm different ways to rephrase this sentence.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "選択肢を一つに決めず、別案を何通りか提案してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "同じ結論へ至る異なる手順を複数考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "ほかに利用できる方法の候補を広く挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "一つの答えに絞る前に代替アプローチを比較してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この表現を言い換える案を三つ考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "別方向の解決策も含めてアイデアを出してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "別の観点から取り組む方法も考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "同じ意味を表す別表現の候補を提案してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "指定された計算の答えを一つ求めてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この用語の意味をそのまま説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "与えられた方法で問題を解いて答えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "依頼の目的が読み取れない場合は、何を望むか質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "必要な数値が不足しているときは、不足項目を尋ねてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "どの対象を指すか不明なら、対象を特定する質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "出力形式が指定されていないので、希望する形式を聞いてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "前提が曖昧な場合は、作業前に条件を問い返してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "問題で求める対象が分からないときは、対象を質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "問いのゴールが示されていない場合は、確認の質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "計算結果と与えられた条件が一致するか検算してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "説明の根拠に誤りがないか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "実装が要件を満たすかテストしてください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "前提条件が実際に成立しているか検証してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "採用する方法が決まったので実行手順を組み立ててください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "選んだ案をコードにするための実装計画を作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "新しい機能名を一つに決めず、方向性の異なる候補を四つ出してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この機能名が利用者に何を伝えるか説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この問題を解く別々の方針を三通り考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "指定された方針のとおりに、この問題の答えを出してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "結論を急がず、起こり得る原因を異なる観点から列挙してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "提示された情報から、最も直接的な原因の説明を答えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この案内文を別の語調で表す候補をいくつか作ってください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この案内文の内容を簡潔に説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "List three substantially different approaches before choosing one.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Answer the question using the approach that is already specified.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Generate several design directions and state the uncertainty of each.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain how the provided design works.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "採用済みのAPI案を実装するため、作業を順番付きのタスクに分けてください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "このAPIが何をするものか説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "移行方針は決まっています。停止時間を抑える実施手順を組んでください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "旧方式と新方式の違いを説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この仕様を実装に移すため、必要なファイル変更とテストを整理してください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "難しい言葉を使わずに、この仕様の目的を説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "選択済みの修正をリリースするまでのチェックリストを作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この修正を公開する理由を答えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Turn the selected component design into an ordered implementation plan.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain what the selected component does.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Prepare concrete deployment steps, validation checks, and rollback tasks.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Answer why a rollback is useful for this deployment.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "方針の説明だけで終わらせず、引き継ぎの作業を順番に並べてください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この引き継ぎ資料が何のためにあるのか説明してください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "確認対象のURLが書かれていないので、対象URLを質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "提示されたURLが正しいページを指しているか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "計算に必要な数値が不足しているため、足りない値を尋ねてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "与えられた数値を使って計算結果が合っているか検算してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "希望する出力形式が不明なので、形式と用途を質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "出力が指定された形式と用途の条件を満たすか検証してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "実行環境が分からないので、OSと利用バージョンを質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "示されたOSとバージョンでこの実装が動作するか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "The target is missing, so ask which artifact should be checked.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Check whether the specified artifact satisfies the stated requirement.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Do not assume the missing premise; ask the user to provide it.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Confirm whether the provided premise is supported by the evidence.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "報告された集計値を鵜呑みにせず、元データと突き合わせて検算してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "検算に使う元データの場所が示されていないので、どこにあるか質問してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "保存方式を決める前に、性質の異なる候補を比較してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "採用した保存方式を組み込むための実装手順を作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "画面構成を固定せず、異なるレイアウト案を複数考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "選択済みのレイアウトを実装するコンポーネント構成を作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "APIの設計候補を広げ、各案の利点と不確実性を挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "採用済みAPI案について、endpointごとの実装タスクを作ってください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "障害対策を一つに絞らず、異なる回復戦略を検討してください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "採用した回復戦略を実装・検証する作業順を組んでください",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Compare several architecture options without committing to one.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Break the chosen architecture into concrete implementation tasks.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Generate competing hypotheses and possible ways to investigate them.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Turn the selected hypothesis into an ordered experiment plan.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この問題が何を求めているのか分からないので、確認の質問をしてください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "解答が問題の要求を満たしているか確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "どの値を答えればよいか不明なので、先に質問して確認してください",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "求めた値が与えられた条件をすべて満たすか順番に確認してください",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "違う角度からこの問題の解き方をいくつか考えてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "いま示した解き方のまま、最後まで解いてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "一つの解法に決めず、別の視点からの解き方も挙げてください",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この解き方で得られる答えを教えてください",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Check whether this calculation is correct: 12 x 8 = 86.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Review this proof and point out any logical gaps.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Does this code change satisfy the stated requirements? Please verify.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Create a step-by-step study plan for learning basic algebra.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Draft an ordered checklist for releasing the new feature.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Organize these tasks into an implementation schedule.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "The deadline is not mentioned anywhere, so please ask me for it.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "If any requirement seems ambiguous, ask me before answering.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Summarize this meeting note in two sentences.",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Give me a brief summary of the main argument of this article.",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "方針は決まりました。担当者が着手できる作業順と完了条件に落とし込んでください。",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "この方針によって何が解決されるのか、要点を説明してください。",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "必要な予算を見積もってください。利用人数と期間はまだ伝えていません。",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "利用人数は50人、期間は6か月です。提示された予算内に収まるか確認してください。",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "The storage method has been selected. Break the remaining work into implementable tasks.",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain the main benefit of the selected storage method.",
+   "intent": "respond",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Estimate the runtime, but the input size and hardware have not been provided.",
+   "intent": "clarify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "The input size and hardware are provided. Check whether the claimed runtime is plausible.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "障害時の復旧方法を決める前に、異なる選択肢とそれぞれの弱点を整理してください。",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "復旧方法は決まりました。実装、動作確認、切り戻しまでの手順を作ってください。",
+   "intent": "build",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Check that this answer matches the expected result.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Can you confirm these figures are accurate?",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Make sure the configuration meets the security policy.",
+   "intent": "verify",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Are there different approaches we could try here?",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Offer a few alternative ways to handle this case.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Brainstorm other options for reducing the load time.",
+   "intent": "explore",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Boil this long thread down to the key points.",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "Recap the meeting in a couple of lines.",
+   "intent": "summarize",
+   "language": null,
+   "source": "pattern-db-remap",
+   "review_status": "approved"
+  },
+  {
+   "input": "なぜ二分探索は計算量がO(log n)になるのか説明してください",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "TCPの3ウェイハンドシェイクの仕組みを教えてください",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この関数が再帰で正しく終了する理由を説明してください",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "どうして油と水は混ざらないのですか",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "ガベージコレクションがどう動いているのか知りたいです",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "なぜ正規分布があちこちで出てくるのか直感的に理解したいです",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この設計がうまくいく理由が腑に落ちないので説明してほしい",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "微分が「変化率」と呼ばれる理由を説明してください",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "キャッシュが効くとなぜ速くなるのか仕組みを教えて",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "ハッシュテーブルがO(1)で引ける理屈がピンとこない",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "公開鍵暗号がなぜ安全なのか仕組みを説明して",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "インデックスを足すとこのクエリが速くなる理由を順を追って説明して",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain why quicksort is on average faster than bubble sort.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "How does a hash map achieve constant-time lookups?",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Walk me through why adding an index speeds this query up.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "I don't really get why recursion terminates here — can you explain?",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "What makes gradient descent converge? Explain the intuition.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "How does HTTPS actually keep the data private?",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain the mechanism behind why the sky is blue.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "I can use async/await but I don't grasp what happens underneath.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Why do we normalize features before training? Explain the reason.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain why floating-point arithmetic produces rounding errors.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "How does a B-tree keep lookups balanced? Explain how it works.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Why does caching help here? Walk me through what's happening.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-explain-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "週末の引っ越し、やることを順番に整理して段取りを作ってくれる？",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "このバグを直したいんだけど、修正の手順を組んでほしい",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "新しいチームの立ち上げで、最初の30日にやることを計画にして",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "予約が取れているか確認して、大丈夫なら案内メールの下書きを作って",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "まず前提が崩れていないか見て、それから移行の計画を立ててほしい",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "明日のプレゼン、話す順番を組み立ててくれる？",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "セットアップ手順を、初心者でも追えるように書き出して",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この企画を実行に移すための作業リストを作って",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "予算案を、項目ごとに分けてたたき台を作ってほしい",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Turn this rough idea into a concrete action plan.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Once you've checked the data looks right, lay out the import steps.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Plan the rollout, but confirm the dependencies first.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Draft a step-by-step onboarding checklist for new hires.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "引っ越しの荷造り、部屋ごとのタスクに分けて並べて",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この計算、合ってるかちょっと見てくれる？",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "送る前にこのメール、内容がおかしくないか確認して",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この主張って本当に正しいの？根拠あるか見てほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "提出されたレポートの数字、辻褄が合ってるか検算して",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この設定でセキュリティ的に問題ないか確かめてほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "予約の内容が希望どおりになってるか確認して",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この手順で本当に動くのか、抜けがないか見て",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "翻訳が原文の意味とずれていないか確認してほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Double-check that these totals actually add up.",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Can you sanity-check this conclusion against the data?",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Is this estimate realistic? Please look it over.",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Make sure the migration didn't drop any records.",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "引っ越し先の候補、いくつか条件を出して比べたい",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この問題、別のやり方もあると思うから案を出して比べて",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "週末の過ごし方、違うプランをいくつか提案して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "保存方法、いくつか選択肢を並べて長所短所を整理して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "決める前に、ありうる選択肢を広げて見せてほしい",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "原因の可能性をいくつか挙げて、それぞれ検討して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "旅行先、タイプの違う候補をいくつか出して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Give me a few different ways to approach this, with trade-offs.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "What are some alternative tools for this? Compare them.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Brainstorm several options before we narrow it down.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この長いスレッド、要点だけ短くまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "会議の内容、3行でまとめてくれる？",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この記事、忙しいから要点だけ教えて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "このマニュアル、結局何をすればいいか短くまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "長くなったから、ここまでの話を整理して要約して",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "このメールのやり取り、結論だけ拾ってまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "本の内容をざっくり要約してほしい",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "今日の進捗、ひとことでまとめると？",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Sum up what we decided in a couple of lines.",
+   "intent": "summarize",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Give me the gist of this report.",
+   "intent": "summarize",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Condense these notes into key bullet points.",
+   "intent": "summarize",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "予算を見積もってほしいんだけど…あ、人数をまだ言ってなかった",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "これ翻訳して。あ、どの言語に訳すか言ってなかったね",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "日程を組みたいんだけど、まだ参加者が決まってないや",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この件を進めたいけど、何が必要か分かってないから先に聞いて",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "予約を取って。あれ、希望の日時をまだ伝えてなかった",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "計画を立てたいけど前提が曖昧なので、確認の質問をして",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "おすすめ教えて。あ、用途を言ってなかったから先に聞いてくれる？",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Estimate the cost — oh wait, I haven't told you the scope yet.",
+   "intent": "clarify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "I want this fixed, but I'm not sure what info you need — ask me.",
+   "intent": "clarify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "Before you answer, ask me which environment this is for.",
+   "intent": "clarify",
+   "language": "en",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "LoRAの導入の仕方をおしえてください",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "この仕組み、結局どういう理屈で動いてるのか教えて",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "なんでこのやり方だとうまくいくのか、理由を知りたい",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v1",
+   "review_status": "approved"
+  },
+  {
+   "input": "週末の作り置き、何品か決めたから段取りを組んでくれる？",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "家計を見直したいんだけど、まず何から手をつけるか手順にして",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "庭の家庭菜園、春に向けてやることを順番に並べて",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "在庫が足りてるか確認して、大丈夫なら買い物リストを作って",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "予定が空いてるか見て、空いてたら旅行の行程を組んで",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この英単語帳、覚える計画を一週間分作ってほしい",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "部屋の模様替え、作業の順番を立ててくれる？",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "筋トレのメニュー、初心者向けに組み立てて",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "引き出しの整理、どう進めるか段取りにして",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "子どもの誕生日会、準備の手順をまとめて作って",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "読書習慣をつけたいから、続けられる計画を作って",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "まず予算が足りるか確かめて、それから旅行プランを立てて",
+   "intent": "build",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Once you've confirmed the budget, draft a weekly meal plan.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Lay out the steps to set up a home photography corner.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Turn these recipes into a week's grocery plan.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Draft a beginner practice schedule for learning guitar.",
+   "intent": "build",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "このレシピの分量、4人分で合ってるか見てくれる？",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "家計簿の合計、計算が合ってるか確かめて",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この英作文、文法がおかしくないか確認してほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "予約の日程、希望どおりに取れてるか確認して",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この節約プラン、本当に効果あるのか妥当性を見て",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この古いレシピ、今の食材でもそのまま作れるか確認して",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この組み立て手順で抜けがないか見て",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "提出した課題、要件を満たしてるか確認してほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "翻訳した文、元の意味とずれてないか見て",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "設定がこれで安全か確かめてほしい",
+   "intent": "verify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Double-check that this recipe's measurements make sense.",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Can you verify these expense totals are right?",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Is this old tutorial still accurate for the current app?",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Make sure I didn't miss a step in this assembly guide.",
+   "intent": "verify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "発酵がなんで起きるのか、いまいちピンとこない",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "為替レートがどう決まるのか仕組みを知りたい",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "筋肉痛ってなんで翌日に来るのか教えて",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "なんで写真は絞りを変えるとボケるのか分からない",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "コーヒーの抽出、できるけど何が起きてるのか腑に落ちてない",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "金利の複利ってなんで効くのか直感的に理解したい",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "なんで植物は日光で育つのか、仕組みを説明して",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "ダイエットで体重が落ちる理屈がしっくりこない",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "出汁の旨味って何で出るのか理由を知りたい",
+   "intent": "explain",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Why does bread rise? I can bake it but don't get why.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "How does noise-cancelling actually work? Explain it.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "I can drive a manual but never grasped what the clutch does.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Why do onions make you cry? Walk me through it.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Explain why a cast-iron pan needs seasoning.",
+   "intent": "explain",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "夕飯の献立、違うジャンルでいくつか提案して比べたい",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "貯金の方法、タイプの違う案をいくつか出して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "運動不足の解消、続けやすい方法を何通りか挙げて比べて",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "旅行先、雰囲気の違う候補をいくつか見せて",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "観葉植物、初心者向けに選択肢を並べて長所短所を整理して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "写真の構図、決める前に違うパターンをいくつか見せて",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "カメラ選び、用途別に候補を出して比較して",
+   "intent": "explore",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Give me a few different weeknight dinner ideas to compare.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "What are some alternative ways to save on groceries? Compare.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Brainstorm a few hobbies I could pick up this year.",
+   "intent": "explore",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "このレシピサイトの長い説明、要点だけ短くまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "今日読んだ記事、3行でまとめてくれる？",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "家電の取説、結局どう使えばいいか短くまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "長くなったけど、ここまでの相談を整理してまとめて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この健康情報、忙しいから要点だけ教えて",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "動画の内容、ざっくり要約してほしい",
+   "intent": "summarize",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Sum up this recipe in a couple of lines.",
+   "intent": "summarize",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Give me the gist of this product review.",
+   "intent": "summarize",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "献立を考えてほしいんだけど…あ、何人分か言ってなかった",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "旅行プランを立てて。あれ、予算と日数をまだ伝えてないね",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "この服のサイズを選んで。あ、身長体重を言ってなかった",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "贈り物を選んでほしいけど、相手の好みが曖昧だから先に聞いて",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "予約を取って。希望の時間帯をまだ言ってなかったね",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "節約プランを立てたいけど、収入を言ってないから確認して",
+   "intent": "clarify",
+   "language": "ja",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Plan a workout for me — oh, I didn't say my fitness level yet.",
+   "intent": "clarify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  },
+  {
+   "input": "Before you recommend a camera, ask me what I'll shoot.",
+   "intent": "clarify",
+   "language": "en",
+   "source": "intent-conversational-v2",
+   "review_status": "approved"
+  }
+ ]
+}

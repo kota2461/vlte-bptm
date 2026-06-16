@@ -1,0 +1,53 @@
+{
+  "schema_version": "semantic-packet.v1",
+  "request_digest": "14ad6fc3296d1e1135635a11979ed5990b857bebb6d526be66bbce4aedc19109",
+  "adapter": {
+    "kind": "pattern_model",
+    "version": "0.1"
+  },
+  "language": "ja",
+  "intent_candidates": [
+    {
+      "intent": "verify",
+      "confidence": 0.82
+    },
+    {
+      "intent": "respond",
+      "confidence": 0.14
+    }
+  ],
+  "operations": [
+    "verify",
+    "search"
+  ],
+  "information_state": {
+    "missing_required_information": false,
+    "contains_unverified_claims": true,
+    "requires_current_information": true,
+    "multiple_intents": false
+  },
+  "constraints": {
+    "response_length": "short",
+    "formats": [],
+    "must": [
+      "cite_sources"
+    ],
+    "must_not": []
+  },
+  "risk": {
+    "level": "medium",
+    "flags": [
+      "current_information"
+    ]
+  },
+  "evidence": [
+    {
+      "signal": "verification_request",
+      "start": 14,
+      "end": 22
+    }
+  ],
+  "unknowns": [],
+  "conflicts": [],
+  "confidence": 0.82
+}

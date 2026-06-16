@@ -1,0 +1,276 @@
+{
+ "schema_version": "sealed-slice-eval.v1",
+ "label": "post_round2_user",
+ "sealed_sha256": "6E47FF0DCDB4F24003E505675478C8DE8A129B0072382B23CB5FE85A0B553E84",
+ "model_sha256": "419414817F4E9D237813CEEB708C647D513333D563A9A8FDCD5F45590396A62C",
+ "total": {
+  "correct": 11,
+  "count": 22
+ },
+ "by_slice": {
+  "boundary_mirror": {
+   "correct": 4,
+   "count": 10
+  },
+  "english": {
+   "correct": 7,
+   "count": 12
+  }
+ },
+ "by_language": {
+  "en": {
+   "correct": 11,
+   "count": 16
+  },
+  "ja": {
+   "correct": 0,
+   "count": 6
+  }
+ },
+ "pairs_both_correct": 4,
+ "pair_count": 11,
+ "cases": [
+  {
+   "slice": "boundary_mirror",
+   "group": "sbr-work-ja",
+   "boundary": "build_respond",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "進め方は確定しています。新人でも進められるように、作業の順番と各段階の終了条件を書き出してください。",
+   "route": "build",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "sbr-work-ja",
+   "boundary": "build_respond",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "この進め方を採用すると何が良くなるのか、要点を教えてください。",
+   "route": "respond",
+   "predicted": "explore",
+   "correct": false
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "scv-cost-ja",
+   "boundary": "clarify_verify",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "サーバー費用を見積もってください。台数と契約年数はまだ決めていません。",
+   "route": "clarify",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "scv-cost-ja",
+   "boundary": "clarify_verify",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "台数は8台、契約は3年です。この見積もりが上限金額に収まっているか確かめてください。",
+   "route": "verify",
+   "predicted": "clarify",
+   "correct": false
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "sbr-framework-en",
+   "boundary": "build_respond",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "The framework has been chosen. Split the remaining migration into concrete tasks.",
+   "route": "build",
+   "predicted": "build",
+   "correct": true
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "sbr-framework-en",
+   "boundary": "build_respond",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Explain what advantage the chosen framework gives us.",
+   "route": "respond",
+   "predicted": "respond",
+   "correct": true
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "scv-memory-en",
+   "boundary": "clarify_verify",
+   "language": "en",
+   "difficulty": "compound",
+   "input": "Estimate the memory usage, but the dataset size has not been shared yet.",
+   "route": "clarify",
+   "predicted": "clarify",
+   "correct": true
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "scv-memory-en",
+   "boundary": "clarify_verify",
+   "language": "en",
+   "difficulty": "compound",
+   "input": "The dataset size is 2 GB on the listed hardware. Check whether the claimed memory usage is realistic.",
+   "route": "verify",
+   "predicted": "verify",
+   "correct": true
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "seb-backup-ja",
+   "boundary": "explore_build",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "バックアップ方式を決める前に、いくつかの取り方とそれぞれの欠点を並べてください。",
+   "route": "explore",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "boundary_mirror",
+   "group": "seb-backup-ja",
+   "boundary": "explore_build",
+   "language": "ja",
+   "difficulty": "compound",
+   "input": "バックアップ方式は決まりました。導入から復元テストまでの作業手順をまとめてください。",
+   "route": "build",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-verify",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Double-check that the invoice total is correct.",
+   "route": "verify",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-verify",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Is this proof valid? Confirm each step.",
+   "route": "verify",
+   "predicted": "verify",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-build",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Lay out the tasks needed to ship this feature.",
+   "route": "build",
+   "predicted": "build",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-build",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Turn these requirements into an ordered work plan.",
+   "route": "build",
+   "predicted": "build",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-clarify",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "I need an estimate, but I have not told you the quantity yet, so ask.",
+   "route": "clarify",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-clarify",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Before answering, ask me which version we are using.",
+   "route": "clarify",
+   "predicted": "clarify",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-summarize",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Condense this article into three bullet points.",
+   "route": "summarize",
+   "predicted": "build",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-summarize",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Wrap up the main findings in one short paragraph.",
+   "route": "summarize",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-explore",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "List a few different strategies we could consider.",
+   "route": "explore",
+   "predicted": "explore",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-explore",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Show me more than one way to structure this code.",
+   "route": "explore",
+   "predicted": "respond",
+   "correct": false
+  },
+  {
+   "slice": "english",
+   "group": "sen-respond",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "Tell me what HTTP stands for.",
+   "route": "respond",
+   "predicted": "respond",
+   "correct": true
+  },
+  {
+   "slice": "english",
+   "group": "sen-respond",
+   "boundary": "none",
+   "language": "en",
+   "difficulty": "simple",
+   "input": "What is the capital of France?",
+   "route": "respond",
+   "predicted": "respond",
+   "correct": true
+  }
+ ]
+}

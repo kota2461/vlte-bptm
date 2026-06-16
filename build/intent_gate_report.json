@@ -1,0 +1,93 @@
+{
+  "schema_version": "intent-model-deployment-gate.v1",
+  "checks": {
+    "foundation_anchors": {
+      "required": "route() primary_intent 100% (all-intent canonical)",
+      "case_count": 30,
+      "misses": [],
+      "accuracy": 1.0,
+      "passed": true
+    },
+    "hybrid_regression": {
+      "required": "route() primary_intent 100% (safety + no-match)",
+      "case_count": 9,
+      "misses": [],
+      "accuracy": 1.0,
+      "passed": true
+    },
+    "improvement_vs_deployed": {
+      "passed": true,
+      "comparisons": {
+        "kfold_accuracy": {
+          "current": 0.7328431372549019,
+          "candidate": 0.7186761229314421,
+          "tolerance": 0.02,
+          "passed": true
+        }
+      }
+    },
+    "fixture_integrity": {
+      "items": [
+        {
+          "fixture": "intent_foundation_anchors_v1.json",
+          "registered": true,
+          "version": "v1",
+          "expected_sha256": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+          "actual_sha256": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+          "passed": true
+        },
+        {
+          "fixture": "intent_hybrid_regression_v1.json",
+          "registered": true,
+          "version": "v1",
+          "expected_sha256": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
+          "actual_sha256": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "minimum_counts": {
+      "items": [
+        {
+          "fixture": "intent_foundation_anchors_v1.json",
+          "min_case_count": 30,
+          "case_count": 30,
+          "intent_shortfalls": {},
+          "passed": true
+        },
+        {
+          "fixture": "intent_hybrid_regression_v1.json",
+          "min_case_count": 9,
+          "case_count": 9,
+          "intent_shortfalls": {},
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "contract_passed": true,
+  "improvement_accepted": true,
+  "passed": true,
+  "decision": "pass",
+  "registry": {
+    "path": "D:\\Thought State Register\\tests\\fixtures\\intent_gate_fixture_registry.json",
+    "versions": {
+      "intent_foundation_anchors_v1.json": "v1",
+      "intent_hybrid_regression_v1.json": "v1"
+    }
+  },
+  "hashes": {
+    "candidate_sha256": "D2C5E780BF378F6C0E51FE895A589BEE0CD67218A9EC65CC7CFE9D0BC3413B86",
+    "deployed_sha256": "055D1708CFB605AD5A449283BC05D81FF1C6BB59415F37E362FE06E7DF84091F",
+    "fixtures": {
+      "intent_foundation_anchors_v1.json": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+      "intent_hybrid_regression_v1.json": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E"
+    }
+  },
+  "candidate_path": "D:\\Thought State Register\\build\\intent_model_v1_candidate.json",
+  "candidate_trained_at": "2026-06-16T10:39:36.019440+00:00",
+  "candidate_sample_count": 423,
+  "evaluated_at": "2026-06-16T10:39:36.292373+00:00"
+}

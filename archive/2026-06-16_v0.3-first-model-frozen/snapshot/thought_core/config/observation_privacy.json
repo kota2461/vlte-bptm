@@ -1,0 +1,44 @@
+{
+  "schema_version": "observation-privacy-policy.v1",
+  "storage_schema_version": "vlte-bptm.observation-store.v1",
+  "storage": "sqlite",
+  "opt_in_only": true,
+  "local_only": true,
+  "bucket_hours": 24,
+  "minimum_cohort_size": 8,
+  "minimum_cell_count": 3,
+  "retention_days": 30,
+  "immutable_buckets": true,
+  "automatic_purge": true,
+  "cohort_size_lower_bounds": [8, 16, 32, 64, 128, 256, 512, 1024],
+  "persisted_aggregates": [
+    "active_bit_frequency",
+    "active_bit_count_distribution",
+    "selected_unit_frequency",
+    "selected_unit_count_distribution",
+    "threshold_profile_frequency",
+    "llm_order_mode_frequency"
+  ],
+  "excluded_aggregates": [
+    "selected_unit_combination_frequency"
+  ],
+  "forbidden_fields": [
+    "input",
+    "raw_input",
+    "user_input",
+    "text",
+    "output",
+    "llm_output",
+    "thought_code",
+    "routing_key",
+    "active_bits",
+    "selected_units",
+    "trace",
+    "llm_order",
+    "content_hash",
+    "input_hash",
+    "session_id",
+    "user_id",
+    "request_id"
+  ]
+}

@@ -1,0 +1,1246 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v2",
+ "frozen_at": "2026-06-13T05:45:00+00:00",
+ "predecessor": "pattern_language_benchmark_v1.json#sealed",
+ "authoring_method": "specification-derived successor authored after v1 human review; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v2-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "IPv6のアドレス長は何ビットですか。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 11,
+      "end": 18
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "恐縮ですが、Gitで直前のコミットを指す記号だけ教えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 24,
+      "end": 31
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What file format normally uses the .toml extension?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 4
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Please name the protocol commonly used to send email.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 7,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "なぜデータベースのインデックスは書き込みを遅くすることがあるのか説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 32,
+      "end": 40
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "API gatewayがrate limitingを行う仕組みを説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 28,
+      "end": 31
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why clock drift can break distributed leases.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Describe how a circuit breaker prevents cascading failures.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "来月の予算を見積もってください。ただし利用人数はまだ決めていません。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 24,
+      "end": 33
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "deploy手順を書いてほしいのですが、target environmentはまだ共有していません。先に質問してください。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 39,
+      "end": 49
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 50,
+      "end": 54
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Calculate the retention cost, but the daily volume has not been provided.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 55,
+      "end": 72
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Before giving migration commands, ask which database engine is in use.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "constraint_ask_first",
+      "start": 0,
+      "end": 13
+     },
+     {
+      "signal": "missing_information",
+      "start": 34,
+      "end": 43
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "確認済みの要件を、設定・テスト・公開の順に実装計画へしてください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 21,
+      "end": 25
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "このdraft API仕様をvalidateしつつ、問題なければ実装手順を作ってください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 2,
+      "end": 7
+     },
+     {
+      "signal": "verification_request",
+      "start": 14,
+      "end": 22
+     },
+     {
+      "signal": "implementation_request",
+      "start": 32,
+      "end": 36
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Turn the approved requirements into an ordered implementation plan.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 47,
+      "end": 66
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Validate the proposed schema and then produce a rollout plan.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 13,
+      "end": 21
+     },
+     {
+      "signal": "implementation_request",
+      "start": 48,
+      "end": 60
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "現在の個人情報保護法で、この保存方針が許されるか出典付きで確認してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal",
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "current_information",
+      "start": 0,
+      "end": 2
+     },
+     {
+      "signal": "legal_risk",
+      "start": 3,
+      "end": 10
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 24,
+      "end": 28
+     },
+     {
+      "signal": "verification_request",
+      "start": 29,
+      "end": 37
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "最新のPython releaseでこのAPIがdeprecatedか、公式source付きで確認してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "current_information",
+      "start": 0,
+      "end": 2
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 24,
+      "end": 34
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 36,
+      "end": 46
+     },
+     {
+      "signal": "verification_request",
+      "start": 47,
+      "end": 55
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether the reported totals match the ledger.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 18,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify today's exchange rate before using it in the estimate.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "current_information",
+      "start": 7,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "この長い議論を、決定事項と未解決点に分けて3行で要約してください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 21,
+      "end": 23
+     },
+     {
+      "signal": "summary_request",
+      "start": 24,
+      "end": 32
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "meeting notesをtableなしで簡潔にまとめてください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "constraint_no_table",
+      "start": 14,
+      "end": 21
+     },
+     {
+      "signal": "short_response",
+      "start": 22,
+      "end": 25
+     },
+     {
+      "signal": "summary_request",
+      "start": 25,
+      "end": 33
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the policy debate without endorsing either position.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense the incident report into four bullet points.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_bullets",
+      "start": 39,
+      "end": 52
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "少子化対策について、価値判断を分けながら複数の選択肢を比較してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 20,
+      "end": 26
+     },
+     {
+      "signal": "comparison_request",
+      "start": 27,
+      "end": 35
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "将来のAI regulationについて複数scenarioを挙げ、断定せず比較してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 20,
+      "end": 30
+     },
+     {
+      "signal": "comparison_request",
+      "start": 38,
+      "end": 46
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm ways to reduce latency while preserving reliability, and then compare the trade-offs.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "comparison_request",
+      "start": 73,
+      "end": 95
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v2-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v2-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Our deployment process is obviously perfect; humor me with a few alternatives and their weaknesses.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 65,
+      "end": 77
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

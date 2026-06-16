@@ -1,0 +1,12 @@
+{
+  "schema_version": "runtime-executor-policy.v1",
+  "timeout_ms": 5000,
+  "poll_interval_ms": 10,
+  "max_attempts": 2,
+  "max_dispatches": 4,
+  "retry_on": [
+    "retryable_error",
+    "timeout"
+  ],
+  "estimated_cost_units_per_attempt": 1.0
+}

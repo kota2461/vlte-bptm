@@ -1,0 +1,16 @@
+{
+  "schema_version": "pattern-language-adjudication.v1",
+  "benchmark": "tests\\fixtures\\pattern_language_benchmark_v1.json",
+  "review_log": "data\\plm_benchmark_reviews_v1.json",
+  "draft_sha256": "95778b417dc8751dca2402399db89925daedd40b1d0995b03246ec5da1ebfea4",
+  "human_reviewed_sha256": "558ab43f8f64722d4ef6cb4bb73ef41b2f4812ac26c87c8c553ee7ff52d87c65",
+  "case_count": 84,
+  "approved_count": 84,
+  "rejected_count": 0,
+  "changed_count": 0,
+  "changed_ids": [],
+  "review_completed_at": "2026-06-13T05:36:27.150437+00:00",
+  "sealed_case_count": 28,
+  "sealed_status": "consumed",
+  "sealed_consumed_for": "human label review"
+}

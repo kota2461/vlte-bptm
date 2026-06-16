@@ -1,0 +1,12 @@
+{
+  "schema_version": "vlte-bptm.threshold-profile-report.v1",
+  "profiles": ["auto", "light_v1", "normal_v1", "design_v1", "deep_verify_v1"],
+  "required_metrics": [
+    "sample_count",
+    "active_bit_count",
+    "selected_unit_count",
+    "mode_frequency",
+    "expected_mode_accuracy"
+  ],
+  "automatic_adjustment": false
+}
