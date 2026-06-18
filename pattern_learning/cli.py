@@ -7,6 +7,7 @@ from typing import List
 from . import (
     boundary_curriculum,
     boundary_curriculum_v2,
+    boundary_curriculum_v3,
     language_curriculum,
     math_curriculum,
 )
@@ -85,6 +86,13 @@ def _parser() -> argparse.ArgumentParser:
         help=(
             "add original specification-derived boundary contrast pairs "
             "as pending candidates"
+        ),
+    )
+    subparsers.add_parser(
+        "seed-boundaries-v3",
+        help=(
+            "add revision-3 boundary contrast pairs targeting the weak "
+            "build/verify-vs-respond and clarify-vs-verify boundaries"
         ),
     )
 
@@ -344,6 +352,14 @@ def main(argv: List[str] | None = None) -> int:
             boundary_curriculum_v2.curriculum_drafts(),
         )
         print(f"inserted {inserted} pending boundary v2 candidates")
+        return 0
+
+    if args.command == "seed-boundaries-v3":
+        inserted = database.add_document(
+            boundary_curriculum_v3.curriculum_document(),
+            boundary_curriculum_v3.curriculum_drafts(),
+        )
+        print(f"inserted {inserted} pending boundary v3 candidates")
         return 0
 
     if args.command == "serve":

@@ -1,0 +1,2950 @@
+{
+  "schema_version": "intent-training-corpus.harvest.v1",
+  "note": "Unlabeled candidate pool harvested from Claude Code transcripts. Each item needs an intent label from the 7 router intents before it can enter the training corpus. Not for the sealed eval set.",
+  "counts": {
+    "total": 366,
+    "by_language": {
+      "mixed": 27,
+      "ja": 335,
+      "en": 4
+    },
+    "by_project": {
+      "D--pseudo-personality": 190,
+      "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7": 20,
+      "D--Hybrid-PC-AI--claude-worktrees-nice-lederberg-7e5e3e": 4,
+      "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5": 17,
+      "D--Topic-packaging": 52,
+      "D--Thought-State-Register-thought-state-register-egg-info": 83
+    }
+  },
+  "examples": [
+    {
+      "input": "Sarashinaの責務かsystempromptで時間とってしまってるとかありそうですか？",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "`_WATCH_TIMEOUT = 2.5` への 1 行変更と、後は明日にします。今日はチャットで感情を取り入れた表現が見れたので良かったです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "spec の起草から行ってください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まだ時間あるので上記もいってしまいましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "明日はphaseAからまいりましょう。 あと、明日以降用の提案です！ 内省を内ログ化(裏ログ？)でLLMの過去思考を参照対称に。煩雑になるログの逃がし場所としても使えそう。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おはようございます！つづきからおねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今日のうちに進めます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これはあれです。loraを切って明日試しましょう。loraなしの実績も確認できます。そして、明日までに周辺のレビューをcodexにしてもらい、別視点からの問題点の洗い出しをしてもらいます。codexあての指示、メモがあれば頂きたいです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "お疲れ様でした！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この順番でお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "subをollama使って、別モデルでテストとかできますか？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "残してください！念のため現状でbackupにしましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今日中に行ってしまいましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "foundation A + 翌日の実行手順 manifest 作成、で wrap-upにしましょう",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございました！お疲れさまです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "03_instructions/precursor_tasks_v0.1.mdこちらを読んでもらってから続き行きましょう！",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今日から休みなのでまた午後にお願いします！一旦休憩ですね。ありがとうございました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "続き行きましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "会話を回してみました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "10～７行きましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "mainの起動は必要ないですか",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "#17だけ実装を入れてcoworkセッションで整理します！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\pseudo personality\\02_design\\Inverse_Hybrid_AI_Design_v1.5.md\"続きからお願いします！",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "`#16 Round 8 の計画`、`下流文書（Roadmap）への波及`、`§8 マーカー付与お願いします`",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Round 8 実行お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "TPserver起動させました",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "量子化は見送り先に参りましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "「ドキュメント締め」 — A→B→C を私が書いて Phase 4 を正式クローズ",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "24時間稼働は放置可能ですか！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一旦時間を確保できる日にしましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "24時間検証行けます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "2のエラーです D:\\pseudo personality\\.venv\\Scripts\\python.exe: Error while finding module specification for 'runtime.exllamav2_sub' (ModuleNotFoundError: No module named 'runtime')",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "稼働中です！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ちょっとだけ会話を流しておきます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おちない様に動画を回してるのですが、このまま設定を変えないために一枠だけ動画を流し続けますね",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "チェックお願いします",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おはようございます。終了させたので、3.からお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずは現状でbackup、より、アーカイブ化のほうがいい？をして実働参照用として残しましょう。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "お疲れさまでした！ ここからは、実使用を想定したものになるのでバージョン違いとして、IDEAから案をまとめてロードマップと設計から始めましょう。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "因みに、M1とM4の計算式で感情の起伏の自然さ、は演出できる？と思ったのですが、評価欲しいです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "段階アップグレードでお願いします！D.として LLMへのフィードバックを÷2から÷1.5～1.7程度で返しつつ統合は÷2で合わせる。案もよければ候補に",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これで進めてください！よろしくお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "思い出しました。内省の思考ログをってこちらでも話しましたっけ",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "そういえば",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "UIを忘れてました。日常使いを意識して専用UIが良いでしょうか？webUIは制限があるので専用アプリ化が良さそうではあります",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これは、忘れてしまいそうなので一番最後に予定として入れたいのですが、winから時間を拾って現在を認知する。としてください。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "スキャンお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "お疲れ様でした！新しい部分をレポートに残してください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それでは§0 着手からよろしくお願いします！！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございました！明日もよろしくお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "live50turn計測お願いします",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今何turnくらいでしょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "どのくらいすすみました？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "どうでしょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "計算させようとしたらエラーで出てしまいましたどこまで行きました",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "メモとして！今回でmainLLMがオウム返しが多い事と、保持トークンの少なさ、日本語理解力に問題を感じたのでGemma4に切り替えが妥当かもしれません",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！それでは計測をレポートにしてメインに行きましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それでは軽い方2つからまいりましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ごめんなさい！4BIT以下は劣化が激しいらしいので、量子化は4BITまでに抑えたほうが良さそうです。その際のサイズは15.5なのでRTX5070tiに納まる計算です",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "chatをはじめたいのでAです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！これでテストとログの蓄積ができます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "LMStudioになった事失念してました。起動しました",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "頂きたいです！あとは、ビルド系で言うとClaude codeとのログの方が濃いので、私のログをClaudeさんが掘る事って出来ますか・・・それともログをテキスト化した方が読みやすい？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "opus4.8でつづきからお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "続けてM１お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "永続化から刺激源拡張の順番でお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "残エラーの処理って出来ますか？それとも進めてから処理した方が良い？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "008の残を束ねてから自己観察loopいきましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Aからまいりましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "M2に進んでください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "続きお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "V２の歩進をcoworkで整理してきます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この方針で問題ないです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Bに進んでください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "時間空けて五時間制限もfullで使えるので一気に進めてください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "実機検証まいりましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずは軽い所から行ってみます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "いじりやすそうで丁度いい感じのUIです！ありがとうございます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この状態のbackupを取りたいのでUIやサーバーの停止が必要なら停止の後backupをお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "@\"D:\\nichijo_jissou\\03_instructions\\7day_chat_test_preflight_checklist_2026-06-01.md\" test前の",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "起動しました。確認お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログの確認できますか？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！しかし、問題は6turn目にしてオウム返しになっています。これは内部のテキスト混濁による性能の限界。IDEAに入れた2pass案を押します",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "UI再起動のほうがいいですか！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "オウム返しは無くなりました！ありがとうございます！次の課題として、保持トークンの状態と維持について調べて欲しいです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "pass1に戻った時にログをさかのぼるようにsystempromptに入れることはできたりします？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今回はｂで回して様子見、のちに必要な統合を入れていく。と言う方向で…",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認お願いします！問題なければまた明日よろしくお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "時間空けたので続き出来ますか？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\pseudo personality\\02_design\\Inverse_Hybrid_AI_Design_v1.5.md\"",
+      "language": "en",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "補足のリネーム＋マーカー付与をお願いします",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "昨日の続きからの前にcodexのレポートです。/D:/pseudo personality/inverse_hybrid_ai/README.md",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "問題無さそうなので、昨日の続きに参りましょう。LMStudioからのテストですよね",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "再起動したら、メモしたコマンドが消えてしまったので頂きたいです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "１２B QAT をmainに昇格server経由とllama起動だとどちらが融通利きますか？後者ならmodelにコピー取ります！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "test続行と行きたいのですが、sub側の依存系が壊れてしまったので解決策はないでしょうか。subをexl3にするか、ビルドをロールバックするかだとは思いますが、もしくは、LMStudioでsubも立ち上げてしまう構成にするか。です",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "三つ立ち上げました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "UI立ち上げ用のコマンドがメモを閉じて失くしてしまったので、貰っても良いですか！すみません",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認お願いします",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この企画の主軸は感情変動を継続的に維持して、最終的に、発話、内省思考をする。なので、長文できれてしまうのはリソース的に仕方ないというか、受け入れる方向です。長文にならないような会話を心掛けるようにします。現在はテストなので、bass1で長文、無回答でもpass2が壊れないのが重要だと考えます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認お願いします。内容て粋な部分で質問なのですが、肯定が多いのはやはりベースのgemmaの仕様でしょうか",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "本命(中期)に感情による問い返しや反論を混ぜるというのはどうでしょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "systempromptが重くなると応答に支障がでるので、内部状態とスタンスの固定をしてlora学習前提のテストとして切り分けて評価データの蓄積をさせるのが良いのと思います。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それぞれのスタンスでどの程度蓄積がひつようでしょう。それに沿って話題回しもバリエーションが出るものを振ってみます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認お願いします！疲労から終了の打診は新しい反応でした",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "server混雑が終ってるなら続きをお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Bを明日の初めのタスクに予定し観測をレポートに記録して区切るでおねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "続きおねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "とりあえず今日の会話testをして様子を見てみます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ERROR: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): [winerror 10048] 通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "そのまま既存のサーバーを使います！ありがとう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログの確認お願いします！だいぶ良い感じに会話が回ってた印象です。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "気になった点は別のリストとして残した方がいいでしょうか、後でチェックしながら潰せる用に、その場合レポート＋懸念点リストが良いかもです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！明日に回す場合コマンドプロントをctrl＋Cで消しておいた方が良いですか？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "問題ないならこのままsleepしますありがとうございました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログの確認おねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "追記お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それでは一旦窓を閉めたので調整お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "CONCERN-002（max_tokens 引き上げ)CONCERN-006/007（プロンプト補強）をお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "分りました！明日のテストではまず名前を聞いてみます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "開始しました。状態の確認おねがいします",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "明日の始めに001（観測LoRA）/ 003・004（watching）行きましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "起動してチャットのテストをするので、テスト用のテキストをください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認お願い",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "トークン拡張と会話トークン長上限指定を提案します本来のトークン上限よりある程度低いトークンで話を纏めるように指示します。2passもトークン量拡張＋トークン上限を抑える指示。 2.は知らない事は宣言するでどうでしょう。 ３.はそのまま支持します",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "再起動しました！反映の確認とテスト文おねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "上がった",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ログ確認",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "model用意をして、Claudeさん側で切り替え可能な形でGemma4をいれてみますか。その場合量子化4bitがあります。すでにある場合はダウンロードしてきます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今確認すると少し容量が4BITでもオーバーする感じなので、新規の12B 8bitの8.9GBモデルを落としてみます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "EXL2がまだ出回って内容なので、圧縮をお願いできますか",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "https://huggingface.co/google/gemma-4-12Bこちらからダウンロードしようかと思ってM素",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "@\"D:\\models\\gemma-4-12B-it\\gemma-4-12B-it\\tokenizer_config.json\"",
+      "language": "en",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "どうやら個人の作った31Bexl3を見てたらしいです！12B自体の物はまだ無さそうです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずはお試しでexl3をbackend実装GOです！つまずいたら考えましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こちらであってるでしょうか",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ERROR: Could not find a version that satisfies the requirement torch==2.7.0+cu124 (from versions: 2.4.0+cu124, 2.4.1+cu124, 2.5.0+cu124, 2.5.1+cu124, 2.6.0+cu124)",
+      "language": "en",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "はじまりました！ありがとう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "終りました！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一旦量子化済みggufを使ってollamaが動くか確認してきます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ollama経由だとモデル落とせなかったので、すでにインストールしていたLMStudioのgemma4を \"D:\\models\\gemma-4-E4B-it-GGUF\"にコピーしましたllamaで使えると思うのですがどうでしょう。遅くなるとは思いますが、使えるモデルを増やすという意味ではアリだと思います",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "http://192.168.10.124:1234こちらを確認してください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これテスト目的なら適正があるモデルならLMStudioのモデルを交換するだけで使えるようになるってことですよね",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今の所はgemma4ファミリだけでokです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "稼働しました！確認お願いします",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ちょっと創作が混じった感じですね",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "このままLMStudioのModel入れ替えても反映されますか？",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今、gemma4 12B Qat 4bitモダンロード済みになったのでchatモードいれましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "どうやらログのさかのぼりが出来ない(しない？)様ですログ確認お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この感触から12B Qatはアリだと思うのですがどうでしょう。少し硬いイメージがありますが指示に対する追従性は高そうです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "A行きましょう",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "LMStudioのトークン量を変更できるのでサイズ10G程度で増やしました。それ以外で変更したい項目があれば指示ください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "此処役に立ちそうなら書き込む内容お願いします！後、時間なので明日に回します！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "UIのコマンド下さい！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\pseudo personality\\CLAUDE.md\"を読み実装を進めてください！",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "https://huggingface.co/turboderp/gemma-2-9b-it-exl2/tree/8.0bpw https://huggingface.co/Aratako/sarashina2.2-3b-RP-v0.2 こちら使えますか！",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1こちらに変更しましょう",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "phase1.6お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "GPUマシン側の作業からおねがいします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Q1：寂しさの一軸を実装、反応テストを経てから順番に軸を増やすという形でどうでしょう。 Q2：gemma2が自然に受け入れられるsystem message から入れてみたいです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "phase3Aから行ってみたいです！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "反応テストからphase3A.2。phase３B がメモリが残ってる状態で出来るので良いと思います！進めてください",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "実行お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "関連が強いphase3A.3から行きたいです",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "phase２A から行きましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "承認します！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "先に、自立登録を増やしつつ、のちの人間の学習で収束、整理と言う方向で、なのでAで行きましょう！UI側には、自立登録した物の近似候補を並べさせる機能もついかして収束を測るしくみです。",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "AとCの採用でお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずは2Bを進めたいです！topic packaging側にこちらとの連動と関係値を分かる様に仕様書を残してください。別リポジトリで作業を始めても問題ないようにお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "2B₋2.bに進んでください！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "残りの2Bを順番に消化しつつ、lora周りは事前テストと実装後の出力testもよろしくお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "LORA訓練からお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Q1Meta tagから Q2はAで訓練お願いします！ Q3訓練済LORAはローカル保存＋versionを日付管理新しい物と差し替えしやすいように。 Q4ダウンロード済",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "GPUフルに使って学習お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "１.からまいりましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここは流れで2.の感情駆動のLORA行きましょう！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それでは、topic packagingの方に手を入れましょう",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この先は新しいスレッドでUI実装までして、学習データを持って戻ってきた方が良さそうですか？",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "3．の後別スレッドでtopic packagingを立ち上げ学習が出来る状態まで持っていきます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここ変更したので適応お願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "失礼しましたknowledge_packages: 115 件の方が新しい情報なので",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "よろしくお願いします！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まだ422になってます",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "exllamav2_ext.pyd : fatal error LNK1120: 2 件の未解決の外部参照 ninja: build stopped: subcommand failed. D:\\pseudo personality>",
+      "language": "mixed",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一旦新しいスレッドにして続きをはじめます！",
+      "language": "ja",
+      "project": "D--pseudo-personality",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こんにちは！codeの方はprojectを持たない形なのですか？スレッド単位で管理する形？",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "つまり、project側でdocsに書き込んでそれをcode側で読み取ってコーディングというイメージで合ってますか",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "なるほどありがとうございます！それでは、 直近のこちらをお願いしたいです以下ログです Claude Code 側で docs/auto_log_review_2026-05-08.md + CLAUDE.md + docs/Agents.md を読ませて docs/impl_11_chat_quality_and_mood_recovery_<date>.md（英語、設計書）の起草から始めてください。",
+      "language": "mixed",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "@D:\\Hybrid_PC_AI\\docs\\auto_log_review_2026-05-08.md これで読めますか",
+      "language": "mixed",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "`git add` してこのまま実装フェーズに進んでください！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一旦ログの生成をしてみます！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こっちだとまだ反映されてないです",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\Hybrid_PC_AI\\start_ui.bat\"start uiはこちらからしてます",
+      "language": "mixed",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "やっと来たのですがLLMが小さすぎるのかもしれません。Gemma4でこういう記事があるのですが、使って見れますか",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "https://news.yahoo.co.jp/articles/514385b06980812ee2f4ef3dfec35a5be1d66388",
+      "language": "en",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "RAM32GVRAM16＋12環境なので、控えめ案が良さそうです！Gemma4要確認からのエラーだったので、ollamaからダウンロードなのですが、はみ出そうです",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "普通の反応になりました",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こちらですね",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まだ出る様子です",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "リセットはいりました！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "（即時）+ C（構造）の実装でお願いします！あと、Gemma4:26bもふつうにollamaで動きました！しかも従来のローカルLLMとちがい、思考を回すようです！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "確認なのですが、Bタイプの構造でも同じ問題がでますか？",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "分りました！Bを使える状態にする時の予備知識としてメモを残しておいて欲しいです！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "分りました！それでは再起動してログを残すのですが、設定はこの状態で、回す際のharnessのパターン候補が欲しいです！簡単な数値マップでいいので",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今日ここから回すと途中で寝る時間になると思うので明日に回します！",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-epic-sutherland-3df9b7",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "リポジトリとrinkコピーをお願いします",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-nice-lederberg-7e5e3e",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ローカルの最新の状態を保存したいです",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-nice-lederberg-7e5e3e",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "backup形式で保存したいです",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-nice-lederberg-7e5e3e",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ローカル保存だけにします",
+      "language": "ja",
+      "project": "D--Hybrid-PC-AI--claude-worktrees-nice-lederberg-7e5e3e",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずはΣΗ、討論ロジックを除外して純粋にチャットとして応答＋R１R２を内蔵(ある程度実装済みのはず)。→応答ルートの確認と再構築。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それでは、海馬とmain、sub、ルートも構築しておきたいのですが、ルーター→海馬→main、sub。or main、sub⇔海馬。もしくはもっとスマートな接続があればそちらを採用したいです",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "finallzer融合から履歴の永続化に進んでください！",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "server立ておねがいしてもいいですか",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "現状です！",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これは、後追いが藪蛇だったパターンですかね。途中から改善するより１からルーター前提の構造を構築した方が健全でしたね",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "サーバ再起動して GUI で「クリーン応答＋履歴保存」を一緒に確認するyazi",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Meaning: \"Hello\"…になってしまうのは前のUIの仕様とpromptの品質両方にかかる問題があると思われます。この右のsigma viewが関係しています。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "反応しました！ありがとうございます！Slice 3（重複の共通化）の後に全体に対するレビューと稼働状況の調査いきましょう。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おもいだしました。standardとprojectに分かれてるのはchat永続化記憶とprojectとして残す専用フォルダみたいな区分けがあったのだと思います。Slice 2（最優先）をしつつ、project記憶路線は一旦削除してスリム化をしたいです。そこが無ければstandardとprojectの差がなくなるのでその区分けも必要なくなる。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Aはコストがかかりそうなので、B、Cを片付けてから行く方向でどうでしょう",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Aに進んでください！",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "現在UIのスレッド選択でstandardとprojectが残っているので、入力をした際にnewからその二つの選択肢が出てくるのですが、どちらをクリックしても反応しない状態です",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "表示はしなくなったのですがスレッドが構築されません",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "動き始めました！turnが効いてないですが、答えが高速で帰ってくるのでこちらの方が良いかも。構造的にもルーターを挟むので、ΣΗを取り入れるのは複雑化が増しますし。簡単なコードも出せる状態です。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これは考察というか、気づいたことなのですが、thinkingmodeのモデルがmainだったからturnの進みが異常に遅かったんですね。",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "thinkingmodeがある今、systemでターン制を作る意味も感じられないので、復活させるとしても、ΣΗのルールで内部を回すとかですね。今回はここがゴールとして良いと思います！",
+      "language": "ja",
+      "project": "D--keywordmodel--claude-worktrees-sad-haslett-dd41e5",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それではUI起動と学習を進めてみたいのです！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "8080で合わせてください！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "その順番で進めてください！原文に張るテキストsampleを頂きたいです！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "画像が大きくなってしまうので結果の画像を張りますね",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "画像大きくてすみません。Save candidateで登録でいいですか！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "行けました！Aに進めますか？",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "問題なく動いてます！次はollamaと連動させますか？念のため起動させておきます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まさしくtopicごとに切り分けられているので、この状態を学習、LLMの参考トークンに利用できればかなり強力な武器になると思います！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Acceptを押すと取得失敗になりました",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "内容の変更で囲いを移動する時他と被ってるとエラーになりますか",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今回のパッケージ化見て分かったのですが。小分けのタイトルにまで行くとかなりブレがありますね。",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "現段階でUse Source Sliceを使い区分け調整をしたところなのですが、この状態で、statusを変えて、saveのながれですか",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "取得失敗になってます",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ちょっと相談なのですが、1番目の区分けがほぼタイトルになっていて、こういった場合、廃棄、もしくは全体を囲むのどちらが適切でしょう",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "手動で整理したのですが、こんな感じですかね。",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "registerにて4つ登録しました！",
+      "language": "mixed",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Cに行きましょう",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ナンバリングが同じになるのですね",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "プログラム系のtopicだけでは偏るので、グーグルで検索をかけて、その文章を投げようと思うので、検索ワードをいただけたらそれで学習を進めてみます",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "結構広範囲になってしまったのですが、どうなのでしょう…",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "登録しました！ドラック＆ドロップだと、反映されずらいので、3行程度で端に文字数を表示してもらえると分かり易くなります！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "推奨を採用させてもらいました！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こちらは自分が不明な分野なので区分けお願いします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "結構骨な作業ですねｗ一旦休憩してきます！次は食文化 音楽あたり行ってみます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "納豆と発酵、ジャズと文化、をやってきました。確認お願いします",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "AからBに行きましょう",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "22件並んでます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "PostgreSQL バックエンドに切り替えて再起動耐性を持たせる。から、空白カテゴリ埋めてきます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "先生、これ、ダウンロード済みのollamaのGemma4使っても良いですか",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Gemma系だと4はエラー、3:12Bでlevel1，2を選択しないというかんじでした。",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここは一縷の望みでQwen3.5:27に臨みをかけてもゆるされますか",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "2026年2月16日リリースでollamaのダウンロード候補にあるので行けると思われます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "いけました！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "登録しました。題名の明確さと、区分けが",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "区分けが、文脈から多少前後させるだけで登録できるレベルでした！まだ1個目ではありますが、前のモデルはおおざっぱだったり、そもそも区分けしてなかったりしたのでこのままの性能で続けられるならかなり助かります",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "やはりこの分野は読みにくいのでお願いします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ollama response did not match the required structured output (502) アップデートが入った後？にこのエラーになってます",
+      "language": "mixed",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "現在一度試して、エラーになっているので確認してみてください！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "きました！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "データの蓄積はいかがでしょう",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おはようございます。データの確認お願いします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "意図的に改行を入れるので、データ収集に影響が泣ければ、改行をtopicの目安とするように指示してもらえますか！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "貯めてきました！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これ、プログラムがpythonのみなのが少し心もとないので、基礎とかhardwareみたいなの追加どうです？",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "提案のA+Bでお願いします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こちらの判断をおねがいします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "dataの確認お願いします！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "server起動.batとUI.batが欲しいです！D:\\Topic packagingこちらにお願いします",
+      "language": "mixed",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "inverse 側と相談してきます！",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "学習の前にタグ追加をお願いします！タグ無し、時事(政治、経済、ニュース)、生活(料理、天気、その他雑談)、情報系(ミーム、動画、タレント)",
+      "language": "ja",
+      "project": "D--Topic-packaging",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "このプロジェクトの仕様書の理念、ロードマップにそって設計書を読み、構造の精査、修正、改善、その後に数学的思考パターンの学習まで行って下さい。数学的思考パターンは基礎的な数字の理解から加算の同回答バリエーションを混ぜながら日本の高等学校levelの学習まで行って下さい。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとう！それでは、基礎的な英語文、日本語文の理解のため、言語基礎の学習を行い、簡単な挨拶に応答できるかをテストしてください。 別で質問なのですが、Horizontal Processing、Vertical Processing、Hybrid Processingの概念って取り入れ済みでしたか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この状態なら外部LLMの思考モジュールの初期段階としてなりたちますか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここまで完成したら予算的に、あとはopus 4.8に投げてロードマップ継続で行けると思うのでそちらに移行します！引継ぎレポートだけ作成お願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "D:/Thought State Register/docs/EXTERNAL_REVIEW_REPORT_2026-06-11.md v1.6まで進めたので確認と調査をお願いします",
+      "language": "mixed",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こういう判断はアリですか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "未評価が0になったので学習させます",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "学習データの囲い込みor階層化で初期学習程優先される様な仕組みにはなりませんか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "評価契約への追記を行ってから実装にしましょう。よろしくお願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "今日は残りトークンが10%なので、fableさんが入れておきたい学習データを10件程度入れてもらい明日にしましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "昨日の続きからおねがいします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "申し訳ないのですが、内容を分かり易くかみ砕いて判断材料を頂けるとありがたいです。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "方針に同意です。これはUIから探し出して承認と言う作業になりますか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "UI統合の後５０件なら確認と承認もスムーズにいきます",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "判断や思考ルールにつながる所なので、プログラムのロジックから引っ張る。もしくは、人間の基礎学習＋αを持ってくる。もう一つは、契約、責務、権利、等のルールの根幹。とかでしょうか？もしくはWikipediaから。どんな方法があるでしょう。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "エージェントへの依頼文ならあります！概ね人間に宛てた文章として書いているので、使えると思われます！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "こんな感じでどうでしょう？ このプロジェクトの内部を弄らずにレビューが欲しいです。改善点はレポートにしてください データベーススキーマについて話した内容ってありましたっけ voicevoxは遅延が気になるから代替を考えてたんだけど、CoeiroInk、OpenJTalkどっちがおすすめ？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "この一群は過去の私のログdataから引っ張ってきたものです！すみません。サンプルとして使えるところを使っていただきたいです！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "後は②人間学習・③契約系で合成でおねがいします！その部分の学習も欲しいので！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "承認した後にマージ？それともそのままマージ？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "マージして",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "確認と性能テストおねがいします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "記録して",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "つづきいきましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "３件を推奨の変更とAの方針で記録して",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "１で参りましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "優先２をかたずけたいです",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "まずは記録して、言葉に対する重みとして正、誤のタグをつけるのはV違いになってしまいますか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "modelの育成としてこの先を詰める、ここで切り上げてvを上げる。しぜんな方を選びたいです",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございます！v0.3設計して！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "推奨順に進めてください！よろしくお願いします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "承認して！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Bにしましょう！そのうえで、欲しいログの内容を教えてください！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここはBでよろしくお願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "承認して！1、2、行きましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "記録して1にして、3を次回の始まりとしましょう。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おはようございます。続きからはじめましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一旦質問です。学習データの変換効率と可逆性、情報密度について、改善の余地とかあります？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "バランスとしては16384が良さそうですが、次元の増え方的に桁をひとつづつ増やしてる方法ですか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "承認して",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これが初Modelとして、実働に耐える仕様迄持っていけばいいと割り切って、この結果を記録して、(b)の方向(v0.3=gatedハイブリッドを正式採用+0.90を実データ将来版へ) で設計を確定。将来的に初Modelを元に学習の見直しや構造の改善を考えるベースとして、仕上げていくという方針はどうでしょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "一個だけ試してみたい事があるのですがいいでしょうか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "いま、分布を平均化して学習データの中から、間引きをして再計測。間引くdataの選定はお願いしてしまうことになりますが、試す価値はあると思います",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "将来の判断材料になると思うので記録しましょう！その後で実装に進みましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "保守閾値0.15で進めて",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "記録して、その後にの頃に進みます！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "* (B)初号機はここで\"動く状態\"として確定し、デプロイゲートは次の区切りに回す。＋実モデルとつないで反応が返ってくるかのテスト。LMStudioサーバーhttp://192.168.10.124:1234",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "少し時間のかかる問題での応答速度の比較お願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここは応答が正常にできるかの答えにもなるので処理クラス別で行ってみましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "方向性は1が良いような気もしますが、ルールの追従性としては2ですね。一旦1でしょうか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "意図モデルのデプロイゲートいきまｓｙｙ",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ここをbackup(アーカイブ化)お願いします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "これで初号機はルーターとして機能しだしますか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "案のティア採用でその後入口もお願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "品質は将来課題として、残りの二つ行ってしまいましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "アーカイブ化お願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "このルーターの機能として、簡素な質問はLLMを解せずに応答。と言う機能もつけられますか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "アーカイブ化はまだです！これで重い思考タイプと繋げた際に起こる「挨拶でも思考を回して時間がかかる」が改善されますね。テストで確認お願いします！ルーターを介さない応答速度とルーターを介した応答差をおねがいします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "公開用として使いたいので()で使用モデルを載せておくと納得感が出るかもしれません！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "アーカイブおねがいします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "データ収集いきましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "方向性としてどんなデータの収集になりますか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "それではログ(私の入力)をテキストに変換して張ります！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました",
+      "language": "mixed",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Aの投入",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Claudeさん側で足りない部分を補う事はできますか",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "①で、私のログの組み合わせから継ぎはぎで足りない部分の合成は可能？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "A分解を試してみましょう",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "そうですね。一旦絞めて、他のエージェントレビュー、改善点の提案を聞いてみます！初号機は確定モデルとして、凍結。他のprojectに採用し実dataの蓄積に回します。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "Aを入れてｖ0.3.1にして観測性を高めた状態で実データ収集が出来る方が強そうです",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "状態のアーカイブお願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "\"D:\\Hybrid_PC_AI\" \"D:\\nichijo_jissou\" D:\\Core5_Project\\core_review 導入候補としてこちらがあるのですが順位付けお願いします",
+      "language": "mixed",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "nichijo_jissouからまずは導入行きましょう。その前にもう一つ候補がありまして、そちらは確か、メインＬＬＭがsubに司令を出す形でさらに海馬LLMを載せた物になります。D:\\keywordmodel 多分これなのですが、特徴は海馬LLMがあった事です。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ゼロタッチ・オフライン観測採用なのですが！入力のログ取りをテキスト保存して分かり易くしてほしいです！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "ありがとうございました！keywordフォルダの方がLLM間のデータの通信でエラーが起きてなかなか成立してなかったので間にルーターを入れたルールに作り替えてルーターが出力を調整し渡す仕組みにしようと思います。",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "確認したいのですが、学習した408の実サイズってどのくらいの大きさになってますか？",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "おはようございます。引継ぎレポートを読みこんでください！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "弱点解消から推奨の順番でお願いします！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "#2に進んでください！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "精度ブレみたいな物があるという事で、のちのロードマップに追加で、同じ回答を三つのユニットで回して学習。(精度、閾値別で出す)これは回答の同じものを正答とする学習として。どうでしょう？要らなければスキップで良いです。 その後に、手番通りのルートで進めてください！",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    },
+    {
+      "input": "五時間制限が近いのでここで区切りましょう。次回始める用にレポートお願いします",
+      "language": "ja",
+      "project": "D--Thought-State-Register-thought-state-register-egg-info",
+      "intent": null,
+      "review_status": "pending",
+      "source": "claudelog-harvest"
+    }
+  ]
+}

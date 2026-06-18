@@ -1,0 +1,81 @@
+{
+  "schema_version": "intent-gate-calibration.v1",
+  "current_gate_margin": 0.2,
+  "holdout_positives": 56,
+  "negatives_drops": 32,
+  "note": "Positives are out-of-sample held-out harvested utterances; negatives are harvested drops (URL drop excluded). Sealed campaign not used. balance_f1 = harmonic mean of positive coverage and junk-abstain rate.",
+  "sweep": [
+    {
+      "threshold": 0.0,
+      "pos_coverage": 0.536,
+      "junk_abstain": 0.0,
+      "balance_f1": 0.0
+    },
+    {
+      "threshold": 0.05,
+      "pos_coverage": 0.5,
+      "junk_abstain": 0.125,
+      "balance_f1": 0.2
+    },
+    {
+      "threshold": 0.1,
+      "pos_coverage": 0.446,
+      "junk_abstain": 0.344,
+      "balance_f1": 0.388
+    },
+    {
+      "threshold": 0.15,
+      "pos_coverage": 0.411,
+      "junk_abstain": 0.438,
+      "balance_f1": 0.424
+    },
+    {
+      "threshold": 0.2,
+      "pos_coverage": 0.375,
+      "junk_abstain": 0.469,
+      "balance_f1": 0.417
+    },
+    {
+      "threshold": 0.25,
+      "pos_coverage": 0.375,
+      "junk_abstain": 0.531,
+      "balance_f1": 0.44
+    },
+    {
+      "threshold": 0.3,
+      "pos_coverage": 0.321,
+      "junk_abstain": 0.562,
+      "balance_f1": 0.409
+    },
+    {
+      "threshold": 0.35,
+      "pos_coverage": 0.304,
+      "junk_abstain": 0.594,
+      "balance_f1": 0.402
+    },
+    {
+      "threshold": 0.4,
+      "pos_coverage": 0.25,
+      "junk_abstain": 0.656,
+      "balance_f1": 0.362
+    },
+    {
+      "threshold": 0.45,
+      "pos_coverage": 0.232,
+      "junk_abstain": 0.781,
+      "balance_f1": 0.358
+    },
+    {
+      "threshold": 0.5,
+      "pos_coverage": 0.196,
+      "junk_abstain": 0.812,
+      "balance_f1": 0.316
+    }
+  ],
+  "recommended": {
+    "threshold": 0.25,
+    "pos_coverage": 0.375,
+    "junk_abstain": 0.531,
+    "balance_f1": 0.44
+  }
+}

@@ -483,7 +483,10 @@ def _intent_scores(text: str) -> Tuple[List[IntentCandidate], List[Tuple[str, in
 # markers always win when they fire; the learned layer only replaces the
 # plain `respond` fallback, and only when clearly confident. Chosen a-priori
 # (not tuned on the campaign); see docs/SEMANTIC_ADAPTER_v0_3_design.md §11.
-INTENT_GATE_MARGIN = 0.15
+# 2026-06-18: raised 0.15 -> 0.20 after margin-gate calibration against
+# harvested-drop negatives (build/intent_gate_calibration_v1.json); junk-abstain
+# ~doubled with only a small coverage cost. Sealed campaign not used for tuning.
+INTENT_GATE_MARGIN = 0.20
 
 
 def extract_semantic_packet(

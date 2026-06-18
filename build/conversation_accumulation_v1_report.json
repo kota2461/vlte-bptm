@@ -1,6 +1,6 @@
 {
   "schema_version": "conversation-accumulation-report.v1",
-  "generated_at": "2026-06-14T07:00:46.441200+00:00",
+  "generated_at": "2026-06-18T09:45:57.268458+00:00",
   "campaign_id": "conversation-v2-readiness-2026-06",
   "candidate": {
     "adapter_kind": "deterministic_signal_extractor",

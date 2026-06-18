@@ -1,0 +1,10 @@
+{
+  "schema_version": "intent-claudelog-harvest-approval.v1",
+  "curriculum_id": "claudelog-harvest-v1",
+  "verdict": "approved",
+  "approver": "project owner",
+  "approved_at": "2026-06-18",
+  "count": 331,
+  "source_file": "data/harvested_claudelog_v1.json",
+  "note": "Human-approved harvested Claude Code log utterances as intent training data (build/verify-rich real distribution; 7 intents; ja+en). Excluded 2 low-confidence items per reviewer (こちらであってるでしょうか / どうでしょう). 33 drops excluded from corpus; drops minus URL items reserved for margin-gate negative calibration. Disjoint from the 50-case sealed accumulation campaign (enforced by assembler). No automatic learning."
+}

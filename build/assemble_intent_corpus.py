@@ -45,6 +45,8 @@ CONVERSATIONAL_APPROVAL = (
 CONVERSATIONAL_R2_APPROVAL = (
     ROOT / "data" / "intent_conversational_r2_approval_v1.json"
 )
+HARVEST = ROOT / "data" / "harvested_claudelog_v1.json"
+HARVEST_APPROVAL = ROOT / "data" / "harvested_claudelog_approval_v1.json"
 OUT = ROOT / "data" / "intent_training_corpus_v1.json"
 
 
@@ -110,6 +112,23 @@ def main() -> None:
         if conv_r2_approved:
             example["review_status"] = "approved"
         examples.append(example)
+
+    # harvested Claude Code log utterances (per-item human verdict carried in
+    # the harvest file; only approved, non-drop items enter the corpus)
+    if _approved(HARVEST_APPROVAL, "claudelog-harvest-v1"):
+        harvest = json.loads(HARVEST.read_text(encoding="utf-8"))
+        for item in harvest["examples"]:
+            if item["intent"] == "drop":
+                continue
+            if item.get("review_status") != "approved":
+                continue
+            examples.append({
+                "input": item["input"],
+                "intent": item["intent"],
+                "language": item.get("language"),
+                "source": "claudelog-harvest",
+                "review_status": "approved",
+            })
 
     # disjointness vs the measurement campaign
     overlap = sorted(
