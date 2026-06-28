@@ -1,0 +1,16 @@
+{
+  "schema_version": "v4-puzzle-failure-memory-report.v1",
+  "generated_at": "2026-06-21T05:14:04.507194+00:00",
+  "source_trace_report": "build\\v4_puzzle_solver_trace_v1.json",
+  "failure_memory_fixture": "tests\\fixtures\\v4_puzzle_failure_memory_v1.json",
+  "summary": {
+    "failure_count": 2,
+    "source_failed_task_ids": [
+      "puzzle-v4-seed-003",
+      "puzzle-v4-seed-011"
+    ],
+    "by_severity": {
+      "medium": 2
+    }
+  }
+}

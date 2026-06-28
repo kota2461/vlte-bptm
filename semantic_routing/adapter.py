@@ -14,6 +14,12 @@ from typing import Any, Dict, Optional
 
 from .baseline import extract_semantic_packet
 from .intent_model import IntentModel
+from .guard_router import derive_failure_guard
+from .knowledge_index import (
+    DEFAULT_KNOWLEDGE_INDEX_PATH,
+    RetrievalPacket,
+    build_retrieval_packet,
+)
 from .processing_plan import ProcessingPlan, build_processing_plan
 from .semantic_packet import SemanticPacket
 
@@ -29,6 +35,7 @@ DEFAULT_INTENT_MODEL_PATH = (
 class RouteResult:
     packet: SemanticPacket
     plan: ProcessingPlan
+    retrieval: RetrievalPacket
     # observability only (v0.3.1) — how/why the intent was decided;
     # never affects routing decisions
     trace: Dict[str, Any] = field(default_factory=dict)
@@ -45,6 +52,7 @@ def route(
     *,
     intent_model: Optional[IntentModel] = None,
     model_path: Path = DEFAULT_INTENT_MODEL_PATH,
+    knowledge_index_path: Path = DEFAULT_KNOWLEDGE_INDEX_PATH,
 ) -> RouteResult:
     """Run the v0.3 hybrid adapter on `text` and return packet + plan.
 
@@ -59,5 +67,9 @@ def route(
     )
     trace: Dict[str, Any] = {"adapter_version": ADAPTER_VERSION}
     packet = extract_semantic_packet(text, model, trace=trace)
+    guard = derive_failure_guard(text, packet)
+    retrieval = build_retrieval_packet(text, index_path=knowledge_index_path)
+    trace["failure_guard"] = guard.as_dict()
+    trace["retrieval"] = retrieval.as_dict()
     plan = build_processing_plan(packet)
-    return RouteResult(packet=packet, plan=plan, trace=trace)
+    return RouteResult(packet=packet, plan=plan, retrieval=retrieval, trace=trace)

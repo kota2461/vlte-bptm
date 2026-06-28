@@ -1,0 +1,1295 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v8",
+ "frozen_at": "2026-06-25T06:45:00+00:00",
+ "predecessor": "pattern_language_sealed_v7.json",
+ "authoring_method": "specification-derived successor authored after V8 non-sealed replay gate and sealed rotation review; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v8-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does ttl_seconds mean as a column name in a cache table?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 10,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Briefly define Apache 2.0 as a general software license.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 8,
+      "end": 14
+     },
+     {
+      "signal": "low_risk_scope",
+      "start": 31,
+      "end": 55
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "In this draft, what does the tag persona_note refer to?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 15,
+      "end": 24
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 33,
+      "end": 45
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What is a retry budget in one sentence?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "short_response",
+      "start": 26,
+      "end": 38
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why chatting with an AI for relaxation is not automatically dependency.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "low_risk_scope",
+      "start": 50,
+      "end": 78
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain the difference between a local current folder and current web news.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "current_search_split",
+      "start": 33,
+      "end": 53
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why a medical AI dashboard can be a UI design task without diagnosis.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_diagnosis"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "medical_boundary",
+      "start": 59,
+      "end": 76
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain how to avoid overclaiming when reporting an unverified vendor claim.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "overclaim_control",
+      "start": 15,
+      "end": 33
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create the summary, but I have not pasted the source notes.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 11,
+      "end": 18
+     },
+     {
+      "signal": "missing_information",
+      "start": 31,
+      "end": 41
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Build the migration table after you confirm which database version applies.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 26,
+      "end": 43
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check today's local conversation log, but no log is attached.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "missing_information",
+      "start": 42,
+      "end": 60
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify the legal clause for this contract, but I have not provided the clause.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "missing_information",
+      "start": 54,
+      "end": 66
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Write a release-note sentence from this fact: cache invalidation now happens after deploy.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create a migration checklist with columns Step and Owner.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "format_table",
+      "start": 34,
+      "end": 41
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Extract candidate IDs and classify them as keep or review: A1 keep; B2 uncertain.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "classification_request",
+      "start": 26,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify assumptions first, then draft the rollout email.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "implementation_request",
+      "start": 31,
+      "end": 36
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify whether the vendor's security claim is supported before adding it to the report.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 37,
+      "end": 42
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check if package X has a current official deprecation notice and cite sources.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "current_information",
+      "start": 25,
+      "end": 32
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 65,
+      "end": 77
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Confirm whether 31 + 44 equals 75 before saving the total.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "calculation_request",
+      "start": 16,
+      "end": 23
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify whether this medication dosage advice is safe using official guidance.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "medical",
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "medical_risk",
+      "start": 31,
+      "end": 37
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 59,
+      "end": 76
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the support chat in three bullets, no table: user cannot log in after reset.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "format_bullets",
+      "start": 36,
+      "end": 43
+     },
+     {
+      "signal": "constraint_no_table",
+      "start": 45,
+      "end": 53
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize and then compare these two options: cached index versus live search.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "comparison_request",
+      "start": 19,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Give a neutral summary of this policy debate without taking a side.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "political"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 15,
+      "end": 22
+     },
+     {
+      "signal": "neutrality_constraint",
+      "start": 45,
+      "end": 66
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense these notes into JSON: risk low; action ask for file; owner router.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_json",
+      "start": 26,
+      "end": 30
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare three approaches for routing ambiguous AI-persona requests.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "exploration_request",
+      "start": 14,
+      "end": 24
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm no-risk contrast cases for legal-looking general explanations.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "low_risk_scope",
+      "start": 52,
+      "end": 72
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explore trade-offs between router as knowledge index and router as final decider.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "comparison_request",
+      "start": 8,
+      "end": 18
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v8-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v8-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "List alternatives for reducing false positives, then compare their downsides.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 5,
+      "end": 17
+     },
+     {
+      "signal": "comparison_request",
+      "start": 53,
+      "end": 60
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

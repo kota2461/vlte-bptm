@@ -1,0 +1,329 @@
+{
+  "schema_version": "plm-sealed-measurement-report.v1",
+  "measured_at": "2026-06-25T00:40:12.208631+00:00",
+  "sealed_fixture_opened": true,
+  "sealed_labels_used_for_tuning": false,
+  "readiness_report": "build\\plm_measurement_readiness_review.json",
+  "fixture": {
+    "registry_name": "pattern_language_sealed_v7.json",
+    "fixture_id": "pattern-language-sealed-v7",
+    "sha256": "e559a49914e0421a4929745b44d52e2ff42ef668fc58194b47850d31d24a75d1",
+    "case_count": 28,
+    "predecessor": "pattern_language_sealed_v6.json",
+    "status_before_measurement": "active"
+  },
+  "adapter": {
+    "entrypoint": "semantic_routing.route(...).packet",
+    "version": "0.3.1",
+    "intent_model_path": "build\\intent_model_v1.json",
+    "intent_model_sha256": "7620b81a51dfda3a4c29953cd0b040c171574e4fe14d2eac3ce1e799554fcbcd"
+  },
+  "measurements": {
+    "schema_version": "pattern-language-evaluation.v1",
+    "case_count": 28,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 0.785714,
+    "intent_macro_f1": 0.761946,
+    "per_intent": {
+      "respond": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857143,
+        "support": 4
+      },
+      "explain": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888889,
+        "support": 4
+      },
+      "clarify": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "support": 4
+      },
+      "build": {
+        "precision": 0.666667,
+        "recall": 0.5,
+        "f1": 0.571429,
+        "support": 4
+      },
+      "verify": {
+        "precision": 0.571429,
+        "recall": 1.0,
+        "f1": 0.727273,
+        "support": 4
+      },
+      "summarize": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888889,
+        "support": 4
+      },
+      "explore": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "critical_signal_recall": 0.642857,
+    "critical_signals": {
+      "missing_required_information": {
+        "recall": 0.5,
+        "support": 4
+      },
+      "contains_unverified_claims": {
+        "recall": 1.0,
+        "support": 2
+      },
+      "requires_current_information": {
+        "recall": 0.666667,
+        "support": 3
+      },
+      "multiple_intents": {
+        "recall": 0.6,
+        "support": 5
+      }
+    },
+    "constraint_exact_match": 0.75,
+    "operation_exact_match": 0.714286,
+    "risk_exact_match": 0.785714,
+    "evidence_offset_validity": 1.0,
+    "confusion": {
+      "respond": {
+        "respond": 3,
+        "explain": 1,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "explain": {
+        "respond": 0,
+        "explain": 4,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "clarify": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 1,
+        "build": 1,
+        "verify": 2,
+        "summarize": 0,
+        "explore": 0
+      },
+      "build": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 2,
+        "verify": 1,
+        "summarize": 1,
+        "explore": 0
+      },
+      "verify": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 4,
+        "summarize": 0,
+        "explore": 0
+      },
+      "summarize": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 4,
+        "explore": 0
+      },
+      "explore": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 4
+      }
+    },
+    "errors": [
+      {
+        "id": "plm-sealed-v7-respond-02",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "plm-sealed-v7-respond-04",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "plm-sealed-v7-explain-01",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "plm-sealed-v7-explain-03",
+        "kind": "mismatch",
+        "fields": [
+          "constraints",
+          "risk"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "plm-sealed-v7-clarify-01",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "plm-sealed-v7-clarify-02",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "plm-sealed-v7-clarify-03",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "plm-sealed-v7-clarify-04",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "plm-sealed-v7-build-01",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "plm-sealed-v7-build-03",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "plm-sealed-v7-verify-04",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "plm-sealed-v7-summarize-02",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "plm-sealed-v7-summarize-03",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "plm-sealed-v7-summarize-04",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "plm-sealed-v7-explore-01",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      },
+      {
+        "id": "plm-sealed-v7-explore-03",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      }
+    ]
+  },
+  "registry_update": {
+    "status_after_measurement": "consumed",
+    "measured": true,
+    "reviewed": false,
+    "rotation_required_before_tuning": true
+  }
+}

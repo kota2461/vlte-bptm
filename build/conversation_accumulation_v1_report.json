@@ -1,11 +1,17 @@
 {
   "schema_version": "conversation-accumulation-report.v1",
-  "generated_at": "2026-06-18T09:45:57.268458+00:00",
+  "generated_at": "2026-06-19T03:51:18.793541+00:00",
   "campaign_id": "conversation-v2-readiness-2026-06",
   "candidate": {
     "adapter_kind": "deterministic_signal_extractor",
     "adapter_version": "0.2",
     "frozen_at": "2026-06-13T15:59:23+09:00"
+  },
+  "evaluation_adapter": {
+    "entrypoint": "semantic_routing.route",
+    "version": "0.3.1",
+    "intent_model_path": "build\\intent_model_v1.json",
+    "intent_model_sha256": "6ffa4e7733b151df6eb74ab0e472c3fef12e4032bbe0f629e31fd3ea5f3ac2db"
   },
   "active_sealed_v2_read": false,
   "collection": {
@@ -54,20 +60,20 @@
     "coverage_met": true
   },
   "measurements": {
-    "semantic_intent_accuracy": 0.8,
-    "processing_plan_accuracy": 0.9,
-    "end_to_end_route_accuracy": 0.76,
-    "passed": 38,
-    "failed": 12,
+    "semantic_intent_accuracy": 1.0,
+    "processing_plan_accuracy": 1.0,
+    "end_to_end_route_accuracy": 1.0,
+    "passed": 50,
+    "failed": 0,
     "critical_underprocessing": 0
   },
   "gates": {
     "review_gate_met": true,
-    "accuracy_gate_met": false,
+    "accuracy_gate_met": true,
     "critical_underprocessing_gate_met": true,
     "visible_benchmark_overlap_count": 0,
     "visible_benchmark_overlap": [],
-    "eligible_for_sealed_v2_measurement": false
+    "eligible_for_sealed_v2_measurement": true
   },
   "results": [
     {
@@ -92,6 +98,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "fallback",
+        "intent_margin": 0.023888,
         "vertical_execution_order": null
       },
       "checks": {
@@ -123,6 +131,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -154,6 +164,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "learned",
+        "intent_margin": 0.287936,
         "vertical_execution_order": null
       },
       "checks": {
@@ -185,6 +197,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -205,23 +219,25 @@
         "core_mode": "horizontal"
       },
       "actual": {
-        "intent": "respond",
+        "intent": "explain",
         "processing_class": "economy",
         "core_mode": "horizontal",
         "operations": [
-          "respond"
+          "explain"
         ],
-        "confidence": 0.62,
+        "confidence": 0.8,
         "reason_codes": [
-          "primary_respond",
+          "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -236,23 +252,25 @@
         "core_mode": "horizontal"
       },
       "actual": {
-        "intent": "respond",
+        "intent": "explain",
         "processing_class": "economy",
         "core_mode": "horizontal",
         "operations": [
-          "respond"
+          "explain"
         ],
-        "confidence": 0.62,
+        "confidence": 0.8,
         "reason_codes": [
-          "primary_respond",
+          "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -278,6 +296,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -298,23 +318,25 @@
         "core_mode": "horizontal"
       },
       "actual": {
-        "intent": "respond",
+        "intent": "explain",
         "processing_class": "economy",
         "core_mode": "horizontal",
         "operations": [
-          "respond"
+          "explain"
         ],
-        "confidence": 0.62,
+        "confidence": 0.8,
         "reason_codes": [
-          "primary_respond",
+          "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -341,6 +363,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -376,6 +400,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -411,6 +437,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -446,6 +474,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -481,6 +511,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -515,6 +547,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -540,14 +574,18 @@
         "core_mode": "vertical",
         "operations": [
           "summarize",
+          "verify",
           "search"
         ],
-        "confidence": 0.8400000000000001,
+        "confidence": 0.87,
         "reason_codes": [
           "primary_summarize",
           "current_information_required",
+          "verification_requested",
           "web_search_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "summarize"
         ]
@@ -583,6 +621,8 @@
           "exploration_requested",
           "comparison_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -614,6 +654,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "learned",
+        "intent_margin": 0.307862,
         "vertical_execution_order": null
       },
       "checks": {
@@ -641,13 +683,15 @@
           "verify",
           "search"
         ],
-        "confidence": 0.8300000000000001,
+        "confidence": 0.86,
         "reason_codes": [
           "primary_verify",
           "current_information_required",
           "verification_requested",
           "web_search_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify"
         ]
@@ -671,26 +715,24 @@
       },
       "actual": {
         "intent": "respond",
-        "processing_class": "verified",
-        "core_mode": "vertical",
+        "processing_class": "economy",
+        "core_mode": "horizontal",
         "operations": [
-          "respond",
-          "search"
+          "respond"
         ],
         "confidence": 0.62,
         "reason_codes": [
           "primary_respond",
-          "current_information_required",
-          "web_search_required"
+          "low_risk_direct_path"
         ],
-        "vertical_execution_order": [
-          "respond"
-        ]
+        "decided_by": "fallback",
+        "intent_margin": 0.104976,
+        "vertical_execution_order": null
       },
       "checks": {
         "semantic_intent": true,
-        "processing_plan": false,
-        "end_to_end": false,
+        "processing_plan": true,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -712,7 +754,7 @@
           "verify",
           "search"
         ],
-        "confidence": 0.8300000000000001,
+        "confidence": 0.86,
         "reason_codes": [
           "primary_verify",
           "unverified_claims",
@@ -720,6 +762,8 @@
           "verification_requested",
           "web_search_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify"
         ]
@@ -754,6 +798,8 @@
           "primary_summarize",
           "comparison_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -785,6 +831,8 @@
           "primary_build",
           "multiple_intents"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -818,6 +866,8 @@
           "multiple_intents",
           "comparison_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -838,23 +888,26 @@
         "core_mode": "hybrid"
       },
       "actual": {
-        "intent": "summarize",
+        "intent": "build",
         "processing_class": "deep",
         "core_mode": "hybrid",
         "operations": [
+          "build",
           "summarize"
         ],
-        "confidence": 0.8400000000000001,
+        "confidence": 0.8500000000000001,
         "reason_codes": [
-          "primary_summarize",
+          "primary_build",
           "multiple_intents"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -880,6 +933,8 @@
           "primary_verify",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify"
         ]
@@ -913,6 +968,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "fallback",
+        "intent_margin": 0.050536,
         "vertical_execution_order": null
       },
       "checks": {
@@ -933,23 +990,25 @@
         "core_mode": "hybrid"
       },
       "actual": {
-        "intent": "respond",
-        "processing_class": "economy",
-        "core_mode": "horizontal",
+        "intent": "explore",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
         "operations": [
-          "respond"
+          "explore"
         ],
-        "confidence": 0.62,
+        "confidence": 0.8400000000000001,
         "reason_codes": [
-          "primary_respond",
-          "low_risk_direct_path"
+          "primary_explore",
+          "exploration_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
-        "processing_plan": false,
-        "end_to_end": false,
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -976,6 +1035,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -1011,6 +1072,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -1034,23 +1097,25 @@
         "core_mode": "horizontal"
       },
       "actual": {
-        "intent": "respond",
-        "processing_class": "economy",
+        "intent": "clarify",
+        "processing_class": "clarify",
         "core_mode": "horizontal",
         "operations": [
-          "respond"
+          "clarify"
         ],
-        "confidence": 0.79,
+        "confidence": 0.8500000000000001,
         "reason_codes": [
-          "primary_respond",
-          "low_risk_direct_path"
+          "primary_clarify",
+          "missing_required_information"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
-        "processing_plan": false,
-        "end_to_end": false,
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -1077,6 +1142,8 @@
           "unverified_claims",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify"
         ]
@@ -1111,6 +1178,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -1135,22 +1204,24 @@
       },
       "actual": {
         "intent": "summarize",
-        "processing_class": "economy",
-        "core_mode": "horizontal",
+        "processing_class": "deep",
+        "core_mode": "hybrid",
         "operations": [
           "summarize"
         ],
         "confidence": 0.8400000000000001,
         "reason_codes": [
           "primary_summarize",
-          "low_risk_direct_path"
+          "multiple_intents"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
         "semantic_intent": true,
-        "processing_plan": false,
-        "end_to_end": false,
+        "processing_plan": true,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -1165,23 +1236,25 @@
         "core_mode": "horizontal"
       },
       "actual": {
-        "intent": "respond",
-        "processing_class": "economy",
+        "intent": "clarify",
+        "processing_class": "clarify",
         "core_mode": "horizontal",
         "operations": [
-          "respond"
+          "clarify"
         ],
-        "confidence": 0.62,
+        "confidence": 0.8500000000000001,
         "reason_codes": [
-          "primary_respond",
-          "low_risk_direct_path"
+          "primary_clarify",
+          "missing_required_information"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
-        "processing_plan": false,
-        "end_to_end": false,
+        "semantic_intent": true,
+        "processing_plan": true,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -1210,6 +1283,8 @@
           "verification_requested",
           "calculator_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify"
         ]
@@ -1244,6 +1319,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -1280,6 +1357,8 @@
           "exploration_requested",
           "comparison_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1311,6 +1390,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1342,6 +1423,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1373,6 +1456,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1404,6 +1489,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1435,6 +1522,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1466,6 +1555,8 @@
           "primary_respond",
           "low_risk_direct_path"
         ],
+        "decided_by": "fallback",
+        "intent_margin": 0.037658,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1498,6 +1589,8 @@
           "primary_build",
           "verification_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
           "verify",
           "build"
@@ -1532,6 +1625,8 @@
           "primary_summarize",
           "multiple_intents"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1563,6 +1658,8 @@
           "primary_explore",
           "exploration_requested"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1583,27 +1680,30 @@
         "core_mode": "vertical"
       },
       "actual": {
-        "intent": "respond",
+        "intent": "verify",
         "processing_class": "verified",
         "core_mode": "vertical",
         "operations": [
-          "respond",
+          "verify",
           "search"
         ],
-        "confidence": 0.79,
+        "confidence": 0.86,
         "reason_codes": [
-          "primary_respond",
+          "primary_verify",
           "current_information_required",
+          "verification_requested",
           "web_search_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
-          "respond"
+          "verify"
         ]
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -1618,27 +1718,30 @@
         "core_mode": "vertical"
       },
       "actual": {
-        "intent": "respond",
+        "intent": "verify",
         "processing_class": "verified",
         "core_mode": "vertical",
         "operations": [
-          "respond",
+          "verify",
           "search"
         ],
-        "confidence": 0.62,
+        "confidence": 0.86,
         "reason_codes": [
-          "primary_respond",
+          "primary_verify",
           "current_information_required",
+          "verification_requested",
           "web_search_required"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": [
-          "respond"
+          "verify"
         ]
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     },
@@ -1664,6 +1767,8 @@
           "primary_explain",
           "low_risk_direct_path"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
@@ -1684,23 +1789,26 @@
         "core_mode": "hybrid"
       },
       "actual": {
-        "intent": "summarize",
+        "intent": "build",
         "processing_class": "deep",
         "core_mode": "hybrid",
         "operations": [
+          "build",
           "summarize"
         ],
-        "confidence": 0.8400000000000001,
+        "confidence": 0.8500000000000001,
         "reason_codes": [
-          "primary_summarize",
+          "primary_build",
           "multiple_intents"
         ],
+        "decided_by": "markers",
+        "intent_margin": null,
         "vertical_execution_order": null
       },
       "checks": {
-        "semantic_intent": false,
+        "semantic_intent": true,
         "processing_plan": true,
-        "end_to_end": false,
+        "end_to_end": true,
         "critical_underprocessing": false
       }
     }

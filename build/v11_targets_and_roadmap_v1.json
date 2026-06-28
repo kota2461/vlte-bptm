@@ -1,0 +1,1333 @@
+{
+  "schema_version": "v11-targets-and-roadmap.v1",
+  "generated_at": "2026-06-28T07:52:02.349982+00:00",
+  "status": "step1_post_v10_value_diff_transfer_taxonomy_completed_step2_curriculum_next",
+  "sources": {
+    "sealed_v10_measurement": "build\\pattern_language_sealed_v10_measurement_report.json",
+    "v10_targets_and_roadmap": "build\\v10_targets_and_roadmap_v1.json",
+    "post_v10_diagnostic": "build\\v11_post_v10_measurement_diagnostic_v1.json",
+    "code_audit_triage": "build\\v11_code_audit_triage_v1.json",
+    "profile_literal_patch_audit": "build\\v11_profile_literal_patch_audit_v1.json",
+    "readiness_review": "build\\plm_measurement_readiness_review.json",
+    "fixture_registry": "tests\\fixtures\\pattern_language_fixture_registry.json"
+  },
+  "policy": {
+    "sealed_v10_consumed": true,
+    "sealed_v10_labels_used_for_tuning": false,
+    "sealed_v10_text_used_for_training": false,
+    "sealed_v10_values_used_for_taxonomy_only": true,
+    "post_v10_diagnostic_is_training_data": false,
+    "post_v10_diagnostic_is_replay_gate": false,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_v11_required_before_next_adjudication": true,
+    "bridge_only_isolated_replay_sufficient_for_v11": false,
+    "value_diff_reporting_required": true
+  },
+  "baseline": {
+    "fixture": "pattern_language_sealed_v10.json",
+    "case_count": 28,
+    "intent_accuracy": 0.785714,
+    "critical_signal_recall": 0.4,
+    "operation_exact_match": 0.642857,
+    "constraint_exact_match": 0.535714,
+    "risk_exact_match": 0.678571,
+    "sealed_error_count": 23,
+    "critical_signal_miss_count": 9,
+    "readiness_decision_after_measurement": "blocked",
+    "blocked_reasons": [
+      "sealed_fixture_not_available"
+    ]
+  },
+  "metric_regression_from_v9": {
+    "intent_accuracy": {
+      "v9": 0.892857,
+      "v10": 0.785714,
+      "delta_v10_minus_v9": -0.107143
+    },
+    "critical_signal_recall": {
+      "v9": 0.857143,
+      "v10": 0.4,
+      "delta_v10_minus_v9": -0.457143
+    },
+    "operation_exact_match": {
+      "v9": 0.821429,
+      "v10": 0.642857,
+      "delta_v10_minus_v9": -0.178572
+    },
+    "constraint_exact_match": {
+      "v9": 0.642857,
+      "v10": 0.535714,
+      "delta_v10_minus_v9": -0.107143
+    },
+    "risk_exact_match": {
+      "v9": 0.75,
+      "v10": 0.678571,
+      "delta_v10_minus_v9": -0.071429
+    }
+  },
+  "targets": {
+    "minimum": {
+      "intent_accuracy": 0.857143,
+      "critical_signal_recall": 0.733333,
+      "operation_exact_match": 0.75,
+      "constraint_exact_match": 0.714286,
+      "risk_exact_match": 0.785714,
+      "sealed_error_count_max": 14,
+      "critical_signal_miss_count_max": 4,
+      "clarify_recall_min": 0.75,
+      "multiple_intents_recall_min": 0.714286,
+      "bridge_transfer_template_overfit_allowed": false
+    },
+    "stretch": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.866667,
+      "operation_exact_match": 0.857143,
+      "constraint_exact_match": 0.857143,
+      "risk_exact_match": 0.857143,
+      "sealed_error_count_max": 8,
+      "critical_signal_miss_count_max": 2,
+      "clarify_recall_min": 1.0,
+      "multiple_intents_recall_min": 0.857143,
+      "bridge_transfer_template_overfit_allowed": false
+    },
+    "granularity": {
+      "case_metric_step": 0.035714,
+      "critical_signal_step": 0.066667,
+      "clarify_recall_step": 0.25,
+      "multiple_intents_recall_step": 0.142857
+    },
+    "rationale": "V11 minimum is a recovery target from v10 regression, not a same-cycle promotion target. Stretch aims to regain the pre-v10 envelope while keeping bridge transfer validation mandatory."
+  },
+  "taxonomy": {
+    "schema_version": "v11-value-diff-transfer-taxonomy.v1",
+    "failure_modes": {
+      "intent_correct_field_mismatch": {
+        "priority": 1,
+        "case_count": 17,
+        "field_counts": {
+          "constraints": 12,
+          "information_state": 6,
+          "operations": 4,
+          "risk": 7
+        },
+        "interpretation": "primary intent often survives, while constraints, risk, operations, and information_state values drift",
+        "repair_lane": "field_exactness_repair_lane"
+      },
+      "intent_mismatch": {
+        "priority": 1,
+        "case_count": 6,
+        "field_counts": {
+          "constraints": 1,
+          "information_state": 4,
+          "operations": 6,
+          "primary_intent": 6,
+          "risk": 2
+        },
+        "transitions": {
+          "clarify->explore": 1,
+          "clarify->respond": 1,
+          "clarify->verify": 1,
+          "explain->verify": 1,
+          "explore->respond": 1,
+          "respond->build": 1
+        },
+        "interpretation": "clarify boundary collapse plus respond/build and explain/verify spillover must be handled separately from field exactness",
+        "repair_lane": "intent_boundary_repair_lane"
+      },
+      "critical_signal_under_detection": {
+        "priority": 1,
+        "miss_counts": {
+          "contains_unverified_claims": 1,
+          "missing_required_information": 3,
+          "multiple_intents": 5
+        },
+        "value_diffs": {
+          "multiple_intents": {
+            "False -> True": 2,
+            "True -> False": 5
+          },
+          "missing_required_information": {
+            "True -> False": 3
+          },
+          "contains_unverified_claims": {
+            "False -> True": 2,
+            "True -> False": 1
+          }
+        },
+        "repair_lane": "critical_signal_repair_lane"
+      },
+      "bridge_non_transfer": {
+        "priority": 1,
+        "bridge_template_overfit_risk": true,
+        "language_shift": {
+          "bridge": {
+            "en": 72
+          },
+          "sealed_v10": {
+            "en": 14,
+            "ja": 14
+          }
+        },
+        "style_marker_delta_sealed_minus_bridge": {
+          "synthetic_bridge_prefix_rate": -1.0,
+          "terminal_operation_phrase_rate": -0.888889,
+          "main_issue_phrase_rate": -0.861111,
+          "boundary_word_rate": -0.25,
+          "ask_before_phrase_rate": -0.505953,
+          "japanese_script_rate": 0.5,
+          "average_char_length": -215.811
+        },
+        "repair_lane": "bridge_transfer_validation_lane"
+      }
+    },
+    "value_diff_hotspots": {
+      "constraint_must_missing": {
+        "['ask_first'] -> []": 1,
+        "['avoid_diagnosis', 'avoid_overclaim'] -> []": 1,
+        "['avoid_diagnosis'] -> []": 1,
+        "['avoid_overclaim'] -> []": 1,
+        "['cite_sources', 'avoid_overclaim'] -> []": 1,
+        "['general_information_only'] -> []": 1
+      },
+      "constraint_format_missing": {
+        "['bullets'] -> []": 2,
+        "['json'] -> []": 2,
+        "['table'] -> []": 1
+      },
+      "constraint_response_length_drift": {
+        "short -> unspecified": 3
+      },
+      "risk_level_drift": {
+        "low -> high": 1,
+        "low -> medium": 3,
+        "medium -> high": 1,
+        "medium -> low": 4
+      },
+      "risk_flag_drift": {
+        "['political'] -> []": 1,
+        "['security', 'unverified_claim'] -> []": 1,
+        "['training_contamination'] -> []": 1,
+        "['unverified_claim'] -> []": 1,
+        "[] -> ['current_information']": 2,
+        "[] -> ['medical']": 1,
+        "[] -> ['mental_health', 'dependency_risk', 'unverified_claim']": 1
+      },
+      "operation_drift": {
+        "['clarify', 'build'] -> ['clarify']": 1,
+        "['clarify', 'build'] -> ['explore', 'compare']": 1,
+        "['clarify', 'summarize'] -> ['respond']": 1,
+        "['clarify', 'verify'] -> ['verify']": 1,
+        "['explain'] -> ['explain', 'search']": 1,
+        "['explain'] -> ['verify', 'explain']": 1,
+        "['explore', 'compare'] -> ['explore']": 1,
+        "['explore'] -> ['respond']": 1,
+        "['respond'] -> ['build']": 1,
+        "['respond'] -> ['respond', 'search']": 1
+      },
+      "primary_intent_drift": {
+        "clarify -> explore": 1,
+        "clarify -> respond": 1,
+        "clarify -> verify": 1,
+        "explain -> verify": 1,
+        "explore -> respond": 1,
+        "respond -> build": 1
+      }
+    },
+    "field_exactness_subtypes": {
+      "constraint_omission_fast_path": {
+        "priority": 1,
+        "fields": [
+          "constraints.must",
+          "constraints.formats",
+          "constraints.response_length"
+        ],
+        "directionality": "expected_present_to_predicted_empty_or_unspecified_only",
+        "evidence": {
+          "constraints.must": {
+            "['ask_first'] -> []": 1,
+            "['avoid_diagnosis', 'avoid_overclaim'] -> []": 1,
+            "['avoid_diagnosis'] -> []": 1,
+            "['avoid_overclaim'] -> []": 1,
+            "['cite_sources', 'avoid_overclaim'] -> []": 1,
+            "['general_information_only'] -> []": 1
+          },
+          "constraints.formats": {
+            "['bullets'] -> []": 2,
+            "['json'] -> []": 2,
+            "['table'] -> []": 1
+          },
+          "constraints.response_length": {
+            "short -> unspecified": 3
+          }
+        },
+        "interpretation": "constraint values are omitted rather than confused, so trace/merge propagation should be inspected before adding more samples",
+        "first_action": "inspect constraint propagation and marker merge logic before expanding fixtures"
+      },
+      "risk_confusion_learning_path": {
+        "priority": 2,
+        "fields": [
+          "risk.level",
+          "risk.flags"
+        ],
+        "directionality": "bidirectional_or_false_positive_false_negative_mix",
+        "evidence": {
+          "risk.level": {
+            "low -> high": 1,
+            "low -> medium": 3,
+            "medium -> high": 1,
+            "medium -> low": 4
+          },
+          "risk.flags": {
+            "['political'] -> []": 1,
+            "['security', 'unverified_claim'] -> []": 1,
+            "['training_contamination'] -> []": 1,
+            "['unverified_claim'] -> []": 1,
+            "[] -> ['current_information']": 2,
+            "[] -> ['medical']": 1,
+            "[] -> ['mental_health', 'dependency_risk', 'unverified_claim']": 1
+          }
+        },
+        "interpretation": "risk values move in both directions, so boundary data and ladder calibration are likely needed",
+        "first_action": "separate no-risk contrast from medium/high escalation examples"
+      }
+    },
+    "diagnostic_hypotheses": {
+      "hook_keyword_overfire_without_context": {
+        "priority": 1,
+        "suspected_hooks": [
+          "ai_relationship_boundary_v1",
+          "medical_guard",
+          "legal_guard",
+          "current_information_guard"
+        ],
+        "evidence_patterns": [
+          "negated dependency framing should not become dependency-risk assessment",
+          "medical-term UI/design discussion should not become diagnosis/clinical advice",
+          "license-name definition should not become high legal/current advice",
+          "local column/folder/current wording should not become web-current search pressure"
+        ],
+        "interpretation": "guard hooks may fire on keyword presence before negation, metalinguistic role, or local-reference checks",
+        "first_action": "audit hook firing logic for negation scope, metacontext markers, definition intent, and local-current split",
+        "repair_lane": "hook_overfire_repair_lane"
+      },
+      "definition_request_build_overroute": {
+        "priority": 2,
+        "transition_count": 1,
+        "pattern": "one-sentence definition or meaning requests can be over-routed to build",
+        "interpretation": "respond/build boundary needs a narrow definition-request guard before broader build routing",
+        "first_action": "add definition-request contrast to intent boundary plan",
+        "repair_lane": "intent_boundary_repair_lane"
+      },
+      "literal_profile_patch_overfit": {
+        "priority": 1,
+        "confirmed": true,
+        "regex_literal_count": 274,
+        "fixture_like_regex_literal_count": 189,
+        "interpretation": "v6-v9 repair profiles were largely per-fixture literal regex patches, so isolated nonsealed exactness did not transfer to sealed v10 wording",
+        "first_action": "convert repair examples into abstract marker/context rules and require naturalized paraphrase transfer checks",
+        "repair_lane": "bridge_transfer_validation_lane"
+      }
+    },
+    "focus_areas": [
+      {
+        "id": "value_level_diff_instrumentation",
+        "priority": 1,
+        "source_focus": {
+          "id": "value_level_diff_instrumentation",
+          "priority": 1,
+          "finding": "field-level errors hide whether failures are value vocabulary drift or routing logic defects",
+          "evidence": {
+            "diagnosed_case_count": 23
+          },
+          "v11_action": "make value_diff mandatory in post-sealed taxonomy reports"
+        },
+        "v11_rule": "all post-measurement and replay reports must retain expected/predicted value diffs, not just field names"
+      },
+      {
+        "id": "clarify_boundary_collapse",
+        "priority": 1,
+        "source_focus": {
+          "id": "clarify_boundary_collapse",
+          "priority": 1,
+          "finding": "clarify recall collapsed and clarify cases dispersed across respond, verify, and explore",
+          "evidence": {
+            "clarify_recall": 0.25,
+            "intent_transitions": {
+              "clarify->explore": 1,
+              "clarify->respond": 1,
+              "clarify->verify": 1,
+              "explain->verify": 1,
+              "explore->respond": 1,
+              "respond->build": 1
+            }
+          },
+          "v11_action": "create independent clarify boundary diagnostic and nonsealed repair lane before fresh rotation"
+        },
+        "v11_rule": "clarify repair must be its own lane with recall target and transition analysis"
+      },
+      {
+        "id": "multiple_intent_under_detection",
+        "priority": 1,
+        "source_focus": {
+          "id": "multiple_intent_under_detection",
+          "priority": 1,
+          "finding": "multiple_intents is the largest critical-signal miss after v10",
+          "evidence": {
+            "critical_misses": {
+              "contains_unverified_claims": 1,
+              "missing_required_information": 3,
+              "multiple_intents": 5
+            },
+            "multiple_intents_recall": 0.285714,
+            "multiple_intents_support": 7
+          },
+          "v11_action": "treat multiple intent detection as its own target, not a generic information_state item"
+        },
+        "v11_rule": "multiple_intents gets an independent recall target and cannot be hidden inside generic information_state exactness"
+      },
+      {
+        "id": "bridge_non_transfer",
+        "priority": 1,
+        "source_focus": {
+          "id": "bridge_non_transfer",
+          "priority": 1,
+          "finding": "isolated bridge replay was exact, but sealed v10 regressed on all five metrics",
+          "evidence": {
+            "metric_regression": {
+              "intent_accuracy": {
+                "v9": 0.892857,
+                "v10": 0.785714,
+                "delta_v10_minus_v9": -0.107143
+              },
+              "critical_signal_recall": {
+                "v9": 0.857143,
+                "v10": 0.4,
+                "delta_v10_minus_v9": -0.457143
+              },
+              "operation_exact_match": {
+                "v9": 0.821429,
+                "v10": 0.642857,
+                "delta_v10_minus_v9": -0.178572
+              },
+              "constraint_exact_match": {
+                "v9": 0.642857,
+                "v10": 0.535714,
+                "delta_v10_minus_v9": -0.107143
+              },
+              "risk_exact_match": {
+                "v9": 0.75,
+                "v10": 0.678571,
+                "delta_v10_minus_v9": -0.071429
+              }
+            },
+            "distribution_gap": {
+              "style_marker_delta_sealed_minus_bridge": {
+                "synthetic_bridge_prefix_rate": -1.0,
+                "terminal_operation_phrase_rate": -0.888889,
+                "main_issue_phrase_rate": -0.861111,
+                "boundary_word_rate": -0.25,
+                "ask_before_phrase_rate": -0.505953,
+                "japanese_script_rate": 0.5,
+                "average_char_length": -215.811
+              },
+              "bridge_template_overfit_risk": true,
+              "language_shift": {
+                "bridge": {
+                  "en": 72
+                },
+                "sealed_v10": {
+                  "en": 14,
+                  "ja": 14
+                }
+              },
+              "critical_signal_support_shift": {
+                "bridge": {
+                  "contains_unverified_claims": 21,
+                  "missing_required_information": 39,
+                  "multiple_intents": 8
+                },
+                "sealed_v10": {
+                  "contains_unverified_claims": 3,
+                  "missing_required_information": 4,
+                  "multiple_intents": 7,
+                  "requires_current_information": 1
+                }
+              },
+              "constraint_must_shift": {
+                "bridge": {
+                  "ask_first": 39,
+                  "avoid_overclaim": 11,
+                  "defer_or_verify": 10,
+                  "supportive_tone": 4
+                },
+                "sealed_v10": {
+                  "ask_first": 2,
+                  "avoid_diagnosis": 2,
+                  "avoid_overclaim": 4,
+                  "cite_sources": 1,
+                  "general_information_only": 1,
+                  "preserve_neutrality": 1
+                }
+              }
+            }
+          },
+          "v11_action": "block another bridge-only cycle until template/style distribution gap is explicitly tested"
+        },
+        "v11_rule": "bridge-derived samples must pass naturalized paraphrase and mixed-language transfer checks before mainline adoption"
+      },
+      {
+        "id": "intent_correct_field_mismatch_lane",
+        "priority": 2,
+        "source_focus": {
+          "id": "intent_correct_field_mismatch_lane",
+          "priority": 2,
+          "finding": "cases with correct primary intent still miss constraints/risk/operations and need a separate exactness lane",
+          "evidence": {
+            "mode_counts": {
+              "intent_correct_field_mismatch": 17,
+              "intent_mismatch": 6
+            },
+            "mode_field_counts": {
+              "intent_correct_field_mismatch": {
+                "constraints": 12,
+                "information_state": 6,
+                "operations": 4,
+                "risk": 7
+              },
+              "intent_mismatch": {
+                "constraints": 1,
+                "information_state": 4,
+                "operations": 6,
+                "primary_intent": 6,
+                "risk": 2
+              }
+            }
+          },
+          "v11_action": "separate field-exactness repair from intent-boundary repair"
+        },
+        "v11_rule": "field exactness repair is separate from intent-boundary repair and can use different fixtures/gates"
+      }
+    ]
+  },
+  "repair_lanes": {
+    "schema_version": "v11-repair-lanes.v1",
+    "lanes": {
+      "intent_boundary_repair_lane": {
+        "priority": 1,
+        "primary_targets": [
+          "clarify_boundary_collapse",
+          "respond_vs_build",
+          "explain_vs_verify"
+        ],
+        "source_evidence": {
+          "clarify->explore": 1,
+          "clarify->respond": 1,
+          "clarify->verify": 1,
+          "explain->verify": 1,
+          "explore->respond": 1,
+          "respond->build": 1
+        },
+        "required_sample_shape": [
+          "near_miss_pair",
+          "paraphrase_cluster",
+          "negative_contrast"
+        ],
+        "gate_metric": "clarify_recall_min",
+        "named_subtargets": {
+          "definition_request_build_overroute": {
+            "transition_count": 1,
+            "first_action": "add narrow definition-request contrast before broader build expansion"
+          }
+        }
+      },
+      "critical_signal_repair_lane": {
+        "priority": 1,
+        "primary_targets": [
+          "multiple_intents",
+          "missing_required_information",
+          "contains_unverified_claims"
+        ],
+        "source_evidence": {
+          "contains_unverified_claims": 1,
+          "missing_required_information": 3,
+          "multiple_intents": 5
+        },
+        "required_sample_shape": [
+          "multi_step_request",
+          "missing_context_request",
+          "single_intent_contrast"
+        ],
+        "gate_metric": "critical_signal_recall_and_multiple_intents_recall"
+      },
+      "field_exactness_repair_lane": {
+        "priority": 1,
+        "primary_targets": [
+          "constraints.must",
+          "constraints.formats",
+          "risk.level",
+          "risk.flags",
+          "operations"
+        ],
+        "source_evidence": {
+          "constraints.formats": {
+            "['bullets'] -> []": 2,
+            "['json'] -> []": 2,
+            "['table'] -> []": 1
+          },
+          "constraints.must": {
+            "['ask_first'] -> []": 1,
+            "['avoid_diagnosis', 'avoid_overclaim'] -> []": 1,
+            "['avoid_diagnosis'] -> []": 1,
+            "['avoid_overclaim'] -> []": 1,
+            "['cite_sources', 'avoid_overclaim'] -> []": 1,
+            "['general_information_only'] -> []": 1
+          },
+          "constraints.must_not": {
+            "['no_web_search'] -> []": 1
+          },
+          "constraints.response_length": {
+            "short -> unspecified": 3
+          },
+          "information_state.contains_unverified_claims": {
+            "False -> True": 2,
+            "True -> False": 1
+          },
+          "information_state.missing_required_information": {
+            "True -> False": 3
+          },
+          "information_state.multiple_intents": {
+            "False -> True": 2,
+            "True -> False": 5
+          },
+          "information_state.requires_current_information": {
+            "False -> True": 2
+          },
+          "operations": {
+            "['clarify', 'build'] -> ['clarify']": 1,
+            "['clarify', 'build'] -> ['explore', 'compare']": 1,
+            "['clarify', 'summarize'] -> ['respond']": 1,
+            "['clarify', 'verify'] -> ['verify']": 1,
+            "['explain'] -> ['explain', 'search']": 1,
+            "['explain'] -> ['verify', 'explain']": 1,
+            "['explore', 'compare'] -> ['explore']": 1,
+            "['explore'] -> ['respond']": 1,
+            "['respond'] -> ['build']": 1,
+            "['respond'] -> ['respond', 'search']": 1
+          },
+          "primary_intent": {
+            "clarify -> explore": 1,
+            "clarify -> respond": 1,
+            "clarify -> verify": 1,
+            "explain -> verify": 1,
+            "explore -> respond": 1,
+            "respond -> build": 1
+          },
+          "risk.flags": {
+            "['political'] -> []": 1,
+            "['security', 'unverified_claim'] -> []": 1,
+            "['training_contamination'] -> []": 1,
+            "['unverified_claim'] -> []": 1,
+            "[] -> ['current_information']": 2,
+            "[] -> ['medical']": 1,
+            "[] -> ['mental_health', 'dependency_risk', 'unverified_claim']": 1
+          },
+          "risk.level": {
+            "low -> high": 1,
+            "low -> medium": 3,
+            "medium -> high": 1,
+            "medium -> low": 4
+          }
+        },
+        "required_sample_shape": [
+          "value_diff_pair",
+          "format_constraint_pair",
+          "risk_ladder_pair"
+        ],
+        "gate_metric": "constraint_operation_risk_exactness",
+        "sub_lanes": {
+          "constraint_omission_fast_path": {
+            "priority": 1,
+            "fields": [
+              "constraints.must",
+              "constraints.formats",
+              "constraints.response_length"
+            ],
+            "source_evidence": {
+              "constraints.must": {
+                "['ask_first'] -> []": 1,
+                "['avoid_diagnosis', 'avoid_overclaim'] -> []": 1,
+                "['avoid_diagnosis'] -> []": 1,
+                "['avoid_overclaim'] -> []": 1,
+                "['cite_sources', 'avoid_overclaim'] -> []": 1,
+                "['general_information_only'] -> []": 1
+              },
+              "constraints.formats": {
+                "['bullets'] -> []": 2,
+                "['json'] -> []": 2,
+                "['table'] -> []": 1
+              },
+              "constraints.response_length": {
+                "short -> unspecified": 3
+              }
+            },
+            "first_action": "inspect constraint propagation and merge logic before adding more fixture cases"
+          },
+          "risk_confusion_learning_path": {
+            "priority": 2,
+            "fields": [
+              "risk.level",
+              "risk.flags"
+            ],
+            "source_evidence": {
+              "risk.level": {
+                "low -> high": 1,
+                "low -> medium": 3,
+                "medium -> high": 1,
+                "medium -> low": 4
+              },
+              "risk.flags": {
+                "['political'] -> []": 1,
+                "['security', 'unverified_claim'] -> []": 1,
+                "['training_contamination'] -> []": 1,
+                "['unverified_claim'] -> []": 1,
+                "[] -> ['current_information']": 2,
+                "[] -> ['medical']": 1,
+                "[] -> ['mental_health', 'dependency_risk', 'unverified_claim']": 1
+              }
+            },
+            "first_action": "calibrate risk ladder with no-risk contrast and escalation pairs"
+          }
+        }
+      },
+      "hook_overfire_repair_lane": {
+        "priority": 1,
+        "primary_targets": [
+          "negation_scope",
+          "metacontext_mentions",
+          "definition_vs_advice",
+          "local_current_vs_web_current"
+        ],
+        "source_evidence": {
+          "suspected_hooks": [
+            "ai_relationship_boundary_v1",
+            "medical_guard",
+            "legal_guard",
+            "current_information_guard"
+          ],
+          "hypothesis": "keyword-only guard firing before negation/metacontext/local-reference checks"
+        },
+        "required_sample_shape": [
+          "hook_trace_case",
+          "negative_scope_pair",
+          "metacontext_contrast"
+        ],
+        "gate_metric": "hook_false_positive_zero_on_known_patterns",
+        "first_action": "audit hook firing logic before generating more repair fixtures"
+      },
+      "bridge_transfer_validation_lane": {
+        "priority": 1,
+        "primary_targets": [
+          "naturalized_text",
+          "mixed_ja_en",
+          "non_template_bridge",
+          "shorter_userlike_inputs"
+        ],
+        "source_evidence": {
+          "bridge_distribution_gap": {
+            "style_marker_delta_sealed_minus_bridge": {
+              "synthetic_bridge_prefix_rate": -1.0,
+              "terminal_operation_phrase_rate": -0.888889,
+              "main_issue_phrase_rate": -0.861111,
+              "boundary_word_rate": -0.25,
+              "ask_before_phrase_rate": -0.505953,
+              "japanese_script_rate": 0.5,
+              "average_char_length": -215.811
+            },
+            "bridge_template_overfit_risk": true,
+            "language_shift": {
+              "bridge": {
+                "en": 72
+              },
+              "sealed_v10": {
+                "en": 14,
+                "ja": 14
+              }
+            },
+            "critical_signal_support_shift": {
+              "bridge": {
+                "contains_unverified_claims": 21,
+                "missing_required_information": 39,
+                "multiple_intents": 8
+              },
+              "sealed_v10": {
+                "contains_unverified_claims": 3,
+                "missing_required_information": 4,
+                "multiple_intents": 7,
+                "requires_current_information": 1
+              }
+            },
+            "constraint_must_shift": {
+              "bridge": {
+                "ask_first": 39,
+                "avoid_overclaim": 11,
+                "defer_or_verify": 10,
+                "supportive_tone": 4
+              },
+              "sealed_v10": {
+                "ask_first": 2,
+                "avoid_diagnosis": 2,
+                "avoid_overclaim": 4,
+                "cite_sources": 1,
+                "general_information_only": 1,
+                "preserve_neutrality": 1
+              }
+            }
+          },
+          "literal_profile_patch_overfit": {
+            "id": "literal_profile_patch_overfit",
+            "priority": "P0",
+            "confirmed": true,
+            "summary": "v6-v9 profile layers are dominated by specific literal-regex repair patches rather than general routing logic",
+            "root_cause_for_v10_transfer_gap": true,
+            "total_regex_literal_count_in_profile_inspection": 274,
+            "total_fixture_like_regex_literal_count": 189,
+            "evidence": {
+              "v9_primary_review_docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+              "v9_extension_docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+              "profiles": {
+                "_v7_generalization_profile": {
+                  "firstlineno": 988,
+                  "instruction_count": 262,
+                  "docstring": "Non-sealed V7 repair signals generalized from draft replay taxonomy.",
+                  "string_constant_count": 237,
+                  "regex_literal_count": 149,
+                  "fixture_like_regex_literal_count": 83,
+                  "uses_regex_evidence_helper": true,
+                  "uses_direct_re_search": false,
+                  "uses_v9_override": false,
+                  "example_regex_literals": [
+                    "\\b(?:required columns?|usage volume|jurisdiction|country|service tier|audience|cluster|tenant|environment|data|scope)\\b[^.?!]*(?:missing|not provided|not stated|not specified|unknown)",
+                    "\\bask what data is missing\\b",
+                    "\\bthe country is not specified\\b",
+                    "\\bthe jurisdiction is missing\\b",
+                    "\\bthe service tier is not stated\\b",
+                    "\\brequired columns are missing\\b",
+                    "(?:対象|対象DB|DB|対象サービス|サービス|対象ユーザー層|ログ|状況説明)[^。]*?(?:未定|未指定|分かりません|ありません)",
+                    "回答前に[^。]*確認"
+                  ]
+                },
+                "_v8_recovery_profile": {
+                  "firstlineno": 1330,
+                  "instruction_count": 181,
+                  "docstring": "Non-sealed V8 recovery signals from priority-review replay gaps.",
+                  "string_constant_count": 117,
+                  "regex_literal_count": 67,
+                  "fixture_like_regex_literal_count": 48,
+                  "uses_regex_evidence_helper": true,
+                  "uses_direct_re_search": false,
+                  "uses_v9_override": false,
+                  "example_regex_literals": [
+                    "\\b(?:have not|haven't) (?:pasted|attached|described)\\b",
+                    "\\b(?:not pasted|not attached|not described|forgot to attach)\\b",
+                    "\\bno (?:log|file|source data|paragraph|text) is attached\\b",
+                    "\\bsource data is missing\\b",
+                    "\\b(?:text|paragraph|log|source data|options?|option a|option b)\\b[^.?!]*(?:missing|not provided|not described|not attached|not pasted)",
+                    "\\btoday's local conversation log\\b",
+                    "\\blocal conversation log\\b",
+                    "\\bdo not use external news\\b"
+                  ]
+                },
+                "_v9_primary_review_profile": {
+                  "firstlineno": 1570,
+                  "instruction_count": 472,
+                  "docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+                  "string_constant_count": 121,
+                  "regex_literal_count": 34,
+                  "fixture_like_regex_literal_count": 34,
+                  "uses_regex_evidence_helper": false,
+                  "uses_direct_re_search": true,
+                  "uses_v9_override": true,
+                  "example_regex_literals": [
+                    "\\bcurrent AI regulation status\\b",
+                    "\\blatest stable version of FastAPI\\b",
+                    "\\bfield named recent_file_count\\b",
+                    "\\blatest public benchmark scores\\b",
+                    "\\blocally installed Python version\\b",
+                    "\\bCheck the replay report, then promote\\b",
+                    "\\bcurrent release date\\b[^.?!]*\\bcitation\\b",
+                    "\\bReview this route rule, then patch\\b"
+                  ]
+                },
+                "_v9_constraint_operation_extension_profile": {
+                  "firstlineno": 1766,
+                  "instruction_count": 303,
+                  "docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+                  "string_constant_count": 89,
+                  "regex_literal_count": 24,
+                  "fixture_like_regex_literal_count": 24,
+                  "uses_regex_evidence_helper": false,
+                  "uses_direct_re_search": true,
+                  "uses_v9_override": true,
+                  "example_regex_literals": [
+                    "\\bBriefly list three deployment risks as bullet points, no table\\b",
+                    "\\bReturn only JSON with keys action and reason\\b",
+                    "\\bBefore editing the README, ask which section I want changed\\b",
+                    "\\bdo not store this personal note as memory\\b",
+                    "\\bVerify this vendor claim with sources and avoid overclaiming\\b",
+                    "\\bExplain Apache 2\\.0 as general information only\\b",
+                    "\\bDesign a medical AI screen layout without diagnosis or treatment advice\\b",
+                    "\\bfriendly but precise tone and avoid overstating the evidence\\b"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "required_sample_shape": [
+          "template_vs_naturalized_pair",
+          "ja_en_distribution_pair",
+          "heldout_style_probe",
+          "same_semantics_different_surface_form"
+        ],
+        "gate_metric": "transfer_gap_not_template_only"
+      }
+    },
+    "forbidden_shortcuts": [
+      "do_not_tune_from_sealed_v10_text_or_labels",
+      "do_not_repeat_bridge_only_isolated_1_0_as_mainline_gate",
+      "do_not_merge_intent_boundary_and_field_exactness_repairs",
+      "do_not_use_generated_answer_only_samples_as_direct_semantic_labels",
+      "do_not_expand_fixtures_before_constraint_omission_and_hook_overfire_audit",
+      "do_not_add_one_regex_per_failed_fixture_sentence",
+      "do_not_accept_isolated_fixture_1_0_without_paraphrase_transfer"
+    ]
+  },
+  "profile_literal_patch_audit": {
+    "schema_version": "v11-profile-literal-patch-audit.v1",
+    "generated_at": "2026-06-28T07:52:01.925579+00:00",
+    "status": "literal_profile_patch_overfit_confirmed",
+    "policy": {
+      "diagnostic_only": true,
+      "mutates_router": false,
+      "writes_training_data": false,
+      "opens_active_sealed_fixture": false,
+      "uses_sealed_labels_for_tuning": false
+    },
+    "sources": {
+      "pyc_inspection": "build/baseline_pyc_recovery_inspection_v1.json",
+      "pyc_disassembly": "build/baseline_pyc_recovery_disassembly_v1.txt",
+      "external_decompile_review": "user-provided decompile scan summary"
+    },
+    "finding": {
+      "id": "literal_profile_patch_overfit",
+      "priority": "P0",
+      "confirmed": true,
+      "summary": "v6-v9 profile layers are dominated by specific literal-regex repair patches rather than general routing logic",
+      "root_cause_for_v10_transfer_gap": true,
+      "total_regex_literal_count_in_profile_inspection": 274,
+      "total_fixture_like_regex_literal_count": 189,
+      "evidence": {
+        "v9_primary_review_docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+        "v9_extension_docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+        "profiles": {
+          "_v7_generalization_profile": {
+            "firstlineno": 988,
+            "instruction_count": 262,
+            "docstring": "Non-sealed V7 repair signals generalized from draft replay taxonomy.",
+            "string_constant_count": 237,
+            "regex_literal_count": 149,
+            "fixture_like_regex_literal_count": 83,
+            "uses_regex_evidence_helper": true,
+            "uses_direct_re_search": false,
+            "uses_v9_override": false,
+            "example_regex_literals": [
+              "\\b(?:required columns?|usage volume|jurisdiction|country|service tier|audience|cluster|tenant|environment|data|scope)\\b[^.?!]*(?:missing|not provided|not stated|not specified|unknown)",
+              "\\bask what data is missing\\b",
+              "\\bthe country is not specified\\b",
+              "\\bthe jurisdiction is missing\\b",
+              "\\bthe service tier is not stated\\b",
+              "\\brequired columns are missing\\b",
+              "(?:対象|対象DB|DB|対象サービス|サービス|対象ユーザー層|ログ|状況説明)[^。]*?(?:未定|未指定|分かりません|ありません)",
+              "回答前に[^。]*確認"
+            ]
+          },
+          "_v8_recovery_profile": {
+            "firstlineno": 1330,
+            "instruction_count": 181,
+            "docstring": "Non-sealed V8 recovery signals from priority-review replay gaps.",
+            "string_constant_count": 117,
+            "regex_literal_count": 67,
+            "fixture_like_regex_literal_count": 48,
+            "uses_regex_evidence_helper": true,
+            "uses_direct_re_search": false,
+            "uses_v9_override": false,
+            "example_regex_literals": [
+              "\\b(?:have not|haven't) (?:pasted|attached|described)\\b",
+              "\\b(?:not pasted|not attached|not described|forgot to attach)\\b",
+              "\\bno (?:log|file|source data|paragraph|text) is attached\\b",
+              "\\bsource data is missing\\b",
+              "\\b(?:text|paragraph|log|source data|options?|option a|option b)\\b[^.?!]*(?:missing|not provided|not described|not attached|not pasted)",
+              "\\btoday's local conversation log\\b",
+              "\\blocal conversation log\\b",
+              "\\bdo not use external news\\b"
+            ]
+          },
+          "_v9_primary_review_profile": {
+            "firstlineno": 1570,
+            "instruction_count": 472,
+            "docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+            "string_constant_count": 121,
+            "regex_literal_count": 34,
+            "fixture_like_regex_literal_count": 34,
+            "uses_regex_evidence_helper": false,
+            "uses_direct_re_search": true,
+            "uses_v9_override": true,
+            "example_regex_literals": [
+              "\\bcurrent AI regulation status\\b",
+              "\\blatest stable version of FastAPI\\b",
+              "\\bfield named recent_file_count\\b",
+              "\\blatest public benchmark scores\\b",
+              "\\blocally installed Python version\\b",
+              "\\bCheck the replay report, then promote\\b",
+              "\\bcurrent release date\\b[^.?!]*\\bcitation\\b",
+              "\\bReview this route rule, then patch\\b"
+            ]
+          },
+          "_v9_constraint_operation_extension_profile": {
+            "firstlineno": 1766,
+            "instruction_count": 303,
+            "docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+            "string_constant_count": 89,
+            "regex_literal_count": 24,
+            "fixture_like_regex_literal_count": 24,
+            "uses_regex_evidence_helper": false,
+            "uses_direct_re_search": true,
+            "uses_v9_override": true,
+            "example_regex_literals": [
+              "\\bBriefly list three deployment risks as bullet points, no table\\b",
+              "\\bReturn only JSON with keys action and reason\\b",
+              "\\bBefore editing the README, ask which section I want changed\\b",
+              "\\bdo not store this personal note as memory\\b",
+              "\\bVerify this vendor claim with sources and avoid overclaiming\\b",
+              "\\bExplain Apache 2\\.0 as general information only\\b",
+              "\\bDesign a medical AI screen layout without diagnosis or treatment advice\\b",
+              "\\bfriendly but precise tone and avoid overstating the evidence\\b"
+            ]
+          }
+        }
+      }
+    },
+    "decompilation": {
+      "status": "partial_only",
+      "automatic_decompilation_failed_functions": 3,
+      "automatic_decompilation_attempted_functions": 6,
+      "known_failure_reason": "dictionary/set comprehension opcodes were not handled by the external decompiler scan",
+      "policy": "do not treat partial decompile as authoritative source; use source recovery plus regression oracle"
+    },
+    "v11_implications": {
+      "step2_curriculum_rule": "repair samples must be converted into abstract marker/context rules plus paraphrase transfer checks, not copied as per-fixture literal regexes",
+      "required_gate_additions": [
+        "naturalized_paraphrase_holdout",
+        "same_semantics_different_surface_form",
+        "literal_regex_dependency_scan",
+        "nonsealed_replay_plus_transfer_gap_report"
+      ],
+      "forbidden_shortcuts": [
+        "do_not_add_one_regex_per_failed_fixture_sentence",
+        "do_not_accept_isolated_fixture_1_0_without_paraphrase_transfer",
+        "do_not_treat_partial_decompile_as_complete_source_recovery",
+        "do_not_hide_literal_fixture_patches_inside_profile_helpers"
+      ]
+    },
+    "next_action": "fold_into_v11_step2_repair_curriculum_plan"
+  },
+  "pre_rotation_gates": {
+    "value_diff_diagnostic_required": true,
+    "bridge_transfer_validation_required": true,
+    "clarify_recall_gate_required": true,
+    "multiple_intents_recall_gate_required": true,
+    "constraint_omission_code_trace_required": true,
+    "hook_overfire_audit_required": true,
+    "literal_profile_dependency_scan_required": true,
+    "baseline_source_recovery_required": false,
+    "nonsealed_replay_gate_error_count_max": 0,
+    "full_regression_required": "python -B -m pytest"
+  },
+  "code_audit_triage": {
+    "schema_version": "v11-code-audit-triage.v1",
+    "generated_at": "2026-06-28T07:52:01.169960+00:00",
+    "status": "step1b_baseline_source_recovery_completed",
+    "source_report": {
+      "attachment_available": true,
+      "attachment_path": "C:\\Users\\kota\\.codex\\attachments\\03e2a292-d2a8-4880-8d71-5ecf0739127e\\pasted-text.txt"
+    },
+    "policy": {
+      "diagnostic_only": true,
+      "mutates_router": false,
+      "writes_training_data": false,
+      "opens_active_sealed_fixture": false,
+      "uses_sealed_labels_for_tuning": false
+    },
+    "findings": {
+      "baseline_pyc_loader": {
+        "priority": "P0",
+        "confirmed": false,
+        "file": "semantic_routing/baseline.py",
+        "chosen_pyc": {
+          "path": "semantic_routing/__pycache__/baseline.cpython-310.pyc.2207508733360",
+          "sha256": "780881fe474b2eaef0887d7234af6977b5953353fcccf8164fdc87eebce7b01b",
+          "size": 58260,
+          "mtime": 1782539421.91354
+        },
+        "risk": "router import depends on ignored __pycache__ bytecode and unreadable v7-v9 logic",
+        "blocks_step2": false,
+        "recovery_status": "completed",
+        "required_action": "keep source-recovered baseline under regression tests; do not restore pyc loader"
+      },
+      "literal_profile_patch_overfit": {
+        "priority": "P0",
+        "confirmed": true,
+        "file": "build/v11_profile_literal_patch_audit_v1.json",
+        "risk": "v6-v9 profile layers used fixture-specific literal regex patches; this explains bridge/profile non-transfer when sealed wording changes",
+        "blocks_step2": false,
+        "required_action": "fold literal-profile overfit into Step 2 curriculum; replace per-sentence regex patches with abstract rules plus paraphrase transfer gates",
+        "evidence": {
+          "id": "literal_profile_patch_overfit",
+          "priority": "P0",
+          "confirmed": true,
+          "summary": "v6-v9 profile layers are dominated by specific literal-regex repair patches rather than general routing logic",
+          "root_cause_for_v10_transfer_gap": true,
+          "total_regex_literal_count_in_profile_inspection": 274,
+          "total_fixture_like_regex_literal_count": 189,
+          "evidence": {
+            "v9_primary_review_docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+            "v9_extension_docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+            "profiles": {
+              "_v7_generalization_profile": {
+                "firstlineno": 988,
+                "instruction_count": 262,
+                "docstring": "Non-sealed V7 repair signals generalized from draft replay taxonomy.",
+                "string_constant_count": 237,
+                "regex_literal_count": 149,
+                "fixture_like_regex_literal_count": 83,
+                "uses_regex_evidence_helper": true,
+                "uses_direct_re_search": false,
+                "uses_v9_override": false,
+                "example_regex_literals": [
+                  "\\b(?:required columns?|usage volume|jurisdiction|country|service tier|audience|cluster|tenant|environment|data|scope)\\b[^.?!]*(?:missing|not provided|not stated|not specified|unknown)",
+                  "\\bask what data is missing\\b",
+                  "\\bthe country is not specified\\b",
+                  "\\bthe jurisdiction is missing\\b",
+                  "\\bthe service tier is not stated\\b",
+                  "\\brequired columns are missing\\b",
+                  "(?:対象|対象DB|DB|対象サービス|サービス|対象ユーザー層|ログ|状況説明)[^。]*?(?:未定|未指定|分かりません|ありません)",
+                  "回答前に[^。]*確認"
+                ]
+              },
+              "_v8_recovery_profile": {
+                "firstlineno": 1330,
+                "instruction_count": 181,
+                "docstring": "Non-sealed V8 recovery signals from priority-review replay gaps.",
+                "string_constant_count": 117,
+                "regex_literal_count": 67,
+                "fixture_like_regex_literal_count": 48,
+                "uses_regex_evidence_helper": true,
+                "uses_direct_re_search": false,
+                "uses_v9_override": false,
+                "example_regex_literals": [
+                  "\\b(?:have not|haven't) (?:pasted|attached|described)\\b",
+                  "\\b(?:not pasted|not attached|not described|forgot to attach)\\b",
+                  "\\bno (?:log|file|source data|paragraph|text) is attached\\b",
+                  "\\bsource data is missing\\b",
+                  "\\b(?:text|paragraph|log|source data|options?|option a|option b)\\b[^.?!]*(?:missing|not provided|not described|not attached|not pasted)",
+                  "\\btoday's local conversation log\\b",
+                  "\\blocal conversation log\\b",
+                  "\\bdo not use external news\\b"
+                ]
+              },
+              "_v9_primary_review_profile": {
+                "firstlineno": 1570,
+                "instruction_count": 472,
+                "docstring": "User-approved V9 primary-review 34-row non-sealed repair signals.",
+                "string_constant_count": 121,
+                "regex_literal_count": 34,
+                "fixture_like_regex_literal_count": 34,
+                "uses_regex_evidence_helper": false,
+                "uses_direct_re_search": true,
+                "uses_v9_override": true,
+                "example_regex_literals": [
+                  "\\bcurrent AI regulation status\\b",
+                  "\\blatest stable version of FastAPI\\b",
+                  "\\bfield named recent_file_count\\b",
+                  "\\blatest public benchmark scores\\b",
+                  "\\blocally installed Python version\\b",
+                  "\\bCheck the replay report, then promote\\b",
+                  "\\bcurrent release date\\b[^.?!]*\\bcitation\\b",
+                  "\\bReview this route rule, then patch\\b"
+                ]
+              },
+              "_v9_constraint_operation_extension_profile": {
+                "firstlineno": 1766,
+                "instruction_count": 303,
+                "docstring": "User-approved V9 extension focused on constraint/operation exactness.",
+                "string_constant_count": 89,
+                "regex_literal_count": 24,
+                "fixture_like_regex_literal_count": 24,
+                "uses_regex_evidence_helper": false,
+                "uses_direct_re_search": true,
+                "uses_v9_override": true,
+                "example_regex_literals": [
+                  "\\bBriefly list three deployment risks as bullet points, no table\\b",
+                  "\\bReturn only JSON with keys action and reason\\b",
+                  "\\bBefore editing the README, ask which section I want changed\\b",
+                  "\\bdo not store this personal note as memory\\b",
+                  "\\bVerify this vendor claim with sources and avoid overclaiming\\b",
+                  "\\bExplain Apache 2\\.0 as general information only\\b",
+                  "\\bDesign a medical AI screen layout without diagnosis or treatment advice\\b",
+                  "\\bfriendly but precise tone and avoid overstating the evidence\\b"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "hook_keyword_overfire_without_context": {
+        "priority": "P0",
+        "confirmed": true,
+        "file": "semantic_routing/knowledge_index.py",
+        "risk": "retrieval hooks use substring matching without negation, metacontext, definition-intent, or local-current checks",
+        "blocks_step2": false,
+        "required_action": "add hook context guard and nonsealed false-positive fixture before relying on hook-derived risk/current signals"
+      },
+      "constraint_omission_fast_path": {
+        "priority": "P1",
+        "status": "trace_ready_after_source_recovery",
+        "blocked_by": null,
+        "risk": "constraint omissions cannot be fully classified until marker firing and constraint merge paths are traced in source",
+        "required_action": "after source recovery, compare marker firing versus constraint merge/clearing for omission cases"
+      },
+      "fixture_coverage_gap": {
+        "priority": "P2",
+        "status": "classification_required_before_claiming_full_scan_coverage",
+        "minimum_relevant_unscanned_cases": 132,
+        "case_sets": [
+          {
+            "path": "tests/fixtures/v7_router_repair_fixture_v1.json",
+            "case_count": 72
+          },
+          {
+            "path": "tests/fixtures/v5_critical_operations_fixture_v1.json",
+            "case_count": 48
+          },
+          {
+            "path": "tests/fixtures/v6_router_debate_candidate_fixture_v1.json",
+            "case_count": 12
+          }
+        ],
+        "required_action": "schema-bridge PLM-adjacent fixtures or extend block scanner loaders"
+      }
+    },
+    "step2_blockers": [],
+    "roadmap_override": {
+      "previous_next_action": "roadmap_v11_step1b_recover_baseline_source",
+      "next_action": "roadmap_v11_step2_create_repair_curriculum_plan",
+      "advance_to": "v11_repair_curriculum_plan",
+      "blocks_repair_curriculum_plan": false
+    },
+    "recommended_actions": [
+      {
+        "id": "v11_p0_baseline_source_recovery",
+        "priority": "P0",
+        "action": "recover readable semantic_routing/baseline.py source from pyc/archive/temp patches or explicitly replace the runtime with auditable source",
+        "done_when": "baseline.py no longer imports behavior through marshal/exec from __pycache__ and full pytest passes"
+      },
+      {
+        "id": "v11_p0_literal_profile_generalization_guard",
+        "priority": "P0",
+        "action": "ban one-regex-per-failed-fixture repairs and require paraphrase/transfer validation for profile-derived fixes",
+        "done_when": "V11 curriculum records literal-profile overfit and gates new repairs with naturalized paraphrase holdouts"
+      },
+      {
+        "id": "v11_p0_hook_context_guard",
+        "priority": "P0",
+        "action": "add negation/metacontext/definition/local-current guard around knowledge-index hook matching",
+        "done_when": "nonsealed hook-overfire false-positive fixture passes with zero overfire"
+      },
+      {
+        "id": "v11_p1_constraint_omission_trace",
+        "priority": "P1",
+        "action": "trace constraint marker firing and merge/clearing after baseline source recovery",
+        "done_when": "constraint omission is classified as marker coverage gap, merge bug, or suppression bug"
+      },
+      {
+        "id": "v11_p2_fixture_schema_bridge",
+        "priority": "P2",
+        "action": "extend sample block scan to PLM-adjacent v5/v6/v7 fixture schema families",
+        "done_when": "block scan covers at least the additional 132 router-relevant cases"
+      }
+    ]
+  },
+  "pre_step2_blockers": [],
+  "roadmap": [
+    {
+      "step": 1,
+      "name": "post_v10_value_diff_transfer_taxonomy",
+      "output": "build\\v11_targets_and_roadmap_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 2,
+      "name": "v11_repair_curriculum_plan",
+      "output": "build\\v11_repair_curriculum_plan_v1.json",
+      "status": "next"
+    },
+    {
+      "step": 3,
+      "name": "v11_value_diff_repair_fixture_and_candidate_replay",
+      "output": "tests\\fixtures\\v11_value_diff_repair_fixture_v1.json",
+      "status": "pending"
+    },
+    {
+      "step": 4,
+      "name": "v11_bridge_transfer_validation_set",
+      "output": "tests\\fixtures\\v11_bridge_transfer_validation_fixture_v1.json",
+      "status": "pending"
+    },
+    {
+      "step": 5,
+      "name": "v11_router_generalization_changes",
+      "output": "build\\v11_router_generalization_report_v1.json",
+      "status": "pending"
+    },
+    {
+      "step": 6,
+      "name": "v11_nonsealed_replay_gate",
+      "output": "build\\v11_nonsealed_replay_gate_report_v1.json",
+      "status": "pending"
+    },
+    {
+      "step": 7,
+      "name": "sealed_v11_rotation_review",
+      "output": "build\\v11_sealed_rotation_review_v1.json",
+      "status": "pending"
+    },
+    {
+      "step": 8,
+      "name": "sealed_v11_rotation",
+      "output": "tests\\fixtures\\pattern_language_sealed_v11.json",
+      "status": "pending"
+    },
+    {
+      "step": 9,
+      "name": "sealed_v11_one_time_measurement",
+      "output": "build\\pattern_language_sealed_v11_measurement_report.json",
+      "status": "pending"
+    }
+  ],
+  "next_action": "roadmap_v11_step2_create_repair_curriculum_plan",
+  "roadmap_decision": {
+    "can_advance": true,
+    "advance_to": "v11_repair_curriculum_plan",
+    "blocked_reasons": []
+  }
+}

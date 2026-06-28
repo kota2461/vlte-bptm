@@ -1,0 +1,1357 @@
+{
+  "schema_version": "intent-pruning-candidates-post-quarantine.v1",
+  "generated_at": "2026-06-28T05:28:58.382612+00:00",
+  "policy": {
+    "diagnostic_only": true,
+    "sealed_fixtures_used": false,
+    "writes_training_corpus": false,
+    "writes_quarantine_overlay": false,
+    "recommended_workflow": "human review -> quarantine/rewrite -> non-sealed replay -> rebuild/gate"
+  },
+  "inputs": {
+    "corpus": "data\\intent_training_corpus_v1.json",
+    "active_quarantine": "data\\intent_training_corpus_quarantine_v1.json",
+    "suspect_review": "build\\intent_corpus_suspect_review_v1.json"
+  },
+  "active_quarantine": {
+    "entry_count": 9,
+    "indices": [
+      90,
+      462,
+      473,
+      528,
+      551,
+      627,
+      659,
+      687,
+      717
+    ]
+  },
+  "active_baseline": {
+    "filtered_examples": 730,
+    "filtered_by_intent": {
+      "build": 213,
+      "clarify": 64,
+      "explain": 79,
+      "explore": 88,
+      "respond": 168,
+      "summarize": 32,
+      "verify": 86
+    },
+    "gate": {
+      "foundation_accuracy": 1.0,
+      "foundation_passed": true,
+      "hybrid_accuracy": 1.0,
+      "hybrid_passed": true,
+      "passed": true
+    },
+    "kfold": {
+      "kfold_accuracy": 0.6712328767123288,
+      "kfold_macro_accuracy": 0.6713660847321874,
+      "folds": 5,
+      "evaluated_examples": 730
+    },
+    "accumulation_route_eval": {
+      "case_count": 50,
+      "reviewed_count": 50,
+      "semantic_intent_accuracy": 0.98,
+      "processing_plan_accuracy": 0.98,
+      "end_to_end_route_accuracy": 0.98,
+      "passed": 49,
+      "failed": 1,
+      "critical_underprocessing": 0,
+      "category_failures": {
+        "indirect_explanation": 1
+      }
+    }
+  },
+  "summary": {
+    "remaining_candidate_count": 38,
+    "high_priority_count": 21,
+    "rewrite_or_anonymize_count": 13,
+    "weak_question_count": 8,
+    "manual_review_count": 0,
+    "very_short_anchor_count": 17
+  },
+  "scenario_ablations": [
+    {
+      "name": "rewrite_or_anonymize_path",
+      "description": "Path/URL rows with directives; prefer rewriting/anonymizing before deletion.",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "candidate_indices": [
+        422,
+        428,
+        479,
+        490,
+        530,
+        542,
+        570,
+        571,
+        575,
+        651,
+        658,
+        725,
+        726
+      ],
+      "candidate_count": 13,
+      "removed_by_intent": {
+        "build": 6,
+        "explain": 1,
+        "explore": 2,
+        "respond": 3,
+        "verify": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6652719665271967,
+        "kfold_macro_accuracy": 0.6652468197294567,
+        "folds": 5,
+        "evaluated_examples": 717
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_active_baseline": {
+        "kfold_accuracy": -0.005961,
+        "kfold_macro_accuracy": -0.006119,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "name": "weak_question_holdout",
+      "description": "Weak question suffix rows not already quarantined.",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "candidate_indices": [
+        418,
+        481,
+        500,
+        525,
+        569,
+        599,
+        719,
+        737
+      ],
+      "candidate_count": 8,
+      "removed_by_intent": {
+        "build": 1,
+        "explain": 3,
+        "explore": 4
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6509695290858726,
+        "kfold_macro_accuracy": 0.651268562395056,
+        "folds": 5,
+        "evaluated_examples": 722
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_active_baseline": {
+        "kfold_accuracy": -0.020263,
+        "kfold_macro_accuracy": -0.020098,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "name": "very_short_anchor_control",
+      "description": "Very short anchors; control only, not a bulk prune recommendation.",
+      "recommended_action": "do_not_bulk_prune",
+      "candidate_indices": [
+        87,
+        89,
+        93,
+        94,
+        97,
+        437,
+        519,
+        522,
+        538,
+        579,
+        622,
+        675,
+        677,
+        680,
+        686,
+        694,
+        718
+      ],
+      "candidate_count": 17,
+      "removed_by_intent": {
+        "build": 8,
+        "respond": 7,
+        "verify": 2
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6213183730715287,
+        "kfold_macro_accuracy": 0.6214148200793251,
+        "folds": 5,
+        "evaluated_examples": 713
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_active_baseline": {
+        "kfold_accuracy": -0.049915,
+        "kfold_macro_accuracy": -0.049951,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "name": "all_high_priority_remaining",
+      "description": "All remaining rows with priority_score >= 35.",
+      "recommended_action": "review_before_prune_or_rewrite",
+      "candidate_indices": [
+        418,
+        422,
+        428,
+        479,
+        481,
+        490,
+        500,
+        525,
+        530,
+        542,
+        569,
+        570,
+        571,
+        575,
+        599,
+        651,
+        658,
+        719,
+        725,
+        726,
+        737
+      ],
+      "candidate_count": 21,
+      "removed_by_intent": {
+        "build": 7,
+        "explain": 4,
+        "explore": 6,
+        "respond": 3,
+        "verify": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6276445698166432,
+        "kfold_macro_accuracy": 0.6278595222744159,
+        "folds": 5,
+        "evaluated_examples": 709
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.96,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.96,
+        "passed": 48,
+        "failed": 2,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "conversation_response": 1,
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_active_baseline": {
+        "kfold_accuracy": -0.043588,
+        "kfold_macro_accuracy": -0.043507,
+        "accumulation_end_to_end_accuracy": -0.02,
+        "accumulation_failed": 1,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "keep_until_more_evidence"
+    }
+  ],
+  "high_priority_rows": [
+    {
+      "corpus_index": 490,
+      "input": "昨日の続きからの前にcodexのレポートです。/D:/pseudo personality/inverse_hybrid_ai/README.md",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.030629,
+        "kfold_macro_accuracy": -0.03056,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 530,
+      "input": "ollama経由だとモデル落とせなかったので、すでにインストールしていたLMStudioのgemma4を \"D:\\models\\gemma-4-E4B-it-GGUF\"にコピーしましたllamaで使えると思うのですがどうでしょう。遅くなるとは思いますが、使えるモデルを増やすという意味ではアリだと思います",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.029258,
+        "kfold_macro_accuracy": -0.029319,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 575,
+      "input": "\"D:\\Hybrid_PC_AI\\start_ui.bat\"start uiはこちらからしてます",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.029258,
+        "kfold_macro_accuracy": -0.029233,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 658,
+      "input": "D:/Thought State Register/docs/EXTERNAL_REVIEW_REPORT_2026-06-11.md v1.6まで進めたので確認と調査をお願いします",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.029258,
+        "kfold_macro_accuracy": -0.029146,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 725,
+      "input": "\"D:\\Hybrid_PC_AI\" \"D:\\nichijo_jissou\" D:\\Core5_Project\\core_review 導入候補としてこちらがあるのですが順位付けお願いします",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.023771,
+        "kfold_macro_accuracy": -0.024018,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 726,
+      "input": "nichijo_jissouからまずは導入行きましょう。その前にもう一つ候補がありまして、そちらは確か、メインＬＬＭがsubに司令を出す形でさらに海馬LLMを載せた物になります。D:\\keywordmodel 多分これなのですが、特徴は海馬LLMがあった事です。",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.025142,
+        "kfold_macro_accuracy": -0.025071,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 422,
+      "input": "03_instructions/precursor_tasks_v0.1.mdこちらを読んでもらってから続き行きましょう！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.012797,
+        "kfold_macro_accuracy": -0.012831,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 428,
+      "input": "\"D:\\pseudo personality\\02_design\\Inverse_Hybrid_AI_Design_v1.5.md\"続きからお願いします！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.033373,
+        "kfold_macro_accuracy": -0.033613,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 479,
+      "input": "@\"D:\\nichijo_jissou\\03_instructions\\7day_chat_test_preflight_checklist_2026-06-01.md\" test前の",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.036116,
+        "kfold_macro_accuracy": -0.036031,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 542,
+      "input": "\"D:\\pseudo personality\\CLAUDE.md\"を読み実装を進めてください！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.027886,
+        "kfold_macro_accuracy": -0.028086,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 570,
+      "input": "なるほどありがとうございます！それでは、 直近のこちらをお願いしたいです以下ログです Claude Code 側で docs/auto_log_review_2026-05-08.md + CLAUDE.md + docs/Agents.md を読ませて docs/impl_11_chat_quality_and_mood_recovery_<date>.md（英語、設計書）の起草から始めてください。",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.052577,
+        "kfold_macro_accuracy": -0.052659,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 571,
+      "input": "@D:\\Hybrid_PC_AI\\docs\\auto_log_review_2026-05-08.md これで読めますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.026514,
+        "kfold_macro_accuracy": -0.02637,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 651,
+      "input": "server起動.batとUI.batが欲しいです！D:\\Topic packagingこちらにお願いします",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.032001,
+        "kfold_macro_accuracy": -0.031942,
+        "accumulation_end_to_end_accuracy": -0.02,
+        "accumulation_failed": 1,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 418,
+      "input": "subをollama使って、別モデルでテストとかできますか？",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.030629,
+        "kfold_macro_accuracy": -0.030725,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 500,
+      "input": "本命(中期)に感情による問い返しや反論を混ぜるというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.023771,
+        "kfold_macro_accuracy": -0.023749,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 599,
+      "input": "Aはコストがかかりそうなので、B、Cを片付けてから行く方向でどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.037488,
+        "kfold_macro_accuracy": -0.037319,
+        "accumulation_end_to_end_accuracy": -0.02,
+        "accumulation_failed": 1,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 737,
+      "input": "こちら使えますか！",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.014168,
+        "kfold_macro_accuracy": -0.014614,
+        "accumulation_end_to_end_accuracy": -0.02,
+        "accumulation_failed": 1,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 481,
+      "input": "ログの確認できますか？",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.023771,
+        "kfold_macro_accuracy": -0.024109,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 525,
+      "input": "EXL2がまだ出回って内容なので、圧縮をお願いできますか",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.041603,
+        "kfold_macro_accuracy": -0.041886,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 569,
+      "input": "つまり、project側でdocsに書き込んでそれをcode側で読み取ってコーディングというイメージで合ってますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.022399,
+        "kfold_macro_accuracy": -0.022532,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    },
+    {
+      "corpus_index": 719,
+      "input": "Claudeさん側で足りない部分を補う事はできますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45,
+      "individual_delta_vs_active_baseline": {
+        "kfold_accuracy": -0.026514,
+        "kfold_macro_accuracy": -0.026679,
+        "accumulation_end_to_end_accuracy": -0.02,
+        "accumulation_failed": 1,
+        "critical_underprocessing": 0
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "evidence_label": "keep_until_more_evidence"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "corpus_index": 490,
+      "input": "昨日の続きからの前にcodexのレポートです。/D:/pseudo personality/inverse_hybrid_ai/README.md",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 530,
+      "input": "ollama経由だとモデル落とせなかったので、すでにインストールしていたLMStudioのgemma4を \"D:\\models\\gemma-4-E4B-it-GGUF\"にコピーしましたllamaで使えると思うのですがどうでしょう。遅くなるとは思いますが、使えるモデルを増やすという意味ではアリだと思います",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 575,
+      "input": "\"D:\\Hybrid_PC_AI\\start_ui.bat\"start uiはこちらからしてます",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 658,
+      "input": "D:/Thought State Register/docs/EXTERNAL_REVIEW_REPORT_2026-06-11.md v1.6まで進めたので確認と調査をお願いします",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 725,
+      "input": "\"D:\\Hybrid_PC_AI\" \"D:\\nichijo_jissou\" D:\\Core5_Project\\core_review 導入候補としてこちらがあるのですが順位付けお願いします",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 726,
+      "input": "nichijo_jissouからまずは導入行きましょう。その前にもう一つ候補がありまして、そちらは確か、メインＬＬＭがsubに司令を出す形でさらに海馬LLMを載せた物になります。D:\\keywordmodel 多分これなのですが、特徴は海馬LLMがあった事です。",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 64
+    },
+    {
+      "corpus_index": 422,
+      "input": "03_instructions/precursor_tasks_v0.1.mdこちらを読んでもらってから続き行きましょう！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 428,
+      "input": "\"D:\\pseudo personality\\02_design\\Inverse_Hybrid_AI_Design_v1.5.md\"続きからお願いします！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 479,
+      "input": "@\"D:\\nichijo_jissou\\03_instructions\\7day_chat_test_preflight_checklist_2026-06-01.md\" test前の",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 542,
+      "input": "\"D:\\pseudo personality\\CLAUDE.md\"を読み実装を進めてください！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 570,
+      "input": "なるほどありがとうございます！それでは、 直近のこちらをお願いしたいです以下ログです Claude Code 側で docs/auto_log_review_2026-05-08.md + CLAUDE.md + docs/Agents.md を読ませて docs/impl_11_chat_quality_and_mood_recovery_<date>.md（英語、設計書）の起草から始めてください。",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 571,
+      "input": "@D:\\Hybrid_PC_AI\\docs\\auto_log_review_2026-05-08.md これで読めますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 651,
+      "input": "server起動.batとUI.batが欲しいです！D:\\Topic packagingこちらにお願いします",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path",
+      "recommended_action": "rewrite_or_anonymize_path_then_retest",
+      "priority_score": 60
+    },
+    {
+      "corpus_index": 418,
+      "input": "subをollama使って、別モデルでテストとかできますか？",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49
+    },
+    {
+      "corpus_index": 500,
+      "input": "本命(中期)に感情による問い返しや反論を混ぜるというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49
+    },
+    {
+      "corpus_index": 599,
+      "input": "Aはコストがかかりそうなので、B、Cを片付けてから行く方向でどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49
+    },
+    {
+      "corpus_index": 737,
+      "input": "こちら使えますか！",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 49
+    },
+    {
+      "corpus_index": 481,
+      "input": "ログの確認できますか？",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45
+    },
+    {
+      "corpus_index": 525,
+      "input": "EXL2がまだ出回って内容なので、圧縮をお願いできますか",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45
+    },
+    {
+      "corpus_index": 569,
+      "input": "つまり、project側でdocsに書き込んでそれをcode側で読み取ってコーディングというイメージで合ってますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45
+    },
+    {
+      "corpus_index": 719,
+      "input": "Claudeさん側で足りない部分を補う事はできますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review",
+      "recommended_action": "holdout_or_failure_memory_review",
+      "priority_score": 45
+    },
+    {
+      "corpus_index": 437,
+      "input": "稼働中です！",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 14
+    },
+    {
+      "corpus_index": 519,
+      "input": "ログ確認お願い",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 14
+    },
+    {
+      "corpus_index": 522,
+      "input": "ログ確認",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 14
+    },
+    {
+      "corpus_index": 579,
+      "input": "まだ出る様子です",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 14
+    },
+    {
+      "corpus_index": 538,
+      "input": "A行きましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 622,
+      "input": "Cに行きましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 675,
+      "input": "マージして",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 677,
+      "input": "記録して",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 680,
+      "input": "１で参りましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 686,
+      "input": "承認して！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 694,
+      "input": "承認して",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 718,
+      "input": "Aの投入",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 10
+    },
+    {
+      "corpus_index": 87,
+      "input": "こんにちは",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 9
+    },
+    {
+      "corpus_index": 89,
+      "input": "こんばんは",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 9
+    },
+    {
+      "corpus_index": 93,
+      "input": "お元気ですか",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 9
+    },
+    {
+      "corpus_index": 94,
+      "input": "おやすみなさい",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 9
+    },
+    {
+      "corpus_index": 97,
+      "input": "Hello!",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous",
+      "recommended_action": "keep_anchor_unless_ablation_strong",
+      "priority_score": 9
+    }
+  ]
+}

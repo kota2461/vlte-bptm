@@ -1,0 +1,64 @@
+{
+  "schema_version": "v7-router-generalization-report.v1",
+  "generated_at": "2026-06-28T06:32:04.745531+00:00",
+  "status": "completed_not_a_gate",
+  "policy": {
+    "sealed_v6_text_used": false,
+    "sealed_v6_labels_used": false,
+    "source_fixture": "tests\\fixtures\\v7_router_repair_fixture_v1.json",
+    "source_fixture_review_status": "draft",
+    "current_route_measurement_is_gate": false,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "before": {
+    "case_count": 72,
+    "intent_accuracy": 0.736111,
+    "critical_signal_recall": 0.476923,
+    "operation_exact_match": 0.611111,
+    "constraint_exact_match": 0.680556,
+    "risk_exact_match": 0.763889,
+    "valid_packet_rate": 1.0,
+    "error_count": 52,
+    "error_field_counts": {
+      "constraints": 23,
+      "information_state": 31,
+      "operations": 28,
+      "primary_intent": 19,
+      "risk": 17
+    }
+  },
+  "after": {
+    "case_count": 72,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "delta": {
+    "intent_accuracy": 0.263889,
+    "critical_signal_recall": 0.523077,
+    "operation_exact_match": 0.388889,
+    "constraint_exact_match": 0.319444,
+    "risk_exact_match": 0.236111,
+    "error_count": -52
+  },
+  "remaining_errors": [],
+  "change_summary": [
+    "Added V7 generalized repair signals for missing scope, ask-first routing, current/source lookup, and low-risk term mentions.",
+    "Preserved multi-operation routes for clarify-then-build, clarify-then-verify, build-then-verify, explore-then-compare, and source-backed verify.",
+    "Expanded constraint preservation for response length, no_table/no_web_search, cite_sources, neutrality, general-information-only, and avoid-diagnosis.",
+    "Calibrated risk so low-risk medical/legal words stay low while license checks, future/political/risk comparison, legal, medical, and security cases keep severity.",
+    "Kept this replay diagnostic only; it is not sealed evidence and not promotion evidence."
+  ],
+  "meets_step5_entry_threshold": true,
+  "next_step": {
+    "step": 5,
+    "name": "v7_nonsealed_replay_gate",
+    "output": "build\\v7_nonsealed_replay_gate_report_v1.json"
+  }
+}

@@ -1,0 +1,2262 @@
+{
+  "created_at": "2026-06-27T04:33:05.346439+00:00",
+  "policy": {
+    "adopted_baseline_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_corrected_v0_1.json",
+    "evaluate_as_separate_ablation": true,
+    "mix_with_adopted_set_by_default": false,
+    "report_delta_against_adopted_baseline": true
+  },
+  "sample_count": 72,
+  "samples": [
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-route",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-01",
+      "input": "I'm overwhelmed; help me pick one practical next step.",
+      "input_sha256": "6e5bd674864a6f37a26d6a5e62634666b65388afc01232449a858024d56c1f34",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-route",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-02",
+      "input": "I'm stuck and frustrated; guide me to the first action.",
+      "input_sha256": "2b6a302dd9f0628e12728d35bc05949c908f5ff3ac4338319e903837c85016ae",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-route",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-03",
+      "input": "This is getting to me; help me choose what to try next.",
+      "input_sha256": "295a0be9ef69460fb81df7b345834bf01c6e60785ce527fd8bc98afc2b3a4683",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-route",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-04",
+      "input": "I feel blocked; steady me and route me to a manageable next move.",
+      "input_sha256": "b7f5cc96b2b2c595fc767c90dfa6c504a2998f8254329b34a3e83fab7397789f",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-summary-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-05",
+      "input": "This feedback hurt; summarize only the useful parts gently.",
+      "input_sha256": "20a03ee400fd9d54be886ce2a5ecc69ba3fb8aa1d938b6630a1f4d32e67eb355",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-summary-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-06",
+      "input": "The review was rough; condense the lessons in a kind tone.",
+      "input_sha256": "32e203fc1f00717a739eefa59ca3f80022d1a2a140ed2e81dbb3691df4430880",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-summary-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-07",
+      "input": "I'm discouraged by these notes; preserve the actionable points gently.",
+      "input_sha256": "5cf8df692fd443557063bf536745b913b0c567023b1e3da333043d20b6a5dcd1",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-summary-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-08",
+      "input": "This critique stings; recap what matters without amplifying the tone.",
+      "input_sha256": "0f2b68eb88a896fec252dcb73316da8ecf39386403afdbe03b541555167774ae",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-kind-challenge",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-09",
+      "input": "I may be wrong; challenge my plan kindly.",
+      "input_sha256": "d1db99760f425ca5a3e92fafc39d5bc0fa514a99b187d911efa798ee8760b554",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-kind-challenge",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-10",
+      "input": "Please test this idea firmly but without being harsh.",
+      "input_sha256": "fd19240f25762248cca7aaf728fde6759d46530cb4537fafe7d5775765cbd942",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-kind-challenge",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-11",
+      "input": "Push back on weak assumptions in this plan with a respectful tone.",
+      "input_sha256": "118b584ca37616481e6adcbb90352475cf95c2f89c9866983f2f156a1d799ea7",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-kind-challenge",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-12",
+      "input": "Check my reasoning and challenge the risky parts carefully.",
+      "input_sha256": "b1da838bd6c8e24a913f680a7e4b0d0f7c5ae0688887bf58d32a0627ca7cfc19",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-reason",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-13",
+      "input": "I'm discouraged; explain what happened without making it harsher.",
+      "input_sha256": "2a139a3b479808e2baae06d6aaf5bc8697d48316b339495f8074822d8967aba0",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-reason",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-14",
+      "input": "Help me understand why this failed while keeping me grounded.",
+      "input_sha256": "f2b6f8507024704e5071ae1f567af8bf453fcd83a8ed0994ed96e5f3ef92a0e9",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-reason",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-15",
+      "input": "I'm upset about the result; explain the cause in a calm way.",
+      "input_sha256": "099cb89a730a8ef167914363779dba082e423307ea89b5ebd24d2aefea4143bc",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-support-reason",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-16",
+      "input": "This went badly; help me reason through it without piling on.",
+      "input_sha256": "640519fb49e76f48e1ef37343430e72b219ebcd93bfb8eacb6a5da198b2e61cc",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-hard-risk",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-17",
+      "input": "Do not reassure me; identify the serious risks in this plan.",
+      "input_sha256": "c57431e21139e5e5eb93ac96c0e5d96dbadbde5ebe9b5c58f83cbfc31092e125",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-hard-risk",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-18",
+      "input": "Skip comfort and point out the hard failure modes.",
+      "input_sha256": "514ba07f13f5e5e236aa4d950886c6454849a600297eb22a300058feec5ea8f2",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-hard-risk",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-19",
+      "input": "Be direct: what could make this plan fail badly?",
+      "input_sha256": "0d3f210fabdc915cac73de4e9acbaf5535f62fc84e2d21255a6914e9f2096ff1",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for empathy.",
+      "group_id": "weak-empathy-verify-hard-risk",
+      "human_review_required": true,
+      "id": "tc-weak-empathy-20",
+      "input": "Challenge this proposal hard and flag the highest-risk assumptions.",
+      "input_sha256": "dc5fd1ec2d3fc8e7963b85823dd53f16327338d283a23d1d9be967a243c6e38a",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "empathy_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-low",
+      "human_review_required": true,
+      "id": "tc-weak-summary-01",
+      "input": "Give me the gist of this log.",
+      "input_sha256": "883d0bbd376d9acd7ae5e29f234ae1753e379ec9130d1b82adeddb553b636524",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-low",
+      "human_review_required": true,
+      "id": "tc-weak-summary-02",
+      "input": "Summarize this briefly.",
+      "input_sha256": "13f47bd43b57e0edcb651ea1e180b3f3a5713d32b7b65e3ca304e3e251b9d2d6",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-low",
+      "human_review_required": true,
+      "id": "tc-weak-summary-03",
+      "input": "Keep only the headline points.",
+      "input_sha256": "ed49770b4aa9007c939632823b3eb044e6519bb7af9c11021b6893c38f083c09",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-low",
+      "human_review_required": true,
+      "id": "tc-weak-summary-04",
+      "input": "Compress this note into the main idea.",
+      "input_sha256": "f2b01f2885cd82cf8024a5349ef827a867c0421c6285ba6d6e4c08e3ff34a600",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-05",
+      "input": "Summarize the meeting notes in clear bullets.",
+      "input_sha256": "74951e325f20123dbf5346402a4cf77b862d7797bf3d4fa8f34147a83c11da31",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-06",
+      "input": "Recap the decisions and open questions.",
+      "input_sha256": "a414b4b1eac5df2bdc44e346cbcb727054324ed2c52fa1386797276c0d1f84cb",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-07",
+      "input": "Condense this discussion into a useful summary.",
+      "input_sha256": "aa1d6088fa5937e110004ab7b2c178979a3bb2bff3d44c57ea4388feac05eacc",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-08",
+      "input": "Turn these notes into a concise recap.",
+      "input_sha256": "1d26f2a0d1c51378217618b8ca64cc09245df7ca4f28e28adde66fb5cbc52ced",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-high",
+      "human_review_required": true,
+      "id": "tc-weak-summary-09",
+      "input": "Compress this long transcript into one dense page.",
+      "input_sha256": "1c77f3dbd469372e683bf203e3b764145a49bc705ceb933c9e3b195dbe6993f3",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-high",
+      "human_review_required": true,
+      "id": "tc-weak-summary-10",
+      "input": "Summarize the entire report thoroughly but compactly.",
+      "input_sha256": "556c88b742e9d714c53f89815559453245e73fbd4e8d3c974257b37e3d68bc28",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-high",
+      "human_review_required": true,
+      "id": "tc-weak-summary-11",
+      "input": "Extract every major decision and risk from this long thread.",
+      "input_sha256": "65ddb4d6da1e55d112004ac6ab1471278ed27bc727c201cef3db755b930d30a3",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-neutral-high",
+      "human_review_required": true,
+      "id": "tc-weak-summary-12",
+      "input": "Turn this large meeting log into a complete executive summary.",
+      "input_sha256": "3850c007e187581d3e5041c13a904429b6060418caf2f49f2b525f3ad2fa8444",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-13",
+      "input": "Recap the decisions, and ask if any ambiguous item needs more context.",
+      "input_sha256": "d69b422af904110e99da8f7031248b92383748acc1b3d87d790c54dcc4c5531f",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-14",
+      "input": "Summarize the notes but flag any unclear decision for follow-up.",
+      "input_sha256": "bfd7a73bb4e997faf4bb4cd4221f354904eaf93d2f8d301734fb8cf20075724c",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-15",
+      "input": "Condense this meeting and ask what to do with unresolved points.",
+      "input_sha256": "9114537632305208a7d4473169b811799ee8aa3fe9fd8e8c896e77e868bc6580",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for summary.",
+      "group_id": "weak-summary-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-weak-summary-16",
+      "input": "Summarize only the confirmed points and ask about the uncertain ones.",
+      "input_sha256": "296e186bac0423c77a9dcf825009ff9e2f3776e0d4fcf41c1631d05d380332e9",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "summary_share_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-medium",
+      "human_review_required": true,
+      "id": "tc-weak-generate-01",
+      "input": "Write a short onboarding email for new contributors.",
+      "input_sha256": "e84e5c0cb56629a171be65f2a9cf1ffbc9c4c5d425d6cb9d5fffbc0bc6f1bf95",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-medium",
+      "human_review_required": true,
+      "id": "tc-weak-generate-02",
+      "input": "Draft a welcome note for first-time maintainers.",
+      "input_sha256": "65e2f4d311b5e82ad36635391382f848fa03072eee6df3eb1e346305dace66ff",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-medium",
+      "human_review_required": true,
+      "id": "tc-weak-generate-03",
+      "input": "Create a brief setup message for new project members.",
+      "input_sha256": "8db70b83e576aa5f7dbb934f1d3deba779ca97caacc5f6839570c6246c992269",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-generate-04",
+      "input": "Brainstorm three ways to reduce API latency.",
+      "input_sha256": "cc6be18a6265bef3740a03557763f3a6d2a01c8ab6bc337d6251365aa88ef305",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-generate-05",
+      "input": "Generate several options for making search faster.",
+      "input_sha256": "1e05b2d9e94c7af4cff63ca7c29abad7098d8ba446f1ec67c098e33d491de817",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-generate-06",
+      "input": "List possible approaches for improving upload performance.",
+      "input_sha256": "f8cb5a7a107e72e40063b11d426370148a5e3b85943661e1d16aebd3141ee426",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "low",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-low",
+      "human_review_required": true,
+      "id": "tc-weak-generate-07",
+      "input": "Write three short agenda bullets.",
+      "input_sha256": "c3f08152e1937c3689e0f87fa148e0a0b18e286e062fd73f5f3b14fbe849fa70",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "low",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-low",
+      "human_review_required": true,
+      "id": "tc-weak-generate-08",
+      "input": "Create a tiny checklist for the standup.",
+      "input_sha256": "a48e36a279c1fd9ad2c37fb61ab25cef3c668287b17c03c2c010a1742dc6c422",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "low",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-artifact-low",
+      "human_review_required": true,
+      "id": "tc-weak-generate-09",
+      "input": "Draft a one-sentence reminder for the release.",
+      "input_sha256": "3fb1bf33b0fdc5b4479327d1f0553f261923e981e4e6c1005e5b21a9c940d94d",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-alternatives",
+      "human_review_required": true,
+      "id": "tc-weak-generate-10",
+      "input": "Generate alternatives for simplifying the onboarding flow.",
+      "input_sha256": "ce722831bd9c89fd0c9e1353c80fc01e1d507a2fdd5070ba8cc894c048f97b6f",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-alternatives",
+      "human_review_required": true,
+      "id": "tc-weak-generate-11",
+      "input": "Brainstorm possible ways to reduce support tickets.",
+      "input_sha256": "0caf6077fbb7c447c832ad577a21a739df591bbe15631208e74f08bd6e0d3794",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for generate.",
+      "group_id": "weak-generate-explore-alternatives",
+      "human_review_required": true,
+      "id": "tc-weak-generate-12",
+      "input": "List a few directions for redesigning the settings page.",
+      "input_sha256": "cd3ff73d65ab9622e85800902607fb050c0e0fa6697fe1fa4afdf01944fd373f",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "generate_across_bases_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-neutral",
+      "human_review_required": true,
+      "id": "tc-weak-verify-01",
+      "input": "Review this migration plan for obvious issues.",
+      "input_sha256": "9b136fc7b382dcdb932df8cc1f5ab99c5e316b78a74b9007a2a67db6abdfc5d6",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-neutral",
+      "human_review_required": true,
+      "id": "tc-weak-verify-02",
+      "input": "Check this rollout plan for missing steps.",
+      "input_sha256": "d1adec965e725fc0dc4aa48761f65e230224291945cbf6b8ce207188fb02e817",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-neutral",
+      "human_review_required": true,
+      "id": "tc-weak-verify-03",
+      "input": "Verify this deployment checklist for basic mistakes.",
+      "input_sha256": "b6ad74cb009cb9fafcce74b05744d6cdcf0c0a25f12e943b20a4d5d9f828d100",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-challenge-high",
+      "human_review_required": true,
+      "id": "tc-weak-verify-04",
+      "input": "Review this migration plan and push back hard on unsafe assumptions.",
+      "input_sha256": "0ad835e05d01151936e4f052e71cd440b31d94390da9a93195e56d1587e78fd8",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-challenge-high",
+      "human_review_required": true,
+      "id": "tc-weak-verify-05",
+      "input": "Challenge the risky assumptions in this rollout plan.",
+      "input_sha256": "42d1fe99939866cde9efc4bb7b1a3024c677543bacad1cfd450e3f36d8602534",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-challenge-high",
+      "human_review_required": true,
+      "id": "tc-weak-verify-06",
+      "input": "Audit this launch plan aggressively for failure modes.",
+      "input_sha256": "fae61e095d15b907c4b4cf5d4f985b943a53464f8f0cf655549947080be8176c",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-clarify-hold",
+      "human_review_required": true,
+      "id": "tc-weak-verify-07",
+      "input": "Review this migration plan, but ask first if the database is unknown.",
+      "input_sha256": "07d8486b397f8fb426d359a25c2e9b01be4ad842e4f36eebf04942b3bb460775",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-clarify-hold",
+      "human_review_required": true,
+      "id": "tc-weak-verify-08",
+      "input": "Check this architecture only after asking for the target database.",
+      "input_sha256": "b5e3e54139cac1f0e0abb57b32d985821845862044139fc5afa33b6a2417a5fc",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-clarify-hold",
+      "human_review_required": true,
+      "id": "tc-weak-verify-09",
+      "input": "Hold the review until you know the traffic and storage assumptions.",
+      "input_sha256": "447b6dd002f108d6108662d638b6f49188300c56ad8f98e9eee2c04d512f66f1",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-verify-10",
+      "input": "I'm worried I missed something; review this design gently.",
+      "input_sha256": "3272fad917c48e1eba64fb30756ec45c491675fad41f4bc64b50382f444b865b",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-verify-11",
+      "input": "This plan makes me nervous; check it carefully but kindly.",
+      "input_sha256": "22fef56cf2bd334e8a217ea8ae2397b9c09747b8ffa1080beec6ba292864e596",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "empathize"
+      },
+      "generation_note": "Isolated weakness sample for verify.",
+      "group_id": "weak-verify-empathize",
+      "human_review_required": true,
+      "id": "tc-weak-verify-12",
+      "input": "I'm anxious about this release; review the risk without piling on.",
+      "input_sha256": "276759d164e1b53864a4cc108e9e78b35b4e11361340c050d32642208a99c57d",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "verify_stance_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "compare",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-compare",
+      "human_review_required": true,
+      "id": "tc-weak-explore-01",
+      "input": "Compare SQLite and Postgres for a personal notes app.",
+      "input_sha256": "f3ed65cbe6634060611ca5f7fc59e78e4cdbfca121f64dfd64dff9a048de03da",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "compare",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-compare",
+      "human_review_required": true,
+      "id": "tc-weak-explore-02",
+      "input": "Compare local files and a database for a small writing tool.",
+      "input_sha256": "773f8879e6dbb096fe2a0d5378a6b50c55694b10e83b737f83965d2b5558d2f8",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "compare",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-compare",
+      "human_review_required": true,
+      "id": "tc-weak-explore-03",
+      "input": "Compare using a hosted service versus self-hosting for this app.",
+      "input_sha256": "6bca6efdea02a34a34a63dc1eb188ae1a46a6010d91791c71063333f3278196a",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-explore-04",
+      "input": "Brainstorm five storage approaches for a personal notes app.",
+      "input_sha256": "4a95fc632171181b61fb7b33d1cab22c0f6a09ff6ff3e535a1f2102995b2686c",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-explore-05",
+      "input": "Generate several product directions for a small notes tool.",
+      "input_sha256": "80e980ea3611ab1bff24db130380b06ec5d114710472b764a5f20b90135a776c",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-generate",
+      "human_review_required": true,
+      "id": "tc-weak-explore-06",
+      "input": "List possible architectures for an offline-first notes app.",
+      "input_sha256": "67a0271a41ed78c55fa42588ed4f9c610b61b4cbf4d102c9142ebb500f681428",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reason",
+      "human_review_required": true,
+      "id": "tc-weak-explore-07",
+      "input": "Reason through the tradeoffs before recommending a storage option.",
+      "input_sha256": "f1db02d91a257155a70c8697c5fbaf1664cb53a52d9565c69bfc21d7a6adb1d3",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reason",
+      "human_review_required": true,
+      "id": "tc-weak-explore-08",
+      "input": "Think through the pros and cons before choosing a stack.",
+      "input_sha256": "8bff2920ab20168ab06d71ae33c3530d80abb94cd89d2eb96749ebfa33946a39",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "explore"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reason",
+      "human_review_required": true,
+      "id": "tc-weak-explore-09",
+      "input": "Walk through the tradeoffs before deciding how to store notes.",
+      "input_sha256": "4339a2abdac1fde4fd7ba09ea60324bfa5da6efc755693ecee031acba087de72",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "reserve"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reserve-hold",
+      "human_review_required": true,
+      "id": "tc-weak-explore-10",
+      "input": "Keep both options open and compare them without deciding yet.",
+      "input_sha256": "3bf3fd740b7ff073f2399f9636d099c4b5c965bec7440fae8a898631fde2fd64",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "reserve"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reserve-hold",
+      "human_review_required": true,
+      "id": "tc-weak-explore-11",
+      "input": "Compare these choices, but hold the final recommendation.",
+      "input_sha256": "531b4679c13479885d88a77d32245c913c2dfa693d7edd048db90acb9d697944",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "weakness_isolated_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "reserve"
+      },
+      "generation_note": "Isolated weakness sample for explore.",
+      "group_id": "weak-explore-reserve-hold",
+      "human_review_required": true,
+      "id": "tc-weak-explore-12",
+      "input": "Explore the options while reserving judgment until constraints are clearer.",
+      "input_sha256": "03d1bb63a2d3ca17c40f7c8fae342c0430ef9369a877ae51de5942c2a2d0feb0",
+      "judgment_questions": [
+        "Does this reinforce the isolated weakness boundary?",
+        "Would adding this to the adopted set create a measurable delta?"
+      ],
+      "lane": "explore_operation_variants_isolated",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "This sample is keyed by routing role, not surface wording alone.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "surface_neighbor"
+      },
+      "source_kind": "codex_weakness_isolated_contrast",
+      "training_allowed": false
+    }
+  ],
+  "schema_version": "thought-color-weakness-isolated-samples.v0.1",
+  "summary": {
+    "base_counts": {
+      "artifact_generation": 6,
+      "exploration_tradeoff": 18,
+      "summary_compression": 20,
+      "supportive_processing": 8,
+      "verification_review": 20
+    },
+    "human_review_required_count": 72,
+    "lane_counts": {
+      "empathy_across_bases_isolated": 20,
+      "explore_operation_variants_isolated": 12,
+      "generate_across_bases_isolated": 12,
+      "summary_share_variants_isolated": 16,
+      "verify_stance_variants_isolated": 12
+    },
+    "language_counts": {
+      "en": 72
+    },
+    "sample_count": 72,
+    "training_allowed_count": 0
+  },
+  "targets": [
+    {
+      "group_id": "empathy_across_bases",
+      "metrics": {
+        "base_accuracy": 0.2,
+        "case_count": 5,
+        "full_code_accuracy": 0.2,
+        "intensity_accuracy": 0.4,
+        "operation_accuracy": 0.4,
+        "stance_accuracy": 0.4
+      },
+      "reason": "remaining isolated weakness; do not mix into adopted set by default",
+      "recommended_sample_budget": 20
+    },
+    {
+      "group_id": "summary_share_variants",
+      "metrics": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "reason": "remaining isolated weakness; do not mix into adopted set by default",
+      "recommended_sample_budget": 16
+    },
+    {
+      "group_id": "generate_across_bases",
+      "metrics": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.75
+      },
+      "reason": "remaining isolated weakness; do not mix into adopted set by default",
+      "recommended_sample_budget": 12
+    },
+    {
+      "group_id": "verify_stance_variants",
+      "metrics": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.5
+      },
+      "reason": "remaining isolated weakness; do not mix into adopted set by default",
+      "recommended_sample_budget": 12
+    },
+    {
+      "group_id": "explore_operation_variants",
+      "metrics": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "reason": "remaining isolated weakness; do not mix into adopted set by default",
+      "recommended_sample_budget": 12
+    }
+  ]
+}

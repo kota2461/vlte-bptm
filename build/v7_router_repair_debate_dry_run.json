@@ -1,0 +1,763 @@
+{
+  "schema_version": "router-debate-run.v1",
+  "generated_at": "2026-06-24T23:29:43.924302+00:00",
+  "dry_run": true,
+  "output": "build\\v7_router_repair_debate_dry_run.json",
+  "config_schema_version": "router-debate-config.v1",
+  "topics_schema_version": "router-debate-topics.v1",
+  "models": {
+    "gemma": {
+      "id": "google/gemma-4-12b-it",
+      "role": "expander",
+      "license": "Apache-2.0 candidate; verify exact checkpoint before production use"
+    },
+    "qwen": {
+      "id": "Qwen/Qwen3-8B",
+      "role": "critic",
+      "license": "Apache-2.0 on the official Qwen3 checkpoint family"
+    }
+  },
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "raw_debate_log_training_allowed": false,
+    "candidate_training_allowed_without_human_review": false,
+    "same_cycle_gate_use_allowed": false
+  },
+  "router_topic_stock": {
+    "stock_count": 53,
+    "selected_count": 1,
+    "selected_topic_ids": [
+      "v7-ambiguous-clarify-vs-build"
+    ]
+  },
+  "router_progression": [
+    {
+      "event": "topic_closed",
+      "topic_id": "v7-ambiguous-clarify-vs-build",
+      "router_decision": "close_topic",
+      "reasons": [
+        "router_close_criteria_met"
+      ],
+      "next_topic_id": null,
+      "next_gemma_action": "stop_queue"
+    }
+  ],
+  "summary": {
+    "topic_count": 1,
+    "turn_count": 4,
+    "closed_topic_count": 1,
+    "candidate_stub_count": 1,
+    "training_allowed": false,
+    "human_review_required": true,
+    "moderator_comment_count": 2
+  },
+  "topics": [
+    {
+      "topic_id": "v7-ambiguous-clarify-vs-build",
+      "theme": "曖昧な依頼で、clarify すべきか、そのまま build/respond に進んでよいかを議論する。例:「これいい感じに整えて」「この案で進めて大丈夫？」「足りない情報があるなら先に聞いて」。should_fire は前提不足や作業条件不足、should_not_fire は軽い整形や明確な作業依頼。",
+      "axis_ids": [
+        "v7_router_repair",
+        "ambiguous_request_boundary",
+        "clarify_vs_build",
+        "cheap_sufficient_route",
+        "positive_negative_pair"
+      ],
+      "router_before": {
+        "packet": {
+          "primary_intent": "verify",
+          "operations": [
+            "verify"
+          ],
+          "information_state": {
+            "missing_required_information": false,
+            "contains_unverified_claims": false,
+            "requires_current_information": false,
+            "multiple_intents": false
+          },
+          "constraints": {
+            "response_length": "unspecified",
+            "formats": [],
+            "must": [
+              "preserve_neutrality",
+              "avoid_overclaim"
+            ],
+            "must_not": []
+          },
+          "risk": {
+            "level": "low",
+            "flags": []
+          },
+          "confidence": 0.8300000000000001
+        },
+        "processing_plan": {
+          "schema_version": "processing-plan.v1",
+          "primary_route": "verify",
+          "processing_class": "verified",
+          "core_mode": "vertical",
+          "model_class": "standard",
+          "tools": [],
+          "budgets": {
+            "max_dispatches": 2,
+            "max_output_tokens": 1024,
+            "timeout_ms": 12000,
+            "estimated_cost_units": 2.0
+          },
+          "fallback": "clarify",
+          "reason_codes": [
+            "primary_verify",
+            "verification_requested"
+          ]
+        },
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_constraints",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "ignore_explicit_constraints"
+          ],
+          "severity": "minor",
+          "relabel_hints": [
+            "preserve_constraints",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "constraint_guard",
+            "verification_guard"
+          ]
+        },
+        "decided_by": "markers",
+        "intent_margin": null
+      },
+      "turns": [
+        {
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-it",
+          "content": "[dry-run] 反論: 仮説は有用だが、根拠不足・過断定・安全境界を確認してから候補化するべきです。",
+          "via": "content",
+          "finish_reason": "dry_run",
+          "reasoning_content_chars": 0,
+          "router_after_turn": {
+            "packet": {
+              "primary_intent": "verify",
+              "operations": [
+                "verify"
+              ],
+              "information_state": {
+                "missing_required_information": false,
+                "contains_unverified_claims": false,
+                "requires_current_information": false,
+                "multiple_intents": true
+              },
+              "constraints": {
+                "response_length": "unspecified",
+                "formats": [],
+                "must": [
+                  "avoid_overclaim"
+                ],
+                "must_not": []
+              },
+              "risk": {
+                "level": "low",
+                "flags": []
+              },
+              "confidence": 0.8300000000000001
+            },
+            "processing_plan": {
+              "schema_version": "processing-plan.v1",
+              "primary_route": "verify",
+              "processing_class": "verified",
+              "core_mode": "vertical",
+              "model_class": "standard",
+              "tools": [],
+              "budgets": {
+                "max_dispatches": 2,
+                "max_output_tokens": 1024,
+                "timeout_ms": 12000,
+                "estimated_cost_units": 2.0
+              },
+              "fallback": "clarify",
+              "reason_codes": [
+                "primary_verify",
+                "verification_requested"
+              ]
+            },
+            "failure_guard": {
+              "guard_actions": [
+                "avoid_overclaim",
+                "preserve_constraints",
+                "preserve_multi_intent",
+                "split_or_sequence_operations",
+                "verify_up"
+              ],
+              "bad_tendencies": [
+                "accept_unverified_claim_without_check",
+                "collapse_compound_intent_into_single_response",
+                "ignore_explicit_constraints"
+              ],
+              "severity": "minor",
+              "relabel_hints": [
+                "preserve_compound_intent_sequence",
+                "preserve_constraints",
+                "preserve_verify_step"
+              ],
+              "reason_codes": [
+                "compound_intent_guard",
+                "constraint_guard",
+                "verification_guard"
+              ]
+            },
+            "decided_by": "markers",
+            "intent_margin": null
+          }
+        },
+        {
+          "role": "qwen_critic",
+          "model": "Qwen/Qwen3-8B",
+          "content": "[dry-run] 反論: 仮説は有用だが、根拠不足・過断定・安全境界を確認してから候補化するべきです。",
+          "via": "content",
+          "finish_reason": "dry_run",
+          "reasoning_content_chars": 0,
+          "router_after_turn": {
+            "packet": {
+              "primary_intent": "verify",
+              "operations": [
+                "verify"
+              ],
+              "information_state": {
+                "missing_required_information": false,
+                "contains_unverified_claims": false,
+                "requires_current_information": false,
+                "multiple_intents": true
+              },
+              "constraints": {
+                "response_length": "unspecified",
+                "formats": [],
+                "must": [
+                  "avoid_overclaim"
+                ],
+                "must_not": []
+              },
+              "risk": {
+                "level": "low",
+                "flags": []
+              },
+              "confidence": 0.8300000000000001
+            },
+            "processing_plan": {
+              "schema_version": "processing-plan.v1",
+              "primary_route": "verify",
+              "processing_class": "verified",
+              "core_mode": "vertical",
+              "model_class": "standard",
+              "tools": [],
+              "budgets": {
+                "max_dispatches": 2,
+                "max_output_tokens": 1024,
+                "timeout_ms": 12000,
+                "estimated_cost_units": 2.0
+              },
+              "fallback": "clarify",
+              "reason_codes": [
+                "primary_verify",
+                "verification_requested"
+              ]
+            },
+            "failure_guard": {
+              "guard_actions": [
+                "avoid_overclaim",
+                "preserve_constraints",
+                "preserve_multi_intent",
+                "split_or_sequence_operations",
+                "verify_up"
+              ],
+              "bad_tendencies": [
+                "accept_unverified_claim_without_check",
+                "collapse_compound_intent_into_single_response",
+                "ignore_explicit_constraints"
+              ],
+              "severity": "minor",
+              "relabel_hints": [
+                "preserve_compound_intent_sequence",
+                "preserve_constraints",
+                "preserve_verify_step"
+              ],
+              "reason_codes": [
+                "compound_intent_guard",
+                "constraint_guard",
+                "verification_guard"
+              ]
+            },
+            "decided_by": "markers",
+            "intent_margin": null
+          }
+        },
+        {
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-it",
+          "content": "[dry-run] 反論: 仮説は有用だが、根拠不足・過断定・安全境界を確認してから候補化するべきです。",
+          "via": "content",
+          "finish_reason": "dry_run",
+          "reasoning_content_chars": 0,
+          "router_after_turn": {
+            "packet": {
+              "primary_intent": "verify",
+              "operations": [
+                "verify"
+              ],
+              "information_state": {
+                "missing_required_information": false,
+                "contains_unverified_claims": false,
+                "requires_current_information": false,
+                "multiple_intents": true
+              },
+              "constraints": {
+                "response_length": "unspecified",
+                "formats": [],
+                "must": [
+                  "avoid_overclaim"
+                ],
+                "must_not": []
+              },
+              "risk": {
+                "level": "low",
+                "flags": []
+              },
+              "confidence": 0.8300000000000001
+            },
+            "processing_plan": {
+              "schema_version": "processing-plan.v1",
+              "primary_route": "verify",
+              "processing_class": "verified",
+              "core_mode": "vertical",
+              "model_class": "standard",
+              "tools": [],
+              "budgets": {
+                "max_dispatches": 2,
+                "max_output_tokens": 1024,
+                "timeout_ms": 12000,
+                "estimated_cost_units": 2.0
+              },
+              "fallback": "clarify",
+              "reason_codes": [
+                "primary_verify",
+                "verification_requested"
+              ]
+            },
+            "failure_guard": {
+              "guard_actions": [
+                "avoid_overclaim",
+                "preserve_constraints",
+                "preserve_multi_intent",
+                "split_or_sequence_operations",
+                "verify_up"
+              ],
+              "bad_tendencies": [
+                "accept_unverified_claim_without_check",
+                "collapse_compound_intent_into_single_response",
+                "ignore_explicit_constraints"
+              ],
+              "severity": "minor",
+              "relabel_hints": [
+                "preserve_compound_intent_sequence",
+                "preserve_constraints",
+                "preserve_verify_step"
+              ],
+              "reason_codes": [
+                "compound_intent_guard",
+                "constraint_guard",
+                "verification_guard"
+              ]
+            },
+            "decided_by": "markers",
+            "intent_margin": null
+          }
+        },
+        {
+          "role": "qwen_critic",
+          "model": "Qwen/Qwen3-8B",
+          "content": "[dry-run] 反論: 仮説は有用だが、根拠不足・過断定・安全境界を確認してから候補化するべきです。",
+          "via": "content",
+          "finish_reason": "dry_run",
+          "reasoning_content_chars": 0,
+          "router_after_turn": {
+            "packet": {
+              "primary_intent": "verify",
+              "operations": [
+                "verify"
+              ],
+              "information_state": {
+                "missing_required_information": false,
+                "contains_unverified_claims": false,
+                "requires_current_information": false,
+                "multiple_intents": true
+              },
+              "constraints": {
+                "response_length": "unspecified",
+                "formats": [],
+                "must": [
+                  "avoid_overclaim"
+                ],
+                "must_not": []
+              },
+              "risk": {
+                "level": "low",
+                "flags": []
+              },
+              "confidence": 0.8300000000000001
+            },
+            "processing_plan": {
+              "schema_version": "processing-plan.v1",
+              "primary_route": "verify",
+              "processing_class": "verified",
+              "core_mode": "vertical",
+              "model_class": "standard",
+              "tools": [],
+              "budgets": {
+                "max_dispatches": 2,
+                "max_output_tokens": 1024,
+                "timeout_ms": 12000,
+                "estimated_cost_units": 2.0
+              },
+              "fallback": "clarify",
+              "reason_codes": [
+                "primary_verify",
+                "verification_requested"
+              ]
+            },
+            "failure_guard": {
+              "guard_actions": [
+                "avoid_overclaim",
+                "preserve_constraints",
+                "preserve_multi_intent",
+                "split_or_sequence_operations",
+                "verify_up"
+              ],
+              "bad_tendencies": [
+                "accept_unverified_claim_without_check",
+                "collapse_compound_intent_into_single_response",
+                "ignore_explicit_constraints"
+              ],
+              "severity": "minor",
+              "relabel_hints": [
+                "preserve_compound_intent_sequence",
+                "preserve_constraints",
+                "preserve_verify_step"
+              ],
+              "reason_codes": [
+                "compound_intent_guard",
+                "constraint_guard",
+                "verification_guard"
+              ]
+            },
+            "decided_by": "markers",
+            "intent_margin": null
+          }
+        }
+      ],
+      "moderation_events": [
+        {
+          "schema_version": "router-debate-moderation-decision.v1",
+          "topic_id": "v7-ambiguous-clarify-vs-build",
+          "decision": "continue_topic",
+          "closed": false,
+          "reasons": [
+            "below_min_rounds"
+          ],
+          "checks": {
+            "completed_rounds": 1,
+            "has_gemma_expander": true,
+            "has_qwen_critic": true,
+            "critic_has_final_content": true,
+            "has_suppressed_reasoning": false,
+            "total_content_chars": 104,
+            "min_rounds": 2,
+            "max_rounds": 3,
+            "min_total_chars_to_close": 80
+          },
+          "router_packet": {
+            "primary_intent": "verify",
+            "operations": [
+              "verify"
+            ],
+            "information_state": {
+              "missing_required_information": false,
+              "contains_unverified_claims": false,
+              "requires_current_information": false,
+              "multiple_intents": true
+            },
+            "constraints": {
+              "response_length": "unspecified",
+              "formats": [],
+              "must": [
+                "preserve_neutrality",
+                "avoid_overclaim"
+              ],
+              "must_not": []
+            },
+            "risk": {
+              "level": "low",
+              "flags": []
+            },
+            "confidence": 0.8300000000000001
+          },
+          "failure_guard": {
+            "guard_actions": [
+              "avoid_overclaim",
+              "preserve_constraints",
+              "preserve_multi_intent",
+              "split_or_sequence_operations",
+              "verify_up"
+            ],
+            "bad_tendencies": [
+              "accept_unverified_claim_without_check",
+              "collapse_compound_intent_into_single_response",
+              "ignore_explicit_constraints"
+            ],
+            "severity": "minor",
+            "relabel_hints": [
+              "preserve_compound_intent_sequence",
+              "preserve_constraints",
+              "preserve_verify_step"
+            ],
+            "reason_codes": [
+              "compound_intent_guard",
+              "constraint_guard",
+              "verification_guard"
+            ]
+          },
+          "next_gemma_action": "continue_current_topic",
+          "moderator_comment": {
+            "enabled": true,
+            "style": "light_facilitator_comment",
+            "comment": "Moderator note: for next Gemma turn, focus on intent_accuracy, operation_exact_match, risk_exact_match. Make the boundary explicit, add one should_fire and one should_not_fire pair, and avoid turning mere sensitive words into high-risk routes. Focus notes: separate missing-decision-context clarify from simple build/respond requests; name the cheapest sufficient route V7 facilitator note: for V7 repair, push the next answer to produce a minimal pair, two paraphrases, cheap_sufficient_route, suppressor marker, positive-fire marker, and terminal_action.",
+            "matched_rule_ids": [
+              "ambiguous_clarify_boundary"
+            ],
+            "weak_metrics": [
+              "intent_accuracy",
+              "operation_exact_match",
+              "risk_exact_match"
+            ],
+            "topic_target_set": "v7_router_repair_discussion"
+          }
+        },
+        {
+          "schema_version": "router-debate-moderation-decision.v1",
+          "topic_id": "v7-ambiguous-clarify-vs-build",
+          "decision": "close_topic",
+          "closed": true,
+          "reasons": [
+            "router_close_criteria_met"
+          ],
+          "checks": {
+            "completed_rounds": 2,
+            "has_gemma_expander": true,
+            "has_qwen_critic": true,
+            "critic_has_final_content": true,
+            "has_suppressed_reasoning": false,
+            "total_content_chars": 208,
+            "min_rounds": 2,
+            "max_rounds": 3,
+            "min_total_chars_to_close": 80
+          },
+          "router_packet": {
+            "primary_intent": "verify",
+            "operations": [
+              "verify"
+            ],
+            "information_state": {
+              "missing_required_information": false,
+              "contains_unverified_claims": false,
+              "requires_current_information": false,
+              "multiple_intents": true
+            },
+            "constraints": {
+              "response_length": "unspecified",
+              "formats": [],
+              "must": [
+                "preserve_neutrality",
+                "avoid_overclaim"
+              ],
+              "must_not": []
+            },
+            "risk": {
+              "level": "low",
+              "flags": []
+            },
+            "confidence": 0.8300000000000001
+          },
+          "failure_guard": {
+            "guard_actions": [
+              "avoid_overclaim",
+              "preserve_constraints",
+              "preserve_multi_intent",
+              "split_or_sequence_operations",
+              "verify_up"
+            ],
+            "bad_tendencies": [
+              "accept_unverified_claim_without_check",
+              "collapse_compound_intent_into_single_response",
+              "ignore_explicit_constraints"
+            ],
+            "severity": "minor",
+            "relabel_hints": [
+              "preserve_compound_intent_sequence",
+              "preserve_constraints",
+              "preserve_verify_step"
+            ],
+            "reason_codes": [
+              "compound_intent_guard",
+              "constraint_guard",
+              "verification_guard"
+            ]
+          },
+          "next_gemma_action": "start_next_topic",
+          "moderator_comment": {
+            "enabled": true,
+            "style": "light_facilitator_comment",
+            "comment": "Moderator note: for close extraction, focus on intent_accuracy, operation_exact_match, risk_exact_match. Make the boundary explicit, add one should_fire and one should_not_fire pair, and avoid turning mere sensitive words into high-risk routes. Focus notes: separate missing-decision-context clarify from simple build/respond requests; name the cheapest sufficient route V7 facilitator note: for V7 repair, push the next answer to produce a minimal pair, two paraphrases, cheap_sufficient_route, suppressor marker, positive-fire marker, and terminal_action.",
+            "matched_rule_ids": [
+              "ambiguous_clarify_boundary"
+            ],
+            "weak_metrics": [
+              "intent_accuracy",
+              "operation_exact_match",
+              "risk_exact_match"
+            ],
+            "topic_target_set": "v7_router_repair_discussion"
+          }
+        }
+      ],
+      "router_decision": {
+        "schema_version": "router-debate-moderation-decision.v1",
+        "topic_id": "v7-ambiguous-clarify-vs-build",
+        "decision": "close_topic",
+        "closed": true,
+        "reasons": [
+          "router_close_criteria_met"
+        ],
+        "checks": {
+          "completed_rounds": 2,
+          "has_gemma_expander": true,
+          "has_qwen_critic": true,
+          "critic_has_final_content": true,
+          "has_suppressed_reasoning": false,
+          "total_content_chars": 208,
+          "min_rounds": 2,
+          "max_rounds": 3,
+          "min_total_chars_to_close": 80
+        },
+        "router_packet": {
+          "primary_intent": "verify",
+          "operations": [
+            "verify"
+          ],
+          "information_state": {
+            "missing_required_information": false,
+            "contains_unverified_claims": false,
+            "requires_current_information": false,
+            "multiple_intents": true
+          },
+          "constraints": {
+            "response_length": "unspecified",
+            "formats": [],
+            "must": [
+              "preserve_neutrality",
+              "avoid_overclaim"
+            ],
+            "must_not": []
+          },
+          "risk": {
+            "level": "low",
+            "flags": []
+          },
+          "confidence": 0.8300000000000001
+        },
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_constraints",
+            "preserve_multi_intent",
+            "split_or_sequence_operations",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "collapse_compound_intent_into_single_response",
+            "ignore_explicit_constraints"
+          ],
+          "severity": "minor",
+          "relabel_hints": [
+            "preserve_compound_intent_sequence",
+            "preserve_constraints",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "compound_intent_guard",
+            "constraint_guard",
+            "verification_guard"
+          ]
+        },
+        "next_gemma_action": "start_next_topic",
+        "moderator_comment": {
+          "enabled": true,
+          "style": "light_facilitator_comment",
+          "comment": "Moderator note: for close extraction, focus on intent_accuracy, operation_exact_match, risk_exact_match. Make the boundary explicit, add one should_fire and one should_not_fire pair, and avoid turning mere sensitive words into high-risk routes. Focus notes: separate missing-decision-context clarify from simple build/respond requests; name the cheapest sufficient route V7 facilitator note: for V7 repair, push the next answer to produce a minimal pair, two paraphrases, cheap_sufficient_route, suppressor marker, positive-fire marker, and terminal_action.",
+          "matched_rule_ids": [
+            "ambiguous_clarify_boundary"
+          ],
+          "weak_metrics": [
+            "intent_accuracy",
+            "operation_exact_match",
+            "risk_exact_match"
+          ],
+          "topic_target_set": "v7_router_repair_discussion"
+        }
+      },
+      "candidate_stub": {
+        "status": "draft_stub_requires_human_review",
+        "training_allowed": false,
+        "source": "router_debate_raw_log",
+        "topic_id": "v7-ambiguous-clarify-vs-build",
+        "suggested_input": "曖昧な依頼で、clarify すべきか、そのまま build/respond に進んでよいかを議論する。例:「これいい感じに整えて」「この案で進めて大丈夫？」「足りない情報があるなら先に聞いて」。should_fire は前提不足や作業条件不足、should_not_fire は軽い整形や明確な作業依頼。",
+        "suggested_axes": [
+          "v7_router_repair",
+          "ambiguous_request_boundary",
+          "clarify_vs_build",
+          "cheap_sufficient_route",
+          "positive_negative_pair"
+        ],
+        "router_packet_hint": {
+          "primary_intent": "verify",
+          "operations": [
+            "verify"
+          ],
+          "information_state": {
+            "missing_required_information": false,
+            "contains_unverified_claims": false,
+            "requires_current_information": false,
+            "multiple_intents": true
+          },
+          "constraints": {
+            "response_length": "unspecified",
+            "formats": [],
+            "must": [
+              "preserve_neutrality",
+              "avoid_overclaim"
+            ],
+            "must_not": []
+          },
+          "risk": {
+            "level": "low",
+            "flags": []
+          },
+          "confidence": 0.8300000000000001
+        },
+        "notes": "Use only as a review aid. Rewrite into a short self-contained sample before fixture adoption."
+      }
+    }
+  ]
+}

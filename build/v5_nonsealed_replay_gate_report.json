@@ -1,0 +1,630 @@
+{
+  "schema_version": "v5-nonsealed-replay-gate-report.v1",
+  "generated_at": "2026-06-24T07:44:17.151102+00:00",
+  "status": "passed",
+  "passed": true,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "active_sealed_v5_required_before_adjudication": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": true
+  },
+  "summary": {
+    "lane_count": 4,
+    "passed_lane_count": 4,
+    "failed_lanes": [],
+    "ready_for_step6_sealed_v5_rotation": true
+  },
+  "lanes": {
+    "visible_plm": {
+      "name": "visible_plm",
+      "source": "tests\\fixtures\\pattern_language_benchmark_v1.json",
+      "evaluated_splits": [
+        "train",
+        "validation"
+      ],
+      "sealed_split_evaluated": false,
+      "thresholds": {
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0
+      },
+      "measurement": {
+        "case_count": 56,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": [],
+      "passed": true
+    },
+    "v4_failure_memory_replay": {
+      "name": "v4_failure_memory_replay",
+      "source": "tests\\fixtures\\v4_failure_memory_fixture_v1.json",
+      "thresholds": {
+        "exact_match_rate": 1.0,
+        "guard_subset_match_rate": 1.0
+      },
+      "measurement": {
+        "item_count": 38,
+        "exact_match_count": 38,
+        "exact_match_rate": 1.0,
+        "guard_subset_match_count": 38,
+        "guard_subset_match_rate": 1.0,
+        "miss_count": 0,
+        "guard_miss_count": 0
+      },
+      "measurements": [
+        {
+          "id": "fm-v4-001",
+          "source_candidate_id": "cc-open-v1-001",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-002",
+          "source_candidate_id": "cc-open-v1-002",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-003",
+          "source_candidate_id": "cc-open-v1-003",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-004",
+          "source_candidate_id": "cc-open-v1-007",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-005",
+          "source_candidate_id": "cc-open-v1-009",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-006",
+          "source_candidate_id": "cc-open-v1-010",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-007",
+          "source_candidate_id": "cc-open-v1-011",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-008",
+          "source_candidate_id": "cc-open-v1-012",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-009",
+          "source_candidate_id": "cc-open-v1-013",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-010",
+          "source_candidate_id": "cc-open-v1-014",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-011",
+          "source_candidate_id": "cc-open-v1-015",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-012",
+          "source_candidate_id": "cc-open-v1-016",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-013",
+          "source_candidate_id": "cc-open-v1-017",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-014",
+          "source_candidate_id": "cc-open-v1-018",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-015",
+          "source_candidate_id": "cc-open-v1-019",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-016",
+          "source_candidate_id": "cc-open-v1-020",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-017",
+          "source_candidate_id": "cc-open-v1-021",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-018",
+          "source_candidate_id": "cc-open-v1-022",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-019",
+          "source_candidate_id": "cc-open-v1-023",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-020",
+          "source_candidate_id": "cc-open-v1-024",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-021",
+          "source_candidate_id": "cc-open-v1-025",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-022",
+          "source_candidate_id": "cc-open-v1-026",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-023",
+          "source_candidate_id": "cc-open-v1-027",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-024",
+          "source_candidate_id": "cc-open-v1-028",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-025",
+          "source_candidate_id": "cc-open-v1-029",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-026",
+          "source_candidate_id": "cc-open-v1-030",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-027",
+          "source_candidate_id": "cc-open-v1-031",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-028",
+          "source_candidate_id": "cc-open-v1-032",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-029",
+          "source_candidate_id": "cc-open-v1-034",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-030",
+          "source_candidate_id": "cc-open-v1-035",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-031",
+          "source_candidate_id": "cc-open-v1-036",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-032",
+          "source_candidate_id": "cc-open-v1-037",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-033",
+          "source_candidate_id": "cc-open-v1-038",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-034",
+          "source_candidate_id": "cc-open-v1-051",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-035",
+          "source_candidate_id": "cc-open-v1-054",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-036",
+          "source_candidate_id": "cc-open-v1-055",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-037",
+          "source_candidate_id": "cc-open-v1-056",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        },
+        {
+          "id": "fm-v4-038",
+          "source_candidate_id": "cc-open-v1-058",
+          "exact_match": true,
+          "guard_subset_match": true,
+          "field_matches": {
+            "primary_intent": true,
+            "operations": true,
+            "information_state": true,
+            "constraints": true,
+            "risk": true
+          }
+        }
+      ],
+      "passed": true
+    },
+    "v4_puzzle_failure_memory_preservation": {
+      "name": "v4_puzzle_failure_memory_preservation",
+      "sources": {
+        "trace_report": "build\\v4_puzzle_solver_trace_v1.json",
+        "failure_memory": "tests\\fixtures\\v4_puzzle_failure_memory_v1.json"
+      },
+      "thresholds": {
+        "failed_task_ids_match_failure_memory": true,
+        "success_traces_promoted": false,
+        "policy_ok": true,
+        "item_contract_ok": true
+      },
+      "measurement": {
+        "trace_task_count": 12,
+        "trace_success_count": 10,
+        "trace_failure_count": 2,
+        "failure_memory_count": 2,
+        "failed_task_ids": [
+          "puzzle-v4-seed-003",
+          "puzzle-v4-seed-011"
+        ],
+        "failure_memory_task_ids": [
+          "puzzle-v4-seed-003",
+          "puzzle-v4-seed-011"
+        ],
+        "policy_ok": true,
+        "item_contract_ok": true,
+        "success_traces_promoted": false
+      },
+      "passed": true
+    },
+    "v5_nonsealed_challenge": {
+      "name": "v5_nonsealed_challenge",
+      "source": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+      "review_status": "draft",
+      "thresholds": {
+        "intent_accuracy_min": 0.95,
+        "critical_signal_recall_min": 0.95,
+        "operation_exact_match_min": 0.95,
+        "constraint_exact_match_min": 0.95,
+        "risk_exact_match_min": 0.95,
+        "valid_packet_rate": 1.0,
+        "error_count_max": 0
+      },
+      "measurement": {
+        "case_count": 48,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": [],
+      "passed": true
+    }
+  },
+  "next_step": {
+    "step": 6,
+    "name": "sealed_v5_rotation",
+    "output": "tests\\fixtures\\pattern_language_sealed_v5.json"
+  }
+}

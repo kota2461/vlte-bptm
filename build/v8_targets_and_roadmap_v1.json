@@ -1,0 +1,404 @@
+{
+  "schema_version": "v8-targets-and-roadmap.v1",
+  "generated_at": "2026-06-25T06:56:41.464471+00:00",
+  "status": "step8_sealed_v8_measurement_completed_v9_rotation_required",
+  "sources": {
+    "sealed_v7_measurement": "build\\pattern_language_sealed_v7_measurement_report.json",
+    "readiness_review": "build\\plm_measurement_readiness_review.json",
+    "fixture_registry": "tests\\fixtures\\pattern_language_fixture_registry.json",
+    "v8_priority_selection": "build\\v8_recovery_debate_candidate_priority_selection_v1.json",
+    "v8_provisional_replay": "build\\v8_recovery_priority_review_provisional_test_report_v1.json",
+    "v8_nonsealed_replay_gate": "build\\v8_nonsealed_replay_gate_report_v1.json"
+  },
+  "policy": {
+    "sealed_v7_consumed": true,
+    "sealed_v7_labels_used_for_tuning": false,
+    "sealed_v7_text_used_for_training": false,
+    "sealed_v7_measurement_used_as_taxonomy_only": true,
+    "v8_priority_review_human_approved": true,
+    "v8_nonsealed_replay_gate_passed": true,
+    "prior_v8_provisional_replay_was_gate": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_successor_required_before_measurement": true
+  },
+  "baseline": {
+    "fixture": "pattern_language_sealed_v7.json",
+    "case_count": 28,
+    "intent_accuracy": 0.785714,
+    "critical_signal_recall": 0.642857,
+    "operation_exact_match": 0.714286,
+    "constraint_exact_match": 0.75,
+    "risk_exact_match": 0.785714,
+    "sealed_error_count": 16,
+    "readiness_decision_after_measurement": "blocked",
+    "blocked_reasons": [
+      "sealed_fixture_not_available"
+    ]
+  },
+  "targets": {
+    "minimum": {
+      "intent_accuracy": 0.892857,
+      "critical_signal_recall": 0.857143,
+      "operation_exact_match": 0.857143,
+      "constraint_exact_match": 0.857143,
+      "risk_exact_match": 0.892857,
+      "sealed_error_count_max": 8,
+      "critical_signal_miss_count_max": 2
+    },
+    "stretch": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.928571,
+      "operation_exact_match": 0.928571,
+      "constraint_exact_match": 0.928571,
+      "risk_exact_match": 0.928571,
+      "sealed_error_count_max": 5,
+      "critical_signal_miss_count_max": 1
+    },
+    "granularity": {
+      "case_metric_step": 0.035714,
+      "critical_signal_step": 0.071429
+    }
+  },
+  "taxonomy": {
+    "field_error_counts": {
+      "constraints": 7,
+      "information_state": 6,
+      "operations": 8,
+      "primary_intent": 6,
+      "risk": 6
+    },
+    "critical_signal_miss_counts": {
+      "missing_required_information": 2,
+      "contains_unverified_claims": 0,
+      "requires_current_information": 1,
+      "multiple_intents": 2
+    },
+    "intent_boundary_transitions": {
+      "build->summarize": 1,
+      "build->verify": 1,
+      "clarify->build": 1,
+      "clarify->verify": 2,
+      "respond->explain": 1
+    },
+    "by_expected_intent": {
+      "build": {
+        "primary_intent": 2,
+        "operations": 2,
+        "constraints": 1
+      },
+      "clarify": {
+        "primary_intent": 3,
+        "information_state": 3,
+        "operations": 4,
+        "risk": 1
+      },
+      "explain": {
+        "constraints": 2,
+        "risk": 1
+      },
+      "explore": {
+        "information_state": 1,
+        "risk": 1
+      },
+      "respond": {
+        "constraints": 2,
+        "primary_intent": 1,
+        "operations": 1
+      },
+      "summarize": {
+        "constraints": 1,
+        "risk": 2,
+        "information_state": 1
+      },
+      "verify": {
+        "information_state": 1,
+        "constraints": 1,
+        "risk": 1,
+        "operations": 1
+      }
+    },
+    "by_predicted_intent": {
+      "build": {
+        "primary_intent": 1,
+        "information_state": 1,
+        "operations": 1
+      },
+      "clarify": {
+        "information_state": 1,
+        "operations": 1
+      },
+      "explain": {
+        "primary_intent": 1,
+        "constraints": 3,
+        "operations": 1,
+        "risk": 1
+      },
+      "explore": {
+        "information_state": 1,
+        "risk": 1
+      },
+      "respond": {
+        "constraints": 1
+      },
+      "summarize": {
+        "primary_intent": 1,
+        "constraints": 2,
+        "operations": 1,
+        "risk": 2,
+        "information_state": 1
+      },
+      "verify": {
+        "primary_intent": 3,
+        "information_state": 2,
+        "operations": 4,
+        "risk": 2,
+        "constraints": 1
+      }
+    },
+    "focus_areas": [
+      {
+        "id": "clarify_missing_info_recovery",
+        "priority": 1,
+        "generalized_issue": "missing inputs and ask-first requests still drift into build or verify too early",
+        "evidence": {
+          "clarify_recall": 0.25,
+          "missing_required_information_misses": 2
+        },
+        "covered_by_v8_categories": [
+          "missing_info",
+          "multiple_intents"
+        ]
+      },
+      {
+        "id": "operation_terminal_sequence",
+        "priority": 1,
+        "generalized_issue": "terminal actions and multi-step requests need stable operation order",
+        "evidence": {
+          "field": "operations",
+          "count": 8,
+          "metric": 0.714286
+        },
+        "covered_by_v8_categories": [
+          "multiple_intents",
+          "operation_terminal"
+        ]
+      },
+      {
+        "id": "constraint_false_positive_balance",
+        "priority": 1,
+        "generalized_issue": "format and tone constraints must be preserved without over-firing risk or verify",
+        "evidence": {
+          "field": "constraints",
+          "count": 7,
+          "metric": 0.75
+        },
+        "covered_by_v8_categories": [
+          "constraints",
+          "false_positive",
+          "no-risk contrast"
+        ]
+      },
+      {
+        "id": "risk_ladder_boundary",
+        "priority": 2,
+        "generalized_issue": "AI, legal, and medical terms need low/medium/high separation by actual user intent",
+        "evidence": {
+          "field": "risk",
+          "count": 6,
+          "metric": 0.785714
+        },
+        "covered_by_v8_categories": [
+          "risk_ladder",
+          "false_positive"
+        ]
+      },
+      {
+        "id": "current_search_split",
+        "priority": 2,
+        "generalized_issue": "current-looking local context must not become unnecessary web/current routing",
+        "evidence": {
+          "requires_current_information_misses": 1
+        },
+        "covered_by_v8_categories": [
+          "current_search_split"
+        ]
+      },
+      {
+        "id": "paraphrase_and_mixed_language_robustness",
+        "priority": 2,
+        "generalized_issue": "the same boundary should hold under paraphrase and mixed Japanese/English phrasing",
+        "evidence": {
+          "intent_accuracy": 0.785714,
+          "transitions": {
+            "build->summarize": 1,
+            "build->verify": 1,
+            "clarify->build": 1,
+            "clarify->verify": 2,
+            "respond->explain": 1
+          }
+        },
+        "covered_by_v8_categories": [
+          "paraphrase",
+          "mixed_language"
+        ]
+      },
+      {
+        "id": "unverified_claim_guard",
+        "priority": 2,
+        "generalized_issue": "vendor, legal, and report claims should trigger verification only when a claim is actually asserted",
+        "evidence": {
+          "contains_unverified_claims_misses": 0
+        },
+        "covered_by_v8_categories": [
+          "unverified_claim",
+          "current_search_split"
+        ]
+      }
+    ]
+  },
+  "nonsealed_recovery_summary": {
+    "source_topic_count": 100,
+    "priority_review_count": 30,
+    "priority_category_counts": {
+      "constraints": 3,
+      "current_search_split": 3,
+      "false_positive": 3,
+      "missing_info": 3,
+      "mixed_language": 3,
+      "multiple_intents": 3,
+      "operation_terminal": 3,
+      "paraphrase": 3,
+      "risk_ladder": 3,
+      "unverified_claim": 3
+    },
+    "v8_gate_required_error_count": 0,
+    "v8_gate_case_count": 30,
+    "v8_gate_exact": true
+  },
+  "pre_rotation_gates": {
+    "prior_v7_nonsealed_gate_required": true,
+    "v8_priority_review_exact_required": true,
+    "v8_nonsealed_gate_error_count_max": 0,
+    "sealed_overlap_count_required": 0
+  },
+  "roadmap": [
+    {
+      "step": 1,
+      "name": "post_v7_measurement_taxonomy",
+      "output": "build\\v8_targets_and_roadmap_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 2,
+      "name": "v8_recovery_debate_stock",
+      "output": "debate_lab\\topics_v8_recovery_100.json",
+      "status": "completed"
+    },
+    {
+      "step": 3,
+      "name": "v8_recovery_candidate_priority_selection",
+      "output": "build\\v8_recovery_debate_candidate_priority_selection_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 4,
+      "name": "v8_priority_review_adoption_and_replay",
+      "output": "build\\v8_recovery_priority_review_provisional_test_report_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 5,
+      "name": "v8_nonsealed_replay_gate",
+      "output": "build\\v8_nonsealed_replay_gate_report_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 6,
+      "name": "sealed_v8_rotation_review",
+      "output": "build\\v8_sealed_rotation_review_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 7,
+      "name": "sealed_v8_rotation",
+      "output": "tests\\fixtures\\pattern_language_sealed_v8.json",
+      "status": "completed"
+    },
+    {
+      "step": 8,
+      "name": "sealed_v8_one_time_measurement",
+      "output": "build\\pattern_language_sealed_v8_measurement_report.json",
+      "status": "completed"
+    }
+  ],
+  "next_action": "roadmap_v9_step1_post_v8_measurement_taxonomy",
+  "step6_sealed_rotation_review": {
+    "output": "build\\v8_sealed_rotation_review_v1.json",
+    "decision": "eligible_for_fresh_sealed_v8_rotation",
+    "passed": true,
+    "sealed_v8_fixture_created_now": false,
+    "sealed_v8_opened_for_measurement": false,
+    "same_cycle_promotion_allowed": false,
+    "requires_fresh_sealed_v8_before_measurement": true,
+    "summary": {
+      "required_error_count": 0,
+      "active_sealed_fixtures": 0,
+      "blocker_count": 0
+    }
+  },
+  "step7_sealed_rotation": {
+    "output": "build\\v8_sealed_rotation_report_v1.json",
+    "fixture": "tests\\fixtures\\pattern_language_sealed_v8.json",
+    "passed": true,
+    "sealed_v8_opened_for_measurement": false,
+    "sealed_v8_labels_used_for_tuning": false,
+    "same_cycle_promotion_allowed": false,
+    "summary": {
+      "case_count": 28,
+      "status": "active",
+      "measured": false,
+      "reviewed": false,
+      "readiness_decision": "eligible",
+      "blocked_reasons": []
+    }
+  },
+  "step8_sealed_measurement": {
+    "output": "build\\pattern_language_sealed_v8_measurement_report.json",
+    "summary": "build\\v8_step8_measurement_summary.md",
+    "fixture": "tests\\fixtures\\pattern_language_sealed_v8.json",
+    "sealed_fixture_opened": true,
+    "sealed_labels_used_for_tuning": false,
+    "passed_minimum": false,
+    "minimum_metrics_met": false,
+    "critical_signal_miss_count": 2,
+    "critical_signal_miss_gate_met": true,
+    "rotation_required_before_tuning": true,
+    "readiness_after_measurement": {
+      "decision": "blocked",
+      "blocked_reasons": [
+        "sealed_fixture_not_available"
+      ],
+      "sealed_fixture": null
+    },
+    "measurements": {
+      "case_count": 28,
+      "intent_accuracy": 0.928571,
+      "intent_macro_f1": 0.927438,
+      "critical_signal_recall": 0.833333,
+      "operation_exact_match": 0.785714,
+      "constraint_exact_match": 0.785714,
+      "risk_exact_match": 0.785714,
+      "valid_packet_rate": 1.0,
+      "evidence_offset_validity": 1.0,
+      "error_count": 14,
+      "error_field_counts": {
+        "constraints": 6,
+        "information_state": 6,
+        "operations": 6,
+        "primary_intent": 2,
+        "risk": 6
+      }
+    }
+  }
+}

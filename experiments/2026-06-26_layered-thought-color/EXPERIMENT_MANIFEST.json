@@ -1,0 +1,51 @@
+﻿{
+    "name":  "thought-color-code-v0.1",
+    "created":  "2026-06-26",
+    "status":  "draft",
+    "scope":  "isolated experiment",
+    "summary":  "Base2024 is treated as a coarse color, with small modifier channels layered outside it.",
+    "principles":  [
+                       "Keep 2024 base collisions as useful sharing, not as a bug to erase.",
+                       "Treat extra bits as separate semantic channels.",
+                       "Do not train on the packed 19-bit value as the only label.",
+                       "Keep this outside semantic-packet.v1 until measured."
+                   ],
+    "layout":  {
+                   "base_id":  {
+                                   "bits":  11,
+                                   "valid_values":  2024,
+                                   "reserved_values":  24
+                               },
+                   "stance":  {
+                                  "bits":  3,
+                                  "valid_values":  8
+                              },
+                   "operation":  {
+                                     "bits":  3,
+                                     "valid_values":  8
+                                 },
+                   "intensity":  {
+                                     "bits":  2,
+                                     "valid_values":  4
+                                 }
+               },
+    "files":  [
+                  "README.md",
+                  "layered_thought_color/__init__.py",
+                  "layered_thought_color/__main__.py",
+                  "layered_thought_color/code.py",
+                  "layered_thought_color/compare.py",
+                  "layered_thought_color/copy_data.py",
+                  "layered_thought_color/data.py",
+                  "layered_thought_color/model.py",
+                  "layered_thought_color/paths.py",
+                  "tests/test_code.py",
+                  "tests/test_learning_copy_and_compare.py",
+                  "layered_thought_color/sample_harvest.py",
+                  "tests/test_sample_harvest.py",
+                  "data/thought_color_harvested_samples_v0_1.json",
+                  "reports/thought_color_harvest_report_v0_1.json",
+                  "layered_thought_color/sample_synthetic.py",
+                  "tests/test_sample_synthetic.py"
+              ]
+}

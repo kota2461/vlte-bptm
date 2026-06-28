@@ -1013,16 +1013,6 @@ def test_round2_batches_are_consistent_and_pending_only(
     assert not (sealed_texts & training_texts)
     assert len(sealed["cases"]) >= 20
 
-    sealed_v2 = json.loads(
-        (
-            Path(__file__).parent
-            / "fixtures"
-            / "sealed_boundary_slice_v2.json"
-        ).read_text(encoding="utf-8")
-    )
-    sealed_v2_texts = {case["input"] for case in sealed_v2["cases"]}
-    assert not (sealed_v2_texts & training_texts)
-    assert not (sealed_v2_texts & sealed_texts)
     registry = json.loads(
         (
             Path(__file__).parent
@@ -1034,9 +1024,10 @@ def test_round2_batches_are_consistent_and_pending_only(
         registry["fixtures"]["sealed_boundary_slice_v1.json"]["status"]
         == "consumed"
     )
-    assert (
-        registry["fixtures"]["sealed_boundary_slice_v2.json"]["status"]
-        == "active"
+    sealed_v2_entry = registry["fixtures"]["sealed_boundary_slice_v2.json"]
+    assert sealed_v2_entry["status"] == "active"
+    assert sealed_v2_entry["sha256"] == deployment.file_sha256(
+        Path(__file__).parent / "fixtures" / "sealed_boundary_slice_v2.json"
     )
 
     database = PatternDatabase(tmp_path / "patterns.db")

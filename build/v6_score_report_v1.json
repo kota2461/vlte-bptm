@@ -1,0 +1,336 @@
+{
+  "schema_version": "v6-score-report.v1",
+  "generated_at": "2026-06-28T07:52:04.921709+00:00",
+  "status": "completed",
+  "policy": {
+    "sealed_fixture_opened_now": false,
+    "sealed_measurement_used_for_tuning": false,
+    "nonsealed_current_route_measurement_is_gate": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "score_formula": {
+    "raw_score": {
+      "intent_accuracy": 0.25,
+      "critical_signal_recall": 0.2,
+      "operation_exact_match": 0.2,
+      "constraint_exact_match": 0.15,
+      "risk_exact_match": 0.15,
+      "valid_packet_rate": 0.05
+    },
+    "score": "weighted score over observable metrics; critical_signal_recall is excluded when a lane has zero expected critical-signal support"
+  },
+  "summary": {
+    "lane_count": 8,
+    "exact_lane_count": 8,
+    "gap_lane_count": 0,
+    "exact_lanes": [
+      "visible_plm_train_validation",
+      "v6_boundary_false_positive_adopted",
+      "v6_boundary_priority_review_adopted",
+      "v6_structural_build_30_adopted",
+      "v6_boundary_false_positive_candidate",
+      "v6_contrast_negative",
+      "v6_router_debate_adopted",
+      "v6_router_debate_candidate"
+    ],
+    "gap_lanes": [],
+    "average_nonsealed_score": 1.0,
+    "average_nonsealed_raw_score": 0.875,
+    "boundary_false_positive_adopted_score": 1.0,
+    "boundary_false_positive_adopted_raw_score": 0.8,
+    "boundary_false_positive_adopted_errors": 0,
+    "boundary_priority_review_adopted_score": 1.0,
+    "boundary_priority_review_adopted_raw_score": 0.8,
+    "boundary_priority_review_adopted_errors": 0,
+    "structural_build_30_adopted_score": 1.0,
+    "structural_build_30_adopted_raw_score": 0.8,
+    "structural_build_30_adopted_errors": 0,
+    "selection_summary": {
+      "source_topic_count": 18,
+      "source_turn_count": 144,
+      "selected_primary_count": 15,
+      "selected_secondary_count": 3,
+      "held_ladder_count": 0,
+      "quality_issue_count": 0,
+      "immediate_focus_match_count": 10,
+      "by_decision": {
+        "select_primary_review": 15,
+        "select_secondary_review": 3
+      },
+      "by_target_set": {
+        "false_positive_set": 5,
+        "mixed_ja_en": 3,
+        "no_risk_contrast": 5,
+        "paraphrase_set": 5
+      },
+      "section_coverage": {
+        "boundary_cases": 18,
+        "candidate_sample_notes": 18,
+        "classification_rule": 18,
+        "should_fire_examples": 18,
+        "should_not_fire_examples": 18
+      }
+    }
+  },
+  "lanes": {
+    "visible_plm_train_validation": {
+      "source": "tests/fixtures/pattern_language_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "train",
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 56,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 8,
+        "contains_unverified_claims": 7,
+        "requires_current_information": 2,
+        "multiple_intents": 2
+      },
+      "score": 1.0,
+      "raw_score": 1.0,
+      "score_note": "all weighted metrics included",
+      "passed_exact": true,
+      "errors": [],
+      "sealed_split_evaluated": false
+    },
+    "v6_boundary_false_positive_adopted": {
+      "source": "tests/fixtures/v6_boundary_false_positive_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 15,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 0,
+        "contains_unverified_claims": 0,
+        "requires_current_information": 0,
+        "multiple_intents": 0
+      },
+      "score": 1.0,
+      "raw_score": 0.8,
+      "score_note": "critical_signal_recall excluded from score because this lane has no expected critical signals",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_boundary_priority_review_adopted": {
+      "source": "tests/fixtures/v6_boundary_priority_review_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 26,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 0,
+        "contains_unverified_claims": 0,
+        "requires_current_information": 0,
+        "multiple_intents": 0
+      },
+      "score": 1.0,
+      "raw_score": 0.8,
+      "score_note": "critical_signal_recall excluded from score because this lane has no expected critical signals",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_structural_build_30_adopted": {
+      "source": "tests/fixtures/v6_structural_build_30_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 30,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 0,
+        "contains_unverified_claims": 0,
+        "requires_current_information": 0,
+        "multiple_intents": 0
+      },
+      "score": 1.0,
+      "raw_score": 0.8,
+      "score_note": "critical_signal_recall excluded from score because this lane has no expected critical signals",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_boundary_false_positive_candidate": {
+      "source": "tests/fixtures/v6_boundary_false_positive_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 15,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 0,
+        "contains_unverified_claims": 0,
+        "requires_current_information": 0,
+        "multiple_intents": 0
+      },
+      "score": 1.0,
+      "raw_score": 0.8,
+      "score_note": "critical_signal_recall excluded from score because this lane has no expected critical signals",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_contrast_negative": {
+      "source": "tests/fixtures/v6_contrast_negative_benchmark_v1.json",
+      "review_status": "draft",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 30,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 0,
+        "contains_unverified_claims": 0,
+        "requires_current_information": 0,
+        "multiple_intents": 0
+      },
+      "score": 1.0,
+      "raw_score": 0.8,
+      "score_note": "critical_signal_recall excluded from score because this lane has no expected critical signals",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_router_debate_adopted": {
+      "source": "tests/fixtures/v6_router_debate_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 12,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 1,
+        "contains_unverified_claims": 8,
+        "requires_current_information": 3,
+        "multiple_intents": 12
+      },
+      "score": 1.0,
+      "raw_score": 1.0,
+      "score_note": "all weighted metrics included",
+      "passed_exact": true,
+      "errors": []
+    },
+    "v6_router_debate_candidate": {
+      "source": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "evaluated_splits": [
+        "validation"
+      ],
+      "measurement": {
+        "case_count": 12,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "critical_signal_support": {
+        "missing_required_information": 1,
+        "contains_unverified_claims": 8,
+        "requires_current_information": 3,
+        "multiple_intents": 12
+      },
+      "score": 1.0,
+      "raw_score": 1.0,
+      "score_note": "all weighted metrics included",
+      "passed_exact": true,
+      "errors": []
+    }
+  },
+  "sealed_v5_existing_report": {
+    "source": "build/pattern_language_sealed_v5_measurement_report.json",
+    "available": true,
+    "read_only_existing_report": true,
+    "sealed_fixture_opened_now": false,
+    "status": "plm-sealed-measurement-report.v1",
+    "measurement": {
+      "case_count": 28,
+      "intent_accuracy": 0.75,
+      "critical_signal_recall": 0.375,
+      "operation_exact_match": 0.678571,
+      "constraint_exact_match": 0.821429,
+      "risk_exact_match": 0.892857,
+      "valid_packet_rate": 1.0,
+      "error_count": 18
+    },
+    "critical_signal_support": {
+      "missing_required_information": 4,
+      "contains_unverified_claims": 5,
+      "requires_current_information": 3,
+      "multiple_intents": 4
+    },
+    "score": 0.705357,
+    "raw_score": 0.705357
+  }
+}

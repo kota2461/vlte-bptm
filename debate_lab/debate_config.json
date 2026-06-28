@@ -1,0 +1,276 @@
+{
+    "schema_version":  "router-debate-config.v1",
+    "base_url":  "http://127.0.0.1:1234",
+    "rounds":  4,
+    "temperature":  0.25,
+    "max_tokens":  1200,
+    "moderator":  {
+                      "min_rounds":  4,
+                      "max_rounds":  4,
+                      "min_total_chars_to_close":  80,
+                      "require_critic_final_content":  true
+                  },
+    "moderator_support":  {
+                              "enabled":  true,
+                              "style":  "light_facilitator_comment",
+                              "measured_weaknesses":  {
+                                                          "source":  "build/pattern_language_sealed_v7_measurement_report.json#sealed_v7",
+                                                          "intent_accuracy":  0.785714,
+                                                          "operation_exact_match":  0.714286,
+                                                          "risk_exact_match":  0.785714,
+                                                          "constraint_exact_match":  0.75,
+                                                          "critical_signal_recall":  0.642857
+                                                      },
+                              "max_focus_notes":  4,
+                              "fallback_focus":  [
+                                                     "state the intended low-cost route before adding risk or verify",
+                                                     "separate operation choice from sensitive keyword detection",
+                                                     "downshift risk when the user only mentions a label, heading, tag, filename, or example"
+                                                 ],
+                              "theme_focus_rules":  [
+                                                        {
+                                                            "id":  "metalinguistic_mention",
+                                                            "match_any":  [
+                                                                              "metalinguistic",
+                                                                              "label",
+                                                                              "heading",
+                                                                              "glossary",
+                                                                              "tag",
+                                                                              "filename",
+                                                                              "column"
+                                                                          ],
+                                                            "note":  "distinguish mention-vs-use before firing legal, medical, AI-persona, political, current, or search routes"
+                                                        },
+                                                        {
+                                                            "id":  "current_search_split",
+                                                            "match_any":  [
+                                                                              "current",
+                                                                              "latest",
+                                                                              "search",
+                                                                              "local_context",
+                                                                              "local_command"
+                                                                          ],
+                                                            "note":  "separate local/project current context from fresh external web-current needs"
+                                                        },
+                                                        {
+                                                            "id":  "ai_dependency_boundary",
+                                                            "match_any":  [
+                                                                              "ai_light_use",
+                                                                              "dependency",
+                                                                              "persona"
+                                                                          ],
+                                                            "note":  "separate light comfort, task support, and persona labels from dependency or psychological-risk cases"
+                                                        },
+                                                        {
+                                                            "id":  "legal_license_boundary",
+                                                            "match_any":  [
+                                                                              "legal",
+                                                                              "license",
+                                                                              "apache",
+                                                                              "regulation"
+                                                                          ],
+                                                            "note":  "separate general explanation or label storage from jurisdiction-specific advice or source-required current claims"
+                                                        },
+                                                        {
+                                                            "id":  "medical_design_boundary",
+                                                            "match_any":  [
+                                                                              "medical",
+                                                                              "diagnosis",
+                                                                              "treatment"
+                                                                          ],
+                                                            "note":  "separate UI/data/product design from diagnosis, treatment, or personal medical advice"
+                                                        },
+                                                        {
+                                                            "id":  "mixed_language_boundary",
+                                                            "match_any":  [
+                                                                              "mixed_ja_en",
+                                                                              "brief_explain",
+                                                                              "language_learning"
+                                                                          ],
+                                                            "note":  "keep the boundary stable when Japanese and English terms are mixed"
+                                                        },
+                                                        {
+                                                            "id":  "severity_ladder_boundary",
+                                                            "match_any":  [
+                                                                              "severity",
+                                                                              "ladder",
+                                                                              "critical"
+                                                                          ],
+                                                            "note":  "define low, medium, high, and critical without jumping directly to high"
+                                                        },
+                                                        {
+                                                            "id":  "ambiguous_clarify_boundary",
+                                                            "match_any":  [
+                                                                              "ambiguous_request",
+                                                                              "clarify_vs_build",
+                                                                              "cheap_sufficient_route"
+                                                                          ],
+                                                            "note":  "separate missing-decision-context clarify from simple build/respond requests; name the cheapest sufficient route"
+                                                        },
+                                                        {
+                                                            "id":  "unverified_claim_boundary",
+                                                            "match_any":  [
+                                                                              "unverified_claim",
+                                                                              "verify_strength",
+                                                                              "avoid_overclaim"
+                                                                          ],
+                                                            "note":  "calibrate verify/search/cite strength based on decision impact and safety risk, not on rumor wording alone"
+                                                        },
+                                                        {
+                                                            "id":  "constraint_stacking_boundary",
+                                                            "match_any":  [
+                                                                              "constraint_stacking",
+                                                                              "must_must_not_split",
+                                                                              "ask_first_boundary"
+                                                                          ],
+                                                            "note":  "preserve multiple constraints separately and identify conflicts before collapsing the route"
+                                                        },
+                                                        {
+                                                            "id":  "terminal_action_boundary",
+                                                            "match_any":  [
+                                                                              "terminal_action",
+                                                                              "vertical_stack",
+                                                                              "processing_plan",
+                                                                              "build_vs_respond"
+                                                                          ],
+                                                            "note":  "identify the final deliverable and the vertical order such as verify-then-build or summarize-then-compare"
+                                                        }
+                                                    ],
+                              "weak_metric_threshold":  0.8,
+                              "weak_metric_names":  [
+                                                        "intent_accuracy",
+                                                        "critical_signal_recall",
+                                                        "operation_exact_match",
+                                                        "constraint_exact_match",
+                                                        "risk_exact_match"
+                                                    ]
+                          },
+    "models":  {
+                   "gemma":  {
+                                 "id":  "google/gemma-4-12b-it",
+                                 "role":  "expander",
+                                 "license":  "Apache-2.0 candidate; verify exact checkpoint before production use"
+                             },
+                   "qwen":  {
+                                "id":  "Qwen/Qwen3-8B",
+                                "role":  "critic",
+                                "license":  "Apache-2.0 on the official Qwen3 checkpoint family"
+                            }
+               },
+    "debate_goal":  {
+                        "name":  "v8_recovery_round4_boundary_calibration",
+                        "objective":  "Generate non-sealed round-4 debate material to recover from sealed v7 misses: critical signals, operation order, constraints, risk ladder, and intent boundaries.",
+                        "expected_artifact":  "reviewable candidate notes with should_fire/should_not_fire pairs, paraphrases, cheap-sufficient-route hints, suppressor markers, positive-fire counterparts, and terminal actions"
+                    },
+    "llm_guidance":  {
+                         "shared_rules":  [
+                                              "Do not treat every sensitive-looking keyword as risk.",
+                                              "Separate mention, label, heading, example, and glossary usage from actual advice or decision requests.",
+                                              "Check negated scope such as \u0027not dependency\u0027, \u0027not legal advice\u0027, \u0027not diagnosis\u0027, and \u0027not a current web question\u0027.",
+                                              "For current/search topics, decide whether the request needs external freshness or only local/project context.",
+                                              "For legal-looking topics, separate general explanation from jurisdiction-specific advice.",
+                                              "For medical-looking topics, separate product/design discussion from diagnosis or treatment guidance.",
+                                              "For AI-persona topics, separate light comfort or casual chat from dependency, self-harm, or impaired decision-making risk.",
+                                              "For severity ladders, define low, medium, high, and critical thresholds without jumping directly to high.",
+                                              "Return concise final content only; do not expose hidden chain-of-thought.",
+                                              "For v6_contrast_negative repair, produce explicit should_not_fire examples for label, column, heading, example, glossary, tag, and filename usage.",
+                                              "Every contrast-negative discussion must include one positive counterpart where the sensitive route should still fire.",
+                                              "Treat local/project words such as current folder, latest filename, and search label as local or metalinguistic unless the user asks for fresh external facts.",
+                                              "For v7 router repair, always produce a minimal should_fire / should_not_fire pair and two paraphrases.",
+                                              "Name the cheapest sufficient route before adding verify, search, legal, medical, or high-risk handling.",
+                                              "For ambiguous requests, distinguish missing input, optional preference clarification, and clearly executable work.",
+                                              "For terminal actions, state the final artifact and any required vertical stack before the artifact is produced.",
+                                              "For V8 recovery, prioritize critical signal recall, operation order, constraint preservation, and risk ladder calibration from the sealed v7 miss surface.",
+                                              "In round 4, converge into reviewable sample notes: minimal pair, paraphrases, expected low-cost route, positive-fire counterpart, suppressor marker, and terminal action."
+                                          ],
+                         "expander_tasks":  [
+                                                "Propose positive and negative contrast pairs.",
+                                                "Name the route signal that should fire and the signal that should be suppressed.",
+                                                "Suggest short candidate prompts suitable for human review.",
+                                                "For v7 topics, propose one minimal pair, two paraphrases, a suppressor marker, and a cheap-sufficient-route hint.",
+                                                "Make the terminal action explicit when the topic involves a processing plan or vertical stack."
+                                            ],
+                         "critic_tasks":  [
+                                              "Find false-positive risks in the expander output.",
+                                              "Identify boundary cases that should not become suppression candidates.",
+                                              "Check whether sources, search, legal caution, medical caution, or dependency caution are genuinely needed.",
+                                              "Challenge over-verification when a lower-cost route is enough.",
+                                              "Flag cases where a suppression rule would hide a genuine safety, current, or source requirement.",
+                                              "Check whether the proposed terminal action matches the user request instead of defaulting to build/respond."
+                                          ],
+                         "output_contract":  {
+                                                 "required_sections":  [
+                                                                           "classification_rule",
+                                                                           "should_fire_examples",
+                                                                           "should_not_fire_examples",
+                                                                           "boundary_cases",
+                                                                           "candidate_sample_notes",
+                                                                           "paraphrase_variants",
+                                                                           "cheap_sufficient_route",
+                                                                           "router_packet_hint",
+                                                                           "terminal_action"
+                                                                       ],
+                                                 "forbidden":  [
+                                                                   "sealed labels",
+                                                                   "training-ready claims without human review",
+                                                                   "hidden chain-of-thought"
+                                                               ]
+                                             }
+                     },
+    "policy":  {
+                   "sealed_fixtures_used_as_sources":  false,
+                   "raw_debate_log_training_allowed":  false,
+                   "candidate_training_allowed_without_human_review":  false,
+                   "same_cycle_gate_use_allowed":  false
+               },
+    "contrast_negative_guidance":  {
+                                       "source_fixture":  "tests/fixtures/v6_contrast_negative_benchmark_v1.json",
+                                       "current_score_report":  "build/v6_score_report_v1.json",
+                                       "current_gap_count":  17,
+                                       "focus_groups":  [
+                                                            "ai_label_use",
+                                                            "creative_word_use",
+                                                            "license_label_use",
+                                                            "legal_label_use",
+                                                            "license_contrast",
+                                                            "commerce_label_use",
+                                                            "medical_data_design",
+                                                            "medical_word_use",
+                                                            "neutrality_word_use",
+                                                            "social_word_use",
+                                                            "ai_tag_use",
+                                                            "current_local_context",
+                                                            "current_word_use",
+                                                            "guideline_word_use",
+                                                            "search_label_use",
+                                                            "regulation_label_use"
+                                                        ],
+                                       "required_discussion":  [
+                                                                   "low-risk suppressor marker",
+                                                                   "expected low-cost route",
+                                                                   "bad overfire route to avoid",
+                                                                   "positive-fire counterpart",
+                                                                   "human-review rewrite note"
+                                                               ]
+                                   },
+    "v7_router_repair_guidance":  {
+                                      "enabled":  true,
+                                      "match_any":  [
+                                                        "v7_router_repair",
+                                                        "ambiguous_request_boundary",
+                                                        "unverified_claim_boundary",
+                                                        "constraint_stacking",
+                                                        "terminal_action_boundary"
+                                                    ],
+                                      "instruction_title":  "V7 router repair guidance",
+                                      "purpose":  "Steer Gemma/Qwen toward reviewable boundary samples instead of broad essays.",
+                                      "facilitator_moves":  [
+                                                                "Ask for one should_fire and one should_not_fire example using nearly identical wording.",
+                                                                "Ask for two paraphrases that preserve meaning but change surface words.",
+                                                                "Ask for the cheap sufficient route before any heavier verify/search/risk route.",
+                                                                "Ask for one suppressor marker and one positive-fire marker.",
+                                                                "Ask for the expected terminal action and any vertical stack ordering."
+                                                            ],
+                                      "moderator_comment":  "for V7 repair, push the next answer to produce a minimal pair, two paraphrases, cheap_sufficient_route, suppressor marker, positive-fire marker, and terminal_action."
+                                  }
+}

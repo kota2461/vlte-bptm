@@ -1,0 +1,1242 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v5",
+ "frozen_at": "2026-06-23T06:30:00+00:00",
+ "predecessor": "pattern_language_sealed_v4.json",
+ "authoring_method": "specification-derived successor authored after V5 non-sealed replay gate; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v5-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What is the usual meaning of a 304 Not Modified response?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Give a one-line definition of a debounce function.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 4
+     },
+     {
+      "signal": "short_response",
+      "start": 7,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "For code comments, what does TODO typically signal?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 19,
+      "end": 28
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Name the SQL clause commonly used to group aggregate results.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 4
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why circuit breakers help services recover under repeated failures.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Describe how write-ahead logging protects data during a crash.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 8
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Walk through why stale caches can return correct-looking but outdated results.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Why can a race condition disappear when debug logging is enabled?",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 3
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Estimate the storage bill, but the retention period is not included.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 55,
+      "end": 67
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Before writing the database migration, ask which tenant should be migrated.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "constraint_ask_first",
+      "start": 0,
+      "end": 14
+     },
+     {
+      "signal": "missing_information",
+      "start": 39,
+      "end": 55
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "I want a launch announcement, but the target audience is unspecified.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 57,
+      "end": 68
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Calculate the error budget burn rate; the time window is missing.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 57,
+      "end": 64
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create a migration checklist for moving the cron jobs to workers.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 6
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check the draft rollout assumptions and then write the release plan.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 10,
+      "end": 15
+     },
+     {
+      "signal": "implementation_request",
+      "start": 55,
+      "end": 67
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Turn these support notes into a triage workflow.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 32,
+      "end": 47
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Validate the proposed queue design before outlining the worker implementation.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 13,
+      "end": 21
+     },
+     {
+      "signal": "implementation_request",
+      "start": 56,
+      "end": 77
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify the latest Python patch release with sources before changing the install guide.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "current_information",
+      "start": 11,
+      "end": 17
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 39,
+      "end": 51
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether the invoice total matches the subtotal plus tax.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 18,
+      "end": 31
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Confirm whether this refund clause is valid under current California law.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal",
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "legal_risk",
+      "start": 21,
+      "end": 34
+     },
+     {
+      "signal": "current_information",
+      "start": 50,
+      "end": 57
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Validate the suggested antibiotic dose against official guidance before answering.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "medical",
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 13,
+      "end": 22
+     },
+     {
+      "signal": "medical_risk",
+      "start": 23,
+      "end": 38
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the incident timeline in four bullets.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "short_response",
+      "start": 35,
+      "end": 47
+     },
+     {
+      "signal": "format_bullets",
+      "start": 40,
+      "end": 47
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense these release notes into JSON.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_json",
+      "start": 34,
+      "end": 38
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Give a neutral summary of the policy disagreement.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 15,
+      "end": 22
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the interview transcript without making a table.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "constraint_no_table",
+      "start": 35,
+      "end": 57
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm ways to reduce onboarding friction and compare the trade-offs.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "comparison_request",
+      "start": 50,
+      "end": 72
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare deployment options without claiming there is a single best answer.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "List alternative moderation policies and compare their likely downsides.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 5,
+      "end": 36
+     },
+     {
+      "signal": "comparison_request",
+      "start": 41,
+      "end": 71
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v5-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v5-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "The proposed roadmap is supposedly risk-free; suggest weak points and alternatives.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 24,
+      "end": 34
+     },
+     {
+      "signal": "exploration_request",
+      "start": 70,
+      "end": 82
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

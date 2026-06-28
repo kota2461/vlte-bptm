@@ -1,0 +1,42 @@
+{
+  "schema_version": "audit-baseline-snapshot-oracle-validity.v1",
+  "eval_fixture": "pattern_language_sealed_v10.json",
+  "snapshot_coverage": {
+    "eval_case_count": 28,
+    "served_from_snapshot": 28,
+    "served_from_regex": 0,
+    "snapshot_coverage_rate": 1.0,
+    "total_snapshot_entries": 2168
+  },
+  "measured_metrics_with_snapshot": {
+    "intent_accuracy": 0.785714,
+    "critical_signal_recall": 0.4,
+    "operation_exact_match": 0.642857,
+    "constraint_exact_match": 0.535714,
+    "risk_exact_match": 0.678571
+  },
+  "measured_metrics_regex_only": {
+    "intent_accuracy": 0.75,
+    "critical_signal_recall": 0.4,
+    "operation_exact_match": 0.571429,
+    "constraint_exact_match": 0.535714,
+    "risk_exact_match": 0.75
+  },
+  "metric_delta_regex_minus_snapshot": {
+    "intent_accuracy": -0.035714,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": -0.071428,
+    "constraint_exact_match": 0.0,
+    "risk_exact_match": 0.071429
+  },
+  "oracle_recovery_noncircular": {
+    "oracle_case_count": 960,
+    "regex_only_full_packet_mismatch_count": 960,
+    "regex_only_core_field_mismatch_count": 779,
+    "regex_only_primary_intent_mismatch_count": 176,
+    "regex_only_full_match_rate": 0.0,
+    "regex_only_core_match_rate": 0.188542,
+    "regex_only_primary_intent_match_rate": 0.816667,
+    "note": "Committed compare_baseline_source_recovery_oracle.py runs WITH the snapshot, comparing snapshot output against the pyc the snapshot was built from -> trivially 0 mismatches. These rows disable the snapshot to test whether the recovered regex itself reproduces the pyc."
+  }
+}

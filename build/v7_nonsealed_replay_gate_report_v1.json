@@ -1,0 +1,241 @@
+{
+  "schema_version": "v7-nonsealed-replay-gate-report.v1",
+  "generated_at": "2026-06-28T07:52:05.841561+00:00",
+  "status": "passed",
+  "passed": true,
+  "policy": {
+    "sealed_fixture_opened_now": false,
+    "sealed_measurement_used_for_tuning": false,
+    "sealed_v6_text_used": false,
+    "sealed_v6_labels_used": false,
+    "nonsealed_current_route_measurement_is_gate": true,
+    "draft_or_candidate_lanes_are_gate_evidence": false,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_v7_required_before_adjudication": true
+  },
+  "source_generalization_report": "build\\v7_router_generalization_report_v1.json",
+  "step4_after": {
+    "case_count": 72,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "required_lanes": [
+    {
+      "name": "visible_plm_train_validation",
+      "source": "tests\\fixtures\\pattern_language_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "evaluated_splits": [
+        "train",
+        "validation"
+      ],
+      "sealed_split_evaluated": false,
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 56,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v5_critical_operations",
+      "source": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+      "review_status": "draft",
+      "gate_evidence_allowed": true,
+      "human_review_required_before_gate": true,
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 48,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_boundary_false_positive_adopted",
+      "source": "tests\\fixtures\\v6_boundary_false_positive_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 15,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_boundary_priority_review_adopted",
+      "source": "tests\\fixtures\\v6_boundary_priority_review_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 26,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_structural_build_30_adopted",
+      "source": "tests\\fixtures\\v6_structural_build_30_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 30,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_router_debate_adopted",
+      "source": "tests\\fixtures\\v6_router_debate_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 12,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    }
+  ],
+  "diagnostic_lanes": [
+    {
+      "name": "v6_boundary_false_positive_candidate",
+      "source": "tests\\fixtures\\v6_boundary_false_positive_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 15,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_contrast_negative",
+      "source": "tests\\fixtures\\v6_contrast_negative_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 30,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 0.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v6_router_debate_candidate",
+      "source": "tests\\fixtures\\v6_router_debate_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 12,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v7_router_repair_fixture",
+      "source": "tests\\fixtures\\v7_router_repair_fixture_v1.json",
+      "review_status": "draft",
+      "gate_evidence_allowed": false,
+      "human_review_required_before_gate": true,
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 72,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "valid_packet_rate": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    }
+  ],
+  "summary": {
+    "required_lane_count": 6,
+    "required_passed_lane_count": 6,
+    "required_error_count": 0,
+    "diagnostic_lane_count": 4,
+    "diagnostic_exact_lane_count": 4,
+    "diagnostic_error_count": 0,
+    "v7_curriculum_case_count": 72,
+    "v7_curriculum_error_count": 0,
+    "v7_curriculum_exact": true,
+    "ready_for_step6_sealed_v7_rotation_review": true
+  },
+  "contract": {
+    "can_use_for_v7_roadmap_step5": true,
+    "can_use_as_sealed_measurement": false,
+    "can_use_for_same_cycle_promotion": false,
+    "requires_human_review_before_sealed_rotation": true,
+    "requires_fresh_sealed_v7_before_measurement": true
+  },
+  "next_action": "roadmap_v7_step6_sealed_rotation_review"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-fixture-registry.v1",
-  "updated_at": "2026-06-13T05:45:00+00:00",
+  "updated_at": "2026-06-28T04:27:07.065616+00:00",
   "rules": [
     "human-reviewed train and validation labels are append-only",
     "a sealed fixture is measured at most once before rotation",
@@ -24,11 +24,118 @@
     "pattern_language_sealed_v2.json": {
       "sha256": "c40b52a890b853367dc4907054a2b1ebca496801e342b03d9243ba36af3bb28d",
       "case_count": 28,
-      "status": "active",
+      "status": "consumed",
       "role": "sealed measurement only",
       "predecessor": "pattern_language_benchmark_v1.json#sealed",
-      "measured": false,
-      "reviewed": false
+      "measured": true,
+      "reviewed": false,
+      "measured_at": "2026-06-18T11:25:36.162954+00:00",
+      "measured_for": "canonical adapter sealed v2 measurement",
+      "measurement_report": "build\\plm_sealed_v2_measurement_report.json",
+      "successor": "pattern_language_sealed_v3.json"
+    },
+    "pattern_language_sealed_v3.json": {
+      "sha256": "9b99a7c26c3ff333364998966becb5e516c96408af9e4827258ba2a1cb05b01f",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v2.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-21T02:38:24.908603+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v3.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v3_measurement_report.json",
+      "successor": "pattern_language_sealed_v4.json"
+    },
+    "pattern_language_sealed_v4.json": {
+      "sha256": "897bd516c3085c8ec367f8d5aa362c2e2f9700427ff8d44988794fd8a288c554",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v3.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-21T07:52:05.409955+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v4.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v4_measurement_report.json",
+      "successor": "pattern_language_sealed_v5.json"
+    },
+    "pattern_language_sealed_v5.json": {
+      "sha256": "4e18eb7453cfe461b466d495e37846bca9077423ac84d8c5b2054734566e055c",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v4.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-23T06:30:13.849980+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v5.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v5_measurement_report.json",
+      "successor": "pattern_language_sealed_v6.json"
+    },
+    "pattern_language_sealed_v6.json": {
+      "sha256": "2e3059cf9360b641fc25e7e29bd6eb79cf6e33a8c5a0b176eefd402c7adbc80c",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v5.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-24T09:14:59.909161+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v6.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v6_measurement_report.json",
+      "successor": "pattern_language_sealed_v7.json"
+    },
+    "pattern_language_sealed_v7.json": {
+      "sha256": "e559a49914e0421a4929745b44d52e2ff42ef668fc58194b47850d31d24a75d1",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v6.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-25T00:40:12.208631+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v7.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v7_measurement_report.json",
+      "successor": "pattern_language_sealed_v8.json"
+    },
+    "pattern_language_sealed_v8.json": {
+      "sha256": "f7f80d2891bd5761d0b7dcbe22bb9dedd4ad7675e44af5daa1c67df81effa9c9",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v7.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-25T06:56:41.464471+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v8.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v8_measurement_report.json",
+      "successor": "pattern_language_sealed_v9.json"
+    },
+    "pattern_language_sealed_v9.json": {
+      "sha256": "00e33839afb5bfbf958dd17e253c81574130c8ad51ba606744cc22c4bffe145a",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v8.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-25T08:52:34.120342+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v9.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v9_measurement_report.json",
+      "successor": "pattern_language_sealed_v10.json"
+    },
+    "pattern_language_sealed_v10.json": {
+      "sha256": "8b851a094ee5454137a1290f0e9aa81b8418745e36b7624fdf1b6a2c39e2b9bb",
+      "case_count": 28,
+      "role": "sealed measurement only",
+      "predecessor": "pattern_language_sealed_v9.json",
+      "reviewed": false,
+      "status": "consumed",
+      "measured": true,
+      "measured_at": "2026-06-28T04:27:07.065616+00:00",
+      "measured_for": "canonical adapter pattern_language_sealed_v10.json measurement",
+      "measurement_report": "build\\pattern_language_sealed_v10_measurement_report.json"
     }
   }
 }

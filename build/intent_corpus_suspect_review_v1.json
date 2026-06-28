@@ -1,0 +1,634 @@
+{
+  "schema_version": "intent-corpus-suspect-review.v1",
+  "corpus_path": "data\\intent_training_corpus_v1.json",
+  "harvest_path": "data\\harvested_claudelog_v1.json",
+  "summary": {
+    "corpus_examples": 739,
+    "suspect_count": 47,
+    "high_priority_review_count": 9,
+    "by_recommendation": {
+      "exclude_or_negative": 3,
+      "exclude_or_relabel_clarify": 6,
+      "keep_if_directive_but_anonymize_path": 13,
+      "keep_if_intent_is_unambiguous": 17,
+      "review": 8
+    },
+    "by_flag": {
+      "ack_only": 1,
+      "bare_path_or_url": 6,
+      "path_or_url": 19,
+      "very_short_le_8": 17,
+      "weak_question_suffix": 10
+    },
+    "by_intent": {
+      "build": 15,
+      "clarify": 1,
+      "explain": 5,
+      "explore": 7,
+      "respond": 14,
+      "verify": 5
+    }
+  },
+  "excluded_reference_rows": [
+    {
+      "harvest_index": 55,
+      "input": "どうでしょう",
+      "intent": "respond",
+      "review_status": "rejected",
+      "confidence": "low",
+      "calibration_exclude": null
+    },
+    {
+      "harvest_index": 138,
+      "input": "こちらであってるでしょうか",
+      "intent": "verify",
+      "review_status": "rejected",
+      "confidence": "low",
+      "calibration_exclude": null
+    },
+    {
+      "harvest_index": 196,
+      "input": "https://news.yahoo.co.jp/articles/514385b06980812ee2f4ef3dfec35a5be1d66388",
+      "intent": "drop",
+      "review_status": "pending",
+      "confidence": "high",
+      "calibration_exclude": true
+    }
+  ],
+  "high_priority_review": [
+    {
+      "corpus_index": 90,
+      "input": "ありがとうございます",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "ack_only"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 462,
+      "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。",
+      "intent": "clarify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 473,
+      "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 528,
+      "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 551,
+      "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 627,
+      "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 659,
+      "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 687,
+      "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 717,
+      "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    }
+  ],
+  "all_suspects": [
+    {
+      "corpus_index": 87,
+      "input": "こんにちは",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 89,
+      "input": "こんばんは",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 90,
+      "input": "ありがとうございます",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "ack_only"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 93,
+      "input": "お元気ですか",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 94,
+      "input": "おやすみなさい",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 97,
+      "input": "Hello!",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 418,
+      "input": "subをollama使って、別モデルでテストとかできますか？",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 422,
+      "input": "03_instructions/precursor_tasks_v0.1.mdこちらを読んでもらってから続き行きましょう！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 428,
+      "input": "\"D:\\pseudo personality\\02_design\\Inverse_Hybrid_AI_Design_v1.5.md\"続きからお願いします！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 437,
+      "input": "稼働中です！",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 462,
+      "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。",
+      "intent": "clarify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 473,
+      "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 479,
+      "input": "@\"D:\\nichijo_jissou\\03_instructions\\7day_chat_test_preflight_checklist_2026-06-01.md\" test前の",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 481,
+      "input": "ログの確認できますか？",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 490,
+      "input": "昨日の続きからの前にcodexのレポートです。/D:/pseudo personality/inverse_hybrid_ai/README.md",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 500,
+      "input": "本命(中期)に感情による問い返しや反論を混ぜるというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 519,
+      "input": "ログ確認お願い",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 522,
+      "input": "ログ確認",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 525,
+      "input": "EXL2がまだ出回って内容なので、圧縮をお願いできますか",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 528,
+      "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 530,
+      "input": "ollama経由だとモデル落とせなかったので、すでにインストールしていたLMStudioのgemma4を \"D:\\models\\gemma-4-E4B-it-GGUF\"にコピーしましたllamaで使えると思うのですがどうでしょう。遅くなるとは思いますが、使えるモデルを増やすという意味ではアリだと思います",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 538,
+      "input": "A行きましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 542,
+      "input": "\"D:\\pseudo personality\\CLAUDE.md\"を読み実装を進めてください！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 551,
+      "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 569,
+      "input": "つまり、project側でdocsに書き込んでそれをcode側で読み取ってコーディングというイメージで合ってますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 570,
+      "input": "なるほどありがとうございます！それでは、 直近のこちらをお願いしたいです以下ログです Claude Code 側で docs/auto_log_review_2026-05-08.md + CLAUDE.md + docs/Agents.md を読ませて docs/impl_11_chat_quality_and_mood_recovery_<date>.md（英語、設計書）の起草から始めてください。",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 571,
+      "input": "@D:\\Hybrid_PC_AI\\docs\\auto_log_review_2026-05-08.md これで読めますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 575,
+      "input": "\"D:\\Hybrid_PC_AI\\start_ui.bat\"start uiはこちらからしてます",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 579,
+      "input": "まだ出る様子です",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 599,
+      "input": "Aはコストがかかりそうなので、B、Cを片付けてから行く方向でどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 622,
+      "input": "Cに行きましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 627,
+      "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 651,
+      "input": "server起動.batとUI.batが欲しいです！D:\\Topic packagingこちらにお願いします",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 658,
+      "input": "D:/Thought State Register/docs/EXTERNAL_REVIEW_REPORT_2026-06-11.md v1.6まで進めたので確認と調査をお願いします",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 659,
+      "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "exclude_or_negative"
+    },
+    {
+      "corpus_index": 675,
+      "input": "マージして",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 677,
+      "input": "記録して",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 680,
+      "input": "１で参りましょう",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 686,
+      "input": "承認して！",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 687,
+      "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 694,
+      "input": "承認して",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 717,
+      "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "recommendation": "exclude_or_relabel_clarify"
+    },
+    {
+      "corpus_index": 718,
+      "input": "Aの投入",
+      "intent": "build",
+      "source": "claudelog-harvest",
+      "flags": [
+        "very_short_le_8"
+      ],
+      "recommendation": "keep_if_intent_is_unambiguous"
+    },
+    {
+      "corpus_index": 719,
+      "input": "Claudeさん側で足りない部分を補う事はできますか",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    },
+    {
+      "corpus_index": 725,
+      "input": "\"D:\\Hybrid_PC_AI\" \"D:\\nichijo_jissou\" D:\\Core5_Project\\core_review 導入候補としてこちらがあるのですが順位付けお願いします",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 726,
+      "input": "nichijo_jissouからまずは導入行きましょう。その前にもう一つ候補がありまして、そちらは確か、メインＬＬＭがsubに司令を出す形でさらに海馬LLMを載せた物になります。D:\\keywordmodel 多分これなのですが、特徴は海馬LLMがあった事です。",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "flags": [
+        "path_or_url"
+      ],
+      "recommendation": "keep_if_directive_but_anonymize_path"
+    },
+    {
+      "corpus_index": 737,
+      "input": "こちら使えますか！",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "recommendation": "review"
+    }
+  ]
+}

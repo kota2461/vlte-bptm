@@ -1,0 +1,1749 @@
+{
+  "schema_version": "v6-cowork-candidate-fixture.v1",
+  "fixture_id": "v6-cowork-candidate-fixture-v1",
+  "created_at": "2026-06-23T07:33:58.344652+00:00",
+  "status": "draft_candidate_ready_for_human_review",
+  "review_status": "draft",
+  "source_selection": "build\\cowork_v6_candidate_selection_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_logs_direct_training_allowed": false,
+    "redacted_inputs_only": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "requirements": {
+    "candidate_value_score_min": 4,
+    "min_promoted_candidates": 18,
+    "min_distinct_intents": 5,
+    "min_current_route_gap_count": 8
+  },
+  "summary": {
+    "case_count": 22,
+    "by_intent": {
+      "build": 10,
+      "clarify": 1,
+      "explain": 1,
+      "explore": 5,
+      "summarize": 1,
+      "verify": 4
+    },
+    "by_operation": {
+      "build": 10,
+      "clarify": 1,
+      "compare": 3,
+      "explain": 2,
+      "explore": 5,
+      "summarize": 3,
+      "verify": 10
+    },
+    "by_axis": {
+      "after_success_question": 1,
+      "architecture": 2,
+      "automation": 1,
+      "brainstorm": 1,
+      "build_rule": 1,
+      "clarify_or_explore": 1,
+      "cognitive_load": 2,
+      "compare_design": 1,
+      "compare_options": 2,
+      "compound_intent": 4,
+      "constraint_lightweight": 1,
+      "creative_build": 1,
+      "custom_node_install": 1,
+      "debug_error": 3,
+      "docs_update": 1,
+      "emotion_dynamics": 1,
+      "engine_choice": 1,
+      "evaluate_draft": 1,
+      "explain_term": 1,
+      "external_integration": 1,
+      "future_roadmap": 1,
+      "handoff": 1,
+      "improvement_plan": 1,
+      "knowledge_source": 1,
+      "language_stack": 1,
+      "llm_vs_chromadb": 1,
+      "log_accumulation": 1,
+      "memory_persona": 1,
+      "memory_reference": 1,
+      "missing_context": 1,
+      "missing_dependency": 1,
+      "missing_file": 1,
+      "missing_runtime_window": 1,
+      "multi_option": 1,
+      "multi_tag": 1,
+      "naming_request": 1,
+      "parameter_tuning": 1,
+      "path_context": 1,
+      "periodic_review": 1,
+      "phase_boundary": 1,
+      "prioritization": 1,
+      "prioritize": 1,
+      "processing_plan": 2,
+      "scheduling_constraint": 1,
+      "security_policy": 1,
+      "separate_pass": 2,
+      "skill_review": 1,
+      "summarize_to_memo": 1,
+      "tool_concept": 1,
+      "topic_filter": 1,
+      "topic_list": 1,
+      "uncertainty": 1,
+      "update_policy": 1,
+      "vectorization": 1,
+      "versioned_spec": 1,
+      "write_md": 1,
+      "write_skill_file": 1
+    },
+    "by_probe_status": {
+      "route_gap": 20,
+      "route_matches_hint": 2
+    },
+    "by_value_reason": {
+      "compact_self_contained_input": 22,
+      "current_route_gap": 20,
+      "high_priority": 20,
+      "medium_priority": 2,
+      "non_respond_route": 22,
+      "regression_anchor": 2,
+      "v6_target_axis": 14
+    }
+  },
+  "cases": [
+    {
+      "id": "v6-cowork-candidate-001",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-009",
+      "axis_ids": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "language": "ja",
+      "input": "構成はpassですが、処理としてはチャットの処理出力が終るのをきっかけにpassが稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-002",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-010",
+      "axis_ids": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "language": "ja",
+      "input": "構成は2passですが、処理としてはチャット層の出力が終るのをきっかけに2pass目が稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-003",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-015",
+      "axis_ids": [
+        "compound_intent",
+        "emotion_dynamics",
+        "parameter_tuning",
+        "missing_context"
+      ],
+      "language": "ja",
+      "input": "ちょっとログがどこに行ったか分からなくなってしまったのですが…\nemotに対する動的変化として、現在有る時間経過からの感情変化。以外で感情への刺激になりそうな変化を取り入れる。という物です！あと、現在の寂しいの数値は早く上がりすぎるので、実装時は調整を入れたい！という物です",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-004",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-018",
+      "axis_ids": [
+        "summarize_to_memo",
+        "prioritization",
+        "handoff"
+      ],
+      "language": "ja",
+      "input": "明日code側を始める際にPhase 5 を待たずに今すぐ着手できる 3 つをメモとして渡したいです！",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-005",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-020",
+      "axis_ids": [
+        "periodic_review",
+        "automation",
+        "log_accumulation"
+      ],
+      "language": "ja",
+      "input": "dataの蓄積に当たってなのですが、定期的にログを確認してもらい、調整をしてもらうことはかのうでしょうか",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-006",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-021",
+      "axis_ids": [
+        "scheduling_constraint",
+        "missing_runtime_window"
+      ],
+      "language": "ja",
+      "input": "PC立ち上げ時出ないとログ確認できないのでその時にお願いしたいです！",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 5,
+      "selection_reasons": [
+        "medium_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-007",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-027",
+      "axis_ids": [
+        "brainstorm",
+        "multi_option",
+        "architecture"
+      ],
+      "language": "ja",
+      "input": "まず考えてるのは\n1、ペルソナcard、保存すべき基礎的情報を保持。呼び名や性格、優先事項など。\n2、脳ノイズの再現、並列処理から、ノイズを抽出しemotionに返す仕組み。\n3、ゲームエンジンの採用、並列処理、拡張、AI自身に仮想空間を持たせられる。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-008",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-029",
+      "axis_ids": [
+        "clarify_or_explore",
+        "engine_choice",
+        "constraint_lightweight"
+      ],
+      "language": "ja",
+      "input": "常駐を目指すなら軽量なエンジンが良いんでしょうか？",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-009",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-030",
+      "axis_ids": [
+        "compare_options",
+        "language_stack",
+        "external_integration"
+      ],
+      "language": "ja",
+      "input": "外枠はpython以外もアリだと思ってます、外の接続をする、拡張性、を考えて、C#、rust、goなんかもアリだと",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-010",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-031",
+      "axis_ids": [
+        "memory_persona",
+        "update_policy",
+        "vectorization",
+        "compound_intent"
+      ],
+      "language": "ja",
+      "input": "そうですね！ペルソナcardは基本を最初に書いておいて、AIが追記、書き換えを行える仕組みが良いとおもいます。書き換えの際は、プロンプトの重要度で触る際簡単に変更しない様に指示。みたいな構造です。出来ればベクトル化が理想です。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-011",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-035",
+      "axis_ids": [
+        "compare_options",
+        "knowledge_source",
+        "llm_vs_chromadb",
+        "architecture"
+      ],
+      "language": "ja",
+      "input": "あと一つ懸念というか、LLMは知識の塊なので、自然な会話になります。CPU先行のこの構造で基礎知識をどう取り入れるか？と考えてました。LLMを基礎知識として使って良いのか？それとも時間がかかるので、専用ChromaDBを置くのか？と",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-012",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-037",
+      "axis_ids": [
+        "naming_request",
+        "creative_build"
+      ],
+      "language": "ja",
+      "input": "後で自然に決まりますが、名前があるとブレにくくなるので一つ命名をお願いしたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 4,
+      "selection_reasons": [
+        "medium_priority",
+        "non_respond_route",
+        "regression_anchor",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_matches_hint",
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-013",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-039",
+      "axis_ids": [
+        "docs_update",
+        "future_roadmap",
+        "phase_boundary"
+      ],
+      "language": "ja",
+      "input": "現状テストを繰り返して蓄積するphaseなので、すべてのphaseが終った後に始める構想としてdocsに残していきたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-014",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-043",
+      "axis_ids": [
+        "debug_error",
+        "missing_file",
+        "path_context"
+      ],
+      "language": "ja",
+      "input": "(.venv) PS <PATH> python main.py\ncan't open file '<PATH> [Errno 2] No such file or directoryエラーです！",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-015",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-045",
+      "axis_ids": [
+        "debug_error",
+        "missing_dependency"
+      ],
+      "language": "ja",
+      "input": "Traceback (most recent call last):\n...\nModuleNotFoundError: No module named 'sqlalchemy'",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-016",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-048",
+      "axis_ids": [
+        "explain_term",
+        "tool_concept",
+        "after_success_question"
+      ],
+      "language": "ja",
+      "input": "起動できました！サブグラフと言うのは外部のものだったりしますか",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-017",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-049",
+      "axis_ids": [
+        "debug_error",
+        "security_policy",
+        "custom_node_install"
+      ],
+      "language": "ja",
+      "input": "ComfyUI-HunyuanVideo-Foleyこのモデルだけエラーになります\n[Installation Errors] 'ComfyUI-HunyuanVideo-Foley': With the current security level configuration, only custom nodes from the \"default channel\" can be installed.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-018",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-052",
+      "axis_ids": [
+        "prioritize",
+        "write_md",
+        "improvement_plan"
+      ],
+      "language": "ja",
+      "input": "優先度高から修正案として.mdにまとめて頂きたいです",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "markdown"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-019",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-053",
+      "axis_ids": [
+        "evaluate_draft",
+        "skill_review",
+        "uncertainty"
+      ],
+      "language": "ja",
+      "input": "[Trace Rule v0.1 skill fileアップロード]\nちなみに、これの草案としてskillにしたものなのですが、どのくらいの効果が見込めるとか分かりますか",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-020",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-054",
+      "axis_ids": [
+        "compare_design",
+        "topic_filter",
+        "memory_reference"
+      ],
+      "language": "ja",
+      "input": "これ、逆に、話題の混濁だけ焦点に当てて、レベル1とレベル2だけを実装して、レベル1、レベル2が違う話題は参照トークンとして使わないとかだったらどう？",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-021",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-055",
+      "axis_ids": [
+        "build_rule",
+        "multi_tag",
+        "topic_list"
+      ],
+      "language": "ja",
+      "input": "level2に複数の項目(2～3)を付けられるようにして、level１のみトピックスの一覧を作るのはどうでしょう。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "current_route": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    },
+    {
+      "id": "v6-cowork-candidate-022",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-cowork-nonsealed-candidate-draft",
+      "source_kind": "cowork_raw_log_redacted_candidate",
+      "source_ref": "build/cowork_v6_candidate_selection_v1.json",
+      "source_candidate_id": "cowork-v6-057",
+      "axis_ids": [
+        "write_skill_file",
+        "versioned_spec"
+      ],
+      "language": "ja",
+      "input": "v0.2としてスキルファイルに指定だだきたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "candidate_value_score": 5,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "regression_anchor",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_matches_hint",
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "notes": "Draft candidate from redacted non-sealed Cowork raw logs. Human review required before training or gate use."
+    }
+  ]
+}

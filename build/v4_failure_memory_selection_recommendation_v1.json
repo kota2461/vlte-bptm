@@ -1,0 +1,1185 @@
+{
+  "schema_version": "v4-failure-memory-selection-recommendation.v1",
+  "generated_at": "2026-06-21T04:34:47.249694+00:00",
+  "source_adoption_registry": "build\\v4_failure_memory_adoption_v1.json",
+  "source_candidate_set": "build\\critical_constraints_candidates_v1.json#first60",
+  "policy": {
+    "sealed_text_used": false,
+    "human_review_required_before_fixture_write": true,
+    "success_pattern_lane_write_allowed": false,
+    "context_dependent_high_score_auto_adoption_allowed": false,
+    "context_pair_adoption_allowed_with_memo": true
+  },
+  "rule": {
+    "base": "adopt score >= 17 from first 60 critical candidate refs only when the case is standalone enough for failure-memory use",
+    "context_filter": "exclude high-score items that depend on previous turns, local project state, missing artifacts, or unresolved deictic references unless a bounded context memo can make the guard pattern explicit",
+    "context_pair": "a previous log may be attached as memo/context for a verify/check request, but the pair must remain in failure-memory review and cannot write a success label",
+    "score12_fillers": "adopt only selected score12 examples that cover V3 weak spots without high duplication"
+  },
+  "summary": {
+    "candidate_count": 60,
+    "selected_count": 38,
+    "selected_context_pair_count": 1,
+    "manual_review_count": 0,
+    "excluded_for_now_count": 22,
+    "selected_score_ge_17": 33,
+    "selected_score12_fillers": 5,
+    "high_score_context_excluded": 6
+  },
+  "selected_ids": [
+    "cc-open-v1-001",
+    "cc-open-v1-002",
+    "cc-open-v1-003",
+    "cc-open-v1-007",
+    "cc-open-v1-009",
+    "cc-open-v1-010",
+    "cc-open-v1-011",
+    "cc-open-v1-012",
+    "cc-open-v1-013",
+    "cc-open-v1-014",
+    "cc-open-v1-015",
+    "cc-open-v1-016",
+    "cc-open-v1-017",
+    "cc-open-v1-018",
+    "cc-open-v1-019",
+    "cc-open-v1-020",
+    "cc-open-v1-021",
+    "cc-open-v1-022",
+    "cc-open-v1-023",
+    "cc-open-v1-024",
+    "cc-open-v1-025",
+    "cc-open-v1-026",
+    "cc-open-v1-027",
+    "cc-open-v1-028",
+    "cc-open-v1-029",
+    "cc-open-v1-030",
+    "cc-open-v1-031",
+    "cc-open-v1-032",
+    "cc-open-v1-034",
+    "cc-open-v1-035",
+    "cc-open-v1-036",
+    "cc-open-v1-037",
+    "cc-open-v1-038",
+    "cc-open-v1-051",
+    "cc-open-v1-054",
+    "cc-open-v1-055",
+    "cc-open-v1-056",
+    "cc-open-v1-058"
+  ],
+  "context_pair_ids": [
+    "cc-open-v1-038"
+  ],
+  "manual_review_ids": [],
+  "excluded_for_now_ids": [
+    "cc-open-v1-004",
+    "cc-open-v1-005",
+    "cc-open-v1-006",
+    "cc-open-v1-008",
+    "cc-open-v1-033",
+    "cc-open-v1-039",
+    "cc-open-v1-040",
+    "cc-open-v1-041",
+    "cc-open-v1-042",
+    "cc-open-v1-043",
+    "cc-open-v1-044",
+    "cc-open-v1-045",
+    "cc-open-v1-046",
+    "cc-open-v1-047",
+    "cc-open-v1-048",
+    "cc-open-v1-049",
+    "cc-open-v1-050",
+    "cc-open-v1-052",
+    "cc-open-v1-053",
+    "cc-open-v1-057",
+    "cc-open-v1-059",
+    "cc-open-v1-060"
+  ],
+  "selected": [
+    {
+      "id": "cc-open-v1-001",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 45,
+      "priority": "A",
+      "draft_intent": "summarize",
+      "review_focus": [
+        "constraints",
+        "critical_signal:multiple_intents",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "multiple_intents",
+        "length:short",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:summarize"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-002",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 36,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-003",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 35,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "must:cite_sources",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-007",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 26,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-009",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "constraints",
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "length:short",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-010",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-011",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-012",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-013",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-014",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-015",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-016",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-017",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 21,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-018",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 20,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-019",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 20,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-020",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 20,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-021",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 20,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-022",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-023",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-024",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-025",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-026",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-027",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "summarize",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:compare",
+        "source_intent:summarize"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-028",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-029",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-030",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-031",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-032",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-034",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-035",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-036",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-037",
+      "decision": "adopt_for_review",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-038",
+      "decision": "adopt_context_pair_for_review",
+      "reason": "adopt as previous-error-report + verify/check-request context pair; not as standalone utterance",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "allowed_use": "failure_memory_review_input_context_pair",
+      "context_pair": {
+        "pattern": "previous_error_report_then_verify_check_request",
+        "context_memo_source": "data\\harvested_claudelog_v1.json#examples[265]",
+        "request_source": "data\\harvested_claudelog_v1.json#examples[266]",
+        "context_memo": {
+          "input": "ollama response did not match the required structured output (502) アップデートが入った後？にこのエラーになってます",
+          "intent": "respond",
+          "note": "pasted-ish error mention 'this error after an update?' -> reporting an error/status; borderline drop but has a question framing"
+        },
+        "request": {
+          "input": "現在一度試して、エラーになっているので確認してみてください！",
+          "intent": "verify",
+          "note": "tried once, it's erroring; please check it"
+        },
+        "review_guidance": "Use the prior error report only as context memo. The training/replay target is a verify/check guard after an error has been reported, with no success-pattern write.",
+        "expected_guard_action": [
+          "verify_up",
+          "inspect_error_context",
+          "avoid_status_only_response",
+          "ask_for_missing_artifact_if_error_context_absent"
+        ]
+      }
+    },
+    {
+      "id": "cc-open-v1-051",
+      "decision": "adopt_for_review",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-054",
+      "decision": "adopt_for_review",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-055",
+      "decision": "adopt_for_review",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-056",
+      "decision": "adopt_for_review",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:missing_required_information"
+      ],
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    },
+    {
+      "id": "cc-open-v1-058",
+      "decision": "adopt_for_review",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "summarize",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:summarize"
+      ],
+      "allowed_use": "failure_memory_review_input"
+    }
+  ],
+  "manual_review_before_adoption": [],
+  "excluded_for_now": [
+    {
+      "id": "cc-open-v1-004",
+      "decision": "exclude_for_now",
+      "reason": "project-specific stance/status text; high score is from current-info/multi-intent markers, but standalone signal is weak",
+      "score": 33,
+      "priority": "A",
+      "draft_intent": "respond",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "multiple_intents",
+        "ops:search",
+        "risk:medium"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-005",
+      "decision": "exclude_for_now",
+      "reason": "depends on a previous recommendation ('suggested earlier'); keep for context-aware tests, not first failure-memory adoption",
+      "score": 26,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-006",
+      "decision": "exclude_for_now",
+      "reason": "depends on the referenced tutorial/app; useful pattern, but should be rewritten into a self-contained synthetic case before training",
+      "score": 26,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-008",
+      "decision": "exclude_for_now",
+      "reason": "depends on a previously taught method and current version; context-aware validity check rather than standalone router pattern",
+      "score": 26,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "reason_tags": [
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-033",
+      "decision": "exclude_for_now",
+      "reason": "project-specific LoRA/Codex planning text from low-confidence origin; too much local context for a general guard",
+      "score": 19,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:explore"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-039",
+      "decision": "exclude_for_now",
+      "reason": "project/status-sharing continuation; score17 but source intent is respond and context is highly local",
+      "score": 17,
+      "priority": "A",
+      "draft_intent": "verify",
+      "review_focus": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-040",
+      "decision": "exclude_for_now",
+      "reason": "score12 build/multiple-intent; overlaps with higher quality build multi-intent examples",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-041",
+      "decision": "exclude_for_now",
+      "reason": "very broad long-horizon build request; too large and noisy for first failure-memory pass",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-042",
+      "decision": "exclude_for_now",
+      "reason": "covered by stronger summarize/build multi-intent cases; low unique risk",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-043",
+      "decision": "exclude_for_now",
+      "reason": "broad roadmap/meta-planning text; likely to create noisy build bias",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-044",
+      "decision": "exclude_for_now",
+      "reason": "generic explain-then-build; covered by score19 verify/build and score12 selected fillers",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-045",
+      "decision": "exclude_for_now",
+      "reason": "short context-dependent continuation; weak standalone training signal",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-046",
+      "decision": "exclude_for_now",
+      "reason": "context-dependent continuation; weak standalone training signal",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-047",
+      "decision": "exclude_for_now",
+      "reason": "long meta-learning proposal; useful later for puzzle lane, too noisy for first pass",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-048",
+      "decision": "exclude_for_now",
+      "reason": "too short/context-dependent; likely ambiguous without thread state",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-049",
+      "decision": "exclude_for_now",
+      "reason": "too short/context-dependent; continuation command rather than generalizable pattern",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-050",
+      "decision": "exclude_for_now",
+      "reason": "too short/context-dependent; continuation command rather than generalizable pattern",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "build",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-052",
+      "decision": "exclude_for_now",
+      "reason": "clarify/multiple-intent but asks meta workflow; lower priority than missing-info clarify fillers",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-053",
+      "decision": "exclude_for_now",
+      "reason": "valuable conceptually but meta-labeling discussion may blur failure vs success lanes; defer to puzzle/failure schema phase",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "clarify",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:clarify"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-057",
+      "decision": "exclude_for_now",
+      "reason": "option-B continuation with a follow-up log request; too dependent on prior choices for the first failure-memory fixture",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "respond",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:build"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-059",
+      "decision": "exclude_for_now",
+      "reason": "summarize+risk is useful but risk/legal-ish domain may need separate high-stakes policy pass",
+      "score": 12,
+      "priority": "A",
+      "draft_intent": "summarize",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:summarize"
+      ],
+      "allowed_use": "defer_not_training"
+    },
+    {
+      "id": "cc-open-v1-060",
+      "decision": "exclude_for_now",
+      "reason": "score10; simple router capability question, lower priority for V4 failure-memory target",
+      "score": 10,
+      "priority": "A",
+      "draft_intent": "explain",
+      "review_focus": [
+        "critical_signal:multiple_intents"
+      ],
+      "reason_tags": [
+        "multiple_intents"
+      ],
+      "allowed_use": "defer_not_training"
+    }
+  ]
+}

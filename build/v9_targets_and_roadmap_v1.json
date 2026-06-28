@@ -1,0 +1,409 @@
+{
+  "schema_version": "v9-targets-and-roadmap.v1",
+  "generated_at": "2026-06-25T08:52:34.120342+00:00",
+  "status": "step8_sealed_v9_measurement_completed_v10_rotation_required",
+  "sources": {
+    "sealed_v8_measurement": "build\\pattern_language_sealed_v8_measurement_report.json",
+    "readiness_review": "build\\plm_measurement_readiness_review.json",
+    "fixture_registry": "tests\\fixtures\\pattern_language_fixture_registry.json",
+    "v9_candidate_selection": "build\\v9_accumulated_log_candidate_selection_v1.json",
+    "v9_primary_review_replay": "build\\v9_accumulated_primary_review_replay_report_v1.json",
+    "v9_constraint_operation_extension": "build\\v9_constraint_operation_extension_replay_report_v1.json",
+    "v9_nonsealed_replay_gate": "build\\v9_nonsealed_replay_gate_report_v1.json",
+    "v9_sealed_rotation_review": "build\\v9_sealed_rotation_review_v1.json",
+    "v9_sealed_rotation_report": "build\\v9_sealed_rotation_report_v1.json",
+    "sealed_v9_measurement": "build\\pattern_language_sealed_v9_measurement_report.json"
+  },
+  "policy": {
+    "sealed_v8_consumed": true,
+    "sealed_v8_labels_used_for_tuning": false,
+    "sealed_v8_text_used_for_training": false,
+    "sealed_v8_measurement_used_as_taxonomy_only": true,
+    "v9_primary_review_human_approved": true,
+    "v9_constraint_operation_extension_human_approved": true,
+    "v9_nonsealed_replay_gate_passed": true,
+    "raw_debate_logs_direct_training_allowed": false,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_successor_required_before_measurement": true
+  },
+  "baseline": {
+    "fixture": "pattern_language_sealed_v8.json",
+    "case_count": 28,
+    "intent_accuracy": 0.928571,
+    "critical_signal_recall": 0.833333,
+    "operation_exact_match": 0.785714,
+    "constraint_exact_match": 0.785714,
+    "risk_exact_match": 0.785714,
+    "sealed_error_count": 14,
+    "readiness_decision_after_measurement": "blocked",
+    "blocked_reasons": [
+      "sealed_fixture_not_available"
+    ]
+  },
+  "targets": {
+    "minimum": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.916667,
+      "operation_exact_match": 0.892857,
+      "constraint_exact_match": 0.892857,
+      "risk_exact_match": 0.892857,
+      "sealed_error_count_max": 7,
+      "critical_signal_miss_count_max": 1
+    },
+    "stretch": {
+      "intent_accuracy": 0.964286,
+      "critical_signal_recall": 1.0,
+      "operation_exact_match": 0.928571,
+      "constraint_exact_match": 0.928571,
+      "risk_exact_match": 0.928571,
+      "sealed_error_count_max": 4,
+      "critical_signal_miss_count_max": 0
+    },
+    "granularity": {
+      "case_metric_step": 0.035714,
+      "critical_signal_step": 0.083333
+    }
+  },
+  "taxonomy": {
+    "field_error_counts": {
+      "constraints": 6,
+      "information_state": 6,
+      "operations": 6,
+      "primary_intent": 2,
+      "risk": 6
+    },
+    "critical_signal_miss_counts": {
+      "missing_required_information": 0,
+      "contains_unverified_claims": 0,
+      "requires_current_information": 1,
+      "multiple_intents": 1
+    },
+    "intent_boundary_transitions": {
+      "clarify->verify": 1,
+      "respond->build": 1
+    },
+    "by_expected_intent": {
+      "build": {
+        "constraints": 2,
+        "information_state": 1
+      },
+      "clarify": {
+        "information_state": 2,
+        "operations": 3,
+        "constraints": 1,
+        "primary_intent": 1
+      },
+      "explain": {
+        "information_state": 2,
+        "risk": 2,
+        "operations": 1
+      },
+      "explore": {
+        "risk": 1
+      },
+      "respond": {
+        "constraints": 1,
+        "primary_intent": 1,
+        "operations": 1
+      },
+      "summarize": {
+        "risk": 1,
+        "constraints": 1
+      },
+      "verify": {
+        "risk": 2,
+        "information_state": 1,
+        "constraints": 1,
+        "operations": 1
+      }
+    },
+    "by_predicted_intent": {
+      "build": {
+        "primary_intent": 1,
+        "operations": 1,
+        "constraints": 2,
+        "information_state": 1
+      },
+      "clarify": {
+        "information_state": 2,
+        "operations": 2,
+        "constraints": 1
+      },
+      "explain": {
+        "information_state": 2,
+        "risk": 2,
+        "operations": 1
+      },
+      "explore": {
+        "risk": 1
+      },
+      "respond": {
+        "constraints": 1
+      },
+      "summarize": {
+        "risk": 1,
+        "constraints": 1
+      },
+      "verify": {
+        "primary_intent": 1,
+        "operations": 2,
+        "risk": 2,
+        "information_state": 1,
+        "constraints": 1
+      }
+    },
+    "focus_areas": [
+      {
+        "id": "operation_constraint_exactness",
+        "priority": 1,
+        "generalized_issue": "operation order and explicit constraints remain the largest sealed-v8 exact-match gap",
+        "evidence": {
+          "operations": 6,
+          "constraints": 6,
+          "operation_exact_match": 0.785714,
+          "constraint_exact_match": 0.785714
+        },
+        "covered_by_v9_lanes": [
+          "primary_review",
+          "constraint_operation_extension"
+        ]
+      },
+      {
+        "id": "risk_current_information_balance",
+        "priority": 1,
+        "generalized_issue": "current/search and risk flags need separation between actual external-current needs and local/current wording",
+        "evidence": {
+          "risk": 6,
+          "requires_current_information_misses": 1,
+          "risk_exact_match": 0.785714
+        },
+        "covered_by_v9_lanes": [
+          "primary_review"
+        ]
+      },
+      {
+        "id": "respond_vs_build_boundary",
+        "priority": 2,
+        "generalized_issue": "simple response requests can still be pulled into build when wording contains deliverable-like verbs",
+        "evidence": {
+          "transition": "respond->build",
+          "count": 1,
+          "respond_recall": 0.75
+        },
+        "covered_by_v9_lanes": [
+          "primary_review",
+          "future_false_positive_set"
+        ]
+      },
+      {
+        "id": "clarify_vs_verify_boundary",
+        "priority": 2,
+        "generalized_issue": "missing information plus verification language can still jump to verify before asking",
+        "evidence": {
+          "transition": "clarify->verify",
+          "count": 1,
+          "clarify_recall": 0.75
+        },
+        "covered_by_v9_lanes": [
+          "primary_review"
+        ]
+      },
+      {
+        "id": "paraphrase_mixed_language_tail",
+        "priority": 3,
+        "generalized_issue": "V9 still needs more paraphrase, mixed ja/en, and natural short-form coverage before sealed rotation",
+        "evidence": {
+          "primary_review_mixed_language_count": 1,
+          "primary_review_paraphrase_count": 1
+        },
+        "covered_by_v9_lanes": [
+          "primary_review"
+        ]
+      }
+    ]
+  },
+  "nonsealed_recovery_summary": {
+    "source_candidate_count": 100,
+    "primary_review_count": 34,
+    "constraint_operation_extension_count": 24,
+    "v9_focused_case_count": 58,
+    "v9_primary_review_exact": true,
+    "v9_constraint_operation_extension_exact": true,
+    "v9_primary_operation_exact_match": 1.0,
+    "v9_primary_constraint_exact_match": 1.0,
+    "v9_extension_operation_exact_match": 1.0,
+    "v9_extension_constraint_exact_match": 1.0,
+    "primary_category_counts": {
+      "constraints": 5,
+      "current_search_split": 5,
+      "false_positive": 2,
+      "missing_info": 3,
+      "mixed_language": 1,
+      "multiple_intents": 5,
+      "operation_terminal": 5,
+      "paraphrase": 1,
+      "risk_ladder": 5,
+      "unverified_claim": 2
+    },
+    "extension_category_counts": {
+      "constraints": 12,
+      "operation_terminal": 12
+    }
+  },
+  "pre_rotation_gates": {
+    "prior_v8_nonsealed_gate_required": true,
+    "v9_primary_review_exact_required": true,
+    "v9_constraint_operation_extension_exact_required": true,
+    "v9_nonsealed_gate_error_count_max": 0,
+    "sealed_overlap_count_required": 0
+  },
+  "roadmap": [
+    {
+      "step": 1,
+      "name": "post_v8_measurement_taxonomy",
+      "output": "build\\v9_targets_and_roadmap_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 2,
+      "name": "v9_accumulated_log_candidate_selection",
+      "output": "build\\v9_accumulated_log_candidate_selection_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 3,
+      "name": "v9_primary_review_adoption_and_replay",
+      "output": "build\\v9_accumulated_primary_review_replay_report_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 4,
+      "name": "v9_constraint_operation_extension",
+      "output": "build\\v9_constraint_operation_extension_replay_report_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 5,
+      "name": "v9_nonsealed_replay_gate",
+      "output": "build\\v9_nonsealed_replay_gate_report_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 6,
+      "name": "sealed_v9_rotation_review",
+      "output": "build\\v9_sealed_rotation_review_v1.json",
+      "status": "completed"
+    },
+    {
+      "step": 7,
+      "name": "sealed_v9_rotation",
+      "output": "tests\\fixtures\\pattern_language_sealed_v9.json",
+      "status": "completed"
+    },
+    {
+      "step": 8,
+      "name": "sealed_v9_one_time_measurement",
+      "output": "build\\pattern_language_sealed_v9_measurement_report.json",
+      "status": "completed"
+    }
+  ],
+  "next_action": "roadmap_v10_step1_post_v9_measurement_taxonomy",
+  "step5_nonsealed_replay_gate": {
+    "output": "build\\v9_nonsealed_replay_gate_report_v1.json",
+    "passed": true,
+    "summary": {
+      "dependency_v8_gate_passed": true,
+      "dependency_v8_required_error_count": 0,
+      "required_lane_count": 3,
+      "required_passed_lane_count": 3,
+      "required_error_count": 0,
+      "total_case_count": 88,
+      "v8_priority_review_case_count": 30,
+      "v9_primary_review_case_count": 34,
+      "v9_constraint_operation_extension_case_count": 24,
+      "ready_for_step6_sealed_v9_rotation_review": true
+    },
+    "policy": {
+      "sealed_fixture_opened_now": false,
+      "sealed_measurement_used_for_tuning": false,
+      "sealed_v8_text_used": false,
+      "sealed_v8_labels_used": false,
+      "raw_debate_logs_direct_training_allowed": false,
+      "llm_turn_text_direct_training_allowed": false,
+      "v9_primary_review_human_approved": true,
+      "v9_constraint_operation_extension_human_approved": true,
+      "prior_v9_replays_were_gate": false,
+      "nonsealed_current_route_measurement_is_gate": true,
+      "same_cycle_promotion_allowed": false,
+      "fresh_sealed_v9_required_before_adjudication": true
+    }
+  },
+  "step6_sealed_rotation_review": {
+    "output": "build\\v9_sealed_rotation_review_v1.json",
+    "decision": "eligible_for_fresh_sealed_v9_rotation",
+    "passed": true,
+    "sealed_v9_fixture_created_now": false,
+    "sealed_v9_opened_for_measurement": false,
+    "same_cycle_promotion_allowed": false,
+    "requires_fresh_sealed_v9_before_measurement": true,
+    "summary": {
+      "required_error_count": 0,
+      "active_sealed_fixtures": 0,
+      "blocker_count": 0
+    }
+  },
+  "step7_sealed_rotation": {
+    "output": "build\\v9_sealed_rotation_report_v1.json",
+    "fixture": "tests\\fixtures\\pattern_language_sealed_v9.json",
+    "passed": true,
+    "sealed_v9_opened_for_measurement": false,
+    "sealed_v9_labels_used_for_tuning": false,
+    "same_cycle_promotion_allowed": false,
+    "summary": {
+      "case_count": 28,
+      "status": "active",
+      "measured": false,
+      "reviewed": false,
+      "readiness_decision": "eligible",
+      "blocked_reasons": []
+    }
+  },
+  "step8_sealed_measurement": {
+    "output": "build\\pattern_language_sealed_v9_measurement_report.json",
+    "summary": "build\\v9_step8_measurement_summary.md",
+    "fixture": "tests\\fixtures\\pattern_language_sealed_v9.json",
+    "sealed_fixture_opened": true,
+    "sealed_labels_used_for_tuning": false,
+    "passed_minimum": false,
+    "minimum_metrics_met": false,
+    "critical_signal_miss_count": 2,
+    "critical_signal_miss_gate_met": false,
+    "rotation_required_before_tuning": true,
+    "readiness_after_measurement": {
+      "decision": "blocked",
+      "blocked_reasons": [
+        "sealed_fixture_not_available"
+      ],
+      "sealed_fixture": null
+    },
+    "measurements": {
+      "case_count": 28,
+      "intent_accuracy": 0.892857,
+      "intent_macro_f1": 0.895692,
+      "critical_signal_recall": 0.857143,
+      "operation_exact_match": 0.821429,
+      "constraint_exact_match": 0.642857,
+      "risk_exact_match": 0.75,
+      "valid_packet_rate": 1.0,
+      "evidence_offset_validity": 1.0,
+      "error_count": 17,
+      "error_field_counts": {
+        "constraints": 10,
+        "information_state": 6,
+        "operations": 5,
+        "primary_intent": 3,
+        "risk": 7
+      }
+    }
+  }
+}

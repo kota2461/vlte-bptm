@@ -1,0 +1,785 @@
+{
+  "schema_version": "v7-router-repair-fixture-replay.v1",
+  "generated_at": "2026-06-24T20:43:13.951832+00:00",
+  "fixture": "tests\\fixtures\\v7_router_repair_fixture_v1.json",
+  "policy": {
+    "sealed_v6_text_used": false,
+    "sealed_v6_labels_used": false,
+    "success_pattern_training_allowed": false,
+    "human_review_required_before_gate": true,
+    "candidate_replay_is_gate": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "status": "draft_fixture_replayed_not_a_gate",
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "schema_version": "pattern-language-evaluation.v1",
+    "case_count": 72,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 0.736111,
+    "intent_macro_f1": 0.746328,
+    "per_intent": {
+      "respond": {
+        "precision": 0.428571,
+        "recall": 1.0,
+        "f1": 0.6,
+        "support": 3
+      },
+      "explain": {
+        "precision": 1.0,
+        "recall": 0.857143,
+        "f1": 0.923077,
+        "support": 7
+      },
+      "clarify": {
+        "precision": 1.0,
+        "recall": 0.470588,
+        "f1": 0.64,
+        "support": 17
+      },
+      "build": {
+        "precision": 0.636364,
+        "recall": 0.636364,
+        "f1": 0.636364,
+        "support": 11
+      },
+      "verify": {
+        "precision": 0.666667,
+        "recall": 0.842105,
+        "f1": 0.744186,
+        "support": 19
+      },
+      "summarize": {
+        "precision": 0.7,
+        "recall": 1.0,
+        "f1": 0.823529,
+        "support": 7
+      },
+      "explore": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857143,
+        "support": 8
+      }
+    },
+    "critical_signal_recall": 0.476923,
+    "critical_signals": {
+      "missing_required_information": {
+        "recall": 0.470588,
+        "support": 17
+      },
+      "contains_unverified_claims": {
+        "recall": 0.4,
+        "support": 15
+      },
+      "requires_current_information": {
+        "recall": 0.818182,
+        "support": 11
+      },
+      "multiple_intents": {
+        "recall": 0.363636,
+        "support": 22
+      }
+    },
+    "constraint_exact_match": 0.680556,
+    "operation_exact_match": 0.611111,
+    "risk_exact_match": 0.763889,
+    "evidence_offset_validity": 1.0,
+    "confusion": {
+      "respond": {
+        "respond": 3,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "explain": {
+        "respond": 0,
+        "explain": 6,
+        "clarify": 0,
+        "build": 1,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "clarify": {
+        "respond": 1,
+        "explain": 0,
+        "clarify": 8,
+        "build": 2,
+        "verify": 6,
+        "summarize": 0,
+        "explore": 0
+      },
+      "build": {
+        "respond": 1,
+        "explain": 0,
+        "clarify": 0,
+        "build": 7,
+        "verify": 2,
+        "summarize": 1,
+        "explore": 0
+      },
+      "verify": {
+        "respond": 1,
+        "explain": 0,
+        "clarify": 0,
+        "build": 1,
+        "verify": 16,
+        "summarize": 1,
+        "explore": 0
+      },
+      "summarize": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 7,
+        "explore": 0
+      },
+      "explore": {
+        "respond": 1,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 1,
+        "explore": 6
+      }
+    },
+    "errors": [
+      {
+        "id": "v7-router-repair-001",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v7-router-repair-002",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v7-router-repair-004",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v7-router-repair-007",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      },
+      {
+        "id": "v7-router-repair-008",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v7-router-repair-009",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v7-router-repair-010",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v7-router-repair-011",
+        "kind": "mismatch",
+        "fields": [
+          "constraints",
+          "risk"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v7-router-repair-012",
+        "kind": "mismatch",
+        "fields": [
+          "constraints",
+          "risk"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v7-router-repair-013",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-014",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-015",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v7-router-repair-016",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-019",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-020",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-021",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-022",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-024",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-025",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-027",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      },
+      {
+        "id": "v7-router-repair-029",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      },
+      {
+        "id": "v7-router-repair-030",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      },
+      {
+        "id": "v7-router-repair-031",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-032",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-033",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-034",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-036",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v7-router-repair-037",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-038",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-039",
+        "kind": "mismatch",
+        "fields": [
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-040",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-041",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-042",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-043",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v7-router-repair-044",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v7-router-repair-045",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v7-router-repair-048",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-049",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-050",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v7-router-repair-051",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v7-router-repair-053",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-054",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-055",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-057",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v7-router-repair-058",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-059",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-060",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-061",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v7-router-repair-063",
+        "kind": "mismatch",
+        "fields": [
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-065",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-071",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v7-router-repair-072",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore"
+      }
+    ]
+  },
+  "summary": {
+    "case_count": 72,
+    "by_axis": {
+      "clarify_boundary_repair": 8,
+      "constraint_preservation": 18,
+      "critical_signal_recovery": 16,
+      "intent_boundary_stability": 6,
+      "operation_sequence_repair": 18,
+      "risk_ladder_calibration": 6
+    },
+    "by_theme": {
+      "ask_first_before_action": 3,
+      "build_then_verify": 3,
+      "cite_sources_and_ask_first": 4,
+      "clarify_then_build": 4,
+      "clarify_vs_respond_build_verify": 2,
+      "constraint_contrast_pairs": 2,
+      "current_information_split": 3,
+      "explain_vs_build": 1,
+      "explore_then_compare": 4,
+      "explore_vs_respond": 1,
+      "format_preservation": 4,
+      "high_medical_legal": 2,
+      "high_risk_clarify_before_verify": 2,
+      "low_risk_contrast": 2,
+      "medium_current_or_license": 2,
+      "missing_information_detection": 3,
+      "missing_scope_vs_simple_question": 3,
+      "multiple_intent_detection": 5,
+      "respond_vs_build": 2,
+      "response_length_preservation": 4,
+      "safety_style_constraints": 4,
+      "unverified_claim_detection": 5,
+      "verify_then_calculate": 3,
+      "verify_then_search": 4
+    },
+    "by_intent": {
+      "build": 11,
+      "clarify": 17,
+      "explain": 7,
+      "explore": 8,
+      "respond": 3,
+      "summarize": 7,
+      "verify": 19
+    },
+    "by_operation": {
+      "build": 20,
+      "calculate": 5,
+      "clarify": 17,
+      "compare": 7,
+      "explain": 7,
+      "explore": 8,
+      "respond": 3,
+      "search": 12,
+      "summarize": 9,
+      "verify": 28
+    },
+    "by_language": {
+      "en": 38,
+      "ja": 22,
+      "mixed": 12
+    },
+    "by_risk": {
+      "high": 7,
+      "low": 49,
+      "medium": 16
+    },
+    "by_constraint": {
+      "format:bullets": 4,
+      "format:json": 2,
+      "format:table": 1,
+      "length:long": 1,
+      "length:medium": 1,
+      "length:short": 5,
+      "must:ask_first": 9,
+      "must:avoid_diagnosis": 2,
+      "must:avoid_overclaim": 2,
+      "must:cite_sources": 8,
+      "must:general_information_only": 1,
+      "must:preserve_neutrality": 3,
+      "must_not:no_table": 3,
+      "must_not:no_web_search": 2
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 15,
+      "missing_required_information": 17,
+      "multiple_intents": 22,
+      "requires_current_information": 11
+    }
+  },
+  "next_step": {
+    "step": 4,
+    "name": "v7_router_generalization_changes",
+    "output": "build/v7_router_generalization_report_v1.json"
+  }
+}

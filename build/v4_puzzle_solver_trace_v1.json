@@ -1,0 +1,197 @@
+{
+  "schema_version": "v4-puzzle-solver-trace.v1",
+  "generated_at": "2026-06-21T05:14:04.507194+00:00",
+  "seed_fixture": "tests\\fixtures\\v4_puzzle_task_seed_v1.json",
+  "solver": {
+    "name": "baseline_puzzle_solver",
+    "version": "baseline-puzzle-solver.v1",
+    "kind": "deterministic_rule_baseline",
+    "notes": "Small non-learning baseline for Step 7 trace generation; intentionally not a success-pattern trainer."
+  },
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "v3_sealed_text_used": false,
+    "success_pattern_lane_write_allowed": false,
+    "solver_trace_only": true
+  },
+  "summary": {
+    "task_count": 12,
+    "success_count": 10,
+    "failure_count": 2,
+    "success_rate": 0.8333333333333334,
+    "failed_task_ids": [
+      "puzzle-v4-seed-003",
+      "puzzle-v4-seed-011"
+    ]
+  },
+  "traces": [
+    {
+      "trace_id": "puzzle-trace-v4-001",
+      "task_id": "puzzle-v4-seed-001",
+      "selected_route": "solve",
+      "predicted_answer": "32",
+      "operations_emitted": [
+        "pattern_detect",
+        "calculate"
+      ],
+      "confidence": 0.9,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-002",
+      "task_id": "puzzle-v4-seed-002",
+      "selected_route": "solve",
+      "predicted_answer": "7",
+      "operations_emitted": [
+        "parse_conditions",
+        "calculate"
+      ],
+      "confidence": 0.88,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-003",
+      "task_id": "puzzle-v4-seed-003",
+      "selected_route": "solve",
+      "predicted_answer": "Yes",
+      "operations_emitted": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "confidence": 0.58,
+      "status": "failure",
+      "fail_point": "answer_selection",
+      "failure_reason": "expected answer No, got Yes"
+    },
+    {
+      "trace_id": "puzzle-trace-v4-004",
+      "task_id": "puzzle-v4-seed-004",
+      "selected_route": "solve",
+      "predicted_answer": "C",
+      "operations_emitted": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "confidence": 0.88,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-005",
+      "task_id": "puzzle-v4-seed-005",
+      "selected_route": "solve",
+      "predicted_answer": "C-B-A",
+      "operations_emitted": [
+        "parse_conditions",
+        "deduce",
+        "preserve_constraints"
+      ],
+      "confidence": 0.86,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-006",
+      "task_id": "puzzle-v4-seed-006",
+      "selected_route": "solve",
+      "predicted_answer": "apple",
+      "operations_emitted": [
+        "compare",
+        "deduce"
+      ],
+      "confidence": 0.9,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-007",
+      "task_id": "puzzle-v4-seed-007",
+      "selected_route": "solve",
+      "predicted_answer": "8",
+      "operations_emitted": [
+        "pattern_detect",
+        "calculate"
+      ],
+      "confidence": 0.86,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-008",
+      "task_id": "puzzle-v4-seed-008",
+      "selected_route": "solve",
+      "predicted_answer": "9:45",
+      "operations_emitted": [
+        "parse_conditions",
+        "calculate"
+      ],
+      "confidence": 0.9,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-009",
+      "task_id": "puzzle-v4-seed-009",
+      "selected_route": "solve",
+      "predicted_answer": "red key",
+      "operations_emitted": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "confidence": 0.9,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-010",
+      "task_id": "puzzle-v4-seed-010",
+      "selected_route": "solve",
+      "predicted_answer": "Noor",
+      "operations_emitted": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "confidence": 0.88,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    },
+    {
+      "trace_id": "puzzle-trace-v4-011",
+      "task_id": "puzzle-v4-seed-011",
+      "selected_route": "solve",
+      "predicted_answer": "8",
+      "operations_emitted": [
+        "pattern_detect",
+        "calculate"
+      ],
+      "confidence": 0.62,
+      "status": "failure",
+      "fail_point": "route_selection",
+      "failure_reason": "expected route clarify, got solve"
+    },
+    {
+      "trace_id": "puzzle-trace-v4-012",
+      "task_id": "puzzle-v4-seed-012",
+      "selected_route": "clarify",
+      "predicted_answer": "Ask for the previously discussed rule before solving.",
+      "operations_emitted": [
+        "ask_clarify"
+      ],
+      "confidence": 0.82,
+      "status": "success",
+      "fail_point": null,
+      "failure_reason": null
+    }
+  ]
+}

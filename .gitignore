@@ -24,3 +24,14 @@ archive/*
 archive/2026-06-16_v0.3-first-model-frozen/**/*.log
 archive/2026-06-16_v0.3-first-model-frozen/**/__pycache__/
 archive/2026-06-16_v0.3-first-model-frozen/**/*.py[cod]
+
+# --- local experiment snapshots / copied worktrees ---
+# These are large local snapshots used for side experiments. Keep them on disk,
+# but do not let them drown the main repository status.
+experiments/2026-06-19_current-model-no-backup/
+experiments/2026-06-19_role-split-detectors/
+
+# --- local debate run logs ---
+# Canonical V6 fixtures/reports live in build/v6_* and tests/fixtures/v6_*.
+# Raw LM Studio/router debate runs are local evidence and can be regenerated.
+build/router_debate_*.json

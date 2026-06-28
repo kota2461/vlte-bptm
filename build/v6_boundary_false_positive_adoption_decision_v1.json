@@ -1,0 +1,39 @@
+{
+  "schema_version": "v6-boundary-false-positive-adoption-decision.v1",
+  "generated_at": "2026-06-28T07:52:04.047201+00:00",
+  "status": "adopted_for_nonsealed_replay",
+  "review_status": "human_reviewed",
+  "reviewed_by": "user_confirmation_in_codex_thread",
+  "source_candidate_benchmark": "tests/fixtures/v6_boundary_false_positive_candidate_benchmark_v1.json",
+  "source_candidate_report": "build/v6_boundary_false_positive_candidate_report_v1.json",
+  "adopted_benchmark": "tests/fixtures/v6_boundary_false_positive_adopted_benchmark_v1.json",
+  "adopted_count": 15,
+  "case_ids": [
+    "v6-boundary-fp-001",
+    "v6-boundary-fp-002",
+    "v6-boundary-fp-003",
+    "v6-boundary-fp-004",
+    "v6-boundary-fp-005",
+    "v6-boundary-fp-006",
+    "v6-boundary-fp-007",
+    "v6-boundary-fp-008",
+    "v6-boundary-fp-009",
+    "v6-boundary-fp-010",
+    "v6-boundary-fp-011",
+    "v6-boundary-fp-012",
+    "v6-boundary-fp-013",
+    "v6-boundary-fp-014",
+    "v6-boundary-fp-015"
+  ],
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "manual_prompt_synthesis_used": true,
+    "human_review_confirmation_recorded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "adopted_benchmark_is_directly_trainable": false
+  }
+}

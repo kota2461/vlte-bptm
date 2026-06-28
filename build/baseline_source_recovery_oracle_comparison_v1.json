@@ -1,0 +1,7 @@
+{
+  "schema_version": "baseline-source-recovery-oracle-comparison.v1",
+  "status": "matched",
+  "case_count": 960,
+  "mismatch_count": 0,
+  "mismatches": []
+}

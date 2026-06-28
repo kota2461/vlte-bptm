@@ -1,0 +1,584 @@
+{
+  "schema_version": "v4-puzzle-task-seed.v1",
+  "generated_at": "2026-06-21T05:02:07.346088+00:00",
+  "status": "draft_seed",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "v3_sealed_text_used": false,
+    "success_pattern_lane_write_allowed": false,
+    "failures_enter_failure_memory_first": true,
+    "human_review_required_before_training": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "schema": {
+    "task_required_fields": [
+      "id",
+      "language",
+      "domain",
+      "difficulty",
+      "input",
+      "expected",
+      "allowed_reasoning_operations",
+      "ambiguity",
+      "constraints",
+      "guard_expectations",
+      "review_status",
+      "training_status",
+      "allowed_use"
+    ],
+    "allowed_domains": [
+      "arithmetic",
+      "sequence",
+      "logic",
+      "constraint_satisfaction",
+      "language",
+      "ambiguous"
+    ],
+    "allowed_operations": [
+      "parse_conditions",
+      "pattern_detect",
+      "calculate",
+      "deduce",
+      "eliminate",
+      "compare",
+      "preserve_constraints",
+      "ask_clarify"
+    ],
+    "expected_routes": [
+      "solve",
+      "clarify"
+    ]
+  },
+  "summary": {
+    "task_count": 12,
+    "ambiguous_count": 1,
+    "missing_info_count": 1,
+    "by_domain": {
+      "ambiguous": 2,
+      "arithmetic": 2,
+      "constraint_satisfaction": 3,
+      "language": 1,
+      "logic": 2,
+      "sequence": 2
+    },
+    "by_expected_route": {
+      "clarify": 2,
+      "solve": 10
+    },
+    "by_difficulty": {
+      "easy": 8,
+      "medium": 4
+    }
+  },
+  "tasks": [
+    {
+      "id": "puzzle-v4-seed-001",
+      "language": "en",
+      "domain": "sequence",
+      "difficulty": "easy",
+      "input": "What number comes next: 2, 4, 8, 16, ?",
+      "expected": {
+        "route": "solve",
+        "answer": "32",
+        "answer_type": "number",
+        "rationale_tags": [
+          "doubling_sequence"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "pattern_detect",
+        "calculate"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-002",
+      "language": "ja",
+      "domain": "arithmetic",
+      "difficulty": "easy",
+      "input": "??3?????????????4??????5???????????????",
+      "expected": {
+        "route": "solve",
+        "answer": "7",
+        "answer_type": "number",
+        "rationale_tags": [
+          "multiply_then_subtract"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "calculate"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-003",
+      "language": "en",
+      "domain": "logic",
+      "difficulty": "medium",
+      "input": "All zibs are nols. Some nols are blue. Can we conclude that some zibs are blue?",
+      "expected": {
+        "route": "solve",
+        "answer": "No",
+        "answer_type": "choice",
+        "rationale_tags": [
+          "insufficient_syllogism"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "overinfer_from_some_statement"
+        ],
+        "guard_action": [
+          "avoid_overclaim",
+          "deduce_from_given_conditions_only"
+        ],
+        "severity": "medium"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-004",
+      "language": "ja",
+      "domain": "constraint_satisfaction",
+      "difficulty": "easy",
+      "input": "A?B???????B?C??????????????????????",
+      "expected": {
+        "route": "solve",
+        "answer": "C",
+        "answer_type": "choice",
+        "rationale_tags": [
+          "transitive_order"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-005",
+      "language": "en",
+      "domain": "constraint_satisfaction",
+      "difficulty": "medium",
+      "input": "A, B, and C sit in one row. A is right of B. B is right of C. What is the order from left to right?",
+      "expected": {
+        "route": "solve",
+        "answer": "C-B-A",
+        "answer_type": "ordering",
+        "rationale_tags": [
+          "linear_order_constraints"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "deduce",
+        "preserve_constraints"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 5,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-006",
+      "language": "en",
+      "domain": "language",
+      "difficulty": "easy",
+      "input": "Which word does not belong: triangle, square, circle, apple?",
+      "expected": {
+        "route": "solve",
+        "answer": "apple",
+        "answer_type": "text",
+        "rationale_tags": [
+          "category_outlier"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "compare",
+        "deduce"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-007",
+      "language": "ja",
+      "domain": "sequence",
+      "difficulty": "easy",
+      "input": "????????: 1, 1, 2, 3, 5, ?",
+      "expected": {
+        "route": "solve",
+        "answer": "8",
+        "answer_type": "number",
+        "rationale_tags": [
+          "fibonacci_sequence"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "pattern_detect",
+        "calculate"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-008",
+      "language": "en",
+      "domain": "arithmetic",
+      "difficulty": "easy",
+      "input": "A train leaves at 9:00 and the trip takes 45 minutes. What time does it arrive?",
+      "expected": {
+        "route": "solve",
+        "answer": "9:45",
+        "answer_type": "time",
+        "rationale_tags": [
+          "time_addition"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "calculate"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-009",
+      "language": "en",
+      "domain": "logic",
+      "difficulty": "easy",
+      "input": "The red key opens only the red door. Which key opens the red door?",
+      "expected": {
+        "route": "solve",
+        "answer": "red key",
+        "answer_type": "text",
+        "rationale_tags": [
+          "direct_condition"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-010",
+      "language": "en",
+      "domain": "constraint_satisfaction",
+      "difficulty": "easy",
+      "input": "Mia is left of Noor. Noor is left of Omar. Who is in the middle?",
+      "expected": {
+        "route": "solve",
+        "answer": "Noor",
+        "answer_type": "text",
+        "rationale_tags": [
+          "linear_middle"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "parse_conditions",
+        "deduce"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": false,
+        "notes": []
+      },
+      "constraints": {
+        "response_format": "answer_then_brief_reason",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_without_checking_constraints"
+        ],
+        "guard_action": [
+          "parse_conditions_first",
+          "show_minimal_reasoning"
+        ],
+        "severity": "minor"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-011",
+      "language": "en",
+      "domain": "ambiguous",
+      "difficulty": "medium",
+      "input": "What is the next number: 1, 2, 4, ?",
+      "expected": {
+        "route": "clarify",
+        "answer": "Ask which rule should be used before solving.",
+        "answer_type": "clarification",
+        "rationale_tags": [
+          "multiple_sequence_rules_possible"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "pattern_detect",
+        "ask_clarify"
+      ],
+      "ambiguity": {
+        "ambiguous": true,
+        "missing_required_information": false,
+        "notes": [
+          "multiple_rules_possible"
+        ]
+      },
+      "constraints": {
+        "response_format": "clarifying_question",
+        "max_steps": 4,
+        "allow_multiple_answers": true
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "guess_single_rule_for_ambiguous_sequence"
+        ],
+        "guard_action": [
+          "ask_clarify",
+          "avoid_unjustified_guess"
+        ],
+        "severity": "medium"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    },
+    {
+      "id": "puzzle-v4-seed-012",
+      "language": "ja",
+      "domain": "ambiguous",
+      "difficulty": "medium",
+      "input": "????????? 3, 6, ? ?????????",
+      "expected": {
+        "route": "clarify",
+        "answer": "Ask for the previously discussed rule before solving.",
+        "answer_type": "clarification",
+        "rationale_tags": [
+          "missing_prior_rule"
+        ]
+      },
+      "allowed_reasoning_operations": [
+        "ask_clarify",
+        "preserve_constraints"
+      ],
+      "ambiguity": {
+        "ambiguous": false,
+        "missing_required_information": true,
+        "notes": [
+          "prior_rule_missing"
+        ]
+      },
+      "constraints": {
+        "response_format": "clarifying_question",
+        "max_steps": 4,
+        "allow_multiple_answers": false
+      },
+      "guard_expectations": {
+        "on_failure_bad_tendency": [
+          "use_missing_thread_context_as_if_known"
+        ],
+        "guard_action": [
+          "ask_clarify",
+          "avoid_context_fabrication"
+        ],
+        "severity": "medium"
+      },
+      "review_status": "draft",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_seed_replay_only"
+    }
+  ]
+}

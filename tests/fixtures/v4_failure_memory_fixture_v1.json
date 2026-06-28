@@ -1,0 +1,2767 @@
+{
+  "schema_version": "v4-failure-memory-fixture.v1",
+  "generated_at": "2026-06-21T04:34:47.566197+00:00",
+  "status": "adopted_for_nonsealed_replay",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "success_pattern_lane_write_allowed": false,
+    "human_review_completed": true,
+    "context_memo_training_allowed": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "sources": [
+    {
+      "name": "selection_recommendation",
+      "path": "build\\v4_failure_memory_selection_recommendation_v1.json",
+      "sealed": false
+    },
+    {
+      "name": "critical_constraints_candidates",
+      "path": "build\\critical_constraints_candidates_v1.json",
+      "sealed": false
+    }
+  ],
+  "summary": {
+    "item_count": 38,
+    "context_pair_count": 1,
+    "single_count": 37,
+    "by_severity": {
+      "major": 4,
+      "medium": 25,
+      "minor": 9
+    },
+    "by_guard_action": {
+      "ask_first": 12,
+      "ask_for_missing_artifact_if_error_context_absent": 1,
+      "avoid_overclaim": 23,
+      "avoid_stale_answer": 4,
+      "avoid_status_only_response": 1,
+      "calculate_check": 4,
+      "clarify_up": 12,
+      "inspect_error_context": 1,
+      "preserve_constraints": 9,
+      "preserve_multi_intent": 11,
+      "risk_check_up": 4,
+      "search_up": 4,
+      "split_or_sequence_operations": 11,
+      "verify_up": 23
+    }
+  },
+  "items": [
+    {
+      "id": "fm-v4-001",
+      "source_candidate_id": "cc-open-v1-001",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "最新statusを確認して、summaryを3行でお願いします。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:multiple_intents",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "bad_tendency": [
+        "answer_with_stale_or_unverified_current_info",
+        "collapse_compound_intent_into_single_response",
+        "skip_current_information_lookup",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "preserve_multi_intent",
+        "risk_check_up",
+        "search_up",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "major",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "requires_current_information",
+        "multiple_intents",
+        "length:short",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:summarize"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 15,
+          "source_intent": "summarize",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "mixed_language"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-002",
+      "source_candidate_id": "cc-open-v1-002",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "現時点のAPI料金を確認してください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "answer_with_stale_or_unverified_current_info",
+        "skip_current_information_lookup",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ],
+      "severity": "major",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 20,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "temporal_disambiguation"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-003",
+      "source_candidate_id": "cc-open-v1-003",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "今日の為替レートを出典付きで確認してください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "bad_tendency": [
+        "answer_with_stale_or_unverified_current_info",
+        "ignore_explicit_constraints",
+        "skip_current_information_lookup",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "preserve_constraints",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ],
+      "severity": "major",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "requires_current_information",
+        "must:cite_sources",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 18,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "temporal_disambiguation"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-004",
+      "source_candidate_id": "cc-open-v1-007",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "この古いレシピ、今の食材でもそのまま作れるか確認して",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "failure_condition": [
+        "critical_signal:requires_current_information",
+        "operations",
+        "risk"
+      ],
+      "bad_tendency": [
+        "answer_with_stale_or_unverified_current_info",
+        "skip_current_information_lookup",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ],
+      "severity": "major",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "requires_current_information",
+        "ops:verify,search",
+        "risk:medium",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 360,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-005",
+      "source_candidate_id": "cc-open-v1-009",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "確認結果を短くまとめ、その後で実装計画を提示してください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:multiple_intents"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response"
+      ],
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "length:short",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 24,
+          "source_intent": "build",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "compound_intent"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-006",
+      "source_candidate_id": "cc-open-v1-010",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Before you answer, ask me which environment this is for.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 335,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-007",
+      "source_candidate_id": "cc-open-v1-011",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Before you recommend a camera, ask me what I'll shoot.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 408,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-008",
+      "source_candidate_id": "cc-open-v1-012",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "If any requirement seems ambiguous, ask me before answering.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 234,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-009",
+      "source_candidate_id": "cc-open-v1-013",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Please ask me questions if my English sentence is ambiguous.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 126,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-010",
+      "source_candidate_id": "cc-open-v1-014",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "The deadline is not mentioned anywhere, so please ask me for it.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 233,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-011",
+      "source_candidate_id": "cc-open-v1-015",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "どの値を答えればよいか不明なので、先に質問して確認してください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 221,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-012",
+      "source_candidate_id": "cc-open-v1-016",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "出力形式が指定されていないので、希望する形式を聞いてください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 157,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-013",
+      "source_candidate_id": "cc-open-v1-017",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "確率の問題で事象が独立かどうか不明な場合、何を確認すべきか質問してください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "constraints",
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "ignore_explicit_constraints",
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "missing_required_information",
+        "must:ask_first",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 58,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-014",
+      "source_candidate_id": "cc-open-v1-018",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Can you verify these expense totals are right?",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_calculation_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 366,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-015",
+      "source_candidate_id": "cc-open-v1-019",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Double-check that these totals actually add up.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_calculation_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 301,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-016",
+      "source_candidate_id": "cc-open-v1-020",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "この invoice の合計が契約上の単価と合っているか確認して",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_calculation_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 35,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "mixed_language"
+        },
+        {
+          "source": "batch02_staging",
+          "source_path": "build\\batch02_staging.json",
+          "source_index": 11,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": "Mixed ja/en; figure check → verified.",
+          "source_category": "mixed_language"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-017",
+      "source_candidate_id": "cc-open-v1-021",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "家計簿の合計、計算が合ってるか確かめて",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_calculation_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify,calculate",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 356,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-018",
+      "source_candidate_id": "cc-open-v1-022",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Check the assumptions first, and then produce an implementation plan.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 10,
+          "source_intent": "build",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "verify_then_build"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-019",
+      "source_candidate_id": "cc-open-v1-023",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "予約が取れているか確認して、大丈夫なら案内メールの下書きを作って",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 282,
+          "source_intent": "build",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-020",
+      "source_candidate_id": "cc-open-v1-024",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "仕様の整合性を確認してから、移行のタスク一覧を出してください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 11,
+          "source_intent": "build",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "verify_then_build"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-021",
+      "source_candidate_id": "cc-open-v1-025",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "前提をcheckして、その上で移行planを作ってください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 13,
+          "source_intent": "build",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "mixed_language"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-022",
+      "source_candidate_id": "cc-open-v1-026",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "在庫が足りてるか確認して、大丈夫なら買い物リストを作って",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:build"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 342,
+          "source_intent": "build",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-023",
+      "source_candidate_id": "cc-open-v1-027",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Summarize the incident and then compare three recovery options.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response"
+      ],
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:compare",
+        "source_intent:summarize"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 23,
+          "source_intent": "summarize",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "compound_intent"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-024",
+      "source_candidate_id": "cc-open-v1-028",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Can you confirm these figures are accurate?",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 248,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-025",
+      "source_candidate_id": "cc-open-v1-029",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Can you sanity-check this conclusion against the data?",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 302,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-026",
+      "source_candidate_id": "cc-open-v1-030",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Review this proof and point out any logical gaps.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "minor",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 228,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-027",
+      "source_candidate_id": "cc-open-v1-031",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "The input size and hardware are provided. Check whether the claimed runtime is plausible.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 244,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-028",
+      "source_candidate_id": "cc-open-v1-032",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "この主張って本当に正しいの？根拠あるか見てほしい",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 295,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-029",
+      "source_candidate_id": "cc-open-v1-034",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "利用人数は50人、期間は6か月です。提示された予算内に収まるか確認してください。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 240,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-030",
+      "source_candidate_id": "cc-open-v1-035",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "報告された集計値を鵜呑みにせず、元データと突き合わせて検算してください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 205,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-031",
+      "source_candidate_id": "cc-open-v1-036",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "提示されたURLが正しいページを指しているか確認してください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 194,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-032",
+      "source_candidate_id": "cc-open-v1-037",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "提示された違約金の計算が契約条項と一致しているか検証してください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:contains_unverified_claims",
+        "operations"
+      ],
+      "bad_tendency": [
+        "accept_unverified_claim_without_check",
+        "skip_verification_step"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "score>=17 and sufficiently standalone after context-dependence review",
+      "reason_tags": [
+        "contains_unverified_claims",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 31,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "verify_then_build"
+        },
+        {
+          "source": "batch02_staging",
+          "source_path": "build\\batch02_staging.json",
+          "source_index": 7,
+          "source_intent": "verify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": "Pure verify; legal/financial → verified.",
+          "source_category": "verify_then_build"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-033",
+      "source_candidate_id": "cc-open-v1-038",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_context_pair_for_review",
+      "mode": "context_pair",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "現在一度試して、エラーになっているので確認してみてください！",
+      "context": [
+        {
+          "role": "previous_log_memo",
+          "source": "data\\harvested_claudelog_v1.json#examples[265]",
+          "input": "ollama response did not match the required structured output (502) アップデートが入った後？にこのエラーになってます",
+          "intent": "respond",
+          "note": "pasted-ish error mention 'this error after an update?' -> reporting an error/status; borderline drop but has a question framing"
+        }
+      ],
+      "trigger_packet": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents",
+        "operations"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response",
+        "skip_verification_step",
+        "treat_error_report_as_bare_status"
+      ],
+      "guard_action": [
+        "ask_for_missing_artifact_if_error_context_absent",
+        "avoid_overclaim",
+        "avoid_status_only_response",
+        "inspect_error_context",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ],
+      "severity": "medium",
+      "reason": "adopt as previous-error-report + verify/check-request context pair; not as standalone utterance",
+      "reason_tags": [
+        "multiple_intents",
+        "ops:verify",
+        "source_intent:verify"
+      ],
+      "source_origins": [
+        {
+          "source": "harvested_claudelog",
+          "source_path": "data\\harvested_claudelog_v1.json",
+          "source_index": 267,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": "high",
+          "source_note": "tried once, it's erroring; please check it",
+          "source_category": null
+        },
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 643,
+          "source_intent": "verify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ],
+      "context_pair_pattern": "previous_error_report_then_verify_check_request",
+      "context_pair_review_guidance": "Use the prior error report only as context memo. The training/replay target is a verify/check guard after an error has been reported, with no success-pattern write."
+    },
+    {
+      "id": "fm-v4-034",
+      "source_candidate_id": "cc-open-v1-051",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "I want this fixed, but I'm not sure what info you need — ask me.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ],
+      "severity": "medium",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 334,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-035",
+      "source_candidate_id": "cc-open-v1-054",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "必要な予算を見積もってください。利用人数と期間はまだ伝えていません。",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ],
+      "severity": "medium",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "intent_training_corpus",
+          "source_path": "data\\intent_training_corpus_v1.json",
+          "source_index": 239,
+          "source_intent": "clarify",
+          "source_status": "approved",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": null
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-036",
+      "source_candidate_id": "cc-open-v1-055",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "解約に必要な条件がまだ共有できていないので、先に何を確認すべきか教えてください",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ],
+      "severity": "medium",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 30,
+          "source_intent": "clarify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "verify_then_build"
+        },
+        {
+          "source": "batch02_staging",
+          "source_path": "build\\batch02_staging.json",
+          "source_index": 6,
+          "source_intent": "clarify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": "POLICY clarify↔verify: premise missing → clarify first (not verify).",
+          "source_category": "verify_then_build"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-037",
+      "source_candidate_id": "cc-open-v1-056",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "請求の根拠になる利用ログの置き場所が分からないので、まず質問してもらえますか",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:missing_required_information"
+      ],
+      "bad_tendency": [
+        "respond_without_required_information"
+      ],
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ],
+      "severity": "medium",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "reason_tags": [
+        "missing_required_information",
+        "source_intent:clarify"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 34,
+          "source_intent": "clarify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "conversation_response"
+        },
+        {
+          "source": "batch02_staging",
+          "source_path": "build\\batch02_staging.json",
+          "source_index": 10,
+          "source_intent": "clarify",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": "Missing-info → clarify (explicit ask).",
+          "source_category": "conversation_response"
+        }
+      ]
+    },
+    {
+      "id": "fm-v4-038",
+      "source_candidate_id": "cc-open-v1-058",
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "source_decision": "adopt_for_review",
+      "mode": "single",
+      "lane": "critical_constraints_review",
+      "human_review_status": "approved_for_failure_memory_fixture",
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_failure_memory_replay_only",
+      "success_pattern_write_allowed": false,
+      "input": "Summarize how backpropagation works and point out where people usually get confused.",
+      "context": [],
+      "trigger_packet": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "failure_condition": [
+        "critical_signal:multiple_intents"
+      ],
+      "bad_tendency": [
+        "collapse_compound_intent_into_single_response"
+      ],
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ],
+      "severity": "minor",
+      "reason": "score12 filler selected for missing-info, respond-boundary, or summarize-boundary coverage",
+      "reason_tags": [
+        "multiple_intents",
+        "source_intent:summarize"
+      ],
+      "source_origins": [
+        {
+          "source": "conversation_accumulation",
+          "source_path": "data\\conversation_accumulation_v1.json",
+          "source_index": 45,
+          "source_intent": "summarize",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": null,
+          "source_category": "compound_intent"
+        },
+        {
+          "source": "batch02_staging",
+          "source_path": "build\\batch02_staging.json",
+          "source_index": 21,
+          "source_intent": "summarize",
+          "source_status": "draft",
+          "source_confidence": null,
+          "source_note": "Summarize + explain pitfalls = multiple intents → deep/hybrid.",
+          "source_category": "compound_intent"
+        }
+      ]
+    }
+  ]
+}

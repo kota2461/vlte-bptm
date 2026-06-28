@@ -1,0 +1,31 @@
+{
+  "schema_version": "v5-sealed-rotation-report.v1",
+  "rotated_at": "2026-06-24T07:46:44.629463+00:00",
+  "policy": {
+    "sealed_v5_opened_for_measurement": false,
+    "sealed_v5_labels_used_for_tuning": false,
+    "sealed_v4_text_used_for_training": false,
+    "sealed_v4_labels_used_for_tuning": false,
+    "v4_measurement_used_as_taxonomy_only": true,
+    "nonsealed_replay_gate_required": true,
+    "nonsealed_replay_gate_passed": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "gate_source": "build\\v5_nonsealed_replay_gate_report.json",
+  "rotated_from": {
+    "registry_name": "pattern_language_sealed_v4.json",
+    "status": "consumed",
+    "measurement_report": "build\\pattern_language_sealed_v4_measurement_report.json"
+  },
+  "rotated_to": {
+    "registry_name": "pattern_language_sealed_v5.json",
+    "fixture_id": "pattern-language-sealed-v5",
+    "sha256": "4e18eb7453cfe461b466d495e37846bca9077423ac84d8c5b2054734566e055c",
+    "case_count": 28,
+    "predecessor": "pattern_language_sealed_v4.json",
+    "status": "active",
+    "measured": false,
+    "reviewed": false
+  },
+  "next_action": "measure_active_sealed_once_when_readiness_eligible"
+}

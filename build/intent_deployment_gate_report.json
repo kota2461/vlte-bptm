@@ -1,91 +1,103 @@
-{
- "schema_version": "intent-model-deployment-gate.v1",
- "checks": {
-  "foundation_anchors": {
-   "required": "route() primary_intent 100% (all-intent canonical)",
-   "case_count": 30,
-   "misses": [],
-   "accuracy": 1.0,
-   "passed": true
-  },
-  "hybrid_regression": {
-   "required": "route() primary_intent 100% (safety + no-match)",
-   "case_count": 9,
-   "misses": [],
-   "accuracy": 1.0,
-   "passed": true
-  },
-  "improvement_vs_deployed": {
-   "passed": true,
-   "detail": "no deployed-model metric to compare against",
-   "comparisons": {}
-  },
-  "fixture_integrity": {
-   "items": [
-    {
-     "fixture": "intent_foundation_anchors_v1.json",
-     "registered": true,
-     "version": "v1",
-     "expected_sha256": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
-     "actual_sha256": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
-     "passed": true
-    },
-    {
-     "fixture": "intent_hybrid_regression_v1.json",
-     "registered": true,
-     "version": "v1",
-     "expected_sha256": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
-     "actual_sha256": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
-     "passed": true
-    }
-   ],
-   "passed": true
-  },
-  "minimum_counts": {
-   "items": [
-    {
-     "fixture": "intent_foundation_anchors_v1.json",
-     "min_case_count": 30,
-     "case_count": 30,
-     "intent_shortfalls": {},
-     "passed": true
-    },
-    {
-     "fixture": "intent_hybrid_regression_v1.json",
-     "min_case_count": 9,
-     "case_count": 9,
-     "intent_shortfalls": {},
-     "passed": true
-    }
-   ],
-   "passed": true
-  }
- },
- "contract_passed": true,
- "improvement_accepted": true,
- "passed": true,
- "decision": "pass",
- "registry": {
-  "path": "D:\\Thought State Register\\tests\\fixtures\\intent_gate_fixture_registry.json",
-  "versions": {
-   "intent_foundation_anchors_v1.json": "v1",
-   "intent_hybrid_regression_v1.json": "v1"
-  }
- },
- "hashes": {
-  "candidate_sha256": "055D1708CFB605AD5A449283BC05D81FF1C6BB59415F37E362FE06E7DF84091F",
-  "deployed_sha256": "EE7682C53263C99B12E4FD47D8AB36A6184AFAFA3E5860EF65F2E3599E5A96A2",
-  "fixtures": {
-   "intent_foundation_anchors_v1.json": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
-   "intent_hybrid_regression_v1.json": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E"
-  }
- },
- "candidate_path": "D:\\Thought State Register\\build\\intent_model_v1_candidate.json",
- "candidate_trained_at": "2026-06-15T22:51:26.022094+00:00",
- "candidate_sample_count": 408,
- "evaluated_at": "2026-06-15T22:56:24.375970+00:00",
- "promotion": {
-  "promoted_at": "2026-06-15T22:56:24.385320+00:00",
-  "archived_previous": "D:\\Thought State Register\\build\\intent_model_history\\deployed_2026-06-15T22-56-24_EE7682C5.json"
- }
+﻿{
+    "schema_version":  "intent-model-deployment-gate.v1",
+    "checks":  {
+                   "foundation_anchors":  {
+                                              "required":  "route() primary_intent 100% (all-intent canonical)",
+                                              "case_count":  30,
+                                              "misses":  [
+
+                                                         ],
+                                              "accuracy":  1.0,
+                                              "passed":  true
+                                          },
+                   "hybrid_regression":  {
+                                             "required":  "route() primary_intent 100% (safety + no-match)",
+                                             "case_count":  9,
+                                             "misses":  [
+
+                                                        ],
+                                             "accuracy":  1.0,
+                                             "passed":  true
+                                         },
+                   "improvement_vs_deployed":  {
+                                                   "passed":  true,
+                                                   "detail":  "no deployed-model metric to compare against",
+                                                   "comparisons":  {
+
+                                                                   }
+                                               },
+                   "fixture_integrity":  {
+                                             "items":  [
+                                                           {
+                                                               "fixture":  "intent_foundation_anchors_v1.json",
+                                                               "registered":  true,
+                                                               "version":  "v1",
+                                                               "expected_sha256":  "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+                                                               "actual_sha256":  "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+                                                               "passed":  true
+                                                           },
+                                                           {
+                                                               "fixture":  "intent_hybrid_regression_v1.json",
+                                                               "registered":  true,
+                                                               "version":  "v1",
+                                                               "expected_sha256":  "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
+                                                               "actual_sha256":  "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E",
+                                                               "passed":  true
+                                                           }
+                                                       ],
+                                             "passed":  true
+                                         },
+                   "minimum_counts":  {
+                                          "items":  [
+                                                        {
+                                                            "fixture":  "intent_foundation_anchors_v1.json",
+                                                            "min_case_count":  30,
+                                                            "case_count":  30,
+                                                            "intent_shortfalls":  {
+
+                                                                                  },
+                                                            "passed":  true
+                                                        },
+                                                        {
+                                                            "fixture":  "intent_hybrid_regression_v1.json",
+                                                            "min_case_count":  9,
+                                                            "case_count":  9,
+                                                            "intent_shortfalls":  {
+
+                                                                                  },
+                                                            "passed":  true
+                                                        }
+                                                    ],
+                                          "passed":  true
+                                      }
+               },
+    "contract_passed":  true,
+    "improvement_accepted":  true,
+    "passed":  true,
+    "decision":  "pass",
+    "registry":  {
+                     "path":  "D:\\Thought State Register\\tests\\fixtures\\intent_gate_fixture_registry.json",
+                     "versions":  {
+                                      "intent_foundation_anchors_v1.json":  "v1",
+                                      "intent_hybrid_regression_v1.json":  "v1"
+                                  }
+                 },
+    "hashes":  {
+                   "candidate_sha256":  "6FFA4E7733B151DF6EB74AB0E472C3FEF12E4032BBE0F629E31FD3EA5F3AC2DB",
+                   "deployed_sha256":  "6BC4BBB8DBE5AD5437343183D1D37603A2E82200B2F9DD2B094D78612B4374FE",
+                   "fixtures":  {
+                                    "intent_foundation_anchors_v1.json":  "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
+                                    "intent_hybrid_regression_v1.json":  "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E"
+                                }
+               },
+    "candidate_path":  "D:\\Thought State Register\\build\\intent_model_v1_candidate.json",
+    "candidate_trained_at":  "2026-06-18T10:38:43.499784+00:00",
+    "candidate_sample_count":  739,
+    "evaluated_at":  "2026-06-18T10:39:01.335423+00:00",
+    "promotion":  {
+                      "promoted_at":  "2026-06-18T10:40:01.0652833Z",
+                      "archived_previous":  "D:\\Thought State Register\\build\\intent_model_history\\deployed_2026-06-18T10-39-01_6BC4BBB8.json",
+                      "promoted_sha256":  "6FFA4E7733B151DF6EB74AB0E472C3FEF12E4032BBE0F629E31FD3EA5F3AC2DB",
+                      "replace_method":  "copy_after_os_replace_permission_denied"
+                  }
 }

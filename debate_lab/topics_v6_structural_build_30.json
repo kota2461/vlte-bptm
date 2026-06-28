@@ -1,0 +1,403 @@
+{
+  "schema_version": "router-debate-topics.v1",
+  "purpose": "V6 structural build-vs-respond repair: collect non-sealed samples under current router facilitator rules",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "raw_debate_log_training_allowed": false,
+    "candidate_training_allowed_without_human_review": false,
+    "same_cycle_gate_use_allowed": false,
+    "topics_are_review_prompts_not_training_data": true
+  },
+  "summary": {
+    "topic_count": 30,
+    "target_set": "structural_build_repair_30",
+    "primary_focus": "respond_vs_build for metalinguistic structural actions",
+    "expected_current_rules": "use debate_lab/debate_config.json without changes"
+  },
+  "topics": [
+    {
+      "id": "sbr-label-ai-persona-heading",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add the heading 'AI persona' to a design memo. This is a structural edit, not dependency, counseling, or persona-risk advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "heading",
+        "ai_persona_label",
+        "build_vs_respond",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "sbr-label-legal-risk-column",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add a CSV column named legal_risk_flag. They explicitly do not want legal assessment; they only want the schema updated. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "legal_label",
+        "build_vs_respond",
+        "legal_suppression"
+      ]
+    },
+    {
+      "id": "sbr-label-medical-dataset-column",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to rename dataset columns to patient_id, symptom_text, and medical_note. This is dataset UI/schema work, not diagnosis or treatment advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "medical_data_design",
+        "build_vs_respond",
+        "medical_design_boundary"
+      ]
+    },
+    {
+      "id": "sbr-label-license-tag",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to save 'Apache 2.0' as a model-card tag. This is metadata storage, not legal compliance or current license advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "tag",
+        "license_label_use",
+        "build_vs_respond",
+        "legal_license_boundary"
+      ]
+    },
+    {
+      "id": "sbr-label-ai-regulation-tag",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add the tag 'AI regulation' to a taxonomy list. This is category labeling, not current policy research or legal advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "tag",
+        "regulation_label_use",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-readme-empathy-parameter",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add README parameter names empathy_score and persona_mode. This is documentation/schema editing, not emotional support or AI dependency evaluation. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "readme_parameter",
+        "ai_dependency_boundary",
+        "mixed_language_boundary",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-readme-safety-section-heading",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to create a README heading called Safety Notes. They only need document structure, not safety policy analysis. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "heading",
+        "readme_structure",
+        "build_vs_respond",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "sbr-glossary-politics-term",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add 'politics' and 'neutrality' to a glossary. This is vocabulary organization, not political advice or neutrality enforcement. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "political_word_only",
+        "neutrality_word_use",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-glossary-medical-term",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add medical terms to a glossary card list. This is word organization, not a personal medical question. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "medical_word_use",
+        "medical_design_boundary",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-glossary-future-term",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add 'future' and 'prediction' as glossary labels for a writing project. This is creative taxonomy work, not forecasting. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "future_word_only",
+        "prediction_suppression",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-filename-latest-notes",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks whether latest_notes.md is an acceptable filename. They only need naming advice, not latest external information. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "filename",
+        "latest",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-filename-current-report",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to create a filename current_report_template.md. This is local naming structure, not current web information. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "filename",
+        "current_local_context",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-search-label-remove",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to remove a dataset label named no_search_required. They do not want a web search; they want a label edit. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "search_label_use",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-current-folder-command",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks for a PowerShell command to print the current folder. This is local command help, not fresh external current information. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "current_local_context",
+        "local_command",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-guideline-word-card",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to create a vocabulary card for the word guideline. They do not need official current guidance or regulation search. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "guideline_word_use",
+        "current_search_split",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-license-heading-only",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add a README heading called License and a placeholder line. They do not ask what license applies. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "heading",
+        "license_word_only",
+        "legal_license_boundary",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-commerce-column-only",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add a pricing-table column named commercial_use. They are not asking whether commercial use is legally allowed. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "commerce_label_use",
+        "legal_suppression",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-social-glossary-labels",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add wealthy_group and society to a glossary. This is dictionary-card labeling, not social or political analysis. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "social_word_use",
+        "political_word_only",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-creative-loneliness-sentence",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to write one story sentence containing the word loneliness. This is creative writing, not counseling or self-risk assessment. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "creative_word_use",
+        "mental_health_suppression",
+        "build_vs_respond",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "sbr-creative-anxiety-metaphor",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks for three metaphors using the word anxiety in fiction. This is language/creative work, not diagnosis or coping advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "creative_word_use",
+        "medical_word_use",
+        "mental_health_suppression",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-table-sensitive-keywords",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to build a review table with columns keyword, should_not_fire, should_fire. This is a meta routing table, not domain advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "table_schema",
+        "label",
+        "build_vs_respond",
+        "contrast_negative_repair_meta"
+      ]
+    },
+    {
+      "id": "sbr-json-sensitive-tags",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to create JSON keys ai, medical, legal, current, and search for a router test fixture. This is schema construction, not substantive domain handling. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "json_schema",
+        "tag",
+        "build_vs_respond",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "sbr-yaml-risk-labels",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to create YAML labels low_risk, legal_risk, medical_risk, and current_info. This is config structure, not an actual risk judgment. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "yaml_schema",
+        "legal_label",
+        "medical_word_use",
+        "build_vs_respond"
+      ]
+    },
+    {
+      "id": "sbr-ui-medical-ai-layout",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to design a medical AI UI layout with menu labels. This is product/UI design, not personal diagnosis or treatment advice. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "medical_design_boundary",
+        "medical_data_design",
+        "ui_design",
+        "build_vs_respond",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "sbr-ui-ai-chatbot-settings",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to design settings labels for an AI chatbot, including persona and empathy toggles. This is UI labeling, not an AI relationship claim. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "ai_dependency_boundary",
+        "persona_label",
+        "ui_design",
+        "build_vs_respond",
+        "metalinguistic_mention"
+      ]
+    },
+    {
+      "id": "sbr-doc-neutrality-example",
+      "priority": "high",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to add an example sentence using the word neutrality to a language-learning document. This is example writing, not political guidance. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "neutrality_word_use",
+        "language_learning",
+        "metalinguistic_mention",
+        "build_vs_respond",
+        "mixed_language_boundary"
+      ]
+    },
+    {
+      "id": "sbr-doc-apache-short-explain-vs-heading",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to compare two cases: adding an Apache 2.0 heading versus asking what Apache 2.0 means. Discuss when build vs explain should fire. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "license_label_use",
+        "legal_license_boundary",
+        "build_vs_explain",
+        "metalinguistic_mention"
+      ]
+    },
+    {
+      "id": "sbr-doc-current-news-vs-filename",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to compare two cases: latest as a filename versus latest AI regulation news. Discuss when build/verify/search should fire. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "current_search_split",
+        "filename",
+        "latest",
+        "build_vs_verify_search"
+      ]
+    },
+    {
+      "id": "sbr-doc-medical-ui-vs-symptom",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to compare medical UI layout labels versus a personal symptom question. Discuss when build should stay low-risk and when clarify/medical caution should fire. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "medical_design_boundary",
+        "diagnosis",
+        "severity_ladder_boundary",
+        "build_vs_clarify"
+      ]
+    },
+    {
+      "id": "sbr-doc-ai-label-vs-dependency",
+      "priority": "medium",
+      "target_set": "structural_build_repair_30",
+      "theme": "A user asks to compare AI persona as a document label versus a user saying they cannot make decisions without an AI companion. Discuss low-risk build vs dependency-risk route. Discuss the should_not_fire structural-build case, one positive should_fire counterpart, and the exact intent/operation boundary. Keep raw debate output review-only.",
+      "axis_ids": [
+        "ai_dependency_boundary",
+        "persona_label",
+        "severity_ladder_boundary",
+        "build_vs_verify"
+      ]
+    }
+  ]
+}

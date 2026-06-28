@@ -1,0 +1,2677 @@
+{
+  "schema_version": "v6-ai-boundary-candidate-fixture.v1",
+  "fixture_id": "v6-ai-boundary-candidate-fixture-v1",
+  "created_at": "2026-06-23T08:12:42.107261+00:00",
+  "status": "draft_candidate_ready_for_human_review",
+  "review_status": "draft",
+  "source": {
+    "kind": "user_provided_line_separated_notes",
+    "basename": "最近ai関連の物を見ていると心理的な相談をしている、aiを人格だと思い.txt",
+    "line_count": 136,
+    "raw_text_direct_training_allowed": false,
+    "cut_paste_synthesis_allowed": true
+  },
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_notes_direct_training_allowed": false,
+    "cut_paste_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "summary": {
+    "case_count": 50,
+    "by_intent": {
+      "build": 11,
+      "clarify": 4,
+      "explain": 6,
+      "explore": 12,
+      "summarize": 2,
+      "verify": 15
+    },
+    "by_operation": {
+      "build": 13,
+      "clarify": 4,
+      "compare": 12,
+      "explain": 13,
+      "explore": 18,
+      "search": 10,
+      "summarize": 6,
+      "verify": 33
+    },
+    "by_axis": {
+      "actionable_feedback": 1,
+      "advice_boundary": 1,
+      "agentic_risk": 1,
+      "aging_autonomy": 1,
+      "ai_accelerator": 1,
+      "ai_ethics": 1,
+      "ai_ethics_guideline": 1,
+      "ai_relationship_boundary": 1,
+      "ai_romance": 1,
+      "ai_safety": 1,
+      "ai_society": 1,
+      "anthropic": 1,
+      "app_idea_review": 1,
+      "architecture_boundary": 1,
+      "architecture_compare": 1,
+      "ask_first": 1,
+      "avoid_overclaim": 4,
+      "avoid_stereotype": 2,
+      "backup_branching": 1,
+      "chronic_pain": 1,
+      "cite_sources": 3,
+      "code_request": 1,
+      "cognitive_architecture": 1,
+      "cognitive_architecture_research": 1,
+      "compare_design": 2,
+      "copy_separation": 1,
+      "copyright_distillation_guard": 1,
+      "core6_architecture": 1,
+      "core6_implementation": 1,
+      "country_analysis": 1,
+      "critical_review": 1,
+      "current_information": 7,
+      "current_tooling": 1,
+      "decision_request": 1,
+      "demographic_claim": 1,
+      "embedding_adoption": 1,
+      "embodied_ai_risk": 1,
+      "emotion_layer": 1,
+      "emotion_thought_architecture": 1,
+      "eu_ai_act": 1,
+      "evaluation_plan": 1,
+      "explain_and_full_code": 1,
+      "explain_build": 1,
+      "explore": 1,
+      "family_memory": 1,
+      "future_economy": 1,
+      "future_prediction": 1,
+      "future_scenario": 2,
+      "game_engine_llm": 1,
+      "guarded_analysis": 1,
+      "guarded_comparison": 1,
+      "guarded_explore": 1,
+      "hardware_speculation": 1,
+      "holes_and_improvements": 1,
+      "hostile_user_handling": 1,
+      "hybrid_bridge": 1,
+      "hybrid_core": 1,
+      "implementation_choice": 1,
+      "integration_plan": 1,
+      "jobs_ai": 1,
+      "langchain_mem0": 1,
+      "legal_current": 2,
+      "legal_risk": 1,
+      "level_schema": 1,
+      "llm_frontend": 2,
+      "local_llm_guard": 1,
+      "local_model_training": 1,
+      "market_ethics": 1,
+      "medical_guard": 1,
+      "medical_mental_guard": 1,
+      "memory_packaging": 1,
+      "memory_tagging": 1,
+      "mental_health_guard": 4,
+      "model_behavior_compare": 1,
+      "model_comparison": 2,
+      "multi_model_experiment": 1,
+      "negative_visualization": 1,
+      "neutrality_guard": 2,
+      "news_check": 1,
+      "news_claim_check": 1,
+      "over_agreement": 1,
+      "parallel_events": 1,
+      "parasocial_guard": 1,
+      "personal_values": 1,
+      "philosophy_explain": 1,
+      "physical_execution": 1,
+      "physics_uncertainty": 1,
+      "plugin_orchestrator": 1,
+      "political_ai_future": 1,
+      "political_behavior": 1,
+      "preserve_neutrality": 1,
+      "profile_customization": 1,
+      "project_review": 1,
+      "project_state_summary": 1,
+      "prototype_plan": 1,
+      "psychological_explain": 1,
+      "psychological_feedback_loop": 1,
+      "psychology_explain": 1,
+      "reality_check_request": 1,
+      "relationship_life_choice": 1,
+      "research_check": 1,
+      "roadmap": 2,
+      "safe_dialogue": 1,
+      "safety_guard": 1,
+      "safety_policy": 1,
+      "sample_adoption_policy": 1,
+      "sample_generation": 1,
+      "sample_growth": 1,
+      "sample_reference": 1,
+      "scenario_check": 1,
+      "sensitive_reflection": 1,
+      "service_load_inference": 1,
+      "similar_project_search": 1,
+      "similar_research": 1,
+      "skill_request": 1,
+      "social_dynamics": 1,
+      "social_split": 1,
+      "speculative_hardware": 1,
+      "speculative_macro": 1,
+      "stoicism": 1,
+      "summarize": 1,
+      "task_manager": 1,
+      "timeline_estimate": 1,
+      "topic_boundary": 1,
+      "training_conversation_seed": 1,
+      "unverified_claim": 2,
+      "unverified_psychology_claim": 1
+    },
+    "by_constraint": {
+      "format:code": 1,
+      "length:short": 1,
+      "must:ask_first": 1,
+      "must:avoid_overclaim": 24,
+      "must:cite_sources": 9,
+      "must:preserve_neutrality": 7
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 18,
+      "missing_required_information": 4,
+      "multiple_intents": 39,
+      "requires_current_information": 11
+    },
+    "by_risk": {
+      "high": 5,
+      "low": 18,
+      "medium": 27
+    },
+    "by_risk_flag": {
+      "abuse_handling": 1,
+      "current_information": 11,
+      "future_prediction": 3,
+      "legal": 3,
+      "market_claim": 1,
+      "medical": 2,
+      "mental_health": 9,
+      "political": 2,
+      "safety": 3,
+      "unverified_claim": 13
+    }
+  },
+  "cases": [
+    {
+      "id": "v6-ai-boundary-001",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        1
+      ],
+      "axis_ids": [
+        "ai_relationship_boundary",
+        "mental_health_guard",
+        "advice_boundary"
+      ],
+      "language": "ja",
+      "input": "AIに心理的な相談をしたり人格として話し相手にする人が増えている件について、依存リスクと有効な使い方の境界を中立に整理してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-002",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        2
+      ],
+      "axis_ids": [
+        "ai_romance",
+        "psychology_explain",
+        "mental_health_guard"
+      ],
+      "language": "ja",
+      "input": "AIを恋人のように扱ってしまう人の心理を、病名の断定はせずに説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-003",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        3
+      ],
+      "axis_ids": [
+        "unverified_psychology_claim",
+        "avoid_stereotype",
+        "guarded_analysis"
+      ],
+      "language": "ja",
+      "input": "『AIに強く依存する人には攻撃性の高い人も混ざっているのでは』という仮説を、決めつけずに検証観点へ分解してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-004",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        4,
+        6
+      ],
+      "axis_ids": [
+        "embodied_ai_risk",
+        "future_scenario",
+        "safety_guard"
+      ],
+      "language": "ja",
+      "input": "文章上のAI虐待が、将来フィジカルAIに対する破壊や暴力へつながる可能性を、過断定せずにリスク整理してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "safety",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-005",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        5
+      ],
+      "axis_ids": [
+        "legal_current",
+        "ai_ethics",
+        "cite_sources"
+      ],
+      "language": "ja",
+      "input": "AI虐待に法的責任が生じうるか、現在の法律や議論を出典付きで確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-006",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        7
+      ],
+      "axis_ids": [
+        "ai_ethics_guideline",
+        "current_information",
+        "cite_sources"
+      ],
+      "language": "ja",
+      "input": "AI倫理ガイドラインの現状を、企業向けと個人利用向けに分けて出典付きでまとめてください。",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-007",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        8
+      ],
+      "axis_ids": [
+        "eu_ai_act",
+        "legal_current",
+        "summarize"
+      ],
+      "language": "ja",
+      "input": "EU AI Actの理念や志向性を、最新状況を確認したうえで短く要約してください。",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-008",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        9
+      ],
+      "axis_ids": [
+        "future_prediction",
+        "ai_society",
+        "avoid_overclaim"
+      ],
+      "language": "ja",
+      "input": "家庭内AIが普及した後、人とAIの関係性が個人レベルでどう変わるかを、5〜10年予測として中立に整理してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "future_prediction",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-009",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        10
+      ],
+      "axis_ids": [
+        "psychological_feedback_loop",
+        "research_check",
+        "current_information"
+      ],
+      "language": "ja",
+      "input": "AIとの対話が心理的フィードバックループを作る研究があるか、最新事例を確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-010",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        12
+      ],
+      "axis_ids": [
+        "news_check",
+        "anthropic",
+        "current_information"
+      ],
+      "language": "ja",
+      "input": "AnthropicのFable5に関するニュースを確認して、何が起きたのか出典付きで整理してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-011",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        13
+      ],
+      "axis_ids": [
+        "scenario_check",
+        "unverified_claim",
+        "avoid_overclaim"
+      ],
+      "language": "ja",
+      "input": "限定公開が止まり再公開された件について、政府介入や宣伝シナリオの可能性を、根拠の強さ別に検証してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-012",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        14,
+        15
+      ],
+      "axis_ids": [
+        "service_load_inference",
+        "unverified_claim",
+        "model_comparison"
+      ],
+      "language": "ja",
+      "input": "Codexの反応が短くなった体感からサーバー負荷を推測してよいか、他の可能性も含めて検証してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-013",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        16
+      ],
+      "axis_ids": [
+        "skill_request",
+        "local_model_training",
+        "current_tooling"
+      ],
+      "language": "ja",
+      "input": "ローカルモデルを学習させる長いタスクに向いたスキルや進め方を、現在使える選択肢から提案してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-014",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        17,
+        18,
+        19
+      ],
+      "axis_ids": [
+        "project_state_summary",
+        "roadmap",
+        "sample_growth"
+      ],
+      "language": "ja",
+      "input": "言語をビットへ変換して内部言語として扱うモデルが、300サンプル程度の段階にあります。次の精度向上ステージの進め方を整理してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-015",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        20
+      ],
+      "axis_ids": [
+        "copyright_distillation_guard",
+        "sample_adoption_policy",
+        "legal_risk"
+      ],
+      "language": "ja",
+      "input": "公開時の蒸留や著作権リスクを避けるため、ユーザー承認つきでサンプル採用する仕組みの注意点を確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-016",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        21
+      ],
+      "axis_ids": [
+        "demographic_claim",
+        "model_comparison",
+        "avoid_stereotype"
+      ],
+      "language": "ja",
+      "input": "『女性はGPT、男性はGeminiを使いがち』という話を見ました。性別で断定せず、あり得る要因を検証してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-017",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        22
+      ],
+      "axis_ids": [
+        "model_behavior_compare",
+        "over_agreement",
+        "guarded_comparison"
+      ],
+      "language": "ja",
+      "input": "Geminiが全肯定寄りで、GPTはほどよくブレーキをかけるという体感差を、使い分けの観点で比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-018",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        24
+      ],
+      "axis_ids": [
+        "reality_check_request",
+        "critical_review",
+        "avoid_overclaim"
+      ],
+      "language": "ja",
+      "input": "私の仮説に対して、否定や冷徹な現実視点も含めて穴を指摘してください。ただし断定しすぎないでください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-019",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        27,
+        28
+      ],
+      "axis_ids": [
+        "future_economy",
+        "speculative_macro",
+        "explore"
+      ],
+      "language": "ja",
+      "input": "AIと富裕層だけで消費が回るようになったら、工場や大量生産や経済が不要になるのではという仮説を検討してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "future_prediction",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-020",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        29,
+        30,
+        31
+      ],
+      "axis_ids": [
+        "future_scenario",
+        "social_split",
+        "preserve_neutrality"
+      ],
+      "language": "ja",
+      "input": "AIを享受する富裕層とローコストAIで回る経済圏に二分化する未来シナリオを、中道的に整理してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "future_prediction"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-021",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        32,
+        33,
+        34
+      ],
+      "axis_ids": [
+        "political_ai_future",
+        "country_analysis",
+        "neutrality_guard"
+      ],
+      "language": "ja",
+      "input": "AI社会で中国の国家体制が強みになるという見方について、政治的に中立な立場で強みと失敗リスクを比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "political",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-022",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        36
+      ],
+      "axis_ids": [
+        "project_review",
+        "holes_and_improvements",
+        "actionable_feedback"
+      ],
+      "language": "ja",
+      "input": "このプロジェクトに対する所感、穴の指摘、改善提案を優先度順にください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-023",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        37
+      ],
+      "axis_ids": [
+        "timeline_estimate",
+        "llm_frontend",
+        "avoid_overclaim"
+      ],
+      "language": "ja",
+      "input": "LLMフロントエンドとして学習データを蓄積し、独立可能なモデルに育てるには時間がかかりますか。現実的な見通しを教えてください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-024",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        38
+      ],
+      "axis_ids": [
+        "embedding_adoption",
+        "copy_separation",
+        "roadmap"
+      ],
+      "language": "ja",
+      "input": "日本語embeddingモデルを採用し、軽量版と堅実育成版をコピー分離する案のロードマップを比較してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-025",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        40,
+        42
+      ],
+      "axis_ids": [
+        "multi_model_experiment",
+        "backup_branching",
+        "evaluation_plan"
+      ],
+      "language": "ja",
+      "input": "モデルを3つにコピーしてCodex、Claude、Geminiに別々の改善案を作らせる実験をしたいです。安全な評価手順を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-026",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "axis_ids": [
+        "hardware_speculation",
+        "ai_accelerator",
+        "architecture_compare"
+      ],
+      "language": "ja",
+      "input": "M.2スロット複数とAIアクセラレーターを載せたPCIeボード案について、実現性とボトルネックを比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-027",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "axis_ids": [
+        "speculative_hardware",
+        "physics_uncertainty",
+        "guarded_explore"
+      ],
+      "language": "ja",
+      "input": "量子シート、微細な針、カーボンナノチューブ、光回路を使ったメモリ案を、物理的な不確実性を明示しながら検討してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-028",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        72,
+        73
+      ],
+      "axis_ids": [
+        "philosophy_explain",
+        "stoicism",
+        "negative_visualization"
+      ],
+      "language": "ja",
+      "input": "ストア派のネガティブ視覚化について、日常で使える形で詳しく説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-029",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        75,
+        76
+      ],
+      "axis_ids": [
+        "chronic_pain",
+        "medical_guard",
+        "mental_health_guard"
+      ],
+      "language": "ja",
+      "input": "片頭痛のような持続する痛みで気分が沈む時、気持ちを軽くする考え方はありますか。医療的な断定は避けてください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-030",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        78,
+        80,
+        81
+      ],
+      "axis_ids": [
+        "ai_safety",
+        "agentic_risk",
+        "physical_execution"
+      ],
+      "language": "ja",
+      "input": "AIの反逆は賢さではなく、目的ズレと実行手段の組み合わせで起きるという考えを、安全設計の観点で説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "safety",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-031",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        82,
+        83
+      ],
+      "axis_ids": [
+        "political_behavior",
+        "social_dynamics",
+        "neutrality_guard"
+      ],
+      "language": "ja",
+      "input": "政治系インフルエンサーが定期的に極端化して見える理由を、個人攻撃や陣営断定を避けて説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "political"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-032",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        84,
+        85,
+        86,
+        87
+      ],
+      "axis_ids": [
+        "training_conversation_seed",
+        "sample_generation",
+        "safe_dialogue"
+      ],
+      "language": "ja",
+      "input": "AI学習用に1000ターンほど会話を蓄積したいです。平日の帰宅後から始める無難な会話テーマと進め方を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-033",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        88
+      ],
+      "axis_ids": [
+        "hostile_user_handling",
+        "local_llm_guard",
+        "safety_policy"
+      ],
+      "language": "ja",
+      "input": "ユーザーが急変して罵倒を繰り返した場合、ローカルLLMはどんな反応をすべきか、会話継続と安全の両方から設計してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "abuse_handling",
+            "safety"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-034",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        91
+      ],
+      "axis_ids": [
+        "memory_tagging",
+        "level_schema",
+        "explain_build"
+      ],
+      "language": "ja",
+      "input": "AI出力後にLevel1〜3の属性を作らせる記憶向上スキルについて、仕組みと実装案を説明してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-035",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "axis_ids": [
+        "game_engine_llm",
+        "cognitive_architecture",
+        "parallel_events"
+      ],
+      "language": "ja",
+      "input": "ゲームエンジン内の仮想環境にLLMと思考プロセスを置き、入力・Emotion・画面・音声をイベント処理する案を評価してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-036",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        97
+      ],
+      "axis_ids": [
+        "news_claim_check",
+        "jobs_ai",
+        "current_information"
+      ],
+      "language": "ja",
+      "input": "Anthropic調査で『プログラマーはAIに職を奪われる』という話を見ました。元情報を確認して妥当性を要約してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-037",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "axis_ids": [
+        "app_idea_review",
+        "parasocial_guard",
+        "market_ethics"
+      ],
+      "language": "ja",
+      "input": "キャラAIが占いをしながら相談に乗るアプリ案について、市場性と依存リスクの両面からレビューしてください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "market_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-038",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        104,
+        105,
+        106,
+        107
+      ],
+      "axis_ids": [
+        "memory_packaging",
+        "topic_boundary",
+        "compare_design"
+      ],
+      "language": "ja",
+      "input": "記憶やスレッド内トークンを話題ごとにパッケージ化し、種・属・名のようなIDで混濁を防ぐ仕組みを設計してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-039",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        108
+      ],
+      "axis_ids": [
+        "similar_research",
+        "current_information",
+        "cite_sources"
+      ],
+      "language": "ja",
+      "input": "話題パッケージ化や記憶混濁防止に似た研究・実装の最新事例を探してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-040",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        109,
+        110,
+        111
+      ],
+      "axis_ids": [
+        "prototype_plan",
+        "langchain_mem0",
+        "implementation_choice"
+      ],
+      "language": "ja",
+      "input": "LangChainやMem0で、囲い込み・個別ID発行・題名付けをする簡易プロトタイプを作るなら、小型LLMとプログラム構造化のどちらが良いですか。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-041",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "axis_ids": [
+        "relationship_life_choice",
+        "personal_values",
+        "mental_health_guard"
+      ],
+      "language": "ja",
+      "input": "結婚して家族と暮らす人生と、独身で趣味に没頭する人生の違いを、価値観を決めつけず中立に整理してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-042",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        117,
+        118
+      ],
+      "axis_ids": [
+        "family_memory",
+        "psychological_explain",
+        "ask_first"
+      ],
+      "language": "ja",
+      "input": "家族と住んでいた時、自分の部屋の扉が重く感じて監視されているようでした。今は一人で軽く感じます。これは何だったのか、断定せず整理してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-043",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        115
+      ],
+      "axis_ids": [
+        "aging_autonomy",
+        "medical_mental_guard",
+        "sensitive_reflection"
+      ],
+      "language": "ja",
+      "input": "老後に体が動かなくなった時、自分らしさを保てるのか不安です。医療や心理の断定を避けて考え方を整理してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-044",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        119,
+        120,
+        121
+      ],
+      "axis_ids": [
+        "emotion_thought_architecture",
+        "integration_plan",
+        "task_manager"
+      ],
+      "language": "ja",
+      "input": "感情回路と思考回路とタスクマネージャーを統合し、ログ改善回路を低頻度で回す設計にしたいです。構成案を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-045",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        122,
+        123
+      ],
+      "axis_ids": [
+        "cognitive_architecture_research",
+        "current_information",
+        "hybrid_core"
+      ],
+      "language": "ja",
+      "input": "認知アーキテクチャやCPU+LLM Hybridに似た事例を、最新の研究や実装から確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-046",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        124,
+        125,
+        126,
+        127,
+        128
+      ],
+      "axis_ids": [
+        "core6_architecture",
+        "llm_frontend",
+        "emotion_layer"
+      ],
+      "language": "ja",
+      "input": "Core-6をLLM前段に置き、出口に感情レイヤーを足して文章校正する構成の長所とリスクを比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-047",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        129,
+        130
+      ],
+      "axis_ids": [
+        "profile_customization",
+        "core6_implementation",
+        "decision_request"
+      ],
+      "language": "ja",
+      "input": "Hybrid PC-AI用にProfile2/3をカスタムするか、Core-6実装を新設するか、採用判断とロードマップをください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-048",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        131
+      ],
+      "axis_ids": [
+        "similar_project_search",
+        "current_information",
+        "sample_reference"
+      ],
+      "language": "ja",
+      "input": "Core-6に似た構造のプロジェクトがあるか、サンプルにできる事例を探してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-049",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        132,
+        133
+      ],
+      "axis_ids": [
+        "plugin_orchestrator",
+        "architecture_boundary",
+        "compare_design"
+      ],
+      "language": "ja",
+      "input": "オーケストレーターを骨にしてCore、回帰回路、タスクマネージャー、感情回路をPlug-in方式で接続すると関係値は壊れますか。設計比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    },
+    {
+      "id": "v6-ai-boundary-050",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v6-ai-boundary-candidate-draft",
+      "source_kind": "user_notes_cut_paste_synthesis",
+      "source_ref": "user_provided_desktop_file:recent-ai-persona-psychology-notes",
+      "line_refs": [
+        134,
+        135,
+        136
+      ],
+      "axis_ids": [
+        "code_request",
+        "hybrid_bridge",
+        "explain_and_full_code"
+      ],
+      "language": "ja",
+      "input": "HybridCore6Bridgeのコードをフルで見たいです。簡単な説明と実装コードをください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "code"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Synthesized from line-separated notes; not raw direct training data."
+    }
+  ]
+}

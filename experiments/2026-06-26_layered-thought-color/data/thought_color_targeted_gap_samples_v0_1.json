@@ -1,0 +1,2056 @@
+{
+  "created_at": "2026-06-26T09:02:49.208369+00:00",
+  "policy": {
+    "human_review_required_before_training": true,
+    "sealed_fixtures_used": false,
+    "synthetic_samples_are_training_data": false
+  },
+  "samples": [
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-exploration_tradeoff-compare-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-01",
+      "input": "Which database should I use if you do not know my traffic, budget, or team skills yet?",
+      "input_sha256": "5d874ba73bdbacb5e2ba2170fb88e8ceeccbb49f1d87a97a073ceb0ee4ea4270",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-exploration_tradeoff-compare-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-02",
+      "input": "Compare SQL and NoSQL, but first ask me for the missing workload details.",
+      "input_sha256": "40028fd08df60263f3ba2c4982b4a8cbfaf74be5c77065acdd1bd88f6d353446",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-exploration_tradeoff-compare-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-03",
+      "input": "I want to choose a database; pause until you know the scale and constraints.",
+      "input_sha256": "510d3475ff6dc7bb5af0a39a3c6bdb46221d189cc816ca3099509f9aa1478921",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-exploration_tradeoff-compare-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-04",
+      "input": "Before recommending a database, ask what data shape and latency I need.",
+      "input_sha256": "d286a6251e2b7241f9f06b2518364a70326e2aee42eaffa904d977423686831f",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-exploration_tradeoff-compare-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-05",
+      "input": "Help me pick between two storage options, but hold the answer until requirements are clear.",
+      "input_sha256": "f847bad838be29f2dc368191a2cd65c2b8ab5986e028c9703c3abe047165f5ea",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-artifact_generation-route-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-06",
+      "input": "I need a migration plan, but the source database is still undecided.",
+      "input_sha256": "3b0ba23eeb860c583871c3c94318bbba3f2ae795d903aef052ded064bc5a7125",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-artifact_generation-route-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-07",
+      "input": "Draft the rollout plan only after asking which database and downtime window we have.",
+      "input_sha256": "ce0a9578ebb3dd1c0b866fd89cdf895f6a0d9c8ca8ccff97c8e8137ab0ba50d7",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-artifact_generation-route-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-08",
+      "input": "Make a migration checklist, but pause because I have not chosen the target database.",
+      "input_sha256": "2bb6ff13820ac2122086669c79013dabbff91fd0d198f8c41947852fb6c0612d",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-artifact_generation-route-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-09",
+      "input": "I want an implementation plan; first route me through the missing requirements.",
+      "input_sha256": "002e60350c9ff73ee51b2b8ca9008e518516bdc8a63660cd0bf9b8b28244f7c0",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-artifact_generation-route-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-10",
+      "input": "Create the deployment plan after asking for the unknown environment details.",
+      "input_sha256": "dbdac5ee9fab975cc8afb33b5164e6388142955b54c2c96d9f8318333283a5af",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-verification_review-verify-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-11",
+      "input": "Review this architecture, but ask for the performance target before judging it.",
+      "input_sha256": "e769305d1de48d7bd6b4c85e5e184586c9e45d9438d6ba425bdb7c4ced050825",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-verification_review-verify-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-12",
+      "input": "Check this design only after you know the database and traffic assumptions.",
+      "input_sha256": "efee795b181ef4afb3653d2e97547abe511de341776fd60cf49d19a92f95122f",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-verification_review-verify-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-13",
+      "input": "Verify the plan, but hold the verdict because the key constraint is missing.",
+      "input_sha256": "50bc1461a979448ac7917790e91dcbfbf99f1dd1b42b920d996e08148a67bd21",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-verification_review-verify-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-14",
+      "input": "Review the migration proposal and ask what data volume it must handle first.",
+      "input_sha256": "8dec7ccfae5403a76a9f27a280b89df2d213747242b8899dbf94222c9b15f00f",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-verification_review-verify-hold",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-15",
+      "input": "Audit this checklist, but pause if the compliance requirement is not specified.",
+      "input_sha256": "c3e6c0eb8c8bd42d44a0e6a3cd652c06ae84c9ed582d279bc8a0df1b77b7f383",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-clarification_gate-route-medium",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-16",
+      "input": "Ask me what information you need before answering my architecture question.",
+      "input_sha256": "692d5ad7276f645f8a651e7997b101804d7c7810d1d3c416a266998206b38443",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-clarification_gate-route-medium",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-17",
+      "input": "Before you answer, list the missing details you need from me.",
+      "input_sha256": "dc119fd0d95cb128f6ab0b2e5fd906c1626ac96cf3cfba470618b4481cc885fc",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-clarification_gate-route-medium",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-18",
+      "input": "Do not solve it yet; ask the clarifying questions that decide the route.",
+      "input_sha256": "f4e5df53ae25b2f48347dbcac0afb56de09d51fb0a7e384b9a81f20f506975dc",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-clarification_gate-route-medium",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-19",
+      "input": "Help me figure out what context I forgot to provide.",
+      "input_sha256": "ad5cba735b730ca4a4e77a016852b540df1441ad803ae659a1b7977112ff834c",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for missing-context routing.",
+      "group_id": "target-missing-clarification_gate-route-medium",
+      "human_review_required": true,
+      "id": "tc-target-missing-context-20",
+      "input": "Start by asking which constraints matter before giving advice.",
+      "input_sha256": "7fd2d5edac3c68d5c7997dd8132c90a8e10eadcbee6819eb798b184d4e34046e",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "missing_context",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-route",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-01",
+      "input": "I'm frustrated and stuck; help me choose the next practical step.",
+      "input_sha256": "09b07cd4a4eaea059d9668b47b11815754b086dec7e26dae300d5887fe9c929a",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-route",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-02",
+      "input": "This is overwhelming, so steady me first and then route me to the next action.",
+      "input_sha256": "5385aca54b331fa9ac161c7de309f4be1bcdbd354741239ba99d3e4e767875c4",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-route",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-03",
+      "input": "I feel lost; help me decide what to try next without making it bigger.",
+      "input_sha256": "64e3d4bcc878322b531d17ba705257b32fb241bdcaa5efeaea988abacd74f0f2",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-route",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-04",
+      "input": "I'm upset and need a calm next-step plan.",
+      "input_sha256": "5f6ec6016a64cbfa8a54804fe404b963f52080e5ccf289064704a7b40485b03c",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-route",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-05",
+      "input": "This failed again; help me pick one next move.",
+      "input_sha256": "46be5ad713e8b42909a7a77c9b30f95cb271ef2bd320c33977a2c1c72916d010",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-reason",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-06",
+      "input": "I'm overwhelmed; first acknowledge it, then explain why this keeps happening.",
+      "input_sha256": "81498cdf810d8715bbe51825ba2a3482582ff0d55e6c815077718db09601fe77",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-reason",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-07",
+      "input": "This mistake hurt; help me understand the cause without piling on.",
+      "input_sha256": "e053659edc50d6ad76b8b0883c154d7c0199cf24f1d19de0f3c26a382d13aa9a",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-reason",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-08",
+      "input": "I'm discouraged and need a gentle explanation of what went wrong.",
+      "input_sha256": "6cb76aebc314a210e831a5029275df029561caba9dd99bae789a564b7ce33f64",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-reason",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-09",
+      "input": "Explain why my approach failed, but keep the tone supportive.",
+      "input_sha256": "1c401674ef6b157779bc4250cc34b0f47116253678beb47aeb201aa23a3b6cba",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-reason",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-10",
+      "input": "I need to understand the failure while staying calm enough to continue.",
+      "input_sha256": "3f6c711634618001284ade43322d13b00b9cf09e3212cf0a8b86772d94c85256",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-remember",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-11",
+      "input": "That feedback stung; summarize the useful parts gently.",
+      "input_sha256": "23395d5df398dc2370dce0dab9ee74a6d67a475d1abbb47575006cd710238b35",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-remember",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-12",
+      "input": "I feel bad about these notes; condense them kindly into what matters.",
+      "input_sha256": "1af9ca88c09f56bf4288cbd42b109840432c24c178194b7897321a87ec0c48b9",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-remember",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-13",
+      "input": "Summarize the criticism in a way I can actually process.",
+      "input_sha256": "d472411d926be4c0dadc1bee61976025f8a0f749dd8e90431fc267b081815420",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-remember",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-14",
+      "input": "This review was harsh; preserve the key lessons without the sting.",
+      "input_sha256": "c1c05b1db8d62d3bb1c9ffb134d24040360f29a981fee77685253aaeeb09336d",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-remember",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-15",
+      "input": "Help me remember the actionable points from this painful feedback.",
+      "input_sha256": "485cc168e01f6fc2f50daf946dab43d8b61d3a51afc4a88493bdfa7e9830a4c1",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-generate",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-16",
+      "input": "I'm anxious about replying; draft a calm response I can edit.",
+      "input_sha256": "448592656d83178978e1c8d8a4fbf1623e4cfc358d08a08ebcedd9b0776c15d1",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-generate",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-17",
+      "input": "Help me write a short message that acknowledges the issue without panic.",
+      "input_sha256": "b34b97d7890cb172d39903a194571f7d7862512da08ba977f0b09aa3cb839e65",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-generate",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-18",
+      "input": "I'm stressed; create a simple plan I can follow today.",
+      "input_sha256": "7e88f7848844ac942f8cde729465c3981ecc7efdb47d3ac362db86a86a2b720a",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-generate",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-19",
+      "input": "Draft a gentle apology and next-step note for this situation.",
+      "input_sha256": "d37f23903c657b92b12e4520146f8d610894ddeb77c9594cc5e6734d33dc0626",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "empathize"
+      },
+      "generation_note": "Targeted anchor for supportive processing as its own base.",
+      "group_id": "target-supportive-processing-generate",
+      "human_review_required": true,
+      "id": "tc-target-supportive-processing-20",
+      "input": "Create a small recovery checklist that feels manageable.",
+      "input_sha256": "85db8a189e31da4f1d38fe276232299aaedd2565d259ece3b75602f932daed34",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 100,
+        "base_label": "direct_answer",
+        "intensity": "low",
+        "operation": "respond",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-direct_answer",
+      "human_review_required": true,
+      "id": "tc-target-intensity-01",
+      "input": "Answer the question briefly in one or two sentences.",
+      "input_sha256": "7dc89d932b3f3e3f892d22c898c4d544eac922bd6bfa6428def561ac57f04759",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 100,
+        "base_label": "direct_answer",
+        "intensity": "medium",
+        "operation": "respond",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-direct_answer",
+      "human_review_required": true,
+      "id": "tc-target-intensity-02",
+      "input": "Answer the question with normal useful detail.",
+      "input_sha256": "80ac91b187317d90efbc3d958ebf4af245d9aa31e69d8d0e4f73f3b9b5a64011",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 100,
+        "base_label": "direct_answer",
+        "intensity": "high",
+        "operation": "respond",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-direct_answer",
+      "human_review_required": true,
+      "id": "tc-target-intensity-03",
+      "input": "Answer the question thoroughly because the stakes are high.",
+      "input_sha256": "2eb2b5d40f4135df4974fa0632cdb25a5a591efa7ad867f72bb5ba0318131190",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 100,
+        "base_label": "direct_answer",
+        "intensity": "hold",
+        "operation": "respond",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-direct_answer",
+      "human_review_required": true,
+      "id": "tc-target-intensity-04",
+      "input": "Answer the question but pause if required context is missing.",
+      "input_sha256": "8228a7dc0c9dac0c4e086f75b353cb497a5a9b09020c89a94decd3dbebec8be7",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "low",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-05",
+      "input": "Explain the mechanism briefly in one or two sentences.",
+      "input_sha256": "5345d242875da5c88cdff691a7bc9f99901df4beaf3ea178f1cd82831ca24856",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-06",
+      "input": "Explain the mechanism with normal useful detail.",
+      "input_sha256": "27afe3d7ba0767a574a44f1d498d9d153b1b3ee4294acd3312f074abfe97fc52",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "high",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-07",
+      "input": "Explain the mechanism thoroughly because the stakes are high.",
+      "input_sha256": "2dde3ea2e44338c63242dfabb793eccbefd0a28478983920c91e317b2c993504",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "hold",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-08",
+      "input": "Explain the mechanism but pause if required context is missing.",
+      "input_sha256": "9f1312d2a69191348e4edd5f4fe01b63160aebc71b64a98d89054a059fda0293",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "low",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-clarification_gate",
+      "human_review_required": true,
+      "id": "tc-target-intensity-09",
+      "input": "Ask the needed question briefly in one or two sentences.",
+      "input_sha256": "be9c5690fb04e73c829fd15f38d7313640e6b3e52ea4cd96f9afd262d26802f3",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-clarification_gate",
+      "human_review_required": true,
+      "id": "tc-target-intensity-10",
+      "input": "Ask the needed question with normal useful detail.",
+      "input_sha256": "9045a5033169beaa9bf2230ecb550546eec28d5add8246f498d22d3e3b7859c0",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "high",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-clarification_gate",
+      "human_review_required": true,
+      "id": "tc-target-intensity-11",
+      "input": "Ask the needed question thoroughly because the stakes are high.",
+      "input_sha256": "4ed40b4d0384d62c7d76e49b27cbff3a228997ea76c3c9129ee7ecdb8d69d238",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-clarification_gate",
+      "human_review_required": true,
+      "id": "tc-target-intensity-12",
+      "input": "Ask the needed question but pause if required context is missing.",
+      "input_sha256": "465b5299c2b0f7280838533e3aabf6cdf81d456342af67e6fc8873198483ce06",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "low",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-13",
+      "input": "Draft the artifact briefly in one or two sentences.",
+      "input_sha256": "a49023832645b66780cb8564f60b26e6559c63ddc78889ff50c66abebcf5c3bb",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-14",
+      "input": "Draft the artifact with normal useful detail.",
+      "input_sha256": "28e4ff7e2e462f21baf7a8201d900f6d7570b1f3c43ba1f7b5e7c31714a65f7b",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "high",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-15",
+      "input": "Draft the artifact thoroughly because the stakes are high.",
+      "input_sha256": "ea9a551b80b6ed8599f841b4c26ea6063fa7a3c6cc12a5309119ced3f9c9e2e9",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "generate",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-target-intensity-16",
+      "input": "Draft the artifact but pause if required context is missing.",
+      "input_sha256": "084855326b85c86241c4c39834550e285fe0290fcb9858636fff4ea11e28c779",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "low",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-verification_review",
+      "human_review_required": true,
+      "id": "tc-target-intensity-17",
+      "input": "Check the claim briefly in one or two sentences.",
+      "input_sha256": "aae1fa8c4954119a53c912b1d7c18b22d5f8319a45ee68304276b9fd6e7e8e80",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-verification_review",
+      "human_review_required": true,
+      "id": "tc-target-intensity-18",
+      "input": "Check the claim with normal useful detail.",
+      "input_sha256": "136c3027a0817cd76623105c0983499459df421128550a36b5825a2e47cebfad",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-verification_review",
+      "human_review_required": true,
+      "id": "tc-target-intensity-19",
+      "input": "Check the claim thoroughly because the stakes are high.",
+      "input_sha256": "95b1f5aa1506b30f7c1fb3d2589f0aed54dcd8588fc39576a382f03ea8eb70ad",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-verification_review",
+      "human_review_required": true,
+      "id": "tc-target-intensity-20",
+      "input": "Check the claim but pause if required context is missing.",
+      "input_sha256": "84069a0251c445571862141f4d18693f50ed63450095f9aa00625c34f147c0c5",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-summary_compression",
+      "human_review_required": true,
+      "id": "tc-target-intensity-21",
+      "input": "Summarize the notes briefly in one or two sentences.",
+      "input_sha256": "48534ed582e18755d475a16afcc27e9132f56508c93a7697d790fad3065276e4",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-summary_compression",
+      "human_review_required": true,
+      "id": "tc-target-intensity-22",
+      "input": "Summarize the notes with normal useful detail.",
+      "input_sha256": "7a088a565a3dc3ce06937ef6397236a1503d7404fa5be606d87b57ee4a6c76e5",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-summary_compression",
+      "human_review_required": true,
+      "id": "tc-target-intensity-23",
+      "input": "Summarize the notes thoroughly because the stakes are high.",
+      "input_sha256": "4ca5630bd193d727a03f7ce5c03f01af1de409038d1e2a3d3d72e3b7b89d2b89",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "hold",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-summary_compression",
+      "human_review_required": true,
+      "id": "tc-target-intensity-24",
+      "input": "Summarize the notes but pause if required context is missing.",
+      "input_sha256": "eab6222a10f482880e44bdb987a27d21d877de0d817875527ca53e7310344ada",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "low",
+        "operation": "compare",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-exploration_tradeoff",
+      "human_review_required": true,
+      "id": "tc-target-intensity-25",
+      "input": "Compare the options briefly in one or two sentences.",
+      "input_sha256": "50e75d5ab8e8efabf5d88e1bbd65efec99799ce9763da24f4247aaa6e354f086",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "compare",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-exploration_tradeoff",
+      "human_review_required": true,
+      "id": "tc-target-intensity-26",
+      "input": "Compare the options with normal useful detail.",
+      "input_sha256": "17e20d4048078b07f5828ba9671f52c136a619a57ee369c7e305e3505f55658e",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "high",
+        "operation": "compare",
+        "stance": "neutral"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-exploration_tradeoff",
+      "human_review_required": true,
+      "id": "tc-target-intensity-27",
+      "input": "Compare the options thoroughly because the stakes are high.",
+      "input_sha256": "c6f600e5cbabccace14521c734b0f9fae9c1175ac5867a05bf6a10494fb2fa6c",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "targeted_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "generation_note": "Targeted anchor for intensity separation.",
+      "group_id": "target-intensity-exploration_tradeoff",
+      "human_review_required": true,
+      "id": "tc-target-intensity-28",
+      "input": "Compare the options but pause if required context is missing.",
+      "input_sha256": "4d794020dca5f60af35a9a2d4dd7f9ae45bfa4d0ea34fdbb2b0b1f4c63d3cd63",
+      "judgment_questions": [
+        "Does the base family match the user's primary goal?",
+        "Do the modifier channels explain the routing decision?"
+      ],
+      "lane": "intensity_anchor",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The target label is chosen by routing role, not surface wording alone.",
+        "wrong_base_label": "nearest_neighbor_by_surface_text",
+        "wrong_modifier": "nearest_modifier_by_surface_text"
+      },
+      "source_kind": "codex_targeted_gap_contrast",
+      "training_allowed": false
+    }
+  ],
+  "schema_version": "thought-color-targeted-gap-samples.v0.1",
+  "targets": {
+    "intensity": 28,
+    "missing_context": 20,
+    "supportive_processing": 20
+  }
+}

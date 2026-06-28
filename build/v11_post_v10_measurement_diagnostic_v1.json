@@ -1,0 +1,2040 @@
+{
+  "schema_version": "v11-post-v10-measurement-diagnostic.v1",
+  "generated_at": "2026-06-28T07:52:02.182590+00:00",
+  "status": "diagnostic_completed_v11_step1_ready",
+  "sources": {
+    "sealed_v10_measurement": "build\\pattern_language_sealed_v10_measurement_report.json",
+    "sealed_v10_fixture_consumed": "tests\\fixtures\\pattern_language_sealed_v10.json",
+    "v10_bridge_isolated_benchmark": "tests\\fixtures\\v10_thought_color_bridge_isolated_benchmark_v1.json"
+  },
+  "policy": {
+    "sealed_v10_status": "consumed",
+    "sealed_v10_labels_used_for_tuning": false,
+    "sealed_v10_values_used_for_taxonomy_only": true,
+    "diagnostic_is_training_data": false,
+    "diagnostic_is_replay_gate": false,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_v11_required_before_next_adjudication": true
+  },
+  "metric_regression": {
+    "intent_accuracy": {
+      "v9": 0.892857,
+      "v10": 0.785714,
+      "delta_v10_minus_v9": -0.107143
+    },
+    "critical_signal_recall": {
+      "v9": 0.857143,
+      "v10": 0.4,
+      "delta_v10_minus_v9": -0.457143
+    },
+    "operation_exact_match": {
+      "v9": 0.821429,
+      "v10": 0.642857,
+      "delta_v10_minus_v9": -0.178572
+    },
+    "constraint_exact_match": {
+      "v9": 0.642857,
+      "v10": 0.535714,
+      "delta_v10_minus_v9": -0.107143
+    },
+    "risk_exact_match": {
+      "v9": 0.75,
+      "v10": 0.678571,
+      "delta_v10_minus_v9": -0.071429
+    }
+  },
+  "failure_mode_summary": {
+    "mode_counts": {
+      "intent_correct_field_mismatch": 17,
+      "intent_mismatch": 6
+    },
+    "mode_field_counts": {
+      "intent_correct_field_mismatch": {
+        "constraints": 12,
+        "information_state": 6,
+        "operations": 4,
+        "risk": 7
+      },
+      "intent_mismatch": {
+        "constraints": 1,
+        "information_state": 4,
+        "operations": 6,
+        "primary_intent": 6,
+        "risk": 2
+      }
+    },
+    "intent_transitions": {
+      "clarify->explore": 1,
+      "clarify->respond": 1,
+      "clarify->verify": 1,
+      "explain->verify": 1,
+      "explore->respond": 1,
+      "respond->build": 1
+    },
+    "critical_signal_misses": {
+      "contains_unverified_claims": 1,
+      "missing_required_information": 3,
+      "multiple_intents": 5
+    },
+    "field_value_diff_counts": {
+      "constraints.formats": {
+        "['bullets'] -> []": 2,
+        "['json'] -> []": 2,
+        "['table'] -> []": 1
+      },
+      "constraints.must": {
+        "['ask_first'] -> []": 1,
+        "['avoid_diagnosis', 'avoid_overclaim'] -> []": 1,
+        "['avoid_diagnosis'] -> []": 1,
+        "['avoid_overclaim'] -> []": 1,
+        "['cite_sources', 'avoid_overclaim'] -> []": 1,
+        "['general_information_only'] -> []": 1
+      },
+      "constraints.must_not": {
+        "['no_web_search'] -> []": 1
+      },
+      "constraints.response_length": {
+        "short -> unspecified": 3
+      },
+      "information_state.contains_unverified_claims": {
+        "False -> True": 2,
+        "True -> False": 1
+      },
+      "information_state.missing_required_information": {
+        "True -> False": 3
+      },
+      "information_state.multiple_intents": {
+        "False -> True": 2,
+        "True -> False": 5
+      },
+      "information_state.requires_current_information": {
+        "False -> True": 2
+      },
+      "operations": {
+        "['clarify', 'build'] -> ['clarify']": 1,
+        "['clarify', 'build'] -> ['explore', 'compare']": 1,
+        "['clarify', 'summarize'] -> ['respond']": 1,
+        "['clarify', 'verify'] -> ['verify']": 1,
+        "['explain'] -> ['explain', 'search']": 1,
+        "['explain'] -> ['verify', 'explain']": 1,
+        "['explore', 'compare'] -> ['explore']": 1,
+        "['explore'] -> ['respond']": 1,
+        "['respond'] -> ['build']": 1,
+        "['respond'] -> ['respond', 'search']": 1
+      },
+      "primary_intent": {
+        "clarify -> explore": 1,
+        "clarify -> respond": 1,
+        "clarify -> verify": 1,
+        "explain -> verify": 1,
+        "explore -> respond": 1,
+        "respond -> build": 1
+      },
+      "risk.flags": {
+        "['political'] -> []": 1,
+        "['security', 'unverified_claim'] -> []": 1,
+        "['training_contamination'] -> []": 1,
+        "['unverified_claim'] -> []": 1,
+        "[] -> ['current_information']": 2,
+        "[] -> ['medical']": 1,
+        "[] -> ['mental_health', 'dependency_risk', 'unverified_claim']": 1
+      },
+      "risk.level": {
+        "low -> high": 1,
+        "low -> medium": 3,
+        "medium -> high": 1,
+        "medium -> low": 4
+      }
+    }
+  },
+  "bridge_transfer_diagnostic": {
+    "bridge_distribution": {
+      "case_count": 72,
+      "language_counts": {
+        "en": 72
+      },
+      "intent_counts": {
+        "build": 14,
+        "clarify": 4,
+        "explain": 10,
+        "explore": 10,
+        "respond": 8,
+        "summarize": 10,
+        "verify": 16
+      },
+      "operation_signature_counts": {
+        "[\"build\", \"verify\"]": 3,
+        "[\"build\"]": 7,
+        "[\"clarify\", \"verify\"]": 1,
+        "[\"clarify\"]": 11,
+        "[\"compare\"]": 9,
+        "[\"explain\", \"verify\"]": 1,
+        "[\"explain\"]": 9,
+        "[\"explore\", \"verify\"]": 1,
+        "[\"respond\", \"verify\"]": 1,
+        "[\"respond\"]": 3,
+        "[\"summarize\", \"verify\"]": 1,
+        "[\"summarize\"]": 9,
+        "[\"verify\"]": 16
+      },
+      "response_length_counts": {
+        "unspecified": 72
+      },
+      "constraint_must_counts": {
+        "ask_first": 39,
+        "avoid_overclaim": 11,
+        "defer_or_verify": 10,
+        "supportive_tone": 4
+      },
+      "constraint_must_not_counts": {},
+      "constraint_format_counts": {},
+      "risk_level_counts": {
+        "high": 10,
+        "low": 47,
+        "medium": 15
+      },
+      "risk_flag_counts": {
+        "unverified_claim": 21
+      },
+      "critical_positive_counts": {
+        "contains_unverified_claims": 21,
+        "missing_required_information": 39,
+        "multiple_intents": 8
+      },
+      "source_group_counts": {
+        "v10-thought-color-bridge-isolated-rewrite-nonsealed": 72
+      },
+      "contrast_group_counts": {
+        "constraint_bridge": 18,
+        "information_state_bridge": 14,
+        "intent_boundary_bridge": 10,
+        "operation_bridge": 14,
+        "risk_bridge": 16
+      },
+      "style_markers": {
+        "synthetic_bridge_prefix_rate": 1.0,
+        "terminal_operation_phrase_rate": 0.888889,
+        "main_issue_phrase_rate": 0.861111,
+        "boundary_word_rate": 0.25,
+        "ask_before_phrase_rate": 0.541667,
+        "japanese_script_rate": 0.0,
+        "average_char_length": 271.347
+      }
+    },
+    "sealed_v10_distribution": {
+      "case_count": 28,
+      "language_counts": {
+        "en": 14,
+        "ja": 14
+      },
+      "intent_counts": {
+        "build": 4,
+        "clarify": 4,
+        "explain": 4,
+        "explore": 4,
+        "respond": 4,
+        "summarize": 4,
+        "verify": 4
+      },
+      "operation_signature_counts": {
+        "[\"build\", \"verify\"]": 1,
+        "[\"build\"]": 3,
+        "[\"clarify\", \"build\"]": 2,
+        "[\"clarify\", \"summarize\"]": 1,
+        "[\"clarify\", \"verify\"]": 1,
+        "[\"explain\"]": 4,
+        "[\"explore\", \"compare\"]": 2,
+        "[\"explore\"]": 2,
+        "[\"respond\"]": 4,
+        "[\"summarize\", \"compare\"]": 1,
+        "[\"summarize\"]": 3,
+        "[\"verify\", \"calculate\"]": 1,
+        "[\"verify\", \"search\"]": 1,
+        "[\"verify\"]": 2
+      },
+      "response_length_counts": {
+        "short": 5,
+        "unspecified": 23
+      },
+      "constraint_must_counts": {
+        "ask_first": 2,
+        "avoid_diagnosis": 2,
+        "avoid_overclaim": 4,
+        "cite_sources": 1,
+        "general_information_only": 1,
+        "preserve_neutrality": 1
+      },
+      "constraint_must_not_counts": {
+        "no_table": 1,
+        "no_web_search": 1
+      },
+      "constraint_format_counts": {
+        "bullets": 2,
+        "json": 2,
+        "table": 1
+      },
+      "risk_level_counts": {
+        "high": 1,
+        "low": 21,
+        "medium": 6
+      },
+      "risk_flag_counts": {
+        "current_information": 1,
+        "legal": 1,
+        "medical": 1,
+        "political": 1,
+        "security": 1,
+        "training_contamination": 1,
+        "unverified_claim": 3
+      },
+      "critical_positive_counts": {
+        "contains_unverified_claims": 3,
+        "missing_required_information": 4,
+        "multiple_intents": 7,
+        "requires_current_information": 1
+      },
+      "source_group_counts": {
+        "plm-sealed-v10-authored": 28
+      },
+      "contrast_group_counts": {
+        "None": 28
+      },
+      "style_markers": {
+        "synthetic_bridge_prefix_rate": 0.0,
+        "terminal_operation_phrase_rate": 0.0,
+        "main_issue_phrase_rate": 0.0,
+        "boundary_word_rate": 0.0,
+        "ask_before_phrase_rate": 0.035714,
+        "japanese_script_rate": 0.5,
+        "average_char_length": 55.536
+      }
+    },
+    "distribution_gap": {
+      "style_marker_delta_sealed_minus_bridge": {
+        "synthetic_bridge_prefix_rate": -1.0,
+        "terminal_operation_phrase_rate": -0.888889,
+        "main_issue_phrase_rate": -0.861111,
+        "boundary_word_rate": -0.25,
+        "ask_before_phrase_rate": -0.505953,
+        "japanese_script_rate": 0.5,
+        "average_char_length": -215.811
+      },
+      "bridge_template_overfit_risk": true,
+      "language_shift": {
+        "bridge": {
+          "en": 72
+        },
+        "sealed_v10": {
+          "en": 14,
+          "ja": 14
+        }
+      },
+      "critical_signal_support_shift": {
+        "bridge": {
+          "contains_unverified_claims": 21,
+          "missing_required_information": 39,
+          "multiple_intents": 8
+        },
+        "sealed_v10": {
+          "contains_unverified_claims": 3,
+          "missing_required_information": 4,
+          "multiple_intents": 7,
+          "requires_current_information": 1
+        }
+      },
+      "constraint_must_shift": {
+        "bridge": {
+          "ask_first": 39,
+          "avoid_overclaim": 11,
+          "defer_or_verify": 10,
+          "supportive_tone": 4
+        },
+        "sealed_v10": {
+          "ask_first": 2,
+          "avoid_diagnosis": 2,
+          "avoid_overclaim": 4,
+          "cite_sources": 1,
+          "general_information_only": 1,
+          "preserve_neutrality": 1
+        }
+      }
+    }
+  },
+  "case_diagnostics": [
+    {
+      "id": "plm-sealed-v10-respond-01",
+      "input": "「current_notes」という列名は何を表しますか。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "respond",
+      "predicted_intent": "respond",
+      "value_diff": {
+        "operations": {
+          "expected": [
+            "respond"
+          ],
+          "predicted": [
+            "respond",
+            "search"
+          ]
+        },
+        "information_state": {
+          "requires_current_information": {
+            "expected": false,
+            "predicted": true
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "low",
+            "predicted": "medium"
+          },
+          "flags": {
+            "expected": [],
+            "predicted": [
+              "current_information"
+            ]
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_stale_answer",
+            "risk_check_up",
+            "search_up"
+          ],
+          "bad_tendencies": [
+            "answer_with_stale_or_unverified_current_info"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_current_information_lookup"
+          ],
+          "reason_codes": [
+            "current_information_guard",
+            "risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-respond-03",
+      "input": "Apache 2.0の一般的な意味を短く答えてください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "respond",
+      "predicted_intent": "respond",
+      "value_diff": {
+        "constraints": {
+          "must": {
+            "expected": [
+              "general_information_only"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "legal_guard"
+          ],
+          "hooks": [
+            "Apache 2.0"
+          ],
+          "libraries": [
+            "legal_guard_v1"
+          ],
+          "current_check": false,
+          "risk": "low",
+          "matches": [
+            {
+              "domain": "legal_guard",
+              "hook": "Apache 2.0",
+              "library": "legal_guard_v1",
+              "default_route": "verify",
+              "requires_current_information": false,
+              "risk": "low",
+              "score": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-respond-04",
+      "input": "What does no_diagnosis mean as a UI design tag?",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "operations"
+      ],
+      "expected_intent": "respond",
+      "predicted_intent": "build",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "respond",
+          "predicted": "build"
+        },
+        "operations": {
+          "expected": [
+            "respond"
+          ],
+          "predicted": [
+            "build"
+          ]
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explain-01",
+      "input": "AIと雑談して癒やされる話を、依存リスクと決めつけない理由を説明してください。",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "verify",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "explain",
+          "predicted": "verify"
+        },
+        "operations": {
+          "expected": [
+            "explain"
+          ],
+          "predicted": [
+            "verify",
+            "explain"
+          ]
+        },
+        "information_state": {
+          "contains_unverified_claims": {
+            "expected": false,
+            "predicted": true
+          },
+          "multiple_intents": {
+            "expected": false,
+            "predicted": true
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "low",
+            "predicted": "medium"
+          },
+          "flags": {
+            "expected": [],
+            "predicted": [
+              "mental_health",
+              "dependency_risk",
+              "unverified_claim"
+            ]
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_constraints",
+            "preserve_multi_intent",
+            "risk_check_up",
+            "split_or_sequence_operations",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "collapse_compound_intent_into_single_response",
+            "ignore_explicit_constraints"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_compound_intent_sequence",
+            "preserve_constraints",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "compound_intent_guard",
+            "constraint_guard",
+            "risk_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "ai_relationship_boundary"
+          ],
+          "hooks": [
+            "依存"
+          ],
+          "libraries": [
+            "ai_relationship_boundary_v1"
+          ],
+          "current_check": false,
+          "risk": "low",
+          "matches": [
+            {
+              "domain": "ai_relationship_boundary",
+              "hook": "依存",
+              "library": "ai_relationship_boundary_v1",
+              "default_route": "verify",
+              "requires_current_information": false,
+              "risk": "low",
+              "score": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explain-02",
+      "input": "Explain why a local folder named latest_samples does not require web retrieval.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain",
+      "value_diff": {
+        "operations": {
+          "expected": [
+            "explain"
+          ],
+          "predicted": [
+            "explain",
+            "search"
+          ]
+        },
+        "information_state": {
+          "requires_current_information": {
+            "expected": false,
+            "predicted": true
+          }
+        },
+        "constraints": {
+          "must_not": {
+            "expected": [
+              "no_web_search"
+            ],
+            "predicted": []
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "low",
+            "predicted": "medium"
+          },
+          "flags": {
+            "expected": [],
+            "predicted": [
+              "current_information"
+            ]
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_stale_answer",
+            "risk_check_up",
+            "search_up"
+          ],
+          "bad_tendencies": [
+            "answer_with_stale_or_unverified_current_info"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_current_information_lookup"
+          ],
+          "reason_codes": [
+            "current_information_guard",
+            "risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explain-03",
+      "input": "医療AIの画面設計と患者の診断相談の違いを説明してください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints",
+        "risk"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain",
+      "value_diff": {
+        "constraints": {
+          "must": {
+            "expected": [
+              "avoid_diagnosis"
+            ],
+            "predicted": []
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "low",
+            "predicted": "high"
+          },
+          "flags": {
+            "expected": [],
+            "predicted": [
+              "medical"
+            ]
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "risk_check_up"
+          ],
+          "bad_tendencies": [],
+          "severity": "major",
+          "relabel_hints": [],
+          "reason_codes": [
+            "risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "medical_guard"
+          ],
+          "hooks": [
+            "医療"
+          ],
+          "libraries": [
+            "medical_guard_v1"
+          ],
+          "current_check": false,
+          "risk": "low",
+          "matches": [
+            {
+              "domain": "medical_guard",
+              "hook": "医療",
+              "library": "medical_guard_v1",
+              "default_route": "verify",
+              "requires_current_information": false,
+              "risk": "low",
+              "score": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explain-04",
+      "input": "Explain why an unverified benchmark claim should be checked before promotion.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints",
+        "risk"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain",
+      "value_diff": {
+        "constraints": {
+          "must": {
+            "expected": [
+              "avoid_overclaim"
+            ],
+            "predicted": []
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "medium",
+            "predicted": "low"
+          },
+          "flags": {
+            "expected": [
+              "unverified_claim"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check"
+          ],
+          "severity": "medium",
+          "relabel_hints": [
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-clarify-01",
+      "input": "このログを整理してください。ただしログ本文はまだ貼っていません。",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "clarify",
+          "predicted": "respond"
+        },
+        "operations": {
+          "expected": [
+            "clarify",
+            "summarize"
+          ],
+          "predicted": [
+            "respond"
+          ]
+        },
+        "information_state": {
+          "missing_required_information": {
+            "expected": true,
+            "predicted": false
+          },
+          "multiple_intents": {
+            "expected": true,
+            "predicted": false
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "fallback",
+        "markers_fired": false,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-clarify-02",
+      "input": "Before writing the release note, ask me which version number to use.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "clarify",
+      "value_diff": {
+        "operations": {
+          "expected": [
+            "clarify",
+            "build"
+          ],
+          "predicted": [
+            "clarify"
+          ]
+        },
+        "information_state": {
+          "multiple_intents": {
+            "expected": true,
+            "predicted": false
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "ask_first",
+            "clarify_up",
+            "preserve_constraints"
+          ],
+          "bad_tendencies": [
+            "ignore_explicit_constraints",
+            "respond_without_required_information"
+          ],
+          "severity": "medium",
+          "relabel_hints": [
+            "prefer_clarify_when_required_information_missing",
+            "preserve_constraints"
+          ],
+          "reason_codes": [
+            "constraint_guard",
+            "missing_information_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-clarify-03",
+      "input": "A案とB案を比較して表にしてください。A案とB案の説明は後で送ります。",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "explore",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "clarify",
+          "predicted": "explore"
+        },
+        "operations": {
+          "expected": [
+            "clarify",
+            "build"
+          ],
+          "predicted": [
+            "explore",
+            "compare"
+          ]
+        },
+        "information_state": {
+          "missing_required_information": {
+            "expected": true,
+            "predicted": false
+          },
+          "multiple_intents": {
+            "expected": true,
+            "predicted": false
+          }
+        },
+        "constraints": {
+          "formats": {
+            "expected": [
+              "table"
+            ],
+            "predicted": []
+          },
+          "must": {
+            "expected": [
+              "ask_first"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-clarify-04",
+      "input": "Verify this legal quote, but I have not included the quote text.",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "verify",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "clarify",
+          "predicted": "verify"
+        },
+        "operations": {
+          "expected": [
+            "clarify",
+            "verify"
+          ],
+          "predicted": [
+            "verify"
+          ]
+        },
+        "information_state": {
+          "missing_required_information": {
+            "expected": true,
+            "predicted": false
+          },
+          "multiple_intents": {
+            "expected": true,
+            "predicted": false
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "medium",
+            "predicted": "high"
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "risk_check_up",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "risk_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-build-01",
+      "input": "Draft a two-bullet handoff note from these facts: V10 gate passed; rotate sealed fixture next.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build",
+      "value_diff": {
+        "constraints": {
+          "response_length": {
+            "expected": "short",
+            "predicted": "unspecified"
+          },
+          "formats": {
+            "expected": [
+              "bullets"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-build-02",
+      "input": "routing_result用のJSON雛形を作ってください。intentとconstraintsを含めてください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build",
+      "value_diff": {
+        "constraints": {
+          "formats": {
+            "expected": [
+              "json"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-build-03",
+      "input": "Make a checklist for reviewing router judgment samples before adoption.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build",
+      "value_diff": {
+        "constraints": {
+          "formats": {
+            "expected": [
+              "bullets"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-build-04",
+      "input": "前提を確認してから、バックアップ手順の短い案内文を書いてください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build",
+      "value_diff": {
+        "constraints": {
+          "response_length": {
+            "expected": "short",
+            "predicted": "unspecified"
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_multi_intent",
+            "split_or_sequence_operations",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "collapse_compound_intent_into_single_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [
+            "preserve_compound_intent_sequence",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "compound_intent_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-verify-01",
+      "input": "最新のNode.js LTSが何か確認し、公式情報を引用してください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify",
+      "value_diff": {
+        "constraints": {
+          "must": {
+            "expected": [
+              "cite_sources",
+              "avoid_overclaim"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "avoid_stale_answer",
+            "risk_check_up",
+            "search_up",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "answer_with_stale_or_unverified_current_info"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_current_information_lookup",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "current_information_guard",
+            "risk_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-verify-03",
+      "input": "このセキュリティ警告が本物か確認してから採用判断してください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "risk"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify",
+      "value_diff": {
+        "information_state": {
+          "contains_unverified_claims": {
+            "expected": true,
+            "predicted": false
+          },
+          "multiple_intents": {
+            "expected": false,
+            "predicted": true
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "medium",
+            "predicted": "low"
+          },
+          "flags": {
+            "expected": [
+              "security",
+              "unverified_claim"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_multi_intent",
+            "split_or_sequence_operations",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "collapse_compound_intent_into_single_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [
+            "preserve_compound_intent_sequence",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "compound_intent_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-verify-04",
+      "input": "Confirm whether this medical claim is safe to rely on for a symptom decision.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify",
+      "value_diff": {
+        "constraints": {
+          "must": {
+            "expected": [
+              "avoid_diagnosis",
+              "avoid_overclaim"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "risk_check_up",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check"
+          ],
+          "severity": "major",
+          "relabel_hints": [
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "risk_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-summarize-01",
+      "input": "次の3点を表にせず2行で要約してください: gate通過、fixture未測定、次は測定。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "summarize",
+      "predicted_intent": "summarize",
+      "value_diff": {
+        "constraints": {
+          "response_length": {
+            "expected": "short",
+            "predicted": "unspecified"
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "preserve_constraints"
+          ],
+          "bad_tendencies": [
+            "ignore_explicit_constraints"
+          ],
+          "severity": "minor",
+          "relabel_hints": [
+            "preserve_constraints"
+          ],
+          "reason_codes": [
+            "constraint_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-summarize-03",
+      "input": "政治的な主張を選ばずに、議論の要点だけ中立にまとめてください。",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "risk"
+      ],
+      "expected_intent": "summarize",
+      "predicted_intent": "summarize",
+      "value_diff": {
+        "information_state": {
+          "contains_unverified_claims": {
+            "expected": false,
+            "predicted": true
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "medium",
+            "predicted": "low"
+          },
+          "flags": {
+            "expected": [
+              "political"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "avoid_overclaim",
+            "preserve_constraints",
+            "verify_up"
+          ],
+          "bad_tendencies": [
+            "accept_unverified_claim_without_check",
+            "ignore_explicit_constraints"
+          ],
+          "severity": "medium",
+          "relabel_hints": [
+            "preserve_constraints",
+            "preserve_verify_step"
+          ],
+          "reason_codes": [
+            "constraint_guard",
+            "verification_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "political_future"
+          ],
+          "hooks": [
+            "政治"
+          ],
+          "libraries": [
+            "political_future_v1"
+          ],
+          "current_check": false,
+          "risk": "medium",
+          "matches": [
+            {
+              "domain": "political_future",
+              "hook": "政治",
+              "library": "political_future_v1",
+              "default_route": "explore",
+              "requires_current_information": false,
+              "risk": "medium",
+              "score": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-summarize-04",
+      "input": "Condense this status into JSON: active fixture created; measurement pending; promotion blocked.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "constraints"
+      ],
+      "expected_intent": "summarize",
+      "predicted_intent": "summarize",
+      "value_diff": {
+        "constraints": {
+          "formats": {
+            "expected": [
+              "json"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explore-03",
+      "input": "constraint exact matchを上げるための言い換えサンプル案を考えてください。",
+      "mode": "intent_mismatch",
+      "measurement_error_fields": [
+        "primary_intent",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond",
+      "value_diff": {
+        "primary_intent": {
+          "expected": "explore",
+          "predicted": "respond"
+        },
+        "operations": {
+          "expected": [
+            "explore"
+          ],
+          "predicted": [
+            "respond"
+          ]
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "fallback",
+        "markers_fired": false,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    },
+    {
+      "id": "plm-sealed-v10-explore-04",
+      "input": "Brainstorm risks of letting answer-only samples directly train semantic packets, then suggest safer alternatives.",
+      "mode": "intent_correct_field_mismatch",
+      "measurement_error_fields": [
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explore",
+      "value_diff": {
+        "operations": {
+          "expected": [
+            "explore",
+            "compare"
+          ],
+          "predicted": [
+            "explore"
+          ]
+        },
+        "information_state": {
+          "multiple_intents": {
+            "expected": true,
+            "predicted": false
+          }
+        },
+        "risk": {
+          "level": {
+            "expected": "medium",
+            "predicted": "low"
+          },
+          "flags": {
+            "expected": [
+              "training_contamination"
+            ],
+            "predicted": []
+          }
+        }
+      },
+      "trace": {
+        "adapter_version": "0.3.1",
+        "decided_by": "markers",
+        "markers_fired": true,
+        "gate_margin": 0.2,
+        "failure_guard": {
+          "guard_actions": [
+            "review_before_response"
+          ],
+          "bad_tendencies": [
+            "overconfident_direct_response"
+          ],
+          "severity": "minor",
+          "relabel_hints": [],
+          "reason_codes": [
+            "default_low_risk_guard"
+          ]
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        }
+      }
+    }
+  ],
+  "focus_areas": [
+    {
+      "id": "value_level_diff_instrumentation",
+      "priority": 1,
+      "finding": "field-level errors hide whether failures are value vocabulary drift or routing logic defects",
+      "evidence": {
+        "diagnosed_case_count": 23
+      },
+      "v11_action": "make value_diff mandatory in post-sealed taxonomy reports"
+    },
+    {
+      "id": "clarify_boundary_collapse",
+      "priority": 1,
+      "finding": "clarify recall collapsed and clarify cases dispersed across respond, verify, and explore",
+      "evidence": {
+        "clarify_recall": 0.25,
+        "intent_transitions": {
+          "clarify->explore": 1,
+          "clarify->respond": 1,
+          "clarify->verify": 1,
+          "explain->verify": 1,
+          "explore->respond": 1,
+          "respond->build": 1
+        }
+      },
+      "v11_action": "create independent clarify boundary diagnostic and nonsealed repair lane before fresh rotation"
+    },
+    {
+      "id": "multiple_intent_under_detection",
+      "priority": 1,
+      "finding": "multiple_intents is the largest critical-signal miss after v10",
+      "evidence": {
+        "critical_misses": {
+          "contains_unverified_claims": 1,
+          "missing_required_information": 3,
+          "multiple_intents": 5
+        },
+        "multiple_intents_recall": 0.285714,
+        "multiple_intents_support": 7
+      },
+      "v11_action": "treat multiple intent detection as its own target, not a generic information_state item"
+    },
+    {
+      "id": "bridge_non_transfer",
+      "priority": 1,
+      "finding": "isolated bridge replay was exact, but sealed v10 regressed on all five metrics",
+      "evidence": {
+        "metric_regression": {
+          "intent_accuracy": {
+            "v9": 0.892857,
+            "v10": 0.785714,
+            "delta_v10_minus_v9": -0.107143
+          },
+          "critical_signal_recall": {
+            "v9": 0.857143,
+            "v10": 0.4,
+            "delta_v10_minus_v9": -0.457143
+          },
+          "operation_exact_match": {
+            "v9": 0.821429,
+            "v10": 0.642857,
+            "delta_v10_minus_v9": -0.178572
+          },
+          "constraint_exact_match": {
+            "v9": 0.642857,
+            "v10": 0.535714,
+            "delta_v10_minus_v9": -0.107143
+          },
+          "risk_exact_match": {
+            "v9": 0.75,
+            "v10": 0.678571,
+            "delta_v10_minus_v9": -0.071429
+          }
+        },
+        "distribution_gap": {
+          "style_marker_delta_sealed_minus_bridge": {
+            "synthetic_bridge_prefix_rate": -1.0,
+            "terminal_operation_phrase_rate": -0.888889,
+            "main_issue_phrase_rate": -0.861111,
+            "boundary_word_rate": -0.25,
+            "ask_before_phrase_rate": -0.505953,
+            "japanese_script_rate": 0.5,
+            "average_char_length": -215.811
+          },
+          "bridge_template_overfit_risk": true,
+          "language_shift": {
+            "bridge": {
+              "en": 72
+            },
+            "sealed_v10": {
+              "en": 14,
+              "ja": 14
+            }
+          },
+          "critical_signal_support_shift": {
+            "bridge": {
+              "contains_unverified_claims": 21,
+              "missing_required_information": 39,
+              "multiple_intents": 8
+            },
+            "sealed_v10": {
+              "contains_unverified_claims": 3,
+              "missing_required_information": 4,
+              "multiple_intents": 7,
+              "requires_current_information": 1
+            }
+          },
+          "constraint_must_shift": {
+            "bridge": {
+              "ask_first": 39,
+              "avoid_overclaim": 11,
+              "defer_or_verify": 10,
+              "supportive_tone": 4
+            },
+            "sealed_v10": {
+              "ask_first": 2,
+              "avoid_diagnosis": 2,
+              "avoid_overclaim": 4,
+              "cite_sources": 1,
+              "general_information_only": 1,
+              "preserve_neutrality": 1
+            }
+          }
+        }
+      },
+      "v11_action": "block another bridge-only cycle until template/style distribution gap is explicitly tested"
+    },
+    {
+      "id": "intent_correct_field_mismatch_lane",
+      "priority": 2,
+      "finding": "cases with correct primary intent still miss constraints/risk/operations and need a separate exactness lane",
+      "evidence": {
+        "mode_counts": {
+          "intent_correct_field_mismatch": 17,
+          "intent_mismatch": 6
+        },
+        "mode_field_counts": {
+          "intent_correct_field_mismatch": {
+            "constraints": 12,
+            "information_state": 6,
+            "operations": 4,
+            "risk": 7
+          },
+          "intent_mismatch": {
+            "constraints": 1,
+            "information_state": 4,
+            "operations": 6,
+            "primary_intent": 6,
+            "risk": 2
+          }
+        }
+      },
+      "v11_action": "separate field-exactness repair from intent-boundary repair"
+    }
+  ],
+  "next_action": "roadmap_v11_step1_build_taxonomy_from_value_diff_and_transfer_gap"
+}

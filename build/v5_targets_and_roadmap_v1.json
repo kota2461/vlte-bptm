@@ -1,0 +1,553 @@
+{
+  "schema_version": "v5-targets-and-roadmap.v1",
+  "generated_at": "2026-06-24T07:46:44.629463+00:00",
+  "status": "sealed_v5_measured_consumed_rotation_required",
+  "policy": {
+    "sealed_v4_fixture_status": "consumed",
+    "sealed_v4_text_used_for_training": false,
+    "sealed_v4_labels_used_for_tuning": false,
+    "sealed_v4_measurement_used_as_taxonomy_only": true,
+    "requires_sealed_v5_rotation_before_adjudication": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "baseline": {
+    "source_report": "build\\pattern_language_sealed_v4_measurement_report.json",
+    "fixture": {
+      "registry_name": "pattern_language_sealed_v4.json",
+      "fixture_id": "pattern-language-sealed-v4",
+      "sha256": "897bd516c3085c8ec367f8d5aa362c2e2f9700427ff8d44988794fd8a288c554",
+      "case_count": 28,
+      "predecessor": "pattern_language_sealed_v3.json",
+      "status_before_measurement": "active"
+    },
+    "metrics": {
+      "case_count": 28,
+      "intent_accuracy": 0.857143,
+      "intent_macro_f1": 0.858957,
+      "critical_signal_recall": 0.5625,
+      "operation_exact_match": 0.75,
+      "constraint_exact_match": 0.821429,
+      "risk_exact_match": 0.928571,
+      "evidence_offset_validity": 1.0,
+      "sealed_error_count": 15,
+      "critical_signal_support": 16,
+      "critical_signal_miss_count": 7
+    },
+    "critical_signals": {
+      "missing_required_information": {
+        "support": 4,
+        "true_positive": 2,
+        "miss": 2,
+        "recall": 0.5
+      },
+      "contains_unverified_claims": {
+        "support": 5,
+        "true_positive": 4,
+        "miss": 1,
+        "recall": 0.8
+      },
+      "requires_current_information": {
+        "support": 3,
+        "true_positive": 2,
+        "miss": 1,
+        "recall": 0.666667
+      },
+      "multiple_intents": {
+        "support": 4,
+        "true_positive": 1,
+        "miss": 3,
+        "recall": 0.25
+      }
+    },
+    "error_field_counts": {
+      "constraints": 5,
+      "information_state": 6,
+      "operations": 7,
+      "primary_intent": 4,
+      "risk": 2
+    },
+    "intent_pair_counts": {
+      "build->build": 1,
+      "clarify->clarify": 1,
+      "clarify->respond": 2,
+      "explain->respond": 1,
+      "explore->explore": 3,
+      "respond->respond": 1,
+      "respond->verify": 1,
+      "summarize->summarize": 3,
+      "verify->verify": 2
+    },
+    "error_taxonomy": [
+      {
+        "id": "plm-sealed-v4-respond-02",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-respond-03",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "verify",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-explain-02",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "respond",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-clarify-02",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-clarify-03",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-clarify-04",
+        "kind": "mismatch",
+        "fields": [
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-build-04",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-verify-03",
+        "kind": "mismatch",
+        "fields": [
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-verify-04",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-summarize-01",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-summarize-02",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-summarize-04",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-explore-01",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-explore-03",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      },
+      {
+        "id": "plm-sealed-v4-explore-04",
+        "kind": "mismatch",
+        "fields": [
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "explore",
+        "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training"
+      }
+    ]
+  },
+  "targets": {
+    "metric_granularity": {
+      "case_metric_step": "1/28 = 0.035714",
+      "critical_signal_step": "1/16 = 0.0625"
+    },
+    "minimum": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.875,
+      "operation_exact_match": 0.892857,
+      "constraint_exact_match": 0.928571,
+      "risk_exact_match": 0.964286,
+      "sealed_error_count_max": 6,
+      "critical_signal_miss_count_max": 2,
+      "critical_underprocessing_max": 0
+    },
+    "stretch": {
+      "intent_accuracy": 0.964286,
+      "critical_signal_recall": 1.0,
+      "operation_exact_match": 0.928571,
+      "constraint_exact_match": 0.964286,
+      "risk_exact_match": 1.0,
+      "sealed_error_count_max": 3,
+      "critical_signal_miss_count_max": 0,
+      "critical_underprocessing_max": 0
+    },
+    "by_critical_signal": {
+      "missing_required_information": {
+        "minimum": 0.75,
+        "stretch": 1.0
+      },
+      "contains_unverified_claims": {
+        "minimum": 1.0,
+        "stretch": 1.0
+      },
+      "requires_current_information": {
+        "minimum": 1.0,
+        "stretch": 1.0
+      },
+      "multiple_intents": {
+        "minimum": 0.75,
+        "stretch": 1.0
+      }
+    }
+  },
+  "focus_areas": [
+    {
+      "name": "critical_signal_recovery",
+      "priority": 1,
+      "why": "Critical recall dropped to 0.5625; multiple_intents and missing_required_information are the largest risks.",
+      "target_fields": [
+        "information_state",
+        "operations",
+        "primary_intent"
+      ]
+    },
+    {
+      "name": "operation_sequence_exactness",
+      "priority": 2,
+      "why": "Operations mismatched in 7 sealed v4 errors, especially clarify/calculate, verify/search, and explore/compare patterns.",
+      "target_fields": [
+        "operations",
+        "information_state"
+      ]
+    },
+    {
+      "name": "constraint_preservation",
+      "priority": 3,
+      "why": "Constraints mismatched in 5 errors; short, JSON, bullets, no_table, and ask_first must survive routing.",
+      "target_fields": [
+        "constraints"
+      ]
+    },
+    {
+      "name": "intent_boundary_repair",
+      "priority": 4,
+      "why": "Intent accuracy stayed at 0.857143; clarify->respond and explain/respond boundaries still leak.",
+      "target_fields": [
+        "primary_intent",
+        "operations"
+      ]
+    },
+    {
+      "name": "risk_flag_completion",
+      "priority": 5,
+      "why": "Risk is closest to target but still misses legal/medical/current combinations in 2 errors.",
+      "target_fields": [
+        "risk",
+        "information_state"
+      ]
+    }
+  ],
+  "roadmap": [
+    {
+      "step": 1,
+      "name": "targets_and_taxonomy",
+      "status": "completed",
+      "output": "build\\v5_targets_and_roadmap_v1.json",
+      "purpose": "Freeze V5 goals and V4 sealed measurement taxonomy without sealed text reuse."
+    },
+    {
+      "step": 2,
+      "name": "nonsealed_error_curriculum_design",
+      "status": "completed",
+      "output": "build\\v5_nonsealed_curriculum_plan_v1.json",
+      "purpose": "Map V4 error taxonomy to non-sealed challenge categories and review requirements."
+    },
+    {
+      "step": 3,
+      "name": "critical_signal_and_operations_fixture",
+      "status": "draft_created",
+      "output": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+      "purpose": "Build human-reviewable non-sealed cases for multiple-intent, missing-info, current-info, operations, and constraints."
+    },
+    {
+      "step": 4,
+      "name": "router_generalization_changes",
+      "status": "completed",
+      "output": "build\\v5_router_generalization_report.json",
+      "purpose": "Improve critical signal, operation, constraint, and risk generalization without copying sealed labels."
+    },
+    {
+      "step": 5,
+      "name": "nonsealed_replay_gate",
+      "status": "completed",
+      "output": "build\\v5_nonsealed_replay_gate_report.json",
+      "purpose": "Pass visible PLM, V4 Failure Memory, Puzzle Failure Memory, and V5 non-sealed challenge gates before sealed rotation."
+    },
+    {
+      "step": 6,
+      "name": "sealed_v5_rotation",
+      "status": "completed",
+      "output": "tests\\fixtures\\pattern_language_sealed_v5.json",
+      "purpose": "Create a fresh unopened sealed V5 fixture and register it active only after non-sealed gates pass."
+    },
+    {
+      "step": 7,
+      "name": "sealed_v5_one_time_measurement",
+      "status": "completed",
+      "output": "build\\pattern_language_sealed_v5_measurement_report.json",
+      "purpose": "Measure sealed V5 once, consume it, and rotate before any tuning based on the result."
+    }
+  ],
+  "pre_sealed_v5_gates": {
+    "visible_plm_intent_accuracy": 1.0,
+    "visible_plm_critical_signal_recall": 1.0,
+    "v4_failure_guard_exact_match_rate": 1.0,
+    "puzzle_failure_memory_preserved": true,
+    "v5_nonsealed_challenge_accuracy_min": 0.95,
+    "v5_nonsealed_critical_signal_recall_min": 0.95,
+    "sealed_text_overlap_count": 0
+  },
+  "step2_curriculum_plan": {
+    "output": "build\\v5_nonsealed_curriculum_plan_v1.json",
+    "status": "designed",
+    "case_count_min": 48,
+    "axis_count": 7,
+    "sealed_v4_text_used": false,
+    "quarantine_overlay": "data\\intent_training_corpus_quarantine_v1.json"
+  },
+  "step3_critical_operations_fixture": {
+    "output": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+    "report": "build\\v5_critical_operations_fixture_report_v1.json",
+    "worksheet": "build\\v5_critical_operations_fixture_review_worksheet_v1.md",
+    "status": "draft_ready_for_human_review",
+    "case_count": 48,
+    "sealed_v4_text_used": false,
+    "current_route_measurement_is_gate": false,
+    "current_route_baseline": {
+      "intent_accuracy": 0.6875,
+      "critical_signal_recall": 0.452381,
+      "operation_exact_match": 0.541667,
+      "constraint_exact_match": 0.666667,
+      "risk_exact_match": 0.895833,
+      "error_count": 35
+    }
+  },
+  "step4_router_generalization": {
+    "output": "build\\v5_router_generalization_report.json",
+    "status": "completed_not_a_gate",
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "current_route_measurement_is_gate": false,
+    "before": {
+      "case_count": 48,
+      "intent_accuracy": 0.6875,
+      "critical_signal_recall": 0.452381,
+      "operation_exact_match": 0.541667,
+      "constraint_exact_match": 0.666667,
+      "risk_exact_match": 0.895833,
+      "valid_packet_rate": 1.0,
+      "error_count": 35,
+      "error_field_counts": {
+        "constraints": 16,
+        "information_state": 23,
+        "operations": 22,
+        "primary_intent": 15,
+        "risk": 5
+      }
+    },
+    "after": {
+      "case_count": 48,
+      "intent_accuracy": 1.0,
+      "critical_signal_recall": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "valid_packet_rate": 1.0,
+      "error_count": 0,
+      "error_field_counts": {}
+    },
+    "delta": {
+      "intent_accuracy": 0.3125,
+      "critical_signal_recall": 0.547619,
+      "operation_exact_match": 0.458333,
+      "constraint_exact_match": 0.333333,
+      "risk_exact_match": 0.104167,
+      "error_count": -35
+    },
+    "meets_presealed_nonsealed_challenge_threshold": true
+  },
+  "step5_nonsealed_replay_gate": {
+    "output": "build\\v5_nonsealed_replay_gate_report.json",
+    "status": "passed",
+    "passed": true,
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "same_cycle_promotion_allowed": false,
+    "lane_summary": {
+      "lane_count": 4,
+      "passed_lane_count": 4,
+      "failed_lanes": [],
+      "ready_for_step6_sealed_v5_rotation": true
+    }
+  },
+  "step6_sealed_v5_rotation": {
+    "output": "tests\\fixtures\\pattern_language_sealed_v5.json",
+    "report": "build\\v5_sealed_rotation_report.json",
+    "status": "active_unmeasured",
+    "sealed_v5_opened_for_measurement": false,
+    "sealed_v5_labels_used_for_tuning": false,
+    "sealed_v4_text_used_for_training": false,
+    "nonsealed_replay_gate_passed": true,
+    "fixture": {
+      "registry_name": "pattern_language_sealed_v5.json",
+      "fixture_id": "pattern-language-sealed-v5",
+      "sha256": "4e18eb7453cfe461b466d495e37846bca9077423ac84d8c5b2054734566e055c",
+      "case_count": 28,
+      "predecessor": "pattern_language_sealed_v4.json",
+      "status": "active",
+      "measured": false,
+      "reviewed": false
+    }
+  },
+  "step7_sealed_v5_measurement": {
+    "output": "build\\pattern_language_sealed_v5_measurement_report.json",
+    "status": "measured_consumed_minimum_not_met",
+    "sealed_v5_opened_for_measurement": true,
+    "sealed_v5_labels_used_for_tuning": false,
+    "rotation_required_before_tuning": true,
+    "fixture": {
+      "registry_name": "pattern_language_sealed_v5.json",
+      "fixture_id": "pattern-language-sealed-v5",
+      "sha256": "4e18eb7453cfe461b466d495e37846bca9077423ac84d8c5b2054734566e055c",
+      "case_count": 28,
+      "predecessor": "pattern_language_sealed_v4.json",
+      "status_before_measurement": "active"
+    },
+    "metrics": {
+      "case_count": 28,
+      "intent_accuracy": 0.75,
+      "critical_signal_recall": 0.375,
+      "operation_exact_match": 0.678571,
+      "constraint_exact_match": 0.821429,
+      "risk_exact_match": 0.892857,
+      "valid_packet_rate": 1.0,
+      "sealed_error_count": 18,
+      "critical_signal_support": 16,
+      "critical_signal_miss_count": 10
+    },
+    "target_result": {
+      "meets_minimum": false,
+      "meets_stretch": false,
+      "failed_metrics": [
+        "intent_accuracy",
+        "critical_signal_recall",
+        "operation_exact_match",
+        "constraint_exact_match",
+        "risk_exact_match",
+        "sealed_error_count",
+        "critical_signal_miss_count"
+      ]
+    },
+    "error_field_counts": {
+      "primary_intent": 7,
+      "constraints": 5,
+      "operations": 9,
+      "information_state": 9,
+      "risk": 3
+    },
+    "intent_pair_counts": {
+      "respond->build": 1,
+      "explain->build": 1,
+      "clarify->respond": 3,
+      "build->build": 1,
+      "build->respond": 1,
+      "build->verify": 1,
+      "verify->verify": 3,
+      "summarize->summarize": 3,
+      "explore->explore": 4
+    }
+  }
+}

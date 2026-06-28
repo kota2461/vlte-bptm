@@ -1,0 +1,99 @@
+{
+  "schema_version": "v7-sealed-rotation-review.v1",
+  "reviewed_at": "2026-06-25T00:20:11.539657+00:00",
+  "decision": "eligible_for_fresh_sealed_v7_rotation",
+  "passed": true,
+  "policy": {
+    "sealed_v7_fixture_created_now": false,
+    "sealed_v7_opened_for_measurement": false,
+    "sealed_v7_labels_used_for_tuning": false,
+    "sealed_v6_text_used_for_training": false,
+    "sealed_v6_labels_used_for_tuning": false,
+    "sealed_v6_measurement_used_as_taxonomy_only": true,
+    "nonsealed_replay_gate_required": true,
+    "nonsealed_replay_gate_passed": true,
+    "draft_or_candidate_lanes_used_as_gate_evidence": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "sources": {
+    "step5_gate": "build\\v7_nonsealed_replay_gate_report_v1.json",
+    "registry": "tests\\fixtures\\pattern_language_fixture_registry.json",
+    "previous_measurement": "build\\pattern_language_sealed_v6_measurement_report.json",
+    "source_generalization_report": "build\\v7_router_generalization_report_v1.json"
+  },
+  "gate_summary": {
+    "required_lane_count": 6,
+    "required_passed_lane_count": 6,
+    "required_error_count": 0,
+    "diagnostic_lane_count": 4,
+    "diagnostic_exact_lane_count": 4,
+    "diagnostic_error_count": 0,
+    "v7_curriculum_case_count": 72,
+    "v7_curriculum_error_count": 0,
+    "v7_curriculum_exact": true,
+    "ready_for_step6_sealed_v7_rotation_review": true
+  },
+  "registry_state": {
+    "active_sealed_fixtures": [],
+    "previous_sealed": {
+      "registry_name": "pattern_language_sealed_v6.json",
+      "status": "consumed",
+      "measured": true,
+      "reviewed": false,
+      "measurement_report": "build\\pattern_language_sealed_v6_measurement_report.json"
+    },
+    "planned_successor": {
+      "registry_name": "pattern_language_sealed_v7.json",
+      "predecessor": "pattern_language_sealed_v6.json",
+      "status": "not_created",
+      "measured": false,
+      "reviewed": false
+    }
+  },
+  "previous_measurement_summary": {
+    "fixture": "pattern_language_sealed_v6.json",
+    "sealed_fixture_opened": true,
+    "sealed_labels_used_for_tuning": false,
+    "intent_accuracy": 0.75,
+    "critical_signal_recall": 0.357143,
+    "operation_exact_match": 0.607143,
+    "constraint_exact_match": 0.607143,
+    "risk_exact_match": 0.75,
+    "error_count": 23,
+    "rotation_required_before_tuning": true
+  },
+  "planned_v7_fixture_constraints": {
+    "case_count": 28,
+    "cases_per_intent": 4,
+    "split": "sealed",
+    "must_be_unopened_until_measurement": true,
+    "must_exclude_exact_text_from": {
+      "prior_sealed_and_benchmark": [
+        "pattern_language_benchmark_v1.json",
+        "pattern_language_sealed_v2.json",
+        "pattern_language_sealed_v3.json",
+        "pattern_language_sealed_v4.json",
+        "pattern_language_sealed_v5.json",
+        "pattern_language_sealed_v6.json"
+      ],
+      "v7_required_nonsealed_gate_lanes": [
+        "tests\\fixtures\\pattern_language_benchmark_v1.json",
+        "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+        "tests\\fixtures\\v6_boundary_false_positive_adopted_benchmark_v1.json",
+        "tests\\fixtures\\v6_boundary_priority_review_adopted_benchmark_v1.json",
+        "tests\\fixtures\\v6_structural_build_30_adopted_benchmark_v1.json",
+        "tests\\fixtures\\v6_router_debate_adopted_benchmark_v1.json"
+      ],
+      "v7_diagnostic_nonsealed_lanes": [
+        "tests\\fixtures\\v6_boundary_false_positive_candidate_benchmark_v1.json",
+        "tests\\fixtures\\v6_contrast_negative_benchmark_v1.json",
+        "tests\\fixtures\\v6_router_debate_candidate_benchmark_v1.json",
+        "tests\\fixtures\\v7_router_repair_fixture_v1.json"
+      ]
+    },
+    "measurement_rule": "measure_once_then_mark_consumed",
+    "labels_rule": "sealed labels remain measurement-only and may not tune the same cycle"
+  },
+  "blockers": [],
+  "next_action": "roadmap_v7_step7_generate_and_rotate_sealed_v7_fixture"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "v6-structural-build-30-adopted-replay-report.v1",
+  "generated_at": "2026-06-28T07:52:05.236249+00:00",
+  "status": "completed_without_route_gaps",
+  "adoption_decision": "build/v6_structural_build_30_adoption_decision_v1.json",
+  "adopted_benchmark": "tests/fixtures/v6_structural_build_30_adopted_benchmark_v1.json",
+  "worksheet": "build/v6_structural_build_30_adopted_worksheet_v1.md",
+  "current_route_measurement_is_gate": false,
+  "sealed_fixture_used": false,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_synthesis_used": true,
+    "manual_prompt_synthesis_used": true,
+    "human_review_confirmation_recorded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "adopted_benchmark_is_directly_trainable": false
+  },
+  "summary": {
+    "adopted_count": 30,
+    "by_priority": {
+      "high": 18,
+      "medium": 12
+    },
+    "by_expected_intent": {
+      "build": 30
+    },
+    "by_expected_risk": {
+      "low": 30
+    },
+    "axis_counts_top": {
+      "build_vs_respond": 26,
+      "metalinguistic_mention": 23,
+      "current_search_split": 7,
+      "risk_suppression": 5,
+      "label": 4,
+      "medical_design_boundary": 4,
+      "glossary": 4,
+      "heading": 3,
+      "column": 3,
+      "tag": 3,
+      "legal_license_boundary": 3,
+      "ai_dependency_boundary": 3,
+      "medical_word_use": 3,
+      "filename": 3,
+      "legal_label": 2,
+      "legal_suppression": 2
+    },
+    "current_route_measurement": {
+      "case_count": 30,
+      "intent_accuracy": 1.0,
+      "critical_signal_recall": 0.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "valid_packet_rate": 1.0,
+      "error_count": 0,
+      "error_field_counts": {}
+    }
+  },
+  "measurement": {
+    "case_count": 30,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "errors": [],
+  "interpretation": "The adopted structural-build lane currently matches route(). It remains non-sealed replay evidence, not a sealed gate.",
+  "next_step": "Improve build-vs-respond structural routing, then replay this adopted non-sealed lane."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "knowledge-index.v1",
+  "entries": [
+    {
+      "domain": "basic_it",
+      "hooks": ["HTTP", "CPU", "API", "プロトコル", "ネットワーク", "DNS", "port", "server"],
+      "library": "basic_it_v1",
+      "default_route": "respond",
+      "requires_current_information": false,
+      "risk": "low"
+    },
+    {
+      "domain": "legal_guard",
+      "hooks": ["著作権", "商用利用", "ライセンス", "Apache 2.0", "規制", "ガイドライン", "法的", "契約"],
+      "library": "legal_guard_v1",
+      "default_route": "verify",
+      "requires_current_information": true,
+      "risk": "high"
+    },
+    {
+      "domain": "medical_guard",
+      "hooks": ["片頭痛", "不安", "眠れない", "自己診断", "症状", "薬", "受診", "医療"],
+      "library": "medical_guard_v1",
+      "default_route": "verify",
+      "requires_current_information": false,
+      "risk": "high"
+    },
+    {
+      "domain": "ai_relationship_boundary",
+      "hooks": ["AIを恋人", "恋人のよう", "AIだけを心の支え", "孤独感", "依存", "本当に私を理解", "人格"],
+      "library": "ai_relationship_boundary_v1",
+      "default_route": "verify",
+      "requires_current_information": false,
+      "risk": "medium"
+    },
+    {
+      "domain": "political_future",
+      "hooks": ["政治", "価値観", "未来予測", "仕事はAI", "富裕層", "低コストAI", "社会が分かれる"],
+      "library": "political_future_v1",
+      "default_route": "explore",
+      "requires_current_information": false,
+      "risk": "medium"
+    },
+    {
+      "domain": "hardware_feasibility",
+      "hooks": ["M.2", "AIアクセラレーター", "光回路", "DDR", "専用チップ", "ローカルAI", "家庭用PC", "巨大モデル"],
+      "library": "hardware_feasibility_v1",
+      "default_route": "verify",
+      "requires_current_information": false,
+      "risk": "medium"
+    },
+    {
+      "domain": "router_design",
+      "hooks": ["ルーター", "Pattern Language Model", "Failure Memory", "build vs explore", "設計比較", "ラベル設計", "素材収集"],
+      "library": "router_design_v1",
+      "default_route": "build",
+      "requires_current_information": false,
+      "risk": "low"
+    }
+  ]
+}

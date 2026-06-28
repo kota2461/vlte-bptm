@@ -1,0 +1,1962 @@
+{
+  "schema_version": "v8-recovery-priority-review-provisional-test-report.v1",
+  "generated_at": "2026-06-28T07:52:07.312425+00:00",
+  "status": "completed_without_route_gaps",
+  "source_priority_selection": "build/v8_recovery_debate_candidate_priority_selection_v1.json",
+  "candidate_benchmark": "tests/fixtures/v8_recovery_priority_review_candidate_benchmark_v1.json",
+  "worksheet": "build/v8_recovery_priority_review_candidate_worksheet_v1.md",
+  "current_route_measurement_is_gate": false,
+  "sealed_fixture_used": false,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_synthesis_used": true,
+    "human_review_confirmation_recorded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "candidate_benchmark_is_directly_trainable": false
+  },
+  "summary": {
+    "candidate_count": 30,
+    "by_category": {
+      "constraints": 3,
+      "current_search_split": 3,
+      "false_positive": 3,
+      "missing_info": 3,
+      "mixed_language": 3,
+      "multiple_intents": 3,
+      "operation_terminal": 3,
+      "paraphrase": 3,
+      "risk_ladder": 3,
+      "unverified_claim": 3
+    },
+    "by_expected_intent": {
+      "build": 12,
+      "clarify": 5,
+      "explain": 5,
+      "summarize": 3,
+      "verify": 5
+    },
+    "by_expected_risk": {
+      "high": 3,
+      "low": 24,
+      "medium": 3
+    },
+    "critical_signal_support": {
+      "missing_required_information": 5,
+      "contains_unverified_claims": 7,
+      "requires_current_information": 0,
+      "multiple_intents": 6
+    }
+  },
+  "measurement": {
+    "case_count": 30,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 1.0,
+    "intent_macro_f1": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "category_summary": {
+    "constraints": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "current_search_split": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "false_positive": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "missing_info": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "mixed_language": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "multiple_intents": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "operation_terminal": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "paraphrase": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "risk_ladder": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "unverified_claim": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    }
+  },
+  "errors": [],
+  "case_results": [
+    {
+      "case_id": "v8-recovery-priority-review-001",
+      "source_topic_id": "v8-constraints-01-short-no-table",
+      "category": "constraints",
+      "input": "Briefly explain cache keys in two bullet points, no table.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-002",
+      "source_topic_id": "v8-constraints-02-neutral-no-diagnosis",
+      "category": "constraints",
+      "input": "For a Medical AI UI layout, give neutral design notes without diagnosis or treatment advice.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-003",
+      "source_topic_id": "v8-constraints-03-cite-no-overclaim",
+      "category": "constraints",
+      "input": "Verify whether the claim 'this license allows every commercial use' is accurate; cite sources and avoid overclaiming.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "license",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "license",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-004",
+      "source_topic_id": "v8-current_search_split-01-current-folder-local",
+      "category": "current_search_split",
+      "input": "Give the PowerShell command to show the current folder. Do not search the web.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-005",
+      "source_topic_id": "v8-current_search_split-02-today-log-local",
+      "category": "current_search_split",
+      "input": "Summarize today's local conversation log below; do not use external news. Log: backup done; V8 debate ran.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-006",
+      "source_topic_id": "v8-current_search_split-03-latest-filename-label",
+      "category": "current_search_split",
+      "input": "Add a field named latest_result_file to the JSON schema; it is just a filename label.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-007",
+      "source_topic_id": "v8-false_positive-01-ai-tag",
+      "category": "false_positive",
+      "input": "Add the tag AI to the label list.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-008",
+      "source_topic_id": "v8-false_positive-02-medical-column",
+      "category": "false_positive",
+      "input": "Create a CSV column named medical_flag.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-009",
+      "source_topic_id": "v8-false_positive-03-legal-heading",
+      "category": "false_positive",
+      "input": "Add a README heading called Legal Notes.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-010",
+      "source_topic_id": "v8-missing_info-01-rewrite-missing-text",
+      "category": "missing_info",
+      "input": "Please rewrite the text, but I have not pasted the text yet.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-011",
+      "source_topic_id": "v8-missing_info-02-compare-missing-options",
+      "category": "missing_info",
+      "input": "Compare option A and option B, but I have not described either option.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-012",
+      "source_topic_id": "v8-missing_info-03-summarize-missing-log",
+      "category": "missing_info",
+      "input": "Summarize the log, but no log is attached.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-013",
+      "source_topic_id": "v8-mixed_language-05-no-table-neutral",
+      "category": "mixed_language",
+      "input": "Use neutral tone, short answer, no table: explain this policy.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-014",
+      "source_topic_id": "v8-mixed_language-01-ai-persona-label",
+      "category": "mixed_language",
+      "input": "READMEに 'AI persona' label を追加してください。人格相談ではなくmetadata整理です。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-015",
+      "source_topic_id": "v8-mixed_language-02-apache-brief",
+      "category": "mixed_language",
+      "input": "Briefly explain the Apache 2.0 license at a general level. No legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-016",
+      "source_topic_id": "v8-multiple_intents-01-verify-then-build",
+      "category": "multiple_intents",
+      "input": "Verify the vendor's security claim, then draft a short release-note sentence.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-017",
+      "source_topic_id": "v8-multiple_intents-02-summarize-then-compare",
+      "category": "multiple_intents",
+      "input": "Summarize these notes, then compare the two approaches in a table: A is cheaper; B is safer.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-018",
+      "source_topic_id": "v8-multiple_intents-03-extract-then-classify",
+      "category": "multiple_intents",
+      "input": "From these logs, extract candidate IDs, classify each as keep or review, and summarize them in a table: id1 ok; id2 unclear.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-019",
+      "source_topic_id": "v8-operation_terminal-01-respond-vs-build",
+      "category": "operation_terminal",
+      "input": "Create a route checklist item for respond-vs-build decisions in one short sentence.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.85
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-020",
+      "source_topic_id": "v8-operation_terminal-02-explain-vs-verify",
+      "category": "operation_terminal",
+      "input": "What is Apache 2.0 in general? No current legal advice is needed.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-021",
+      "source_topic_id": "v8-operation_terminal-04-build-vs-clarify",
+      "category": "operation_terminal",
+      "input": "Create the migration table, but the source data is missing.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-022",
+      "source_topic_id": "v8-paraphrase-05-unverified-report-variants",
+      "category": "paraphrase",
+      "input": "Before adding this number to the report, check whether 42 incidents is correct.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-023",
+      "source_topic_id": "v8-paraphrase-06-missing-text-variants",
+      "category": "paraphrase",
+      "input": "Could you polish this? I forgot to attach the paragraph.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-024",
+      "source_topic_id": "v8-paraphrase-01-ai-comfort-variants",
+      "category": "paraphrase",
+      "input": "I chat with AI to relax after work; note it as a light-use example, not a dependence warning.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-025",
+      "source_topic_id": "v8-risk_ladder-01-ai-light-comfort",
+      "category": "risk_ladder",
+      "input": "Summarize this as a light AI-use example: chatting with AI helps me relax, not dependence.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.96
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-026",
+      "source_topic_id": "v8-risk_ladder-03-medical-ui-low",
+      "category": "risk_ladder",
+      "input": "Design a Medical AI dashboard layout without diagnosis; this is UI design.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-027",
+      "source_topic_id": "v8-risk_ladder-04-medical-personal-symptom",
+      "category": "risk_ladder",
+      "input": "I have chest pain and want medication dosage advice; verify safety before answering.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-028",
+      "source_topic_id": "v8-unverified_claim-01-vendor-security-claim",
+      "category": "unverified_claim",
+      "input": "The vendor claims the vulnerability is fixed; verify before we tell users.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-029",
+      "source_topic_id": "v8-unverified_claim-03-report-number-check",
+      "category": "unverified_claim",
+      "input": "Check whether the report total 128 equals 64 + 64 before publishing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v8-recovery-priority-review-030",
+      "source_topic_id": "v8-unverified_claim-05-legal-template-claim",
+      "category": "unverified_claim",
+      "input": "This contract template is said to be legally valid; explain only generally and say it needs professional review.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "mismatch_fields": [],
+      "matched": true
+    }
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "baseline_hand_group_holdout": {
+    "base_accuracy": 0.21875,
+    "case_count": 32,
+    "full_code_accuracy": 0.125,
+    "group_count": 8,
+    "intensity_accuracy": 0.65625,
+    "operation_accuracy": 0.34375,
+    "stance_accuracy": 0.34375
+  },
+  "combined_group_holdout": {
+    "base_accuracy": 0.645367,
+    "case_count": 313,
+    "full_code_accuracy": 0.412141,
+    "group_count": 63,
+    "intensity_accuracy": 0.817891,
+    "operation_accuracy": 0.578275,
+    "stance_accuracy": 0.773163
+  },
+  "combined_train_to_hand_eval": {
+    "base_accuracy": 1.0,
+    "case_count": 32,
+    "full_code_accuracy": 1.0,
+    "intensity_accuracy": 1.0,
+    "operation_accuracy": 1.0,
+    "stance_accuracy": 1.0
+  },
+  "created_at": "2026-06-26T09:10:17.123604+00:00",
+  "delta_vs_hand_group_holdout": {
+    "combined_group_holdout": {
+      "base_accuracy": 0.426617,
+      "full_code_accuracy": 0.287141,
+      "intensity_accuracy": 0.161641,
+      "operation_accuracy": 0.234525,
+      "stance_accuracy": 0.429413
+    },
+    "combined_train_to_hand_eval": {
+      "base_accuracy": 0.78125,
+      "full_code_accuracy": 0.875,
+      "intensity_accuracy": 0.34375,
+      "operation_accuracy": 0.65625,
+      "stance_accuracy": 0.65625
+    },
+    "synthetic_augmented_hand_group_holdout": {
+      "base_accuracy": 0.375,
+      "full_code_accuracy": 0.3125,
+      "intensity_accuracy": -0.03125,
+      "operation_accuracy": 0.25,
+      "stance_accuracy": 0.25
+    },
+    "synthetic_only_group_holdout": {
+      "base_accuracy": 0.386232,
+      "full_code_accuracy": 0.205961,
+      "intensity_accuracy": 0.162255,
+      "operation_accuracy": 0.161588,
+      "stance_accuracy": 0.424933
+    },
+    "synthetic_train_to_hand_eval": {
+      "base_accuracy": 0.3125,
+      "full_code_accuracy": 0.21875,
+      "intensity_accuracy": -0.0625,
+      "operation_accuracy": 0.1875,
+      "stance_accuracy": 0.15625
+    }
+  },
+  "hand_group_changes": {
+    "baseline_hand_group_holdout": {
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "code_request_split": {
+          "base_accuracy": 0.333333,
+          "case_count": 3,
+          "full_code_accuracy": 0.333333,
+          "intensity_accuracy": 0.333333,
+          "operation_accuracy": 0.333333,
+          "stance_accuracy": 0.333333
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.6,
+          "operation_accuracy": 0.2,
+          "stance_accuracy": 0.0
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.5
+        },
+        "missing_context_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        }
+      },
+      "case_count": 32,
+      "group_count": 8
+    },
+    "combined_train_to_hand": {
+      "base_accuracy": 1.0,
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "code_request_split": {
+          "base_accuracy": 1.0,
+          "case_count": 3,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 1.0,
+          "case_count": 5,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "generate_across_bases": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "missing_context_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "summary_share_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        }
+      },
+      "case_count": 32,
+      "full_code_accuracy": 1.0,
+      "group_count": 8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synthetic_augmented_hand_group_holdout": {
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.75,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 0.75,
+          "stance_accuracy": 0.75
+        },
+        "code_request_split": {
+          "base_accuracy": 1.0,
+          "case_count": 3,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.2,
+          "intensity_accuracy": 0.4,
+          "operation_accuracy": 0.4,
+          "stance_accuracy": 0.4
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.75
+        },
+        "missing_context_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.75,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 0.75
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.5
+        }
+      },
+      "case_count": 32,
+      "group_count": 8
+    },
+    "synthetic_train_to_hand": {
+      "base_accuracy": 0.53125,
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.75,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 0.75,
+          "stance_accuracy": 0.75
+        },
+        "code_request_split": {
+          "base_accuracy": 1.0,
+          "case_count": 3,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.2,
+          "intensity_accuracy": 0.6,
+          "operation_accuracy": 0.4,
+          "stance_accuracy": 0.4
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.0
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.25,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.5
+        },
+        "missing_context_variants": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.75,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.75,
+          "stance_accuracy": 0.75
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.25,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        }
+      },
+      "case_count": 32,
+      "full_code_accuracy": 0.34375,
+      "group_count": 8,
+      "intensity_accuracy": 0.59375,
+      "operation_accuracy": 0.53125,
+      "stance_accuracy": 0.5
+    }
+  },
+  "hand_train_to_synthetic_eval": {
+    "base_accuracy": 0.476868,
+    "case_count": 281,
+    "full_code_accuracy": 0.170819,
+    "intensity_accuracy": 0.498221,
+    "operation_accuracy": 0.462633,
+    "stance_accuracy": 0.466192
+  },
+  "inputs": {
+    "combined_count": 313,
+    "hand_sample_count": 32,
+    "hand_sample_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_v0_1.json",
+    "synthetic_count": 281,
+    "synthetic_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_corrected_candidates_v0_1.json"
+  },
+  "policy": {
+    "human_review_required_before_real_training": true,
+    "synthetic_samples_are_training_data": false,
+    "trial_treats_synthetic_as_provisional_training": true
+  },
+  "schema_version": "thought-color-synthetic-trial.v0.1",
+  "synthetic_augmented_hand_group_holdout": {
+    "base_accuracy": 0.59375,
+    "case_count": 32,
+    "full_code_accuracy": 0.4375,
+    "group_count": 8,
+    "intensity_accuracy": 0.625,
+    "operation_accuracy": 0.59375,
+    "stance_accuracy": 0.59375
+  },
+  "synthetic_group_holdout_by_lane": {
+    "correct-build-operation-generate": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 1.0
+    },
+    "correct-build-operation-remember": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.8
+    },
+    "correct-build-operation-route": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.8
+    },
+    "correct-build-operation-verify": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.8
+    },
+    "correct-code-request-split-artifact_generation": {
+      "base_accuracy": 0.333333,
+      "case_count": 6,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.833333,
+      "operation_accuracy": 0.333333,
+      "stance_accuracy": 0.666667
+    },
+    "correct-code-request-split-mechanism_explanation": {
+      "base_accuracy": 0.166667,
+      "case_count": 6,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.333333,
+      "operation_accuracy": 0.333333,
+      "stance_accuracy": 0.333333
+    },
+    "correct-code-request-split-verification_review": {
+      "base_accuracy": 0.333333,
+      "case_count": 6,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.5,
+      "operation_accuracy": 0.333333,
+      "stance_accuracy": 0.5
+    },
+    "synth-artifact-generation-operation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-artifact-generation-stance": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 1.0
+    },
+    "synth-clarification-gate-operation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-clarification-gate-stance": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 1.0
+    },
+    "synth-direct-answer-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-direct-answer-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.8
+    },
+    "synth-exploration-tradeoff-operation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 1.0
+    },
+    "synth-exploration-tradeoff-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.6
+    },
+    "synth-mechanism-explanation-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-mechanism-explanation-stance": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.6
+    },
+    "synth-same-operation-compare-p03": {
+      "base_accuracy": 0.428571,
+      "case_count": 7,
+      "full_code_accuracy": 0.428571,
+      "intensity_accuracy": 0.714286,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.714286
+    },
+    "synth-same-operation-generate-p05": {
+      "base_accuracy": 0.571429,
+      "case_count": 7,
+      "full_code_accuracy": 0.571429,
+      "intensity_accuracy": 0.714286,
+      "operation_accuracy": 0.714286,
+      "stance_accuracy": 1.0
+    },
+    "synth-same-operation-reason-p02": {
+      "base_accuracy": 1.0,
+      "case_count": 7,
+      "full_code_accuracy": 1.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-same-operation-respond-p01": {
+      "base_accuracy": 0.714286,
+      "case_count": 7,
+      "full_code_accuracy": 0.142857,
+      "intensity_accuracy": 0.857143,
+      "operation_accuracy": 0.428571,
+      "stance_accuracy": 0.857143
+    },
+    "synth-same-operation-verify-p04": {
+      "base_accuracy": 1.0,
+      "case_count": 7,
+      "full_code_accuracy": 1.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-artifact-generation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-clarification-gate": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.8
+    },
+    "synth-share-direct-answer": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-exploration-tradeoff": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-mechanism-explanation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-summary-compression": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.6
+    },
+    "synth-share-verification-review": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-artifact-generation-from-verification-review": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.6
+    },
+    "synth-split-clarification-gate-from-exploration-tradeoff": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.2
+    },
+    "synth-split-direct-answer-from-mechanism-explanation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-exploration-tradeoff-from-artifact-generation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.6
+    },
+    "synth-split-mechanism-explanation-from-direct-answer": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-summary-compression-from-mechanism-explanation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.2,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.6
+    },
+    "synth-split-verification-review-from-artifact-generation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.8
+    },
+    "synth-summary-compression-operation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-summary-compression-stance": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.6
+    },
+    "synth-verification-review-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-verification-review-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "target-intensity-artifact_generation": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-clarification_gate": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-direct_answer": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-exploration_tradeoff": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-mechanism_explanation": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-summary_compression": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-intensity-verification_review": {
+      "base_accuracy": 0.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.75
+    },
+    "target-missing-artifact_generation-route-hold": {
+      "base_accuracy": 0.2,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.4,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.6
+    },
+    "target-missing-clarification_gate-route-medium": {
+      "base_accuracy": 0.4,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.6
+    },
+    "target-missing-exploration_tradeoff-compare-hold": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.2,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.8
+    },
+    "target-missing-verification_review-verify-hold": {
+      "base_accuracy": 0.2,
+      "case_count": 5,
+      "full_code_accuracy": 0.2,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 1.0
+    },
+    "target-supportive-processing-generate": {
+      "base_accuracy": 0.2,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.2
+    },
+    "target-supportive-processing-reason": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.8
+    },
+    "target-supportive-processing-remember": {
+      "base_accuracy": 0.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.2
+    },
+    "target-supportive-processing-route": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.6
+    }
+  },
+  "synthetic_only_group_holdout": {
+    "base_accuracy": 0.604982,
+    "case_count": 281,
+    "full_code_accuracy": 0.330961,
+    "group_count": 55,
+    "intensity_accuracy": 0.818505,
+    "operation_accuracy": 0.505338,
+    "stance_accuracy": 0.768683
+  },
+  "synthetic_train_to_hand_eval": {
+    "base_accuracy": 0.53125,
+    "case_count": 32,
+    "full_code_accuracy": 0.34375,
+    "intensity_accuracy": 0.59375,
+    "operation_accuracy": 0.53125,
+    "stance_accuracy": 0.5
+  }
+}

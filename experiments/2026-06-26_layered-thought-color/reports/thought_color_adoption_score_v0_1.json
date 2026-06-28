@@ -1,0 +1,51 @@
+{
+  "comparison_report": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\reports\\thought_color_comparison_v0_1.json",
+  "components": {
+    "channel_score": 0.682143,
+    "design_fit_score": 0.8,
+    "safety_score": 1.0,
+    "semantic_score": 0.542649
+  },
+  "created_at": "2026-06-26T06:30:12.243989+00:00",
+  "recommendation": [
+    "Do not replace the main adapter.",
+    "Keep Thought Color as an auxiliary experimental feature lane.",
+    "Prioritize base and operation channel improvement before main integration.",
+    "Re-score after base_accuracy and operation_accuracy both exceed 0.75 on validation."
+  ],
+  "rubric": {
+    "adoption_value": {
+      "channel_metrics": 0.25,
+      "data_safety": 0.15,
+      "design_fit": 0.1,
+      "semantic_metrics": 0.5
+    },
+    "mainline_replacement": {
+      "channel_metrics": 0.1,
+      "data_safety": 0.1,
+      "semantic_metrics": 0.8
+    },
+    "research_lane": {
+      "channel_metrics": 0.3,
+      "data_safety": 0.2,
+      "design_fit": 0.1,
+      "semantic_metrics": 0.4
+    }
+  },
+  "schema_version": "thought-color-adoption-score.v0.1",
+  "scores": {
+    "adoption_value": 67,
+    "mainline_replacement": 60,
+    "research_lane": 70
+  },
+  "thresholds": {
+    "experimental_auxiliary_candidate": {
+      "adoption_value": 65
+    },
+    "mainline_candidate": {
+      "adoption_value": 80,
+      "mainline_replacement": 80
+    }
+  },
+  "verdict": "experimental_auxiliary_candidate"
+}

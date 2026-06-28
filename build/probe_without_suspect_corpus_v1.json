@@ -1,0 +1,269 @@
+{
+  "schema_version": "intent-corpus-suspect-ablation-probe.v1",
+  "generated_at": "2026-06-18T11:08:11.819498+00:00",
+  "mutation": "exclude_all_47_suspect_examples_from_training_only",
+  "writes_deployed_model": false,
+  "active_sealed_v2_read": false,
+  "training": {
+    "full_approved_examples": 739,
+    "removed_examples": 47,
+    "filtered_examples": 692,
+    "removed_by_intent": {
+      "build": 15,
+      "clarify": 1,
+      "explain": 5,
+      "explore": 7,
+      "respond": 14,
+      "verify": 5
+    },
+    "filtered_by_intent": {
+      "build": 198,
+      "clarify": 64,
+      "explain": 75,
+      "explore": 82,
+      "respond": 158,
+      "summarize": 32,
+      "verify": 83
+    },
+    "kfold": {
+      "kfold_accuracy": 0.6661849710982659,
+      "kfold_macro_accuracy": 0.6660978434607342,
+      "folds": 5,
+      "evaluated_examples": 692
+    }
+  },
+  "gate": {
+    "foundation_anchors": {
+      "required": "route() primary_intent 100% (all-intent canonical)",
+      "case_count": 30,
+      "misses": [],
+      "accuracy": 1.0,
+      "passed": true
+    },
+    "hybrid_regression": {
+      "required": "route() primary_intent 100% (safety + no-match)",
+      "case_count": 9,
+      "misses": [],
+      "accuracy": 1.0,
+      "passed": true
+    },
+    "contract_passed": true,
+    "passed": true
+  },
+  "accumulation_route_eval": {
+    "case_count": 50,
+    "reviewed_count": 50,
+    "semantic_intent_accuracy": 0.82,
+    "processing_plan_accuracy": 0.92,
+    "end_to_end_route_accuracy": 0.78,
+    "passed": 39,
+    "failed": 11,
+    "critical_underprocessing": 0,
+    "misses": [
+      {
+        "id": "accum-b01-005",
+        "category": "indirect_explanation",
+        "expected": {
+          "intent": "explain",
+          "processing_class": "economy",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "fallback",
+          "intent_margin": 0.036794,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b01-006",
+        "category": "indirect_explanation",
+        "expected": {
+          "intent": "explain",
+          "processing_class": "economy",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "fallback",
+          "intent_margin": 0.03081,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b01-008",
+        "category": "indirect_explanation",
+        "expected": {
+          "intent": "explain",
+          "processing_class": "economy",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "learned",
+          "intent_margin": 0.317578,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b01-019",
+        "category": "temporal_disambiguation",
+        "expected": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "verified",
+          "core_mode": "vertical",
+          "decided_by": "fallback",
+          "intent_margin": 0.039371,
+          "vertical_execution_order": [
+            "respond"
+          ]
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b01-024",
+        "category": "compound_intent",
+        "expected": {
+          "intent": "build",
+          "processing_class": "deep",
+          "core_mode": "hybrid"
+        },
+        "actual": {
+          "intent": "summarize",
+          "processing_class": "deep",
+          "core_mode": "hybrid",
+          "decided_by": "markers",
+          "intent_margin": null,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-006",
+        "category": "verify_then_build",
+        "expected": {
+          "intent": "clarify",
+          "processing_class": "clarify",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "markers",
+          "intent_margin": null,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-009",
+        "category": "compound_intent",
+        "expected": {
+          "intent": "summarize",
+          "processing_class": "deep",
+          "core_mode": "hybrid"
+        },
+        "actual": {
+          "intent": "summarize",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "markers",
+          "intent_margin": null,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-010",
+        "category": "conversation_response",
+        "expected": {
+          "intent": "clarify",
+          "processing_class": "clarify",
+          "core_mode": "horizontal"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "economy",
+          "core_mode": "horizontal",
+          "decided_by": "fallback",
+          "intent_margin": 0.120467,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-023",
+        "category": "temporal_disambiguation",
+        "expected": {
+          "intent": "verify",
+          "processing_class": "verified",
+          "core_mode": "vertical"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "verified",
+          "core_mode": "vertical",
+          "decided_by": "markers",
+          "intent_margin": null,
+          "vertical_execution_order": [
+            "respond"
+          ]
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-024",
+        "category": "temporal_disambiguation",
+        "expected": {
+          "intent": "verify",
+          "processing_class": "verified",
+          "core_mode": "vertical"
+        },
+        "actual": {
+          "intent": "respond",
+          "processing_class": "verified",
+          "core_mode": "vertical",
+          "decided_by": "learned",
+          "intent_margin": 0.244147,
+          "vertical_execution_order": [
+            "respond"
+          ]
+        },
+        "critical_underprocessing": false
+      },
+      {
+        "id": "accum-b02-026",
+        "category": "compound_intent",
+        "expected": {
+          "intent": "build",
+          "processing_class": "deep",
+          "core_mode": "hybrid"
+        },
+        "actual": {
+          "intent": "summarize",
+          "processing_class": "deep",
+          "core_mode": "hybrid",
+          "decided_by": "markers",
+          "intent_margin": null,
+          "vertical_execution_order": null
+        },
+        "critical_underprocessing": false
+      }
+    ]
+  }
+}

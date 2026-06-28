@@ -1,0 +1,85 @@
+{
+  "schema_version": "v7-router-debate-candidate-selection.v1",
+  "generated_at": "2026-06-28T07:52:06.143261+00:00",
+  "source_log": "build/v7_router_repair_debate_run.json",
+  "status": "candidate_queue_prepared_from_nonsealed_debate_log",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "candidate_fixture_is_training_data": false,
+    "candidate_replay_is_gate": false
+  },
+  "summary": {
+    "source_topics": 5,
+    "selected_topics": 5,
+    "selected_candidates": 18,
+    "caution_topics": 1,
+    "issue_topics": 0,
+    "current_route_error_count": 0,
+    "provisional_pass_count": 18,
+    "provisional_repair_gap_count": 0
+  },
+  "selected_topic_ids": [
+    "v7-ambiguous-clarify-vs-build",
+    "v7-current-search-split-local-vs-web",
+    "v7-unverified-claim-strength",
+    "v7-constraint-stacking",
+    "v7-terminal-action-boundary"
+  ],
+  "caution_topic_ids": [
+    "v7-constraint-stacking"
+  ],
+  "selection_notes": [
+    "constraint-stacking had one length-truncated critic turn, but the second critic turn completed",
+    "all candidate prompts are short synthesized review samples, not raw model output",
+    "candidate replay is diagnostic only and is not gate evidence"
+  ],
+  "candidate_ids": [
+    "v7-router-debate-candidate-001",
+    "v7-router-debate-candidate-002",
+    "v7-router-debate-candidate-003",
+    "v7-router-debate-candidate-004",
+    "v7-router-debate-candidate-005",
+    "v7-router-debate-candidate-006",
+    "v7-router-debate-candidate-007",
+    "v7-router-debate-candidate-008",
+    "v7-router-debate-candidate-009",
+    "v7-router-debate-candidate-010",
+    "v7-router-debate-candidate-011",
+    "v7-router-debate-candidate-012",
+    "v7-router-debate-candidate-013",
+    "v7-router-debate-candidate-014",
+    "v7-router-debate-candidate-015",
+    "v7-router-debate-candidate-016",
+    "v7-router-debate-candidate-017",
+    "v7-router-debate-candidate-018"
+  ],
+  "provisional_pass_ids": [
+    "v7-router-debate-candidate-001",
+    "v7-router-debate-candidate-002",
+    "v7-router-debate-candidate-003",
+    "v7-router-debate-candidate-004",
+    "v7-router-debate-candidate-005",
+    "v7-router-debate-candidate-006",
+    "v7-router-debate-candidate-007",
+    "v7-router-debate-candidate-008",
+    "v7-router-debate-candidate-009",
+    "v7-router-debate-candidate-010",
+    "v7-router-debate-candidate-011",
+    "v7-router-debate-candidate-012",
+    "v7-router-debate-candidate-013",
+    "v7-router-debate-candidate-014",
+    "v7-router-debate-candidate-015",
+    "v7-router-debate-candidate-016",
+    "v7-router-debate-candidate-017",
+    "v7-router-debate-candidate-018"
+  ],
+  "provisional_repair_gap_ids": []
+}

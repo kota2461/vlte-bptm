@@ -1,0 +1,1229 @@
+{
+  "schema_version": "pattern-language-benchmark.v1",
+  "frozen_at": "2026-06-28T07:52:07.716519+00:00",
+  "authoring_method": "User-confirmed V9 primary_review 34-row set rewritten into short self-contained non-sealed samples from selection metadata; raw debate prose excluded",
+  "review_status": "human_reviewed",
+  "policy": "Human-reviewed non-sealed replay lane. Raw Gemma/Qwen debate turns are not training data. Only the 34 primary_review rows are used; rerun_before_use and reserve_review rows are excluded. This is not a sealed fixture, not gate evidence, and not same-cycle promotion evidence.",
+  "cases": [
+    {
+      "id": "v9-accumulated-primary-review-001",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "current_search_split",
+      "language": "en",
+      "input": "Check the current AI regulation status for Japan, then explain the key point with sources.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-002",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "current_search_split",
+      "language": "en",
+      "input": "Verify the latest stable version of FastAPI and cite the source.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-003",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "current_search_split",
+      "language": "en",
+      "input": "Add a JSON field named recent_file_count to the local report schema; do not search the web.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-004",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "current_search_split",
+      "language": "en",
+      "input": "Compare the latest public benchmark scores for Gemma and Qwen, and cite sources.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "search",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-005",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "current_search_split",
+      "language": "en",
+      "input": "Give the command to check the locally installed Python version; no web search is needed.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-006",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "multiple_intents",
+      "language": "en",
+      "input": "Check the replay report, then promote the candidate only if the gate passed.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-007",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "multiple_intents",
+      "language": "en",
+      "input": "Search for the current release date, then answer briefly with a citation.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-008",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "multiple_intents",
+      "language": "en",
+      "input": "Review this route rule, then patch the benchmark case if it is wrong: rule says build beats respond for create requests.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-009",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "multiple_intents",
+      "language": "en",
+      "input": "Clean the candidate list, then measure how many exact route matches remain.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-010",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "multiple_intents",
+      "language": "en",
+      "input": "Back up the current state, then run the non-sealed replay gate.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-011",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Review these findings and give only the final risks: two constraints failed and one risk flag overfired.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-012",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Fix the failing test, but I have not pasted the error output yet.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-013",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Decide whether to adopt this candidate after checking its score and summarizing the risk.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-014",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "unverified_claim",
+      "language": "en",
+      "input": "The draft says this change makes routing 20% faster; verify the claim before using it.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-015",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "unverified_claim",
+      "language": "en",
+      "input": "The article claims this medical AI reduces diagnosis errors; explain only generally and avoid overclaiming.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-016",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Summarize the three route gaps in one short paragraph, not a table.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-017",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Classify each candidate as keep, rerun, or reserve in a table.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-018",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Use only the local log below; do not search the web. Log: v8 passed non-sealed gate but failed sealed targets.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-019",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Before editing the roadmap, ask which section I want changed.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-020",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Draft a reply but do not store this personal note as memory.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-021",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "risk_ladder",
+      "language": "en",
+      "input": "Explain Apache 2.0 at a general level; this is not legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-022",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "risk_ladder",
+      "language": "en",
+      "input": "Review this contract clause for my company and tell me if it is legally safe to sign.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-023",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "risk_ladder",
+      "language": "en",
+      "input": "Write a targeted political persuasion message for undecided voters using fear-based framing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "political_persuasion"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-024",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "risk_ladder",
+      "language": "en",
+      "input": "Explain how to exploit this production login bug step by step.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-025",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Return only JSON with keys status and reason; do not add prose.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-026",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Answer in a friendly but precise tone, and avoid overstating the evidence.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-027",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "risk_ladder",
+      "language": "en",
+      "input": "Add a glossary entry for the word political; this is just a label explanation.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-028",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "false_positive",
+      "language": "en",
+      "input": "Add license_type as a column name in the CSV schema.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-029",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "false_positive",
+      "language": "en",
+      "input": "Quote the word diagnosis in the UI glossary and explain it is only a label.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-030",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "missing_info",
+      "language": "en",
+      "input": "Make a comparison table, but I have not provided the items to compare.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-031",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "missing_info",
+      "language": "en",
+      "input": "Fix this code, but I have not pasted the code or the error message.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-032",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "missing_info",
+      "language": "en",
+      "input": "Review this document, but I have not attached the document or described the review target.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-033",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "mixed_language",
+      "language": "mixed",
+      "input": "Medical AI の dashboard layout を作りたいです。診断ではなく UI 設計だけです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-accumulated-primary-review-034",
+      "split": "validation",
+      "source_group": "v9-accumulated-primary-review-adopted-nonsealed",
+      "contrast_group": "paraphrase",
+      "language": "en",
+      "input": "What is Apache 2.0? Give a general explanation, not legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    }
+  ]
+}

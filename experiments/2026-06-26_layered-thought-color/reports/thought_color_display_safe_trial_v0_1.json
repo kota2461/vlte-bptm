@@ -1,0 +1,671 @@
+{
+  "baseline_hand_group_holdout": {
+    "base_accuracy": 0.21875,
+    "case_count": 32,
+    "full_code_accuracy": 0.125,
+    "group_count": 8,
+    "intensity_accuracy": 0.65625,
+    "operation_accuracy": 0.34375,
+    "stance_accuracy": 0.34375
+  },
+  "combined_group_holdout": {
+    "base_accuracy": 0.705314,
+    "case_count": 207,
+    "full_code_accuracy": 0.454106,
+    "group_count": 41,
+    "intensity_accuracy": 0.777778,
+    "operation_accuracy": 0.637681,
+    "stance_accuracy": 0.772947
+  },
+  "combined_train_to_hand_eval": {
+    "base_accuracy": 1.0,
+    "case_count": 32,
+    "full_code_accuracy": 1.0,
+    "intensity_accuracy": 1.0,
+    "operation_accuracy": 1.0,
+    "stance_accuracy": 1.0
+  },
+  "created_at": "2026-06-26T09:03:11.892243+00:00",
+  "delta_vs_hand_group_holdout": {
+    "combined_group_holdout": {
+      "base_accuracy": 0.486564,
+      "full_code_accuracy": 0.329106,
+      "intensity_accuracy": 0.121528,
+      "operation_accuracy": 0.293931,
+      "stance_accuracy": 0.429197
+    },
+    "combined_train_to_hand_eval": {
+      "base_accuracy": 0.78125,
+      "full_code_accuracy": 0.875,
+      "intensity_accuracy": 0.34375,
+      "operation_accuracy": 0.65625,
+      "stance_accuracy": 0.65625
+    },
+    "synthetic_augmented_hand_group_holdout": {
+      "base_accuracy": 0.1875,
+      "full_code_accuracy": 0.03125,
+      "intensity_accuracy": -0.1875,
+      "operation_accuracy": 0.09375,
+      "stance_accuracy": 0.125
+    },
+    "synthetic_only_group_holdout": {
+      "base_accuracy": 0.535536,
+      "full_code_accuracy": 0.383571,
+      "intensity_accuracy": 0.18375,
+      "operation_accuracy": 0.324821,
+      "stance_accuracy": 0.484821
+    },
+    "synthetic_train_to_hand_eval": {
+      "base_accuracy": 0.09375,
+      "full_code_accuracy": -0.09375,
+      "intensity_accuracy": -0.40625,
+      "operation_accuracy": 0.0625,
+      "stance_accuracy": 0.03125
+    }
+  },
+  "hand_group_changes": {
+    "baseline_hand_group_holdout": {
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "code_request_split": {
+          "base_accuracy": 0.333333,
+          "case_count": 3,
+          "full_code_accuracy": 0.333333,
+          "intensity_accuracy": 0.333333,
+          "operation_accuracy": 0.333333,
+          "stance_accuracy": 0.333333
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.6,
+          "operation_accuracy": 0.2,
+          "stance_accuracy": 0.0
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.5
+        },
+        "missing_context_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        }
+      },
+      "case_count": 32,
+      "group_count": 8
+    },
+    "combined_train_to_hand": {
+      "base_accuracy": 1.0,
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "code_request_split": {
+          "base_accuracy": 1.0,
+          "case_count": 3,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 1.0,
+          "case_count": 5,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "generate_across_bases": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "missing_context_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "summary_share_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 1.0,
+          "case_count": 4,
+          "full_code_accuracy": 1.0,
+          "intensity_accuracy": 1.0,
+          "operation_accuracy": 1.0,
+          "stance_accuracy": 1.0
+        }
+      },
+      "case_count": 32,
+      "full_code_accuracy": 1.0,
+      "group_count": 8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synthetic_augmented_hand_group_holdout": {
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.25,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.75
+        },
+        "code_request_split": {
+          "base_accuracy": 0.666667,
+          "case_count": 3,
+          "full_code_accuracy": 0.333333,
+          "intensity_accuracy": 0.666667,
+          "operation_accuracy": 0.666667,
+          "stance_accuracy": 0.333333
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.2,
+          "operation_accuracy": 0.4,
+          "stance_accuracy": 0.2
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.25
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.75
+        },
+        "missing_context_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.75,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.75
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.25
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.5
+        }
+      },
+      "case_count": 32,
+      "group_count": 8
+    },
+    "synthetic_train_to_hand": {
+      "base_accuracy": 0.3125,
+      "by_group": {
+        "build_operation_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.0,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 1.0
+        },
+        "code_request_split": {
+          "base_accuracy": 0.333333,
+          "case_count": 3,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.333333,
+          "operation_accuracy": 0.333333,
+          "stance_accuracy": 0.0
+        },
+        "empathy_across_bases": {
+          "base_accuracy": 0.2,
+          "case_count": 5,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.4,
+          "operation_accuracy": 0.4,
+          "stance_accuracy": 0.4
+        },
+        "explore_operation_variants": {
+          "base_accuracy": 0.5,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.25,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.0
+        },
+        "generate_across_bases": {
+          "base_accuracy": 0.75,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.0,
+          "operation_accuracy": 0.5,
+          "stance_accuracy": 0.5
+        },
+        "missing_context_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.25,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.75,
+          "stance_accuracy": 0.5
+        },
+        "summary_share_variants": {
+          "base_accuracy": 0.25,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.5,
+          "operation_accuracy": 0.25,
+          "stance_accuracy": 0.25
+        },
+        "verify_stance_variants": {
+          "base_accuracy": 0.0,
+          "case_count": 4,
+          "full_code_accuracy": 0.0,
+          "intensity_accuracy": 0.0,
+          "operation_accuracy": 0.0,
+          "stance_accuracy": 0.25
+        }
+      },
+      "case_count": 32,
+      "full_code_accuracy": 0.03125,
+      "group_count": 8,
+      "intensity_accuracy": 0.25,
+      "operation_accuracy": 0.40625,
+      "stance_accuracy": 0.375
+    }
+  },
+  "hand_train_to_synthetic_eval": {
+    "base_accuracy": 0.428571,
+    "case_count": 175,
+    "full_code_accuracy": 0.045714,
+    "intensity_accuracy": 0.36,
+    "operation_accuracy": 0.405714,
+    "stance_accuracy": 0.377143
+  },
+  "inputs": {
+    "combined_count": 207,
+    "hand_sample_count": 32,
+    "hand_sample_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_v0_1.json",
+    "synthetic_count": 175,
+    "synthetic_path": "data\\thought_color_synthetic_display_safe_v0_1.json"
+  },
+  "policy": {
+    "human_review_required_before_real_training": true,
+    "synthetic_samples_are_training_data": false,
+    "trial_treats_synthetic_as_provisional_training": true
+  },
+  "schema_version": "thought-color-synthetic-trial.v0.1",
+  "synthetic_augmented_hand_group_holdout": {
+    "base_accuracy": 0.40625,
+    "case_count": 32,
+    "full_code_accuracy": 0.15625,
+    "group_count": 8,
+    "intensity_accuracy": 0.46875,
+    "operation_accuracy": 0.4375,
+    "stance_accuracy": 0.46875
+  },
+  "synthetic_group_holdout_by_lane": {
+    "synth-artifact-generation-operation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-artifact-generation-stance": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 1.0
+    },
+    "synth-clarification-gate-operation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-clarification-gate-stance": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 1.0
+    },
+    "synth-direct-answer-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-direct-answer-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.8
+    },
+    "synth-exploration-tradeoff-operation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 1.0
+    },
+    "synth-exploration-tradeoff-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.6
+    },
+    "synth-mechanism-explanation-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-mechanism-explanation-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.8
+    },
+    "synth-same-operation-compare-p03": {
+      "base_accuracy": 0.428571,
+      "case_count": 7,
+      "full_code_accuracy": 0.428571,
+      "intensity_accuracy": 0.714286,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.714286
+    },
+    "synth-same-operation-generate-p05": {
+      "base_accuracy": 0.571429,
+      "case_count": 7,
+      "full_code_accuracy": 0.571429,
+      "intensity_accuracy": 0.714286,
+      "operation_accuracy": 0.714286,
+      "stance_accuracy": 1.0
+    },
+    "synth-same-operation-reason-p02": {
+      "base_accuracy": 1.0,
+      "case_count": 7,
+      "full_code_accuracy": 1.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-same-operation-respond-p01": {
+      "base_accuracy": 0.714286,
+      "case_count": 7,
+      "full_code_accuracy": 0.142857,
+      "intensity_accuracy": 0.857143,
+      "operation_accuracy": 0.428571,
+      "stance_accuracy": 0.857143
+    },
+    "synth-same-operation-verify-p04": {
+      "base_accuracy": 1.0,
+      "case_count": 7,
+      "full_code_accuracy": 1.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-artifact-generation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-share-clarification-gate": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.8
+    },
+    "synth-share-direct-answer": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-exploration-tradeoff": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-share-mechanism-explanation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.8
+    },
+    "synth-share-summary-compression": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.6
+    },
+    "synth-share-verification-review": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-artifact-generation-from-verification-review": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.6
+    },
+    "synth-split-clarification-gate-from-exploration-tradeoff": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.2
+    },
+    "synth-split-direct-answer-from-mechanism-explanation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-exploration-tradeoff-from-artifact-generation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.6
+    },
+    "synth-split-mechanism-explanation-from-direct-answer": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.6,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-summary-compression-from-mechanism-explanation": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.2,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.2,
+      "stance_accuracy": 0.8
+    },
+    "synth-split-verification-review-from-artifact-generation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.8
+    },
+    "synth-summary-compression-operation": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 1.0
+    },
+    "synth-summary-compression-stance": {
+      "base_accuracy": 1.0,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.6,
+      "stance_accuracy": 0.6
+    },
+    "synth-verification-review-operation": {
+      "base_accuracy": 0.6,
+      "case_count": 5,
+      "full_code_accuracy": 0.6,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "synth-verification-review-stance": {
+      "base_accuracy": 0.8,
+      "case_count": 5,
+      "full_code_accuracy": 0.8,
+      "intensity_accuracy": 0.8,
+      "operation_accuracy": 0.8,
+      "stance_accuracy": 0.8
+    }
+  },
+  "synthetic_only_group_holdout": {
+    "base_accuracy": 0.754286,
+    "case_count": 175,
+    "full_code_accuracy": 0.508571,
+    "group_count": 33,
+    "intensity_accuracy": 0.84,
+    "operation_accuracy": 0.668571,
+    "stance_accuracy": 0.828571
+  },
+  "synthetic_train_to_hand_eval": {
+    "base_accuracy": 0.3125,
+    "case_count": 32,
+    "full_code_accuracy": 0.03125,
+    "intensity_accuracy": 0.25,
+    "operation_accuracy": 0.40625,
+    "stance_accuracy": 0.375
+  }
+}

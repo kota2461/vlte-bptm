@@ -1,0 +1,2461 @@
+{
+  "schema_version": "v4-failure-memory-replay.v1",
+  "generated_at": "2026-06-21T04:34:48.064622+00:00",
+  "fixture": "tests\\fixtures\\v4_failure_memory_fixture_v1.json",
+  "summary": {
+    "item_count": 38,
+    "exact_match_count": 38,
+    "exact_match_rate": 1.0,
+    "miss_count": 0
+  },
+  "measurements": [
+    {
+      "id": "fm-v4-001",
+      "source_candidate_id": "cc-open-v1-001",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "preserve_multi_intent",
+        "risk_check_up",
+        "search_up",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-002",
+      "source_candidate_id": "cc-open-v1-002",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-003",
+      "source_candidate_id": "cc-open-v1-003",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "preserve_constraints",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-004",
+      "source_candidate_id": "cc-open-v1-007",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "avoid_stale_answer",
+        "risk_check_up",
+        "search_up",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-005",
+      "source_candidate_id": "cc-open-v1-009",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ]
+    },
+    {
+      "id": "fm-v4-006",
+      "source_candidate_id": "cc-open-v1-010",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-007",
+      "source_candidate_id": "cc-open-v1-011",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-008",
+      "source_candidate_id": "cc-open-v1-012",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-009",
+      "source_candidate_id": "cc-open-v1-013",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-010",
+      "source_candidate_id": "cc-open-v1-014",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-011",
+      "source_candidate_id": "cc-open-v1-015",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-012",
+      "source_candidate_id": "cc-open-v1-016",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-013",
+      "source_candidate_id": "cc-open-v1-017",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up",
+        "preserve_constraints"
+      ]
+    },
+    {
+      "id": "fm-v4-014",
+      "source_candidate_id": "cc-open-v1-018",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-015",
+      "source_candidate_id": "cc-open-v1-019",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-016",
+      "source_candidate_id": "cc-open-v1-020",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-017",
+      "source_candidate_id": "cc-open-v1-021",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "calculate_check",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-018",
+      "source_candidate_id": "cc-open-v1-022",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-019",
+      "source_candidate_id": "cc-open-v1-023",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-020",
+      "source_candidate_id": "cc-open-v1-024",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-021",
+      "source_candidate_id": "cc-open-v1-025",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-022",
+      "source_candidate_id": "cc-open-v1-026",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-023",
+      "source_candidate_id": "cc-open-v1-027",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ]
+    },
+    {
+      "id": "fm-v4-024",
+      "source_candidate_id": "cc-open-v1-028",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-025",
+      "source_candidate_id": "cc-open-v1-029",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-026",
+      "source_candidate_id": "cc-open-v1-030",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-027",
+      "source_candidate_id": "cc-open-v1-031",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-028",
+      "source_candidate_id": "cc-open-v1-032",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-029",
+      "source_candidate_id": "cc-open-v1-034",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-030",
+      "source_candidate_id": "cc-open-v1-035",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-031",
+      "source_candidate_id": "cc-open-v1-036",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-032",
+      "source_candidate_id": "cc-open-v1-037",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "avoid_overclaim",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-033",
+      "source_candidate_id": "cc-open-v1-038",
+      "mode": "context_pair",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_for_missing_artifact_if_error_context_absent",
+        "avoid_overclaim",
+        "avoid_status_only_response",
+        "inspect_error_context",
+        "preserve_multi_intent",
+        "split_or_sequence_operations",
+        "verify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-034",
+      "source_candidate_id": "cc-open-v1-051",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-035",
+      "source_candidate_id": "cc-open-v1-054",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-036",
+      "source_candidate_id": "cc-open-v1-055",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-037",
+      "source_candidate_id": "cc-open-v1-056",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "ask_first",
+        "clarify_up"
+      ]
+    },
+    {
+      "id": "fm-v4-038",
+      "source_candidate_id": "cc-open-v1-058",
+      "mode": "single",
+      "exact_match": true,
+      "field_matches": {
+        "primary_intent": true,
+        "operations": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "guard_action": [
+        "preserve_multi_intent",
+        "split_or_sequence_operations"
+      ]
+    }
+  ]
+}

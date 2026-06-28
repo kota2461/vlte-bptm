@@ -1,0 +1,100 @@
+{
+  "schema_version": "v6-sealed-rotation-review.v1",
+  "reviewed_at": "2026-06-24T08:57:03.841023+00:00",
+  "decision": "eligible_for_fresh_sealed_v6_rotation",
+  "passed": true,
+  "policy": {
+    "sealed_v6_fixture_created_now": false,
+    "sealed_v6_opened_for_measurement": false,
+    "sealed_v6_labels_used_for_tuning": false,
+    "sealed_v5_text_used_for_training": false,
+    "sealed_v5_labels_used_for_tuning": false,
+    "sealed_v5_measurement_used_as_taxonomy_only": true,
+    "nonsealed_replay_gate_required": true,
+    "nonsealed_replay_gate_passed": true,
+    "draft_or_candidate_lanes_used_as_gate_evidence": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "sources": {
+    "step3_gate": "build\\v6_nonsealed_replay_gate_report_v1.json",
+    "current_state": "build\\v6_current_state_report_v1.json",
+    "registry": "tests\\fixtures\\pattern_language_fixture_registry.json",
+    "previous_measurement": "build\\pattern_language_sealed_v5_measurement_report.json",
+    "backup": {
+      "archive_id": "2026-06-24_v6-nonsealed-exact-pre-roadmap-gate",
+      "archive_path": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate",
+      "manifest": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate/MANIFEST.json",
+      "restore": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate/RESTORE.md",
+      "snapshot_file_count": 1985
+    }
+  },
+  "gate_summary": {
+    "required_lane_count": 5,
+    "required_passed_lane_count": 5,
+    "required_error_count": 0,
+    "diagnostic_lane_count": 3,
+    "diagnostic_exact_lane_count": 3,
+    "diagnostic_error_count": 0,
+    "average_nonsealed_score": 1.0
+  },
+  "registry_state": {
+    "active_sealed_fixtures": [],
+    "previous_sealed": {
+      "registry_name": "pattern_language_sealed_v5.json",
+      "status": "consumed",
+      "measured": true,
+      "reviewed": false,
+      "measurement_report": "build\\pattern_language_sealed_v5_measurement_report.json"
+    },
+    "planned_successor": {
+      "registry_name": "pattern_language_sealed_v6.json",
+      "predecessor": "pattern_language_sealed_v5.json",
+      "status": "not_created",
+      "measured": false,
+      "reviewed": false
+    }
+  },
+  "previous_measurement_summary": {
+    "fixture": "pattern_language_sealed_v5.json",
+    "sealed_fixture_opened": true,
+    "sealed_labels_used_for_tuning": false,
+    "intent_accuracy": 0.75,
+    "critical_signal_recall": 0.375,
+    "operation_exact_match": 0.678571,
+    "constraint_exact_match": 0.821429,
+    "risk_exact_match": 0.892857,
+    "error_count": 18,
+    "rotation_required_before_tuning": true
+  },
+  "planned_v6_fixture_constraints": {
+    "case_count": 28,
+    "cases_per_intent": 4,
+    "split": "sealed",
+    "must_be_unopened_until_measurement": true,
+    "must_exclude_exact_text_from": {
+      "prior_sealed_and_benchmark": [
+        "pattern_language_benchmark_v1.json",
+        "pattern_language_sealed_v2.json",
+        "pattern_language_sealed_v3.json",
+        "pattern_language_sealed_v4.json",
+        "pattern_language_sealed_v5.json"
+      ],
+      "v6_required_nonsealed_gate_lanes": [
+        "tests/fixtures/pattern_language_benchmark_v1.json",
+        "tests/fixtures/v6_boundary_false_positive_adopted_benchmark_v1.json",
+        "tests/fixtures/v6_boundary_priority_review_adopted_benchmark_v1.json",
+        "tests/fixtures/v6_structural_build_30_adopted_benchmark_v1.json",
+        "tests/fixtures/v6_router_debate_adopted_benchmark_v1.json"
+      ],
+      "v6_diagnostic_nonsealed_lanes": [
+        "tests/fixtures/v6_boundary_false_positive_candidate_benchmark_v1.json",
+        "tests/fixtures/v6_contrast_negative_benchmark_v1.json",
+        "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json"
+      ]
+    },
+    "measurement_rule": "measure_once_then_mark_consumed",
+    "labels_rule": "sealed labels remain measurement-only and may not tune the same cycle"
+  },
+  "blockers": [],
+  "next_action": "roadmap_step5_generate_and_rotate_sealed_v6_fixture"
+}

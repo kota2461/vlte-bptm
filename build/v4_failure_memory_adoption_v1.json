@@ -1,0 +1,1852 @@
+{
+  "schema_version": "v4-failure-memory-adoption.v1",
+  "generated_at": "2026-06-21T03:02:24.510875+00:00",
+  "status": "v4_sealed_measured_consumed_rotation_required",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "v3_sealed_text_used_for_training": false,
+    "v3_sealed_errors_used_as_taxonomy_only": true,
+    "success_pattern_lane_write_allowed": false,
+    "requires_human_review_before_training": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "v4_targets": {
+    "intent_accuracy_min": 0.9,
+    "intent_accuracy_stretch": 0.93,
+    "critical_signal_recall_min": 0.85,
+    "critical_signal_recall_stretch": 0.9,
+    "operation_exact_match_min": 0.9,
+    "constraint_exact_match_min": 0.92,
+    "risk_exact_match_min": 0.95,
+    "sealed_error_count_max": 4,
+    "critical_underprocessing_max": 0
+  },
+  "sources": [
+    {
+      "name": "intent_corpus_suspect_review",
+      "path": "build\\intent_corpus_suspect_review_v1.json",
+      "sealed": false,
+      "total_suspects": 47,
+      "high_priority_review_count": 9,
+      "by_recommendation": {
+        "exclude_or_negative": 3,
+        "exclude_or_relabel_clarify": 6,
+        "keep_if_directive_but_anonymize_path": 13,
+        "keep_if_intent_is_unambiguous": 17,
+        "review": 8
+      },
+      "by_flag": {
+        "ack_only": 1,
+        "bare_path_or_url": 6,
+        "path_or_url": 19,
+        "very_short_le_8": 17,
+        "weak_question_suffix": 10
+      }
+    },
+    {
+      "name": "suspect_ablation_probe",
+      "path": "build\\probe_without_suspect_corpus_v1.json",
+      "sealed": false,
+      "miss_count": 11,
+      "critical_underprocessing": 0
+    },
+    {
+      "name": "critical_constraints_candidates",
+      "path": "build\\critical_constraints_candidates_v1.json",
+      "sealed": false,
+      "candidate_count": 558,
+      "review_candidate_count": 229,
+      "priority_a": 65,
+      "priority_b": 164,
+      "selected_refs_in_this_file": 60
+    },
+    {
+      "name": "v3_sealed_measurement_error_taxonomy",
+      "path": "build\\pattern_language_sealed_v3_measurement_report.json",
+      "sealed": true,
+      "used_as_source": false,
+      "taxonomy_only": true,
+      "error_count": 8,
+      "error_field_counts": {
+        "constraints": 2,
+        "information_state": 4,
+        "operations": 5,
+        "primary_intent": 4,
+        "risk": 1
+      }
+    }
+  ],
+  "adoption_lanes": {
+    "negative_calibration": {
+      "purpose": "teach what not to reinforce as success patterns",
+      "write_target": "failure_memory"
+    },
+    "clarify_relabel_guard": {
+      "purpose": "catch path/url, missing-target, and underspecified cases before respond fallback",
+      "write_target": "failure_memory_or_relabel_candidate"
+    },
+    "low_confidence_short_text": {
+      "purpose": "avoid overlearning ambiguous short utterances",
+      "write_target": "confidence_guard"
+    },
+    "weak_question_suffix_guard": {
+      "purpose": "route weak '??????' style prompts by context instead of suffix alone",
+      "write_target": "failure_memory"
+    },
+    "critical_constraints_review": {
+      "purpose": "improve critical signals, operations, constraints, and risk without sealed text",
+      "write_target": "review_then_candidate_fixture"
+    },
+    "nonsealed_regression": {
+      "purpose": "keep old accumulation misses as regression targets",
+      "write_target": "regression_replay"
+    },
+    "puzzle_failure_memory": {
+      "purpose": "record puzzle solve failures as guard actions, not success labels",
+      "write_target": "puzzle_failure_memory_v1"
+    }
+  },
+  "summary": {
+    "suspect_review_items": 12,
+    "ablation_miss_items": 11,
+    "critical_candidate_refs": 60,
+    "v3_error_taxonomy_items": 8,
+    "lane_counts": {
+      "clarify_relabel_guard": 6,
+      "critical_constraints_review": 60,
+      "excluded_reference": 3,
+      "negative_calibration": 3,
+      "nonsealed_regression": 11
+    },
+    "selected_for_failure_memory_fixture": 38,
+    "context_pair_adoptions": 1,
+    "puzzle_task_seed_items": 12,
+    "puzzle_task_seed_clarify_items": 2,
+    "puzzle_solver_trace_items": 12,
+    "puzzle_solver_success_count": 10,
+    "puzzle_solver_failure_count": 2,
+    "puzzle_failure_memory_items": 2,
+    "v4_candidate_visible_case_count": 56,
+    "v4_candidate_visible_intent_accuracy": 1.0,
+    "v4_candidate_failure_guard_exact_match_rate": 1.0,
+    "v4_candidate_puzzle_failure_memory_items": 2,
+    "active_plm_sealed_fixture": "pattern_language_sealed_v4.json",
+    "active_plm_sealed_case_count": 28,
+    "plm_measurement_readiness_decision": "blocked",
+    "v4_sealed_measured": true,
+    "v4_sealed_fixture_status": "consumed",
+    "v4_sealed_case_count": 28,
+    "v4_sealed_intent_accuracy": 0.857143,
+    "v4_sealed_critical_signal_recall": 0.5625,
+    "v4_sealed_operation_exact_match": 0.75,
+    "v4_sealed_constraint_exact_match": 0.821429,
+    "v4_sealed_risk_exact_match": 0.928571,
+    "v4_sealed_error_count": 15,
+    "v4_sealed_rotation_required_before_tuning": true
+  },
+  "items": {
+    "suspect_review": [
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 90,
+        "old_intent": "respond",
+        "flags": [
+          "ack_only"
+        ],
+        "recommendation": "exclude_or_negative",
+        "lane": "negative_calibration",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "ありがとうございます"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 462,
+        "old_intent": "clarify",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 473,
+        "old_intent": "respond",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 528,
+        "old_intent": "respond",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 551,
+        "old_intent": "explain",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 627,
+        "old_intent": "verify",
+        "flags": [
+          "weak_question_suffix"
+        ],
+        "recommendation": "exclude_or_negative",
+        "lane": "negative_calibration",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 659,
+        "old_intent": "verify",
+        "flags": [
+          "weak_question_suffix"
+        ],
+        "recommendation": "exclude_or_negative",
+        "lane": "negative_calibration",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 687,
+        "old_intent": "explore",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 717,
+        "old_intent": "respond",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify",
+        "lane": "clarify_relabel_guard",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 55,
+        "old_intent": "respond",
+        "flags": [],
+        "recommendation": null,
+        "lane": "excluded_reference",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "どうでしょう"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 138,
+        "old_intent": "verify",
+        "flags": [],
+        "recommendation": null,
+        "lane": "excluded_reference",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "こちらであってるでしょうか"
+      },
+      {
+        "source": "intent_corpus_suspect_review",
+        "source_path": "build\\intent_corpus_suspect_review_v1.json",
+        "source_index": 196,
+        "old_intent": "drop",
+        "flags": [],
+        "recommendation": null,
+        "lane": "excluded_reference",
+        "allowed_use": "failure_memory_or_negative_calibration",
+        "review_status": "pending",
+        "input": "https://news.yahoo.co.jp/articles/514385b06980812ee2f4ef3dfec35a5be1d66388"
+      }
+    ],
+    "ablation_misses": [
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b01-005",
+        "category": "indirect_explanation",
+        "expected_intent": "explain",
+        "actual_intent": "respond",
+        "expected_processing_class": "economy",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b01-006",
+        "category": "indirect_explanation",
+        "expected_intent": "explain",
+        "actual_intent": "respond",
+        "expected_processing_class": "economy",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b01-008",
+        "category": "indirect_explanation",
+        "expected_intent": "explain",
+        "actual_intent": "respond",
+        "expected_processing_class": "economy",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b01-019",
+        "category": "temporal_disambiguation",
+        "expected_intent": "respond",
+        "actual_intent": "respond",
+        "expected_processing_class": "economy",
+        "actual_processing_class": "verified",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "vertical",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b01-024",
+        "category": "compound_intent",
+        "expected_intent": "build",
+        "actual_intent": "summarize",
+        "expected_processing_class": "deep",
+        "actual_processing_class": "deep",
+        "expected_core_mode": "hybrid",
+        "actual_core_mode": "hybrid",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-006",
+        "category": "verify_then_build",
+        "expected_intent": "clarify",
+        "actual_intent": "respond",
+        "expected_processing_class": "clarify",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-009",
+        "category": "compound_intent",
+        "expected_intent": "summarize",
+        "actual_intent": "summarize",
+        "expected_processing_class": "deep",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "hybrid",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-010",
+        "category": "conversation_response",
+        "expected_intent": "clarify",
+        "actual_intent": "respond",
+        "expected_processing_class": "clarify",
+        "actual_processing_class": "economy",
+        "expected_core_mode": "horizontal",
+        "actual_core_mode": "horizontal",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-023",
+        "category": "temporal_disambiguation",
+        "expected_intent": "verify",
+        "actual_intent": "respond",
+        "expected_processing_class": "verified",
+        "actual_processing_class": "verified",
+        "expected_core_mode": "vertical",
+        "actual_core_mode": "vertical",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-024",
+        "category": "temporal_disambiguation",
+        "expected_intent": "verify",
+        "actual_intent": "respond",
+        "expected_processing_class": "verified",
+        "actual_processing_class": "verified",
+        "expected_core_mode": "vertical",
+        "actual_core_mode": "vertical",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      },
+      {
+        "source": "suspect_ablation_accumulation_miss",
+        "source_path": "build\\probe_without_suspect_corpus_v1.json",
+        "case_id": "accum-b02-026",
+        "category": "compound_intent",
+        "expected_intent": "build",
+        "actual_intent": "summarize",
+        "expected_processing_class": "deep",
+        "actual_processing_class": "deep",
+        "expected_core_mode": "hybrid",
+        "actual_core_mode": "hybrid",
+        "lane": "nonsealed_regression",
+        "allowed_use": "regression_replay_and_failure_memory",
+        "review_status": "pending"
+      }
+    ],
+    "critical_candidate_refs": [
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-001",
+        "priority": "A",
+        "score": 45,
+        "review_focus": [
+          "constraints",
+          "critical_signal:multiple_intents",
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "multiple_intents",
+          "length:short",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:summarize"
+        ],
+        "draft_intent": "summarize",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-002",
+        "priority": "A",
+        "score": 36,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "requires_current_information",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-003",
+        "priority": "A",
+        "score": 35,
+        "review_focus": [
+          "constraints",
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "must:cite_sources",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-004",
+        "priority": "A",
+        "score": 33,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "multiple_intents",
+          "ops:search",
+          "risk:medium"
+        ],
+        "draft_intent": "respond",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-005",
+        "priority": "A",
+        "score": 26,
+        "review_focus": [
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-006",
+        "priority": "A",
+        "score": 26,
+        "review_focus": [
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-007",
+        "priority": "A",
+        "score": 26,
+        "review_focus": [
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-008",
+        "priority": "A",
+        "score": 26,
+        "review_focus": [
+          "critical_signal:requires_current_information",
+          "operations",
+          "risk"
+        ],
+        "reason_tags": [
+          "requires_current_information",
+          "ops:verify,search",
+          "risk:medium",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-009",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "length:short",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-010",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-011",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-012",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-013",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-014",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-015",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-016",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-017",
+        "priority": "A",
+        "score": 21,
+        "review_focus": [
+          "constraints",
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "must:ask_first",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-018",
+        "priority": "A",
+        "score": 20,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify,calculate",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-019",
+        "priority": "A",
+        "score": 20,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify,calculate",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-020",
+        "priority": "A",
+        "score": 20,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify,calculate",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-021",
+        "priority": "A",
+        "score": 20,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify,calculate",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-022",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-023",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-024",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-025",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-026",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-027",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:compare",
+          "source_intent:summarize"
+        ],
+        "draft_intent": "summarize",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-028",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-029",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-030",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-031",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-032",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-033",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:explore"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-034",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-035",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-036",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-037",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:contains_unverified_claims",
+          "operations"
+        ],
+        "reason_tags": [
+          "contains_unverified_claims",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-038",
+        "priority": "A",
+        "score": 19,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify",
+          "source_intent:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-039",
+        "priority": "A",
+        "score": 17,
+        "review_focus": [
+          "critical_signal:multiple_intents",
+          "operations"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "ops:verify"
+        ],
+        "draft_intent": "verify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-040",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-041",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-042",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-043",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-044",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-045",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-046",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-047",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-048",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-049",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-050",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "build",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-051",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-052",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-053",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-054",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-055",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-056",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:missing_required_information"
+        ],
+        "reason_tags": [
+          "missing_required_information",
+          "source_intent:clarify"
+        ],
+        "draft_intent": "clarify",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-057",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:build"
+        ],
+        "draft_intent": "respond",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-058",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:summarize"
+        ],
+        "draft_intent": "summarize",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-059",
+        "priority": "A",
+        "score": 12,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents",
+          "source_intent:summarize"
+        ],
+        "draft_intent": "summarize",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      },
+      {
+        "source": "critical_constraints_candidates",
+        "source_path": "build\\critical_constraints_candidates_v1.json",
+        "id": "cc-open-v1-060",
+        "priority": "A",
+        "score": 10,
+        "review_focus": [
+          "critical_signal:multiple_intents"
+        ],
+        "reason_tags": [
+          "multiple_intents"
+        ],
+        "draft_intent": "explain",
+        "lane": "critical_constraints_review",
+        "allowed_use": "human_review_then_failure_memory_or_relabel_candidate",
+        "review_status": "pending"
+      }
+    ],
+    "v3_error_taxonomy": [
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-respond-03",
+        "expected_intent": "respond",
+        "predicted_intent": "verify",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-clarify-01",
+        "expected_intent": "clarify",
+        "predicted_intent": "respond",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-clarify-04",
+        "expected_intent": "clarify",
+        "predicted_intent": "respond",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-verify-01",
+        "expected_intent": "verify",
+        "predicted_intent": "verify",
+        "fields": [
+          "constraints"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-summarize-02",
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize",
+        "fields": [
+          "constraints"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-explore-01",
+        "expected_intent": "explore",
+        "predicted_intent": "explore",
+        "fields": [
+          "information_state"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-explore-02",
+        "expected_intent": "explore",
+        "predicted_intent": "respond",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      },
+      {
+        "source": "v3_sealed_measurement_error_taxonomy",
+        "source_path": "build\\pattern_language_sealed_v3_measurement_report.json",
+        "id": "plm-sealed-v3-explore-04",
+        "expected_intent": "explore",
+        "predicted_intent": "explore",
+        "fields": [
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "allowed_use": "error_taxonomy_only_no_sealed_text_for_training"
+      }
+    ]
+  },
+  "sequence": [
+    {
+      "step": 1,
+      "name": "adoption_registry_and_roadmap",
+      "status": "completed_by_this_script"
+    },
+    {
+      "step": 2,
+      "name": "human_review_failure_memory_candidates",
+      "status": "completed_by_user_review"
+    },
+    {
+      "step": 3,
+      "name": "create_failure_memory_fixture_v1",
+      "status": "completed"
+    },
+    {
+      "step": 4,
+      "name": "nonsealed_route_replay",
+      "status": "completed"
+    },
+    {
+      "step": 5,
+      "name": "implement_guard_or_relabel_changes",
+      "status": "completed"
+    },
+    {
+      "step": 6,
+      "name": "puzzle_task_schema_and_seed_set",
+      "status": "completed"
+    },
+    {
+      "step": 7,
+      "name": "puzzle_solver_trace_and_failure_memory",
+      "status": "completed"
+    },
+    {
+      "step": 8,
+      "name": "v4_candidate_eval_and_sealed_rotation",
+      "status": "completed"
+    }
+  ],
+  "review_decision": {
+    "reviewed_at": "2026-06-21T04:34:47.570205+00:00",
+    "selection_recommendation": "build\\v4_failure_memory_selection_recommendation_v1.json",
+    "fixture": "tests\\fixtures\\v4_failure_memory_fixture_v1.json",
+    "selected_for_fixture": 38,
+    "context_pair_count": 1,
+    "excluded_for_now": 22,
+    "notes": [
+      "User approved adoption after context-dependence review.",
+      "cc-open-v1-057 was excluded as an option-B continuation with weak standalone signal.",
+      "cc-open-v1-038 is adopted only as a bounded previous-error-report + verify/check context pair."
+    ],
+    "replay_report": "build\\v4_failure_memory_replay_v1.json",
+    "replay_exact_matches": 38,
+    "replay_total": 38,
+    "guard_relabel_report": "build\\v4_guard_relabel_implementation_report.json",
+    "guard_relabel_subset_matches": 38,
+    "guard_relabel_total": 38,
+    "puzzle_task_seed_fixture": "tests\\fixtures\\v4_puzzle_task_seed_v1.json",
+    "puzzle_task_seed_report": "build\\v4_puzzle_task_seed_report.json",
+    "puzzle_task_seed_count": 12,
+    "puzzle_task_seed_clarify_count": 2,
+    "puzzle_solver_trace_report": "build\\v4_puzzle_solver_trace_v1.json",
+    "puzzle_failure_memory_fixture": "tests\\fixtures\\v4_puzzle_failure_memory_v1.json",
+    "puzzle_failure_memory_report": "build\\v4_puzzle_failure_memory_report.json",
+    "puzzle_solver_success_count": 10,
+    "puzzle_solver_failure_count": 2,
+    "v4_candidate_eval_report": "build\\v4_candidate_eval_report.json",
+    "v4_sealed_rotation_report": "build\\v4_sealed_rotation_report.json",
+    "v4_active_sealed_fixture": "tests\\fixtures\\pattern_language_sealed_v4.json",
+    "v4_active_sealed_sha256": "897bd516c3085c8ec367f8d5aa362c2e2f9700427ff8d44988794fd8a288c554",
+    "plm_measurement_readiness_report": "build\\plm_measurement_readiness_review.json",
+    "plm_measurement_readiness_decision": "eligible",
+    "step8_completed_at": "2026-06-21T07:43:03.901433+00:00",
+    "v4_sealed_measurement_report": "build\\pattern_language_sealed_v4_measurement_report.json",
+    "v4_sealed_measured_at": "2026-06-21T07:52:05.409955+00:00",
+    "v4_sealed_status_after_measurement": "consumed",
+    "v4_sealed_rotation_required_before_tuning": true,
+    "plm_measurement_readiness_decision_after_v4_measurement": "blocked",
+    "plm_measurement_readiness_blocked_reasons_after_v4_measurement": [
+      "sealed_fixture_not_available"
+    ]
+  }
+}

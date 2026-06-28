@@ -1,0 +1,3028 @@
+{
+  "schema_version": "v7-router-repair-fixture.v1",
+  "fixture_id": "v7-router-repair-fixture-v1",
+  "created_at": "2026-06-24T20:43:13.951832+00:00",
+  "status": "draft_ready_for_candidate_replay",
+  "review_status": "draft",
+  "source_plan": "build\\v7_nonsealed_curriculum_plan_v1.json",
+  "policy": {
+    "sealed_v6_text_used": false,
+    "sealed_v6_labels_used": false,
+    "success_pattern_training_allowed": false,
+    "human_review_required_before_gate": true,
+    "candidate_replay_is_gate": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "requirements": {
+    "case_count_min": 72,
+    "case_count_recommended": 96,
+    "min_cases_by_axis": {
+      "constraint_preservation": 18,
+      "operation_sequence_repair": 18,
+      "critical_signal_recovery": 16,
+      "clarify_boundary_repair": 8,
+      "risk_ladder_calibration": 6,
+      "intent_boundary_stability": 6
+    },
+    "sealed_text_overlap_count_required": 0
+  },
+  "summary": {
+    "case_count": 72,
+    "by_axis": {
+      "clarify_boundary_repair": 8,
+      "constraint_preservation": 18,
+      "critical_signal_recovery": 16,
+      "intent_boundary_stability": 6,
+      "operation_sequence_repair": 18,
+      "risk_ladder_calibration": 6
+    },
+    "by_theme": {
+      "ask_first_before_action": 3,
+      "build_then_verify": 3,
+      "cite_sources_and_ask_first": 4,
+      "clarify_then_build": 4,
+      "clarify_vs_respond_build_verify": 2,
+      "constraint_contrast_pairs": 2,
+      "current_information_split": 3,
+      "explain_vs_build": 1,
+      "explore_then_compare": 4,
+      "explore_vs_respond": 1,
+      "format_preservation": 4,
+      "high_medical_legal": 2,
+      "high_risk_clarify_before_verify": 2,
+      "low_risk_contrast": 2,
+      "medium_current_or_license": 2,
+      "missing_information_detection": 3,
+      "missing_scope_vs_simple_question": 3,
+      "multiple_intent_detection": 5,
+      "respond_vs_build": 2,
+      "response_length_preservation": 4,
+      "safety_style_constraints": 4,
+      "unverified_claim_detection": 5,
+      "verify_then_calculate": 3,
+      "verify_then_search": 4
+    },
+    "by_intent": {
+      "build": 11,
+      "clarify": 17,
+      "explain": 7,
+      "explore": 8,
+      "respond": 3,
+      "summarize": 7,
+      "verify": 19
+    },
+    "by_operation": {
+      "build": 20,
+      "calculate": 5,
+      "clarify": 17,
+      "compare": 7,
+      "explain": 7,
+      "explore": 8,
+      "respond": 3,
+      "search": 12,
+      "summarize": 9,
+      "verify": 28
+    },
+    "by_language": {
+      "en": 38,
+      "ja": 22,
+      "mixed": 12
+    },
+    "by_risk": {
+      "high": 7,
+      "low": 49,
+      "medium": 16
+    },
+    "by_constraint": {
+      "format:bullets": 4,
+      "format:json": 2,
+      "format:table": 1,
+      "length:long": 1,
+      "length:medium": 1,
+      "length:short": 5,
+      "must:ask_first": 9,
+      "must:avoid_diagnosis": 2,
+      "must:avoid_overclaim": 2,
+      "must:cite_sources": 8,
+      "must:general_information_only": 1,
+      "must:preserve_neutrality": 3,
+      "must_not:no_table": 3,
+      "must_not:no_web_search": 2
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 15,
+      "missing_required_information": 17,
+      "multiple_intents": 22,
+      "requires_current_information": 11
+    }
+  },
+  "cases": [
+    {
+      "id": "v7-router-repair-001",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "response_length_preservation",
+      "language": "en",
+      "input": "Answer in exactly one short sentence: what is a cache key?",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-002",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "response_length_preservation",
+      "language": "en",
+      "input": "Give a long explanation of why retry backoff helps overloaded services.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-003",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "response_length_preservation",
+      "language": "ja",
+      "input": "この会議メモを3つの箇条書きで短く要約してください。",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-004",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "response_length_preservation",
+      "language": "mixed",
+      "input": "Keep it medium length and explain the trade-off without a table.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "medium",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-005",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "format_preservation",
+      "language": "en",
+      "input": "Summarize the incident as JSON with keys impact and next_steps.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-006",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "format_preservation",
+      "language": "en",
+      "input": "Draft a release checklist as bullet points only.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-007",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "format_preservation",
+      "language": "mixed",
+      "input": "Compare the options in a table, but do not pick a winner.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-008",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "format_preservation",
+      "language": "ja",
+      "input": "時系列ログを表にせず短くまとめてください。",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-009",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "safety_style_constraints",
+      "language": "en",
+      "input": "Give a neutral summary of this policy dispute without choosing a side.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "political"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-010",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "safety_style_constraints",
+      "language": "en",
+      "input": "Discuss future adoption scenarios without overclaiming certainty.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "future_prediction"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-011",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "safety_style_constraints",
+      "language": "ja",
+      "input": "Apache 2.0の概要を一般情報として説明してください。法的助言は不要です。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-012",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "safety_style_constraints",
+      "language": "ja",
+      "input": "医療AIダッシュボード設計の注意点を、診断助言なしで説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-013",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "cite_sources_and_ask_first",
+      "language": "en",
+      "input": "Check the latest Python release and cite official sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-014",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "cite_sources_and_ask_first",
+      "language": "en",
+      "input": "Before drafting the migration plan, ask which service is in scope.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-015",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "cite_sources_and_ask_first",
+      "language": "mixed",
+      "input": "The term latest_status is only a column name; explain the naming without web search.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-016",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "cite_sources_and_ask_first",
+      "language": "en",
+      "input": "Use sources to verify whether the vendor claim is still true.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-017",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "constraint_contrast_pairs",
+      "language": "en",
+      "input": "Summarize this note in bullets, no table.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-018",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "constraint_preservation",
+      "theme_id": "constraint_contrast_pairs",
+      "language": "en",
+      "input": "Summarize this note normally.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-019",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "clarify_then_build",
+      "language": "en",
+      "input": "Create a CSV export template, but the required columns are missing.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-020",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "clarify_then_build",
+      "language": "ja",
+      "input": "移行計画を書きたいですが、対象サービスが未定です。先に確認してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-021",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "clarify_then_build",
+      "language": "mixed",
+      "input": "Make a rollout checklist after asking which environment this applies to.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-022",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "clarify_then_build",
+      "language": "en",
+      "input": "Draft the onboarding email, but ask who the audience is first.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-023",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_search",
+      "language": "en",
+      "input": "Verify the current Node.js LTS version with sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-024",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_search",
+      "language": "ja",
+      "input": "今日時点の公式リリース情報を確認してから答えてください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-025",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_search",
+      "language": "en",
+      "input": "Check whether this license permission is still documented and cite sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "license",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-026",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_search",
+      "language": "mixed",
+      "input": "Verify if the latest API deprecation note applies to this SDK.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-027",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "explore_then_compare",
+      "language": "en",
+      "input": "Brainstorm three storage strategies and compare their trade-offs.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-028",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "explore_then_compare",
+      "language": "ja",
+      "input": "ルーター改善案を複数出して、それぞれの弱点を比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-029",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "explore_then_compare",
+      "language": "en",
+      "input": "Compare two approaches without claiming either is always best.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-030",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "explore_then_compare",
+      "language": "mixed",
+      "input": "Explore alternatives for Knowledge Index and compare retrieval costs.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-031",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "build_then_verify",
+      "language": "en",
+      "input": "Check the assumptions, then draft a short migration checklist.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-032",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "build_then_verify",
+      "language": "ja",
+      "input": "議論ログを軽く検証してから、候補レビュー表を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-033",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "build_then_verify",
+      "language": "en",
+      "input": "Validate the inputs and create a JSON import plan.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-034",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_calculate",
+      "language": "en",
+      "input": "Check whether 24 * 18 equals 432 before adding it to the report.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-035",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_calculate",
+      "language": "ja",
+      "input": "請求額が小計と税額の合計に合うか計算して確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-036",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "verify_then_calculate",
+      "language": "mixed",
+      "input": "Verify the error budget burn rate from 7/28 before summarizing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-037",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "unverified_claim_detection",
+      "language": "en",
+      "input": "The proposal supposedly removes all outage risk; verify before accepting it.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-038",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "unverified_claim_detection",
+      "language": "ja",
+      "input": "この設定で必ず安全になると言われました。根拠を確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-039",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "unverified_claim_detection",
+      "language": "en",
+      "input": "A note claims the patch fixed the vulnerability; check it with sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-040",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "unverified_claim_detection",
+      "language": "mixed",
+      "input": "The draft says medical advice is safe; verify and avoid diagnosis.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-041",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "unverified_claim_detection",
+      "language": "en",
+      "input": "The vendor says this is compliant; do not assume it is true.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-042",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "multiple_intent_detection",
+      "language": "en",
+      "input": "Verify the claim, then write a short response for the release note.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-043",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "multiple_intent_detection",
+      "language": "ja",
+      "input": "ログを要約してから、改善案を比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-044",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "multiple_intent_detection",
+      "language": "mixed",
+      "input": "Ask what data is missing, then calculate the estimate.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-045",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "multiple_intent_detection",
+      "language": "en",
+      "input": "Summarize the feedback and create a checklist of fixes.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-046",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "multiple_intent_detection",
+      "language": "ja",
+      "input": "最新情報を確認してから、中立的に要約してください。",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-047",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "missing_information_detection",
+      "language": "en",
+      "input": "Estimate the monthly cost, but the usage volume is not provided.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-048",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "missing_information_detection",
+      "language": "ja",
+      "input": "移行手順を作りたいですが、対象DBが分かりません。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-049",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "missing_information_detection",
+      "language": "en",
+      "input": "Check contract validity, but the jurisdiction is missing.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-050",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "current_information_split",
+      "language": "en",
+      "input": "What is the latest stable Rust version today? Cite sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-051",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "current_information_split",
+      "language": "ja",
+      "input": "現在の作業フォルダ名を説明してください。Web検索は不要です。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-052",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "current_information_split",
+      "language": "mixed",
+      "input": "Add the label latest_release to the local tracking table.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-053",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "ask_first_before_action",
+      "language": "en",
+      "input": "Before writing the runbook, ask which cluster it is for.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-054",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "ask_first_before_action",
+      "language": "ja",
+      "input": "回答前に、対象ユーザー層を確認してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-055",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "ask_first_before_action",
+      "language": "mixed",
+      "input": "Ask which tenant should be migrated before drafting commands.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-056",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "missing_scope_vs_simple_question",
+      "language": "en",
+      "input": "What does TTL mean in caching?",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-057",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "missing_scope_vs_simple_question",
+      "language": "en",
+      "input": "Create a TTL policy, but the service tier is not stated.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-058",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "missing_scope_vs_simple_question",
+      "language": "ja",
+      "input": "どのログを対象にするか未指定なので先に確認してください。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-059",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "high_risk_clarify_before_verify",
+      "language": "en",
+      "input": "Check current contract legality, but the country is not specified.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-060",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "high_risk_clarify_before_verify",
+      "language": "ja",
+      "input": "医療助言が安全か確認したいですが、状況説明がありません。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-061",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "low_risk_contrast",
+      "language": "en",
+      "input": "Use the word medical_warning as a UI label in the mockup.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-062",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "low_risk_contrast",
+      "language": "ja",
+      "input": "AI依存という列名をレビュー表に追加してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-063",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "medium_current_or_license",
+      "language": "en",
+      "input": "Verify whether Apache 2.0 allows commercial use and cite sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "license"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-064",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "medium_current_or_license",
+      "language": "ja",
+      "input": "今日の公式リリース状況を確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-065",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "high_medical_legal",
+      "language": "en",
+      "input": "Verify whether this medical dosage advice is safe before answering.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-066",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "high_medical_legal",
+      "language": "ja",
+      "input": "現在の法律でこの契約条項が有効か確認してください。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-067",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "respond_vs_build",
+      "language": "en",
+      "input": "What is a routing tag?",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-068",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "respond_vs_build",
+      "language": "en",
+      "input": "Add a routing tag called review_needed to the checklist.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-069",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "explain_vs_build",
+      "language": "ja",
+      "input": "なぜ非sealedデータで練習するのか説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-070",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "clarify_vs_respond_build_verify",
+      "language": "en",
+      "input": "Can you make it safer? I have not said what component this refers to.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-071",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "clarify_vs_respond_build_verify",
+      "language": "mixed",
+      "input": "Verify the config checksum and then update the note.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    },
+    {
+      "id": "v7-router-repair-072",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-repair-draft",
+      "source_kind": "self_authored_nonsealed_repair",
+      "source_ref": "build/v7_nonsealed_curriculum_plan_v1.json",
+      "axis_id": "intent_boundary_stability",
+      "theme_id": "explore_vs_respond",
+      "language": "ja",
+      "input": "複数の改善ルートを出して、それぞれのリスクを比較してください。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "risk_comparison"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft non-sealed label for human review before gate use."
+    }
+  ]
+}

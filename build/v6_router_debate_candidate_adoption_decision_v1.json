@@ -1,0 +1,36 @@
+{
+  "schema_version": "v6-router-debate-candidate-adoption-decision.v1",
+  "generated_at": "2026-06-28T06:23:26.887200+00:00",
+  "status": "adopted_for_nonsealed_provisional_test",
+  "review_status": "human_reviewed",
+  "reviewed_by": "user_confirmation_in_codex_thread",
+  "source_adoption_plan": "build/v6_router_debate_candidate_adoption_plan_v1.json",
+  "source_import_benchmark": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json",
+  "adopted_benchmark": "tests/fixtures/v6_router_debate_adopted_benchmark_v1.json",
+  "adopted_count": 12,
+  "case_ids": [
+    "v6-router-debate-001",
+    "v6-router-debate-002",
+    "v6-router-debate-003",
+    "v6-router-debate-004",
+    "v6-router-debate-005",
+    "v6-router-debate-006",
+    "v6-router-debate-007",
+    "v6-router-debate-008",
+    "v6-router-debate-009",
+    "v6-router-debate-010",
+    "v6-router-debate-011",
+    "v6-router-debate-012"
+  ],
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_confirmation_recorded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "adopted_benchmark_is_directly_trainable": false
+  }
+}

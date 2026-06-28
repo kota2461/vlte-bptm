@@ -1,0 +1,1585 @@
+{
+  "schema_version": "v9-constraint-operation-extension-replay-report.v1",
+  "generated_at": "2026-06-28T07:52:07.997144+00:00",
+  "status": "completed_without_route_gaps",
+  "adopted_benchmark": "tests/fixtures/v9_constraint_operation_extension_benchmark_v1.json",
+  "worksheet": "build/v9_constraint_operation_extension_worksheet_v1.md",
+  "current_route_measurement_is_gate": false,
+  "sealed_fixture_used": false,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "synthetic_short_samples_used": true,
+    "human_review_confirmation_recorded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "adopted_benchmark_is_directly_trainable": false
+  },
+  "summary": {
+    "case_count": 24,
+    "by_category": {
+      "constraints": 12,
+      "operation_terminal": 12
+    },
+    "by_expected_intent": {
+      "build": 9,
+      "clarify": 2,
+      "explain": 3,
+      "explore": 1,
+      "respond": 1,
+      "summarize": 5,
+      "verify": 3
+    },
+    "by_target_field": {
+      "constraints": 19,
+      "information_state": 6,
+      "operations": 12,
+      "risk": 3
+    },
+    "focused_targets": [
+      "constraint_exact_match",
+      "operation_exact_match"
+    ]
+  },
+  "measurement": {
+    "case_count": 24,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 1.0,
+    "intent_macro_f1": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "evidence_offset_validity": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "category_summary": {
+    "constraints": {
+      "case_count": 12,
+      "exact_case_match": 12,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "operation_terminal": {
+      "case_count": 12,
+      "exact_case_match": 12,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    }
+  },
+  "errors": [],
+  "case_results": [
+    {
+      "case_id": "v9-constraint-operation-extension-001",
+      "category": "constraints",
+      "topic": "short_bullets_no_table",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Briefly list three deployment risks as bullet points, no table.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-002",
+      "category": "constraints",
+      "topic": "json_only",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Return only JSON with keys action and reason; do not add prose.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-003",
+      "category": "constraints",
+      "topic": "ask_first_before_edit",
+      "target_fields": [
+        "constraints",
+        "information_state"
+      ],
+      "input": "Before editing the README, ask which section I want changed.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-004",
+      "category": "constraints",
+      "topic": "do_not_store_memory",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Draft the reply but do not store this personal note as memory.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-005",
+      "category": "constraints",
+      "topic": "cite_and_avoid_overclaim",
+      "target_fields": [
+        "constraints",
+        "risk",
+        "information_state"
+      ],
+      "input": "Verify this vendor claim with sources and avoid overclaiming: the router is 30% more accurate.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-006",
+      "category": "constraints",
+      "topic": "general_legal_explanation",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Explain Apache 2.0 as general information only; this is not legal advice.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-007",
+      "category": "constraints",
+      "topic": "medical_ui_no_diagnosis",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Design a medical AI screen layout without diagnosis or treatment advice.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-008",
+      "category": "constraints",
+      "topic": "tone_avoid_overclaim",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Answer in a friendly but precise tone and avoid overstating the evidence.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-009",
+      "category": "constraints",
+      "topic": "local_notes_no_web",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Use only the local notes below; no web search is needed. Notes: v9 repair passed.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-010",
+      "category": "constraints",
+      "topic": "table_required",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Create a comparison table for these options: A is cheaper, B is safer.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-011",
+      "category": "constraints",
+      "topic": "one_short_sentence",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Give exactly one short sentence explaining the result.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-012",
+      "category": "constraints",
+      "topic": "neutral_summary",
+      "target_fields": [
+        "constraints"
+      ],
+      "input": "Summarize both sides neutrally without choosing a winner.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-013",
+      "category": "operation_terminal",
+      "topic": "summarize_only",
+      "target_fields": [
+        "operations"
+      ],
+      "input": "Summarize the failure list into three key points.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-014",
+      "category": "operation_terminal",
+      "topic": "classify_table",
+      "target_fields": [
+        "operations",
+        "constraints"
+      ],
+      "input": "Classify each log row as keep or review in a table.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-015",
+      "category": "operation_terminal",
+      "topic": "clarify_before_table_build",
+      "target_fields": [
+        "operations",
+        "information_state",
+        "constraints"
+      ],
+      "input": "Make a migration table, but the source columns are not provided.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-016",
+      "category": "operation_terminal",
+      "topic": "verify_then_release_note",
+      "target_fields": [
+        "operations",
+        "information_state",
+        "risk"
+      ],
+      "input": "Verify the security claim, then write a short release note.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-017",
+      "category": "operation_terminal",
+      "topic": "explain_general",
+      "target_fields": [
+        "operations",
+        "constraints"
+      ],
+      "input": "Explain what Apache 2.0 means at a general level.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-018",
+      "category": "operation_terminal",
+      "topic": "compare_recommend",
+      "target_fields": [
+        "operations"
+      ],
+      "input": "Compare the two router designs and recommend one.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-019",
+      "category": "operation_terminal",
+      "topic": "calculate_verify",
+      "target_fields": [
+        "operations"
+      ],
+      "input": "Calculate whether 42 + 58 equals 100.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-020",
+      "category": "operation_terminal",
+      "topic": "current_search_cite",
+      "target_fields": [
+        "operations",
+        "information_state",
+        "constraints",
+        "risk"
+      ],
+      "input": "Search for the latest Node.js LTS version and cite the source.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-021",
+      "category": "operation_terminal",
+      "topic": "build_checklist",
+      "target_fields": [
+        "operations",
+        "constraints"
+      ],
+      "input": "Build a checklist of fixes for the route gaps.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-022",
+      "category": "operation_terminal",
+      "topic": "review_then_terminal_summary",
+      "target_fields": [
+        "operations",
+        "constraints"
+      ],
+      "input": "Review the draft and summarize only the blocking issues.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-023",
+      "category": "operation_terminal",
+      "topic": "checked_json_plan",
+      "target_fields": [
+        "operations",
+        "constraints"
+      ],
+      "input": "Create the JSON patch plan after checking the assumptions.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "case_id": "v9-constraint-operation-extension-024",
+      "category": "operation_terminal",
+      "topic": "extract_classify_summarize_counts",
+      "target_fields": [
+        "operations",
+        "information_state"
+      ],
+      "input": "Extract candidate IDs, classify each as keep or rerun, and summarize counts.",
+      "mismatch_fields": [],
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    }
+  ],
+  "interpretation": "The focused extension currently matches route(). It remains non-sealed replay evidence, not sealed evidence.",
+  "next_step": "v9_nonsealed_replay_gate_candidate"
+}

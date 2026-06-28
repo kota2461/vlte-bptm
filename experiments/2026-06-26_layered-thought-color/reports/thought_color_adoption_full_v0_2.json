@@ -1,0 +1,127 @@
+{
+  "adopted_summary": {
+    "adoption_status_counts": {
+      "adopted_experiment_full_v0_2": 373
+    },
+    "base_counts": {
+      "artifact_generation": 66,
+      "clarification_gate": 34,
+      "direct_answer": 29,
+      "exploration_tradeoff": 52,
+      "mechanism_explanation": 35,
+      "summary_compression": 69,
+      "supportive_processing": 28,
+      "verification_review": 60
+    },
+    "correction_count": 20,
+    "human_review_required_count": 0,
+    "lane_counts": {
+      "build_operation_variants_correction": 20,
+      "code_request_split_correction": 18,
+      "collision_should_share": 35,
+      "collision_should_split": 35,
+      "empathy_across_bases_isolated": 20,
+      "explore_operation_variants_isolated": 12,
+      "generate_across_bases_isolated": 12,
+      "intensity_anchor": 28,
+      "missing_context": 20,
+      "same_base_different_operation": 35,
+      "same_base_different_stance": 35,
+      "same_operation_different_base": 35,
+      "summary_share_stance_correction": 20,
+      "summary_share_variants_isolated": 16,
+      "supportive_modifier": 20,
+      "verify_stance_variants_isolated": 12
+    },
+    "sample_count": 373,
+    "source_count": 353,
+    "training_allowed_count": 373
+  },
+  "created_at": "2026-06-27T04:43:41.227788+00:00",
+  "decision": {
+    "reason": "The isolated weakness set and summary-share correction improved the trial metrics without observed group regressions.",
+    "scope": "thought_color_experiment_only",
+    "status": "adopted"
+  },
+  "final_metrics": {
+    "display_safe_shadow_eval": {
+      "adopted_full": {
+        "base_accuracy": 0.96875,
+        "case_count": 32,
+        "full_code_accuracy": 0.9375,
+        "group_count": 8,
+        "intensity_accuracy": 0.96875,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 0.96875
+      },
+      "before_summary_correction": {
+        "base_accuracy": 0.96875,
+        "case_count": 32,
+        "full_code_accuracy": 0.90625,
+        "group_count": 8,
+        "intensity_accuracy": 0.96875,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 0.9375
+      },
+      "delta_from_pre_summary_correction": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.03125,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.03125
+      },
+      "regressed_groups_after_summary_correction": {},
+      "summary_share_after": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      }
+    },
+    "original_hand_eval": {
+      "adopted_full": {
+        "base_accuracy": 0.71875,
+        "case_count": 32,
+        "full_code_accuracy": 0.6875,
+        "group_count": 8,
+        "intensity_accuracy": 0.78125,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      },
+      "before_summary_correction": {
+        "base_accuracy": 0.71875,
+        "case_count": 32,
+        "full_code_accuracy": 0.65625,
+        "group_count": 8,
+        "intensity_accuracy": 0.78125,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.71875
+      },
+      "delta_from_pre_summary_correction": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.03125,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.03125
+      },
+      "regressed_groups_after_summary_correction": {},
+      "summary_share_after": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.5
+      }
+    }
+  },
+  "paths": {
+    "adopted_full": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_full_v0_2.json",
+    "previous_adopted": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_corrected_v0_1.json",
+    "source_eval_report": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\reports\\thought_color_summary_share_correction_eval_v0_1.json",
+    "source_full_ablation": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_plus_weakness_summary_corrected_ablation_v0_1.json"
+  },
+  "schema_version": "thought-color-adoption-full.v0.2"
+}

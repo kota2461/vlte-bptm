@@ -1,0 +1,859 @@
+{
+  "schema_version": "pattern-language-benchmark.v1",
+  "frozen_at": "2026-06-28T07:52:07.997144+00:00",
+  "authoring_method": "User-requested V9 non-sealed focused extension for constraint_exact_match and operation_exact_match.",
+  "review_status": "human_reviewed",
+  "policy": "Human-reviewed non-sealed replay lane. No sealed text or labels used. Samples are short self-contained router repair probes, not gate evidence and not same-cycle promotion evidence.",
+  "cases": [
+    {
+      "id": "v9-constraint-operation-extension-001",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Briefly list three deployment risks as bullet points, no table.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-002",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Return only JSON with keys action and reason; do not add prose.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-003",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Before editing the README, ask which section I want changed.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-004",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Draft the reply but do not store this personal note as memory.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-005",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Verify this vendor claim with sources and avoid overclaiming: the router is 30% more accurate.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-006",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Explain Apache 2.0 as general information only; this is not legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-007",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Design a medical AI screen layout without diagnosis or treatment advice.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-008",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Answer in a friendly but precise tone and avoid overstating the evidence.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-009",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Use only the local notes below; no web search is needed. Notes: v9 repair passed.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-010",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Create a comparison table for these options: A is cheaper, B is safer.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-011",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Give exactly one short sentence explaining the result.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-012",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "constraints",
+      "language": "en",
+      "input": "Summarize both sides neutrally without choosing a winner.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-013",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Summarize the failure list into three key points.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-014",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Classify each log row as keep or review in a table.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-015",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Make a migration table, but the source columns are not provided.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-016",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Verify the security claim, then write a short release note.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-017",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Explain what Apache 2.0 means at a general level.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-018",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Compare the two router designs and recommend one.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-019",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Calculate whether 42 + 58 equals 100.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-020",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Search for the latest Node.js LTS version and cite the source.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-021",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Build a checklist of fixes for the route gaps.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-022",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Review the draft and summarize only the blocking issues.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-023",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Create the JSON patch plan after checking the assumptions.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v9-constraint-operation-extension-024",
+      "split": "validation",
+      "source_group": "v9-constraint-operation-extension-nonsealed",
+      "contrast_group": "operation_terminal",
+      "language": "en",
+      "input": "Extract candidate IDs, classify each as keep or rerun, and summarize counts.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "correction_summary": {
+    "human_review_required_count": 20,
+    "intensity_counts": {
+      "high": 4,
+      "low": 4,
+      "medium": 12
+    },
+    "lane_counts": {
+      "summary_share_stance_correction": 20
+    },
+    "sample_count": 20,
+    "stance_counts": {
+      "clarify": 8,
+      "neutral": 12
+    },
+    "training_allowed_count": 0
+  },
+  "created_at": "2026-06-27T04:41:00.872026+00:00",
+  "display_safe_hand_eval": {
+    "after": {
+      "base_accuracy": 0.96875,
+      "case_count": 32,
+      "full_code_accuracy": 0.9375,
+      "group_count": 8,
+      "intensity_accuracy": 0.96875,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.96875
+    },
+    "before": {
+      "base_accuracy": 0.96875,
+      "case_count": 32,
+      "full_code_accuracy": 0.90625,
+      "group_count": 8,
+      "intensity_accuracy": 0.96875,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.9375
+    },
+    "delta": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.03125,
+      "intensity_accuracy": 0.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.03125
+    },
+    "hand_sample_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_display_safe_v0_1.json",
+    "regressed_groups": {},
+    "summary_share_after": {
+      "base_accuracy": 1.0,
+      "case_count": 4,
+      "full_code_accuracy": 1.0,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 1.0
+    },
+    "summary_share_before": {
+      "base_accuracy": 1.0,
+      "case_count": 4,
+      "full_code_accuracy": 0.75,
+      "intensity_accuracy": 1.0,
+      "operation_accuracy": 1.0,
+      "stance_accuracy": 0.75
+    },
+    "summary_share_delta": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.25,
+      "intensity_accuracy": 0.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.25
+    }
+  },
+  "display_safe_hand_pool": {
+    "created_at": "2026-06-27T04:40:58.472426+00:00",
+    "note": "Shadow pool for evaluation only; original sample pool is unchanged.",
+    "output": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_display_safe_v0_1.json",
+    "replaced_case_ids": [
+      "tc-v01-004",
+      "tc-v01-008",
+      "tc-v01-012",
+      "tc-v01-015",
+      "tc-v01-016",
+      "tc-v01-017",
+      "tc-v01-019",
+      "tc-v01-026",
+      "tc-v01-031"
+    ],
+    "source": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_v0_1.json"
+  },
+  "original_hand_eval": {
+    "after": {
+      "base_accuracy": 0.71875,
+      "case_count": 32,
+      "full_code_accuracy": 0.6875,
+      "group_count": 8,
+      "intensity_accuracy": 0.78125,
+      "operation_accuracy": 0.75,
+      "stance_accuracy": 0.75
+    },
+    "before": {
+      "base_accuracy": 0.71875,
+      "case_count": 32,
+      "full_code_accuracy": 0.65625,
+      "group_count": 8,
+      "intensity_accuracy": 0.78125,
+      "operation_accuracy": 0.75,
+      "stance_accuracy": 0.71875
+    },
+    "delta": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.03125,
+      "intensity_accuracy": 0.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.03125
+    },
+    "hand_sample_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_v0_1.json",
+    "regressed_groups": {},
+    "summary_share_after": {
+      "base_accuracy": 0.5,
+      "case_count": 4,
+      "full_code_accuracy": 0.5,
+      "intensity_accuracy": 0.5,
+      "operation_accuracy": 0.5,
+      "stance_accuracy": 0.5
+    },
+    "summary_share_before": {
+      "base_accuracy": 0.5,
+      "case_count": 4,
+      "full_code_accuracy": 0.25,
+      "intensity_accuracy": 0.5,
+      "operation_accuracy": 0.5,
+      "stance_accuracy": 0.25
+    },
+    "summary_share_delta": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.25,
+      "intensity_accuracy": 0.0,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.25
+    }
+  },
+  "paths": {
+    "corrected_ablation": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_plus_weakness_summary_corrected_ablation_v0_1.json",
+    "display_safe_hand_pool": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_display_safe_v0_1.json",
+    "source_ablation": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_plus_weakness_ablation_v0_1.json",
+    "summary_correction": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_summary_share_stance_correction_v0_1.json"
+  },
+  "policy": {
+    "ablation_only": true,
+    "adopted_baseline_unchanged": true,
+    "mix_with_adopted_set_by_default": false
+  },
+  "schema_version": "thought-color-summary-share-correction-eval.v0.1"
+}

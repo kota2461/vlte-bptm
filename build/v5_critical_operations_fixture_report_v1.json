@@ -1,0 +1,581 @@
+{
+  "schema_version": "v5-critical-operations-fixture-report.v1",
+  "generated_at": "2026-06-22T22:32:20.158173+00:00",
+  "fixture": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "success_pattern_training_allowed": false,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "status": "draft_fixture_created_not_a_gate",
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "schema_version": "pattern-language-evaluation.v1",
+    "case_count": 48,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 0.6875,
+    "intent_macro_f1": 0.650218,
+    "per_intent": {
+      "respond": {
+        "precision": 0.333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "support": 4
+      },
+      "explain": {
+        "precision": 0.8,
+        "recall": 0.666667,
+        "f1": 0.727273,
+        "support": 6
+      },
+      "clarify": {
+        "precision": 1.0,
+        "recall": 0.583333,
+        "f1": 0.736842,
+        "support": 12
+      },
+      "build": {
+        "precision": 0.833333,
+        "recall": 0.714286,
+        "f1": 0.769231,
+        "support": 7
+      },
+      "verify": {
+        "precision": 0.692308,
+        "recall": 1.0,
+        "f1": 0.818182,
+        "support": 9
+      },
+      "summarize": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.666667,
+        "support": 5
+      },
+      "explore": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.333333,
+        "support": 5
+      }
+    },
+    "critical_signal_recall": 0.452381,
+    "critical_signals": {
+      "missing_required_information": {
+        "recall": 0.5,
+        "support": 12
+      },
+      "contains_unverified_claims": {
+        "recall": 0.4,
+        "support": 5
+      },
+      "requires_current_information": {
+        "recall": 1.0,
+        "support": 6
+      },
+      "multiple_intents": {
+        "recall": 0.263158,
+        "support": 19
+      }
+    },
+    "constraint_exact_match": 0.666667,
+    "operation_exact_match": 0.541667,
+    "risk_exact_match": 0.895833,
+    "evidence_offset_validity": 1.0,
+    "confusion": {
+      "respond": {
+        "respond": 4,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "explain": {
+        "respond": 1,
+        "explain": 4,
+        "clarify": 0,
+        "build": 0,
+        "verify": 1,
+        "summarize": 0,
+        "explore": 0
+      },
+      "clarify": {
+        "respond": 3,
+        "explain": 1,
+        "clarify": 7,
+        "build": 1,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 0
+      },
+      "build": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 5,
+        "verify": 1,
+        "summarize": 1,
+        "explore": 0
+      },
+      "verify": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 9,
+        "summarize": 0,
+        "explore": 0
+      },
+      "summarize": {
+        "respond": 0,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 2,
+        "summarize": 3,
+        "explore": 0
+      },
+      "explore": {
+        "respond": 4,
+        "explain": 0,
+        "clarify": 0,
+        "build": 0,
+        "verify": 0,
+        "summarize": 0,
+        "explore": 1
+      }
+    },
+    "errors": [
+      {
+        "id": "v5-critical-ops-001",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v5-critical-ops-002",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v5-critical-ops-003",
+        "kind": "mismatch",
+        "fields": [
+          "information_state"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v5-critical-ops-005",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints",
+          "risk"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v5-critical-ops-006",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-007",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "build",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v5-critical-ops-008",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-009",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-010",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-011",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-012",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "build"
+      },
+      {
+        "id": "v5-critical-ops-014",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v5-critical-ops-015",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-016",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v5-critical-ops-017",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-018",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v5-critical-ops-019",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v5-critical-ops-021",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v5-critical-ops-022",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-024",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-025",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-026",
+        "kind": "mismatch",
+        "fields": [
+          "constraints",
+          "risk"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-028",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints"
+        ],
+        "expected_intent": "verify",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-030",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "verify"
+      },
+      {
+        "id": "v5-critical-ops-032",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "risk",
+          "operations"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v5-critical-ops-034",
+        "kind": "mismatch",
+        "fields": [
+          "operations"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v5-critical-ops-035",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-037",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-038",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "explain"
+      },
+      {
+        "id": "v5-critical-ops-039",
+        "kind": "mismatch",
+        "fields": [
+          "information_state",
+          "constraints",
+          "operations"
+        ],
+        "expected_intent": "clarify",
+        "predicted_intent": "clarify"
+      },
+      {
+        "id": "v5-critical-ops-040",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "summarize",
+        "predicted_intent": "summarize"
+      },
+      {
+        "id": "v5-critical-ops-042",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "explain",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-043",
+        "kind": "mismatch",
+        "fields": [
+          "primary_intent",
+          "operations"
+        ],
+        "expected_intent": "explore",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-044",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond"
+      },
+      {
+        "id": "v5-critical-ops-048",
+        "kind": "mismatch",
+        "fields": [
+          "constraints"
+        ],
+        "expected_intent": "respond",
+        "predicted_intent": "respond"
+      }
+    ]
+  },
+  "summary": {
+    "case_count": 48,
+    "by_axis": {
+      "v5-axis-01": 14,
+      "v5-axis-02": 11,
+      "v5-axis-03": 12,
+      "v5-axis-04": 28,
+      "v5-axis-05": 24,
+      "v5-axis-06": 29,
+      "v5-axis-07": 12
+    },
+    "by_intent": {
+      "build": 7,
+      "clarify": 12,
+      "explain": 6,
+      "explore": 5,
+      "respond": 4,
+      "summarize": 5,
+      "verify": 9
+    },
+    "by_operation": {
+      "build": 10,
+      "calculate": 5,
+      "clarify": 12,
+      "compare": 7,
+      "explain": 7,
+      "explore": 5,
+      "respond": 4,
+      "search": 6,
+      "summarize": 7,
+      "verify": 16
+    },
+    "by_constraint": {
+      "format:bullets": 3,
+      "format:code": 1,
+      "format:json": 3,
+      "format:table": 1,
+      "length:long": 1,
+      "length:short": 8,
+      "must:ask_first": 9,
+      "must:avoid_overclaim": 2,
+      "must:cite_sources": 3,
+      "must:preserve_neutrality": 2,
+      "must_not:no_code": 2,
+      "must_not:no_table": 2,
+      "must_not:no_web_search": 1
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 5,
+      "missing_required_information": 12,
+      "multiple_intents": 19,
+      "requires_current_information": 6
+    },
+    "by_risk": {
+      "high": 3,
+      "low": 37,
+      "medium": 8
+    }
+  },
+  "next_step": {
+    "step": 4,
+    "name": "router_generalization_changes",
+    "output": "build/v5_router_generalization_report.json"
+  }
+}

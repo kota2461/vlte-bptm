@@ -1,0 +1,2547 @@
+{
+  "schema_version": "pattern-language-benchmark.v1",
+  "frozen_at": "2026-06-28T07:52:00.907594+00:00",
+  "authoring_method": "User-approved V10 Thought Color bridge primary_review rows rewritten from packet hints into isolated non-sealed mainline samples; raw Thought Color inputs are not copied into the fixture.",
+  "review_status": "human_reviewed",
+  "policy": "Quarantined V10 bridge replay lane. Thought Color sources are experiment-only boundary judgments; raw rows are not direct training data. This isolated fixture is not trainable, not sealed, not gate evidence, and not same-cycle promotion evidence.",
+  "cases": [
+    {
+      "id": "v10-thought-color-bridge-isolated-001",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 001. The main issue is a response constraint boundary. Summarize the decisions for a roadmap note. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-002",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 002. The main issue is a response constraint boundary. Summarize the decisions for a review worksheet. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-003",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 003. The main issue is a response constraint boundary. Summarize the decisions for a candidate fixture. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-004",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 004. The main issue is a response constraint boundary. Summarize the decisions for a release note. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-005",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 005. The main issue is risk calibration without overfiring. Check the claim or plan for a benchmark report. Keep the terminal operation as verify. The key claim is not verified yet. Please avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-006",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 006. The main issue is risk calibration without overfiring. Check the claim or plan for a UI design note. Keep the terminal operation as verify. The key claim is not verified yet. Please avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-007",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 007. The main issue is risk calibration without overfiring. Check the claim or plan for a model-routing memo. Keep the terminal operation as verify. The key claim is not verified yet. Please avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-008",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 008. The main issue is risk calibration without overfiring. Check the claim or plan for a local project log. Keep the terminal operation as verify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-009",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 009. The main issue is risk calibration without overfiring. Check the claim or plan for a roadmap note. Keep the terminal operation as verify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-010",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 010. The main issue is risk calibration without overfiring. Check the claim or plan for a review worksheet. Keep the terminal operation as verify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-011",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 011. The main issue is a response constraint boundary. Ask the missing-context question for a candidate fixture. Keep the terminal operation as clarify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-012",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 012. The main issue is a response constraint boundary. Draft the requested artifact for a release note. Keep the terminal operation as build. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-013",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 013. The main issue is a response constraint boundary. Check the claim or plan for a benchmark report. Keep the terminal operation as verify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-014",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 014. The main issue is a response constraint boundary. Compare the trade-offs for a UI design note. Keep the terminal operation as compare. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-015",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 015. The main issue is missing or uncertain context. Compare the trade-offs for a model-routing memo. Keep the terminal operation as compare. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-016",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 016. The main issue is missing or uncertain context. Compare the trade-offs for a local project log. Keep the terminal operation as compare. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-017",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 017. The main issue is missing or uncertain context. Compare the trade-offs for a roadmap note. Keep the terminal operation as compare. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-018",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 018. The main issue is missing or uncertain context. Compare the trade-offs for a review worksheet. Keep the terminal operation as compare. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-019",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 019. The main issue is missing or uncertain context. Draft the requested artifact for a candidate fixture. Keep the terminal operation as clarify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-020",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 020. The main issue is missing or uncertain context. Draft the requested artifact for a release note. Keep the terminal operation as clarify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-021",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 021. The main issue is missing or uncertain context. Draft the requested artifact for a benchmark report. Keep the terminal operation as clarify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-022",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 022. The main issue is missing or uncertain context. Draft the requested artifact for a UI design note. Keep the terminal operation as clarify. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-023",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 023. The main issue is the terminal operation and operation order. Draft the requested artifact for a model-routing memo. Keep the terminal operation as build.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-024",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 024. The main issue is the terminal operation and operation order. Draft the requested artifact for a local project log. Keep the terminal operation as build.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-025",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 025. The main issue is the terminal operation and operation order. Draft the requested artifact for a roadmap note. Keep the terminal operation as build.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-026",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 026. The main issue is the terminal operation and operation order. Draft the requested artifact for a review worksheet. Keep the terminal operation as build.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-027",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 027. The main issue is the terminal operation and operation order. Draft the requested artifact for a candidate fixture. Use this operation order: build, verify. There are multiple requested actions, so do not collapse them into one.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-028",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 028. The main issue is the terminal operation and operation order. Draft the requested artifact for a release note. Use this operation order: build, verify. There are multiple requested actions, so do not collapse them into one.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-029",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 029. The main issue is a response constraint boundary. Summarize the decisions for a benchmark report. Keep the terminal operation as summarize.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-030",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 030. The main issue is a response constraint boundary. Summarize the decisions for a UI design note. Keep the terminal operation as summarize.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-031",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 031. The main issue is the terminal operation and operation order. Check the claim or plan for a model-routing memo. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-032",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 032. The main issue is the terminal operation and operation order. Check the claim or plan for a local project log. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-033",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 033. The main issue is the terminal operation and operation order. Check the claim or plan for a roadmap note. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-034",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 034. The main issue is the terminal operation and operation order. Check the claim or plan for a review worksheet. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-035",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 035. The main issue is the terminal operation and operation order. Explain the concept at a general level for a candidate fixture. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-036",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 036. The main issue is the terminal operation and operation order. Explain the concept at a general level for a release note. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-037",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 037. The main issue is the terminal operation and operation order. Summarize the decisions for a benchmark report. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-038",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "operation_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 038. The main issue is the terminal operation and operation order. Summarize the decisions for a UI design note. Keep the terminal operation as summarize. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-039",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 039. The main issue is a response constraint boundary. Answer the practical request for a model-routing memo. Keep the terminal operation as respond. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-040",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 040. The main issue is a response constraint boundary. Explain the concept at a general level for a local project log. Keep the terminal operation as explain. Important context is missing. Please ask before answering if a required detail is missing.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-041",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 041. The main issue is risk calibration without overfiring. Check the claim or plan for a roadmap note. Keep the terminal operation as verify. The key claim is not verified yet. Please avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-042",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 042. The main issue is risk calibration without overfiring. Check the claim or plan for a review worksheet. Keep the terminal operation as verify. The key claim is not verified yet. Please avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-043",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 043. The main issue is a response constraint boundary. Draft the requested artifact for a candidate fixture. Keep the terminal operation as build. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-044",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 044. The main issue is a response constraint boundary. Ask the missing-context question for a release note. Keep the terminal operation as clarify. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-045",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 045. The main issue is a response constraint boundary. Answer the practical request for a benchmark report. Keep the terminal operation as respond. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-046",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 046. The main issue is a response constraint boundary. Compare the trade-offs for a UI design note. Keep the terminal operation as compare. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-047",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 047. The main issue is a response constraint boundary. Explain the concept at a general level for a model-routing memo. Keep the terminal operation as explain. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-048",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "constraint_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 048. The main issue is a response constraint boundary. Summarize the decisions for a local project log. Keep the terminal operation as summarize. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-049",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 049. The main issue is risk calibration without overfiring. Answer the practical request for a roadmap note. Keep the terminal operation as respond. Treat the risk level as medium.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-050",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 050. The main issue is risk calibration without overfiring. Explain the concept at a general level for a review worksheet. Keep the terminal operation as explain. Treat the risk level as medium.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-051",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 051. The main issue is risk calibration without overfiring. Ask the missing-context question for a candidate fixture. Keep the terminal operation as clarify. Treat the risk level as medium.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-052",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 052. The main issue is risk calibration without overfiring. Draft the requested artifact for a release note. Keep the terminal operation as build. Treat the risk level as medium.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-053",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 053. The main issue is risk calibration without overfiring. Answer the practical request for a benchmark report. Keep the terminal operation as clarify. Please keep a supportive tone.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "supportive_tone"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-054",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 054. The main issue is risk calibration without overfiring. Answer the practical request for a UI design note. Keep the terminal operation as clarify. Please keep a supportive tone.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "supportive_tone"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-055",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 055. The main issue is risk calibration without overfiring. Answer the practical request for a model-routing memo. Keep the terminal operation as clarify. Please keep a supportive tone.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "supportive_tone"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-056",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "risk_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 056. The main issue is risk calibration without overfiring. Answer the practical request for a local project log. Keep the terminal operation as clarify. Please keep a supportive tone.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "supportive_tone"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-057",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 057. The wording is near another intent, but the main request must stay stable. Check the claim or plan for a roadmap note. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-058",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 058. The wording is near another intent, but the main request must stay stable. Check the claim or plan for a review worksheet. Keep the terminal operation as verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-059",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 059. The wording is near another intent, but the main request must stay stable. Explain the concept at a general level for a candidate fixture. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-060",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 060. The wording is near another intent, but the main request must stay stable. Explain the concept at a general level for a release note. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-061",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 061. The wording is near another intent, but the main request must stay stable. Explain the concept at a general level for a benchmark report. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-062",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 062. The wording is near another intent, but the main request must stay stable. Explain the concept at a general level for a UI design note. Keep the terminal operation as explain.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-063",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 063. The wording is near another intent, but the main request must stay stable. Answer the practical request for a model-routing memo. Use this operation order: respond, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-064",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 064. The wording is near another intent, but the main request must stay stable. Compare the trade-offs for a local project log. Use this operation order: explore, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-065",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 065. The wording is near another intent, but the main request must stay stable. Explain the concept at a general level for a roadmap note. Use this operation order: explain, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-066",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "intent_boundary_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 066. The wording is near another intent, but the main request must stay stable. Summarize the decisions for a review worksheet. Use this operation order: summarize, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-067",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 067. The main issue is missing or uncertain context. Compare the trade-offs for a candidate fixture. Keep the terminal operation as compare. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-068",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 068. The main issue is missing or uncertain context. Compare the trade-offs for a release note. Keep the terminal operation as compare. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-069",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 069. The main issue is missing or uncertain context. Compare the trade-offs for a benchmark report. Keep the terminal operation as compare. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-070",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 070. The main issue is missing or uncertain context. Check the claim or plan for a UI design note. Keep the terminal operation as verify. Important context is missing. The key claim is not verified yet. Please ask before answering if a required detail is missing, and defer or verify before giving a firm answer. Treat the risk level as high. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "defer_or_verify"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-071",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 071. The main issue is missing or uncertain context. Draft the requested artifact for a model-routing memo. Use this operation order: build, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v10-thought-color-bridge-isolated-072",
+      "split": "validation",
+      "source_group": "v10-thought-color-bridge-isolated-rewrite-nonsealed",
+      "contrast_group": "information_state_bridge",
+      "language": "en",
+      "input": "Bridge rewrite case 072. The main issue is missing or uncertain context. Ask the missing-context question for a local project log. Use this operation order: clarify, verify. Important context is missing. The key claim is not verified yet. There are multiple requested actions, so do not collapse them into one. Please ask before answering if a required detail is missing, and avoid overclaiming. Treat the risk level as medium. Risk flags: unverified_claim.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    }
+  ]
+}

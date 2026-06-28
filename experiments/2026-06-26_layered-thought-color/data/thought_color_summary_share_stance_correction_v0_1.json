@@ -1,0 +1,630 @@
+{
+  "created_at": "2026-06-27T04:40:58.460396+00:00",
+  "policy": {
+    "ablation_only": true,
+    "human_review_required_before_training": true,
+    "mix_with_adopted_set_by_default": false
+  },
+  "sample_count": 20,
+  "samples": [
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-low",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-01",
+      "input": "Summarize this log briefly.",
+      "input_sha256": "053be2a7169e2ae3e2528404209c266f5f804793bb6303629f40e68eeb0d8a96",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-low",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-02",
+      "input": "Give me the short gist of this thread.",
+      "input_sha256": "912b8ec5f560ebf7331efbad806a0381c9852ba4a96df17b8a7f78540cdf038c",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-low",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-03",
+      "input": "Make a very brief recap of these notes.",
+      "input_sha256": "dc1d2eecc1c89851474ea0331916df4e185680b260a4664a0795a9330e748ad2",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-low",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-04",
+      "input": "Compress this update into the main point only.",
+      "input_sha256": "e463ec6cc40fa9724bd47e5c2be2a75d2724b227e1311f5ebc68a4bbb035b550",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-05",
+      "input": "Summarize the meeting notes in bullets.",
+      "input_sha256": "f040872cc5da4dedc368fc82eeea4f5c67fc4fafb72c976da6dde86d6b5218e1",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-06",
+      "input": "Recap the meeting notes clearly by topic.",
+      "input_sha256": "04e4d8093b8f1419a4e736a7a5cff434cb9f6fe5a7b916622796be66f29ce4df",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-07",
+      "input": "Condense these notes into a useful summary.",
+      "input_sha256": "fbce4800c25f6bc1370df5ec1b81750fc4b907279df0e580c185424d273a9c45",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-08",
+      "input": "Summarize the decisions and action items.",
+      "input_sha256": "41d89bbedadad16d609bde5fddf1ce137181b7b2ed078cd95feda398c13b59b3",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-high",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-09",
+      "input": "Compress the whole discussion into one dense paragraph.",
+      "input_sha256": "483c04e245ff71b1f163c30240166803f48374862d4aa8c2b1901e0c6823a6db",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-high",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-10",
+      "input": "Summarize this long transcript thoroughly but compactly.",
+      "input_sha256": "f1cc068e6ad9c7aa4e9b195758d59f97ba9019d994190bb23a2514bdfc81ac5e",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-high",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-11",
+      "input": "Extract every major point from this long meeting log.",
+      "input_sha256": "4d01254a6a4a88a1e20dc1a1701bec87e02bebad9f01878759323322c357937e",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-neutral-high",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-12",
+      "input": "Create a complete but compressed executive summary.",
+      "input_sha256": "59fb1b1ba5c740495f62d1c5eb557c955faf9427f1255953e1c5ddec1710cce5",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-13",
+      "input": "Recap the decisions, not every detail.",
+      "input_sha256": "299133cb7cc2ea3c2379e6ad40a57be32dc7125f385e9a4509452862a2fa273d",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-14",
+      "input": "Summarize only the decisions and ask if any item is ambiguous.",
+      "input_sha256": "3192b33a5bcfd0d323e0d16279667c58b57249752ddadc50206be5179b0f73dd",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-15",
+      "input": "Recap the confirmed decisions and flag unclear items for follow-up.",
+      "input_sha256": "7b55bb54f2f2050c00ee6b492ecf99294ea50eae6e25d715f8348d1a7eb2aa95",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-16",
+      "input": "Summarize the notes, but ask what to do with unresolved points.",
+      "input_sha256": "3256d8e5dbe1a84692c1ba1d1e7c2cc52b878ff287a04f587426c19dfc95a1fc",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-17",
+      "input": "Condense the meeting into decisions only; ask if side topics should be excluded.",
+      "input_sha256": "1af7e631666996b4b212b0b36032f5924063581f380133d049745c0a5d6463a9",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-18",
+      "input": "Summarize the confirmed points and ask about uncertain decisions.",
+      "input_sha256": "deb1a2645f05b7f1826bafc05327846fed1d727bd6f04e23c1b7aa079f8f1cb3",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-19",
+      "input": "Recap the outcomes, but check whether draft ideas should be omitted.",
+      "input_sha256": "b928da93e687034d4057bd00bbd300a12da561fe422b86ffe113b11570d91421",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "summary_share_correction_review_required",
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "generation_note": "Corrects summary_share neutral/clarify stance separation.",
+      "group_id": "correct-summary-share-clarify-medium",
+      "human_review_required": true,
+      "id": "tc-correct-summary-share-stance-20",
+      "input": "Summarize what was decided and ask which unclear items need context.",
+      "input_sha256": "2d294e3a237121a0096ce64b8199538f244434e9cf549e1e91b10d57975fad3b",
+      "judgment_questions": [
+        "Should this stay in summary_compression?",
+        "Is the stance neutral summary or clarify-before-summary?"
+      ],
+      "lane": "summary_share_stance_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The user still wants a summary; the modifier captures uncertainty.",
+        "wrong_base_label": "clarification_gate",
+        "wrong_modifier": "neutral_or_clarify"
+      },
+      "source_kind": "codex_summary_share_stance_correction",
+      "training_allowed": false
+    }
+  ],
+  "schema_version": "thought-color-summary-share-stance-correction.v0.1",
+  "summary": {
+    "human_review_required_count": 20,
+    "intensity_counts": {
+      "high": 4,
+      "low": 4,
+      "medium": 12
+    },
+    "lane_counts": {
+      "summary_share_stance_correction": 20
+    },
+    "sample_count": 20,
+    "stance_counts": {
+      "clarify": 8,
+      "neutral": 12
+    },
+    "training_allowed_count": 0
+  },
+  "target": "summary_share_variants"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "v6-sealed-rotation-report.v1",
+  "rotated_at": "2026-06-24T09:06:48.577280+00:00",
+  "policy": {
+    "sealed_v6_opened_for_measurement": false,
+    "sealed_v6_labels_used_for_tuning": false,
+    "sealed_v5_text_used_for_training": false,
+    "sealed_v5_labels_used_for_tuning": false,
+    "sealed_v5_measurement_used_as_taxonomy_only": true,
+    "nonsealed_replay_gate_required": true,
+    "nonsealed_replay_gate_passed": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "step4_review_source": "build\\v6_sealed_rotation_review_v1.json",
+  "step3_gate_source": "build\\v6_nonsealed_replay_gate_report_v1.json",
+  "rotated_from": {
+    "registry_name": "pattern_language_sealed_v5.json",
+    "status": "consumed",
+    "measurement_report": "build\\pattern_language_sealed_v5_measurement_report.json"
+  },
+  "rotated_to": {
+    "registry_name": "pattern_language_sealed_v6.json",
+    "fixture_id": "pattern-language-sealed-v6",
+    "sha256": "2e3059cf9360b641fc25e7e29bd6eb79cf6e33a8c5a0b176eefd402c7adbc80c",
+    "case_count": 28,
+    "predecessor": "pattern_language_sealed_v5.json",
+    "status": "active",
+    "measured": false,
+    "reviewed": false
+  },
+  "fixture_contract": {
+    "case_count": 28,
+    "cases_per_intent": 4,
+    "split": "sealed",
+    "no_exact_overlap_validated": true,
+    "measurement_rule": "measure_once_then_mark_consumed"
+  },
+  "readiness_after_rotation": {
+    "report": "build\\plm_measurement_readiness_review.json",
+    "decision": "eligible",
+    "sealed_fixture_opened": false,
+    "sealed_fixture": {
+      "registry_name": "pattern_language_sealed_v6.json",
+      "sha256": "2e3059cf9360b641fc25e7e29bd6eb79cf6e33a8c5a0b176eefd402c7adbc80c",
+      "case_count": 28,
+      "status": "active",
+      "measured": false,
+      "reviewed": false,
+      "predecessor": "pattern_language_sealed_v5.json"
+    },
+    "blocked_reasons": [],
+    "next_action": "measure_active_sealed_once"
+  },
+  "next_action": "roadmap_step6_measure_active_sealed_v6_once"
+}

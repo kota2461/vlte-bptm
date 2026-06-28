@@ -1,0 +1,257 @@
+{
+  "schema_version": "intent-corpus-quarantine.v1",
+  "status": "active",
+  "created_at": "2026-06-22T21:16:08.524671+00:00",
+  "purpose": "Reversible quarantine overlay for high-priority intent corpus suspects. The source corpus is not mutated.",
+  "source_corpus": {
+    "path": "data\\intent_training_corpus_v1.json",
+    "sha256_at_creation": "0b48f60bfe294bf110a9efbe8727c00cc81be7917e275f2ae1eb72a8a68b5991",
+    "schema_version": "intent-training-corpus.v1",
+    "example_count": 739
+  },
+  "selection": {
+    "source_report": "build\\intent_data_cleaning_impact_v1.json",
+    "scenario": "high_priority_actionable",
+    "entry_count": 9,
+    "removed_indices": [
+      90,
+      462,
+      473,
+      528,
+      551,
+      627,
+      659,
+      687,
+      717
+    ],
+    "removed_by_intent": {
+      "clarify": 1,
+      "explain": 1,
+      "explore": 1,
+      "respond": 4,
+      "verify": 2
+    },
+    "delta_vs_baseline": {
+      "kfold_accuracy": 0.035238,
+      "kfold_macro_accuracy": 0.035224,
+      "accumulation_end_to_end_accuracy": 0.0,
+      "accumulation_failed": 0,
+      "critical_underprocessing": 0
+    },
+    "evidence_label": "neutral_but_safe_review_candidate"
+  },
+  "restore": {
+    "method": "set status to inactive or delete this overlay file",
+    "source_corpus_mutated": false,
+    "original_review_status_field": "original_review_status",
+    "expected_restored_approved_count": 739,
+    "active_approved_count_after_quarantine": 730
+  },
+  "summary": {
+    "entry_count": 9,
+    "by_intent": {
+      "clarify": 1,
+      "explain": 1,
+      "explore": 1,
+      "respond": 4,
+      "verify": 2
+    }
+  },
+  "entries": [
+    {
+      "corpus_index": 90,
+      "input_sha256": "21b2ba1811e66eef3e01a48e589b379c48c9efa25b3a8354c7e883e04351ba73",
+      "input": "ありがとうございます",
+      "intent": "respond",
+      "source": "pattern-db-remap",
+      "language": null,
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_negative",
+      "flags": [
+        "ack_only"
+      ],
+      "evidence_label": "needs_more_evidence_before_removal",
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.008623,
+        "kfold_macro_accuracy": -0.008483,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 462,
+      "input_sha256": "f37a17c829d040ab84a32d30d107140587f0ee77621db783c54e69d4d4ae7691",
+      "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。",
+      "intent": "clarify",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.006282,
+        "kfold_macro_accuracy": 0.006395,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 473,
+      "input_sha256": "ee980d7539006bbd3b3e38e3de679d6f4ef9c18016cd172619352e92e2de8036",
+      "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "language": "mixed",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.006282,
+        "kfold_macro_accuracy": 0.006302,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 528,
+      "input_sha256": "baff27dd4cf4cca8305bffa2b6050f7735a24650e7beff0494569c8617033e03",
+      "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "needs_more_evidence_before_removal",
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.004558,
+        "kfold_macro_accuracy": -0.004334,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 551,
+      "input_sha256": "10fed6945d0a8b5b06b813243f7f1624fbb8dd41c80225be6687a39f88997bb3",
+      "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね",
+      "intent": "explain",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.019832,
+        "kfold_macro_accuracy": 0.020166,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 627,
+      "input_sha256": "f4dc70392d1c1214a360fb364f4cd7ac3f08a5ac2020fb9ebfff4b0d8bfde021",
+      "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_negative",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "evidence_label": "needs_more_evidence_before_removal",
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.000493,
+        "kfold_macro_accuracy": -0.000615,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 659,
+      "input_sha256": "547f16a22fb20fdc5df3b76e55ab29517df674d9809c11daeacb2200a6ae7fe9",
+      "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか",
+      "intent": "verify",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_negative",
+      "flags": [
+        "weak_question_suffix"
+      ],
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.018477,
+        "kfold_macro_accuracy": 0.018454,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 687,
+      "input_sha256": "ca773b1f9c04ffc9254220b2005e895d15d14171ea8cdd8de994df543d71c292",
+      "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう",
+      "intent": "explore",
+      "source": "claudelog-harvest",
+      "language": "ja",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "needs_more_evidence_before_removal",
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.008623,
+        "kfold_macro_accuracy": -0.008443,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    },
+    {
+      "corpus_index": 717,
+      "input_sha256": "fada979cecb67c9072d66c2b05e435d8cb38767b09dca8e57509377a8c4f35ab",
+      "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました",
+      "intent": "respond",
+      "source": "claudelog-harvest",
+      "language": "mixed",
+      "original_review_status": "approved",
+      "quarantine_reason": "exclude_or_relabel_clarify",
+      "flags": [
+        "path_or_url",
+        "bare_path_or_url"
+      ],
+      "evidence_label": "needs_more_evidence_before_removal",
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.005913,
+        "kfold_macro_accuracy": -0.005723,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      }
+    }
+  ]
+}

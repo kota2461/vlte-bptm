@@ -20,11 +20,14 @@ from semantic_routing import (
 BENCHMARK_PATH = (
     ROOT / "tests" / "fixtures" / "pattern_language_benchmark_v1.json"
 )
-ACTIVE_SEALED_PATH = (
-    ROOT / "tests" / "fixtures" / "sealed_boundary_slice_v2.json"
+GATE_REGISTRY_PATH = (
+    ROOT / "tests" / "fixtures" / "gate_fixture_registry.json"
 )
-ACTIVE_PLM_SEALED_PATH = (
+CONSUMED_PLM_SEALED_V2_PATH = (
     ROOT / "tests" / "fixtures" / "pattern_language_sealed_v2.json"
+)
+REGISTRY_PATH = (
+    ROOT / "tests" / "fixtures" / "pattern_language_fixture_registry.json"
 )
 DATABASE_PATH = ROOT / "data" / "pattern_lab.db"
 OUTPUT_PATH = ROOT / "build" / "plm_baseline_v0_1_report.json"
@@ -44,9 +47,42 @@ def _sealed_texts(path: Path) -> set[str]:
     return {str(case["input"]) for case in payload["cases"]}
 
 
+def _active_plm_sealed(registry: dict) -> tuple[str, dict] | None:
+    active = [
+        (name, entry)
+        for name, entry in registry["fixtures"].items()
+        if entry.get("role") == "sealed measurement only"
+        and entry.get("status") == "active"
+    ]
+    if len(active) > 1:
+        raise ValueError("expected at most one active PLM sealed fixture")
+    return active[0] if active else None
+
+
+def _active_boundary_sealed(registry: dict) -> tuple[str, dict]:
+    active = [
+        (name, entry)
+        for name, entry in registry["fixtures"].items()
+        if entry.get("role") == "sealed measurement only; NOT a promotion gate check"
+        and entry.get("status") == "active"
+    ]
+    if len(active) != 1:
+        raise ValueError("expected exactly one active boundary sealed fixture")
+    return active[0]
+
+
 def main() -> None:
     benchmark_bytes = BENCHMARK_PATH.read_bytes()
     benchmark = load_plm_benchmark(BENCHMARK_PATH)
+    registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    gate_registry = json.loads(GATE_REGISTRY_PATH.read_text(encoding="utf-8"))
+    active_plm_sealed = _active_plm_sealed(registry)
+    if active_plm_sealed is None:
+        active_plm_sealed_name = None
+        active_plm_sealed_entry = None
+    else:
+        active_plm_sealed_name, active_plm_sealed_entry = active_plm_sealed
+    active_boundary_name, active_boundary = _active_boundary_sealed(gate_registry)
     train = benchmark.cases_for_splits(("train",))
     validation = benchmark.cases_for_splits(("validation",))
     visible = benchmark.cases_for_splits()
@@ -54,13 +90,9 @@ def main() -> None:
     approved_overlap = sorted(
         visible_texts & _approved_pattern_texts(DATABASE_PATH)
     )
-    active_sealed_overlap = sorted(
-        visible_texts & _sealed_texts(ACTIVE_SEALED_PATH)
+    consumed_plm_sealed_v2_overlap = sorted(
+        visible_texts & _sealed_texts(CONSUMED_PLM_SEALED_V2_PATH)
     )
-    active_plm_sealed_overlap = sorted(
-        visible_texts & _sealed_texts(ACTIVE_PLM_SEALED_PATH)
-    )
-
     report = {
         "schema_version": "pattern-language-baseline-report.v1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -75,7 +107,7 @@ def main() -> None:
                 benchmark.cases_for_splits(("sealed",))
             ),
             "sealed_status": "consumed",
-            "sealed_successor": "pattern_language_sealed_v2.json",
+            "sealed_successor": "pattern_language_sealed_v3.json",
             "sealed_evaluated": False,
         },
         "adapter": {
@@ -85,12 +117,46 @@ def main() -> None:
         "data_isolation": {
             "approved_pattern_overlap_count": len(approved_overlap),
             "approved_pattern_overlap": approved_overlap,
-            "active_sealed_v2_overlap_count": len(active_sealed_overlap),
-            "active_sealed_v2_overlap": active_sealed_overlap,
-            "active_plm_sealed_v2_overlap_count": len(
-                active_plm_sealed_overlap
+            "active_sealed_v2_opened": False,
+            "active_sealed_v2_name": active_boundary_name,
+            "active_sealed_v2_sha256": active_boundary["sha256"],
+            "active_sealed_v2_status": active_boundary["status"],
+            "active_sealed_v2_overlap_checked": False,
+            "active_sealed_v2_overlap_count": None,
+            "active_sealed_v2_overlap": None,
+            "active_sealed_v2_overlap_check_skipped_reason": (
+                "active sealed boundary fixture remains unopened"
             ),
-            "active_plm_sealed_v2_overlap": active_plm_sealed_overlap,
+            "consumed_plm_sealed_v2_overlap_count": len(
+                consumed_plm_sealed_v2_overlap
+            ),
+            "consumed_plm_sealed_v2_overlap": (
+                consumed_plm_sealed_v2_overlap
+            ),
+            "active_plm_sealed_available": active_plm_sealed_entry is not None,
+            "active_plm_sealed_opened": False,
+            "active_plm_sealed_name": active_plm_sealed_name,
+            "active_plm_sealed_sha256": (
+                active_plm_sealed_entry["sha256"]
+                if active_plm_sealed_entry is not None
+                else None
+            ),
+            "active_plm_sealed_status": (
+                active_plm_sealed_entry["status"]
+                if active_plm_sealed_entry is not None
+                else None
+            ),
+            "active_plm_sealed_measured": (
+                active_plm_sealed_entry["measured"]
+                if active_plm_sealed_entry is not None
+                else None
+            ),
+            "active_plm_sealed_overlap_checked": False,
+            "active_plm_sealed_overlap_count": None,
+            "active_plm_sealed_overlap": None,
+            "active_plm_sealed_overlap_check_skipped_reason": (
+                "active sealed fixture remains unopened"
+            ),
         },
         "measurements": {
             "train": evaluate_plm_extractor(
@@ -110,6 +176,7 @@ def main() -> None:
     OUTPUT_PATH.write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     print(f"wrote {OUTPUT_PATH.relative_to(ROOT)}")
 

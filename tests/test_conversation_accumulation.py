@@ -17,6 +17,9 @@ REPORT_PATH = ROOT / "build" / "conversation_accumulation_v1_report.json"
 READINESS_REVIEW_PATH = (
     ROOT / "build" / "v2_measurement_readiness_review.json"
 )
+ACTIVE_READINESS_REVIEW_PATH = (
+    ROOT / "build" / "plm_measurement_readiness_review.json"
+)
 
 
 def test_accumulation_campaign_is_frozen_at_target_for_review() -> None:
@@ -57,26 +60,42 @@ def test_accumulation_report_keeps_active_sealed_closed() -> None:
 
     assert report["campaign_id"] == "conversation-v2-readiness-2026-06"
     assert report["candidate"]["adapter_version"] == "0.2"
+    assert report["evaluation_adapter"]["entrypoint"] == "semantic_routing.route"
+    assert report["evaluation_adapter"]["version"].startswith("0.3")
+    assert report["evaluation_adapter"]["intent_model_sha256"]
     assert report["active_sealed_v2_read"] is False
     assert report["collection"]["case_count"] == 50
     assert report["gates"]["visible_benchmark_overlap_count"] == 0
-    assert report["gates"]["eligible_for_sealed_v2_measurement"] is False
+    assert report["measurements"]["end_to_end_route_accuracy"] >= 0.9
+    assert report["measurements"]["critical_underprocessing"] == 0
+    assert report["gates"]["eligible_for_sealed_v2_measurement"] is True
 
 
-def test_v2_measurement_review_blocks_without_opening_sealed() -> None:
+def test_v2_measurement_review_blocks_after_sealed_consumption() -> None:
     review = json.loads(READINESS_REVIEW_PATH.read_text(encoding="utf-8"))
 
     assert review["decision"] == "blocked"
     assert review["sealed_fixture_opened"] is False
-    assert review["sealed_fixture"]["status"] == "active"
-    assert review["sealed_fixture"]["measured"] is False
+    assert review["sealed_fixture"]["status"] == "consumed"
+    assert review["sealed_fixture"]["measured"] is True
     assert review["sealed_fixture"]["reviewed"] is False
-    # After the verify_then_build adapter fix, critical under-processing is
-    # 0, so 3 of the 4 gates pass (collection, review, critical). Only the
-    # accuracy gate still holds sealed v2 closed.
-    assert set(review["blocked_reasons"]) == {
-        "accuracy_gate_not_met",
-    }
+    assert review["readiness"]["end_to_end_route_accuracy"] >= 0.9
+    assert review["readiness"]["critical_underprocessing"] == 0
+    assert review["blocked_reasons"] == ["sealed_fixture_not_available"]
+
+
+def test_active_plm_measurement_review_blocks_after_v10_measurement() -> None:
+    review = json.loads(
+        ACTIVE_READINESS_REVIEW_PATH.read_text(encoding="utf-8")
+    )
+
+    assert review["decision"] == "blocked"
+    assert review["sealed_fixture_opened"] is False
+    assert review["sealed_fixture"] is None
+    assert review["readiness"]["end_to_end_route_accuracy"] >= 0.9
+    assert review["readiness"]["critical_underprocessing"] == 0
+    assert review["blocked_reasons"] == ["sealed_fixture_not_available"]
+    assert review["next_action"] == "continue_accumulation_or_rotate_fixture"
 
 
 @pytest.mark.parametrize(
@@ -115,3 +134,4 @@ def test_accumulation_campaign_rejects_contract_violations(
 
     with pytest.raises(ValueError, match=message):
         parse_conversation_accumulation(payload)
+

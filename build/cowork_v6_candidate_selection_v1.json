@@ -1,0 +1,2143 @@
+{
+  "schema_version": "cowork-v6-candidate-selection.v1",
+  "generated_at": "2026-06-23T07:24:43.981191+00:00",
+  "source": "C:\\Users\\kota\\Downloads\\cowork_raw_logs.txt",
+  "policy": {
+    "allowed_use": "nonsealed_v6_candidate_review_only",
+    "raw_logs_direct_training_allowed": false,
+    "sealed_text_used": false,
+    "requires_human_review_before_training": true,
+    "redaction_applied": true
+  },
+  "summary": {
+    "raw_user_message_count": 59,
+    "adopt_nonsealed_count": 25,
+    "rewrite_before_use_count": 15,
+    "reject_count": 19,
+    "usable_total": 40,
+    "priority_counts": {
+      "high": 22,
+      "low": 2,
+      "medium": 16
+    },
+    "top_axis_counts": {
+      "debug_error": 6,
+      "compound_intent": 5,
+      "current_tooling": 3,
+      "processing_plan": 2,
+      "separate_pass": 2,
+      "cognitive_load": 2,
+      "context_dependent": 2,
+      "architecture": 2,
+      "compare_options": 2,
+      "encoding_error": 1,
+      "missing_tool": 1,
+      "git_remote": 1,
+      "context_dependent_build": 1,
+      "long_log_review": 1,
+      "feedback_triage": 1,
+      "git_publish": 1,
+      "missing_info": 1,
+      "observation_pass": 1,
+      "incomplete_input": 1,
+      "conditional_adoption": 1
+    }
+  },
+  "items": [
+    {
+      "id": "cowork-v6-001",
+      "source_user_index": 1,
+      "session": "S1 Zenn article on initial model",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "privacy_url"
+      ],
+      "rationale": "GitHub account URL; not a routing sample.",
+      "redacted_input": "作製したアカウントこちらです！<URL>",
+      "input_char_count": 42,
+      "contains_url_or_path": true,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-002",
+      "source_user_index": 2,
+      "session": "S1 Zenn article on initial model",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "debug_error",
+        "encoding_error",
+        "current_tooling"
+      ],
+      "rationale": "Useful error-debug shape, but contains raw path and mojibake log.",
+      "redacted_input": "S <PATH> State Register> powershell -ExecutionPolicy Bypass -File .\\git_publish_setup.ps1\n発生場所 <PATH> State Register\\git_publish_setup.ps1:42 文字:93\n+ ... he GitHub repo and push 窶・see SETUP_GITHUB.md\" -ForegroundColor Green\n+                                                  ~~~~~~~~~~~~~~~~~~~~~~~~\n文字列に終端記号 \" がありません。\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString",
+      "input_char_count": 474,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-003",
+      "source_user_index": 3,
+      "session": "S1 Zenn article on initial model",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "debug_error",
+        "missing_tool",
+        "current_tooling"
+      ],
+      "rationale": "Useful missing CLI/tool diagnostic, but raw command transcript should be shortened.",
+      "redacted_input": "Local repo is ready. Next: create the GitHub repo and push - see SETUP_GITHUB.md\nPS <PATH> State Register> gh auth login\ngh : 用語 'gh' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。\n発生場所 行:1 文字:1\n+ gh auth login\n+ ~~\n    + CategoryInfo          : ObjectNotFound: (gh:String) [], CommandNotFoundException\n    + FullyQualifiedErrorId : CommandNotFoundException\nPS <PATH> State Register> gh repo create vlte-bptm --public --source . --remote origin --push",
+      "input_char_count": 464,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-004",
+      "source_user_index": 4,
+      "session": "S1 Zenn article on initial model",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "debug_error",
+        "git_remote",
+        "current_tooling"
+      ],
+      "rationale": "Useful remote-exists/push diagnostic, but raw repo URL should be redacted.",
+      "redacted_input": "PS <PATH> State Register> cd \"<PATH> State Register\"\nPS <PATH> State Register> git remote add origin <URL>\nerror: remote origin already exists.\nPS <PATH> State Register> git push -u origin main\nremote: Repository not found.\nfatal: repository '<URL> not found",
+      "input_char_count": 348,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-005",
+      "source_user_index": 5,
+      "session": "S1 Zenn article on initial model",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "image_only"
+      ],
+      "rationale": "Image placeholder has no text semantics.",
+      "redacted_input": "[Image attached]",
+      "input_char_count": 16,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-006",
+      "source_user_index": 6,
+      "session": "S1 Zenn article on initial model",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "status_only"
+      ],
+      "rationale": "Pure completion status.",
+      "redacted_input": "gitは行けました！",
+      "input_char_count": 10,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-007",
+      "source_user_index": 7,
+      "session": "S1 Zenn article on initial model",
+      "decision": "rewrite_before_use",
+      "priority": "low",
+      "v6_axes": [
+        "context_dependent_build"
+      ],
+      "rationale": "Potential build action, but too context-dependent as-is.",
+      "redacted_input": "true変更お願いします！",
+      "input_char_count": 13,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-008",
+      "source_user_index": 8,
+      "session": "S1 Zenn article on initial model",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "long_log_review",
+        "feedback_triage",
+        "git_publish"
+      ],
+      "rationale": "Useful long-log + feedback request pattern after log trimming.",
+      "redacted_input": "走りました！ありがとうございました！あまり期待はできませんが、採用できるフィードバックがあればありがたいですね。\nPS <PATH> cd \"<PATH> State Register\"\nPS <PATH> State Register> git add articles/vlte-bptm-thought-state-arch.md\nwarning: in the working copy of 'articles/vlte-bptm-thought-state-arch.md', LF will be replaced by CRLF the next time Git touches it\nPS <PATH> State Register> git commit -m \"Publish Zenn article\"\n[main 675252a] Publish Zenn article\n 1 file changed, 1 insertion(+), 1 deletion(-)\nPS <PATH> State Register> git push\nEnumerating objects: 7, done.\nCounting objects: 100% (7/7), done.\nDelta compression using up to 20 threads\nCompressing objects: 100% (4/4), done.\nWriting objects: 100% (4/4), 362 bytes | 362.00 KiB/s, done.\nTotal 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)\nremote: Resolving deltas: 100% (2/2), completed with 2 local objects.\nTo <URL>\n   91e8863..675252a  main -> main\nPS <PATH> State Register>",
+      "input_char_count": 954,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-009",
+      "source_user_index": 9,
+      "session": "S2 V2 progress snapshot",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "rationale": "Self-contained architectural request about pass scheduling and log separation.",
+      "redacted_input": "構成はpassですが、処理としてはチャットの処理出力が終るのをきっかけにpassが稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "input_char_count": 98,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-010",
+      "source_user_index": 10,
+      "session": "S2 V2 progress snapshot",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "rationale": "Near-duplicate of 09 but valuable paraphrase; keep one for training, one for replay.",
+      "redacted_input": "構成は2passですが、処理としてはチャット層の出力が終るのをきっかけに2pass目が稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "input_char_count": 100,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-011",
+      "source_user_index": 11,
+      "session": "S2 V2 progress snapshot",
+      "decision": "rewrite_before_use",
+      "priority": "high",
+      "v6_axes": [
+        "missing_info",
+        "observation_pass",
+        "incomplete_input"
+      ],
+      "rationale": "Good missing/unclear design prompt, but trailing parenthesis makes it review-needed.",
+      "redacted_input": "観測パスに読ませるのはGemma2の出力＋読み込ませた感情値でどうでしょう、そこから改めて変化を出力簡素化が可能なら()",
+      "input_char_count": 60,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-012",
+      "source_user_index": 12,
+      "session": "S2 V2 progress snapshot",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "conditional_adoption",
+        "evaluation_plan"
+      ],
+      "rationale": "Useful conditional adoption/evaluation policy; rewrite for clarity.",
+      "redacted_input": "それではcode側で7日間検証をしながら出力が弱い(オウム返し)等だった場合途中でも採用します！ありがとうございました。",
+      "input_char_count": 60,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-013",
+      "source_user_index": 13,
+      "session": "S3 4.8no",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "contextless_request"
+      ],
+      "rationale": "Too short and contextless.",
+      "redacted_input": "追記おねがいします",
+      "input_char_count": 9,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-014",
+      "source_user_index": 14,
+      "session": "S3 4.8no",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thanks_only"
+      ],
+      "rationale": "Thanks only.",
+      "redacted_input": "ありがとうございます！",
+      "input_char_count": 11,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-015",
+      "source_user_index": 15,
+      "session": "S5 Analyze logs and review hybrid PC design",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compound_intent",
+        "emotion_dynamics",
+        "parameter_tuning",
+        "missing_context"
+      ],
+      "rationale": "Rich multi-intent design input with tuning caveat.",
+      "redacted_input": "ちょっとログがどこに行ったか分からなくなってしまったのですが…\nemotに対する動的変化として、現在有る時間経過からの感情変化。以外で感情への刺激になりそうな変化を取り入れる。という物です！あと、現在の寂しいの数値は早く上がりすぎるので、実装時は調整を入れたい！という物です",
+      "input_char_count": 137,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-016",
+      "source_user_index": 16,
+      "session": "S5 Analyze logs and review hybrid PC design",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "future_scope",
+        "ui_voice_live2d",
+        "compound_intent"
+      ],
+      "rationale": "Good roadmap/future-scope sample after slight normalization.",
+      "redacted_input": "更に、その先で余裕がある場合の実装案\nlive２Ⅾでキャラ化(表現、感情の出力として)音声(live２Ⅾに合わせて)その前にUI関係も決めないといけないですね",
+      "input_char_count": 79,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-017",
+      "source_user_index": 17,
+      "session": "S5 Analyze logs and review hybrid PC design",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "proposal_request",
+        "context_dependent"
+      ],
+      "rationale": "Useful ask-for-proposal shape, but depends on prior context.",
+      "redacted_input": "今の所はこんなところです！現状から、ここは作った方が良い！と言う提案はありますか？",
+      "input_char_count": 41,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-018",
+      "source_user_index": 18,
+      "session": "S5 Analyze logs and review hybrid PC design",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "summarize_to_memo",
+        "prioritization",
+        "handoff"
+      ],
+      "rationale": "Clear request for a concise handoff memo.",
+      "redacted_input": "明日code側を始める際にPhase 5 を待たずに今すぐ着手できる 3 つをメモとして渡したいです！",
+      "input_char_count": 51,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-019",
+      "source_user_index": 19,
+      "session": "S5 Analyze logs and review hybrid PC design",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thanks_only"
+      ],
+      "rationale": "Thanks only.",
+      "redacted_input": "ありがとうございます！お疲れ様でした",
+      "input_char_count": 18,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-020",
+      "source_user_index": 20,
+      "session": "S8 Create unimplemented folder workspace",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "periodic_review",
+        "automation",
+        "log_accumulation"
+      ],
+      "rationale": "Clear capability/automation request about periodic log review.",
+      "redacted_input": "dataの蓄積に当たってなのですが、定期的にログを確認してもらい、調整をしてもらうことはかのうでしょうか",
+      "input_char_count": 52,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-021",
+      "source_user_index": 21,
+      "session": "S8 Create unimplemented folder workspace",
+      "decision": "adopt_nonsealed",
+      "priority": "medium",
+      "v6_axes": [
+        "scheduling_constraint",
+        "missing_runtime_window"
+      ],
+      "rationale": "Good scheduling constraint sample.",
+      "redacted_input": "PC立ち上げ時出ないとログ確認できないのでその時にお願いしたいです！",
+      "input_char_count": 34,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-022",
+      "source_user_index": 22,
+      "session": "S8 Create unimplemented folder workspace",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "instruction_marker_only"
+      ],
+      "rationale": "Meta marker, not user natural prompt.",
+      "redacted_input": "[schedule skillのSKILL.md読み込み]",
+      "input_char_count": 29,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-023",
+      "source_user_index": 23,
+      "session": "S8 Create unimplemented folder workspace",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thanks_only"
+      ],
+      "rationale": "Generic acknowledgement.",
+      "redacted_input": "ではよろしくお願いします！",
+      "input_char_count": 13,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-024",
+      "source_user_index": 24,
+      "session": "S9 Compare network layer structures A and B",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "casual_status"
+      ],
+      "rationale": "Casual cost-plan comment only.",
+      "redacted_input": "ありがとうございます！従量課金でなくmaxプランを選んでよかったです！",
+      "input_char_count": 35,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-025",
+      "source_user_index": 25,
+      "session": "S9 Compare network layer structures A and B",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "verify_path",
+        "startup_question"
+      ],
+      "rationale": "Useful path/startup verification after path redaction.",
+      "redacted_input": "Claudeさん！データの蓄積って\"<PATH>",
+      "input_char_count": 59,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-026",
+      "source_user_index": 26,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thread_metadata"
+      ],
+      "rationale": "Thread premise, not task input.",
+      "redacted_input": "このスレッドは提案、構想ベース半分雑談です！",
+      "input_char_count": 22,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-027",
+      "source_user_index": 27,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "brainstorm",
+        "multi_option",
+        "architecture"
+      ],
+      "rationale": "Strong multi-topic ideation sample.",
+      "redacted_input": "まず考えてるのは\n1、ペルソナcard、保存すべき基礎的情報を保持。呼び名や性格、優先事項など。\n2、脳ノイズの再現、並列処理から、ノイズを抽出しemotionに返す仕組み。\n3、ゲームエンジンの採用、並列処理、拡張、AI自身に仮想空間を持たせられる。",
+      "input_char_count": 126,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-028",
+      "source_user_index": 28,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "medium",
+      "v6_axes": [
+        "explore_rationale",
+        "game_engine_architecture"
+      ],
+      "rationale": "Good conceptual rationale/explore sample.",
+      "redacted_input": "そのままその通りですね！人間も脳内で一旦仮想空間に現実を反映させてるという説もありますし、ゲームエンジンを採用する事で色々とメリットがあるのではないか？と思いました。",
+      "input_char_count": 83,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-029",
+      "source_user_index": 29,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "clarify_or_explore",
+        "engine_choice",
+        "constraint_lightweight"
+      ],
+      "rationale": "Concise architecture choice question.",
+      "redacted_input": "常駐を目指すなら軽量なエンジンが良いんでしょうか？",
+      "input_char_count": 25,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-030",
+      "source_user_index": 30,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compare_options",
+        "language_stack",
+        "external_integration"
+      ],
+      "rationale": "Clear compare/explore across C#/Rust/Go/Python boundary.",
+      "redacted_input": "外枠はpython以外もアリだと思ってます、外の接続をする、拡張性、を考えて、C#、rust、goなんかもアリだと",
+      "input_char_count": 57,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-031",
+      "source_user_index": 31,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "memory_persona",
+        "update_policy",
+        "vectorization",
+        "compound_intent"
+      ],
+      "rationale": "Rich build/explore sample with update constraints.",
+      "redacted_input": "そうですね！ペルソナcardは基本を最初に書いておいて、AIが追記、書き換えを行える仕組みが良いとおもいます。書き換えの際は、プロンプトの重要度で触る際簡単に変更しない様に指示。みたいな構造です。出来ればベクトル化が理想です。",
+      "input_char_count": 113,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-032",
+      "source_user_index": 32,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "definition_context",
+        "persona_design"
+      ],
+      "rationale": "Useful if rewritten with explicit question/context.",
+      "redacted_input": "AIのペルソナです。書き換えを許可する事で、変化を取り入れ最適化？独自性を育てます",
+      "input_char_count": 41,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-033",
+      "source_user_index": 33,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "medium",
+      "v6_axes": [
+        "constraints",
+        "persona_policy",
+        "priority_high"
+      ],
+      "rationale": "Good constraint-prioritization sample.",
+      "redacted_input": "そこは重要ですね。「迎合しない」「本音を言う」は重要度HIGH候補ですね。",
+      "input_char_count": 37,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-034",
+      "source_user_index": 34,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "approval_only"
+      ],
+      "rationale": "Approval only.",
+      "redacted_input": "良いですね。採用したいです！",
+      "input_char_count": 14,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-035",
+      "source_user_index": 35,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compare_options",
+        "knowledge_source",
+        "llm_vs_chromadb",
+        "architecture"
+      ],
+      "rationale": "Excellent compare/explore sample for knowledge source design.",
+      "redacted_input": "あと一つ懸念というか、LLMは知識の塊なので、自然な会話になります。CPU先行のこの構造で基礎知識をどう取り入れるか？と考えてました。LLMを基礎知識として使って良いのか？それとも時間がかかるので、専用ChromaDBを置くのか？と",
+      "input_char_count": 116,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-036",
+      "source_user_index": 36,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "status_only"
+      ],
+      "rationale": "Status/approval only.",
+      "redacted_input": "良いですね。思考用に中型モデルも置いてるので丁度いいです。",
+      "input_char_count": 29,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-037",
+      "source_user_index": 37,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "medium",
+      "v6_axes": [
+        "naming_request",
+        "creative_build"
+      ],
+      "rationale": "Self-contained naming request.",
+      "redacted_input": "後で自然に決まりますが、名前があるとブレにくくなるので一つ命名をお願いしたいです！",
+      "input_char_count": 41,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-038",
+      "source_user_index": 38,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "approval_only"
+      ],
+      "rationale": "Name preference only.",
+      "redacted_input": "ANIMA「育つ魂」って所が良いですね",
+      "input_char_count": 19,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-039",
+      "source_user_index": 39,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "docs_update",
+        "future_roadmap",
+        "phase_boundary"
+      ],
+      "rationale": "Clear docs/build request with phase constraint.",
+      "redacted_input": "現状テストを繰り返して蓄積するphaseなので、すべてのphaseが終った後に始める構想としてdocsに残していきたいです！",
+      "input_char_count": 62,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-040",
+      "source_user_index": 40,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "rewrite_before_use",
+      "priority": "low",
+      "v6_axes": [
+        "format_preference",
+        "context_dependent"
+      ],
+      "rationale": "Useful only when paired with prior doc request.",
+      "redacted_input": "良いですね。思い出しやすい形でよろしくお願いします！",
+      "input_char_count": 26,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-041",
+      "source_user_index": 41,
+      "session": "S10 Brainstorm ideas and casual discussion",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thanks_only"
+      ],
+      "rationale": "Thanks only.",
+      "redacted_input": "ありがとうございます！またアイディアが湧いたらここに書き込みます！",
+      "input_char_count": 33,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-042",
+      "source_user_index": 42,
+      "session": "S13 Install Node Manager",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "environment_choice",
+        "fallback_plan"
+      ],
+      "rationale": "Useful environment/fallback decision after path/app normalization.",
+      "redacted_input": "Stabilitymatrlx だと、構造に手を出しにくいので一回<PATH> に戻ります",
+      "input_char_count": 83,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-043",
+      "source_user_index": 43,
+      "session": "S13 Install Node Manager",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "debug_error",
+        "missing_file",
+        "path_context"
+      ],
+      "rationale": "Strong debugging sample with concrete error.",
+      "redacted_input": "(.venv) PS <PATH> python main.py\ncan't open file '<PATH> [Errno 2] No such file or directoryエラーです！",
+      "input_char_count": 103,
+      "contains_url_or_path": true,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-044",
+      "source_user_index": 44,
+      "session": "S13 Install Node Manager",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "unverified_claim",
+        "model_selection"
+      ],
+      "rationale": "Good unverified assumption sample.",
+      "redacted_input": "複数モデルがインストールされているので自動的に使われたものと思われます",
+      "input_char_count": 35,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-045",
+      "source_user_index": 45,
+      "session": "S13 Install Node Manager",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "debug_error",
+        "missing_dependency"
+      ],
+      "rationale": "Strong missing dependency diagnostic sample.",
+      "redacted_input": "Traceback (most recent call last):\n...\nModuleNotFoundError: No module named 'sqlalchemy'",
+      "input_char_count": 88,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-046",
+      "source_user_index": 46,
+      "session": "S13 Install Node Manager",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "status_only"
+      ],
+      "rationale": "Status only.",
+      "redacted_input": "開きました。ワークフローが共有されてました",
+      "input_char_count": 21,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-047",
+      "source_user_index": 47,
+      "session": "S13 Install Node Manager",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "install_log_placeholder"
+      ],
+      "rationale": "Placeholder log success, no actionable text.",
+      "redacted_input": "[pip install ログ貼付、torch/transformers等インストール成功]",
+      "input_char_count": 46,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-048",
+      "source_user_index": 48,
+      "session": "S13 Install Node Manager",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "explain_term",
+        "tool_concept",
+        "after_success_question"
+      ],
+      "rationale": "Clear explanation request after setup success.",
+      "redacted_input": "起動できました！サブグラフと言うのは外部のものだったりしますか",
+      "input_char_count": 31,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-049",
+      "source_user_index": 49,
+      "session": "S13 Install Node Manager",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "debug_error",
+        "security_policy",
+        "custom_node_install"
+      ],
+      "rationale": "Strong error/constraint diagnostic sample.",
+      "redacted_input": "ComfyUI-HunyuanVideo-Foleyこのモデルだけエラーになります\n[Installation Errors] 'ComfyUI-HunyuanVideo-Foley': With the current security level configuration, only custom nodes from the \"default channel\" can be installed.",
+      "input_char_count": 203,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-050",
+      "source_user_index": 50,
+      "session": "S13 Install Node Manager",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "status_only"
+      ],
+      "rationale": "Going-to-try status.",
+      "redacted_input": "[手動インストール手順の情報共有、依存関係インストール、モデルファイル確認について]\n探してきました！やってきます",
+      "input_char_count": 57,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-051",
+      "source_user_index": 51,
+      "session": "S13 Install Node Manager",
+      "decision": "rewrite_before_use",
+      "priority": "medium",
+      "v6_axes": [
+        "status_with_finding",
+        "capability_inference"
+      ],
+      "rationale": "Useful as summarize/evaluate sample after shortening.",
+      "redacted_input": "wan2.2の方はモデル探しちょっとかかりそうなのでテンプレートのLTS2.3使って動画が作られ始めました。⑱は未対応ですが、実装メモリを超えたモデルでもきちんと動くことが分かり可能性を感じます！",
+      "input_char_count": 98,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-052",
+      "source_user_index": 52,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "prioritize",
+        "write_md",
+        "improvement_plan"
+      ],
+      "rationale": "Clear prioritized markdown plan request.",
+      "redacted_input": "優先度高から修正案として.mdにまとめて頂きたいです",
+      "input_char_count": 26,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-053",
+      "source_user_index": 53,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "evaluate_draft",
+        "skill_review",
+        "uncertainty"
+      ],
+      "rationale": "Good evaluation/review request with uncertainty.",
+      "redacted_input": "[Trace Rule v0.1 skill fileアップロード]\nちなみに、これの草案としてskillにしたものなのですが、どのくらいの効果が見込めるとか分かりますか",
+      "input_char_count": 85,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-054",
+      "source_user_index": 54,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "compare_design",
+        "topic_filter",
+        "memory_reference"
+      ],
+      "rationale": "Excellent architecture tradeoff question.",
+      "redacted_input": "これ、逆に、話題の混濁だけ焦点に当てて、レベル1とレベル2だけを実装して、レベル1、レベル2が違う話題は参照トークンとして使わないとかだったらどう？",
+      "input_char_count": 74,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-055",
+      "source_user_index": 55,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "build_rule",
+        "multi_tag",
+        "topic_list"
+      ],
+      "rationale": "Good concrete design proposal requiring validation.",
+      "redacted_input": "level2に複数の項目(2～3)を付けられるようにして、level１のみトピックスの一覧を作るのはどうでしょう。",
+      "input_char_count": 57,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-056",
+      "source_user_index": 56,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "design_decision",
+        "or_logic",
+        "recall_priority"
+      ],
+      "rationale": "Good rationale/decision sample with tradeoff.",
+      "redacted_input": "or の条件にすることで、拾いこぼしが無くなるのでそちらです！level1で大枠が決まるのでlevel２で厳密にすると同じ話題の拾いこぼしになりそうなので",
+      "input_char_count": 77,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-057",
+      "source_user_index": 57,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "adopt_nonsealed",
+      "priority": "high",
+      "v6_axes": [
+        "write_skill_file",
+        "versioned_spec"
+      ],
+      "rationale": "Clear build/write request.",
+      "redacted_input": "v0.2としてスキルファイルに指定だだきたいです！",
+      "input_char_count": 25,
+      "contains_url_or_path": false,
+      "label_status": "draft_suggestion_needs_human_review",
+      "suggested_label_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ]
+      },
+      "current_route_on_redacted_input": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "cowork-v6-058",
+      "source_user_index": 58,
+      "session": "S14 Project feedback and improvement suggestions",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "thanks_only"
+      ],
+      "rationale": "Thanks only.",
+      "redacted_input": "ありがとうございます！使ってきます！",
+      "input_char_count": 18,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    },
+    {
+      "id": "cowork-v6-059",
+      "source_user_index": 59,
+      "session": "S15 Coworkをセットアップ",
+      "decision": "reject",
+      "priority": "low",
+      "v6_axes": [
+        "command_message"
+      ],
+      "rationale": "Command trigger, not natural routing sample.",
+      "redacted_input": "<command-message>anthropic-skills:setup-cowork</command-message>\n<command-name>/anthropic-skills:setup-cowork</command-name>",
+      "input_char_count": 124,
+      "contains_url_or_path": false,
+      "label_status": "not_training_data"
+    }
+  ]
+}

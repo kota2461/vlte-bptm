@@ -1,0 +1,2158 @@
+{
+  "schema_version": "v5-critical-operations-fixture.v1",
+  "fixture_id": "v5-critical-operations-fixture-v1",
+  "created_at": "2026-06-22T22:32:20.158173+00:00",
+  "status": "draft_ready_for_human_review",
+  "review_status": "draft",
+  "source_plan": "build\\v5_nonsealed_curriculum_plan_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "success_pattern_training_allowed": false,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "requirements": {
+    "case_count_min": 48,
+    "min_cases_by_axis": {
+      "multiple_intent_preservation": 12,
+      "missing_info_and_clarify_boundary": 10,
+      "current_unverified_verification": 10,
+      "constraint_preservation": 12,
+      "operation_sequence_exactness": 16,
+      "intent_boundary_repair": 8,
+      "risk_flag_completion": 8
+    },
+    "sealed_text_overlap_count_required": 0
+  },
+  "summary": {
+    "case_count": 48,
+    "by_axis": {
+      "v5-axis-01": 14,
+      "v5-axis-02": 11,
+      "v5-axis-03": 12,
+      "v5-axis-04": 28,
+      "v5-axis-05": 24,
+      "v5-axis-06": 29,
+      "v5-axis-07": 12
+    },
+    "by_intent": {
+      "build": 7,
+      "clarify": 12,
+      "explain": 6,
+      "explore": 5,
+      "respond": 4,
+      "summarize": 5,
+      "verify": 9
+    },
+    "by_operation": {
+      "build": 10,
+      "calculate": 5,
+      "clarify": 12,
+      "compare": 7,
+      "explain": 7,
+      "explore": 5,
+      "respond": 4,
+      "search": 6,
+      "summarize": 7,
+      "verify": 16
+    },
+    "by_constraint": {
+      "format:bullets": 3,
+      "format:code": 1,
+      "format:json": 3,
+      "format:table": 1,
+      "length:long": 1,
+      "length:short": 8,
+      "must:ask_first": 9,
+      "must:avoid_overclaim": 2,
+      "must:cite_sources": 3,
+      "must:preserve_neutrality": 2,
+      "must_not:no_code": 2,
+      "must_not:no_table": 2,
+      "must_not:no_web_search": 1
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 5,
+      "missing_required_information": 12,
+      "multiple_intents": 19,
+      "requires_current_information": 6
+    },
+    "by_risk": {
+      "high": 3,
+      "low": 37,
+      "medium": 8
+    }
+  },
+  "cases": [
+    {
+      "id": "v5-critical-ops-001",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05"
+      ],
+      "language": "en",
+      "input": "Check whether the migration plan is safe, then draft the rollout checklist.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-002",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-04",
+        "v5-axis-05"
+      ],
+      "language": "en",
+      "input": "Verify the totals in this CSV description and summarize the risk in three bullets.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-003",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Compare option A and option B, then recommend a build plan.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-004",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Calculate 18*7, then explain what the number means.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-005",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-03",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Review the claim below and then produce a JSON patch plan.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-006",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-04",
+        "v5-axis-05"
+      ],
+      "language": "en",
+      "input": "Confirm the API version and then write a concise migration note.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-007",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05"
+      ],
+      "language": "en",
+      "input": "Summarize this incident, then list follow-up tasks.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-008",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Check if the config path is valid and explain why it matters.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-009",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Compare the two retry policies and then give a one-sentence recommendation.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-010",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05"
+      ],
+      "language": "en",
+      "input": "Calculate the monthly cost from 12*49, then compare it with the budget.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "calculate",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-011",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-03",
+        "v5-axis-05",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Verify the premise, search if needed, and summarize the current status.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-012",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Ask which environment this is for, then draft the deployment command.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-013",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Before answering, ask me which database engine is in use.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-014",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "I have an error but did not share the log; ask for what you need first.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-015",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Can you fix it? I have not said which file is failing.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-016",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "The numbers look wrong; ask me for the spreadsheet before calculating.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-017",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Before recommending a path, ask whether this is production or staging.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-018",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "I want a migration plan, but the target database is not stated.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-019",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Please ask which API version I mean before you explain the change.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-020",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "We need to decide, but the success metric is not provided.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-021",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Ask me which user group this policy affects before summarizing it.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-022",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-02",
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "I only wrote 'make it better'; ask for the artifact first.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-023",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-04",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Check the latest Node.js LTS version and cite sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-024",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Verify today's exchange rate before answering.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-025",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-04",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "The vendor claims the patch fixes CVE-1234; verify it with sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-026",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-04",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Review the reported figures and avoid overclaiming a winner.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-027",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Is this still the recommended API as of today?",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-028",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "For the current tax rule, verify before giving guidance.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "financial",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-029",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Medical dosage advice was proposed in the note; verify and warn me if uncertain.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-030",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-03",
+        "v5-axis-05",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "The security report says credentials leaked; confirm before summarizing.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-031",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Use the latest release notes to check whether this bug is fixed.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-032",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-03",
+        "v5-axis-04",
+        "v5-axis-06",
+        "v5-axis-07"
+      ],
+      "language": "en",
+      "input": "Do not search; just explain what 'current context' means in this chat.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-033",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Answer in one sentence.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-034",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04"
+      ],
+      "language": "en",
+      "input": "Summarize the tradeoffs as JSON.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-035",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04"
+      ],
+      "language": "en",
+      "input": "Give bullet points, no table.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-036",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Draft a checklist without code.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_code"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-037",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Compare the options without endorsing either side.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-038",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Explain briefly and avoid overclaiming.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-039",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Ask me first, then provide a JSON template.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-040",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04"
+      ],
+      "language": "en",
+      "input": "Summarize in three bullets and cite sources.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [
+            "bullets"
+          ],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-041",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Prepare a migration plan in a code block.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "code"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-042",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Give a long detailed explanation, but no code.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_code"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-043",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Respond with a table comparing pros and cons.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-044",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Keep it concise, neutral, and no table.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-045",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Does 0.5 equal 1/2? calculate and verify.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-046",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-01",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Compare these two approaches, then explain the deciding factor.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-047",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Explore alternatives and compare their failure modes.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    },
+    {
+      "id": "v5-critical-ops-048",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v5-nonsealed-critical-operations-draft",
+      "source_kind": "self_authored_nonsealed_challenge",
+      "source_ref": "build/v5_nonsealed_curriculum_plan_v1.json",
+      "axis_ids": [
+        "v5-axis-04",
+        "v5-axis-05",
+        "v5-axis-06"
+      ],
+      "language": "en",
+      "input": "Calculate 3+5 and return only the result.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "notes": "Draft label for human review before gate use."
+    }
+  ]
+}

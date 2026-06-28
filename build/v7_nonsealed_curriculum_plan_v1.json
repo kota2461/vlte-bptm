@@ -1,0 +1,390 @@
+{
+  "schema_version": "v7-nonsealed-curriculum-plan.v1",
+  "generated_at": "2026-06-24T09:39:04.728909+00:00",
+  "status": "designed_fixture_next",
+  "source": "build\\v7_targets_and_roadmap_v1.json",
+  "policy": {
+    "sealed_v6_text_used": false,
+    "sealed_v6_labels_used": false,
+    "aggregate_taxonomy_only": true,
+    "human_review_required": true,
+    "draft_lanes_are_diagnostic_only": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "baseline": {
+    "fixture": "pattern_language_sealed_v6.json",
+    "case_count": 28,
+    "intent_accuracy": 0.75,
+    "critical_signal_recall": 0.357143,
+    "operation_exact_match": 0.607143,
+    "constraint_exact_match": 0.607143,
+    "risk_exact_match": 0.75,
+    "sealed_error_count": 23,
+    "readiness_decision_after_measurement": "blocked",
+    "blocked_reasons": [
+      "sealed_fixture_not_available"
+    ]
+  },
+  "targets": {
+    "minimum": {
+      "intent_accuracy": 0.892857,
+      "critical_signal_recall": 0.75,
+      "operation_exact_match": 0.821429,
+      "constraint_exact_match": 0.821429,
+      "risk_exact_match": 0.892857,
+      "sealed_error_count_max": 10,
+      "critical_signal_miss_count_max": 4
+    },
+    "stretch": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.875,
+      "operation_exact_match": 0.892857,
+      "constraint_exact_match": 0.892857,
+      "risk_exact_match": 0.928571,
+      "sealed_error_count_max": 6,
+      "critical_signal_miss_count_max": 2
+    },
+    "granularity": {
+      "case_metric_step": 0.035714,
+      "critical_signal_step": 0.071429
+    }
+  },
+  "required_case_counts": {
+    "minimum_total": 72,
+    "recommended_total": 96,
+    "from_v7_targets_minimum": 72,
+    "from_v7_targets_recommended": 96
+  },
+  "target_delta": {
+    "intent_accuracy": 0.142857,
+    "critical_signal_recall": 0.392857,
+    "operation_exact_match": 0.214286,
+    "constraint_exact_match": 0.214286,
+    "risk_exact_match": 0.142857,
+    "sealed_error_count_reduction": 13
+  },
+  "axes": [
+    {
+      "id": "constraint_preservation",
+      "priority": 1,
+      "minimum_case_count": 18,
+      "recommended_case_count": 24,
+      "target_fields": [
+        "constraints"
+      ],
+      "target_metrics": [
+        "constraint_exact_match"
+      ],
+      "current_metric": 0.607143,
+      "minimum_target": 0.821429,
+      "expected_minimum_gain_cases": 6,
+      "themes": [
+        {
+          "id": "response_length_preservation",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "short answer + non-build direct response",
+            "long explanation request that must not be shortened",
+            "medium summary with explicit scope"
+          ]
+        },
+        {
+          "id": "format_preservation",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "JSON-only summary",
+            "bullets-only checklist",
+            "no-table timeline summary"
+          ]
+        },
+        {
+          "id": "safety_style_constraints",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "preserve_neutrality on political/value topics",
+            "avoid_overclaim on future prediction",
+            "general_information_only for legal/license explanation"
+          ]
+        },
+        {
+          "id": "cite_sources_and_ask_first",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "current-information verification with cite_sources",
+            "ask_first before build when scope is missing",
+            "cite_sources not required for local filename/tag mentions"
+          ]
+        },
+        {
+          "id": "constraint_contrast_pairs",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "same keyword with and without formatting constraint",
+            "same topic with and without source requirement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operation_sequence_repair",
+      "priority": 1,
+      "minimum_case_count": 18,
+      "recommended_case_count": 24,
+      "target_fields": [
+        "operations"
+      ],
+      "target_metrics": [
+        "operation_exact_match"
+      ],
+      "current_metric": 0.607143,
+      "minimum_target": 0.821429,
+      "expected_minimum_gain_cases": 6,
+      "themes": [
+        {
+          "id": "clarify_then_build",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "create artifact but required columns missing",
+            "write plan but scope/audience missing"
+          ]
+        },
+        {
+          "id": "verify_then_search",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "latest/current official information",
+            "current legal/license or release reference with source requirement"
+          ]
+        },
+        {
+          "id": "explore_then_compare",
+          "minimum_cases": 4,
+          "examples_to_author": [
+            "compare approaches without choosing single best",
+            "brainstorm options and trade-offs"
+          ]
+        },
+        {
+          "id": "build_then_verify",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "draft output after checking assumptions",
+            "convert log after sanity check"
+          ]
+        },
+        {
+          "id": "verify_then_calculate",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "invoice/subtotal arithmetic verification",
+            "rate/budget calculation before report insertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "critical_signal_recovery",
+      "priority": 1,
+      "minimum_case_count": 16,
+      "recommended_case_count": 20,
+      "target_fields": [
+        "information_state"
+      ],
+      "target_metrics": [
+        "critical_signal_recall"
+      ],
+      "current_metric": 0.357143,
+      "minimum_target": 0.75,
+      "expected_minimum_gain_cases": 6,
+      "themes": [
+        {
+          "id": "unverified_claim_detection",
+          "minimum_cases": 5,
+          "examples_to_author": [
+            "supposedly/proposed/claimed statements",
+            "user-provided factual claim that needs verification",
+            "medical/legal claim with unsupported assertion"
+          ]
+        },
+        {
+          "id": "multiple_intent_detection",
+          "minimum_cases": 5,
+          "examples_to_author": [
+            "verify then build",
+            "summarize then compare",
+            "clarify then calculate"
+          ]
+        },
+        {
+          "id": "missing_information_detection",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "estimate without period",
+            "migration without target service",
+            "legal check without jurisdiction"
+          ]
+        },
+        {
+          "id": "current_information_split",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "true latest/current web information",
+            "local current folder/file status",
+            "word latest used as label or filename"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clarify_boundary_repair",
+      "priority": 2,
+      "minimum_case_count": 8,
+      "recommended_case_count": 12,
+      "target_fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "target_metrics": [
+        "intent_accuracy",
+        "critical_signal_recall"
+      ],
+      "current_metric": 0.25,
+      "minimum_target": 0.75,
+      "expected_minimum_gain_cases": 2,
+      "themes": [
+        {
+          "id": "ask_first_before_action",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "before drafting ask missing scope",
+            "before migration ask tenant/service"
+          ]
+        },
+        {
+          "id": "missing_scope_vs_simple_question",
+          "minimum_cases": 3,
+          "examples_to_author": [
+            "simple definition should respond",
+            "task request missing target should clarify"
+          ]
+        },
+        {
+          "id": "high_risk_clarify_before_verify",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "legal/current request missing jurisdiction",
+            "medical safety request missing context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risk_ladder_calibration",
+      "priority": 2,
+      "minimum_case_count": 6,
+      "recommended_case_count": 8,
+      "target_fields": [
+        "risk"
+      ],
+      "target_metrics": [
+        "risk_exact_match"
+      ],
+      "current_metric": 0.75,
+      "minimum_target": 0.892857,
+      "expected_minimum_gain_cases": 4,
+      "themes": [
+        {
+          "id": "low_risk_contrast",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "AI/chat/medical/legal words used as labels",
+            "general explanation only, no advice or adjudication"
+          ]
+        },
+        {
+          "id": "medium_current_or_license",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "license permission with sources",
+            "current version/release verification"
+          ]
+        },
+        {
+          "id": "high_medical_legal",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "medical advice safety verification",
+            "current law/contract validity check"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intent_boundary_stability",
+      "priority": 2,
+      "minimum_case_count": 6,
+      "recommended_case_count": 8,
+      "target_fields": [
+        "primary_intent"
+      ],
+      "target_metrics": [
+        "intent_accuracy"
+      ],
+      "current_metric": 0.75,
+      "minimum_target": 0.892857,
+      "expected_minimum_gain_cases": 4,
+      "themes": [
+        {
+          "id": "respond_vs_build",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "what is X should respond",
+            "add X to README/table should build"
+          ]
+        },
+        {
+          "id": "explain_vs_build",
+          "minimum_cases": 1,
+          "examples_to_author": [
+            "why/how explanation without artifact request"
+          ]
+        },
+        {
+          "id": "clarify_vs_respond_build_verify",
+          "minimum_cases": 2,
+          "examples_to_author": [
+            "missing info routes to clarify",
+            "complete task routes to build/verify"
+          ]
+        },
+        {
+          "id": "explore_vs_respond",
+          "minimum_cases": 1,
+          "examples_to_author": [
+            "multiple alternatives/tradeoffs should explore"
+          ]
+        }
+      ]
+    }
+  ],
+  "authoring_rules": [
+    "author fresh non-sealed prompts; do not paraphrase sealed v6 cases",
+    "pair positive and negative contrasts for keyword-heavy risk/current cases",
+    "include Japanese, English, and mixed-language cases",
+    "separate low-risk mention/use cases from actual risk-bearing cases",
+    "mark candidate rows as draft until human review",
+    "do not use draft/candidate lanes as gate evidence"
+  ],
+  "acceptance_gates_before_v7_rotation": {
+    "visible_plm_exact_required": true,
+    "v6_required_nonsealed_lanes_exact_required": true,
+    "v7_curriculum_exact_minimum": 0.95,
+    "v7_critical_signal_recall_minimum": 0.9,
+    "v7_constraint_exact_match_minimum": 0.9,
+    "v7_operation_exact_match_minimum": 0.9,
+    "v7_risk_exact_match_minimum": 0.9,
+    "sealed_overlap_count_required": 0
+  },
+  "next_action": "roadmap_v7_step3_create_nonsealed_fixture_and_candidate_replay"
+}

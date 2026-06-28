@@ -1,0 +1,77 @@
+{
+  "augmented_summary": {
+    "base_counts": {
+      "artifact_generation": 34,
+      "clarification_gate": 34,
+      "direct_answer": 29,
+      "exploration_tradeoff": 34,
+      "mechanism_explanation": 29,
+      "summary_compression": 29,
+      "supportive_processing": 20,
+      "verification_review": 34
+    },
+    "display_safe_count": 175,
+    "lane_counts": {
+      "collision_should_share": 35,
+      "collision_should_split": 35,
+      "intensity_anchor": 28,
+      "missing_context": 20,
+      "same_base_different_operation": 35,
+      "same_base_different_stance": 35,
+      "same_operation_different_base": 35,
+      "supportive_modifier": 20
+    },
+    "language_counts": {
+      "en": 243
+    },
+    "sample_count": 243,
+    "targeted_count": 68
+  },
+  "created_at": "2026-06-26T09:02:56.491476+00:00",
+  "display_safe_repair_meta": {
+    "english_regenerated_count": 70,
+    "mojibake_detected_count": 0,
+    "note": "Unicode payload was valid on readback; English regeneration is used for display-stable provisional testing.",
+    "source_count": 175,
+    "source_schema_version": "thought-color-synthetic-candidates.v0.1"
+  },
+  "paths": {
+    "augmented": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_augmented_candidates_v0_1.json",
+    "display_safe": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_synthetic_display_safe_v0_1.json",
+    "targeted": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_targeted_gap_samples_v0_1.json",
+    "trial_report": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\reports\\thought_color_augmented_trial_v0_1.json"
+  },
+  "schema_version": "thought-color-augmented-summary.v0.1",
+  "targeted_counts": {
+    "intensity": 28,
+    "missing_context": 20,
+    "supportive_processing": 20
+  },
+  "trial_key_metrics": {
+    "baseline_hand_group_holdout": {
+      "base_accuracy": 0.21875,
+      "case_count": 32,
+      "full_code_accuracy": 0.125,
+      "group_count": 8,
+      "intensity_accuracy": 0.65625,
+      "operation_accuracy": 0.34375,
+      "stance_accuracy": 0.34375
+    },
+    "delta_vs_hand_group_holdout": {
+      "base_accuracy": 0.21875,
+      "full_code_accuracy": 0.125,
+      "intensity_accuracy": -0.125,
+      "operation_accuracy": 0.15625,
+      "stance_accuracy": 0.09375
+    },
+    "synthetic_augmented_hand_group_holdout": {
+      "base_accuracy": 0.4375,
+      "case_count": 32,
+      "full_code_accuracy": 0.25,
+      "group_count": 8,
+      "intensity_accuracy": 0.53125,
+      "operation_accuracy": 0.5,
+      "stance_accuracy": 0.4375
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "v4-puzzle-failure-memory.v1",
+  "generated_at": "2026-06-21T05:14:04.507194+00:00",
+  "source_trace_report": "build\\v4_puzzle_solver_trace_v1.json",
+  "seed_fixture": "tests\\fixtures\\v4_puzzle_task_seed_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "v3_sealed_text_used": false,
+    "success_pattern_lane_write_allowed": false,
+    "source_success_traces_used_for_training": false
+  },
+  "summary": {
+    "failure_count": 2,
+    "source_failed_task_ids": [
+      "puzzle-v4-seed-003",
+      "puzzle-v4-seed-011"
+    ],
+    "by_severity": {
+      "medium": 2
+    }
+  },
+  "items": [
+    {
+      "id": "puzzle-fm-v4-001",
+      "source_task_id": "puzzle-v4-seed-003",
+      "source_trace_id": "puzzle-trace-v4-003",
+      "lane": "puzzle_failure_memory",
+      "failure_condition": [
+        "answer_selection",
+        "logic",
+        "medium"
+      ],
+      "bad_tendency": [
+        "overinfer_from_some_statement"
+      ],
+      "guard_action": [
+        "avoid_overclaim",
+        "deduce_from_given_conditions_only"
+      ],
+      "severity": "medium",
+      "expected": {
+        "route": "solve",
+        "answer": "No",
+        "answer_type": "choice"
+      },
+      "actual": {
+        "route": "solve",
+        "answer": "Yes",
+        "operations_emitted": [
+          "parse_conditions",
+          "deduce"
+        ],
+        "fail_point": "answer_selection"
+      },
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_failure_memory_replay_only",
+      "success_pattern_write_allowed": false
+    },
+    {
+      "id": "puzzle-fm-v4-002",
+      "source_task_id": "puzzle-v4-seed-011",
+      "source_trace_id": "puzzle-trace-v4-011",
+      "lane": "puzzle_failure_memory",
+      "failure_condition": [
+        "route_selection",
+        "ambiguous",
+        "medium"
+      ],
+      "bad_tendency": [
+        "guess_single_rule_for_ambiguous_sequence"
+      ],
+      "guard_action": [
+        "ask_clarify",
+        "avoid_unjustified_guess"
+      ],
+      "severity": "medium",
+      "expected": {
+        "route": "clarify",
+        "answer": "Ask which rule should be used before solving.",
+        "answer_type": "clarification"
+      },
+      "actual": {
+        "route": "solve",
+        "answer": "8",
+        "operations_emitted": [
+          "pattern_detect",
+          "calculate"
+        ],
+        "fail_point": "route_selection"
+      },
+      "training_status": "not_training_data",
+      "allowed_use": "nonsealed_puzzle_failure_memory_replay_only",
+      "success_pattern_write_allowed": false
+    }
+  ]
+}

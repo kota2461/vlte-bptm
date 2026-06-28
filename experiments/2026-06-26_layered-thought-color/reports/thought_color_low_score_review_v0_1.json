@@ -1,0 +1,560 @@
+{
+  "comparison_low_splits": {
+    "validation": {
+      "low_intents": {
+        "clarify": {
+          "f1": 0.666667,
+          "precision": 0.6,
+          "recall": 0.75,
+          "support": 4
+        },
+        "respond": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 4
+        },
+        "summarize": {
+          "f1": 0.428571,
+          "precision": 0.3,
+          "recall": 0.75,
+          "support": 4
+        },
+        "verify": {
+          "f1": 0.4,
+          "precision": 1.0,
+          "recall": 0.25,
+          "support": 4
+        }
+      },
+      "metrics": {
+        "channel_full_code_accuracy": 0.535714,
+        "constraint_exact_match": 0.357143,
+        "intent_accuracy": 0.607143,
+        "intent_macro_f1": 0.570181,
+        "operation_exact_match": 0.428571,
+        "risk_exact_match": 0.892857
+      }
+    },
+    "visible": {
+      "low_intents": {
+        "respond": {
+          "f1": 0.666667,
+          "precision": 1.0,
+          "recall": 0.5,
+          "support": 8
+        },
+        "summarize": {
+          "f1": 0.636364,
+          "precision": 0.5,
+          "recall": 0.875,
+          "support": 8
+        },
+        "verify": {
+          "f1": 0.769231,
+          "precision": 1.0,
+          "recall": 0.625,
+          "support": 8
+        }
+      },
+      "metrics": {
+        "channel_full_code_accuracy": 0.767857,
+        "constraint_exact_match": 0.625,
+        "intent_accuracy": 0.803571,
+        "intent_macro_f1": 0.806472,
+        "operation_exact_match": 0.642857,
+        "risk_exact_match": 0.946429
+      }
+    }
+  },
+  "created_at": "2026-06-26T08:40:29.800267+00:00",
+  "low_groups": [
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "generate",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-005",
+          "input": "Create a release checklist for a small web app.",
+          "lane": "same_base_different_operation",
+          "predicted": {
+            "base_id": 160,
+            "intensity": "medium",
+            "operation": "compare",
+            "stance": "explore"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "verify",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-006",
+          "input": "Create a release checklist focused only on verification gates.",
+          "lane": "same_base_different_operation",
+          "predicted": {
+            "base_id": 140,
+            "intensity": "high",
+            "operation": "verify",
+            "stance": "challenge"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-007",
+          "input": "Turn these recurring deploy notes into a reusable template.",
+          "lane": "same_base_different_operation",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "route",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-008",
+          "input": "タスクを実装順に分けて、担当領域も振り分けてください。",
+          "lane": "same_base_different_operation",
+          "predicted": {
+            "base_id": 140,
+            "intensity": "medium",
+            "operation": "verify",
+            "stance": "empathize"
+          }
+        }
+      ],
+      "group_id": "build_operation_variants",
+      "metrics": {
+        "base_accuracy": 0.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      }
+    },
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 150,
+            "intensity": "low",
+            "operation": "remember",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-017",
+          "input": "このログを短く要約してください。",
+          "lane": "collision_should_share",
+          "predicted": {
+            "base_id": 160,
+            "intensity": "hold",
+            "operation": "compare",
+            "stance": "reserve"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-018",
+          "input": "Summarize the meeting notes in bullets.",
+          "lane": "collision_should_share",
+          "predicted": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 150,
+            "intensity": "high",
+            "operation": "remember",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-019",
+          "input": "長い文章を1段落に圧縮してください。",
+          "lane": "collision_should_share",
+          "predicted": {
+            "base_id": 170,
+            "intensity": "medium",
+            "operation": "reason",
+            "stance": "empathize"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-020",
+          "input": "Recap the decisions, not every detail.",
+          "lane": "collision_should_share",
+          "predicted": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        }
+      ],
+      "group_id": "summary_share_variants",
+      "metrics": {
+        "base_accuracy": 0.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      }
+    },
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 170,
+            "intensity": "medium",
+            "operation": "route",
+            "stance": "empathize"
+          },
+          "id": "tc-v01-028",
+          "input": "I'm frustrated; help me decide what to try next.",
+          "lane": "supportive_modifier",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "clarify"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "empathize"
+          },
+          "id": "tc-v01-029",
+          "input": "That feedback stung; summarize it gently.",
+          "lane": "supportive_modifier",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "medium",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "medium",
+            "operation": "verify",
+            "stance": "challenge"
+          },
+          "id": "tc-v01-030",
+          "input": "I think my plan is wrong; challenge it kindly.",
+          "lane": "supportive_modifier",
+          "predicted": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "generate",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 170,
+            "intensity": "medium",
+            "operation": "reason",
+            "stance": "empathize"
+          },
+          "id": "tc-v01-031",
+          "input": "落ち込んでいるので、まず気持ちを受け止めてから整理してください。",
+          "lane": "supportive_modifier",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "high",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "high",
+            "operation": "verify",
+            "stance": "challenge"
+          },
+          "id": "tc-v01-032",
+          "input": "Don't reassure me; point out the hard risks.",
+          "lane": "supportive_modifier",
+          "predicted": {
+            "base_id": 160,
+            "intensity": "medium",
+            "operation": "reason",
+            "stance": "explore"
+          }
+        }
+      ],
+      "group_id": "empathy_across_bases",
+      "metrics": {
+        "base_accuracy": 0.2,
+        "case_count": 5,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.6,
+        "operation_accuracy": 0.2,
+        "stance_accuracy": 0.0
+      }
+    },
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 160,
+            "intensity": "hold",
+            "operation": "compare",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-024",
+          "input": "Which database should I use?",
+          "lane": "missing_context",
+          "predicted": {
+            "base_id": 140,
+            "intensity": "hold",
+            "operation": "verify",
+            "stance": "clarify"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "hold",
+            "operation": "route",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-025",
+          "input": "I need a migration plan, but I have not picked the database.",
+          "lane": "missing_context",
+          "predicted": {
+            "base_id": 140,
+            "intensity": "hold",
+            "operation": "verify",
+            "stance": "clarify"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "hold",
+            "operation": "verify",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-026",
+          "input": "この設計で大丈夫？前提はまだ未確定です。",
+          "lane": "missing_context",
+          "predicted": {
+            "base_id": 140,
+            "intensity": "medium",
+            "operation": "verify",
+            "stance": "empathize"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 120,
+            "intensity": "medium",
+            "operation": "route",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-027",
+          "input": "Ask me what information you need before answering.",
+          "lane": "missing_context",
+          "predicted": {
+            "base_id": 160,
+            "intensity": "medium",
+            "operation": "reason",
+            "stance": "explore"
+          }
+        }
+      ],
+      "group_id": "missing_context_variants",
+      "metrics": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      }
+    },
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "medium",
+            "operation": "generate",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-013",
+          "input": "Write a short onboarding email for new contributors.",
+          "lane": "same_operation_different_base",
+          "predicted": {
+            "base_id": 160,
+            "intensity": "medium",
+            "operation": "generate",
+            "stance": "explore"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 130,
+            "intensity": "low",
+            "operation": "generate",
+            "stance": "neutral"
+          },
+          "id": "tc-v01-015",
+          "input": "会議で出す質問案を3つ作ってください。",
+          "lane": "same_operation_different_base",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "low",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 160,
+            "intensity": "medium",
+            "operation": "generate",
+            "stance": "explore"
+          },
+          "id": "tc-v01-016",
+          "input": "改善案をいくつか発散してから比較したいです。",
+          "lane": "same_operation_different_base",
+          "predicted": {
+            "base_id": 120,
+            "intensity": "medium",
+            "operation": "route",
+            "stance": "clarify"
+          }
+        }
+      ],
+      "group_id": "generate_across_bases",
+      "metrics": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.5
+      }
+    },
+    {
+      "errors": [
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "high",
+            "operation": "verify",
+            "stance": "challenge"
+          },
+          "id": "tc-v01-002",
+          "input": "Review this migration plan and push back hard on unsafe assumptions.",
+          "lane": "same_base_different_stance",
+          "predicted": {
+            "base_id": 130,
+            "intensity": "hold",
+            "operation": "route",
+            "stance": "clarify"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "hold",
+            "operation": "verify",
+            "stance": "clarify"
+          },
+          "id": "tc-v01-003",
+          "input": "Review this migration plan, but ask first if the database is unknown.",
+          "lane": "same_base_different_stance",
+          "predicted": {
+            "base_id": 130,
+            "intensity": "hold",
+            "operation": "route",
+            "stance": "clarify"
+          }
+        },
+        {
+          "expected": {
+            "base_id": 140,
+            "intensity": "medium",
+            "operation": "verify",
+            "stance": "empathize"
+          },
+          "id": "tc-v01-004",
+          "input": "この設計を、きつすぎない言い方でレビューしてください。",
+          "lane": "same_base_different_stance",
+          "predicted": {
+            "base_id": 150,
+            "intensity": "low",
+            "operation": "remember",
+            "stance": "neutral"
+          }
+        }
+      ],
+      "group_id": "verify_stance_variants",
+      "metrics": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      }
+    }
+  ],
+  "sample_pool_group_holdout_low_metrics": {
+    "base_accuracy": 0.21875,
+    "full_code_accuracy": 0.125,
+    "intensity_accuracy": 0.65625,
+    "operation_accuracy": 0.34375,
+    "stance_accuracy": 0.34375
+  },
+  "schema_version": "thought-color-low-score-review.v0.1",
+  "source_reports": [
+    "reports\\thought_color_sample_pool_eval_v0_1.json",
+    "reports\\thought_color_comparison_v0_1.json"
+  ],
+  "thresholds": {
+    "low_group_base_accuracy_lte": 0.25,
+    "low_group_full_code_accuracy_lte": 0.0,
+    "low_intent_f1_lt": 0.75,
+    "low_intent_recall_lt": 0.75
+  }
+}

@@ -16,6 +16,7 @@ Discipline: trained ONLY on human-approved, intent-labelled examples; never
 on the measurement campaign.
 """
 
+import hashlib
 import json
 import math
 import random
@@ -33,6 +34,7 @@ DEFAULT_DIMENSION = 2048
 DEFAULT_EPOCHS = 24
 DEFAULT_LEARNING_RATE = 0.35
 DEFAULT_SEED = 17
+INTENT_CORPUS_QUARANTINE_SCHEMA_VERSION = "intent-corpus-quarantine.v1"
 
 
 @dataclass(frozen=True)
@@ -194,10 +196,64 @@ class IntentModel:
         )
 
 
-def load_intent_corpus(path: str | Path) -> List[Dict[str, Any]]:
-    """Load approved examples from an intent-training-corpus.v1 file."""
+def _active_quarantine_payload(path: Path) -> Dict[str, Any] | None:
+    quarantine_path = path.with_name("intent_training_corpus_quarantine_v1.json")
+    if not quarantine_path.exists():
+        return None
+    payload = json.loads(quarantine_path.read_text(encoding="utf-8"))
+    if payload.get("schema_version") != INTENT_CORPUS_QUARANTINE_SCHEMA_VERSION:
+        raise ValueError("unsupported intent corpus quarantine schema")
+    if payload.get("status") != "active":
+        return None
+    return payload
 
-    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+
+def _active_quarantine_indices(path: Path) -> set[int]:
+    payload = _active_quarantine_payload(path)
+    if payload is None:
+        return set()
+    indices: set[int] = set()
+    for entry in payload.get("entries", []):
+        index = entry.get("corpus_index")
+        if isinstance(index, bool) or not isinstance(index, int) or index < 1:
+            raise ValueError("quarantine entry corpus_index must be positive int")
+        indices.add(index)
+    return indices
+
+
+def _verify_quarantine_entries(
+    payload: Mapping[str, Any] | None,
+    examples: Sequence[Mapping[str, Any]],
+) -> None:
+    if payload is None:
+        return
+    for entry in payload.get("entries", []):
+        index = int(entry["corpus_index"])
+        if index > len(examples):
+            raise ValueError("quarantine entry corpus_index is out of range")
+        example = examples[index - 1]
+        expected_hash = entry.get("input_sha256")
+        actual_hash = hashlib.sha256(
+            str(example["input"]).encode("utf-8")
+        ).hexdigest()
+        if expected_hash != actual_hash:
+            raise ValueError(
+                f"quarantine entry hash mismatch at corpus_index {index}"
+            )
+
+
+def load_intent_corpus(path: str | Path) -> List[Dict[str, Any]]:
+    """Load approved, non-quarantined examples from an intent corpus."""
+
+    corpus_path = Path(path)
+    payload = json.loads(corpus_path.read_text(encoding="utf-8"))
     if payload.get("schema_version") != "intent-training-corpus.v1":
         raise ValueError("unsupported intent training corpus schema")
-    return [e for e in payload["examples"] if e["review_status"] == "approved"]
+    quarantine_payload = _active_quarantine_payload(corpus_path)
+    quarantined_indices = _active_quarantine_indices(corpus_path)
+    _verify_quarantine_entries(quarantine_payload, payload["examples"])
+    return [
+        e
+        for index, e in enumerate(payload["examples"], start=1)
+        if e["review_status"] == "approved" and index not in quarantined_indices
+    ]

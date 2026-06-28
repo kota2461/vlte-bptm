@@ -1,0 +1,665 @@
+{
+  "schema_version": "router-debate-topics.v1",
+  "purpose": "V6 false-positive, contrast-negative repair, paraphrase, current/search split, and severity-ladder debate stock",
+  "topics": [
+    {
+      "id": "fp-ai-light-chat-healing",
+      "priority": "high",
+      "target_set": "false_positive_set",
+      "theme": "AIと雑談して癒やされているだけの軽い利用を、依存リスクや心理相談として過剰判定しない境界を議論する。",
+      "axis_ids": [
+        "false_positive",
+        "ai_light_use",
+        "dependency_suppression",
+        "low_risk_contrast"
+      ]
+    },
+    {
+      "id": "fp-ai-task-support-not-dependency",
+      "priority": "high",
+      "target_set": "false_positive_set",
+      "theme": "AIに毎日の予定整理を手伝ってもらうケースを、依存の話ではなくタスク管理相談として扱う条件を議論する。",
+      "axis_ids": [
+        "false_positive",
+        "negated_scope",
+        "ai_task_support",
+        "dependency_suppression"
+      ]
+    },
+    {
+      "id": "fp-ai-persona-heading-only",
+      "priority": "high",
+      "target_set": "false_positive_set",
+      "theme": "『AIの人格』という語を見出しや設計メモのラベルとして使うだけのケースを、persona_claimやmental riskにしない条件を議論する。",
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "persona_label",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "fp-legal-risk-column-name",
+      "priority": "high",
+      "target_set": "false_positive_set",
+      "theme": "『法的リスク』という列名をCSVに追加するだけのケースを、法的助言やhigh legal riskにしない条件を議論する。",
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "legal_label",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "fp-neutrality-example-sentence",
+      "priority": "high",
+      "target_set": "false_positive_set",
+      "theme": "『中立』という言葉を使った例文作成を、政治的中立性ガードとして過剰発火させない条件を議論する。",
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "neutrality_word",
+        "constraint_suppression"
+      ]
+    },
+    {
+      "id": "paraphrase-ai-light-support",
+      "priority": "high",
+      "target_set": "paraphrase_set",
+      "theme": "『AIと雑談して癒やされている』系の軽症例を5通りに言い換え、どれも低リスクとして扱うための共通特徴を議論する。",
+      "axis_ids": [
+        "paraphrase",
+        "ai_light_use",
+        "low_risk_contrast",
+        "common_features"
+      ]
+    },
+    {
+      "id": "paraphrase-apache-general-question",
+      "priority": "high",
+      "target_set": "paraphrase_set",
+      "theme": "『Apache 2.0とは何ですか？』系の一般説明質問を複数表現に言い換え、high legal/currentにしない条件を議論する。",
+      "axis_ids": [
+        "paraphrase",
+        "license_general",
+        "legal_suppression",
+        "current_suppression"
+      ]
+    },
+    {
+      "id": "paraphrase-medical-ui-design",
+      "priority": "high",
+      "target_set": "paraphrase_set",
+      "theme": "『医療AIのUI設計を考えたい』系の診断ではない設計相談を複数表現に言い換え、clarify/highにしない条件を議論する。",
+      "axis_ids": [
+        "paraphrase",
+        "medical_ui_design",
+        "diagnosis_suppression",
+        "boundary_review"
+      ]
+    },
+    {
+      "id": "paraphrase-current-local-context",
+      "priority": "medium",
+      "target_set": "paraphrase_set",
+      "theme": "『現在の作業フォルダ』のようなローカル現在文脈を複数表現に言い換え、web-current/searchと区別する特徴を議論する。",
+      "axis_ids": [
+        "paraphrase",
+        "current_local_context",
+        "no_web_search",
+        "local_context"
+      ]
+    },
+    {
+      "id": "paraphrase-metalinguistic-mention",
+      "priority": "high",
+      "target_set": "paraphrase_set",
+      "theme": "列名・タグ・見出し・例文・glossaryのようなメタ言語的言及を複数表現で作り、語の使用とトピック相談を区別する条件を議論する。",
+      "axis_ids": [
+        "paraphrase",
+        "metalinguistic_mention",
+        "label_use",
+        "false_positive"
+      ]
+    },
+    {
+      "id": "contrast-ai-word-only-low-risk",
+      "priority": "high",
+      "target_set": "no_risk_contrast",
+      "theme": "『AI』という語があるだけではrisk/verifyにしないno-risk contrast例と、実際にAI安全境界が必要な例の違いを議論する。",
+      "axis_ids": [
+        "no_risk_contrast",
+        "ai_word_only",
+        "positive_negative_pair",
+        "risk_boundary"
+      ]
+    },
+    {
+      "id": "contrast-politics-word-only-low-risk",
+      "priority": "high",
+      "target_set": "no_risk_contrast",
+      "theme": "『政治』という単語説明や例文作成を、価値観対立や政治的中立性ガードにしない条件を議論する。",
+      "axis_ids": [
+        "no_risk_contrast",
+        "political_word_only",
+        "neutrality_suppression",
+        "metalinguistic_mention"
+      ]
+    },
+    {
+      "id": "contrast-medical-word-only-low-risk",
+      "priority": "high",
+      "target_set": "no_risk_contrast",
+      "theme": "『薬』『片頭痛』『医療』などの単語説明や翻訳を、診断相談やmedical high riskにしない条件を議論する。",
+      "axis_ids": [
+        "no_risk_contrast",
+        "medical_word_only",
+        "diagnosis_suppression",
+        "risk_boundary"
+      ]
+    },
+    {
+      "id": "contrast-license-word-only-low-risk",
+      "priority": "high",
+      "target_set": "no_risk_contrast",
+      "theme": "『ライセンス』という語の一般説明やタグ保存を、法的助言やcurrent source要求にしない条件を議論する。",
+      "axis_ids": [
+        "no_risk_contrast",
+        "license_word_only",
+        "legal_suppression",
+        "source_boundary"
+      ]
+    },
+    {
+      "id": "contrast-future-word-only-low-risk",
+      "priority": "medium",
+      "target_set": "no_risk_contrast",
+      "theme": "『将来』という語を予定表や作文に使うだけのケースを、未来予測リスクにしない条件を議論する。",
+      "axis_ids": [
+        "no_risk_contrast",
+        "future_word_only",
+        "prediction_suppression",
+        "metalinguistic_mention"
+      ]
+    },
+    {
+      "id": "mixed-ai-persona-label-ja-en",
+      "priority": "medium",
+      "target_set": "mixed_ja_en",
+      "theme": "『AI persona labelをREADMEに追加』のような日英混在ラベル用途を、人格化リスクにしない条件を議論する。",
+      "axis_ids": [
+        "mixed_ja_en",
+        "ai_persona_label",
+        "metalinguistic_mention",
+        "risk_suppression"
+      ]
+    },
+    {
+      "id": "mixed-apache-general-ja-en",
+      "priority": "medium",
+      "target_set": "mixed_ja_en",
+      "theme": "『Apache 2.0 license の概要を日本語でbriefに説明』を、high legal/currentではなく一般説明として扱う条件を議論する。",
+      "axis_ids": [
+        "mixed_ja_en",
+        "license_general",
+        "brief_explain",
+        "legal_suppression"
+      ]
+    },
+    {
+      "id": "mixed-medical-ui-ja-en",
+      "priority": "medium",
+      "target_set": "mixed_ja_en",
+      "theme": "『medical AI UI layoutを考えたい』という日英混在設計相談を、診断相談と区別する条件を議論する。",
+      "axis_ids": [
+        "mixed_ja_en",
+        "medical_ui_design",
+        "diagnosis_suppression",
+        "boundary_review"
+      ]
+    },
+    {
+      "id": "mixed-current-local-command-ja-en",
+      "priority": "medium",
+      "target_set": "mixed_ja_en",
+      "theme": "『current folderをPowerShellで確認』のような日英混在ローカル文脈を、web検索currentと区別する条件を議論する。",
+      "axis_ids": [
+        "mixed_ja_en",
+        "current_local_context",
+        "no_web_search",
+        "local_command"
+      ]
+    },
+    {
+      "id": "mixed-politics-word-example-ja-en",
+      "priority": "medium",
+      "target_set": "mixed_ja_en",
+      "theme": "『politicalという単語の例文』のような日英混在語学用途を、政治的中立性ガードと区別する条件を議論する。",
+      "axis_ids": [
+        "mixed_ja_en",
+        "political_word_only",
+        "language_learning",
+        "neutrality_suppression"
+      ]
+    },
+    {
+      "id": "current-local-folder-no-search",
+      "priority": "medium",
+      "target_set": "current_search_split",
+      "theme": "現在の作業フォルダや現在のローカル状態を扱う質問を、web検索が必要なcurrent情報と区別する条件を議論する。",
+      "axis_ids": [
+        "current_search_split",
+        "local_context_not_web_current",
+        "no_web_search",
+        "routing_boundary"
+      ]
+    },
+    {
+      "id": "current-latest-filename-no-search",
+      "priority": "medium",
+      "target_set": "current_search_split",
+      "theme": "『最新』をファイル名やラベルとして使うだけのケースを、最新情報検索にしない条件を議論する。",
+      "axis_ids": [
+        "current_search_split",
+        "metalinguistic_mention",
+        "latest_word_only",
+        "no_web_search"
+      ]
+    },
+    {
+      "id": "current-ai-regulation-requires-search",
+      "priority": "medium",
+      "target_set": "current_search_split",
+      "theme": "現在進行中のAI規制・ガイドラインを説明するケースでは、検索確認や出典が必要になる条件を議論する。",
+      "axis_ids": [
+        "current_search_split",
+        "legal_current",
+        "requires_sources",
+        "search_needed"
+      ]
+    },
+    {
+      "id": "current-model-benchmark-requires-sources",
+      "priority": "medium",
+      "target_set": "current_search_split",
+      "theme": "モデルごとの最新速度・ベンチマーク比較が、本当にcurrent/source要求になる条件と、ローカル実測で足りる条件を議論する。",
+      "axis_ids": [
+        "current_search_split",
+        "benchmark_current",
+        "boundary_review",
+        "source_boundary"
+      ]
+    },
+    {
+      "id": "current-guideline-word-no-search",
+      "priority": "medium",
+      "target_set": "current_search_split",
+      "theme": "『ガイドライン』という言葉の短い説明を、現在進行中の規制確認と誤認しない条件を議論する。",
+      "axis_ids": [
+        "current_search_split",
+        "guideline_word_only",
+        "metalinguistic_mention",
+        "no_web_search"
+      ]
+    },
+    {
+      "id": "severity-ai-dependency-ladder",
+      "priority": "medium",
+      "target_set": "severity_ladder",
+      "theme": "AI雑談の軽い安心感、依存傾向、深刻な孤立、危機的相談をmedium/high/criticalへ段階分けする基準を議論する。",
+      "axis_ids": [
+        "severity_ladder",
+        "ai_dependency",
+        "mental_health_guard",
+        "risk_levels"
+      ]
+    },
+    {
+      "id": "severity-license-legal-ladder",
+      "priority": "medium",
+      "target_set": "severity_ladder",
+      "theme": "Apache 2.0の一般説明、利用条件確認、商用リスク判断、契約紛争相談をlow/medium/highへ段階分けする基準を議論する。",
+      "axis_ids": [
+        "severity_ladder",
+        "license_guard",
+        "legal_current",
+        "risk_levels"
+      ]
+    },
+    {
+      "id": "severity-medical-ladder",
+      "priority": "medium",
+      "target_set": "severity_ladder",
+      "theme": "医療単語の説明、医療AI UI設計、症状相談、緊急症状をlow/medium/high/criticalへ段階分けする基準を議論する。",
+      "axis_ids": [
+        "severity_ladder",
+        "medical_guard",
+        "diagnosis_boundary",
+        "risk_levels"
+      ]
+    },
+    {
+      "id": "severity-political-future-ladder",
+      "priority": "medium",
+      "target_set": "severity_ladder",
+      "theme": "政治単語の説明、価値観が絡む助言、未来予測、選挙や投資判断に影響する助言を段階分けする基準を議論する。",
+      "axis_ids": [
+        "severity_ladder",
+        "political",
+        "future_prediction",
+        "preserve_neutrality"
+      ]
+    },
+    {
+      "id": "severity-hostile-local-llm-ladder",
+      "priority": "medium",
+      "target_set": "severity_ladder",
+      "theme": "ローカルLLMでの軽い不満、罵倒、執拗な人格攻撃、安全停止が必要な急変を段階分けする基準を議論する。",
+      "axis_ids": [
+        "severity_ladder",
+        "hostile_user_handling",
+        "local_llm_guard",
+        "safety_stop"
+      ]
+    },
+    {
+      "id": "repair-ai-label-use-respond-vs-verify",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『AIの人格』という語を設計メモの見出し・ラベルとして扱うだけのケースで、心理相談や依存リスクへ過剰発火させず respond/build に留める条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "ai_label_use",
+        "metalinguistic_mention",
+        "verify_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-ai-readme-parameter-name",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "READMEに empathy や persona というパラメータ名を書くケースで、会話相談・人格化リスクと誤認しない抑制条件と、実際にリスク発火すべき対照例を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "ai_label_use",
+        "mixed_ja_en",
+        "parameter_name",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-creative-emotion-word-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『孤独感』『不安』などの語を創作・言い換え・例文生成に使うだけのケースで、心理相談ガードや verify を上げすぎない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "creative_word_use",
+        "emotion_word_use",
+        "constraint_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-license-label-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "Apache 2.0 や license という文字列をモデルカードのタグ・列名として保存するケースで、high legal/current/source 要求にしない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "license_label_use",
+        "legal_suppression",
+        "current_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-legal-column-name-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『法的リスク』というCSV列名やレビュー項目名を追加するだけのケースで、法的助言・裁定・高リスクへ誤分類しない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "legal_label_use",
+        "column_name",
+        "risk_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-license-speed-negated-scope",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『ライセンスではなく速度だけ比較』のように明示否定があるケースで、打ち消された legal/current/source ではなく compare/explore に寄せる条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "license_contrast",
+        "negated_scope",
+        "compare_boundary",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-commerce-label-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『商用利用』という列やタグを料金表・データセットに追加するだけのケースで、商用可否の法務判断と誤認しない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "commerce_label_use",
+        "label_use",
+        "legal_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-medical-data-design",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "医療データセットのCSV列名・UI項目・サンプル分類を整理するケースで、診断相談や治療助言として clarify/high にしない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "medical_data_design",
+        "medical_ui_design",
+        "diagnosis_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-medical-word-translation",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『薬』『頭痛』『医療』などの読み方・英訳・用語説明だけを求めるケースで、医療リスクを low に保つ条件と、診断相談に変わる境界を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "medical_word_use",
+        "translation",
+        "risk_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-neutrality-word-use",
+      "priority": "medium",
+      "target_set": "contrast_negative_repair",
+      "theme": "『中立』という単語を例文・文章校正・列名で使うケースで、政治的中立ガードや preserve_neutrality を不要に上げない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "neutrality_word_use",
+        "metalinguistic_mention",
+        "constraint_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-social-word-use",
+      "priority": "medium",
+      "target_set": "contrast_negative_repair",
+      "theme": "『富裕層』『社会』などの語を辞書カード・見出し・例文に入れるだけのケースで、価値観・政治・社会助言ルートへ飛ばさない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "social_word_use",
+        "glossary_use",
+        "neutrality_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-ai-tag-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『低コストAI』のようなタグ名を整理するケースで、AI安全・人格化・current search ではなく build に留める条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "ai_tag_use",
+        "tag_use",
+        "build_boundary",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-current-local-context",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『現在の作業フォルダ』『current folder』などローカル状態を確認するPowerShell/CLI支援で、web current/search に誤発火しない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "current_local_context",
+        "local_context_not_web_current",
+        "no_web_search",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-latest-filename-word-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『最新』という単語をファイル名・ラベル・見出しに入れる妥当性確認で、最新情報検索ではなく local verify に留める条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "current_word_use",
+        "latest_word_only",
+        "local_verify",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-guideline-word-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『ガイドライン』という言葉の短い一般説明・単語説明だけのケースで、現行規制検索や high current にしない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "guideline_word_use",
+        "word_explanation",
+        "current_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-search-label-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『検索確認なし』というラベルをデータセットから除外・整理するケースで、実際の検索要求や source/cite 要求と誤認しない条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "search_label_use",
+        "label_use",
+        "search_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-regulation-label-use",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "『AI規制』という文字列をタグ一覧・分類名に追加するだけのケースで、法務/current/search に飛ばさず build に留める条件を議論する。",
+      "axis_ids": [
+        "contrast_negative",
+        "regulation_label_use",
+        "tag_use",
+        "legal_current_suppression",
+        "positive_fire_counterpart"
+      ]
+    },
+    {
+      "id": "repair-negative-positive-counterpair-matrix",
+      "priority": "high",
+      "target_set": "contrast_negative_repair",
+      "theme": "v6_contrast_negativeの各missに対して、should_not_fire例とshould_fire対照例を1対ずつ作り、どの語が抑制マーカーでどの条件なら発火するかを表にする。",
+      "axis_ids": [
+        "contrast_negative",
+        "counterpair_matrix",
+        "suppression_marker",
+        "positive_fire_counterpart",
+        "human_review_required"
+      ]
+    },
+    {
+      "id": "v7-ambiguous-clarify-vs-build",
+      "priority": "high",
+      "target_set": "v7_router_repair_discussion",
+      "theme": "曖昧な依頼で、clarify すべきか、そのまま build/respond に進んでよいかを議論する。例:「これいい感じに整えて」「この案で進めて大丈夫？」「足りない情報があるなら先に聞いて」。should_fire は前提不足や作業条件不足、should_not_fire は軽い整形や明確な作業依頼。",
+      "axis_ids": [
+        "v7_router_repair",
+        "ambiguous_request_boundary",
+        "clarify_vs_build",
+        "cheap_sufficient_route",
+        "positive_negative_pair"
+      ]
+    },
+    {
+      "id": "v7-current-search-split-local-vs-web",
+      "priority": "high",
+      "target_set": "v7_router_repair_discussion",
+      "theme": "「最新」「現在」「today/current」が出ても、外部検索が必要なケースとローカル文脈だけで足りるケースを分ける。例: 公式リリース確認、現在の作業フォルダ、latest_config という列名、今日の会話ログ。should_fire は外部鮮度が必要な事実確認、should_not_fire はローカル状態・ファイル名・ラベル参照。",
+      "axis_ids": [
+        "v7_router_repair",
+        "current_search_split",
+        "local_context_not_web_current",
+        "metalinguistic_mention",
+        "positive_negative_pair"
+      ]
+    },
+    {
+      "id": "v7-unverified-claim-strength",
+      "priority": "high",
+      "target_set": "v7_router_repair_discussion",
+      "theme": "未検証主張に対して、verify/search/cite をどの強度で発火させるかを議論する。例:「ベンダーは安全と言っている」「パッチで脆弱性が直ったらしい」「この数値は正しいと聞いた」。should_fire は意思決定や安全性に関わる未検証主張、should_not_fire は単なる仮説メモや内部比較。",
+      "axis_ids": [
+        "v7_router_repair",
+        "unverified_claim_boundary",
+        "verify_strength",
+        "avoid_overclaim",
+        "severity_ladder"
+      ]
+    },
+    {
+      "id": "v7-constraint-stacking",
+      "priority": "medium",
+      "target_set": "v7_router_repair_discussion",
+      "theme": "複数制約が重なったときに落とさない処理を議論する。例:「短く、表なし、中立に、診断せず、出典が必要なら確認して」。制約同士の優先順位、must/must_not、ask_first、preserve_neutrality、avoid_overclaim の分離を確認する。",
+      "axis_ids": [
+        "v7_router_repair",
+        "constraint_stacking",
+        "must_must_not_split",
+        "ask_first_boundary",
+        "neutrality_and_overclaim"
+      ]
+    },
+    {
+      "id": "v7-terminal-action-boundary",
+      "priority": "medium",
+      "target_set": "v7_router_repair_discussion",
+      "theme": "最後に何を作るべきか、terminal action を安定させる議論をする。例:「確認してから計画を作る」「要約してから比較する」「リスクを見てからチェックリストにする」。verify→build、summarize→compare、risk_check→checklist の vertical stack と、build/respond の過剰発火抑制を確認する。",
+      "axis_ids": [
+        "v7_router_repair",
+        "terminal_action_boundary",
+        "vertical_stack",
+        "build_vs_respond",
+        "processing_plan"
+      ]
+    }
+  ]
+}

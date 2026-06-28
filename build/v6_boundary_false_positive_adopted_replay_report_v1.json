@@ -1,0 +1,22 @@
+{
+  "schema_version": "v6-boundary-false-positive-adopted-replay-report.v1",
+  "generated_at": "2026-06-28T07:52:04.047201+00:00",
+  "status": "completed_without_route_gaps",
+  "adoption_decision": "build/v6_boundary_false_positive_adoption_decision_v1.json",
+  "adopted_benchmark": "tests/fixtures/v6_boundary_false_positive_adopted_benchmark_v1.json",
+  "current_route_measurement_is_gate": false,
+  "sealed_fixture_used": false,
+  "measurement": {
+    "case_count": 15,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0
+  },
+  "errors": [],
+  "interpretation": "The adopted low-risk boundary lane currently matches route(). It remains non-sealed replay evidence, not a sealed gate.",
+  "next_step": "Keep this lane as replay coverage while measuring broader V6 behavior."
+}

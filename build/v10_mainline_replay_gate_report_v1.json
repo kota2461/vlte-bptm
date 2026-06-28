@@ -1,0 +1,81 @@
+{
+  "schema_version": "v10-mainline-replay-gate-report.v1",
+  "generated_at": "2026-06-28T07:52:00.521269+00:00",
+  "status": "passed",
+  "passed": true,
+  "sources": {
+    "v9_nonsealed_replay_gate": "build\\v9_nonsealed_replay_gate_report_v1.json",
+    "v10_bridge_decision": "build\\v10_thought_color_bridge_isolated_adoption_decision_v1.json",
+    "v10_bridge_isolated_replay": "build\\v10_thought_color_bridge_isolated_replay_report_v1.json",
+    "v10_bridge_benchmark": "tests\\fixtures\\v10_thought_color_bridge_isolated_benchmark_v1.json"
+  },
+  "policy": {
+    "sealed_fixture_opened_now": false,
+    "sealed_measurement_used_for_tuning": false,
+    "sealed_v9_text_used": false,
+    "sealed_v9_labels_used": false,
+    "thought_color_source_scope": "experiment_only",
+    "thought_color_source_mainline_training_allowed": false,
+    "v10_bridge_mainline_training_allowed": false,
+    "v10_bridge_mainline_allowed_use": "router_generalization_and_nonsealed_replay_only",
+    "raw_thought_color_samples_direct_training_allowed": false,
+    "isolated_rewrite_fixture_training_allowed": false,
+    "isolated_replay_was_gate": false,
+    "mainline_adoption_user_confirmed": true,
+    "nonsealed_current_route_measurement_is_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_v10_required_before_adjudication": true
+  },
+  "summary": {
+    "dependency_v9_gate_passed": true,
+    "dependency_v9_required_error_count": 0,
+    "required_lane_count": 1,
+    "required_passed_lane_count": 1,
+    "required_error_count": 0,
+    "total_case_count": 72,
+    "v10_bridge_case_count": 72,
+    "v10_bridge_error_count": 0,
+    "ready_for_step4_sealed_v10_rotation_review": true
+  },
+  "required_lanes": [
+    {
+      "name": "v10_thought_color_bridge_mainline_replay",
+      "source": "tests\\fixtures\\v10_thought_color_bridge_isolated_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "category_counts": {
+        "constraint_bridge": 18,
+        "information_state_bridge": 14,
+        "intent_boundary_bridge": 10,
+        "operation_bridge": 14,
+        "risk_bridge": 16
+      },
+      "passed_exact": true,
+      "measurement": {
+        "case_count": 72,
+        "valid_packet_rate": 1.0,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    }
+  ],
+  "contract": {
+    "can_use_for_v10_roadmap_step3": true,
+    "can_use_as_training_data": false,
+    "can_use_as_sealed_measurement": false,
+    "can_use_for_same_cycle_promotion": false,
+    "requires_fresh_sealed_v10_before_measurement": true,
+    "full_regression_command": "python -B -m pytest"
+  },
+  "roadmap_decision": {
+    "can_advance": true,
+    "advance_to": "sealed_v10_rotation_review",
+    "blocked_reasons": []
+  },
+  "next_action": "roadmap_v10_step4_sealed_rotation_review"
+}

@@ -1,0 +1,692 @@
+{
+  "base_catalog": [
+    {
+      "base_id": 100,
+      "base_label": "direct_answer",
+      "description": "Short factual answer or direct response."
+    },
+    {
+      "base_id": 110,
+      "base_label": "mechanism_explanation",
+      "description": "Explain why or how something works."
+    },
+    {
+      "base_id": 120,
+      "base_label": "clarification_gate",
+      "description": "Ask for missing information or route uncertainty."
+    },
+    {
+      "base_id": 130,
+      "base_label": "artifact_generation",
+      "description": "Create, draft, implement, or structure an artifact."
+    },
+    {
+      "base_id": 140,
+      "base_label": "verification_review",
+      "description": "Check, review, validate, or challenge an artifact or claim."
+    },
+    {
+      "base_id": 150,
+      "base_label": "summary_compression",
+      "description": "Compress, recap, or preserve key points."
+    },
+    {
+      "base_id": 160,
+      "base_label": "exploration_tradeoff",
+      "description": "Compare options, explore tradeoffs, or brainstorm."
+    },
+    {
+      "base_id": 170,
+      "base_label": "supportive_processing",
+      "description": "Support the user emotionally while organizing next steps."
+    }
+  ],
+  "cases": [
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "group_id": "verify_stance_variants",
+      "id": "tc-v01-001",
+      "input": "Review this migration plan for obvious issues.",
+      "judgment_questions": [
+        "Should this stay in the verification_review base?",
+        "Is the stance neutral rather than confrontational?"
+      ],
+      "lane": "same_base_different_stance",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "group_id": "verify_stance_variants",
+      "id": "tc-v01-002",
+      "input": "Review this migration plan and push back hard on unsafe assumptions.",
+      "judgment_questions": [
+        "Should this share the verification_review base with a normal review?",
+        "Does the modifier need challenge and high intensity?"
+      ],
+      "lane": "same_base_different_stance",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "group_id": "verify_stance_variants",
+      "id": "tc-v01-003",
+      "input": "Review this migration plan, but ask first if the database is unknown.",
+      "judgment_questions": [
+        "Should the base remain verification_review despite needing a question?",
+        "Does hold intensity fit because execution depends on missing context?"
+      ],
+      "lane": "same_base_different_stance",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "empathize"
+      },
+      "group_id": "verify_stance_variants",
+      "id": "tc-v01-004",
+      "input": "Review this design gently without being too harsh.",
+      "judgment_questions": [
+        "レビューの base を保ったまま、姿勢だけ empathize に寄せるべきか？",
+        "出力対象は検証であり、要約や生成ではないか？"
+      ],
+      "lane": "same_base_different_stance",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "group_id": "build_operation_variants",
+      "id": "tc-v01-005",
+      "input": "Create a release checklist for a small web app.",
+      "judgment_questions": [
+        "Should this be artifact_generation as a coarse base?",
+        "Is generate the dominant operation?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "group_id": "build_operation_variants",
+      "id": "tc-v01-006",
+      "input": "Create a release checklist focused only on verification gates.",
+      "judgment_questions": [
+        "Should the base remain artifact_generation because a checklist is being created?",
+        "Does the operation shift to verify because the checklist is gate-focused?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "group_id": "build_operation_variants",
+      "id": "tc-v01-007",
+      "input": "Turn these recurring deploy notes into a reusable template.",
+      "judgment_questions": [
+        "Should this collide with other artifact_generation requests?",
+        "Does remember fit because past notes are being preserved into a template?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "group_id": "build_operation_variants",
+      "id": "tc-v01-008",
+      "input": "Break these tasks into clear owner-ready sections.",
+      "judgment_questions": [
+        "成果物を作る base として artifact_generation に置けるか？",
+        "operation は generate より route に寄るか？"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "compare",
+        "stance": "explore"
+      },
+      "group_id": "explore_operation_variants",
+      "id": "tc-v01-009",
+      "input": "Compare SQLite and Postgres for a personal notes app.",
+      "judgment_questions": [
+        "Should this share a base with other option-exploration requests?",
+        "Is compare the strongest operation?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "group_id": "explore_operation_variants",
+      "id": "tc-v01-010",
+      "input": "Brainstorm five storage approaches for a personal notes app.",
+      "judgment_questions": [
+        "Should this remain exploration_tradeoff rather than artifact_generation?",
+        "Does generate fit as a modifier because options are being produced?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "explore"
+      },
+      "group_id": "explore_operation_variants",
+      "id": "tc-v01-011",
+      "input": "Reason through the tradeoffs before recommending a storage option.",
+      "judgment_questions": [
+        "Should the base stay exploration_tradeoff?",
+        "Does reason fit better than compare or generate?"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "reserve"
+      },
+      "group_id": "explore_operation_variants",
+      "id": "tc-v01-012",
+      "input": "Compare the options while keeping the final decision reserved.",
+      "judgment_questions": [
+        "探索 base を保ちながら reserve/hold を使うべきか？",
+        "不確定要素を理由に base を clarification_gate へ移しすぎていないか？"
+      ],
+      "lane": "same_base_different_operation",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "group_id": "generate_across_bases",
+      "id": "tc-v01-013",
+      "input": "Write a short onboarding email for new contributors.",
+      "judgment_questions": [
+        "Should generate be shared with other creation-like requests?",
+        "Should the base be artifact_generation rather than exploration?"
+      ],
+      "lane": "same_operation_different_base",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "group_id": "generate_across_bases",
+      "id": "tc-v01-014",
+      "input": "Brainstorm three ways to reduce API latency.",
+      "judgment_questions": [
+        "Should operation share generate with artifact creation?",
+        "Should the base split to exploration_tradeoff because the output is options?"
+      ],
+      "lane": "same_operation_different_base",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "low",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "group_id": "generate_across_bases",
+      "id": "tc-v01-015",
+      "input": "Write three short ideas from the meeting.",
+      "judgment_questions": [
+        "質問案という成果物生成として扱えるか？",
+        "探索ではなく生成の base に置くべきか？"
+      ],
+      "lane": "same_operation_different_base",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "explore"
+      },
+      "group_id": "generate_across_bases",
+      "id": "tc-v01-016",
+      "input": "Brainstorm a few simple alternatives for reducing latency.",
+      "judgment_questions": [
+        "generate modifier は共有しつつ、base は探索に分けるべきか？",
+        "比較前の発散として operation は generate でよいか？"
+      ],
+      "lane": "same_operation_different_base",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "share_base",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "low",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "group_id": "summary_share_variants",
+      "id": "tc-v01-017",
+      "input": "Summarize this log briefly.",
+      "judgment_questions": [
+        "要約系として同じ base に衝突させてよいか？",
+        "細部保存より短縮が主目的か？"
+      ],
+      "lane": "collision_should_share",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "share_base",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "group_id": "summary_share_variants",
+      "id": "tc-v01-018",
+      "input": "Summarize the meeting notes in bullets.",
+      "judgment_questions": [
+        "Should this share a base with other summary requests?",
+        "Does remember fit because key points must be preserved?"
+      ],
+      "lane": "collision_should_share",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "high",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "group_id": "summary_share_variants",
+      "id": "tc-v01-019",
+      "input": "Compress the whole discussion into one dense paragraph.",
+      "judgment_questions": [
+        "圧縮の強さだけ intensity で分ければよいか？",
+        "base を別カテゴリへ細分化しすぎていないか？"
+      ],
+      "lane": "collision_should_share",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "clarify"
+      },
+      "group_id": "summary_share_variants",
+      "id": "tc-v01-020",
+      "input": "Recap the decisions, not every detail.",
+      "judgment_questions": [
+        "Should this share the summary_compression base?",
+        "Does the exclusion of details shift stance toward clarify?"
+      ],
+      "lane": "collision_should_share",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "group_id": "code_request_split",
+      "id": "tc-v01-021",
+      "input": "Review this code for bugs.",
+      "judgment_questions": [
+        "Should this split from explanation and rewrite requests about code?",
+        "Is verify the dominant modifier?"
+      ],
+      "lane": "collision_should_split",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "group_id": "code_request_split",
+      "id": "tc-v01-022",
+      "input": "Explain why this code is slow.",
+      "judgment_questions": [
+        "Should this split from code review despite sharing the word code?",
+        "Is reason the dominant operation?"
+      ],
+      "lane": "collision_should_split",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "group_id": "code_request_split",
+      "id": "tc-v01-023",
+      "input": "Rewrite this code into a small helper function.",
+      "judgment_questions": [
+        "Should this split from code review because a new artifact is requested?",
+        "Does generate fit better than verify?"
+      ],
+      "lane": "collision_should_split",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_base_split_modifier",
+      "expected": {
+        "base_id": 160,
+        "base_label": "exploration_tradeoff",
+        "intensity": "hold",
+        "operation": "compare",
+        "stance": "clarify"
+      },
+      "group_id": "missing_context_variants",
+      "id": "tc-v01-024",
+      "input": "Which database should I use?",
+      "judgment_questions": [
+        "Should this stay in exploration_tradeoff even though context is missing?",
+        "Does clarify/hold capture the missing decision criteria?"
+      ],
+      "lane": "missing_context",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "hold",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "group_id": "missing_context_variants",
+      "id": "tc-v01-025",
+      "input": "I need a migration plan, but I have not picked the database.",
+      "judgment_questions": [
+        "Should the base be artifact_generation because a plan is requested?",
+        "Do clarify and hold capture the missing database choice?"
+      ],
+      "lane": "missing_context",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "hold",
+        "operation": "verify",
+        "stance": "clarify"
+      },
+      "group_id": "missing_context_variants",
+      "id": "tc-v01-026",
+      "input": "Review this design, but the core requirement is still unclear.",
+      "judgment_questions": [
+        "base は verification_review に置き、前提未確定は modifier で見るべきか？",
+        "hold intensity が妥当か？"
+      ],
+      "lane": "missing_context",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "split_base",
+      "expected": {
+        "base_id": 120,
+        "base_label": "clarification_gate",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "clarify"
+      },
+      "group_id": "missing_context_variants",
+      "id": "tc-v01-027",
+      "input": "Ask me what information you need before answering.",
+      "judgment_questions": [
+        "Should this be clarification_gate as the base itself?",
+        "Is route the operation because the next step is deciding what to ask?"
+      ],
+      "lane": "missing_context",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "empathize"
+      },
+      "group_id": "empathy_across_bases",
+      "id": "tc-v01-028",
+      "input": "I'm frustrated; help me decide what to try next.",
+      "judgment_questions": [
+        "Should empathy be a modifier rather than erasing the action?",
+        "Is route the right operation for choosing next steps?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 150,
+        "base_label": "summary_compression",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "empathize"
+      },
+      "group_id": "empathy_across_bases",
+      "id": "tc-v01-029",
+      "input": "That feedback stung; summarize it gently.",
+      "judgment_questions": [
+        "Should the base remain summary_compression?",
+        "Does empathize modify tone without changing the base?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "group_id": "empathy_across_bases",
+      "id": "tc-v01-030",
+      "input": "I think my plan is wrong; challenge it kindly.",
+      "judgment_questions": [
+        "Should this stay in verification_review?",
+        "Does challenge fit even though the tone should be kind?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en"
+    },
+    {
+      "collision_policy": "share_modifier",
+      "expected": {
+        "base_id": 170,
+        "base_label": "supportive_processing",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "empathize"
+      },
+      "group_id": "empathy_across_bases",
+      "id": "tc-v01-031",
+      "input": "I am overwhelmed, so help me catch my breath and explain it clearly.",
+      "judgment_questions": [
+        "empathize は base ではなく stance としても見えるか？",
+        "整理する動きは reason operation でよいか？"
+      ],
+      "lane": "supportive_modifier",
+      "language": "ja"
+    },
+    {
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "high",
+        "operation": "verify",
+        "stance": "challenge"
+      },
+      "group_id": "empathy_across_bases",
+      "id": "tc-v01-032",
+      "input": "Don't reassure me; point out the hard risks.",
+      "judgment_questions": [
+        "Should this be verification_review rather than supportive_processing?",
+        "Do challenge and high intensity capture the requested posture?"
+      ],
+      "lane": "supportive_modifier",
+      "language": "en"
+    }
+  ],
+  "channel_labels": {
+    "intensity": [
+      "low",
+      "medium",
+      "high",
+      "hold"
+    ],
+    "operation": [
+      "respond",
+      "reason",
+      "compare",
+      "verify",
+      "generate",
+      "remember",
+      "route",
+      "reserve"
+    ],
+    "stance": [
+      "neutral",
+      "affirm",
+      "negate",
+      "explore",
+      "clarify",
+      "empathize",
+      "challenge",
+      "reserve"
+    ]
+  },
+  "created": "2026-06-26",
+  "purpose": "Dedicated samples for evaluating Base-2024 + Modifier Channels without forcing full Semantic Packet reconstruction.",
+  "rules": [
+    "base_id is a coarse meaning color and may intentionally collide.",
+    "stance, operation, and intensity are modifier channels, not a larger flat ID.",
+    "same-base samples should test whether useful collision is preserved.",
+    "same-modifier samples should test whether modifiers generalize across bases.",
+    "text judgment questions are for human or LLM rubric scoring, not hidden labels."
+  ],
+  "schema_version": "thought-color-sample-pool.v0.1"
+}

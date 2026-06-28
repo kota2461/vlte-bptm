@@ -1,6 +1,6 @@
 {
   "schema_version": "conversation-smoke-report.v1",
-  "generated_at": "2026-06-13T06:16:21.727881+00:00",
+  "generated_at": "2026-06-18T11:19:58.552144+00:00",
   "scope": "deterministic Semantic Adapter -> Processing Router -> Core shadow; answer generation is not evaluated",
   "active_sealed_v2_read": false,
   "case_count": 18,
@@ -244,7 +244,7 @@
       },
       "actual": {
         "intent": "verify",
-        "semantic_confidence": 0.8300000000000001,
+        "semantic_confidence": 0.86,
         "operations": [
           "verify",
           "search"
@@ -486,7 +486,7 @@
       },
       "actual": {
         "intent": "verify",
-        "semantic_confidence": 0.8300000000000001,
+        "semantic_confidence": 0.86,
         "operations": [
           "verify",
           "search"
@@ -495,7 +495,7 @@
           "missing_required_information": false,
           "contains_unverified_claims": false,
           "requires_current_information": true,
-          "multiple_intents": false
+          "multiple_intents": true
         },
         "risk": {
           "level": "high",

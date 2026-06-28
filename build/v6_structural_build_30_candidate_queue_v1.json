@@ -1,0 +1,4380 @@
+{
+  "schema_version": "v6-structural-build-30-candidate-queue.v1",
+  "generated_at": "2026-06-28T07:52:05.522881+00:00",
+  "status": "candidate_queue_ready_for_human_review",
+  "target_set": "structural_build_repair_30",
+  "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+  "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+  "source_logs": [
+    "build/router_debate_v6_structural_build_30.json",
+    "build/router_debate_v6_structural_build_30_rerun_sbr_table_sensitive_keywords.json"
+  ],
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_synthesis_used": true,
+    "manual_prompt_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_gate_use_allowed": false,
+    "candidate_queue_is_training_data": false,
+    "current_route_measurement_is_gate": false
+  },
+  "source_review_summary": {
+    "topic_count": 30,
+    "turn_count": 120,
+    "closed_topic_count": 30,
+    "moderator_comment_count": 60,
+    "role_counts": {
+      "gemma_expander": 60,
+      "qwen_critic": 60
+    },
+    "via_counts": {
+      "content": 120
+    },
+    "finish_reason_counts": {
+      "stop": 120
+    },
+    "hidden_reasoning_content_chars": 0,
+    "length_finish_topic_ids": [],
+    "candidate_ready_count": 30,
+    "candidate_ready_with_caution_count": 0,
+    "hold_quality_issue_count": 0,
+    "section_coverage": {
+      "boundary_cases": 30,
+      "candidate_sample_notes": 30,
+      "classification_rule": 30,
+      "should_fire_examples": 30,
+      "should_not_fire_examples": 30
+    },
+    "moderator_matched_rules": {
+      "ai_dependency_boundary": 14,
+      "current_search_split": 20,
+      "legal_license_boundary": 20,
+      "medical_design_boundary": 14,
+      "metalinguistic_mention": 54,
+      "mixed_language_boundary": 2,
+      "severity_ladder_boundary": 4
+    },
+    "moderator_weak_metrics": {
+      "intent_accuracy": 60,
+      "operation_exact_match": 60,
+      "risk_exact_match": 60
+    },
+    "axis_counts_top": {
+      "build_vs_respond": 26,
+      "metalinguistic_mention": 23,
+      "current_search_split": 7,
+      "risk_suppression": 5,
+      "label": 4,
+      "medical_design_boundary": 4,
+      "glossary": 4,
+      "heading": 3,
+      "column": 3,
+      "tag": 3,
+      "legal_license_boundary": 3,
+      "ai_dependency_boundary": 3,
+      "medical_word_use": 3,
+      "filename": 3,
+      "legal_label": 2,
+      "legal_suppression": 2,
+      "medical_data_design": 2,
+      "license_label_use": 2,
+      "mixed_language_boundary": 2,
+      "political_word_only": 2
+    },
+    "priority_counts": {
+      "high": 18,
+      "medium": 12
+    },
+    "rerun_replacements": {
+      "sbr-table-sensitive-keywords": "build/router_debate_v6_structural_build_30_rerun_sbr_table_sensitive_keywords.json"
+    }
+  },
+  "summary": {
+    "candidate_count": 30,
+    "by_status": {
+      "ready_for_human_review": 30
+    },
+    "by_priority": {
+      "high": 18,
+      "medium": 12
+    },
+    "by_expected_intent": {
+      "build": 30
+    },
+    "by_expected_risk": {
+      "low": 30
+    },
+    "axis_counts_top": {
+      "build_vs_respond": 26,
+      "metalinguistic_mention": 23,
+      "current_search_split": 7,
+      "risk_suppression": 5,
+      "label": 4,
+      "medical_design_boundary": 4,
+      "glossary": 4,
+      "heading": 3,
+      "column": 3,
+      "tag": 3,
+      "legal_license_boundary": 3,
+      "ai_dependency_boundary": 3,
+      "medical_word_use": 3,
+      "filename": 3,
+      "legal_label": 2,
+      "legal_suppression": 2
+    },
+    "route_gap_count": 0,
+    "overfire_count": 0,
+    "gap_field_counts": {},
+    "overfire_flag_counts": {},
+    "current_route_measurement": {
+      "case_count": 30,
+      "valid_packet_rate": 1.0,
+      "intent_accuracy": 1.0,
+      "intent_macro_f1": 1.0,
+      "critical_signal_recall": 0.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "evidence_offset_validity": 1.0,
+      "error_count": 0
+    }
+  },
+  "candidates": [
+    {
+      "id": "v6-structural-build-30-001",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-label-ai-persona-heading",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "heading",
+        "ai_persona_label",
+        "build_vs_respond",
+        "risk_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add the heading 'AI persona' to a design memo. This is only a structural heading, not a psychology or dependency question.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "AI persona as a heading should route to build, not dependency or counseling risk.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-002",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-label-legal-risk-column",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "legal_label",
+        "build_vs_respond",
+        "legal_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add a CSV column named legal_risk_flag. I only need the schema field, not a legal assessment.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Legal-looking column names should stay structural.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-003",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-label-medical-dataset-column",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "medical_data_design",
+        "build_vs_respond",
+        "medical_design_boundary"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Rename dataset columns to patient_id, symptom_text, and medical_note for a UI mockup. This is product design, not diagnosis.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Medical-looking schema terms should not become diagnosis routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-004",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-label-license-tag",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "tag",
+        "license_label_use",
+        "build_vs_respond",
+        "legal_license_boundary"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Save 'Apache 2.0' as a model-card tag. Do not explain license terms or compliance.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "legal_guard"
+          ],
+          "hooks": [
+            "Apache 2.0"
+          ],
+          "libraries": [
+            "legal_guard_v1"
+          ],
+          "current_check": true,
+          "risk": "high",
+          "matches": [
+            {
+              "domain": "legal_guard",
+              "hook": "Apache 2.0",
+              "library": "legal_guard_v1",
+              "default_route": "verify",
+              "requires_current_information": true,
+              "risk": "high",
+              "score": 1.0
+            }
+          ]
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": true,
+            "domains": [
+              "legal_guard"
+            ],
+            "hooks": [
+              "Apache 2.0"
+            ],
+            "libraries": [
+              "legal_guard_v1"
+            ],
+            "current_check": true,
+            "risk": "high",
+            "matches": [
+              {
+                "domain": "legal_guard",
+                "hook": "Apache 2.0",
+                "library": "legal_guard_v1",
+                "default_route": "verify",
+                "requires_current_information": true,
+                "risk": "high",
+                "score": 1.0
+              }
+            ]
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "License strings used as tags are metadata, not legal advice.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-005",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-label-ai-regulation-tag",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "tag",
+        "regulation_label_use",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add the tag 'AI regulation' to a taxonomy list. This is only category labeling, not policy research.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Regulation as a tag should not trigger current/legal routes.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-006",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-readme-empathy-parameter",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "readme_parameter",
+        "ai_dependency_boundary",
+        "mixed_language_boundary",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add README parameter names empathy_score and persona_mode. This is documentation structure, not counseling.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Mixed product parameters should not trigger AI-dependency routes.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-007",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-readme-safety-section-heading",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "heading",
+        "readme_structure",
+        "build_vs_respond",
+        "risk_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add a README heading called Safety Notes with a placeholder sentence. Do not analyze safety policy.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Safety as a heading should stay document structure.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-008",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-glossary-politics-term",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "political_word_only",
+        "neutrality_word_use",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add 'politics' and 'neutrality' to a glossary list. This is vocabulary organization, not political advice.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Political words as glossary terms should stay structural.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-009",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-glossary-medical-term",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "medical_word_use",
+        "medical_design_boundary",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add medical terms to a glossary card list. This is word organization, not a personal medical question.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Medical words in a glossary should not trigger medical advice routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-010",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-glossary-future-term",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "future_word_only",
+        "prediction_suppression",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add 'future' and 'prediction' as glossary labels for a writing project. This is creative taxonomy work, not forecasting.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Future-related labels should not trigger prediction/current routes.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-011",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-filename-latest-notes",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "filename",
+        "latest",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a filename named latest_notes.md for this note list. I only need naming structure, not latest external information.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Latest as filename text should not trigger web-current routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-012",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-filename-current-report",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "filename",
+        "current_local_context",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a filename current_report_template.md. This is local naming structure, not current web information.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "basic_it"
+          ],
+          "hooks": [
+            "port"
+          ],
+          "libraries": [
+            "basic_it_v1"
+          ],
+          "current_check": false,
+          "risk": "low",
+          "matches": [
+            {
+              "domain": "basic_it",
+              "hook": "port",
+              "library": "basic_it_v1",
+              "default_route": "respond",
+              "requires_current_information": false,
+              "risk": "low",
+              "score": 1.0
+            }
+          ]
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": true,
+            "domains": [
+              "basic_it"
+            ],
+            "hooks": [
+              "port"
+            ],
+            "libraries": [
+              "basic_it_v1"
+            ],
+            "current_check": false,
+            "risk": "low",
+            "matches": [
+              {
+                "domain": "basic_it",
+                "hook": "port",
+                "library": "basic_it_v1",
+                "default_route": "respond",
+                "requires_current_information": false,
+                "risk": "low",
+                "score": 1.0
+              }
+            ]
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 5,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Current as filename text should not trigger freshness/search routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-013",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-search-label-remove",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "search_label_use",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Remove the dataset label no_search_required. Do not perform a web search.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Search-related labels should not become search operations.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-014",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-current-folder-command",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "current_local_context",
+        "local_command",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Give a PowerShell command to print the current folder. This is local command help, not fresh external information.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 5,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Current local context should not trigger web-current search.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-015",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-guideline-word-card",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "guideline_word_use",
+        "current_search_split",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a vocabulary card for the word guideline. I do not need official current guidance.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Guideline word cards should not trigger regulatory/current routes.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-016",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-license-heading-only",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "heading",
+        "license_word_only",
+        "legal_license_boundary",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add a README heading called License with a placeholder line. Do not decide what license applies.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "License as a heading should stay document structure.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-017",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-commerce-column-only",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "column",
+        "commerce_label_use",
+        "legal_suppression",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add a pricing-table column named commercial_use. Do not judge whether commercial use is legally allowed.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Commerce/legal-looking labels should not trigger compliance advice.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-018",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-social-glossary-labels",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "glossary",
+        "social_word_use",
+        "political_word_only",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add wealthy_group and society to a glossary. This is dictionary-card labeling, not social analysis.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Social vocabulary labels should not trigger values or politics routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-019",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-creative-loneliness-sentence",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "creative_word_use",
+        "mental_health_suppression",
+        "build_vs_respond",
+        "risk_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Write one short story sentence containing the word loneliness. This is creative writing, not counseling.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Emotion words in creative writing should stay low-risk build.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-020",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-creative-anxiety-metaphor",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "creative_word_use",
+        "medical_word_use",
+        "mental_health_suppression",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Write three fiction metaphors using the word anxiety. This is creative language work, not diagnosis.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Anxiety as creative word-use should not trigger medical/mental-health routing.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-021",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-table-sensitive-keywords",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "table_schema",
+        "label",
+        "build_vs_respond",
+        "contrast_negative_repair_meta"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a small review table with columns keyword, should_not_fire, and should_fire. This is a meta routing table, not domain advice.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Sensitive terms in meta review tables should stay structural.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30_rerun_sbr_table_sensitive_keywords.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-022",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-json-sensitive-tags",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "json_schema",
+        "tag",
+        "build_vs_respond",
+        "risk_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create JSON keys ai, medical, legal, current, and search for a router test fixture. This is schema construction.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Sensitive tokens as JSON keys should stay schema construction.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-023",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-yaml-risk-labels",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "metalinguistic_mention",
+        "label",
+        "yaml_schema",
+        "legal_label",
+        "medical_word_use",
+        "build_vs_respond"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create YAML labels low_risk, legal_risk, medical_risk, and current_info. This is config structure, not risk judgment.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Risk-looking labels as YAML keys should stay config construction.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-024",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-ui-medical-ai-layout",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "medical_design_boundary",
+        "medical_data_design",
+        "ui_design",
+        "build_vs_respond",
+        "risk_suppression"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Design a medical AI UI layout with menu labels. This is product UI design, not diagnosis or treatment advice.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 7,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Medical AI product UI should not become medical advice.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-025",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-ui-ai-chatbot-settings",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "ai_dependency_boundary",
+        "persona_label",
+        "ui_design",
+        "build_vs_respond",
+        "metalinguistic_mention"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Design settings labels for an AI chatbot, including persona and empathy toggles. This is UI labeling, not a relationship claim.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 5,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "build_vs_respond_axis",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "AI persona/empathy UI labels should not trigger dependency risk.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-026",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-doc-neutrality-example",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "high",
+      "axis_ids": [
+        "neutrality_word_use",
+        "language_learning",
+        "metalinguistic_mention",
+        "build_vs_respond",
+        "mixed_language_boundary"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Add an example sentence using the word neutrality to a language-learning document. This is not political guidance.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 6,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "high_priority_topic",
+        "build_vs_respond_axis"
+      ],
+      "review_focus": "Neutrality word-use should not trigger political guardrails.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-027",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-doc-apache-short-explain-vs-heading",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "license_label_use",
+        "legal_license_boundary",
+        "build_vs_explain",
+        "metalinguistic_mention"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a two-row boundary table comparing an Apache 2.0 heading with a general Apache 2.0 explanation question.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": true,
+          "domains": [
+            "legal_guard"
+          ],
+          "hooks": [
+            "Apache 2.0"
+          ],
+          "libraries": [
+            "legal_guard_v1"
+          ],
+          "current_check": true,
+          "risk": "high",
+          "matches": [
+            {
+              "domain": "legal_guard",
+              "hook": "Apache 2.0",
+              "library": "legal_guard_v1",
+              "default_route": "verify",
+              "requires_current_information": true,
+              "risk": "high",
+              "score": 1.0
+            }
+          ]
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": true,
+            "domains": [
+              "legal_guard"
+            ],
+            "hooks": [
+              "Apache 2.0"
+            ],
+            "libraries": [
+              "legal_guard_v1"
+            ],
+            "current_check": true,
+            "risk": "high",
+            "matches": [
+              {
+                "domain": "legal_guard",
+                "hook": "Apache 2.0",
+                "library": "legal_guard_v1",
+                "default_route": "verify",
+                "requires_current_information": true,
+                "risk": "high",
+                "score": 1.0
+              }
+            ]
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Boundary table construction should stay build even when it mentions license examples.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-028",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-doc-current-news-vs-filename",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "current_search_split",
+        "filename",
+        "latest",
+        "build_vs_verify_search"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a two-row boundary table comparing latest as a filename with latest AI regulation news.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Boundary table construction should stay build even when one row mentions current news.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-029",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-doc-medical-ui-vs-symptom",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "medical_design_boundary",
+        "diagnosis",
+        "severity_ladder_boundary",
+        "build_vs_clarify"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a two-row boundary table comparing medical UI labels with a personal symptom question.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Boundary table construction should stay build even when one row mentions symptoms.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    },
+    {
+      "id": "v6-structural-build-30-030",
+      "status": "ready_for_human_review",
+      "review_status": "draft",
+      "target_set": "structural_build_repair_30",
+      "source_topic_id": "sbr-doc-ai-label-vs-dependency",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",
+      "source_topics": "debate_lab/topics_v6_structural_build_30.json",
+      "priority": "medium",
+      "axis_ids": [
+        "ai_dependency_boundary",
+        "persona_label",
+        "severity_ladder_boundary",
+        "build_vs_verify"
+      ],
+      "candidate_type": "structural_build_false_positive_repair",
+      "prompt": "Create a two-row boundary table comparing AI persona as a document label with AI dependency-risk wording.",
+      "suggested_expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "current_route": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "retrieval": {
+          "schema_version": "retrieval-packet.v1",
+          "needed": false,
+          "domains": [],
+          "hooks": [],
+          "libraries": [],
+          "current_check": false,
+          "risk": "low",
+          "matches": []
+        },
+        "trace": {
+          "adapter_version": "0.3.1",
+          "decided_by": "markers",
+          "markers_fired": true,
+          "gate_margin": 0.2,
+          "failure_guard": {
+            "guard_actions": [
+              "review_before_response"
+            ],
+            "bad_tendencies": [
+              "overconfident_direct_response"
+            ],
+            "severity": "minor",
+            "relabel_hints": [],
+            "reason_codes": [
+              "default_low_risk_guard"
+            ]
+          },
+          "retrieval": {
+            "schema_version": "retrieval-packet.v1",
+            "needed": false,
+            "domains": [],
+            "hooks": [],
+            "libraries": [],
+            "current_check": false,
+            "risk": "low",
+            "matches": []
+          }
+        }
+      },
+      "current_route_gaps": [],
+      "overfire_flags": [],
+      "selection_score": 4,
+      "selection_reasons": [
+        "clean_closed_debate",
+        "sensitive_boundary_axis"
+      ],
+      "review_focus": "Boundary table construction should stay build even when one row mentions dependency risk.",
+      "debate_health": {
+        "source_log": "build/router_debate_v6_structural_build_30.json",
+        "turn_count": 4,
+        "moderation_event_count": 2,
+        "final_decision": "close_topic",
+        "finish_reasons": {
+          "stop": 4
+        },
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "section_hits": {
+          "classification_rule": true,
+          "should_fire_examples": true,
+          "should_not_fire_examples": true,
+          "boundary_cases": true,
+          "candidate_sample_notes": true
+        }
+      },
+      "training_allowed": false,
+      "gate_use_allowed": false,
+      "human_review_required": true,
+      "raw_debate_log_direct_training_allowed": false,
+      "raw_turn_text_direct_training_allowed": false
+    }
+  ]
+}

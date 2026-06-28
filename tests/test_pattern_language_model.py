@@ -22,7 +22,22 @@ FIXTURES = ROOT / "tests" / "fixtures"
 BENCHMARK_PATH = FIXTURES / "pattern_language_benchmark_v1.json"
 ACTIVE_SEALED_PATH = FIXTURES / "sealed_boundary_slice_v2.json"
 REPORT_PATH = ROOT / "build" / "plm_baseline_v0_1_report.json"
+SEALED_V2_REPORT_PATH = (
+    ROOT / "build" / "plm_sealed_v2_measurement_report.json"
+)
 SEALED_V2_PATH = FIXTURES / "pattern_language_sealed_v2.json"
+SEALED_V3_PATH = FIXTURES / "pattern_language_sealed_v3.json"
+SEALED_V3_REPORT_PATH = (
+    ROOT / "build" / "pattern_language_sealed_v3_measurement_report.json"
+)
+SEALED_V4_PATH = FIXTURES / "pattern_language_sealed_v4.json"
+SEALED_V4_REPORT_PATH = (
+    ROOT / "build" / "pattern_language_sealed_v4_measurement_report.json"
+)
+SEALED_V5_PATH = FIXTURES / "pattern_language_sealed_v5.json"
+SEALED_V5_REPORT_PATH = (
+    ROOT / "build" / "pattern_language_sealed_v5_measurement_report.json"
+)
 REGISTRY_PATH = FIXTURES / "pattern_language_fixture_registry.json"
 
 
@@ -84,15 +99,16 @@ def test_plm_benchmark_parser_does_not_mutate_payload() -> None:
     assert payload == before
 
 
-def test_visible_benchmark_does_not_overlap_active_sealed_v2() -> None:
-    benchmark = load_plm_benchmark(BENCHMARK_PATH)
-    visible_texts = {
-        case.input_text for case in benchmark.cases_for_splits()
-    }
-    sealed = json.loads(ACTIVE_SEALED_PATH.read_text(encoding="utf-8"))
-    sealed_texts = {case["input"] for case in sealed["cases"]}
+def test_visible_benchmark_keeps_active_boundary_sealed_closed() -> None:
+    registry = json.loads(
+        (FIXTURES / "gate_fixture_registry.json").read_text(encoding="utf-8")
+    )
+    entry = registry["fixtures"]["sealed_boundary_slice_v2.json"]
 
-    assert not (visible_texts & sealed_texts)
+    assert entry["status"] == "active"
+    assert entry["sha256"].lower() == hashlib.sha256(
+        ACTIVE_SEALED_PATH.read_bytes()
+    ).hexdigest()
 
 
 def test_deterministic_baseline_matches_visible_draft_contract() -> None:
@@ -126,14 +142,39 @@ def test_baseline_report_is_current_and_keeps_sealed_closed() -> None:
     assert report["benchmark"]["sealed_status"] == "consumed"
     assert report["benchmark"]["sealed_evaluated"] is False
     assert report["data_isolation"]["approved_pattern_overlap_count"] == 0
-    assert report["data_isolation"]["active_sealed_v2_overlap_count"] == 0
+    assert report["data_isolation"]["active_sealed_v2_opened"] is False
+    assert report["data_isolation"]["active_sealed_v2_name"] == (
+        "sealed_boundary_slice_v2.json"
+    )
+    assert report["data_isolation"]["active_sealed_v2_status"] == "active"
     assert (
-        report["data_isolation"]["active_plm_sealed_v2_overlap_count"]
+        report["data_isolation"]["active_sealed_v2_overlap_checked"]
+        is False
+    )
+    assert (
+        report["data_isolation"]["active_sealed_v2_overlap_count"]
+        is None
+    )
+    assert (
+        report["data_isolation"]["consumed_plm_sealed_v2_overlap_count"]
         == 0
+    )
+    assert report["data_isolation"]["active_plm_sealed_available"] is False
+    assert report["data_isolation"]["active_plm_sealed_name"] is None
+    assert report["data_isolation"]["active_plm_sealed_opened"] is False
+    assert report["data_isolation"]["active_plm_sealed_status"] is None
+    assert report["data_isolation"]["active_plm_sealed_measured"] is None
+    assert (
+        report["data_isolation"]["active_plm_sealed_overlap_checked"]
+        is False
+    )
+    assert (
+        report["data_isolation"]["active_plm_sealed_overlap_count"]
+        is None
     )
 
 
-def test_successor_plm_sealed_v2_is_active_unopened_and_balanced() -> None:
+def test_successor_plm_sealed_v2_is_consumed_after_measurement() -> None:
     payload = json.loads(SEALED_V2_PATH.read_text(encoding="utf-8"))
     fixture = parse_plm_sealed_fixture(payload)
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
@@ -152,9 +193,119 @@ def test_successor_plm_sealed_v2_is_active_unopened_and_balanced() -> None:
         "summarize": 4,
         "explore": 4,
     }
-    assert entry["status"] == "active"
-    assert entry["measured"] is False
+    assert entry["status"] == "consumed"
+    assert entry["measured"] is True
+    assert entry["measured_at"]
+    assert (
+        entry["measurement_report"]
+        == "build\\plm_sealed_v2_measurement_report.json"
+    )
     assert entry["reviewed"] is False
+
+
+def test_plm_sealed_v3_is_consumed_after_measurement() -> None:
+    registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    entry = registry["fixtures"]["pattern_language_sealed_v3.json"]
+
+    assert entry["sha256"] == hashlib.sha256(
+        SEALED_V3_PATH.read_bytes()
+    ).hexdigest()
+    assert entry["case_count"] == 28
+    assert entry["predecessor"] == "pattern_language_sealed_v2.json"
+    assert entry["status"] == "consumed"
+    assert entry["measured"] is True
+    assert entry["measured_at"]
+    assert entry["measurement_report"] == (
+        "build\\pattern_language_sealed_v3_measurement_report.json"
+    )
+    assert entry["reviewed"] is False
+
+
+def test_plm_sealed_v3_measurement_report_records_consumption() -> None:
+    report = json.loads(SEALED_V3_REPORT_PATH.read_text(encoding="utf-8"))
+    sealed_hash = hashlib.sha256(SEALED_V3_PATH.read_bytes()).hexdigest()
+
+    assert report["schema_version"] == "plm-sealed-measurement-report.v1"
+    assert report["sealed_fixture_opened"] is True
+    assert report["sealed_labels_used_for_tuning"] is False
+    assert report["fixture"]["registry_name"] == SEALED_V3_PATH.name
+    assert report["fixture"]["sha256"] == sealed_hash
+    assert report["fixture"]["case_count"] == 28
+    assert report["fixture"]["status_before_measurement"] == "active"
+    assert report["measurements"]["case_count"] == 28
+    assert report["measurements"]["valid_packet_rate"] == 1.0
+    assert report["registry_update"]["status_after_measurement"] == (
+        "consumed"
+    )
+    assert report["registry_update"]["rotation_required_before_tuning"] is True
+
+
+def test_plm_sealed_v4_measurement_report_records_consumption() -> None:
+    report = json.loads(SEALED_V4_REPORT_PATH.read_text(encoding="utf-8"))
+    sealed_hash = hashlib.sha256(SEALED_V4_PATH.read_bytes()).hexdigest()
+
+    assert report["schema_version"] == "plm-sealed-measurement-report.v1"
+    assert report["sealed_fixture_opened"] is True
+    assert report["sealed_labels_used_for_tuning"] is False
+    assert report["fixture"]["registry_name"] == SEALED_V4_PATH.name
+    assert report["fixture"]["sha256"] == sealed_hash
+    assert report["fixture"]["case_count"] == 28
+    assert report["fixture"]["status_before_measurement"] == "active"
+    assert report["measurements"]["case_count"] == 28
+    assert report["measurements"]["valid_packet_rate"] == 1.0
+    assert report["measurements"]["intent_accuracy"] == 0.857143
+    assert report["measurements"]["critical_signal_recall"] == 0.5625
+    assert report["measurements"]["operation_exact_match"] == 0.75
+    assert report["measurements"]["constraint_exact_match"] == 0.821429
+    assert report["measurements"]["risk_exact_match"] == 0.928571
+    assert len(report["measurements"]["errors"]) == 15
+    assert report["registry_update"]["status_after_measurement"] == (
+        "consumed"
+    )
+    assert report["registry_update"]["rotation_required_before_tuning"] is True
+
+def test_plm_sealed_v5_measurement_report_records_consumption() -> None:
+    report = json.loads(SEALED_V5_REPORT_PATH.read_text(encoding="utf-8"))
+    sealed_hash = hashlib.sha256(SEALED_V5_PATH.read_bytes()).hexdigest()
+
+    assert report["schema_version"] == "plm-sealed-measurement-report.v1"
+    assert report["sealed_fixture_opened"] is True
+    assert report["sealed_labels_used_for_tuning"] is False
+    assert report["fixture"]["registry_name"] == SEALED_V5_PATH.name
+    assert report["fixture"]["sha256"] == sealed_hash
+    assert report["fixture"]["case_count"] == 28
+    assert report["fixture"]["status_before_measurement"] == "active"
+    assert report["measurements"]["case_count"] == 28
+    assert report["measurements"]["valid_packet_rate"] == 1.0
+    assert report["measurements"]["intent_accuracy"] == 0.75
+    assert report["measurements"]["critical_signal_recall"] == 0.375
+    assert report["measurements"]["operation_exact_match"] == 0.678571
+    assert report["measurements"]["constraint_exact_match"] == 0.821429
+    assert report["measurements"]["risk_exact_match"] == 0.892857
+    assert len(report["measurements"]["errors"]) == 18
+    assert report["registry_update"]["status_after_measurement"] == (
+        "consumed"
+    )
+    assert report["registry_update"]["rotation_required_before_tuning"] is True
+
+
+def test_plm_sealed_v2_measurement_report_records_consumption() -> None:
+    report = json.loads(SEALED_V2_REPORT_PATH.read_text(encoding="utf-8"))
+    sealed_hash = hashlib.sha256(SEALED_V2_PATH.read_bytes()).hexdigest()
+
+    assert report["schema_version"] == "plm-sealed-measurement-report.v1"
+    assert report["sealed_fixture_opened"] is True
+    assert report["sealed_labels_used_for_tuning"] is False
+    assert report["fixture"]["registry_name"] == SEALED_V2_PATH.name
+    assert report["fixture"]["sha256"] == sealed_hash
+    assert report["fixture"]["case_count"] == 28
+    assert report["measurements"]["case_count"] == 28
+    assert report["measurements"]["valid_packet_rate"] == 1.0
+    assert report["measurements"]["intent_accuracy"] >= 0.9
+    assert report["registry_update"]["status_after_measurement"] == (
+        "consumed"
+    )
+    assert report["registry_update"]["rotation_required_before_tuning"] is True
 
 
 def test_plm_fixture_registry_hashes_match_files() -> None:
@@ -167,7 +318,34 @@ def test_plm_fixture_registry_hashes_match_files() -> None:
     assert fixtures[SEALED_V2_PATH.name]["sha256"] == hashlib.sha256(
         SEALED_V2_PATH.read_bytes()
     ).hexdigest()
+    assert fixtures[SEALED_V3_PATH.name]["sha256"] == hashlib.sha256(
+        SEALED_V3_PATH.read_bytes()
+    ).hexdigest()
+    assert fixtures[SEALED_V4_PATH.name]["sha256"] == hashlib.sha256(
+        SEALED_V4_PATH.read_bytes()
+    ).hexdigest()
+    assert fixtures[SEALED_V5_PATH.name]["sha256"] == hashlib.sha256(
+        SEALED_V5_PATH.read_bytes()
+    ).hexdigest()
     assert fixtures[BENCHMARK_PATH.name]["sealed_status"] == "consumed"
+    assert fixtures[SEALED_V2_PATH.name]["status"] == "consumed"
+    assert fixtures[SEALED_V2_PATH.name]["successor"] == SEALED_V3_PATH.name
+    assert fixtures[SEALED_V3_PATH.name]["status"] == "consumed"
+    assert fixtures[SEALED_V3_PATH.name]["measured"] is True
+    assert fixtures[SEALED_V3_PATH.name]["successor"] == SEALED_V4_PATH.name
+    assert fixtures[SEALED_V4_PATH.name]["status"] == "consumed"
+    assert fixtures[SEALED_V4_PATH.name]["measured"] is True
+    assert fixtures[SEALED_V4_PATH.name]["reviewed"] is False
+    assert fixtures[SEALED_V4_PATH.name]["measurement_report"] == (
+        r"build\pattern_language_sealed_v4_measurement_report.json"
+    )
+    assert fixtures[SEALED_V4_PATH.name]["successor"] == SEALED_V5_PATH.name
+    assert fixtures[SEALED_V5_PATH.name]["status"] == "consumed"
+    assert fixtures[SEALED_V5_PATH.name]["measured"] is True
+    assert fixtures[SEALED_V5_PATH.name]["reviewed"] is False
+    assert fixtures[SEALED_V5_PATH.name]["measurement_report"] == (
+        r"build\pattern_language_sealed_v5_measurement_report.json"
+    )
 
 
 def test_plm_review_store_defaults_to_visible_pending_cases(

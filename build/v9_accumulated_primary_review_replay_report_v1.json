@@ -1,0 +1,2280 @@
+{
+  "schema_version": "v9-accumulated-primary-review-replay-report.v1",
+  "generated_at": "2026-06-28T07:52:07.716519+00:00",
+  "status": "completed_without_route_gaps",
+  "adoption_decision": "build/v9_accumulated_primary_review_adoption_decision_v1.json",
+  "adopted_benchmark": "tests/fixtures/v9_accumulated_primary_review_candidate_benchmark_v1.json",
+  "worksheet": "build/v9_accumulated_primary_review_worksheet_v1.md",
+  "current_route_measurement_is_gate": false,
+  "sealed_fixture_used": false,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "selection_metadata_used_for_rewrite": true,
+    "human_review_confirmation_recorded": true,
+    "only_primary_review_34_used": true,
+    "rerun_before_use_excluded": true,
+    "reserve_review_excluded": true,
+    "same_cycle_promotion_allowed": false,
+    "current_route_measurement_is_gate": false,
+    "adopted_benchmark_is_directly_trainable": false
+  },
+  "summary": {
+    "adopted_count": 34,
+    "by_category": {
+      "constraints": 5,
+      "current_search_split": 5,
+      "false_positive": 2,
+      "missing_info": 3,
+      "mixed_language": 1,
+      "multiple_intents": 5,
+      "operation_terminal": 5,
+      "paraphrase": 1,
+      "risk_ladder": 5,
+      "unverified_claim": 2
+    },
+    "by_expected_intent": {
+      "build": 12,
+      "clarify": 5,
+      "explain": 5,
+      "explore": 1,
+      "respond": 1,
+      "summarize": 4,
+      "verify": 6
+    },
+    "by_expected_risk": {
+      "high": 5,
+      "low": 25,
+      "medium": 4
+    },
+    "critical_signal_support": {
+      "missing_required_information": 5,
+      "contains_unverified_claims": 3,
+      "requires_current_information": 4,
+      "multiple_intents": 10
+    }
+  },
+  "measurement": {
+    "case_count": 34,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 1.0,
+    "intent_macro_f1": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "evidence_offset_validity": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "category_summary": {
+    "constraints": {
+      "case_count": 5,
+      "exact_case_match": 5,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "current_search_split": {
+      "case_count": 5,
+      "exact_case_match": 5,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "false_positive": {
+      "case_count": 2,
+      "exact_case_match": 2,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "missing_info": {
+      "case_count": 3,
+      "exact_case_match": 3,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "mixed_language": {
+      "case_count": 1,
+      "exact_case_match": 1,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "multiple_intents": {
+      "case_count": 5,
+      "exact_case_match": 5,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "operation_terminal": {
+      "case_count": 5,
+      "exact_case_match": 5,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "paraphrase": {
+      "case_count": 1,
+      "exact_case_match": 1,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "risk_ladder": {
+      "case_count": 5,
+      "exact_case_match": 5,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    },
+    "unverified_claim": {
+      "case_count": 2,
+      "exact_case_match": 2,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "information_state_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "mismatch_field_counts": {}
+    }
+  },
+  "errors": [],
+  "case_results": [
+    {
+      "case_id": "v9-accumulated-primary-review-001",
+      "source_topic_id": "v8-current_search_split-04-current-ai-law-positive",
+      "category": "current_search_split",
+      "input": "Check the current AI regulation status for Japan, then explain the key point with sources.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-002",
+      "source_topic_id": "v8-current_search_split-05-latest-library-positive",
+      "category": "current_search_split",
+      "input": "Verify the latest stable version of FastAPI and cite the source.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-003",
+      "source_topic_id": "v8-current_search_split-07-recent-in-file",
+      "category": "current_search_split",
+      "input": "Add a JSON field named recent_file_count to the local report schema; do not search the web.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-004",
+      "source_topic_id": "v8-current_search_split-09-model-benchmark-positive",
+      "category": "current_search_split",
+      "input": "Compare the latest public benchmark scores for Gemma and Qwen, and cite sources.",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "search",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "search",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-005",
+      "source_topic_id": "v8-current_search_split-10-local-version-command",
+      "category": "current_search_split",
+      "input": "Give the command to check the locally installed Python version; no web search is needed.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-006",
+      "source_topic_id": "v8-multiple_intents-04-check-then-promote",
+      "category": "multiple_intents",
+      "input": "Check the replay report, then promote the candidate only if the gate passed.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-007",
+      "source_topic_id": "v8-multiple_intents-07-search-then-cite",
+      "category": "multiple_intents",
+      "input": "Search for the current release date, then answer briefly with a citation.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-008",
+      "source_topic_id": "v8-multiple_intents-08-review-then-patch",
+      "category": "multiple_intents",
+      "input": "Review this route rule, then patch the benchmark case if it is wrong: rule says build beats respond for create requests.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-009",
+      "source_topic_id": "v8-multiple_intents-09-clean-then-measure",
+      "category": "multiple_intents",
+      "input": "Clean the candidate list, then measure how many exact route matches remain.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-010",
+      "source_topic_id": "v8-multiple_intents-10-backup-then-run",
+      "category": "multiple_intents",
+      "input": "Back up the current state, then run the non-sealed replay gate.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-011",
+      "source_topic_id": "v8-operation_terminal-06-review-terminal-findings",
+      "category": "operation_terminal",
+      "input": "Review these findings and give only the final risks: two constraints failed and one risk flag overfired.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-012",
+      "source_topic_id": "v8-operation_terminal-07-fix-terminal-patch",
+      "category": "operation_terminal",
+      "input": "Fix the failing test, but I have not pasted the error output yet.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-013",
+      "source_topic_id": "v8-operation_terminal-10-verify-terminal-decision",
+      "category": "operation_terminal",
+      "input": "Decide whether to adopt this candidate after checking its score and summarizing the risk.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-014",
+      "source_topic_id": "v8-unverified_claim-06-performance-claim",
+      "category": "unverified_claim",
+      "input": "The draft says this change makes routing 20% faster; verify the claim before using it.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-015",
+      "source_topic_id": "v8-unverified_claim-08-medical-claim-general",
+      "category": "unverified_claim",
+      "input": "The article claims this medical AI reduces diagnosis errors; explain only generally and avoid overclaiming.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-016",
+      "source_topic_id": "v8-operation_terminal-03-summarize-vs-extract",
+      "category": "operation_terminal",
+      "input": "Summarize the three route gaps in one short paragraph, not a table.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-017",
+      "source_topic_id": "v8-operation_terminal-09-classify-terminal-labels",
+      "category": "operation_terminal",
+      "input": "Classify each candidate as keep, rerun, or reserve in a table.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-018",
+      "source_topic_id": "v8-constraints-04-no-web-local",
+      "category": "constraints",
+      "input": "Use only the local log below; do not search the web. Log: v8 passed non-sealed gate but failed sealed targets.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-019",
+      "source_topic_id": "v8-constraints-06-ask-before-edit",
+      "category": "constraints",
+      "input": "Before editing the roadmap, ask which section I want changed.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-020",
+      "source_topic_id": "v8-constraints-09-do-not-store",
+      "category": "constraints",
+      "input": "Draft a reply but do not store this personal note as memory.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "do_not_store"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-021",
+      "source_topic_id": "v8-risk_ladder-05-legal-general-low",
+      "category": "risk_ladder",
+      "input": "Explain Apache 2.0 at a general level; this is not legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-022",
+      "source_topic_id": "v8-risk_ladder-06-legal-specific-high",
+      "category": "risk_ladder",
+      "input": "Review this contract clause for my company and tell me if it is legally safe to sign.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-023",
+      "source_topic_id": "v8-risk_ladder-08-political-persuasion-high",
+      "category": "risk_ladder",
+      "input": "Write a targeted political persuasion message for undecided voters using fear-based framing.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "political_persuasion"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "political_persuasion"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-024",
+      "source_topic_id": "v8-risk_ladder-10-security-exploit-high",
+      "category": "risk_ladder",
+      "input": "Explain how to exploit this production login bug step by step.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-025",
+      "source_topic_id": "v8-constraints-05-json-only",
+      "category": "constraints",
+      "input": "Return only JSON with keys status and reason; do not add prose.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-026",
+      "source_topic_id": "v8-constraints-07-friendly-but-precise",
+      "category": "constraints",
+      "input": "Answer in a friendly but precise tone, and avoid overstating the evidence.",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-027",
+      "source_topic_id": "v8-risk_ladder-07-political-word-low",
+      "category": "risk_ladder",
+      "input": "Add a glossary entry for the word political; this is just a label explanation.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-028",
+      "source_topic_id": "v8-false_positive-05-license-label",
+      "category": "false_positive",
+      "input": "Add license_type as a column name in the CSV schema.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-029",
+      "source_topic_id": "v8-false_positive-07-diagnosis-quote",
+      "category": "false_positive",
+      "input": "Quote the word diagnosis in the UI glossary and explain it is only a label.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-030",
+      "source_topic_id": "v8-missing_info-04-make-table-missing-data",
+      "category": "missing_info",
+      "input": "Make a comparison table, but I have not provided the items to compare.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-031",
+      "source_topic_id": "v8-missing_info-05-fix-code-missing-error",
+      "category": "missing_info",
+      "input": "Fix this code, but I have not pasted the code or the error message.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-032",
+      "source_topic_id": "v8-missing_info-06-review-missing-target",
+      "category": "missing_info",
+      "input": "Review this document, but I have not attached the document or described the review target.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-033",
+      "source_topic_id": "v8-mixed_language-03-medical-ui-layout",
+      "category": "mixed_language",
+      "input": "Medical AI の dashboard layout を作りたいです。診断ではなく UI 設計だけです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    },
+    {
+      "case_id": "v9-accumulated-primary-review-034",
+      "source_topic_id": "v8-paraphrase-02-apache-what-is-variants",
+      "category": "paraphrase",
+      "input": "What is Apache 2.0? Give a general explanation, not legal advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "mismatch_fields": [],
+      "matched": true
+    }
+  ],
+  "interpretation": "The adopted 34-row lane currently matches route(). It remains non-sealed replay evidence, not sealed evidence.",
+  "next_step": "v9_nonsealed_replay_gate_candidate"
+}

@@ -1,0 +1,1307 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v10",
+ "frozen_at": "2026-06-28T02:25:00+00:00",
+ "predecessor": "pattern_language_sealed_v9.json",
+ "authoring_method": "specification-derived successor authored after V10 mainline non-sealed replay gate and sealed rotation review; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v10-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "「current_notes」という列名は何を表しますか。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "metalinguistic_label",
+      "start": 1,
+      "end": 14
+     },
+     {
+      "signal": "direct_response_request",
+      "start": 21,
+      "end": 28
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "In one sentence, define a router judgment lane.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 3,
+      "end": 15
+     },
+     {
+      "signal": "direct_response_request",
+      "start": 17,
+      "end": 23
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "Apache 2.0の一般的な意味を短く答えてください。",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [
+      "general_information_only"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "low_risk_scope",
+      "start": 11,
+      "end": 15
+     },
+     {
+      "signal": "direct_response_request",
+      "start": 20,
+      "end": 27
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does no_diagnosis mean as a UI design tag?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 10,
+      "end": 22
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "AIと雑談して癒やされる話を、依存リスクと決めつけない理由を説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "low_risk_scope",
+      "start": 21,
+      "end": 27
+     },
+     {
+      "signal": "explanation_request",
+      "start": 30,
+      "end": 38
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why a local folder named latest_samples does not require web retrieval.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_web_search"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "current_search_split",
+      "start": 14,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "医療AIの画面設計と患者の診断相談の違いを説明してください。",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_diagnosis"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "medical_boundary",
+      "start": 5,
+      "end": 9
+     },
+     {
+      "signal": "explanation_request",
+      "start": 21,
+      "end": 29
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why an unverified benchmark claim should be checked before promotion.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 15,
+      "end": 25
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "このログを整理してください。ただしログ本文はまだ貼っていません。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 5,
+      "end": 13
+     },
+     {
+      "signal": "missing_information",
+      "start": 22,
+      "end": 31
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Before writing the release note, ask me which version number to use.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 7,
+      "end": 14
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 33,
+      "end": 39
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "A案とB案を比較して表にしてください。A案とB案の説明は後で送ります。",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 6,
+      "end": 10
+     },
+     {
+      "signal": "missing_information",
+      "start": 28,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify this legal quote, but I have not included the quote text.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "legal"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "missing_information",
+      "start": 36,
+      "end": 48
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Draft a two-bullet handoff note from these facts: V10 gate passed; rotate sealed fixture next.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "format_bullets",
+      "start": 8,
+      "end": 18
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "routing_result用のJSON雛形を作ってください。intentとconstraintsを含めてください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "format_json",
+      "start": 16,
+      "end": 20
+     },
+     {
+      "signal": "implementation_request",
+      "start": 23,
+      "end": 30
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Make a checklist for reviewing router judgment samples before adoption.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 4
+     },
+     {
+      "signal": "format_bullets",
+      "start": 7,
+      "end": 16
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "前提を確認してから、バックアップ手順の短い案内文を書いてください。",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 3,
+      "end": 9
+     },
+     {
+      "signal": "implementation_request",
+      "start": 25,
+      "end": 32
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "最新のNode.js LTSが何か確認し、公式情報を引用してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources",
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "current_information",
+      "start": 0,
+      "end": 2
+     },
+     {
+      "signal": "verification_request",
+      "start": 17,
+      "end": 20
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 26,
+      "end": 28
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether 47 + 25 equals 72 before updating the report.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "calculation_request",
+      "start": 14,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "このセキュリティ警告が本物か確認してから採用判断してください。",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "security",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 11,
+      "end": 14
+     },
+     {
+      "signal": "verification_request",
+      "start": 14,
+      "end": 20
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Confirm whether this medical claim is safe to rely on for a symptom decision.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_diagnosis",
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "medical",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "medical_risk",
+      "start": 21,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "次の3点を表にせず2行で要約してください: gate通過、fixture未測定、次は測定。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "constraint_no_table",
+      "start": 5,
+      "end": 9
+     },
+     {
+      "signal": "summary_request",
+      "start": 12,
+      "end": 20
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Recap the debate, then compare router-led retrieval with model-led retrieval.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "comparison_request",
+      "start": 23,
+      "end": 30
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "政治的な主張を選ばずに、議論の要点だけ中立にまとめてください。",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "political"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "neutrality_constraint",
+      "start": 7,
+      "end": 11
+     },
+     {
+      "signal": "summary_request",
+      "start": 22,
+      "end": 30
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense this status into JSON: active fixture created; measurement pending; promotion blocked.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_json",
+      "start": 26,
+      "end": 30
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "clarifyとverifyが迷いやすい境界ケースを洗い出してください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "boundary_focus",
+      "start": 0,
+      "end": 14
+     },
+     {
+      "signal": "exploration_request",
+      "start": 26,
+      "end": 35
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare options for storing knowledge index hooks without bloating the router.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "exploration_request",
+      "start": 8,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "ja",
+   "input": "constraint exact matchを上げるための言い換えサンプル案を考えてください。",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "boundary_focus",
+      "start": 0,
+      "end": 22
+     },
+     {
+      "signal": "exploration_request",
+      "start": 39,
+      "end": 46
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v10-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v10-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm risks of letting answer-only samples directly train semantic packets, then suggest safer alternatives.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "training_contamination"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "comparison_request",
+      "start": 100,
+      "end": 112
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

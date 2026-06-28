@@ -1,0 +1,1936 @@
+{
+  "created_at": "2026-06-26T07:38:59.304751+00:00",
+  "data": {
+    "benchmark_path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\pattern_language_visible_v1.json",
+    "benchmark_sha256": "60ee2d89057adb6ed270cc40c23b25c85979bc8e0d899508bc4db9f329c1e485",
+    "sealed_cases_used_for_evaluation": false,
+    "sealed_cases_used_for_training": false,
+    "source": "copy",
+    "train_count": 28,
+    "validation_count": 28,
+    "visible_count": 56
+  },
+  "experiment_model": {
+    "base_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "intensity_labels": [
+      0
+    ],
+    "operation_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "prototype_count": 28,
+    "schema_version": "thought-color-channel-model.v0.1",
+    "stance_labels": [
+      0,
+      3,
+      4,
+      6
+    ]
+  },
+  "measurements": {
+    "train": {
+      "main_adapter": {
+        "case_count": 28,
+        "confusion": {
+          "build": {
+            "build": 4,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 4,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 4,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 4,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "respond": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 4,
+            "summarize": 0,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 4,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 4
+          }
+        },
+        "constraint_exact_match": 1.0,
+        "critical_signal_recall": 1.0,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 1.0,
+            "support": 4
+          },
+          "missing_required_information": {
+            "recall": 1.0,
+            "support": 4
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 1
+          },
+          "requires_current_information": {
+            "recall": 0.0,
+            "support": 0
+          }
+        },
+        "errors": [],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 1.0,
+        "intent_macro_f1": 1.0,
+        "operation_exact_match": 1.0,
+        "per_intent": {
+          "build": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "clarify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explore": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "respond": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "summarize": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "verify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          }
+        },
+        "risk_exact_match": 1.0,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color": {
+        "case_count": 28,
+        "confusion": {
+          "build": {
+            "build": 4,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 4,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 4,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 4,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "respond": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 4,
+            "summarize": 0,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 4,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 4
+          }
+        },
+        "constraint_exact_match": 0.892857,
+        "critical_signal_recall": 1.0,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 1.0,
+            "support": 4
+          },
+          "missing_required_information": {
+            "recall": 1.0,
+            "support": 4
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 1
+          },
+          "requires_current_information": {
+            "recall": 0.0,
+            "support": 0
+          }
+        },
+        "errors": [
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-clarify-04",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-verify-01",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-verify-03",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-summarize-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-summarize-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-explore-02",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-explore-04",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          }
+        ],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 1.0,
+        "intent_macro_f1": 1.0,
+        "operation_exact_match": 0.857143,
+        "per_intent": {
+          "build": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "clarify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explore": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "respond": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "summarize": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "verify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          }
+        },
+        "risk_exact_match": 1.0,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color_channels": {
+        "base_accuracy": 1.0,
+        "case_count": 28,
+        "errors": [],
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "schema_version": "thought-color-channel-evaluation.v0.1",
+        "stance_accuracy": 1.0
+      },
+      "thought_color_minus_main": {
+        "constraint_exact_match": -0.107143,
+        "critical_signal_recall": 0.0,
+        "evidence_offset_validity": 0.0,
+        "intent_accuracy": 0.0,
+        "intent_macro_f1": 0.0,
+        "operation_exact_match": -0.142857,
+        "risk_exact_match": 0.0,
+        "valid_packet_rate": 0.0
+      }
+    },
+    "validation": {
+      "main_adapter": {
+        "case_count": 28,
+        "confusion": {
+          "build": {
+            "build": 4,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 4,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 4,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 4,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "respond": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 4,
+            "summarize": 0,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 4,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 4
+          }
+        },
+        "constraint_exact_match": 1.0,
+        "critical_signal_recall": 1.0,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 1.0,
+            "support": 3
+          },
+          "missing_required_information": {
+            "recall": 1.0,
+            "support": 4
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 1
+          },
+          "requires_current_information": {
+            "recall": 1.0,
+            "support": 2
+          }
+        },
+        "errors": [],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 1.0,
+        "intent_macro_f1": 1.0,
+        "operation_exact_match": 1.0,
+        "per_intent": {
+          "build": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "clarify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "explore": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "respond": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "summarize": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          },
+          "verify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 4
+          }
+        },
+        "risk_exact_match": 1.0,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color": {
+        "case_count": 28,
+        "confusion": {
+          "build": {
+            "build": 4,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 3,
+            "explain": 1,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 3,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 1,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 3,
+            "respond": 0,
+            "summarize": 1,
+            "verify": 0
+          },
+          "respond": {
+            "build": 1,
+            "clarify": 1,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 2,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 1,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 3,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 3,
+            "verify": 1
+          }
+        },
+        "constraint_exact_match": 0.357143,
+        "critical_signal_recall": 0.4,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 0.0,
+            "support": 3
+          },
+          "missing_required_information": {
+            "recall": 0.75,
+            "support": 4
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 1
+          },
+          "requires_current_information": {
+            "recall": 0.0,
+            "support": 2
+          }
+        },
+        "errors": [
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-01",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "operations"
+            ],
+            "id": "plm-validation-respond-03",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explain",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-explain-01",
+            "kind": "mismatch",
+            "predicted_intent": "explain"
+          },
+          {
+            "expected_intent": "explain",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explain-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-clarify-01",
+            "kind": "mismatch",
+            "predicted_intent": "explain"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-validation-clarify-02",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-clarify-04",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "build",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-build-01",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "build",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-build-02",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-01",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-03",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-verify-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-summarize-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-summarize-03",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-summarize-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explore-01",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explore-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "information_state",
+              "operations"
+            ],
+            "id": "plm-validation-explore-03",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-validation-explore-04",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          }
+        ],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 0.607143,
+        "intent_macro_f1": 0.570181,
+        "operation_exact_match": 0.428571,
+        "per_intent": {
+          "build": {
+            "f1": 0.888889,
+            "precision": 0.8,
+            "recall": 1.0,
+            "support": 4
+          },
+          "clarify": {
+            "f1": 0.666667,
+            "precision": 0.6,
+            "recall": 0.75,
+            "support": 4
+          },
+          "explain": {
+            "f1": 0.75,
+            "precision": 0.75,
+            "recall": 0.75,
+            "support": 4
+          },
+          "explore": {
+            "f1": 0.857143,
+            "precision": 1.0,
+            "recall": 0.75,
+            "support": 4
+          },
+          "respond": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 4
+          },
+          "summarize": {
+            "f1": 0.428571,
+            "precision": 0.3,
+            "recall": 0.75,
+            "support": 4
+          },
+          "verify": {
+            "f1": 0.4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "support": 4
+          }
+        },
+        "risk_exact_match": 0.892857,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color_channels": {
+        "base_accuracy": 0.607143,
+        "case_count": 28,
+        "errors": [
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-01",
+            "predicted": {
+              "base_id": 3,
+              "intensity": "low",
+              "operation": "generate",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-03",
+            "predicted": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "clarify"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 1,
+              "intensity": "low",
+              "operation": "reason",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explain-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "clarify"
+            },
+            "id": "plm-validation-clarify-01",
+            "predicted": {
+              "base_id": 1,
+              "intensity": "low",
+              "operation": "reason",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "reserve"
+            },
+            "id": "plm-validation-verify-01",
+            "predicted": {
+              "base_id": 4,
+              "intensity": "low",
+              "operation": "verify",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "challenge"
+            },
+            "id": "plm-validation-verify-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "reserve"
+            },
+            "id": "plm-validation-verify-03",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "low",
+              "operation": "verify",
+              "stance": "challenge"
+            },
+            "id": "plm-validation-verify-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "explore"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-summarize-03",
+            "predicted": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explore-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explore-03",
+            "predicted": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "explore"
+            }
+          }
+        ],
+        "full_code_accuracy": 0.535714,
+        "intensity_accuracy": 0.892857,
+        "operation_accuracy": 0.607143,
+        "schema_version": "thought-color-channel-evaluation.v0.1",
+        "stance_accuracy": 0.75
+      },
+      "thought_color_minus_main": {
+        "constraint_exact_match": -0.642857,
+        "critical_signal_recall": -0.6,
+        "evidence_offset_validity": 0.0,
+        "intent_accuracy": -0.392857,
+        "intent_macro_f1": -0.429819,
+        "operation_exact_match": -0.571429,
+        "risk_exact_match": -0.107143,
+        "valid_packet_rate": 0.0
+      }
+    },
+    "visible": {
+      "main_adapter": {
+        "case_count": 56,
+        "confusion": {
+          "build": {
+            "build": 8,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 8,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 8,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 8,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "respond": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 8,
+            "summarize": 0,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 8,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 8
+          }
+        },
+        "constraint_exact_match": 1.0,
+        "critical_signal_recall": 1.0,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 1.0,
+            "support": 7
+          },
+          "missing_required_information": {
+            "recall": 1.0,
+            "support": 8
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 2
+          },
+          "requires_current_information": {
+            "recall": 1.0,
+            "support": 2
+          }
+        },
+        "errors": [],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 1.0,
+        "intent_macro_f1": 1.0,
+        "operation_exact_match": 1.0,
+        "per_intent": {
+          "build": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "clarify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "explain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "explore": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "respond": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "summarize": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          },
+          "verify": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 8
+          }
+        },
+        "risk_exact_match": 1.0,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color": {
+        "case_count": 56,
+        "confusion": {
+          "build": {
+            "build": 8,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "clarify": {
+            "build": 0,
+            "clarify": 7,
+            "explain": 1,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 0,
+            "verify": 0
+          },
+          "explain": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 7,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 1,
+            "verify": 0
+          },
+          "explore": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 7,
+            "respond": 0,
+            "summarize": 1,
+            "verify": 0
+          },
+          "respond": {
+            "build": 1,
+            "clarify": 1,
+            "explain": 0,
+            "explore": 0,
+            "respond": 4,
+            "summarize": 2,
+            "verify": 0
+          },
+          "summarize": {
+            "build": 0,
+            "clarify": 1,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 7,
+            "verify": 0
+          },
+          "verify": {
+            "build": 0,
+            "clarify": 0,
+            "explain": 0,
+            "explore": 0,
+            "respond": 0,
+            "summarize": 3,
+            "verify": 5
+          }
+        },
+        "constraint_exact_match": 0.625,
+        "critical_signal_recall": 0.684211,
+        "critical_signals": {
+          "contains_unverified_claims": {
+            "recall": 0.571429,
+            "support": 7
+          },
+          "missing_required_information": {
+            "recall": 0.875,
+            "support": 8
+          },
+          "multiple_intents": {
+            "recall": 1.0,
+            "support": 2
+          },
+          "requires_current_information": {
+            "recall": 0.0,
+            "support": 2
+          }
+        },
+        "errors": [
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-01",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "operations"
+            ],
+            "id": "plm-validation-respond-03",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "respond",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-respond-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explain",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-explain-01",
+            "kind": "mismatch",
+            "predicted_intent": "explain"
+          },
+          {
+            "expected_intent": "explain",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explain-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-clarify-04",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-clarify-01",
+            "kind": "mismatch",
+            "predicted_intent": "explain"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-validation-clarify-02",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "clarify",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-clarify-04",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "build",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-build-01",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "build",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-build-02",
+            "kind": "mismatch",
+            "predicted_intent": "build"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-verify-01",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-verify-03",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-01",
+            "kind": "mismatch",
+            "predicted_intent": "verify"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "risk",
+              "operations"
+            ],
+            "id": "plm-validation-verify-03",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "verify",
+            "fields": [
+              "primary_intent",
+              "information_state",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-verify-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-summarize-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-train-summarize-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-summarize-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-summarize-03",
+            "kind": "mismatch",
+            "predicted_intent": "clarify"
+          },
+          {
+            "expected_intent": "summarize",
+            "fields": [
+              "constraints"
+            ],
+            "id": "plm-validation-summarize-04",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-explore-02",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-train-explore-04",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explore-01",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "primary_intent",
+              "constraints",
+              "operations"
+            ],
+            "id": "plm-validation-explore-02",
+            "kind": "mismatch",
+            "predicted_intent": "summarize"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "information_state",
+              "operations"
+            ],
+            "id": "plm-validation-explore-03",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          },
+          {
+            "expected_intent": "explore",
+            "fields": [
+              "operations"
+            ],
+            "id": "plm-validation-explore-04",
+            "kind": "mismatch",
+            "predicted_intent": "explore"
+          }
+        ],
+        "evidence_offset_validity": 1.0,
+        "intent_accuracy": 0.803571,
+        "intent_macro_f1": 0.806472,
+        "operation_exact_match": 0.642857,
+        "per_intent": {
+          "build": {
+            "f1": 0.941177,
+            "precision": 0.888889,
+            "recall": 1.0,
+            "support": 8
+          },
+          "clarify": {
+            "f1": 0.82353,
+            "precision": 0.777778,
+            "recall": 0.875,
+            "support": 8
+          },
+          "explain": {
+            "f1": 0.875,
+            "precision": 0.875,
+            "recall": 0.875,
+            "support": 8
+          },
+          "explore": {
+            "f1": 0.933333,
+            "precision": 1.0,
+            "recall": 0.875,
+            "support": 8
+          },
+          "respond": {
+            "f1": 0.666667,
+            "precision": 1.0,
+            "recall": 0.5,
+            "support": 8
+          },
+          "summarize": {
+            "f1": 0.636364,
+            "precision": 0.5,
+            "recall": 0.875,
+            "support": 8
+          },
+          "verify": {
+            "f1": 0.769231,
+            "precision": 1.0,
+            "recall": 0.625,
+            "support": 8
+          }
+        },
+        "risk_exact_match": 0.946429,
+        "schema_version": "pattern-language-evaluation.v1",
+        "valid_packet_rate": 1.0
+      },
+      "thought_color_channels": {
+        "base_accuracy": 0.803571,
+        "case_count": 56,
+        "errors": [
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-01",
+            "predicted": {
+              "base_id": 3,
+              "intensity": "low",
+              "operation": "generate",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-03",
+            "predicted": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "clarify"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 0,
+              "intensity": "low",
+              "operation": "respond",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-respond-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 1,
+              "intensity": "low",
+              "operation": "reason",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explain-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "clarify"
+            },
+            "id": "plm-validation-clarify-01",
+            "predicted": {
+              "base_id": 1,
+              "intensity": "low",
+              "operation": "reason",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "reserve"
+            },
+            "id": "plm-validation-verify-01",
+            "predicted": {
+              "base_id": 4,
+              "intensity": "low",
+              "operation": "verify",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "challenge"
+            },
+            "id": "plm-validation-verify-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "medium",
+              "operation": "verify",
+              "stance": "reserve"
+            },
+            "id": "plm-validation-verify-03",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 4,
+              "intensity": "low",
+              "operation": "verify",
+              "stance": "challenge"
+            },
+            "id": "plm-validation-verify-04",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "explore"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-summarize-03",
+            "predicted": {
+              "base_id": 2,
+              "intensity": "low",
+              "operation": "route",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explore-02",
+            "predicted": {
+              "base_id": 5,
+              "intensity": "low",
+              "operation": "remember",
+              "stance": "neutral"
+            }
+          },
+          {
+            "expected": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "neutral"
+            },
+            "id": "plm-validation-explore-03",
+            "predicted": {
+              "base_id": 6,
+              "intensity": "low",
+              "operation": "compare",
+              "stance": "explore"
+            }
+          }
+        ],
+        "full_code_accuracy": 0.767857,
+        "intensity_accuracy": 0.946429,
+        "operation_accuracy": 0.803571,
+        "schema_version": "thought-color-channel-evaluation.v0.1",
+        "stance_accuracy": 0.875
+      },
+      "thought_color_minus_main": {
+        "constraint_exact_match": -0.375,
+        "critical_signal_recall": -0.315789,
+        "evidence_offset_validity": 0.0,
+        "intent_accuracy": -0.196429,
+        "intent_macro_f1": -0.193528,
+        "operation_exact_match": -0.357143,
+        "risk_exact_match": -0.053571,
+        "valid_packet_rate": 0.0
+      }
+    }
+  },
+  "schema_version": "thought-color-performance-comparison.v0.1"
+}

@@ -1,6 +1,7 @@
 """Evaluate the open accumulation campaign without reading active sealed v2."""
 
 import json
+import hashlib
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -11,8 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import (
-    build_processing_plan,
-    extract_semantic_packet,
+    ADAPTER_VERSION,
+    DEFAULT_INTENT_MODEL_PATH,
+    route,
     run_core_shadow,
 )
 from semantic_routing.accumulation_review_store import (
@@ -34,6 +36,10 @@ OUTPUT_PATH = ROOT / "build" / "conversation_accumulation_v1_report.json"
 
 def _ratio(numerator: int, denominator: int) -> float:
     return round(numerator / denominator, 6) if denominator else 0.0
+
+
+def _sha256(path: Path) -> str | None:
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
 
 
 def main() -> None:
@@ -81,8 +87,9 @@ def main() -> None:
 
     for case in campaign.cases:
         expected = effective_expected(case)
-        packet = extract_semantic_packet(case.input_text)
-        plan = build_processing_plan(packet)
+        routed = route(case.input_text)
+        packet = routed.packet
+        plan = routed.plan
         shadow = run_core_shadow(case.input_text, packet, plan)
         semantic_pass = packet.primary_intent == expected["intent"]
         plan_pass = (
@@ -112,6 +119,8 @@ def main() -> None:
                     "operations": list(packet.operations),
                     "confidence": packet.confidence,
                     "reason_codes": list(plan.reason_codes),
+                    "decided_by": routed.trace.get("decided_by"),
+                    "intent_margin": routed.trace.get("intent_margin"),
                     "vertical_execution_order": (
                         vertical["execution_order"] if vertical else None
                     ),
@@ -172,6 +181,14 @@ def main() -> None:
         "generated_at": now.isoformat(),
         "campaign_id": campaign.campaign_id,
         "candidate": campaign.candidate.as_dict(),
+        "evaluation_adapter": {
+            "entrypoint": "semantic_routing.route",
+            "version": ADAPTER_VERSION,
+            "intent_model_path": str(
+                DEFAULT_INTENT_MODEL_PATH.relative_to(ROOT)
+            ),
+            "intent_model_sha256": _sha256(DEFAULT_INTENT_MODEL_PATH),
+        },
         "active_sealed_v2_read": False,
         "collection": {
             "status": campaign.status,

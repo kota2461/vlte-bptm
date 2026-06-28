@@ -1,0 +1,32 @@
+{
+  "schema_version": "v4-puzzle-task-seed-report.v1",
+  "generated_at": "2026-06-21T05:02:07.346088+00:00",
+  "fixture": "tests\\fixtures\\v4_puzzle_task_seed_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "success_pattern_lane_write_allowed": false,
+    "solver_trace_generated": false,
+    "failure_memory_generated": false
+  },
+  "summary": {
+    "task_count": 12,
+    "ambiguous_count": 1,
+    "missing_info_count": 1,
+    "by_domain": {
+      "ambiguous": 2,
+      "arithmetic": 2,
+      "constraint_satisfaction": 3,
+      "language": 1,
+      "logic": 2,
+      "sequence": 2
+    },
+    "by_expected_route": {
+      "clarify": 2,
+      "solve": 10
+    },
+    "by_difficulty": {
+      "easy": 8,
+      "medium": 4
+    }
+  }
+}

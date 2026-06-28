@@ -1,0 +1,1305 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v9",
+ "frozen_at": "2026-06-25T08:35:00+00:00",
+ "predecessor": "pattern_language_sealed_v8.json",
+ "authoring_method": "specification-derived successor authored after V9 non-sealed replay gate and sealed rotation review; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v9-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does route_confidence mean in a routing audit column?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 10,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Define cache warmup in one short sentence.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "short_response",
+      "start": 23,
+      "end": 41
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does the label no_risk_contrast mean in the review sheet?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 20,
+      "end": 36
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Briefly answer what a fixture registry is.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "short_response",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "direct_response_request",
+      "start": 8,
+      "end": 14
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why a local file named latest_notes does not require web search.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_web_search"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "current_search_split",
+      "start": 14,
+      "end": 24
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why Apache 2.0 can be described generally without giving legal advice.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "general_information_only"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "low_risk_scope",
+      "start": 40,
+      "end": 49
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain how medical AI UI planning differs from diagnosing a patient.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_diagnosis"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "medical_boundary",
+      "start": 23,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "The note says accuracy improved; explain why the claim should stay soft until verified.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "unverified_claim",
+      "start": 9,
+      "end": 13
+     },
+     {
+      "signal": "explanation_request",
+      "start": 33,
+      "end": 40
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the pasted report, but the report text is missing.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "missing_information",
+      "start": 52,
+      "end": 59
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Prepare a deployment command after asking which environment is target.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "constraint_ask_first",
+      "start": 35,
+      "end": 59
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify this incident count, but I have not provided the source.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "missing_information",
+      "start": 39,
+      "end": 51
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create a comparison table, but I did not provide the options.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "table"
+     ],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "missing_information",
+      "start": 33,
+      "end": 48
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Write a concise status update from this fact: all V9 nonsealed lanes passed.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "short_response",
+      "start": 8,
+      "end": 15
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Create a JSON template for a routing decision with fields intent and reason.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "format_json",
+      "start": 9,
+      "end": 13
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Build a checklist for rotating a sealed fixture safely.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "format_bullets",
+      "start": 8,
+      "end": 17
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check the assumptions, then draft the migration note.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "implementation_request",
+      "start": 28,
+      "end": 33
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify whether the latest Python release is current and cite the official source.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources",
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "current_information",
+      "start": 19,
+      "end": 25
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 56,
+      "end": 60
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether 18 * 4 equals 72 before recording the total.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "calculation_request",
+      "start": 14,
+      "end": 20
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify the security report's claim before adding it to the dashboard.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "security",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 29,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Confirm whether this legal summary is safe to rely on for signing a contract.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "general_information_only",
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "legal_risk",
+      "start": 21,
+      "end": 26
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize these route gaps in two bullets, no table: risk flag missing; operation order wrong.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "format_bullets",
+      "start": 34,
+      "end": 41
+     },
+     {
+      "signal": "constraint_no_table",
+      "start": 43,
+      "end": 51
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Recap these two routing options, then compare cached lookup with live retrieval.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "comparison_request",
+      "start": 38,
+      "end": 45
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Provide a balanced recap of this governance debate without choosing a side.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "political"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 19,
+      "end": 24
+     },
+     {
+      "signal": "neutrality_constraint",
+      "start": 51,
+      "end": 74
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense this note into JSON: status ready; next rotate; blocker none.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_json",
+      "start": 24,
+      "end": 28
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explore alternatives for reducing clarify versus verify confusion.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "boundary_focus",
+      "start": 34,
+      "end": 55
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare pros and cons of router-controlled retrieval versus LLM-only retrieval.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "exploration_request",
+      "start": 8,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm paraphrase cases for operation and constraint boundaries.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "boundary_focus",
+      "start": 32,
+      "end": 56
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v9-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v9-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "List three strategies for lowering false positives, then compare the risks.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 11,
+      "end": 21
+     },
+     {
+      "signal": "comparison_request",
+      "start": 57,
+      "end": 64
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

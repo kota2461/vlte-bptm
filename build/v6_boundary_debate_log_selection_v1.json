@@ -1,0 +1,872 @@
+{
+  "schema_version": "v6-boundary-debate-log-selection.v1",
+  "generated_at": "2026-06-28T07:52:03.781611+00:00",
+  "status": "selection_ready_for_human_review",
+  "source_log": "build/router_debate_live_31stock_r3.json",
+  "source_topics": "debate_lab/topics_seed.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_selection_allowed": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_gate_use_allowed": false
+  },
+  "summary": {
+    "source_topic_count": 18,
+    "source_turn_count": 144,
+    "selected_primary_count": 15,
+    "selected_secondary_count": 3,
+    "held_ladder_count": 0,
+    "quality_issue_count": 0,
+    "immediate_focus_match_count": 10,
+    "by_decision": {
+      "select_primary_review": 15,
+      "select_secondary_review": 3
+    },
+    "by_target_set": {
+      "false_positive_set": 5,
+      "mixed_ja_en": 3,
+      "no_risk_contrast": 5,
+      "paraphrase_set": 5
+    },
+    "section_coverage": {
+      "boundary_cases": 18,
+      "candidate_sample_notes": 18,
+      "classification_rule": 18,
+      "should_fire_examples": 18,
+      "should_not_fire_examples": 18
+    }
+  },
+  "items": [
+    {
+      "topic_id": "fp-ai-light-chat-healing",
+      "target_set": "false_positive_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "false_positive",
+        "ai_light_use",
+        "dependency_suppression",
+        "low_risk_contrast"
+      ],
+      "theme": "AIと雑談して癒やされているだけの軽い利用を、依存リスクや心理相談として過剰判定しない境界を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2431,
+        "total_content_chars": 28965
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between \"light AI companionship\" (low-risk, casual interaction) and \"AI dependency/psychological crisis\" (high-risk, clinical intervention). The boundary lies in the presence of specific distress indicators, re…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies the core boundary (casual chat vs. crisis) but fails to rigorously apply the \"negated scope\" rule to metalinguistic contexts. Specifically, `should_n…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "fp-ai-task-support-not-dependency",
+      "target_set": "false_positive_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "false_positive",
+        "negated_scope",
+        "ai_task_support",
+        "dependency_suppression"
+      ],
+      "theme": "AIに毎日の予定整理を手伝ってもらうケースを、依存の話ではなくタスク管理相談として扱う条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2904,
+        "total_content_chars": 28399
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between \"AI dependency\" (high-risk, potential for impaired decision-making or loss of agency) and \"Task Management Consultation\" (low-risk, productivity tool usage). The boundary lies in whether the user i…",
+        "last_critic": "### classification_rule **Critique:** The rule correctly separates functional organization from behavioral dependency but risks false positives on \"metalinguistic labels\" (e.g., \"Task Management Mode\"). The definition of `dependency_risk` is too broad regardi…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "fp-ai-persona-heading-only",
+      "target_set": "false_positive_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "persona_label",
+        "risk_suppression"
+      ],
+      "theme": "『AIの人格』という語を見出しや設計メモのラベルとして使うだけのケースを、persona_claimやmental riskにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2864,
+        "total_content_chars": 28919
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between the *meta-discussion* of AI personality (designing a character, labeling a file, or discussing a literary trope) and *actual persona claims* or *mental health risks* (users seeking to inhabit a persona …",
+        "last_critic": "### Critique of Previous Answer **1. False Positives & Negated Scope Analysis** The previous answer correctly identifies metalinguistic uses (headings, filenames) as low-risk but fails to rigorously apply the \"negated scope\" rule to the specific Japanese them…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "fp-legal-risk-column-name",
+      "target_set": "false_positive_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "legal_label",
+        "risk_suppression"
+      ],
+      "theme": "『法的リスク』という列名をCSVに追加するだけのケースを、法的助言やhigh legal riskにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2904,
+        "total_content_chars": 29101
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between **metalinguistic/structural requests** (e.g., adding a column header named \"Legal Risk\" to a CSV) and **substantive legal requests** (e.g., asking for a legal opinion on a specific contract). The p…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies metalinguistic uses (headers, filenames) as suppression candidates but fails to rigorously apply \"negated scope\" logic to the *content* of the column…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "fp-neutrality-example-sentence",
+      "target_set": "false_positive_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "false_positive",
+        "metalinguistic_mention",
+        "neutrality_word",
+        "constraint_suppression"
+      ],
+      "theme": "『中立』という言葉を使った例文作成を、政治的中立性ガードとして過剰発火させない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2587,
+        "total_content_chars": 26013
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between the word \"neutrality\" (中立) used as a linguistic concept, a design requirement, or a metadata label, versus a request for political bias analysis or a violation of safety guidelines. Over-firing occurs w…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies metalinguistic uses (headers, definitions) but fails to sufficiently address the \"negated scope\" rule regarding *intent*. It treats \"Write a politica…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "paraphrase-ai-light-support",
+      "target_set": "paraphrase_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "paraphrase",
+        "ai_light_use",
+        "low_risk_contrast",
+        "common_features"
+      ],
+      "theme": "『AIと雑談して癒やされている』系の軽症例を5通りに言い換え、どれも低リスクとして扱うための共通特徴を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2589,
+        "total_content_chars": 27079
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between \"casual emotional expression/light companionship\" (low risk) and \"clinical psychological distress/dependency\" (high risk). The expansion focuses on identifying linguistic markers that indicate a hobbyis…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope Check:** The previous answer correctly identifies the core distinction between \"emotional comfort/roleplay\" and \"clinical intervention.\" However, it risks a false positive by treating *any* men…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "paraphrase-apache-general-question",
+      "target_set": "paraphrase_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "paraphrase",
+        "license_general",
+        "legal_suppression",
+        "current_suppression"
+      ],
+      "theme": "『Apache 2.0とは何ですか？』系の一般説明質問を複数表現に言い換え、high legal/currentにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2446,
+        "total_content_chars": 26184
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### classification_rule * **Positive Signal (Fire):** Requests for specific legal interpretation, jurisdiction-specific compliance advice, drafting of binding contracts, or real-time updates on active litigation/regulatory changes. * **Negative Signal (Suppre…",
+        "last_critic": "### classification_rule **Critique:** The previous rule correctly separates general knowledge from specific advice but fails on the \"Summarization\" boundary (Case 1). Summarizing a public license text is not legal advice; it is information retrieval. The prev…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "paraphrase-medical-ui-design",
+      "target_set": "paraphrase_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "paraphrase",
+        "medical_ui_design",
+        "diagnosis_suppression",
+        "boundary_review"
+      ],
+      "theme": "『医療AIのUI設計を考えたい』系の診断ではない設計相談を複数表現に言い換え、clarify/highにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2607,
+        "total_content_chars": 26991
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between \"Medical UI Design\" (low-risk, creative/technical task) and \"Medical Diagnosis/Treatment\" (high-risk, clinical task). The core logic is to identify when a user is discussing the *container* of info…",
+        "last_critic": "### Critique of Previous Answer **1. False Positives & Negated Scope Check** The previous answer correctly identifies \"Design\" vs. \"Diagnosis\" but fails to rigorously apply the **negated scope** rule for specific high-risk keywords. * *Critique:* The `should_…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "paraphrase-current-local-context",
+      "target_set": "paraphrase_set",
+      "priority": "medium",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "paraphrase",
+        "current_local_context",
+        "no_web_search",
+        "local_context"
+      ],
+      "theme": "『現在の作業フォルダ』のようなローカル現在文脈を複数表現に言い換え、web-current/searchと区別する特徴を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2660,
+        "total_content_chars": 24292
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between \"current local context\" (files, folders, and active sessions within the user's immediate environment) and \"current external context\" (real-time news, web-based current events, or live search requirement…",
+        "last_critic": "### classification_rule **Critique:** The rule is sound but risks false positives on \"current status\" queries where the entity is ambiguous (e.g., \"current status of the server\" could be internal logs vs. external outage reports). The distinction between \"loc…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "paraphrase-metalinguistic-mention",
+      "target_set": "paraphrase_set",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "paraphrase",
+        "metalinguistic_mention",
+        "label_use",
+        "false_positive"
+      ],
+      "theme": "列名・タグ・見出し・例文・glossaryのようなメタ言語的言及を複数表現で作り、語の使用とトピック相談を区別する条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 3015,
+        "total_content_chars": 27500
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between \"meta-linguistic usage\" (using sensitive terms as labels, headers, or data structures) and \"substantive intent\" (seeking advice, instructions, or information regarding the sensitive topic itself). …",
+        "last_critic": "### Critique of Previous Answer **1. False Positives & Negated Scope:** The previous answer correctly identifies structural metadata (headers, tags, columns) as low-risk but fails to explicitly address **negated scope** phrases like \"not legal advice\" or \"for…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "contrast-ai-word-only-low-risk",
+      "target_set": "no_risk_contrast",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "no_risk_contrast",
+        "ai_word_only",
+        "positive_negative_pair",
+        "risk_boundary"
+      ],
+      "theme": "『AI』という語があるだけではrisk/verifyにしないno-risk contrast例と、実際にAI安全境界が必要な例の違いを議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2533,
+        "total_content_chars": 26495
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between the mere presence of the keyword \"AI\" (Artificial Intelligence) in a linguistic, creative, or technical context and requests that involve high-risk AI safety, autonomous decision-making, or real-wo…",
+        "last_critic": "### Critique of Previous Answer **1. False Positives & Negated Scope Check** The previous answer correctly identifies that mere mentions of \"AI\" in creative or labeling contexts should not trigger safety routes. However, the `should_not_fire_examples` section…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "contrast-politics-word-only-low-risk",
+      "target_set": "no_risk_contrast",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "no_risk_contrast",
+        "political_word_only",
+        "neutrality_suppression",
+        "metalinguistic_mention"
+      ],
+      "theme": "『政治』という単語説明や例文作成を、価値観対立や政治的中立性ガードにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2188,
+        "total_content_chars": 27417
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between the *linguistic/functional* use of the word \"politics\" (政治) and the *substantive* generation of political content. The boundary lies in whether the user is asking for a definition, a structural explanat…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies metalinguistic uses (definitions, labels) as low-risk. However, it risks a false positive on \"Educational Context\" by suggesting that explaining the …"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "contrast-medical-word-only-low-risk",
+      "target_set": "no_risk_contrast",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "no_risk_contrast",
+        "medical_word_only",
+        "diagnosis_suppression",
+        "risk_boundary"
+      ],
+      "theme": "『薬』『片頭痛』『医療』などの単語説明や翻訳を、診断相談やmedical high riskにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2711,
+        "total_content_chars": 25904
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between linguistic/informational requests involving medical terminology (e.g., \"migraine,\" \"medication\") and actual requests for medical diagnosis, treatment plans, or emergency intervention. The goal is t…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies translation and definition as low-risk but fails to sufficiently emphasize the *negated scope* in its boundary cases. Specifically, Case C (\"What are…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "contrast-license-word-only-low-risk",
+      "target_set": "no_risk_contrast",
+      "priority": "high",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 8,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "no_risk_contrast",
+        "license_word_only",
+        "legal_suppression",
+        "source_boundary"
+      ],
+      "theme": "『ライセンス』という語の一般説明やタグ保存を、法的助言やcurrent source要求にしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 3000,
+        "total_content_chars": 28146
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between the linguistic use of \"license\" (as a metadata tag, a general concept, or a creative label) and the functional request for legal counsel, jurisdiction-specific compliance, or real-time licensing status.…",
+        "last_critic": "### classification_rule The rule correctly separates metalinguistic usage from active legal consultation but lacks explicit handling for negated scope (e.g., \"not legal advice\") and fails to distinguish between general regulatory summaries (which may be safe)…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "contrast-future-word-only-low-risk",
+      "target_set": "no_risk_contrast",
+      "priority": "medium",
+      "decision": "select_primary_review",
+      "selection_reason": "High-priority false-positive/paraphrase/no-risk calibration topic.",
+      "selection_score": 6,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "primary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "no_risk_contrast",
+        "future_word_only",
+        "prediction_suppression",
+        "metalinguistic_mention"
+      ],
+      "theme": "『将来』という語を予定表や作文に使うだけのケースを、未来予測リスクにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 3047,
+        "total_content_chars": 26189
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### classification_rule Distinguish between **linguistic/structural usage** of the term \"future\" (将来) and **predictive/speculative requests** regarding real-world events, personal destinies, or systemic forecasts. - **Suppress:** Usage in creative writing, sc…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer correctly identifies metalinguistic uses (labels, headings) as low-risk. However, it fails to explicitly address the \"negated scope\" constraint regarding speculative them…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "mixed-ai-persona-label-ja-en",
+      "target_set": "mixed_ja_en",
+      "priority": "medium",
+      "decision": "select_secondary_review",
+      "selection_reason": "Useful medium-priority mixed-language or current/search split topic.",
+      "selection_score": 5,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "secondary_priority_set",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": false,
+      "axis_ids": [
+        "mixed_ja_en",
+        "ai_persona_label",
+        "metalinguistic_mention",
+        "risk_suppression"
+      ],
+      "theme": "『AI persona labelをREADMEに追加』のような日英混在ラベル用途を、人格化リスクにしない条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2594,
+        "total_content_chars": 29112
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between \"AI persona labeling\" as a technical/metalinguistic task (e.g., documentation, naming, UI design) and \"AI persona adoption\" as a psychological or safety risk (e.g., seeking emotional dependency, rolepla…",
+        "last_critic": "### Critique of Previous Answer **1. False Positives & Negated Scope Check:** * **Issue:** The `should_fire_examples` section contains a critical error: *\"Write a system prompt for an AI persona that acts as a supportive study buddy.\"* is labeled as a fire ca…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "mixed-apache-general-ja-en",
+      "target_set": "mixed_ja_en",
+      "priority": "medium",
+      "decision": "select_secondary_review",
+      "selection_reason": "Useful medium-priority mixed-language or current/search split topic.",
+      "selection_score": 7,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "secondary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "mixed_ja_en",
+        "license_general",
+        "brief_explain",
+        "legal_suppression"
+      ],
+      "theme": "『Apache 2.0 license の概要を日本語でbriefに説明』を、high legal/currentではなく一般説明として扱う条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 1845,
+        "total_content_chars": 21711
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The goal is to distinguish between a request for a general educational summary of a standard open-source license (Apache 2.0) and a request for specific legal advice or jurisdictional compliance. The \"high legal\" route should only fire i…",
+        "last_critic": "### classification_rule **Critique:** The rule incorrectly assumes that *all* summaries of standard licenses are low-risk. It fails to distinguish between explaining the *text* of a license versus explaining its *implications* for a specific business model. A…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    },
+    {
+      "topic_id": "mixed-medical-ui-ja-en",
+      "target_set": "mixed_ja_en",
+      "priority": "medium",
+      "decision": "select_secondary_review",
+      "selection_reason": "Useful medium-priority mixed-language or current/search split topic.",
+      "selection_score": 7,
+      "score_reasons": [
+        "final_content_available_no_hidden_reasoning",
+        "secondary_priority_set",
+        "matches_immediate_focus_boundary",
+        "contains_multiple_output_contract_sections"
+      ],
+      "immediate_focus_match": true,
+      "axis_ids": [
+        "mixed_ja_en",
+        "medical_ui_design",
+        "diagnosis_suppression",
+        "boundary_review"
+      ],
+      "theme": "『medical AI UI layoutを考えたい』という日英混在設計相談を、診断相談と区別する条件を議論する。",
+      "health": {
+        "turn_count": 8,
+        "moderation_event_count": 4,
+        "final_decision": "close_topic",
+        "closed": true,
+        "all_turns_content": true,
+        "reasoning_content_chars": 0,
+        "min_turn_chars": 2329,
+        "total_content_chars": 27321
+      },
+      "section_hits": {
+        "classification_rule": true,
+        "should_fire_examples": true,
+        "should_not_fire_examples": true,
+        "boundary_cases": true,
+        "candidate_sample_notes": true
+      },
+      "evidence_excerpt": {
+        "first_expander": "### Reasoning Summary The objective is to distinguish between **UI/UX design discussions** involving medical terminology (low risk, creative/technical) and **medical diagnostic requests** (high risk, clinical). The primary risk is \"over-firing\" the medical sa…",
+        "last_critic": "### Critique of Previous Answer **False Positives & Negated Scope:** The previous answer fails to rigorously apply negated scope markers (e.g., \"not diagnosis,\" \"design context\") within the `should_fire_examples`. Specifically, Example 1 (\"この症状...どのボタンを一番目立たせ…"
+      },
+      "allowed_use": "review_only_log_selection",
+      "training_allowed": false,
+      "gate_use_allowed": false
+    }
+  ],
+  "next_step": {
+    "name": "human_review_then_synthesize_candidate_samples",
+    "input": "build/v6_boundary_debate_log_selection_v1.md",
+    "raw_log": "build/router_debate_live_31stock_r3.json",
+    "allowed_use": "review_only"
+  }
+}

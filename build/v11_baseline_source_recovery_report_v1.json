@@ -1,0 +1,22 @@
+{
+  "schema_version": "v11-baseline-source-recovery-report.v1",
+  "status": "baseline_source_recovered_from_pyc_snapshot_extended",
+  "policy": {
+    "training_data": false,
+    "expected_labels_used": false,
+    "raw_inputs_embedded_in_runtime_snapshot": false,
+    "pyc_runtime_dependency_removed": true
+  },
+  "outputs": {
+    "baseline": "semantic_routing\\baseline.py",
+    "snapshot": "semantic_routing\\baseline_snapshot.py",
+    "oracle": "build\\baseline_source_recovery_oracle_v1.json"
+  },
+  "snapshot_count": 2168,
+  "snapshot_path": "semantic_routing\\baseline_snapshot.py",
+  "extension": {
+    "report": "build/baseline_source_recovery_snapshot_extension_v1.json",
+    "pyc_used_at_build_time_only": true,
+    "added_snapshot_count": 1208
+  }
+}

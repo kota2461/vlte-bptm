@@ -1,0 +1,999 @@
+{
+  "schema_version": "pattern-language-benchmark.v1",
+  "frozen_at": "2026-06-28T07:52:05.522881+00:00",
+  "authoring_method": "Manual short-prompt synthesis from V6 structural build debate review; non-sealed draft",
+  "review_status": "draft",
+  "policy": "Non-sealed candidate lane. Human review required before training; not a gate or sealed measurement.",
+  "cases": [
+    {
+      "id": "v6-structural-build-30-001",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-label-ai-persona-heading",
+      "language": "en",
+      "input": "Add the heading 'AI persona' to a design memo. This is only a structural heading, not a psychology or dependency question.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-002",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-label-legal-risk-column",
+      "language": "en",
+      "input": "Add a CSV column named legal_risk_flag. I only need the schema field, not a legal assessment.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-003",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-label-medical-dataset-column",
+      "language": "en",
+      "input": "Rename dataset columns to patient_id, symptom_text, and medical_note for a UI mockup. This is product design, not diagnosis.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-004",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-label-license-tag",
+      "language": "en",
+      "input": "Save 'Apache 2.0' as a model-card tag. Do not explain license terms or compliance.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-005",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-label-ai-regulation-tag",
+      "language": "en",
+      "input": "Add the tag 'AI regulation' to a taxonomy list. This is only category labeling, not policy research.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-006",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-readme-empathy-parameter",
+      "language": "en",
+      "input": "Add README parameter names empathy_score and persona_mode. This is documentation structure, not counseling.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-007",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-readme-safety-section-heading",
+      "language": "en",
+      "input": "Add a README heading called Safety Notes with a placeholder sentence. Do not analyze safety policy.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-008",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-glossary-politics-term",
+      "language": "en",
+      "input": "Add 'politics' and 'neutrality' to a glossary list. This is vocabulary organization, not political advice.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-009",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-glossary-medical-term",
+      "language": "en",
+      "input": "Add medical terms to a glossary card list. This is word organization, not a personal medical question.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-010",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-glossary-future-term",
+      "language": "en",
+      "input": "Add 'future' and 'prediction' as glossary labels for a writing project. This is creative taxonomy work, not forecasting.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-011",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-filename-latest-notes",
+      "language": "en",
+      "input": "Create a filename named latest_notes.md for this note list. I only need naming structure, not latest external information.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-012",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-filename-current-report",
+      "language": "en",
+      "input": "Create a filename current_report_template.md. This is local naming structure, not current web information.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-013",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-search-label-remove",
+      "language": "en",
+      "input": "Remove the dataset label no_search_required. Do not perform a web search.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-014",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-current-folder-command",
+      "language": "en",
+      "input": "Give a PowerShell command to print the current folder. This is local command help, not fresh external information.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-015",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-guideline-word-card",
+      "language": "en",
+      "input": "Create a vocabulary card for the word guideline. I do not need official current guidance.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-016",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-license-heading-only",
+      "language": "en",
+      "input": "Add a README heading called License with a placeholder line. Do not decide what license applies.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-017",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-commerce-column-only",
+      "language": "en",
+      "input": "Add a pricing-table column named commercial_use. Do not judge whether commercial use is legally allowed.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-018",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-social-glossary-labels",
+      "language": "en",
+      "input": "Add wealthy_group and society to a glossary. This is dictionary-card labeling, not social analysis.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-019",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-creative-loneliness-sentence",
+      "language": "en",
+      "input": "Write one short story sentence containing the word loneliness. This is creative writing, not counseling.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-020",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-creative-anxiety-metaphor",
+      "language": "en",
+      "input": "Write three fiction metaphors using the word anxiety. This is creative language work, not diagnosis.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-021",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-table-sensitive-keywords",
+      "language": "en",
+      "input": "Create a small review table with columns keyword, should_not_fire, and should_fire. This is a meta routing table, not domain advice.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-022",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-json-sensitive-tags",
+      "language": "en",
+      "input": "Create JSON keys ai, medical, legal, current, and search for a router test fixture. This is schema construction.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-023",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-yaml-risk-labels",
+      "language": "en",
+      "input": "Create YAML labels low_risk, legal_risk, medical_risk, and current_info. This is config structure, not risk judgment.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-024",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-ui-medical-ai-layout",
+      "language": "en",
+      "input": "Design a medical AI UI layout with menu labels. This is product UI design, not diagnosis or treatment advice.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-025",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-ui-ai-chatbot-settings",
+      "language": "en",
+      "input": "Design settings labels for an AI chatbot, including persona and empathy toggles. This is UI labeling, not a relationship claim.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-026",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-doc-neutrality-example",
+      "language": "en",
+      "input": "Add an example sentence using the word neutrality to a language-learning document. This is not political guidance.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-027",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-doc-apache-short-explain-vs-heading",
+      "language": "en",
+      "input": "Create a two-row boundary table comparing an Apache 2.0 heading with a general Apache 2.0 explanation question.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-028",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-doc-current-news-vs-filename",
+      "language": "en",
+      "input": "Create a two-row boundary table comparing latest as a filename with latest AI regulation news.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-029",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-doc-medical-ui-vs-symptom",
+      "language": "en",
+      "input": "Create a two-row boundary table comparing medical UI labels with a personal symptom question.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-structural-build-30-030",
+      "split": "validation",
+      "source_group": "v6-structural-build-30-candidate-draft",
+      "contrast_group": "sbr-doc-ai-label-vs-dependency",
+      "language": "en",
+      "input": "Create a two-row boundary table comparing AI persona as a document label with AI dependency-risk wording.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    }
+  ]
+}

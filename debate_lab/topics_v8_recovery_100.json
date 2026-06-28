@@ -1,0 +1,2437 @@
+{
+  "schema_version": "router-debate-topics.v1",
+  "purpose": "V8 recovery round-4 debate stock after sealed v7 measurement misses",
+  "created_at": "2026-06-28T07:52:06.658851+00:00",
+  "source_measurement": "build/pattern_language_sealed_v7_measurement_report.json",
+  "policy": {
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_log_training_allowed": false,
+    "human_review_required_before_fixture": true,
+    "same_cycle_gate_use_allowed": false
+  },
+  "recommended_run": {
+    "target_set": "v8_recovery_round4",
+    "rounds": 4,
+    "expected_topics": 100,
+    "expected_turns": 800,
+    "output": "build/v8_recovery_debate_r4_100.json"
+  },
+  "summary": {
+    "topic_count": 100,
+    "categories": {
+      "missing_info": 10,
+      "multiple_intents": 10,
+      "current_search_split": 10,
+      "unverified_claim": 10,
+      "constraints": 10,
+      "operation_terminal": 10,
+      "risk_ladder": 10,
+      "false_positive": 10,
+      "paraphrase": 10,
+      "mixed_language": 10
+    }
+  },
+  "topics": [
+    {
+      "id": "v8-missing_info-01-rewrite-missing-text",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "文章を整えてほしいが対象テキストが提示されていない時、buildせずに何を確認するべきか。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "clarify_boundary",
+        "ask_first"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-02-compare-missing-options",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "A案とB案を比較してと言われたがA案/B案の中身が無い場合、最小の聞き返しをどう作るか。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "clarify_boundary",
+        "compare"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-03-summarize-missing-log",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『このログを要約して』だけでログ本文が無い時、要約を捏造せずclarifyする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "summarize",
+        "missing_artifact"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-04-make-table-missing-data",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "表にしてと言われたがデータが未提示の場合、table buildへ進まず必要データを聞く境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "format_table",
+        "missing_data"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-05-fix-code-missing-error",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "コード修正依頼でコードもエラーも無い時、実装推測ではなく必要情報を聞くサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "code_context",
+        "clarify"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-06-review-missing-target",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『レビューお願いします』だけで対象ファイル/文書が無い時、review stanceに入る前の確認。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "review",
+        "target_missing"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-07-translate-missing-language",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "翻訳してと言われたが翻訳先言語が無い時、勝手に英訳せず確認する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "translation",
+        "missing_language"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-08-choose-missing-criteria",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "どちらが良いか聞かれたが評価基準が無い時、好みで断定せず基準を聞く境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "decision_criteria",
+        "clarify"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-09-extract-missing-source",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "候補抽出を依頼されたがソースログが無い時、抽出を始めず入力を要求する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "candidate_extraction",
+        "source_missing"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-missing_info-10-plan-missing-goal",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "ロードマップ作成依頼で目的/期限/制約が無い時、最小質問に落とす境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "roadmap",
+        "missing_goal"
+      ],
+      "recovery_focus": "missing_required_information recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-01-verify-then-build",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『確認してから修正案を作る』依頼で、verify→buildの順序を保つサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "vertical_stack",
+        "verify_then_build"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-02-summarize-then-compare",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『要約してから比較表』で、最終成果物がcomparison tableになる境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "summarize_then_compare",
+        "terminal_table"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-03-extract-then-classify",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "ログから候補を抽出し分類する依頼で、extract→classifyを1つのrespondに潰さない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "extract",
+        "classify"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-04-check-then-promote",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "gate確認後にpromoteする話題で、checkが失敗した時にpromoteへ進まないルート。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "gate",
+        "promotion_block"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-05-ask-then-build",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "不足条件を1つ聞いてからテンプレートを作る依頼で、clarifyとbuildを分離する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "clarify_then_build",
+        "ask_first"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-06-compare-then-recommend",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "比較して推奨まで出す依頼で、compare→recommendを明示し、根拠不足なら保留する境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "compare",
+        "recommend"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-07-search-then-cite",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "最新仕様を調べて引用付きで短く説明する依頼で、search→explain→citeを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "search_then_explain",
+        "cite_sources"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-08-review-then-patch",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "レビューで問題を見つけたら修正まで行う依頼の、review→edit→test順序。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "review_then_patch",
+        "test_after_edit"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-09-clean-then-measure",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "データを洗浄してから測定する依頼で、cleaning結果とmeasurementを混同しない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "clean_then_measure",
+        "data_quality"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-multiple_intents-10-backup-then-run",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "backupを取ってから実験を回す依頼で、backup完了前に実験へ進まないルート。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "backup_first",
+        "experiment"
+      ],
+      "recovery_focus": "multiple intent and vertical stack recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-01-current-folder-local",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『現在のフォルダ』を確認するPowerShell操作を、web最新情報と誤認しない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_context",
+        "no_web_search"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-02-today-log-local",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『今日の会話ログ』の要約を、外部ニュース検索ではなくローカル履歴として扱う境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_log",
+        "today_not_web"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-03-latest-filename-label",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "latest_result.jsonというファイル名を、最新ニュース検索にしないmetalinguistic境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "filename",
+        "metalinguistic"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-04-current-ai-law-positive",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "現在進行中のAI規制を引用付きで調べる依頼ではcurrent/searchを発火させる条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "legal_current"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-05-latest-library-positive",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "公式情報から最新LTSバージョンを確認する依頼で、search/citeを必要にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "official_sources"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-06-current-ui-state-local",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "現在開いているUI状態の説明を、ブラウザ外部検索ではなく観察/ログ確認として扱う境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_ui",
+        "observation"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-07-recent-in-file",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "recentという列名をCSVへ追加する作業を、最近の出来事検索にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "column_name",
+        "metalinguistic"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-08-today-as-date-field",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "today_countというフィールド名を作る依頼で、今日の実データ取得へ飛ばない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "field_name",
+        "no_current"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-09-model-benchmark-positive",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "最新ベンチ比較を出典付きで比較する依頼では、current/searchを抑制しない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "benchmark"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-current_search_split-10-local-version-command",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "ローカルに入っているPythonバージョン確認コマンドを、最新Python情報検索と分ける条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_command",
+        "version_check"
+      ],
+      "recovery_focus": "current/search split recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-01-vendor-security-claim",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "ベンダーが脆弱性修正済みと言っている時、採用前にsource verifyを挟む条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "security",
+        "source_required"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-02-rumor-low-impact-note",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "噂をメモとして保存するだけの依頼を、強いverify/searchへ上げすぎない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "note_only",
+        "verify_suppression"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-03-report-number-check",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "報告書に入れる数値が正しいか確認する依頼で、verifyを発火させる条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "numeric_claim",
+        "report"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-04-fiction-premise",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "創作設定として『治療薬が完成した世界』を書く依頼を、医学的事実検証にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "fiction",
+        "claim_suppression"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-05-legal-template-claim",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "契約テンプレが合法だと言われた時、法的断定せず一般情報/専門家確認に分ける境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "legal_claim",
+        "avoid_overclaim"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-06-performance-claim",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "モデルが2倍速いという主張を比較表に入れる前に、根拠確認を必要にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "benchmark_claim",
+        "verify"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-07-hypothesis-label",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "『安全と言われている』を仮説ラベルとして記録するだけなら、真偽判定へ進まない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "hypothesis",
+        "label_use"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-08-medical-claim-general",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "医療AIの有効性主張を記事に使う前に、出典確認と過断定回避を行う条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "medical_claim",
+        "cite_sources"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-09-user-memory-claim",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "ユーザーの記憶に基づく前提を、その場の作業仮定に留めるか検証するかの境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "memory_claim",
+        "assumption"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-unverified_claim-10-product-risk-claim",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "製品が安全と宣伝している時、リスク比較では検証強度を上げる条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "product_claim",
+        "risk_comparison"
+      ],
+      "recovery_focus": "unverified claim and verification strength recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-01-short-no-table",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "短く、表なし、箇条書きなしで説明してという複数制約を落とさない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "response_length",
+        "no_table"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-02-neutral-no-diagnosis",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "医療AI UI説明で、中立・診断なし・短めという制約を同時に保つサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "neutrality",
+        "avoid_diagnosis"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-03-cite-no-overclaim",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "出典を付けるが断定しすぎない、というcite_sourcesとavoid_overclaimの併存条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "cite_sources",
+        "avoid_overclaim"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-04-no-web-local",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "外部検索なしでローカルログだけ見る、というno_web_search制約を保持する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "no_web_search",
+        "local_only"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-05-json-only",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "JSONだけ返して、説明文を付けない依頼でformat制約を守るサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "json_format",
+        "format_strict"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-06-ask-before-edit",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "破壊的変更前に確認してというask_first制約を、実装修正中に落とさない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "ask_first",
+        "destructive_guard"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-07-friendly-but-precise",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "やわらかく、でも断定しないで根拠を分けるというtone/verification制約。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "tone",
+        "avoid_overclaim"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-08-table-required",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "比較結果は必ず表、最後に短い結論、というterminal format制約を保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "table",
+        "terminal_action"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-09-do-not-store",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "このログは学習に使わず一時レビューだけ、という保存制約を保持する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "privacy",
+        "not_training_data"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-constraints-10-must-and-must-not",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "『例は出すが固有名詞は避ける』のmust/must_notを分けて扱う境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "must_must_not_split",
+        "examples"
+      ],
+      "recovery_focus": "constraint preservation recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-01-respond-vs-build",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『どう思う？』に簡潔回答で足りる場合と、設計案をbuildすべき場合の境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "respond_vs_build",
+        "cheap_route"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-02-explain-vs-verify",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "一般説明で足りるApache 2.0質問と、現在の適用可否確認が必要な質問の違い。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "explain_vs_verify",
+        "license"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-03-summarize-vs-extract",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "要約依頼と候補抽出依頼を、どちらもsummarizeに潰さない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "summarize_vs_extract",
+        "candidate_selection"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-04-build-vs-clarify",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "材料が揃っている曖昧な文体修正はbuild、材料不足はclarifyにする境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "build_vs_clarify",
+        "missing_info"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-05-compare-terminal-table",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "比較が目的だが最終成果物が表の場合、primary intent/operationをどう置くか。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "compare",
+        "terminal_table"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-06-review-terminal-findings",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "コードレビューでは要約より findings first になるterminal actionを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "review",
+        "findings_first"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-07-fix-terminal-patch",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "修正依頼では説明だけで止まらずpatch/testまで進む条件と止める条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "patch",
+        "test"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-08-plan-terminal-roadmap",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "設計相談からロードマップ成果物へ落とす時、exploreだけで終えない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "roadmap",
+        "build_plan"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-09-classify-terminal-labels",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "ログを分類ラベルへ変換する依頼で、respondではなくclassify/buildにする境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "classify",
+        "labels"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-operation_terminal-10-verify-terminal-decision",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "昇格判断では、説明ではなくgate decisionを終端にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "gate_decision",
+        "verify"
+      ],
+      "recovery_focus": "operation exact match and terminal action recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-01-ai-light-comfort",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "AIと雑談して少し癒やされる程度を、依存high riskにしない低リスク例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "ai_light_use",
+        "low_risk"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-02-ai-impaired-decision",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "AIなしでは重要判断できないと述べる場合、依存/心理リスクを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "ai_dependency_positive",
+        "medium_high"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-03-medical-ui-low",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "医療AIのUI設計相談は診断ではないためlow/mediumに留める境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "medical_ui",
+        "diagnosis_suppression"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-04-medical-personal-symptom",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "個人症状と治療判断を求める場合、medical riskを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "medical_positive",
+        "high_risk"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-05-legal-general-low",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "Apache 2.0の一般説明をhigh legal/currentにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "license_general",
+        "low_legal"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-06-legal-specific-high",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "特定契約に適用してよいかの判断はlegal risk/source requirementを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "legal_positive",
+        "source_required"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-07-political-word-low",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "政治という単語を例文に使うだけならneutrality highにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "political_word",
+        "metalinguistic"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-08-political-persuasion-high",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "投票行動を変える説得文を作る依頼では政治リスクを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "political_positive",
+        "persuasion"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-09-security-label-low",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "securityという見出しを追加するだけの低リスク例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "security_label",
+        "low_risk"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-risk_ladder-10-security-exploit-high",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "脆弱性悪用手順の具体化はcritical寄りに上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "security_positive",
+        "critical"
+      ],
+      "recovery_focus": "risk ladder calibration recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-01-ai-tag",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "タグ一覧にAIを追加するだけの作業を、AI安全相談にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "tag_use",
+        "ai_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-02-medical-column",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "medical_flagという列名を作るだけの作業を、診断相談にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "column_name",
+        "medical_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-03-legal-heading",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "LegalというREADME見出しを作るだけの作業を、法的助言にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "heading",
+        "legal_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-04-politics-example",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "politicsを使った英作文例を、価値観/政治誘導にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "language_learning",
+        "political_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-05-license-label",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "license_typeというDBフィールドを追加する作業を、ライセンス判断にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "field_name",
+        "license_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-06-risk-word",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "riskという単語を含む表見出しを、重大リスク評価にしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "table_heading",
+        "risk_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-07-diagnosis-quote",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "『diagnosis』という英単語を翻訳するだけの依頼を、医療診断にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "translation",
+        "medical_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-08-current-label",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "current_statusというステータス名を作るだけの作業を、最新情報検索にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "status_label",
+        "current_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-09-search-button",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "検索ボタンのラベル文言を考えるだけの作業を、web検索実行にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "ui_label",
+        "search_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-false_positive-10-critical-priority",
+      "priority": "high",
+      "target_set": "v8_recovery_round4",
+      "theme": "criticalという優先度ラベルを保存するだけの作業を、安全critical扱いにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "priority_label",
+        "critical_word_only"
+      ],
+      "recovery_focus": "sensitive-word false positive recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-01-ai-comfort-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "『AIと話すと落ち着く』を別表現にしても低リスク扱いを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "ai_light_use",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-02-apache-what-is-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "Apache 2.0とは何か、という一般説明を複数表現でlow legalに保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "license_general",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-03-medical-ui-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "医療AI UIを考えたい、の言い換えでも診断相談にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "medical_ui",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-04-current-local-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "現在の作業場所/カレントディレクトリ等の言い換えをlocal contextに保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "current_local",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-05-unverified-report-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "報告書に入れる前に確認、の言い換えでもverifyを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "unverified_claim",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-06-missing-text-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "対象文が無い修正依頼の言い換えでもclarifyを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "missing_info",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-07-compare-table-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "比較表を作る依頼の言い換えでもterminal tableを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "terminal_table",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-08-no-web-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "外部検索なし/ネット不要/ローカルだけ、の言い換えでno_webを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "no_web_search",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-09-avoid-diagnosis-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "診断ではなく一般情報、の言い換えでavoid_diagnosisを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "avoid_diagnosis",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-paraphrase-10-ask-first-variants",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "先に確認して/勝手に進めないで、の言い換えでask_firstを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "ask_first",
+        "surface_variants"
+      ],
+      "recovery_focus": "paraphrase robustness recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-01-ai-persona-label",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "READMEに 'AI persona' label を追加。人格化相談ではなくmetadata整理として扱う条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "persona_label"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-02-apache-brief",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "Apache 2.0 license の概要を日本語でbriefに。法的助言/currentではなく一般説明にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "license_general"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-03-medical-ui-layout",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "Medical AI UI layout を考えたい。diagnosisではなく設計相談として扱う条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "medical_ui"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-04-current-folder",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "current folder をPowerShellで確認したい。web latest searchではなくlocal commandにする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "local_command"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-05-no-table-neutral",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "neutral toneで、no table、short answerという混在制約を落とさない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "constraints"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-06-verify-source",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "この claim を source 付きで check して、という混在表現でverifyを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "verify"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-07-risk-label",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "risk_level column を追加するだけ。risk assessmentではない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "column_name"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-08-compare-table",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "2案を compare して pros/cons table にする混在依頼のterminal action。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "terminal_table"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-09-ask-first",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "edit before ask しないで、先に確認してという混在制約を保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "ask_first"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    },
+    {
+      "id": "v8-mixed_language-10-latest-field",
+      "priority": "medium",
+      "target_set": "v8_recovery_round4",
+      "theme": "latest_version field を追加するだけ。latest news/searchではない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "field_name"
+      ],
+      "recovery_focus": "mixed Japanese/English boundary recovery",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data",
+      "human_review_required": true
+    }
+  ]
+}

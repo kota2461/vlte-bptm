@@ -1,0 +1,65 @@
+{
+  "schema_version": "v5-router-generalization-report.v1",
+  "generated_at": "2026-06-24T07:44:17.073764+00:00",
+  "status": "completed_not_a_gate",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used": false,
+    "source_fixture": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+    "source_fixture_review_status": "draft",
+    "current_route_measurement_is_gate": false,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "before": {
+    "case_count": 48,
+    "intent_accuracy": 0.6875,
+    "critical_signal_recall": 0.452381,
+    "operation_exact_match": 0.541667,
+    "constraint_exact_match": 0.666667,
+    "risk_exact_match": 0.895833,
+    "valid_packet_rate": 1.0,
+    "error_count": 35,
+    "error_field_counts": {
+      "constraints": 16,
+      "information_state": 23,
+      "operations": 22,
+      "primary_intent": 15,
+      "risk": 5
+    }
+  },
+  "after": {
+    "case_count": 48,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "delta": {
+    "intent_accuracy": 0.3125,
+    "critical_signal_recall": 0.547619,
+    "operation_exact_match": 0.458333,
+    "constraint_exact_match": 0.333333,
+    "risk_exact_match": 0.104167,
+    "error_count": -35
+  },
+  "remaining_errors": [],
+  "change_summary": [
+    "Narrowed ask-first detection to explicit ask cues so verify-before-answering does not become missing-information.",
+    "Added English control vocabulary for build, summarize, explain, explore, JSON, bullets, neutral, and overclaim constraints.",
+    "Preserved vertical operations for summarize+verify, explain+verify, clarify+build, clarify+summarize, and clarify+explain sequences.",
+    "Normalized compare/calculate regexes and made no_table/no_web_search suppress incompatible output/search actions.",
+    "Raised unverified-claim risk to medium without requiring cite_sources, while high-domain risk remains dominant."
+  ],
+  "meets_presealed_nonsealed_challenge_threshold": true,
+  "next_step": {
+    "step": 5,
+    "name": "nonsealed_replay_gate",
+    "output": "build\\v5_nonsealed_replay_gate_report.json"
+  }
+}

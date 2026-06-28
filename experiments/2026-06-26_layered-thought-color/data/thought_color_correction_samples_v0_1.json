@@ -1,0 +1,1155 @@
+{
+  "created_at": "2026-06-26T09:10:08.342825+00:00",
+  "policy": {
+    "human_review_required_before_training": true,
+    "sealed_fixtures_used": false,
+    "synthetic_samples_are_training_data": false
+  },
+  "samples": [
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-01",
+      "input": "Check this function for off-by-one bugs.",
+      "input_sha256": "5bd8aaf300349c864cefc081f689c5a8f5940df401af3a5f0549f031ea3145f5",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-02",
+      "input": "Review this code and point out any unsafe edge cases.",
+      "input_sha256": "4eced219c306d1953237a35b83d5c1f14efa53c89ba4654efe84d3bab0aca941",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-03",
+      "input": "Inspect this parser for logic errors.",
+      "input_sha256": "66af2991ab8c3ce8d2fff42a9e346a8edbab52c50a33b0eb35274276bd498910",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-04",
+      "input": "Find bugs in this helper without rewriting it.",
+      "input_sha256": "db22c22a52b974c81f0458120bfe55b110de83bab97b21b46ed80294f3dea069",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-05",
+      "input": "Verify whether this code handles empty input correctly.",
+      "input_sha256": "2bbe833e96765653d3e87cc3e6177cdfda07e94f5134628661cb4d1631ab53d6",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 140,
+        "base_label": "verification_review",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-verification_review",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-06",
+      "input": "Audit this snippet for mistakes.",
+      "input_sha256": "0205e71d7f86e70224ae9219ce95e25034a8b14808209acb2e09f86e65394937",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-07",
+      "input": "Explain why this loop becomes slow on large inputs.",
+      "input_sha256": "b22eb7353fd16156b779abf871cce72c2f4318c0f6ce7efc0c846441d87c791c",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-08",
+      "input": "Tell me why this function times out.",
+      "input_sha256": "1f672047c520e1c25fb6b131d53b2fb05cb73910ec85e6fcd23536140b817784",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-09",
+      "input": "Explain the cause of this memory spike in the code.",
+      "input_sha256": "95541c57cef9bfea85bd969db4c3e74588ced5fd337788becf8e2590844a3c83",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-10",
+      "input": "Why does this query get slower after adding more rows?",
+      "input_sha256": "b1a775fa023008f97fb76a80facc4cbc69353037815433c187d49b15e3fce62d",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-11",
+      "input": "Explain why this recursion is inefficient.",
+      "input_sha256": "17e51ab3cdc87f8de3506d4664c9064ad9febc8fef8e93c0af226d65ad01ef7d",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 110,
+        "base_label": "mechanism_explanation",
+        "intensity": "medium",
+        "operation": "reason",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-mechanism_explanation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-12",
+      "input": "Describe why this implementation behaves slowly.",
+      "input_sha256": "23254fada09eab1efa83404579300fa1aa0d13bc876ce47c7dd3652f11990a41",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-13",
+      "input": "Rewrite this repeated code as a helper function.",
+      "input_sha256": "5973d25c82592b3f9915c9e645076e1de4dde2cc6ad7aa216441013ab1262ec2",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-14",
+      "input": "Refactor this snippet into a small reusable utility.",
+      "input_sha256": "d87f0a3bb936df61e415c6127e0e916fed7e5b9baa7a9b971ad862dfbe2ce85b",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-15",
+      "input": "Turn this inline logic into a named helper.",
+      "input_sha256": "5f171773dc123b2814a82403576afc86054c55ba8033c865c5a15fabced2b9af",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-16",
+      "input": "Create a cleaner version of this function.",
+      "input_sha256": "303bcb319e54d754076d600bce4ffc98f3d9a9f69b682a381c4522a38385a19a",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-17",
+      "input": "Convert this code block into a reusable method.",
+      "input_sha256": "c13642f3f522baf002661351c572c0f0faa9cdf28c97e4985e106ab54a4c3c40",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects code wording split: review vs explain vs rewrite.",
+      "group_id": "correct-code-request-split-artifact_generation",
+      "human_review_required": true,
+      "id": "tc-correct-code-request-split-18",
+      "input": "Write a compact helper that replaces this duplicate logic.",
+      "input_sha256": "f80778d8684bf4098b664f02abd450a86f650a41c6427fa6f9e742f4af0010d1",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "code_request_split_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-generate",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-01",
+      "input": "Draft a release checklist for a small web app.",
+      "input_sha256": "d4fa69a155eb7999d91d819cefaeb1431cc703a6ba5b72238bdb5a0978a49df9",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-generate",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-02",
+      "input": "Create a launch checklist for a simple dashboard.",
+      "input_sha256": "7a61a5e4605e9de8f09a6b25151477c5c5bb4f76516d2a85aeb23ef9d6f99924",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-generate",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-03",
+      "input": "Write a deploy checklist for a weekend project.",
+      "input_sha256": "bebe9ae9c59176f3b6164077267991aea19083144995946a9729d78f9827e1aa",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-generate",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-04",
+      "input": "Make a concise release checklist for a browser tool.",
+      "input_sha256": "8c992ed8a56f762b4ad02136952c9d0b5f8406095a6b8afe4a7dde9e5a5e6273",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "generate",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-generate",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-05",
+      "input": "Create a pre-launch checklist for a tiny SaaS app.",
+      "input_sha256": "7df45ee3b2b483fc4aa17f0926c7b179074b8c1aef3ed303f75ff14c1040bd04",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-verify",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-06",
+      "input": "Create a release checklist that is specifically focused on verification gates.",
+      "input_sha256": "523e6ab7d4f2055e1a6479d6a1b147558529b36bc3dc0c1f836ac261ef38e4a1",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-verify",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-07",
+      "input": "Draft a launch checklist centered on test, review, and rollback checks.",
+      "input_sha256": "0b88e012a7efd6048c117a116a3855e73fdd3e39582e65a86ceafffa5b1a6c1f",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-verify",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-08",
+      "input": "Make a deploy checklist that only tracks validation steps.",
+      "input_sha256": "c5043529d99d6b611383162a9d1921c3e01cb4476a7ac69639ffd1835d576cc8",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-verify",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-09",
+      "input": "Write a release checklist for checking readiness, not for assigning tasks.",
+      "input_sha256": "49094e238b2910d7d781431b9b05b809bb47318156fbf1b61d08acd9a3dfda67",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "verify",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-verify",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-10",
+      "input": "Create a checklist of verification gates for shipping a web app.",
+      "input_sha256": "642430ff8e68172eb3d704824436c0e032d9fdd307cacf586b85c1d60c9afe5e",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-remember",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-11",
+      "input": "Turn recurring deploy notes into a reusable release template.",
+      "input_sha256": "b2b43f804ecb8718c0179229f56eda2ea847e2c97ed600e4a4d44baeae14d539",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-remember",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-12",
+      "input": "Convert these repeated launch notes into a saved checklist template.",
+      "input_sha256": "079cb70ffc415a17d8bd2f64a9769dce2c568b79b1ef4354861e0bfa98b4ed92",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-remember",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-13",
+      "input": "Preserve these deployment notes as a reusable template.",
+      "input_sha256": "a8382fa24b8420f3574c9ce2cd74f0b03b069f6cde66239df3df0b037281a3fd",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-remember",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-14",
+      "input": "Organize repeated release notes into a standard template.",
+      "input_sha256": "009813b5d11dc1497d90c7b88811bea8837cbeed620340ee2e6ce9e4a9eabb61",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "remember",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-remember",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-15",
+      "input": "Make these recurring deploy reminders into a reusable checklist format.",
+      "input_sha256": "6d041926c194ebce39debe0e3a44739945e2fe7843cb0bb236a6f925137e49ee",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-route",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-16",
+      "input": "Break the release work into owner-ready sections.",
+      "input_sha256": "09961c711eee1b9e5868f975dadb86ed8e47c2ab38ec39addc411ffedd5950d6",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-route",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-17",
+      "input": "Split this launch checklist by responsible role.",
+      "input_sha256": "0263c17ca5fb6fe9961e295bca9558f21b7dff0626c5c28e8f19c34933525b82",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-route",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-18",
+      "input": "Route these deploy tasks into frontend, backend, and QA buckets.",
+      "input_sha256": "babeb392109743b8621d670adcaaa2c2498ce7c52b2448b2aa73bef2a4bbcda2",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-route",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-19",
+      "input": "Divide the release checklist so each team knows its part.",
+      "input_sha256": "69bee319c5d6ff677cd7aafa121abf7dc8991299095f0aa626a0b0814d8b23d9",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    },
+    {
+      "adoption_status": "corrective_review_required",
+      "collision_policy": "split_base_share_modifier",
+      "expected": {
+        "base_id": 130,
+        "base_label": "artifact_generation",
+        "intensity": "medium",
+        "operation": "route",
+        "stance": "neutral"
+      },
+      "generation_note": "Corrects artifact_generation base with operation split inside the same base family.",
+      "group_id": "correct-build-operation-route",
+      "human_review_required": true,
+      "id": "tc-correct-build-operation-variants-20",
+      "input": "Organize the web app launch tasks by owner before drafting details.",
+      "input_sha256": "3b5a32e12423af769052376eecd5774a1f525bfd7e3bc9bc16451f4b5d5b978e",
+      "judgment_questions": [
+        "Does the base reflect the user's actual requested action?",
+        "Should this remain neutral medium rather than inherit empathy or hold?"
+      ],
+      "lane": "build_operation_variants_correction",
+      "language": "en",
+      "near_miss": {
+        "why_wrong": "The wording is ordinary task routing, not emotional support or missing-context hold.",
+        "wrong_base_label": "surface_neighbor",
+        "wrong_modifier": "empathize_or_hold"
+      },
+      "source_kind": "codex_corrective_contrast",
+      "training_allowed": false
+    }
+  ],
+  "schema_version": "thought-color-correction-samples.v0.1",
+  "targets": {
+    "build_operation_variants": 20,
+    "code_request_split": 18
+  }
+}

@@ -5,6 +5,7 @@ whole workspace except caches/build-recovery/archive itself, records every
 file's SHA-256, and captures the key state facts of this milestone.
 """
 
+import argparse
 import hashlib
 import io
 import json
@@ -26,6 +27,7 @@ CREATED_FOR = (
     "numbers). Ready for real-data collection with full observability. "
     "Roadmap: docs/V0_4_ROADMAP_2026-06-16.md"
 )
+TESTS_PASSED = 320
 
 EXCLUDE_DIRS = {
     "archive", ".pytest_cache", "__pycache__", ".git", ".idea", ".vscode",
@@ -71,8 +73,21 @@ def _db_stats(db_path: Path) -> dict:
         con.close()
 
 
+def _args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Create a rollback archive for the current workspace."
+    )
+    parser.add_argument("--archive-id", default=ARCHIVE_ID)
+    parser.add_argument("--created-for", default=CREATED_FOR)
+    parser.add_argument("--tests-passed", type=int, default=TESTS_PASSED)
+    return parser.parse_args()
+
+
 def main() -> None:
-    archive_dir = ROOT / "archive" / ARCHIVE_ID
+    args = _args()
+    archive_id = args.archive_id
+    created_for = args.created_for
+    archive_dir = ROOT / "archive" / archive_id
     snapshot = archive_dir / "snapshot"
     if archive_dir.exists():
         print(f"ABORT: {archive_dir} already exists; refusing to overwrite.")
@@ -107,7 +122,7 @@ def main() -> None:
     )
 
     state = {
-        "tests_passed": 320,
+        "tests_passed": args.tests_passed,
         "database": _db_stats(ROOT / "data" / "pattern_lab.db"),
         "deployed_pattern_router_model": {
             "sha256": _sha256(router_model) if router_model.exists() else None,
@@ -130,20 +145,14 @@ def main() -> None:
                     ROOT / "tests/fixtures/intent_hybrid_regression_v1.json"),
             },
         },
-        "milestone": (
-            "v0.3 router functional end-to-end + direct LLM-free fast path "
-            "for trivial smalltalk (greetings answer in ~ms with no LLM, "
-            "vs 5-8s on a reasoning backend). gate-promoted gated-hybrid "
-            "intent model + tier map + route_and_execute + calculator tool "
-            "+ HTTP service. sealed v2 remains closed (0.90; baseline 0.82)."
-        ),
+        "milestone": created_for,
     }
 
     manifest = {
         "schema_version": "workspace-snapshot.v1",
-        "archive_id": ARCHIVE_ID,
+        "archive_id": archive_id,
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "created_for": CREATED_FOR,
+        "created_for": created_for,
         "exclusions": sorted(EXCLUDE_DIRS) + sorted(EXCLUDE_SUFFIXES)
         + ["build/pattern_lab_recovery*/"],
         "state": state,
@@ -156,7 +165,7 @@ def main() -> None:
     (archive_dir / "MANIFEST.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    restore = f"""# 復元手順: {ARCHIVE_ID}
+    restore = f"""# 復元手順: {archive_id}
 
 このアーカイブは、**v0.3 初号機(gated ハイブリッド意図モデル)を意図モデル
 デプロイゲートで正式昇格した直後**のワークスペース全体スナップショットである。
@@ -180,8 +189,8 @@ def main() -> None:
 ## 推奨する完全復元(別ディレクトリへ展開)
 
 ```powershell
-$source = "archive\\{ARCHIVE_ID}\\snapshot"
-$destination = "D:\\Thought State Register restored {ARCHIVE_ID[:10]}"
+$source = "archive\\{archive_id}\\snapshot"
+$destination = "D:\\Thought State Register restored {archive_id[:10]}"
 New-Item -ItemType Directory -Path $destination
 Copy-Item "$source\\*" $destination -Recurse
 Set-Location $destination
@@ -192,21 +201,21 @@ python -B -m pytest -p no:cacheprovider -q
 ## 既存ワークスペースへ戻す場合
 
 ```powershell
-Copy-Item "archive\\{ARCHIVE_ID}\\snapshot\\*" "." -Recurse -Force
+Copy-Item "archive\\{archive_id}\\snapshot\\*" "." -Recurse -Force
 ```
 
 ## 意図モデルだけ戻す場合
 
 ```powershell
 Copy-Item `
-  "archive\\{ARCHIVE_ID}\\snapshot\\build\\intent_model_v1.json" `
+  "archive\\{archive_id}\\snapshot\\build\\intent_model_v1.json" `
   "build\\intent_model_v1.json" -Force
 ```
 
 ## Hash 検証
 
 ```powershell
-$archive = "archive\\{ARCHIVE_ID}"
+$archive = "archive\\{archive_id}"
 $manifest = Get-Content "$archive\\MANIFEST.json" -Raw | ConvertFrom-Json
 $failures = @()
 foreach ($property in $manifest.snapshot.files.PSObject.Properties) {{
@@ -220,7 +229,7 @@ if ($failures.Count) {{ $failures; throw "snapshot hash verification failed" }}
 """
     (archive_dir / "RESTORE.md").write_text(restore, encoding="utf-8")
 
-    print(f"archive created: archive/{ARCHIVE_ID}")
+    print(f"archive created: archive/{archive_id}")
     print(f"  files: {len(files)}  bytes: {total_bytes}")
     print(f"  intent model SHA: {state['deployed_intent_model']['sha256']}")
     print(f"  gate decision: {gate_decision}")

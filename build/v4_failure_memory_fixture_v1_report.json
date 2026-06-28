@@ -1,0 +1,32 @@
+{
+  "schema_version": "v4-failure-memory-fixture-report.v1",
+  "generated_at": "2026-06-21T04:34:47.566197+00:00",
+  "fixture": "tests\\fixtures\\v4_failure_memory_fixture_v1.json",
+  "selection": "build\\v4_failure_memory_selection_recommendation_v1.json",
+  "summary": {
+    "item_count": 38,
+    "context_pair_count": 1,
+    "single_count": 37,
+    "by_severity": {
+      "major": 4,
+      "medium": 25,
+      "minor": 9
+    },
+    "by_guard_action": {
+      "ask_first": 12,
+      "ask_for_missing_artifact_if_error_context_absent": 1,
+      "avoid_overclaim": 23,
+      "avoid_stale_answer": 4,
+      "avoid_status_only_response": 1,
+      "calculate_check": 4,
+      "clarify_up": 12,
+      "inspect_error_context": 1,
+      "preserve_constraints": 9,
+      "preserve_multi_intent": 11,
+      "risk_check_up": 4,
+      "search_up": 4,
+      "split_or_sequence_operations": 11,
+      "verify_up": 23
+    }
+  }
+}

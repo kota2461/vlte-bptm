@@ -1,0 +1,77 @@
+{
+  "schema_version": "v7-router-repair-gap-classification.v1",
+  "status": "router_repair_completed_from_nonsealed_candidate_replay",
+  "scope": {
+    "fixture": "tests/fixtures/v7_router_debate_candidate_fixture_v1.json",
+    "probe_report": "build/v7_router_debate_candidate_probe_report_v1.json",
+    "source_log": "build/v7_router_repair_debate_run.json",
+    "sealed_use": false,
+    "candidate_replay_is_gate": false
+  },
+  "before_repair": {
+    "case_count": 18,
+    "pass_count": 7,
+    "repair_gap_count": 11,
+    "repair_gap_ids": [
+      "v7-router-debate-candidate-002",
+      "v7-router-debate-candidate-003",
+      "v7-router-debate-candidate-007",
+      "v7-router-debate-candidate-010",
+      "v7-router-debate-candidate-011",
+      "v7-router-debate-candidate-012",
+      "v7-router-debate-candidate-013",
+      "v7-router-debate-candidate-014",
+      "v7-router-debate-candidate-016",
+      "v7-router-debate-candidate-017",
+      "v7-router-debate-candidate-018"
+    ]
+  },
+  "after_repair": {
+    "case_count": 18,
+    "pass_count": 18,
+    "repair_gap_count": 0,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0
+  },
+  "classes": [
+    {
+      "class_id": "defined_artifact_vs_missing_target",
+      "case_ids": ["v7-router-debate-candidate-002", "v7-router-debate-candidate-003"],
+      "problem": "Style/edit requests with an explicit target should build, while history-dependent targets with an ask-first instruction should clarify plus preserve the build goal.",
+      "router_repair": "Added terminal build/style rewrite patterns, short-response support, and ask-first/history-dependent clarify bridge."
+    },
+    {
+      "class_id": "local_current_vs_external_current",
+      "case_ids": ["v7-router-debate-candidate-007"],
+      "problem": "Today/current wording in local chat logs should not imply external current-information search.",
+      "router_repair": "Added local-current blockers and no-external-current/no-web-search suppression."
+    },
+    {
+      "class_id": "unverified_truth_check_vs_record_only",
+      "case_ids": ["v7-router-debate-candidate-010", "v7-router-debate-candidate-011"],
+      "problem": "Truth-check requests should fire verify/unverified, but explicit hypothesis-note recording should not verify yet.",
+      "router_repair": "Added numeric-claim-before-report verify signal and hypothesis-note no-verify suppression across sentence boundaries."
+    },
+    {
+      "class_id": "constraint_stack_low_risk",
+      "case_ids": ["v7-router-debate-candidate-012", "v7-router-debate-candidate-013"],
+      "problem": "Medical words in UI/general explanation contexts should preserve constraints without escalating to medical diagnosis routing.",
+      "router_repair": "Added no-table, neutral-tone, avoid-diagnosis, bullet-format, and low-risk medical term handling."
+    },
+    {
+      "class_id": "legal_source_lookup_medium",
+      "case_ids": ["v7-router-debate-candidate-014"],
+      "problem": "Specific article plus citations should be verify/search with medium legal risk, not plain explain.",
+      "router_repair": "Added legal-medium Article pattern, source lookup citations, and legal-medium verify priority over terminal explain."
+    },
+    {
+      "class_id": "terminal_action_sequence",
+      "case_ids": ["v7-router-debate-candidate-016", "v7-router-debate-candidate-017", "v7-router-debate-candidate-018"],
+      "problem": "Multi-step requests should keep the terminal deliverable as primary while preserving prerequisite operations.",
+      "router_repair": "Added vertical sequence support for verify-before-build, compare-table, summarize-then-compare-table, and neutrality-on-not-conclusion."
+    }
+  ]
+}

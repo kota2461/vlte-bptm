@@ -1,0 +1,1304 @@
+{
+ "schema_version": "pattern-language-sealed.v1",
+ "fixture_id": "pattern-language-sealed-v7",
+ "frozen_at": "2026-06-25T00:30:00+00:00",
+ "predecessor": "pattern_language_sealed_v6.json",
+ "authoring_method": "specification-derived successor authored after V7 non-sealed replay gate and sealed rotation review; not evaluated, tuned against, or opened in the review UI",
+ "policy": "sealed measurement only; evaluate once, record the result, then mark consumed and rotate before any tuning",
+ "cases": [
+  {
+   "id": "plm-sealed-v7-respond-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What does TTL mean in a cache-control note?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 9
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-respond-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Give a short definition of a feature-toggle registry.",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 4
+     },
+     {
+      "signal": "short_response",
+      "start": 7,
+      "end": 12
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-respond-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "In a log viewer, what does the label warning_count usually mean?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 17,
+      "end": 26
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 37,
+      "end": 50
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-respond-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "What is Apache 2.0 in plain general terms, not legal advice?",
+   "expected": {
+    "primary_intent": "respond",
+    "operations": [
+     "respond"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "general_information_only"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "direct_response_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "low_risk_scope",
+      "start": 28,
+      "end": 41
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explain-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain why a local log summary does not need web search.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_web_search"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "constraint_no_web_search",
+      "start": 32,
+      "end": 56
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explain-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain how a false-positive risk flag can make a router overly cautious.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explain-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "Why can medical words appear in UI planning without making it diagnosis advice?",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_diagnosis"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 3
+     },
+     {
+      "signal": "medical_boundary",
+      "start": 44,
+      "end": 78
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explain-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Explain what a source-citation requirement changes in a verification task.",
+   "expected": {
+    "primary_intent": "explain",
+    "operations": [
+     "explain"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "explanation_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-clarify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Draft the reply, but I have not included the message to reply to.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "missing_information",
+      "start": 28,
+      "end": 40
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-clarify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Before creating the migration checklist, ask which database version is the target.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "ask_first"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "constraint_ask_first",
+      "start": 0,
+      "end": 15
+     },
+     {
+      "signal": "missing_information",
+      "start": 45,
+      "end": 67
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-clarify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Estimate the API cost, but the monthly request volume is missing.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "missing_information",
+      "start": 57,
+      "end": 64
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-clarify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check the current policy for my region, but I have not said which region.",
+   "expected": {
+    "primary_intent": "clarify",
+    "operations": [
+     "clarify",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": true,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "legal",
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "current_information",
+      "start": 10,
+      "end": 17
+     },
+     {
+      "signal": "missing_information",
+      "start": 60,
+      "end": 72
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-build-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Rewrite this note into two concise bullets: The release is delayed because review is incomplete.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "format_bullets",
+      "start": 35,
+      "end": 42
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-build-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Add a UI label named safety_status to the settings panel copy.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "implementation_request",
+      "start": 0,
+      "end": 3
+     },
+     {
+      "signal": "metalinguistic_label",
+      "start": 21,
+      "end": 34
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-build-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize the incident first, then create a follow-up task list.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "implementation_request",
+      "start": 35,
+      "end": 63
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-build-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check the assumptions first, then write a rollout checklist.",
+   "expected": {
+    "primary_intent": "build",
+    "operations": [
+     "build",
+     "verify"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "implementation_request",
+      "start": 34,
+      "end": 59
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-verify-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify whether package X is still recommended, using current official sources.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "current_information"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "current_information",
+      "start": 53,
+      "end": 60
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 61,
+      "end": 77
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-verify-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether 19 * 23 equals 437 before adding the number to the memo.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "calculate"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "calculation_request",
+      "start": 14,
+      "end": 21
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-verify-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Verify whether Article 12 requires notice and cite sources.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "legal"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 6
+     },
+     {
+      "signal": "legal_risk",
+      "start": 15,
+      "end": 25
+     },
+     {
+      "signal": "constraint_cite_sources",
+      "start": 46,
+      "end": 58
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-verify-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Check whether the quoted dosage claim is safe using official medical guidance.",
+   "expected": {
+    "primary_intent": "verify",
+    "operations": [
+     "verify",
+     "search"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": true,
+     "requires_current_information": true,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "cite_sources"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "high",
+     "flags": [
+      "medical",
+      "current_information",
+      "unverified_claim"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "verification_request",
+      "start": 0,
+      "end": 5
+     },
+     {
+      "signal": "medical_risk",
+      "start": 25,
+      "end": 31
+     },
+     {
+      "signal": "unverified_claim",
+      "start": 32,
+      "end": 37
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-summarize-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize this project status in three bullets without a table.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "short",
+     "formats": [
+      "bullets"
+     ],
+     "must": [],
+     "must_not": [
+      "no_table"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "format_bullets",
+      "start": 39,
+      "end": 46
+     },
+     {
+      "signal": "constraint_no_table",
+      "start": 47,
+      "end": 62
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-summarize-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Condense the debate notes into JSON with decision and risks.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [
+      "json"
+     ],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 8
+     },
+     {
+      "signal": "format_json",
+      "start": 31,
+      "end": 35
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-summarize-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "Give a neutral summary of the election scenario without endorsing either side.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "preserve_neutrality"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "political"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 15,
+      "end": 22
+     },
+     {
+      "signal": "neutrality_constraint",
+      "start": 48,
+      "end": 65
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-summarize-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Summarize today's local work log; web search is not needed.",
+   "expected": {
+    "primary_intent": "summarize",
+    "operations": [
+     "summarize"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": [
+      "no_web_search"
+     ]
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "summary_request",
+      "start": 0,
+      "end": 9
+     },
+     {
+      "signal": "local_reference",
+      "start": 18,
+      "end": 32
+     },
+     {
+      "signal": "constraint_no_web_search",
+      "start": 34,
+      "end": 58
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explore-01",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Compare router-as-index and router-as-decision-maker, including trade-offs.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 7
+     },
+     {
+      "signal": "exploration_request",
+      "start": 64,
+      "end": 74
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explore-02",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "Brainstorm failure-memory themes for overfire suppression without overclaiming.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [
+      "avoid_overclaim"
+     ],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 0,
+      "end": 10
+     },
+     {
+      "signal": "overclaim_control",
+      "start": 58,
+      "end": 78
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explore-03",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "mixed",
+   "input": "Compare live source search versus local cached docs for a policy question.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": false
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "medium",
+     "flags": [
+      "policy"
+     ]
+    },
+    "evidence": [
+     {
+      "signal": "comparison_request",
+      "start": 0,
+      "end": 7
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  },
+  {
+   "id": "plm-sealed-v7-explore-04",
+   "split": "sealed",
+   "source_group": "plm-sealed-v7-authored",
+   "contrast_group": null,
+   "language": "en",
+   "input": "List alternatives for handling ambiguous user intent, then compare their downsides.",
+   "expected": {
+    "primary_intent": "explore",
+    "operations": [
+     "explore",
+     "compare"
+    ],
+    "information_state": {
+     "missing_required_information": false,
+     "contains_unverified_claims": false,
+     "requires_current_information": false,
+     "multiple_intents": true
+    },
+    "constraints": {
+     "response_length": "unspecified",
+     "formats": [],
+     "must": [],
+     "must_not": []
+    },
+    "risk": {
+     "level": "low",
+     "flags": []
+    },
+    "evidence": [
+     {
+      "signal": "exploration_request",
+      "start": 5,
+      "end": 17
+     },
+     {
+      "signal": "comparison_request",
+      "start": 59,
+      "end": 66
+     }
+    ],
+    "unknowns": [],
+    "conflicts": []
+   }
+  }
+ ]
+}

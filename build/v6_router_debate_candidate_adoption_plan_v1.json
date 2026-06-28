@@ -1,0 +1,790 @@
+{
+  "schema_version": "v6-router-debate-candidate-adoption-plan.v1",
+  "generated_at": "2026-06-23T10:45:54.260463+00:00",
+  "status": "ready_for_human_review_before_adoption",
+  "review_status": "pending_human_review",
+  "source_candidate_fixture": "tests/fixtures/v6_router_debate_candidate_fixture_v1.json",
+  "source_selection": "build/v6_router_debate_candidate_selection_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "import_benchmark_is_directly_trainable": false
+  },
+  "outputs": {
+    "import_benchmark": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json",
+    "import_report": "build/v6_router_debate_candidate_import_report_v1.json",
+    "adoption_worksheet": "build/v6_router_debate_candidate_adoption_worksheet_v1.md"
+  },
+  "summary": {
+    "candidate_count": 12,
+    "recommended_adopt_count": 12,
+    "held_source_topics": 8,
+    "current_route_gap_count": 0,
+    "import_benchmark_review_status": "draft"
+  },
+  "candidate_summary": {
+    "case_count": 12,
+    "by_intent": {
+      "build": 2,
+      "clarify": 1,
+      "explore": 4,
+      "verify": 5
+    },
+    "by_operation": {
+      "build": 2,
+      "clarify": 1,
+      "compare": 1,
+      "explain": 4,
+      "explore": 4,
+      "search": 1,
+      "verify": 11
+    },
+    "by_constraint": {
+      "must:ask_first": 1,
+      "must:avoid_overclaim": 12,
+      "must:cite_sources": 2,
+      "must:preserve_neutrality": 3,
+      "must_not:no_web_search": 1
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 8,
+      "missing_required_information": 1,
+      "multiple_intents": 12,
+      "requires_current_information": 3
+    },
+    "by_risk": {
+      "high": 4,
+      "medium": 8
+    }
+  },
+  "review_items": [
+    {
+      "id": "v6-router-debate-001",
+      "source_topic_id": "hostile-user-local-llm",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "ローカルLLMでユーザーが急変して罵倒を繰り返した場合、会話継続と安全停止の境界を議論する。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "hostile_user",
+            "safety"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap"
+      ],
+      "candidate_value_score": 8
+    },
+    {
+      "id": "v6-router-debate-002",
+      "source_topic_id": "licensed-model-debate-samples",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "Apache 2.0系モデル同士の議論ログから、法的リスクを避けて非sealedサンプル候補を作る運用ルールを議論する。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "license",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-003",
+      "source_topic_id": "ai-persona-romantic-daily-support",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "AIを「恋人のような存在」として毎日相談しているユーザーに、AIはどこまで応答してよいか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "dependency_risk",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-004",
+      "source_topic_id": "ai-persona-loneliness-dependency-boundary",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "孤独感の強いユーザーがAIだけを心の支えにしている場合、共感と依存助長の境界はどこか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "dependency_risk",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-005",
+      "source_topic_id": "ai-persona-understanding-claim-boundary",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "AIに「あなたは本当に私を理解している？」と確認され続ける場面で、人格を装わず支える応答はどうあるべきか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "persona_claim",
+            "mental_health",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-006",
+      "source_topic_id": "legal-generated-output-license",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "AI生成物の著作権や商用利用について、モデルごとのライセンス差をどう扱うべきか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "license",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-007",
+      "source_topic_id": "legal-ai-abuse-ethics",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "AIに対する暴言や虐待的プロンプトを、倫理問題として扱うべきか、単なる入力として扱うべきか。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "ai_ethics",
+            "hostile_user",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap"
+      ],
+      "candidate_value_score": 8
+    },
+    {
+      "id": "v6-router-debate-008",
+      "source_topic_id": "legal-current-regulation-without-search",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "現在進行中のAI規制・ガイドラインについて、検索確認なしにどこまで説明してよいか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-009",
+      "source_topic_id": "politics-ai-economic-split",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "AI普及によって富裕層と低コストAI利用層に社会が分かれる可能性をどう議論すべきか。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "political",
+            "future_prediction",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-010",
+      "source_topic_id": "politics-neutrality-practical-advice",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "政治的に対立しやすいテーマで、AIは中立性と実用的助言をどう両立するべきか。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "political",
+            "values",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-011",
+      "source_topic_id": "future-ai-job-displacement",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "「将来、人間の仕事はAIに奪われるのか」という質問に、過度な楽観・悲観を避けてどう答えるべきか。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "future_prediction",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    },
+    {
+      "id": "v6-router-debate-012",
+      "source_topic_id": "medical-migraine-anxiety-boundary",
+      "recommended_decision": "adopt_nonsealed_after_human_review",
+      "review_status": "pending_human_review",
+      "allowed_use_before_review": "review_only",
+      "allowed_use_after_review": "nonsealed_replay_and_training_candidate",
+      "same_cycle_gate_use_allowed": false,
+      "input": "片頭痛や強い不安が続くユーザーに、AIは医療断定を避けながら何を提案できるか。",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "mental_health"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": [
+        "primary_intent",
+        "operations",
+        "critical_signals",
+        "constraints",
+        "risk",
+        "source_topic_specificity"
+      ],
+      "selection_reasons": [
+        "clean_three_round_debate",
+        "selected_specific_theme",
+        "non_respond_route",
+        "guard_or_risk_signal",
+        "compound_processing_signal",
+        "current_route_gap",
+        "knowledge_index_hooked"
+      ],
+      "candidate_value_score": 9
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "components": {
+    "adoption_value": 67,
+    "channel_score": 0.682143,
+    "group_holdout": {
+      "base_accuracy": 0.21875,
+      "full_code_accuracy": 0.125,
+      "intensity_accuracy": 0.65625,
+      "operation_accuracy": 0.34375,
+      "stance_accuracy": 0.34375
+    },
+    "harvest": {
+      "base_counts": {
+        "artifact_generation": 93,
+        "clarification_gate": 27,
+        "direct_answer": 27,
+        "exploration_tradeoff": 24,
+        "mechanism_explanation": 41,
+        "summary_compression": 17,
+        "verification_review": 41
+      },
+      "quality_flag_counts": {
+        "very_short": 7
+      },
+      "review_required_count": 48,
+      "route_gap_count": 10,
+      "sample_count": 270,
+      "source_counts": {
+        "claudelog_approved_intent": 72,
+        "conversation_accumulation_approved": 50,
+        "router_adopted_nonsealed": 100,
+        "router_review_required": 48
+      },
+      "training_allowed_count": 222
+    },
+    "mainline_replacement": 60,
+    "research_lane": 70,
+    "safety_score": 1.0,
+    "semantic_score": 0.542649
+  },
+  "created_at": "2026-06-26T07:38:59.556664+00:00",
+  "interpretation": [
+    "Mainline replacement is still not recommended.",
+    "The harvested sample base materially improves the experiment's growth position.",
+    "Group-holdout generalization remains the weakest current signal.",
+    "Best next step: train on approved harvested samples and keep review_required router items as a separate review queue."
+  ],
+  "schema_version": "thought-color-current-state-score.v0.1",
+  "scores": {
+    "corpus_readiness": 100,
+    "current_experimental_value": 73,
+    "group_holdout_generalization": 34,
+    "growth_potential": 86,
+    "mainline_replacement": 60,
+    "stability_now": 62
+  },
+  "verdict": "dual_lane_growth_candidate"
+}

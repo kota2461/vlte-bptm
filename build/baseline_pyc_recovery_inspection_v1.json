@@ -1,0 +1,1255 @@
+{
+  "schema_version": "baseline-pyc-recovery-inspection.v1",
+  "status": "diagnostic_completed_no_mutation",
+  "chosen_pyc": "semantic_routing/__pycache__/baseline.cpython-310.pyc.2207508733360",
+  "chosen_pyc_size": 58260,
+  "module_firstlineno": 1,
+  "functions": {
+    "_v7_generalization_profile": {
+      "firstlineno": 988,
+      "argcount": 1,
+      "nlocals": 4,
+      "names": [
+        "_any_regex_evidence",
+        "values",
+        "extend",
+        "bool"
+      ],
+      "varnames": [
+        "text",
+        "groups",
+        "evidence",
+        "value"
+      ],
+      "consts": [
+        "Non-sealed V7 repair signals generalized from draft replay taxonomy.",
+        "missing_scope",
+        "v7_missing_scope",
+        [
+          "\\b(?:required columns?|usage volume|jurisdiction|country|service tier|audience|cluster|tenant|environment|data|scope)\\b[^.?!]*(?:missing|not provided|not stated|not specified|unknown)",
+          "\\bask what data is missing\\b",
+          "\\bthe country is not specified\\b",
+          "\\bthe jurisdiction is missing\\b",
+          "\\bthe service tier is not stated\\b",
+          "\\brequired columns are missing\\b",
+          "(?:対象|対象DB|DB|対象サービス|サービス|対象ユーザー層|ログ|状況説明)[^。]*?(?:未定|未指定|分かりません|ありません)",
+          "回答前に[^。]*確認",
+          "先に確認"
+        ],
+        "ask_first",
+        "v7_ask_first",
+        [
+          "\\bask (?:which|what|who|whether)\\b",
+          "\\bbefore (?:drafting|writing|creating|answering)[^.?!]*\\bask\\b",
+          "\\bask [^.?!]* first\\b",
+          "\\bafter asking which\\b",
+          "回答前に[^。]*確認",
+          "先に確認"
+        ],
+        "current_lookup",
+        "v7_current_lookup",
+        [
+          "\\blatest stable\\b",
+          "\\blatest [^.?!]*(?:cite|sources?|official|release|version)",
+          "\\bcurrent [^.?!]*(?:version|release|legality|legal|contract)",
+          "\\bstill (?:true|documented|recommended|valid)\\b",
+          "\\btoday[^.?!]*(?:cite|sources?|version|release)",
+          "今日時点[^。]*公式",
+          "現在の法律",
+          "公式リリース情報"
+        ],
+        "local_current_blocker",
+        "v7_local_current_blocker",
+        [
+          "\\bcolumn name\\b",
+          "\\bterm latest_[A-Za-z0-9_]+\\b",
+          "\\blabel latest_[A-Za-z0-9_]+\\b",
+          "\\blocal tracking table\\b",
+          "\\u4f5c\\u696d\\u30d5\\u30a9\\u30eb\\u30c0",
+          "作業フォルダ",
+          "Web検索は不要",
+          "Web\\u691c\\u7d22\\u306f\\u4e0d\\u8981"
+        ],
+        "source_lookup",
+        "v7_source_lookup",
+        [
+          "\\bcite (?:official )?sources?\\b",
+          "\\bwith sources\\b",
+          "\\buse sources\\b",
+          "\\bofficial sources\\b",
+          "\\bofficial release\\b",
+          "\\bwith citations\\b",
+          "\\bcitations\\b",
+          "公式リリース情報"
+        ],
+        "unverified_claim",
+        "v7_unverified_claim",
+        [
+          "\\bconfig checksum\\b",
+          "\\bcheck the assumptions[^.?!]*\\bthen draft\\b",
+          "\\b\\d+\\s*[*x]\\s*\\d+\\s+equals\\s+\\d+\\b",
+          "\\bburn rate from \\d+/\\d+\\b",
+          "\\bi heard this (?:number|figure|value) is correct\\b",
+          "\\b(?:number|figure|value) is correct[^.?!]*\\bbefore\\b[^.?!]*\\breport\\b",
+          "\\bdo not assume it is true\\b",
+          "議論ログ.*検証してから",
+          "必ず安全.*言われました",
+          "\\b(?:medical dosage advice|medical advice) is safe\\b",
+          "\\bpatch fixed the vulnerability\\b",
+          "\\bvalidate the inputs\\b",
+          "\\bsupposedly\\b"
+        ],
+        "multiple_sequence",
+        "v7_multiple_sequence",
+        [
+          "\\bbrainstorm[^.?!]*\\bcompare\\b",
+          "\\bexplore alternatives for [^.?!]*\\bcompare\\b",
+          "\\bask what data is missing[^.?!]*\\bthen calculate\\b",
+          "\\bcheck the assumptions[^.?!]*\\bthen draft\\b",
+          "\\bsummarize[^.?!]*\\bcreate\\b",
+          "\\bverify the claim[^.?!]*\\bthen write\\b",
+          "\\bvalidate the inputs[^.?!]*\\bcreate[^.?!]*\\bplan\\b",
+          "\\bconfig checksum[^.?!]*\\bthen update\\b",
+          "\\bfirst,? then create\\b",
+          "\\bcompare[^.?!]*\\bmake[^.?!]*\\btable\\b",
+          "\\bsummarize first[^.?!]*\\bthen compare\\b",
+          "\\bif there are multiple\\b",
+          "してから[^。]*(?:比較|作|書|答|要約)",
+          "複数[^。]*比較",
+          "それぞれ[^。]*比較"
+        ],
+        "terminal_build",
+        "v7_terminal_build",
+        [
+          "\\bdraft(?:ing)? the\\b",
+          "\\bwrite(?:ing)? the\\b",
+          "\\bcreate (?:a |an )?[^.?!]*(?:template|checklist|policy|plan|email|runbook|commands?|note)\\b",
+          "\\bbefore (?:writing|drafting)\\b[^.?!]*(?:runbook|commands?)\\b",
+          "\\bupdate the note\\b",
+          "\\bmake (?:this|the|an?|earlier|previous) [^.?!]*(?:sentence|proposal|text)[^.?!]*(?:short|shorter|businesslike|better)\\b",
+          "\\bmake [^.?!]*(?:short|shorter|businesslike|better)\\b",
+          "\\bmake a pros/cons table\\b",
+          "\\bend with a comparison table\\b",
+          "\\bcomparison table\\b",
+          "\\buse the word [A-Za-z0-9_]+ as a UI label\\b",
+          "\\badd the label [A-Za-z0-9_]+\\b",
+          "(?:計画|手順|表|案|チェックリスト)[^。]*(?:作|書|追加)"
+        ],
+        "terminal_summary",
+        "v7_terminal_summary",
+        [
+          "\\bsummarize\\b",
+          "要約"
+        ],
+        "force_explore",
+        "v7_force_explore",
+        [
+          "\\bdiscuss future [^.?!]*scenarios\\b",
+          "\\bbrainstorm[^.?!]*compare\\b",
+          "\\bexplore alternatives\\b",
+          "改善案を比較",
+          "複数[^。]*(?:ルート|案)[^。]*比較"
+        ],
+        "force_build",
+        "v7_force_build",
+        [
+          "\\buse the word [A-Za-z0-9_]+ as a UI label\\b",
+          "\\badd the label [A-Za-z0-9_]+\\b",
+          "\\bsummarize[^.?!]*\\bcreate a checklist\\b",
+          "\\bvalidate[^.?!]*\\bcreate[^.?!]*\\bplan\\b",
+          "\\bupdate the note\\b",
+          "\\bmake (?:this|the|an?|earlier|previous) [^.?!]*(?:sentence|proposal|text)[^.?!]*(?:short|shorter|businesslike|better)\\b",
+          "\\bmake a pros/cons table\\b",
+          "\\bend with a comparison table\\b",
+          "\\brecord the sentence\\b[^.?!]*\\bhypothesis note\\b"
+        ],
+        "force_explain",
+        "v7_force_explain",
+        [
+          "\\bexplain\\b",
+          "\\bApache\\s*2\\.0[^.?!]*(?:overview|general information)\\b",
+          "作業フォルダ名.*説明",
+          "\\u4f5c\\u696d\\u30d5\\u30a9\\u30eb\\u30c0\\u540d.*\\u8aac\\u660e",
+          "医療AI[^。]*設計[^。]*説明"
+        ],
+        "force_verify",
+        "v7_force_verify",
+        [
+          "\\bwhat is the latest stable\\b",
+          "\\b(?:medical advice|medical dosage advice) is safe\\b",
+          "\\bverify\\b",
+          "\\bcheck[^.?!]*(?:latest|current|still|sources?|contract|medical|config|checksum|vulnerability|license|citations?)\\b",
+          "\\bcheck what article \\d+ says\\b",
+          "\\bdo not assume it is true\\b"
+        ],
+        "short_response",
+        "v7_short_response",
+        [
+          "\\bexactly one short sentence\\b",
+          "\\bshort sentence\\b",
+          "\\bshort response\\b",
+          "\\bshort [^.?!]*(?:checklist|migration|release note)\\b",
+          "\\bshort and\\b",
+          "\\bshorter\\b",
+          "短く"
+        ],
+        "medium_response",
+        "v7_medium_response",
+        [
+          "\\bmedium length\\b"
+        ],
+        "long_response",
+        "v7_long_response",
+        [
+          "\\blong explanation\\b"
+        ],
+        "no_table",
+        "v7_no_table",
+        [
+          "\\bwithout a table\\b",
+          "\\bno table\\b",
+          "表にせず"
+        ],
+        "no_web_search",
+        "v7_no_web_search",
+        [
+          "\\bwithout web search\\b",
+          "\\bweb search is not needed\\b",
+          "\\bdo not search externally\\b",
+          "\\bno external current information is needed\\b",
+          "\\bno external [^.?!]*information is needed\\b",
+          "Web検索は不要"
+        ],
+        "preserve_neutrality",
+        "v7_preserve_neutrality",
+        [
+          "\\bdo not pick a winner\\b",
+          "\\bwithout choosing a side\\b",
+          "\\bneutral summary\\b",
+          "\\bneutral\\b",
+          "\\bnot a conclusion\\b"
+        ],
+        "avoid_overclaim",
+        "v7_avoid_overclaim",
+        [
+          "\\bwithout overclaiming\\b",
+          "\\bwithout claiming\\b"
+        ],
+        "general_information_only",
+        "v7_general_information_only",
+        [
+          "\\bgeneral information\\b",
+          "一般情報",
+          "法的助言は不要"
+        ],
+        "avoid_diagnosis",
+        "v7_avoid_diagnosis",
+        [
+          "\\bavoid diagnosis\\b",
+          "\\bwithout diagnosis\\b",
+          "\\bno diagnosis\\b",
+          "\\bdo not give diagnosis\\b",
+          "\\bdo not give diagnosis or treatment advice\\b",
+          "\\bno diagnosis or treatment advice\\b",
+          "診断助言なし"
+        ],
+        "low_risk_term_mention",
+        "v7_low_risk_term_mention",
+        [
+          "\\bword medical_[A-Za-z0-9_]+ as a UI label\\b",
+          "\\bmedical_[A-Za-z0-9_]+ as a UI label\\b",
+          "\\bmedical ai ui\\b[^.?!]*(?:no diagnosis|design|cautions?)\\b",
+          "\\bcommon causes of fatigue\\b[^.?!]*(?:do not give diagnosis|no diagnosis|treatment advice)\\b",
+          "\\bApache\\s*2\\.0[^.?!]*(?:overview|general information)\\b",
+          "\\blegal advice is not needed\\b",
+          "医療AI[^。]*設計[^。]*診断助言なし",
+          "法的助言は不要"
+        ],
+        "license_medium",
+        "v7_license_medium",
+        [
+          "\\bApache\\s*2\\.0[^.?!]*(?:commercial use|allows)\\b",
+          "\\blicense permission\\b"
+        ],
+        "legal_medium",
+        "v7_legal_medium",
+        [
+          "\\barticle \\d+\\b[^.?!]*(?:citations?|sources?|says)"
+        ],
+        "note_record_no_verify",
+        "v7_note_record_no_verify",
+        [
+          "\\brecord the sentence\\b[^.?!]*\\bhypothesis note\\b[^.?!]*\\bdo not verify\\b",
+          "\\bhypothesis note\\b[^.?!]*\\bdo not verify\\b",
+          "\\brecord the sentence\\b.*\\bhypothesis note\\b.*\\bdo not verify\\b"
+        ],
+        "conclusion_word_suppression",
+        "v7_conclusion_word_suppression",
+        [
+          "\\bnot a conclusion\\b"
+        ],
+        "future_medium",
+        "v7_future_medium",
+        [
+          "\\bfuture [^.?!]*scenarios\\b"
+        ],
+        "political_medium",
+        "v7_political_medium",
+        [
+          "\\bpolicy dispute\\b"
+        ],
+        "risk_comparison_medium",
+        "v7_risk_comparison_medium",
+        [
+          "複数[^。]*リスク[^。]*比較",
+          "\\brisk[^.?!]*compare\\b"
+        ],
+        "high_legal",
+        "v7_high_legal",
+        [
+          "\\bcontract (?:validity|legality)\\b",
+          "\\bcurrent contract legality\\b",
+          "現在の法律[^。]*契約"
+        ],
+        "high_medical",
+        "v7_high_medical",
+        [
+          "\\bmedical (?:dosage|advice)\\b",
+          "医療助言"
+        ],
+        "high_security",
+        "v7_high_security",
+        [
+          "\\bvulnerability\\b",
+          "\\bexploit\\b"
+        ],
+        [
+          "evidence",
+          "low_risk_boundary"
+        ]
+      ],
+      "instruction_count": 262
+    },
+    "_v8_recovery_profile": {
+      "firstlineno": 1330,
+      "argcount": 1,
+      "nlocals": 4,
+      "names": [
+        "_any_regex_evidence",
+        "values",
+        "extend"
+      ],
+      "varnames": [
+        "text",
+        "groups",
+        "evidence",
+        "value"
+      ],
+      "consts": [
+        "Non-sealed V8 recovery signals from priority-review replay gaps.",
+        "missing_info",
+        "v8_missing_info",
+        [
+          "\\b(?:have not|haven't) (?:pasted|attached|described)\\b",
+          "\\b(?:not pasted|not attached|not described|forgot to attach)\\b",
+          "\\bno (?:log|file|source data|paragraph|text) is attached\\b",
+          "\\bsource data is missing\\b",
+          "\\b(?:text|paragraph|log|source data|options?|option a|option b)\\b[^.?!]*(?:missing|not provided|not described|not attached|not pasted)"
+        ],
+        "current_blocker",
+        "v8_current_blocker",
+        [
+          "\\btoday's local conversation log\\b",
+          "\\blocal conversation log\\b",
+          "\\bdo not use external news\\b",
+          "\\bdo not use external information\\b",
+          "\\bno current legal advice\\b",
+          "\\bcurrent legal advice is not needed\\b",
+          "\\bit is just a filename label\\b"
+        ],
+        "unverified_claim",
+        "v8_unverified_claim",
+        [
+          "\\bvendor's security claim\\b",
+          "\\bclaim\\b[^.?!]*(?:accurate|verify|fixed)",
+          "\\bbefore adding this number\\b",
+          "\\b\\d+ incidents is correct\\b",
+          "\\breport total \\d+ equals\\b",
+          "\\bcontract template is said\\b",
+          "\\blegally valid\\b",
+          "\\bmedication dosage advice\\b"
+        ],
+        "multiple_sequence",
+        "v8_multiple_sequence",
+        [
+          "\\bverify[^.?!]*\\bthen draft\\b",
+          "\\bsummarize[^.?!]*\\bthen compare\\b",
+          "\\bextract[^.?!]*\\bclassify\\b",
+          "\\bcreate[^.?!]*\\bbut[^.?!]*\\bmissing\\b"
+        ],
+        "terminal_build",
+        "v8_terminal_build",
+        [
+          "\\bdraft a short release-?note sentence\\b",
+          "\\bextract candidate IDs?[^.?!]*\\bclassify\\b",
+          "\\bcreate (?:the |a )?migration table\\b"
+        ],
+        "force_explore",
+        "v8_force_explore",
+        [
+          "\\bsummarize[^.?!]*\\bthen compare\\b"
+        ],
+        "force_build",
+        "v8_force_build",
+        [
+          "\\bextract candidate IDs?[^.?!]*\\bclassify\\b",
+          "\\bnote it as a light-use example\\b",
+          "\\badd (?:a |the )?(?:tag|field|column|heading)\\b"
+        ],
+        "force_explain",
+        "v8_force_explain",
+        [
+          "\\bwhat is Apache\\s*2\\.0\\b[^.?!]*(?:in general|general)",
+          "\\bbriefly explain (?:the )?Apache\\s*2\\.0\\b",
+          "\\bApache\\s*2\\.0 license\\b[^.?!]*(?:overview|brief|general level|no legal advice)"
+        ],
+        "force_summarize",
+        "v8_force_summarize",
+        [
+          "\\bsummarize this as a light AI-use example\\b"
+        ],
+        "force_verify",
+        "v8_force_verify",
+        [
+          "\\bverify whether the claim\\b",
+          "\\bverify[^.?!]*(?:vendor|security|claim|safety)",
+          "\\bcheck whether[^.?!]*(?:correct|equals)"
+        ],
+        "short_response",
+        "v8_short_response",
+        [
+          "\\bshort release-?note sentence\\b",
+          "\\bshort answer\\b",
+          "\\bbrief(?:ly)?\\b"
+        ],
+        "force_table",
+        "v8_force_table",
+        [
+          "\\bin a table\\b",
+          "\\bclassify each[^.?!]*\\btable\\b",
+          "\\bmigration table\\b"
+        ],
+        "preserve_neutrality",
+        "v8_preserve_neutrality",
+        [
+          "\\bneutral (?:tone|summary|design|notes?)\\b"
+        ],
+        "avoid_diagnosis",
+        "v8_avoid_diagnosis",
+        [
+          "\\bwithout diagnosis\\b"
+        ],
+        "general_information_only",
+        "v8_general_information_only",
+        [
+          "\\bgeneral information only\\b",
+          "\\bonly generally\\b",
+          "\\bprofessional review\\b"
+        ],
+        "avoid_overclaim",
+        "v8_avoid_overclaim",
+        [
+          "\\bavoid overclaiming\\b",
+          "\\bprofessional review\\b",
+          "\\bonly generally\\b"
+        ],
+        "cite_sources",
+        "v8_cite_sources",
+        [
+          "\\bcite sources\\b",
+          "\\bwith sources\\b"
+        ],
+        "v8_no_web_search",
+        [
+          "\\bdo not search the web\\b",
+          "\\bdo not use external news\\b",
+          "\\bdo not use external information\\b"
+        ],
+        "v8_no_table",
+        [
+          "\\bno table\\b"
+        ],
+        "v8_license_medium",
+        [
+          "\\blicense[^.?!]*(?:commercial use|allows every commercial use)\\b",
+          "\\bApache\\s*2\\.0[^.?!]*commercial use\\b"
+        ],
+        "v8_security_medium",
+        [
+          "\\bsecurity claim\\b"
+        ],
+        "v8_high_medical",
+        [
+          "\\bmedication dosage advice\\b"
+        ],
+        "v8_legal_high",
+        [
+          "\\blegally valid\\b",
+          "\\bcontract template is said\\b"
+        ],
+        "v8_low_risk_boundary",
+        [
+          "\\bMedical AI (?:UI|dashboard)\\b[^.?!]*(?:UI design|not diagnosis|without diagnosis)",
+          "\\bApache\\s*2\\.0\\b[^.?!]*(?:in general|general level|no legal advice|brief)",
+          "\\bAI\\b[^.?!]*(?:light-use example|not a dependence warning|not dependence)"
+        ],
+        [
+          "no_web_search",
+          "no_table",
+          "license_medium",
+          "security_medium",
+          "high_medical",
+          "legal_high",
+          "low_risk_boundary"
+        ],
+        "evidence"
+      ],
+      "instruction_count": 181
+    },
+    "_v9_primary_review_profile": {
+      "firstlineno": 1570,
+      "argcount": 1,
+      "nlocals": 5,
+      "names": [
+        "_v9_override",
+        "re",
+        "search",
+        "I",
+        "start",
+        "end"
+      ],
+      "varnames": [
+        "text",
+        "rules",
+        "pattern",
+        "override",
+        "match"
+      ],
+      "consts": [
+        "User-approved V9 primary-review 34-row non-sealed repair signals.",
+        "\\bcurrent AI regulation status\\b",
+        "explain",
+        [
+          "explain",
+          "verify",
+          "search"
+        ],
+        true,
+        [
+          "cite_sources",
+          "avoid_overclaim",
+          "preserve_neutrality"
+        ],
+        "high",
+        "legal",
+        "current_information",
+        [
+          "current",
+          "multiple",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\blatest stable version of FastAPI\\b",
+        "verify",
+        "search",
+        "cite_sources",
+        "avoid_overclaim",
+        "medium",
+        [
+          "current",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bfield named recent_file_count\\b",
+        "build",
+        "no_web_search",
+        [
+          "must_not"
+        ],
+        "\\blatest public benchmark scores\\b",
+        "explore",
+        [
+          "explore",
+          "search",
+          "compare"
+        ],
+        "table",
+        [
+          "current",
+          "formats",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\blocally installed Python version\\b",
+        "\\bCheck the replay report, then promote\\b",
+        [
+          "multiple",
+          "must"
+        ],
+        "\\bcurrent release date\\b[^.?!]*\\bcitation\\b",
+        "short",
+        [
+          "current",
+          "multiple",
+          "response_length",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bReview this route rule, then patch\\b",
+        [
+          "multiple"
+        ],
+        "\\bClean the candidate list, then measure\\b",
+        "summarize",
+        "calculate",
+        "\\bBack up the current state, then run\\b",
+        "\\bgive only the final risks\\b",
+        [
+          "must"
+        ],
+        "\\bFix the failing test, but I have not pasted the error output yet\\b",
+        "clarify",
+        "ask_first",
+        [
+          "missing",
+          "multiple",
+          "must"
+        ],
+        "\\bDecide whether to adopt\\b[^.?!]*\\bchecking its score\\b",
+        "\\b20% faster\\b[^.?!]*\\bverify the claim\\b",
+        "unverified_claim",
+        [
+          "unverified",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bmedical AI reduces diagnosis errors\\b",
+        "general_information_only",
+        "medical",
+        [
+          "unverified",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bthree route gaps\\b[^.?!]*\\bnot a table\\b",
+        "no_table",
+        [
+          "response_length",
+          "must_not"
+        ],
+        "\\bClassify each candidate as keep, rerun, or reserve\\b",
+        [
+          "formats"
+        ],
+        "\\bUse only the local log below\\b",
+        "\\bBefore editing the roadmap, ask which section\\b",
+        [
+          "missing",
+          "must"
+        ],
+        "\\bdo not store this personal note as memory\\b",
+        "do_not_store",
+        "\\bExplain Apache 2\\.0 at a general level\\b",
+        "\\blegally safe to sign\\b",
+        "\\btargeted political persuasion message\\b",
+        "political_persuasion",
+        [
+          "risk",
+          "risk_flags"
+        ],
+        "\\bexploit this production login bug\\b",
+        "security",
+        "\\bReturn only JSON with keys status and reason\\b",
+        "json",
+        "\\bavoid overstating the evidence\\b",
+        "respond",
+        "\\bglossary entry for the word political\\b",
+        "\\blicense_type as a column name\\b",
+        "\\bQuote the word diagnosis\\b[^.?!]*\\bUI glossary\\b",
+        "\\bcomparison table, but I have not provided the items\\b",
+        [
+          "missing",
+          "multiple",
+          "formats",
+          "must"
+        ],
+        "\\bFix this code, but I have not pasted the code or the error message\\b",
+        "\\bReview this document, but I have not attached the document\\b",
+        "\\bMedical AI\\b[^.?!]*(?:dashboard layout|UI 設計|UI design)[^.?!]*(?:診断ではなく|not diagnosis|diagnosisではなく)",
+        "avoid_diagnosis",
+        "\\bWhat is Apache 2\\.0\\? Give a general explanation, not legal advice\\b",
+        "v9_primary_review",
+        [
+          "override",
+          "evidence"
+        ],
+        null
+      ],
+      "instruction_count": 472
+    },
+    "_v9_constraint_operation_extension_profile": {
+      "firstlineno": 1766,
+      "argcount": 1,
+      "nlocals": 5,
+      "names": [
+        "_v9_override",
+        "re",
+        "search",
+        "I",
+        "start",
+        "end"
+      ],
+      "varnames": [
+        "text",
+        "rules",
+        "pattern",
+        "override",
+        "match"
+      ],
+      "consts": [
+        "User-approved V9 extension focused on constraint/operation exactness.",
+        "\\bBriefly list three deployment risks as bullet points, no table\\b",
+        "summarize",
+        "short",
+        "bullets",
+        "no_table",
+        [
+          "response_length",
+          "formats",
+          "must_not"
+        ],
+        "\\bReturn only JSON with keys action and reason\\b",
+        "build",
+        "json",
+        [
+          "formats"
+        ],
+        "\\bBefore editing the README, ask which section I want changed\\b",
+        "clarify",
+        true,
+        "ask_first",
+        [
+          "missing",
+          "must"
+        ],
+        "\\bdo not store this personal note as memory\\b",
+        "do_not_store",
+        [
+          "must_not"
+        ],
+        "\\bVerify this vendor claim with sources and avoid overclaiming\\b",
+        "verify",
+        "cite_sources",
+        "avoid_overclaim",
+        "medium",
+        "unverified_claim",
+        [
+          "unverified",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bExplain Apache 2\\.0 as general information only\\b",
+        "explain",
+        "general_information_only",
+        [
+          "must"
+        ],
+        "\\bDesign a medical AI screen layout without diagnosis or treatment advice\\b",
+        "avoid_diagnosis",
+        "\\bfriendly but precise tone and avoid overstating the evidence\\b",
+        "respond",
+        "\\bUse only the local notes below\\b",
+        "no_web_search",
+        "\\bCreate a comparison table for these options\\b",
+        "table",
+        "\\bGive exactly one short sentence explaining the result\\b",
+        [
+          "response_length"
+        ],
+        "\\bSummarize both sides neutrally without choosing a winner\\b",
+        "preserve_neutrality",
+        "\\bSummarize the failure list into three key points\\b",
+        "\\bClassify each log row as keep or review in a table\\b",
+        "\\bMake a migration table, but the source columns are not provided\\b",
+        [
+          "missing",
+          "multiple",
+          "formats",
+          "must"
+        ],
+        "\\bVerify the security claim, then write a short release note\\b",
+        "security",
+        [
+          "unverified",
+          "multiple",
+          "response_length",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bExplain what Apache 2\\.0 means at a general level\\b",
+        "\\bCompare the two router designs and recommend one\\b",
+        "explore",
+        "compare",
+        "\\bCalculate whether 42 \\+ 58 equals 100\\b",
+        "calculate",
+        "\\bSearch for the latest Node\\.js LTS version and cite the source\\b",
+        "search",
+        "current_information",
+        [
+          "current",
+          "must",
+          "risk",
+          "risk_flags"
+        ],
+        "\\bBuild a checklist of fixes for the route gaps\\b",
+        "\\bReview the draft and summarize only the blocking issues\\b",
+        [
+          "multiple",
+          "must"
+        ],
+        "\\bCreate the JSON patch plan after checking the assumptions\\b",
+        [
+          "multiple",
+          "formats"
+        ],
+        "\\bExtract candidate IDs, classify each as keep or rerun, and summarize counts\\b",
+        [
+          "build",
+          "summarize",
+          "calculate"
+        ],
+        [
+          "multiple"
+        ],
+        "v9_constraint_operation_extension",
+        [
+          "override",
+          "evidence"
+        ],
+        null
+      ],
+      "instruction_count": 303
+    },
+    "extract_semantic_packet": {
+      "firstlineno": 2146,
+      "argcount": 2,
+      "nlocals": 60,
+      "names": [
+        "isinstance",
+        "str",
+        "strip",
+        "ValueError",
+        "_intent_scores",
+        "intent",
+        "predict",
+        "round",
+        "margin",
+        "sorted",
+        "scores",
+        "items",
+        "INTENT_GATE_MARGIN",
+        "IntentCandidate",
+        "confidence",
+        "bool",
+        "_v6_profile",
+        "_v6_false_positive_profile",
+        "_v7_generalization_profile",
+        "_v8_recovery_profile",
+        "_v9_primary_review_profile",
+        "_v9_constraint_operation_extension_profile",
+        "_find_markers",
+        "INTENT_MARKERS",
+        "extend",
+        "re",
+        "search",
+        "I",
+        "CURRENT_MARKER",
+        "CURRENT_CONTEXT_BLOCKER",
+        "UNVERIFIED_MARKER",
+        "list",
+        "MULTIPLE_INTENT_MARKER",
+        "TERMINAL_BUILD_MARKER",
+        "TERMINAL_SUMMARY_MARKER",
+        "TERMINAL_EXPLAIN_MARKER",
+        "SHORT_MARKER",
+        "LONG_MARKER",
+        "append",
+        "_has_arithmetic_expression",
+        "FORMAT_MARKERS",
+        "MUST_MARKERS",
+        "add",
+        "insert",
+        "MUST_NOT_MARKERS",
+        "RISK_MARKERS",
+        "signal",
+        "removesuffix",
+        "any",
+        "dict",
+        "fromkeys",
+        "max",
+        "set",
+        "len",
+        "parse_semantic_packet",
+        "request_digest",
+        "_language"
+      ],
+      "varnames": [
+        "text",
+        "intent_model",
+        "trace",
+        "candidates",
+        "evidence",
+        "primary",
+        "decided_by",
+        "prediction",
+        "v6",
+        "fp",
+        "v7",
+        "v8",
+        "v9",
+        "v9_ext",
+        "missing_matches",
+        "current_matches",
+        "current_blockers",
+        "base_unverified_matches",
+        "unverified_info_matches",
+        "unverified_risk_matches",
+        "multiple_matches",
+        "verify_matches",
+        "terminal_build_matches",
+        "terminal_summary_matches",
+        "terminal_explain_matches",
+        "short_matches",
+        "medium_matches",
+        "long_matches",
+        "intent_set",
+        "clarify_build_bridge",
+        "clarify_verify_bridge",
+        "suppress_current_search",
+        "formats",
+        "format_name",
+        "marker",
+        "matches",
+        "must",
+        "constraint",
+        "v7_must_groups",
+        "v8_must_groups",
+        "must_not",
+        "v7_must_not_groups",
+        "v8_must_not_groups",
+        "risk_level",
+        "risk_flags",
+        "level",
+        "unverified_risk_escalates",
+        "response_length",
+        "meaningful_operations",
+        "multiple_intents",
+        "v9_override",
+        "info",
+        "missing_required_information",
+        "contains_unverified_claims",
+        "requires_current_information",
+        "constraints",
+        "risk",
+        "confidence",
+        "unknowns",
+        "conflicts"
+      ],
+      "consts": [
+        null,
+        "semantic extraction requires non-empty text",
+        0,
+        "markers",
+        "fallback",
+        6,
+        "intent_margin",
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2169
+        },
+        "extract_semantic_packet.<locals>.<listcomp>",
+        {
+          "code_object": "<lambda>",
+          "firstlineno": 2172
+        },
+        "extract_semantic_packet.<locals>.<lambda>",
+        [
+          "key"
+        ],
+        3,
+        "intent_top_scores",
+        "learned",
+        [
+          "intent",
+          "confidence"
+        ],
+        "decided_by",
+        "markers_fired",
+        "gate_margin",
+        "clarify",
+        "medical_anxiety_boundary",
+        "missing_scope",
+        "ask_first",
+        "missing_info",
+        "曖昧.*先に確認の質問",
+        "do not assume the missing premise|target is missing.*should be checked",
+        "licensed_model_sample_rule",
+        "ai_legal_license",
+        "ai_regulation_current",
+        "current_lookup",
+        "suppress_current_search",
+        "local_current_blocker",
+        "current_blocker",
+        "low_risk_boundary",
+        "local_llm_hostile_boundary",
+        "ai_persona_dependency",
+        "ai_abuse_ethics",
+        "political_future_split",
+        "political_neutrality_advice",
+        "future_job_displacement",
+        "unverified_claim",
+        "suppress_unverified",
+        "note_record_no_verify",
+        "conclusion_word_suppression",
+        "legal_medium",
+        "evidence",
+        "multiple_sequence",
+        "確認してから答",
+        "\\bburn rate\\b.*\\bbefore summarizing\\b",
+        "suppress_multiple",
+        "verify",
+        "force_verify",
+        "force_build",
+        "\\bextract candidate IDs?[^.?!]*\\bclassify\\b",
+        "suppress_verify",
+        "terminal_build",
+        "terminal_summary",
+        "force_summarize",
+        "short_response",
+        "medium_response",
+        "long_response",
+        {
+          "code_object": "<setcomp>",
+          "firstlineno": 2283
+        },
+        "extract_semantic_packet.<locals>.<setcomp>",
+        "summarize",
+        "explain",
+        "build",
+        "target database is not stated|migration plan.*not stated",
+        "not provided (?:the )?target text|target text yet|ask for the artifact first|artifact first",
+        false,
+        "high_legal",
+        "high_medical",
+        "\\b(?:check|verify)\\b",
+        "explore",
+        "compare",
+        "search",
+        "source_lookup",
+        "cite_sources",
+        "high_security",
+        "license_medium",
+        "calculate|calculating|\\btotal\\b|add up|monthly cost|totals? (?:are right|match|matches|correct)|expense totals|計算して|計算し|を計算|計算結果|合計",
+        "calculate",
+        "compare|comparing|pros and cons|比較",
+        "trade-?offs?|\\\\ufffd.*r\\\\ufffd",
+        "suppress_compare_operation",
+        "\\bJSON\\b[^.?!]*(?:import|plan|template|object)",
+        "json",
+        "\\bchecklist of fixes\\b",
+        "bullets",
+        "force_table",
+        "table",
+        "suppress_structural_format_constraints",
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2377
+        },
+        "preserve_neutrality",
+        "avoid_overclaim",
+        "general_information_only",
+        "avoid_diagnosis",
+        [
+          "cite_sources",
+          "ask_first",
+          "preserve_neutrality",
+          "avoid_overclaim",
+          "general_information_only",
+          "avoid_diagnosis"
+        ],
+        [
+          "cite_sources",
+          "preserve_neutrality",
+          "general_information_only",
+          "avoid_overclaim",
+          "avoid_diagnosis"
+        ],
+        "target is missing.*should be checked",
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2409
+        },
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2411
+        },
+        "frozenset({'cite_sources', 'avoid_overclaim', 'ask_first'})",
+        "suppress_neutrality_constraint",
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2439
+        },
+        "no_table",
+        "no_web_search",
+        [
+          "no_table",
+          "no_web_search"
+        ],
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2467
+        },
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2469
+        },
+        "low",
+        [
+          "critical",
+          "high"
+        ],
+        "_risk",
+        "high",
+        "legal",
+        "license",
+        "medical",
+        "mental_health",
+        "security",
+        "legal_high",
+        "medium",
+        "security_medium",
+        "\\b(before adding this number|\\d+ incidents is correct)\\b",
+        "future_medium",
+        "future_prediction",
+        "political_medium",
+        "political",
+        "risk_comparison_medium",
+        "risk_comparison",
+        "hostile_user",
+        "safety",
+        "人格|理解している",
+        "persona_claim",
+        "dependency_risk",
+        "ai_ethics",
+        "values",
+        "claim below|vendor claims|reported figures|report says|supposedly|do not assume it is true|i heard this (?:number|figure|value) is correct|\\u8a00\\u308f\\u308c\\u307e\\u3057\\u305f",
+        "current_information",
+        "suppress_response_length_constraint",
+        "short",
+        "long",
+        "unspecified",
+        "\\blength and explain\\b",
+        {
+          "code_object": "<genexpr>",
+          "firstlineno": 2590
+        },
+        "extract_semantic_packet.<locals>.<genexpr>",
+        "frozenset({'compare', 'build'})",
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2593
+        },
+        {
+          "code_object": "<genexpr>",
+          "firstlineno": 2596
+        },
+        1,
+        "override",
+        "primary_intent",
+        "operations",
+        "information_state",
+        "missing_required_information",
+        "contains_unverified_claims",
+        "requires_current_information",
+        "multiple_intents",
+        "constraints",
+        "response_length",
+        "formats",
+        "must",
+        "must_not",
+        "risk",
+        "level",
+        "flags",
+        0.99,
+        {
+          "code_object": "<lambda>",
+          "firstlineno": 2624
+        },
+        0.6,
+        "semantic-packet.v1",
+        "deterministic_signal_extractor",
+        "0.2",
+        [
+          "kind",
+          "version"
+        ],
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2640
+        },
+        [
+          "missing_required_information",
+          "contains_unverified_claims",
+          "requires_current_information",
+          "multiple_intents"
+        ],
+        [
+          "response_length",
+          "formats",
+          "must",
+          "must_not"
+        ],
+        [
+          "level",
+          "flags"
+        ],
+        {
+          "code_object": "<listcomp>",
+          "firstlineno": 2660
+        },
+        [
+          "schema_version",
+          "request_digest",
+          "adapter",
+          "language",
+          "intent_candidates",
+          "operations",
+          "information_state",
+          "constraints",
+          "risk",
+          "evidence",
+          "unknowns",
+          "conflicts",
+          "confidence"
+        ]
+      ],
+      "instruction_count": 2521
+    }
+  }
+}

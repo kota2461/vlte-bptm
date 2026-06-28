@@ -1,0 +1,91 @@
+{
+  "schema_version": "v6-structural-build-30-candidate-probe-report.v1",
+  "generated_at": "2026-06-28T07:52:05.522881+00:00",
+  "status": "candidate_extraction_complete_review_required",
+  "queue": "build/v6_structural_build_30_candidate_queue_v1.json",
+  "benchmark": "tests/fixtures/v6_structural_build_30_candidate_benchmark_v1.json",
+  "worksheet": "build/v6_structural_build_30_candidate_review_worksheet_v1.md",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_synthesis_used": true,
+    "manual_prompt_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_gate_use_allowed": false,
+    "candidate_queue_is_training_data": false,
+    "current_route_measurement_is_gate": false
+  },
+  "summary": {
+    "candidate_count": 30,
+    "by_status": {
+      "ready_for_human_review": 30
+    },
+    "by_priority": {
+      "high": 18,
+      "medium": 12
+    },
+    "by_expected_intent": {
+      "build": 30
+    },
+    "by_expected_risk": {
+      "low": 30
+    },
+    "axis_counts_top": {
+      "build_vs_respond": 26,
+      "metalinguistic_mention": 23,
+      "current_search_split": 7,
+      "risk_suppression": 5,
+      "label": 4,
+      "medical_design_boundary": 4,
+      "glossary": 4,
+      "heading": 3,
+      "column": 3,
+      "tag": 3,
+      "legal_license_boundary": 3,
+      "ai_dependency_boundary": 3,
+      "medical_word_use": 3,
+      "filename": 3,
+      "legal_label": 2,
+      "legal_suppression": 2
+    },
+    "route_gap_count": 0,
+    "overfire_count": 0,
+    "gap_field_counts": {},
+    "overfire_flag_counts": {},
+    "current_route_measurement": {
+      "case_count": 30,
+      "valid_packet_rate": 1.0,
+      "intent_accuracy": 1.0,
+      "intent_macro_f1": 1.0,
+      "critical_signal_recall": 0.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0,
+      "evidence_offset_validity": 1.0,
+      "error_count": 0
+    }
+  },
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "case_count": 30,
+    "valid_packet_rate": 1.0,
+    "intent_accuracy": 1.0,
+    "intent_macro_f1": 1.0,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "evidence_offset_validity": 1.0,
+    "error_count": 0
+  },
+  "errors": [],
+  "next_step": {
+    "name": "human_review_then_optional_nonsealed_adoption",
+    "input": "build/v6_structural_build_30_candidate_review_worksheet_v1.md",
+    "output": "tests/fixtures/v6_structural_build_30_candidate_benchmark_v1.json"
+  }
+}

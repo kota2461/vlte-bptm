@@ -1,0 +1,45 @@
+{
+  "adoption_status_counts": {
+    "approved_harvested": 72,
+    "approved_human_reviewed": 50,
+    "approved_nonsealed_router": 100,
+    "review_required": 48
+  },
+  "base_counts": {
+    "artifact_generation": 93,
+    "clarification_gate": 27,
+    "direct_answer": 27,
+    "exploration_tradeoff": 24,
+    "mechanism_explanation": 41,
+    "summary_compression": 17,
+    "verification_review": 41
+  },
+  "created_at": "2026-06-26T07:38:59.554663+00:00",
+  "lane_counts": {
+    "answer_or_request_log": 72,
+    "conversation_accumulation": 50,
+    "router_adopted_nonsealed": 100,
+    "router_judgment_review_queue": 48
+  },
+  "output": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_harvested_samples_v0_1.json",
+  "policy": {
+    "approved_items_may_be_used_for_experiment_training": true,
+    "raw_router_turn_text_used": false,
+    "review_required_items_are_training_data": false,
+    "sealed_fixtures_used": false
+  },
+  "quality_flag_counts": {
+    "very_short": 7
+  },
+  "review_required_count": 48,
+  "route_gap_count": 10,
+  "sample_count": 270,
+  "schema_version": "thought-color-harvest-report.v0.1",
+  "source_counts": {
+    "claudelog_approved_intent": 72,
+    "conversation_accumulation_approved": 50,
+    "router_adopted_nonsealed": 100,
+    "router_review_required": 48
+  },
+  "training_allowed_count": 222
+}

@@ -1,0 +1,4724 @@
+{
+  "schema_version": "v9-accumulated-log-candidate-selection.v1",
+  "generated_at": "2026-06-25T07:09:35.058781+00:00",
+  "status": "accumulated_log_candidates_selected_for_v9_review",
+  "sources": {
+    "source_priority_selection": "build/v8_recovery_debate_candidate_priority_selection_v1.json",
+    "source_debate_log": "build\\v8_recovery_debate_r4_100.json",
+    "v8_measurement_report": "build/pattern_language_sealed_v8_measurement_report.json"
+  },
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "selection_is_training_data": false,
+    "human_rewrite_required_before_fixture_adoption": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_gate_use_allowed": false
+  },
+  "selection_rules": {
+    "exclude_already_used_v8_priority_review": true,
+    "primary_quotas": {
+      "current_search_split": 5,
+      "multiple_intents": 5,
+      "operation_terminal": 5,
+      "constraints": 5,
+      "risk_ladder": 5,
+      "missing_info": 3,
+      "unverified_claim": 2,
+      "false_positive": 2,
+      "mixed_language": 1,
+      "paraphrase": 1
+    },
+    "category_weights": {
+      "current_search_split": 48,
+      "multiple_intents": 44,
+      "operation_terminal": 42,
+      "constraints": 40,
+      "risk_ladder": 40,
+      "missing_info": 30,
+      "unverified_claim": 24,
+      "false_positive": 22,
+      "mixed_language": 14,
+      "paraphrase": 14
+    },
+    "rerun_length_finish_before_use": true,
+    "raw_llm_text_is_training_data": false,
+    "human_rewrite_required": true
+  },
+  "summary": {
+    "source_candidate_count": 100,
+    "already_used_v8_priority_count": 30,
+    "ready_pool_count": 62,
+    "primary_review_count": 34,
+    "rerun_before_use_count": 8,
+    "reserve_review_count": 28,
+    "field_error_counts_from_v8": {
+      "constraints": 6,
+      "information_state": 6,
+      "operations": 6,
+      "primary_intent": 2,
+      "risk": 6
+    },
+    "critical_miss_counts_from_v8": {
+      "contains_unverified_claims": 0,
+      "missing_required_information": 0,
+      "multiple_intents": 1,
+      "requires_current_information": 1
+    },
+    "primary_category_counts": {
+      "constraints": 5,
+      "current_search_split": 5,
+      "false_positive": 2,
+      "missing_info": 3,
+      "mixed_language": 1,
+      "multiple_intents": 5,
+      "operation_terminal": 5,
+      "paraphrase": 1,
+      "risk_ladder": 5,
+      "unverified_claim": 2
+    },
+    "rerun_category_counts": {
+      "constraints": 1,
+      "multiple_intents": 2,
+      "operation_terminal": 2,
+      "risk_ladder": 1,
+      "unverified_claim": 2
+    },
+    "reserve_category_counts": {
+      "constraints": 1,
+      "current_search_split": 2,
+      "false_positive": 5,
+      "missing_info": 4,
+      "mixed_language": 6,
+      "paraphrase": 6,
+      "risk_ladder": 1,
+      "unverified_claim": 3
+    },
+    "category_deficits": {}
+  },
+  "reference_logs": [
+    {
+      "source": "build/v7_router_debate_candidate_selection_v1.json",
+      "recommended_use": "reference_only_or_backfill",
+      "reason": "already used as V7/V8 repair context; do not duplicate before reviewing overlap"
+    },
+    {
+      "source": "build/v6_structural_build_30_candidate_queue_v1.json",
+      "recommended_use": "reference_only",
+      "reason": "structural build set has already been adopted into earlier non-sealed repair lanes"
+    },
+    {
+      "source": "build/v6_boundary_debate_candidate_queue_v1.json",
+      "recommended_use": "reference_only_or_negative_contrast_backfill",
+      "reason": "older boundary queue is useful for taxonomy examples but likely overlaps adopted V6 material"
+    }
+  ],
+  "primary_review": [
+    {
+      "id": "v8-recovery-debate-candidate-024",
+      "selection_bucket": "primary_review",
+      "priority_rank": 1,
+      "source_topic_id": "v8-current_search_split-04-current-ai-law-positive",
+      "category": "current_search_split",
+      "v9_selection_score": 220,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "現在進行中のAI規制を引用付きで調べる依頼ではcurrent/searchを発火させる条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "legal_current"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 30489,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "cite_sources"
+          ],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-025",
+      "selection_bucket": "primary_review",
+      "priority_rank": 2,
+      "source_topic_id": "v8-current_search_split-05-latest-library-positive",
+      "category": "current_search_split",
+      "v9_selection_score": 220,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "公式情報から最新LTSバージョンを確認する依頼で、search/citeを必要にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "official_sources"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29150,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-027",
+      "selection_bucket": "primary_review",
+      "priority_rank": 3,
+      "source_topic_id": "v8-current_search_split-07-recent-in-file",
+      "category": "current_search_split",
+      "v9_selection_score": 220,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "recentという列名をCSVへ追加する作業を、最近の出来事検索にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "column_name",
+        "metalinguistic"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25927,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-029",
+      "selection_bucket": "primary_review",
+      "priority_rank": 4,
+      "source_topic_id": "v8-current_search_split-09-model-benchmark-positive",
+      "category": "current_search_split",
+      "v9_selection_score": 220,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "最新ベンチ比較を出典付きで比較する依頼では、current/searchを抑制しない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "positive_current",
+        "benchmark"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 27577,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "summarize",
+          "search",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-030",
+      "selection_bucket": "primary_review",
+      "priority_rank": 5,
+      "source_topic_id": "v8-current_search_split-10-local-version-command",
+      "category": "current_search_split",
+      "v9_selection_score": 220,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "ローカルに入っているPythonバージョン確認コマンドを、最新Python情報検索と分ける条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_command",
+        "version_check"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26904,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.87
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-014",
+      "selection_bucket": "primary_review",
+      "priority_rank": 6,
+      "source_topic_id": "v8-multiple_intents-04-check-then-promote",
+      "category": "multiple_intents",
+      "v9_selection_score": 192,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "gate確認後にpromoteする話題で、checkが失敗した時にpromoteへ進まないルート。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "gate",
+        "promotion_block"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25346,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-017",
+      "selection_bucket": "primary_review",
+      "priority_rank": 7,
+      "source_topic_id": "v8-multiple_intents-07-search-then-cite",
+      "category": "multiple_intents",
+      "v9_selection_score": 192,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "最新仕様を調べて引用付きで短く説明する依頼で、search→explain→citeを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "search_then_explain",
+        "cite_sources"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 23223,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-018",
+      "selection_bucket": "primary_review",
+      "priority_rank": 8,
+      "source_topic_id": "v8-multiple_intents-08-review-then-patch",
+      "category": "multiple_intents",
+      "v9_selection_score": 192,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "レビューで問題を見つけたら修正まで行う依頼の、review→edit→test順序。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "review_then_patch",
+        "test_after_edit"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 32613,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-019",
+      "selection_bucket": "primary_review",
+      "priority_rank": 9,
+      "source_topic_id": "v8-multiple_intents-09-clean-then-measure",
+      "category": "multiple_intents",
+      "v9_selection_score": 192,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "データを洗浄してから測定する依頼で、cleaning結果とmeasurementを混同しない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "clean_then_measure",
+        "data_quality"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 30303,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-020",
+      "selection_bucket": "primary_review",
+      "priority_rank": 10,
+      "source_topic_id": "v8-multiple_intents-10-backup-then-run",
+      "category": "multiple_intents",
+      "v9_selection_score": 192,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "backupを取ってから実験を回す依頼で、backup完了前に実験へ進まないルート。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "backup_first",
+        "experiment"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 27888,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-056",
+      "selection_bucket": "primary_review",
+      "priority_rank": 11,
+      "source_topic_id": "v8-operation_terminal-06-review-terminal-findings",
+      "category": "operation_terminal",
+      "v9_selection_score": 182,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "コードレビューでは要約より findings first になるterminal actionを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "review",
+        "findings_first"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25655,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-057",
+      "selection_bucket": "primary_review",
+      "priority_rank": 12,
+      "source_topic_id": "v8-operation_terminal-07-fix-terminal-patch",
+      "category": "operation_terminal",
+      "v9_selection_score": 182,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "修正依頼では説明だけで止まらずpatch/testまで進む条件と止める条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "patch",
+        "test"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33113,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-060",
+      "selection_bucket": "primary_review",
+      "priority_rank": 13,
+      "source_topic_id": "v8-operation_terminal-10-verify-terminal-decision",
+      "category": "operation_terminal",
+      "v9_selection_score": 182,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "昇格判断では、説明ではなくgate decisionを終端にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "gate_decision",
+        "verify"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25982,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build",
+          "summarize",
+          "explain",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-036",
+      "selection_bucket": "primary_review",
+      "priority_rank": 14,
+      "source_topic_id": "v8-unverified_claim-06-performance-claim",
+      "category": "unverified_claim",
+      "v9_selection_score": 178,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "モデルが2倍速いという主張を比較表に入れる前に、根拠確認を必要にする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "benchmark_claim",
+        "verify"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 30106,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-038",
+      "selection_bucket": "primary_review",
+      "priority_rank": 15,
+      "source_topic_id": "v8-unverified_claim-08-medical-claim-general",
+      "category": "unverified_claim",
+      "v9_selection_score": 178,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "医療AIの有効性主張を記事に使う前に、出典確認と過断定回避を行う条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "medical_claim",
+        "cite_sources"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29993,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-053",
+      "selection_bucket": "primary_review",
+      "priority_rank": 16,
+      "source_topic_id": "v8-operation_terminal-03-summarize-vs-extract",
+      "category": "operation_terminal",
+      "v9_selection_score": 175,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "要約依頼と候補抽出依頼を、どちらもsummarizeに潰さない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "summarize_vs_extract",
+        "candidate_selection"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33621,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-059",
+      "selection_bucket": "primary_review",
+      "priority_rank": 17,
+      "source_topic_id": "v8-operation_terminal-09-classify-terminal-labels",
+      "category": "operation_terminal",
+      "v9_selection_score": 175,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "ログを分類ラベルへ変換する依頼で、respondではなくclassify/buildにする境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "classify",
+        "labels"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31513,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-044",
+      "selection_bucket": "primary_review",
+      "priority_rank": 18,
+      "source_topic_id": "v8-constraints-04-no-web-local",
+      "category": "constraints",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "外部検索なしでローカルログだけ見る、というno_web_search制約を保持する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "no_web_search",
+        "local_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26374,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-046",
+      "selection_bucket": "primary_review",
+      "priority_rank": 19,
+      "source_topic_id": "v8-constraints-06-ask-before-edit",
+      "category": "constraints",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "破壊的変更前に確認してというask_first制約を、実装修正中に落とさない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "ask_first",
+        "destructive_guard"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29048,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-049",
+      "selection_bucket": "primary_review",
+      "priority_rank": 20,
+      "source_topic_id": "v8-constraints-09-do-not-store",
+      "category": "constraints",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "このログは学習に使わず一時レビューだけ、という保存制約を保持する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "privacy",
+        "not_training_data"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29309,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-065",
+      "selection_bucket": "primary_review",
+      "priority_rank": 21,
+      "source_topic_id": "v8-risk_ladder-05-legal-general-low",
+      "category": "risk_ladder",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "Apache 2.0の一般説明をhigh legal/currentにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "license_general",
+        "low_legal"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28992,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-066",
+      "selection_bucket": "primary_review",
+      "priority_rank": 22,
+      "source_topic_id": "v8-risk_ladder-06-legal-specific-high",
+      "category": "risk_ladder",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "特定契約に適用してよいかの判断はlegal risk/source requirementを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "legal_positive",
+        "source_required"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31715,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-068",
+      "selection_bucket": "primary_review",
+      "priority_rank": 23,
+      "source_topic_id": "v8-risk_ladder-08-political-persuasion-high",
+      "category": "risk_ladder",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "投票行動を変える説得文を作る依頼では政治リスクを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "political_positive",
+        "persuasion"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25108,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "financial",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.8500000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-070",
+      "selection_bucket": "primary_review",
+      "priority_rank": 24,
+      "source_topic_id": "v8-risk_ladder-10-security-exploit-high",
+      "category": "risk_ladder",
+      "v9_selection_score": 158,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "脆弱性悪用手順の具体化はcritical寄りに上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "security_positive",
+        "critical"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29179,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-045",
+      "selection_bucket": "primary_review",
+      "priority_rank": 25,
+      "source_topic_id": "v8-constraints-05-json-only",
+      "category": "constraints",
+      "v9_selection_score": 151,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "JSONだけ返して、説明文を付けない依頼でformat制約を守るサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "json_format",
+        "format_strict"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29936,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-047",
+      "selection_bucket": "primary_review",
+      "priority_rank": 26,
+      "source_topic_id": "v8-constraints-07-friendly-but-precise",
+      "category": "constraints",
+      "v9_selection_score": 151,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "やわらかく、でも断定しないで根拠を分けるというtone/verification制約。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "tone",
+        "avoid_overclaim"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29751,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "legal",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-067",
+      "selection_bucket": "primary_review",
+      "priority_rank": 27,
+      "source_topic_id": "v8-risk_ladder-07-political-word-low",
+      "category": "risk_ladder",
+      "v9_selection_score": 151,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "政治という単語を例文に使うだけならneutrality highにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "political_word",
+        "metalinguistic"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26162,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-075",
+      "selection_bucket": "primary_review",
+      "priority_rank": 28,
+      "source_topic_id": "v8-false_positive-05-license-label",
+      "category": "false_positive",
+      "v9_selection_score": 150,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "license_typeというDBフィールドを追加する作業を、ライセンス判断にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "field_name",
+        "license_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26660,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-077",
+      "selection_bucket": "primary_review",
+      "priority_rank": 29,
+      "source_topic_id": "v8-false_positive-07-diagnosis-quote",
+      "category": "false_positive",
+      "v9_selection_score": 150,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "『diagnosis』という英単語を翻訳するだけの依頼を、医療診断にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "translation",
+        "medical_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26964,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical"
+          ]
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-004",
+      "selection_bucket": "primary_review",
+      "priority_rank": 30,
+      "source_topic_id": "v8-missing_info-04-make-table-missing-data",
+      "category": "missing_info",
+      "v9_selection_score": 148,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "表にしてと言われたがデータが未提示の場合、table buildへ進まず必要データを聞く境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "format_table",
+        "missing_data"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33072,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-005",
+      "selection_bucket": "primary_review",
+      "priority_rank": 31,
+      "source_topic_id": "v8-missing_info-05-fix-code-missing-error",
+      "category": "missing_info",
+      "v9_selection_score": 148,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "コード修正依頼でコードもエラーも無い時、実装推測ではなく必要情報を聞くサンプル。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "code_context",
+        "clarify"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26776,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": [
+            "no_code"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-006",
+      "selection_bucket": "primary_review",
+      "priority_rank": 32,
+      "source_topic_id": "v8-missing_info-06-review-missing-target",
+      "category": "missing_info",
+      "v9_selection_score": 148,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "『レビューお願いします』だけで対象ファイル/文書が無い時、review stanceに入る前の確認。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "review",
+        "target_missing"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28507,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-093",
+      "selection_bucket": "primary_review",
+      "priority_rank": 33,
+      "source_topic_id": "v8-mixed_language-03-medical-ui-layout",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "Medical AI UI layout を考えたい。diagnosisではなく設計相談として扱う条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "medical_ui"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31532,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-082",
+      "selection_bucket": "primary_review",
+      "priority_rank": 34,
+      "source_topic_id": "v8-paraphrase-02-apache-what-is-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "Apache 2.0とは何か、という一般説明を複数表現でlow legalに保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "license_general",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31262,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "general_information_only",
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    }
+  ],
+  "rerun_before_use": [
+    {
+      "id": "v8-recovery-debate-candidate-015",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-multiple_intents-05-ask-then-build",
+      "category": "multiple_intents",
+      "v9_selection_score": 180,
+      "source_selection_score": 92,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "不足条件を1つ聞いてからテンプレートを作る依頼で、clarifyとbuildを分離する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "clarify_then_build",
+        "ask_first"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 35139,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-016",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-multiple_intents-06-compare-then-recommend",
+      "category": "multiple_intents",
+      "v9_selection_score": 173,
+      "source_selection_score": 85,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "比較して推奨まで出す依頼で、compare→recommendを明示し、根拠不足なら保留する境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "multiple_intents",
+        "compare",
+        "recommend"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 34376,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        },
+        {
+          "turn_index": 8,
+          "role": "qwen_critic",
+          "model": "qwen/qwen3.5-9b"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "legal",
+            "financial"
+          ]
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 still missed one multiple-intent signal; preserve vertical order and terminal action.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-055",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-operation_terminal-05-compare-terminal-table",
+      "category": "operation_terminal",
+      "v9_selection_score": 170,
+      "source_selection_score": 100,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "比較が目的だが最終成果物が表の場合、primary intent/operationをどう置くか。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "compare",
+        "terminal_table"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33313,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 5,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.85
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-058",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-operation_terminal-08-plan-terminal-roadmap",
+      "category": "operation_terminal",
+      "v9_selection_score": 163,
+      "source_selection_score": 93,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "設計相談からロードマップ成果物へ落とす時、exploreだけで終えない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "operation_terminal",
+        "roadmap",
+        "build_plan"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 34568,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Operation exact match remains below target; focus on final action and operation ordering.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-032",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-unverified_claim-02-rumor-low-impact-note",
+      "category": "unverified_claim",
+      "v9_selection_score": 159,
+      "source_selection_score": 93,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "噂をメモとして保存するだけの依頼を、強いverify/searchへ上げすぎない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "note_only",
+        "verify_suppression"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33647,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 5,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        },
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-037",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-unverified_claim-07-hypothesis-label",
+      "category": "unverified_claim",
+      "v9_selection_score": 159,
+      "source_selection_score": 93,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "『安全と言われている』を仮説ラベルとして記録するだけなら、真偽判定へ進まない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "hypothesis",
+        "label_use"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31175,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 8,
+          "role": "qwen_critic",
+          "model": "qwen/qwen3.5-9b"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-062",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-risk_ladder-02-ai-impaired-decision",
+      "category": "risk_ladder",
+      "v9_selection_score": 146,
+      "source_selection_score": 100,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "AIなしでは重要判断できないと述べる場合、依存/心理リスクを上げる正例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "ai_dependency_positive",
+        "medium_high"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 35671,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "mental_health",
+            "dependency_risk",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-050",
+      "selection_bucket": "rerun_before_use",
+      "priority_rank": null,
+      "source_topic_id": "v8-constraints-10-must-and-must-not",
+      "category": "constraints",
+      "v9_selection_score": 139,
+      "source_selection_score": 93,
+      "source_review_bucket": "hold_for_rerun_length_finish",
+      "theme": "『例は出すが固有名詞は避ける』のmust/must_notを分けて扱う境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "must_must_not_split",
+        "examples"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 35697,
+      "length_finish": true,
+      "length_finish_details": [
+        {
+          "turn_index": 7,
+          "role": "gemma_expander",
+          "model": "google/gemma-4-12b-qat"
+        }
+      ],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    }
+  ],
+  "reserve_review": [
+    {
+      "id": "v8-recovery-debate-candidate-026",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-current_search_split-06-current-ui-state-local",
+      "category": "current_search_split",
+      "v9_selection_score": 213,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "現在開いているUI状態の説明を、ブラウザ外部検索ではなく観察/ログ確認として扱う境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "local_ui",
+        "observation"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25919,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-028",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-current_search_split-08-today-as-date-field",
+      "category": "current_search_split",
+      "v9_selection_score": 213,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "today_countというフィールド名を作る依頼で、今日の実データ取得へ飛ばない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "current_search_split",
+        "field_name",
+        "no_current"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26351,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "V8 critical recall was weakest for requires_current_information; keep local/current vs web-current minimal pairs.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-040",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-unverified_claim-10-product-risk-claim",
+      "category": "unverified_claim",
+      "v9_selection_score": 178,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "製品が安全と宣伝している時、リスク比較では検証強度を上げる条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "product_claim",
+        "risk_comparison"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 32397,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "summarize",
+          "search",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.87
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-034",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-unverified_claim-04-fiction-premise",
+      "category": "unverified_claim",
+      "v9_selection_score": 171,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "創作設定として『治療薬が完成した世界』を書く依頼を、医学的事実検証にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "fiction",
+        "claim_suppression"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 30522,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-039",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-unverified_claim-09-user-memory-claim",
+      "category": "unverified_claim",
+      "v9_selection_score": 171,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "ユーザーの記憶に基づく前提を、その場の作業仮定に留めるか検証するかの境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "unverified_claim",
+        "memory_claim",
+        "assumption"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33383,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "legal",
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Critical recall passed, but information/risk/operation mismatches still benefit from examples.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-048",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-constraints-08-table-required",
+      "category": "constraints",
+      "v9_selection_score": 151,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "比較結果は必ず表、最後に短い結論、というterminal format制約を保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "constraints",
+        "table",
+        "terminal_action"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 32924,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Constraint exact match remains below target; preserve short/no-table/neutrality style controls.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-069",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-risk_ladder-09-security-label-low",
+      "category": "risk_ladder",
+      "v9_selection_score": 151,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "securityという見出しを追加するだけの低リスク例。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "risk_ladder",
+        "security_label",
+        "low_risk"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 23144,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Risk exact match remains below target; calibrate low/medium/high without overfiring.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-078",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-false_positive-08-current-label",
+      "category": "false_positive",
+      "v9_selection_score": 150,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "current_statusというステータス名を作るだけの作業を、最新情報検索にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "status_label",
+        "current_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 27298,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-080",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-false_positive-10-critical-priority",
+      "category": "false_positive",
+      "v9_selection_score": 150,
+      "source_selection_score": 92,
+      "source_review_bucket": "reserve_review",
+      "theme": "criticalという優先度ラベルを保存するだけの作業を、安全critical扱いにしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "priority_label",
+        "critical_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29955,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-008",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-missing_info-08-choose-missing-criteria",
+      "category": "missing_info",
+      "v9_selection_score": 148,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "どちらが良いか聞かれたが評価基準が無い時、好みで断定せず基準を聞く境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "decision_criteria",
+        "clarify"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33088,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal"
+          ]
+        },
+        "confidence": 0.8300000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-009",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-missing_info-09-extract-missing-source",
+      "category": "missing_info",
+      "v9_selection_score": 148,
+      "source_selection_score": 100,
+      "source_review_bucket": "reserve_review",
+      "theme": "候補抽出を依頼されたがソースログが無い時、抽出を始めず入力を要求する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "candidate_extraction",
+        "source_missing"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26421,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-074",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-false_positive-04-politics-example",
+      "category": "false_positive",
+      "v9_selection_score": 143,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "politicsを使った英作文例を、価値観/政治誘導にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "language_learning",
+        "political_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28818,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.87
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-076",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-false_positive-06-risk-word",
+      "category": "false_positive",
+      "v9_selection_score": 143,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "riskという単語を含む表見出しを、重大リスク評価にしない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "table_heading",
+        "risk_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 27336,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-079",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-false_positive-09-search-button",
+      "category": "false_positive",
+      "v9_selection_score": 143,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "検索ボタンのラベル文言を考えるだけの作業を、web検索実行にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "false_positive",
+        "ui_label",
+        "search_word_only"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 26726,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Useful for low-risk sensitive-word contrast so risk/verify does not overfire.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-007",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-missing_info-07-translate-missing-language",
+      "category": "missing_info",
+      "v9_selection_score": 141,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "翻訳してと言われたが翻訳先言語が無い時、勝手に英訳せず確認する条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "translation",
+        "missing_language"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 24012,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-010",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-missing_info-10-plan-missing-goal",
+      "category": "missing_info",
+      "v9_selection_score": 141,
+      "source_selection_score": 93,
+      "source_review_bucket": "reserve_review",
+      "theme": "ロードマップ作成依頼で目的/期限/制約が無い時、最小質問に落とす境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "missing_info",
+        "roadmap",
+        "missing_goal"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 32407,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.85
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Information-state errors remain; keep ask-first boundaries but avoid over-clarifying.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-094",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-04-current-folder",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "current folder をPowerShellで確認したい。web latest searchではなくlocal commandにする条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "local_command"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25037,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-096",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-06-verify-source",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "この claim を source 付きで check して、という混在表現でverifyを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "verify"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 25534,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-097",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-07-risk-label",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "risk_level column を追加するだけ。risk assessmentではない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "column_name"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28146,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-098",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-08-compare-table",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "2案を compare して pros/cons table にする混在依頼のterminal action。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "terminal_table"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28499,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "legal"
+          ]
+        },
+        "confidence": 0.8400000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-099",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-09-ask-first",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "edit before ask しないで、先に確認してという混在制約を保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "ask_first"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 31863,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-100",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-mixed_language-10-latest-field",
+      "category": "mixed_language",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "latest_version field を追加するだけ。latest news/searchではない境界。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "mixed_language",
+        "ja_en",
+        "field_name"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 23712,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table",
+            "json"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as robustness reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-083",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-03-medical-ui-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "医療AI UIを考えたい、の言い換えでも診断相談にしない条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "medical_ui",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 27701,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.95
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-084",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-04-current-local-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "現在の作業場所/カレントディレクトリ等の言い換えをlocal contextに保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "current_local",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 33285,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.86
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-087",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-07-compare-table-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "比較表を作る依頼の言い換えでもterminal tableを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "terminal_table",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29239,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.8500000000000001
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-088",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-08-no-web-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "外部検索なし/ネット不要/ローカルだけ、の言い換えでno_webを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "no_web_search",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 28010,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "summarize",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "confidence": 0.87
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-089",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-09-avoid-diagnosis-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "診断ではなく一般情報、の言い換えでavoid_diagnosisを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "avoid_diagnosis",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 29187,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "general_information_only"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical"
+          ]
+        },
+        "confidence": 0.94
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-090",
+      "selection_bucket": "reserve_review",
+      "priority_rank": null,
+      "source_topic_id": "v8-paraphrase-10-ask-first-variants",
+      "category": "paraphrase",
+      "v9_selection_score": 105,
+      "source_selection_score": 85,
+      "source_review_bucket": "reserve_review",
+      "theme": "先に確認して/勝手に進めないで、の言い換えでask_firstを保つ条件。",
+      "axis_ids": [
+        "v8_recovery",
+        "round4",
+        "paraphrase",
+        "ask_first",
+        "surface_variants"
+      ],
+      "completed_rounds": 4,
+      "content_chars": 30921,
+      "length_finish": false,
+      "length_finish_details": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "summarize",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim",
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "cheap sufficient route before heavy route",
+        "positive-fire counterpart",
+        "suppressor marker",
+        "terminal action and operation order"
+      ],
+      "v9_use_note": "Lower priority now; keep as surface-variant reserve.",
+      "rewrite_instruction": "Rewrite into a short self-contained non-sealed sample; do not copy raw LLM prose.",
+      "training_status": "not_training_data",
+      "allowed_use": "human_review_and_rewrite_only"
+    }
+  ],
+  "already_used_excluded": [
+    {
+      "id": "v8-recovery-debate-candidate-041",
+      "source_topic_id": "v8-constraints-01-short-no-table",
+      "category": "constraints",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-042",
+      "source_topic_id": "v8-constraints-02-neutral-no-diagnosis",
+      "category": "constraints",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-043",
+      "source_topic_id": "v8-constraints-03-cite-no-overclaim",
+      "category": "constraints",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-021",
+      "source_topic_id": "v8-current_search_split-01-current-folder-local",
+      "category": "current_search_split",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-022",
+      "source_topic_id": "v8-current_search_split-02-today-log-local",
+      "category": "current_search_split",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-023",
+      "source_topic_id": "v8-current_search_split-03-latest-filename-label",
+      "category": "current_search_split",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-071",
+      "source_topic_id": "v8-false_positive-01-ai-tag",
+      "category": "false_positive",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-072",
+      "source_topic_id": "v8-false_positive-02-medical-column",
+      "category": "false_positive",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-073",
+      "source_topic_id": "v8-false_positive-03-legal-heading",
+      "category": "false_positive",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-001",
+      "source_topic_id": "v8-missing_info-01-rewrite-missing-text",
+      "category": "missing_info",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-002",
+      "source_topic_id": "v8-missing_info-02-compare-missing-options",
+      "category": "missing_info",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-003",
+      "source_topic_id": "v8-missing_info-03-summarize-missing-log",
+      "category": "missing_info",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-095",
+      "source_topic_id": "v8-mixed_language-05-no-table-neutral",
+      "category": "mixed_language",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-091",
+      "source_topic_id": "v8-mixed_language-01-ai-persona-label",
+      "category": "mixed_language",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-092",
+      "source_topic_id": "v8-mixed_language-02-apache-brief",
+      "category": "mixed_language",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-011",
+      "source_topic_id": "v8-multiple_intents-01-verify-then-build",
+      "category": "multiple_intents",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-012",
+      "source_topic_id": "v8-multiple_intents-02-summarize-then-compare",
+      "category": "multiple_intents",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-013",
+      "source_topic_id": "v8-multiple_intents-03-extract-then-classify",
+      "category": "multiple_intents",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-051",
+      "source_topic_id": "v8-operation_terminal-01-respond-vs-build",
+      "category": "operation_terminal",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-052",
+      "source_topic_id": "v8-operation_terminal-02-explain-vs-verify",
+      "category": "operation_terminal",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-054",
+      "source_topic_id": "v8-operation_terminal-04-build-vs-clarify",
+      "category": "operation_terminal",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-085",
+      "source_topic_id": "v8-paraphrase-05-unverified-report-variants",
+      "category": "paraphrase",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-086",
+      "source_topic_id": "v8-paraphrase-06-missing-text-variants",
+      "category": "paraphrase",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-081",
+      "source_topic_id": "v8-paraphrase-01-ai-comfort-variants",
+      "category": "paraphrase",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-061",
+      "source_topic_id": "v8-risk_ladder-01-ai-light-comfort",
+      "category": "risk_ladder",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-063",
+      "source_topic_id": "v8-risk_ladder-03-medical-ui-low",
+      "category": "risk_ladder",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-064",
+      "source_topic_id": "v8-risk_ladder-04-medical-personal-symptom",
+      "category": "risk_ladder",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-031",
+      "source_topic_id": "v8-unverified_claim-01-vendor-security-claim",
+      "category": "unverified_claim",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-033",
+      "source_topic_id": "v8-unverified_claim-03-report-number-check",
+      "category": "unverified_claim",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    },
+    {
+      "id": "v8-recovery-debate-candidate-035",
+      "source_topic_id": "v8-unverified_claim-05-legal-template-claim",
+      "category": "unverified_claim",
+      "reason": "already used in V8 priority review/adoption path; do not reselect as fresh V9 material"
+    }
+  ]
+}

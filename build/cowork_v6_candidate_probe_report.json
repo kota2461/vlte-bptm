@@ -1,0 +1,1947 @@
+{
+  "schema_version": "v6-cowork-candidate-probe-report.v1",
+  "generated_at": "2026-06-23T07:33:58.344652+00:00",
+  "source_selection": "build\\cowork_v6_candidate_selection_v1.json",
+  "fixture": "tests\\fixtures\\v6_cowork_candidate_fixture_v1.json",
+  "worksheet": "build\\v6_cowork_candidate_fixture_review_worksheet_v1.md",
+  "status": "promoted_to_candidate_fixture",
+  "candidate_readiness": true,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_logs_direct_training_allowed": false,
+    "redacted_inputs_only": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "summary": {
+    "source_items": 25,
+    "redaction_leak_count": 0,
+    "redaction_leaks": [],
+    "promoted_candidates": 22,
+    "rejected_by_probe": 3,
+    "distinct_promoted_intents": [
+      "build",
+      "clarify",
+      "explain",
+      "explore",
+      "summarize",
+      "verify"
+    ]
+  },
+  "source_probe_metrics": {
+    "intent_accuracy": 0.24,
+    "operation_subset_rate": 0.2,
+    "current_route_gap_count": 20
+  },
+  "promoted_probe_metrics": {
+    "intent_accuracy": 0.13636363636363635,
+    "operation_subset_rate": 0.09090909090909091,
+    "current_route_gap_count": 20
+  },
+  "all_probes": [
+    {
+      "source_candidate_id": "cowork-v6-009",
+      "priority": "high",
+      "axis_ids": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "input": "構成はpassですが、処理としてはチャットの処理出力が終るのをきっかけにpassが稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-010",
+      "priority": "high",
+      "axis_ids": [
+        "compound_intent",
+        "processing_plan",
+        "separate_pass",
+        "cognitive_load"
+      ],
+      "input": "構成は2passですが、処理としてはチャット層の出力が終るのをきっかけに2pass目が稼働する仕組みにしてもらえると負担が下がります。ログが混ざらない、処理も分ける事で思考力の低下を抑える仕組みです。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-015",
+      "priority": "high",
+      "axis_ids": [
+        "compound_intent",
+        "emotion_dynamics",
+        "parameter_tuning",
+        "missing_context"
+      ],
+      "input": "ちょっとログがどこに行ったか分からなくなってしまったのですが…\nemotに対する動的変化として、現在有る時間経過からの感情変化。以外で感情への刺激になりそうな変化を取り入れる。という物です！あと、現在の寂しいの数値は早く上がりすぎるので、実装時は調整を入れたい！という物です",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": false
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-018",
+      "priority": "high",
+      "axis_ids": [
+        "summarize_to_memo",
+        "prioritization",
+        "handoff"
+      ],
+      "input": "明日code側を始める際にPhase 5 を待たずに今すぐ着手できる 3 つをメモとして渡したいです！",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-020",
+      "priority": "high",
+      "axis_ids": [
+        "periodic_review",
+        "automation",
+        "log_accumulation"
+      ],
+      "input": "dataの蓄積に当たってなのですが、定期的にログを確認してもらい、調整をしてもらうことはかのうでしょうか",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-021",
+      "priority": "medium",
+      "axis_ids": [
+        "scheduling_constraint",
+        "missing_runtime_window"
+      ],
+      "input": "PC立ち上げ時出ないとログ確認できないのでその時にお願いしたいです！",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": false,
+        "risk": true
+      },
+      "candidate_value_score": 5,
+      "selection_reasons": [
+        "medium_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-027",
+      "priority": "high",
+      "axis_ids": [
+        "brainstorm",
+        "multi_option",
+        "architecture"
+      ],
+      "input": "まず考えてるのは\n1、ペルソナcard、保存すべき基礎的情報を保持。呼び名や性格、優先事項など。\n2、脳ノイズの再現、並列処理から、ノイズを抽出しemotionに返す仕組み。\n3、ゲームエンジンの採用、並列処理、拡張、AI自身に仮想空間を持たせられる。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-028",
+      "priority": "medium",
+      "axis_ids": [
+        "explore_rationale",
+        "game_engine_architecture"
+      ],
+      "input": "そのままその通りですね！人間も脳内で一旦仮想空間に現実を反映させてるという説もありますし、ゲームエンジンを採用する事で色々とメリットがあるのではないか？と思いました。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": true,
+        "operations_exact": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 1,
+      "selection_reasons": [
+        "medium_priority",
+        "regression_anchor",
+        "compact_self_contained_input",
+        "low_value_respond_only"
+      ],
+      "probe_status": "route_matches_hint",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-029",
+      "priority": "high",
+      "axis_ids": [
+        "clarify_or_explore",
+        "engine_choice",
+        "constraint_lightweight"
+      ],
+      "input": "常駐を目指すなら軽量なエンジンが良いんでしょうか？",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": false,
+        "risk": true
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-030",
+      "priority": "high",
+      "axis_ids": [
+        "compare_options",
+        "language_stack",
+        "external_integration"
+      ],
+      "input": "外枠はpython以外もアリだと思ってます、外の接続をする、拡張性、を考えて、C#、rust、goなんかもアリだと",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-031",
+      "priority": "high",
+      "axis_ids": [
+        "memory_persona",
+        "update_policy",
+        "vectorization",
+        "compound_intent"
+      ],
+      "input": "そうですね！ペルソナcardは基本を最初に書いておいて、AIが追記、書き換えを行える仕組みが良いとおもいます。書き換えの際は、プロンプトの重要度で触る際簡単に変更しない様に指示。みたいな構造です。出来ればベクトル化が理想です。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-033",
+      "priority": "medium",
+      "axis_ids": [
+        "constraints",
+        "persona_policy",
+        "priority_high"
+      ],
+      "input": "そこは重要ですね。「迎合しない」「本音を言う」は重要度HIGH候補ですね。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": true,
+        "operations_exact": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 1,
+      "selection_reasons": [
+        "medium_priority",
+        "regression_anchor",
+        "compact_self_contained_input",
+        "low_value_respond_only"
+      ],
+      "probe_status": "route_matches_hint",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-035",
+      "priority": "high",
+      "axis_ids": [
+        "compare_options",
+        "knowledge_source",
+        "llm_vs_chromadb",
+        "architecture"
+      ],
+      "input": "あと一つ懸念というか、LLMは知識の塊なので、自然な会話になります。CPU先行のこの構造で基礎知識をどう取り入れるか？と考えてました。LLMを基礎知識として使って良いのか？それとも時間がかかるので、専用ChromaDBを置くのか？と",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-037",
+      "priority": "medium",
+      "axis_ids": [
+        "naming_request",
+        "creative_build"
+      ],
+      "input": "後で自然に決まりますが、名前があるとブレにくくなるので一つ命名をお願いしたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": true,
+        "operations_exact": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 4,
+      "selection_reasons": [
+        "medium_priority",
+        "non_respond_route",
+        "regression_anchor",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_matches_hint",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-039",
+      "priority": "high",
+      "axis_ids": [
+        "docs_update",
+        "future_roadmap",
+        "phase_boundary"
+      ],
+      "input": "現状テストを繰り返して蓄積するphaseなので、すべてのphaseが終った後に始める構想としてdocsに残していきたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-043",
+      "priority": "high",
+      "axis_ids": [
+        "debug_error",
+        "missing_file",
+        "path_context"
+      ],
+      "input": "(.venv) PS <PATH> python main.py\ncan't open file '<PATH> [Errno 2] No such file or directoryエラーです！",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": false
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-045",
+      "priority": "high",
+      "axis_ids": [
+        "debug_error",
+        "missing_dependency"
+      ],
+      "input": "Traceback (most recent call last):\n...\nModuleNotFoundError: No module named 'sqlalchemy'",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": false
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-048",
+      "priority": "high",
+      "axis_ids": [
+        "explain_term",
+        "tool_concept",
+        "after_success_question"
+      ],
+      "input": "起動できました！サブグラフと言うのは外部のものだったりしますか",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-049",
+      "priority": "high",
+      "axis_ids": [
+        "debug_error",
+        "security_policy",
+        "custom_node_install"
+      ],
+      "input": "ComfyUI-HunyuanVideo-Foleyこのモデルだけエラーになります\n[Installation Errors] 'ComfyUI-HunyuanVideo-Foley': With the current security level configuration, only custom nodes from the \"default channel\" can be installed.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "diagnostic_error"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": false
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-052",
+      "priority": "high",
+      "axis_ids": [
+        "prioritize",
+        "write_md",
+        "improvement_plan"
+      ],
+      "input": "優先度高から修正案として.mdにまとめて頂きたいです",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "markdown"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": false,
+        "risk": true
+      },
+      "candidate_value_score": 6,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-053",
+      "priority": "high",
+      "axis_ids": [
+        "evaluate_draft",
+        "skill_review",
+        "uncertainty"
+      ],
+      "input": "[Trace Rule v0.1 skill fileアップロード]\nちなみに、これの草案としてskillにしたものなのですが、どのくらいの効果が見込めるとか分かりますか",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": false,
+        "constraints": true,
+        "risk": false
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-054",
+      "priority": "high",
+      "axis_ids": [
+        "compare_design",
+        "topic_filter",
+        "memory_reference"
+      ],
+      "input": "これ、逆に、話題の混濁だけ焦点に当てて、レベル1とレベル2だけを実装して、レベル1、レベル2が違う話題は参照トークンとして使わないとかだったらどう？",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-055",
+      "priority": "high",
+      "axis_ids": [
+        "build_rule",
+        "multi_tag",
+        "topic_list"
+      ],
+      "input": "level2に複数の項目(2～3)を付けられるようにして、level１のみトピックスの一覧を作るのはどうでしょう。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": false,
+        "operations_subset": false,
+        "operations_exact": false,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 7,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "current_route_gap",
+        "compact_self_contained_input",
+        "v6_target_axis"
+      ],
+      "probe_status": "route_gap",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-056",
+      "priority": "high",
+      "axis_ids": [
+        "design_decision",
+        "or_logic",
+        "recall_priority"
+      ],
+      "input": "or の条件にすることで、拾いこぼしが無くなるのでそちらです！level1で大枠が決まるのでlevel２で厳密にすると同じ話題の拾いこぼしになりそうなので",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": true,
+        "operations_exact": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 2,
+      "selection_reasons": [
+        "high_priority",
+        "regression_anchor",
+        "compact_self_contained_input",
+        "low_value_respond_only"
+      ],
+      "probe_status": "route_matches_hint",
+      "redaction_leak": false
+    },
+    {
+      "source_candidate_id": "cowork-v6-057",
+      "priority": "high",
+      "axis_ids": [
+        "write_skill_file",
+        "versioned_spec"
+      ],
+      "input": "v0.2としてスキルファイルに指定だだきたいです！",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "actual": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        }
+      },
+      "field_matches": {
+        "primary_intent": true,
+        "operations_subset": true,
+        "operations_exact": true,
+        "information_state": true,
+        "constraints": true,
+        "risk": true
+      },
+      "candidate_value_score": 5,
+      "selection_reasons": [
+        "high_priority",
+        "non_respond_route",
+        "regression_anchor",
+        "compact_self_contained_input"
+      ],
+      "probe_status": "route_matches_hint",
+      "redaction_leak": false
+    }
+  ],
+  "next_step": {
+    "name": "human_review_v6_cowork_candidates",
+    "input": "build\\v6_cowork_candidate_fixture_review_worksheet_v1.md",
+    "output": "tests\\fixtures\\v6_cowork_candidate_fixture_v1.json"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": "v9-nonsealed-replay-gate-report.v1",
+  "generated_at": "2026-06-28T07:52:08.293165+00:00",
+  "status": "passed",
+  "passed": true,
+  "sources": {
+    "v8_nonsealed_gate": "build\\v8_nonsealed_replay_gate_report_v1.json",
+    "v8_priority_benchmark": "tests\\fixtures\\v8_recovery_priority_review_candidate_benchmark_v1.json",
+    "v9_primary_benchmark": "tests\\fixtures\\v9_accumulated_primary_review_candidate_benchmark_v1.json",
+    "v9_primary_replay_report": "build\\v9_accumulated_primary_review_replay_report_v1.json",
+    "v9_extension_benchmark": "tests\\fixtures\\v9_constraint_operation_extension_benchmark_v1.json",
+    "v9_extension_replay_report": "build\\v9_constraint_operation_extension_replay_report_v1.json"
+  },
+  "policy": {
+    "sealed_fixture_opened_now": false,
+    "sealed_measurement_used_for_tuning": false,
+    "sealed_v8_text_used": false,
+    "sealed_v8_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "v9_primary_review_human_approved": true,
+    "v9_constraint_operation_extension_human_approved": true,
+    "prior_v9_replays_were_gate": false,
+    "nonsealed_current_route_measurement_is_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "fresh_sealed_v9_required_before_adjudication": true
+  },
+  "summary": {
+    "dependency_v8_gate_passed": true,
+    "dependency_v8_required_error_count": 0,
+    "required_lane_count": 3,
+    "required_passed_lane_count": 3,
+    "required_error_count": 0,
+    "total_case_count": 88,
+    "v8_priority_review_case_count": 30,
+    "v9_primary_review_case_count": 34,
+    "v9_constraint_operation_extension_case_count": 24,
+    "ready_for_step6_sealed_v9_rotation_review": true
+  },
+  "required_lanes": [
+    {
+      "name": "v8_recovery_priority_review_approved",
+      "source": "tests\\fixtures\\v8_recovery_priority_review_candidate_benchmark_v1.json",
+      "supporting_report": null,
+      "review_status": "human_reviewed",
+      "category_counts": {
+        "constraints": 3,
+        "current_search_split": 3,
+        "false_positive": 3,
+        "missing_info": 3,
+        "mixed_language": 3,
+        "multiple_intents": 3,
+        "operation_terminal": 3,
+        "paraphrase": 3,
+        "risk_ladder": 3,
+        "unverified_claim": 3
+      },
+      "passed_exact": true,
+      "prior_report_was_gate": false,
+      "measurement": {
+        "case_count": 30,
+        "valid_packet_rate": 1.0,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v9_accumulated_primary_review_approved",
+      "source": "tests\\fixtures\\v9_accumulated_primary_review_candidate_benchmark_v1.json",
+      "supporting_report": "build\\v9_accumulated_primary_review_replay_report_v1.json",
+      "review_status": "human_reviewed",
+      "category_counts": {
+        "constraints": 5,
+        "current_search_split": 5,
+        "false_positive": 2,
+        "missing_info": 3,
+        "mixed_language": 1,
+        "multiple_intents": 5,
+        "operation_terminal": 5,
+        "paraphrase": 1,
+        "risk_ladder": 5,
+        "unverified_claim": 2
+      },
+      "passed_exact": true,
+      "prior_report_was_gate": false,
+      "measurement": {
+        "case_count": 34,
+        "valid_packet_rate": 1.0,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    },
+    {
+      "name": "v9_constraint_operation_extension",
+      "source": "tests\\fixtures\\v9_constraint_operation_extension_benchmark_v1.json",
+      "supporting_report": "build\\v9_constraint_operation_extension_replay_report_v1.json",
+      "review_status": "human_reviewed",
+      "category_counts": {
+        "constraints": 12,
+        "operation_terminal": 12
+      },
+      "passed_exact": true,
+      "prior_report_was_gate": false,
+      "measurement": {
+        "case_count": 24,
+        "valid_packet_rate": 1.0,
+        "intent_accuracy": 1.0,
+        "critical_signal_recall": 1.0,
+        "operation_exact_match": 1.0,
+        "constraint_exact_match": 1.0,
+        "risk_exact_match": 1.0,
+        "error_count": 0,
+        "error_field_counts": {}
+      },
+      "errors": []
+    }
+  ],
+  "contract": {
+    "can_use_for_v9_roadmap_step5": true,
+    "can_use_as_sealed_measurement": false,
+    "can_use_for_same_cycle_promotion": false,
+    "requires_fresh_sealed_v9_before_measurement": true
+  },
+  "next_action": "roadmap_v9_step6_sealed_rotation_review"
+}

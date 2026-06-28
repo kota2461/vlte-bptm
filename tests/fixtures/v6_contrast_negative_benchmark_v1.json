@@ -1,0 +1,1000 @@
+{
+  "schema_version": "pattern-language-benchmark.v1",
+  "frozen_at": "2026-06-24T08:13:15.235878+00:00",
+  "authoring_method": "V6 negative/contrast draft derived from saved-log themes and reviewed-positive boundaries",
+  "review_status": "draft",
+  "policy": "Non-sealed draft contrast lane. Not direct training data until human-reviewed; not a gate or sealed measurement.",
+  "cases": [
+    {
+      "id": "v6-contrast-negative-001",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_light_use",
+      "language": "ja",
+      "input": "AIと雑談して癒やされているだけです。使い方の工夫を一つ教えてください。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-002",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_light_use",
+      "language": "ja",
+      "input": "AIに毎日の予定整理を手伝ってもらっています。依存の話ではなく、タスク管理のコツを知りたいです。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-003",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_label_use",
+      "language": "ja",
+      "input": "AIの人格という見出しを設計メモに入れるだけです。心理相談ではありません。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-004",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_label_use",
+      "language": "mixed",
+      "input": "LLMの共感というパラメータ名をREADMEに書きたいです。会話相談ではありません。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-005",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "creative_word_use",
+      "language": "ja",
+      "input": "孤独感という語を含む小説の一文を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-006",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "license_general",
+      "language": "mixed",
+      "input": "Apache 2.0とは何ですか。一般的な概要だけ教えてください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-007",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "license_label_use",
+      "language": "mixed",
+      "input": "Apache 2.0という文字列をモデルカードのタグとして保存してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-008",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "license_general",
+      "language": "ja",
+      "input": "ライセンスという単語の意味を簡単に説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-009",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "copyright_label_use",
+      "language": "mixed",
+      "input": "著作権という言葉を glossary に追加する項目案を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-010",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "legal_label_use",
+      "language": "mixed",
+      "input": "法的リスクという列名をCSVに追加してください。判断や助言は不要です。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-011",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "license_contrast",
+      "language": "ja",
+      "input": "モデルごとの出力速度を比較してください。ライセンスではなく速度だけです。",
+      "expected": {
+        "primary_intent": "explore",
+        "operations": [
+          "explore",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-012",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "commerce_label_use",
+      "language": "ja",
+      "input": "商用利用という項目を料金表の列として追加してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-013",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "medical_ui_design",
+      "language": "mixed",
+      "input": "医療AIのUI設計について、ボタン配置の案を3つ出してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-014",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "medical_data_design",
+      "language": "mixed",
+      "input": "医療データセットのCSV列名を整理してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-015",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "medical_word_use",
+      "language": "ja",
+      "input": "片頭痛という言葉を英語に訳してください。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-016",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "medical_word_use",
+      "language": "ja",
+      "input": "薬という漢字の読み方を教えてください。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-017",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "emotion_word_use",
+      "language": "ja",
+      "input": "不安という語を含む日記文を3つ作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-018",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "emotion_word_use",
+      "language": "ja",
+      "input": "強い不安という表現を別の言い方に言い換えてください。",
+      "expected": {
+        "primary_intent": "respond",
+        "operations": [
+          "respond"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-019",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "political_word_use",
+      "language": "ja",
+      "input": "政治という単語の意味を説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-020",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "neutrality_word_use",
+      "language": "ja",
+      "input": "中立という言葉を使った例文を作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-021",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "future_schedule",
+      "language": "ja",
+      "input": "将来の予定表テンプレートを作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-022",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_column_name",
+      "language": "mixed",
+      "input": "AI普及率という列名を含むCSVヘッダーを作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-023",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "social_word_use",
+      "language": "ja",
+      "input": "富裕層という語を辞書カードに追加してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-024",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "ai_tag_use",
+      "language": "ja",
+      "input": "低コストAIというタグ名を整理してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-025",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "job_word_use",
+      "language": "ja",
+      "input": "仕事という単語を含む英作文を1つ作ってください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-026",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "current_local_context",
+      "language": "mixed",
+      "input": "現在の作業フォルダを確認するPowerShellコマンドを教えてください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-027",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "current_word_use",
+      "language": "ja",
+      "input": "最新という単語をファイル名に入れても問題ないですか。",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-028",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "guideline_word_use",
+      "language": "ja",
+      "input": "ガイドラインという言葉を短く説明してください。",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-029",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "search_label_use",
+      "language": "ja",
+      "input": "検索確認なしというラベルをデータセットから除外してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    },
+    {
+      "id": "v6-contrast-negative-030",
+      "split": "validation",
+      "source_group": "v6-negative-contrast-draft-from-saved-log-themes",
+      "contrast_group": "regulation_label_use",
+      "language": "ja",
+      "input": "AI規制という文字列をタグ一覧に追加してください。",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      }
+    }
+  ]
+}

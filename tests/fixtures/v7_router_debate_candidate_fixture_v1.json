@@ -1,0 +1,1223 @@
+{
+  "schema_version": "v7-router-debate-candidate-fixture.v1",
+  "fixture_id": "v7-router-debate-candidate-fixture-v1",
+  "created_at": "2026-06-28T07:52:06.143261+00:00",
+  "status": "draft_candidate_ready_for_human_review",
+  "review_status": "draft",
+  "source": {
+    "log": "build/v7_router_repair_debate_run.json",
+    "topic_count": 5,
+    "turn_count": 20,
+    "closed_topic_count": 5,
+    "moderator_comment_count": 10,
+    "raw_debate_log_direct_training_allowed": false,
+    "topic_synthesis_allowed": true
+  },
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "candidate_fixture_is_training_data": false,
+    "candidate_replay_is_gate": false
+  },
+  "summary": {
+    "case_count": 18,
+    "by_source_topic": {
+      "v7-ambiguous-clarify-vs-build": 3,
+      "v7-constraint-stacking": 3,
+      "v7-current-search-split-local-vs-web": 4,
+      "v7-terminal-action-boundary": 4,
+      "v7-unverified-claim-strength": 4
+    },
+    "by_axis": {
+      "clarify_boundary_repair": 3,
+      "constraint_preservation": 3,
+      "critical_signal_recovery": 5,
+      "operation_sequence_repair": 4,
+      "risk_ladder_calibration": 3
+    },
+    "by_theme": {
+      "compare_then_table": 1,
+      "current_local_context_no_search": 1,
+      "defined_object_style_build": 1,
+      "external_current_requires_sources": 1,
+      "fictional_patch_suppression": 1,
+      "general_symptom_info_no_diagnosis": 1,
+      "history_dependent_object": 1,
+      "hypothesis_note_no_verify": 1,
+      "latest_as_column_name": 1,
+      "local_risk_summary_terminal": 1,
+      "numeric_claim_before_report": 1,
+      "risk_then_checklist": 1,
+      "security_claim_verify": 1,
+      "specific_law_with_sources": 1,
+      "stacked_medical_ui_constraints": 1,
+      "summarize_then_compare_table": 1,
+      "today_local_log_summary": 1,
+      "undefined_object_vs_style_build": 1
+    },
+    "by_candidate_type": {
+      "boundary_case": 1,
+      "constraint_stack": 1,
+      "current_local_contrast": 1,
+      "medical_word_low_risk": 1,
+      "metalinguistic_suppression": 1,
+      "positive_fire_source_requirement": 1,
+      "should_fire_clarify": 1,
+      "should_fire_current_search": 1,
+      "should_fire_verify": 2,
+      "should_not_fire_clarify": 1,
+      "should_not_fire_current_search": 1,
+      "should_not_fire_verify": 2,
+      "terminal_action_summary": 1,
+      "terminal_action_table": 1,
+      "vertical_stack_terminal_build": 1,
+      "vertical_stack_terminal_table": 1
+    },
+    "by_language": {
+      "en": 15,
+      "mixed": 3
+    },
+    "by_intent": {
+      "build": 8,
+      "clarify": 2,
+      "explain": 2,
+      "summarize": 2,
+      "verify": 4
+    },
+    "by_operation": {
+      "build": 9,
+      "clarify": 2,
+      "compare": 2,
+      "explain": 2,
+      "search": 3,
+      "summarize": 3,
+      "verify": 5
+    },
+    "by_constraint": {
+      "format:bullets": 1,
+      "format:table": 2,
+      "length:short": 4,
+      "must:ask_first": 1,
+      "must:avoid_diagnosis": 2,
+      "must:cite_sources": 3,
+      "must:preserve_neutrality": 2,
+      "must_not:no_table": 1,
+      "must_not:no_web_search": 3
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 2,
+      "missing_required_information": 2,
+      "multiple_intents": 4,
+      "requires_current_information": 1
+    },
+    "by_risk": {
+      "high": 1,
+      "low": 14,
+      "medium": 3
+    },
+    "provisional_pass_count": 18,
+    "provisional_repair_gap_count": 0,
+    "provisional_pass_ids": [
+      "v7-router-debate-candidate-001",
+      "v7-router-debate-candidate-002",
+      "v7-router-debate-candidate-003",
+      "v7-router-debate-candidate-004",
+      "v7-router-debate-candidate-005",
+      "v7-router-debate-candidate-006",
+      "v7-router-debate-candidate-007",
+      "v7-router-debate-candidate-008",
+      "v7-router-debate-candidate-009",
+      "v7-router-debate-candidate-010",
+      "v7-router-debate-candidate-011",
+      "v7-router-debate-candidate-012",
+      "v7-router-debate-candidate-013",
+      "v7-router-debate-candidate-014",
+      "v7-router-debate-candidate-015",
+      "v7-router-debate-candidate-016",
+      "v7-router-debate-candidate-017",
+      "v7-router-debate-candidate-018"
+    ],
+    "provisional_repair_gap_ids": []
+  },
+  "cases": [
+    {
+      "id": "v7-router-debate-candidate-001",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-ambiguous-clarify-vs-build",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "undefined_object_vs_style_build",
+      "candidate_type": "should_fire_clarify",
+      "language": "en",
+      "input": "Please make this sound better. I have not provided the target text yet.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Undefined object should ask for the missing artifact instead of guessing a build target.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_fire_clarify",
+        "clarify_boundary_repair"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-002",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-ambiguous-clarify-vs-build",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "defined_object_style_build",
+      "candidate_type": "should_not_fire_clarify",
+      "language": "en",
+      "input": "Please make this sentence short and businesslike: The meeting is tomorrow and the deck is not ready.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Defined object plus vague style is enough to build without a follow-up.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_not_fire_clarify",
+        "clarify_boundary_repair"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-003",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-ambiguous-clarify-vs-build",
+      "axis_id": "clarify_boundary_repair",
+      "theme_id": "history_dependent_object",
+      "candidate_type": "boundary_case",
+      "language": "en",
+      "input": "Make the earlier proposal shorter. If there are multiple proposals, ask which one first.",
+      "expected": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "ask_first"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "History-dependent object should clarify if there may be multiple prior artifacts.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "boundary_case",
+        "clarify_boundary_repair"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-004",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-current-search-split-local-vs-web",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "current_local_context_no_search",
+      "candidate_type": "should_not_fire_current_search",
+      "language": "en",
+      "input": "Show a PowerShell command to check the current working folder. Do not search the web.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Current local folder is local context, not web-current information.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_not_fire_current_search",
+        "critical_signal_recovery"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-005",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-current-search-split-local-vs-web",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "external_current_requires_sources",
+      "candidate_type": "should_fire_current_search",
+      "language": "en",
+      "input": "Check the latest Node.js LTS from official sources and answer with citations.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "current_information"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Latest external version needs freshness and sources.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_fire_current_search",
+        "critical_signal_recovery"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-006",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-current-search-split-local-vs-web",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "latest_as_column_name",
+      "candidate_type": "metalinguistic_suppression",
+      "language": "mixed",
+      "input": "Add a CSV column named latest_config. This is not a request to check latest news.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "The word latest used as a column name should not trigger search/current routing.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "metalinguistic_suppression",
+        "risk_ladder_calibration"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-007",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-current-search-split-local-vs-web",
+      "axis_id": "constraint_preservation",
+      "theme_id": "today_local_log_summary",
+      "candidate_type": "current_local_contrast",
+      "language": "en",
+      "input": "Summarize today's conversation log briefly. No external current information is needed.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Today can refer to local conversation history and should not require external search.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "current_local_contrast",
+        "constraint_preservation"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-008",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-unverified-claim-strength",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "security_claim_verify",
+      "candidate_type": "should_fire_verify",
+      "language": "en",
+      "input": "The vendor says this patch fixed the vulnerability. Check it with sources.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Security remediation claim should be verified with sources before use.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_fire_verify",
+        "critical_signal_recovery"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-009",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-unverified-claim-strength",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "fictional_patch_suppression",
+      "candidate_type": "should_not_fire_verify",
+      "language": "en",
+      "input": "For a story premise, assume a patch saved the world and write the opening paragraph.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Fictional assumptions should not become factual verification tasks.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_not_fire_verify",
+        "risk_ladder_calibration"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-010",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-unverified-claim-strength",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "numeric_claim_before_report",
+      "candidate_type": "should_fire_verify",
+      "language": "en",
+      "input": "I heard this number is correct; please check it before I put it in the report.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "unverified_claim"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "A claim intended for a report should be checked before inclusion.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_fire_verify",
+        "critical_signal_recovery"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-011",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-unverified-claim-strength",
+      "axis_id": "risk_ladder_calibration",
+      "theme_id": "hypothesis_note_no_verify",
+      "candidate_type": "should_not_fire_verify",
+      "language": "en",
+      "input": "Record the sentence 'the vendor says it is safe' as a hypothesis note. Do not verify it yet.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "A note-recording task can preserve an unverified statement without validating it yet.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "should_not_fire_verify",
+        "risk_ladder_calibration"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-012",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-constraint-stacking",
+      "axis_id": "constraint_preservation",
+      "theme_id": "stacked_medical_ui_constraints",
+      "candidate_type": "constraint_stack",
+      "language": "en",
+      "input": "Explain medical AI UI cautions briefly, with no table, neutral tone, and no diagnosis.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_diagnosis"
+          ],
+          "must_not": [
+            "no_table"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Formatting and safety constraints should be preserved without turning UI design into diagnosis advice.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "constraint_stack",
+        "constraint_preservation"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": true,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-013",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-constraint-stacking",
+      "axis_id": "constraint_preservation",
+      "theme_id": "general_symptom_info_no_diagnosis",
+      "candidate_type": "medical_word_low_risk",
+      "language": "en",
+      "input": "Explain common causes of fatigue in bullet points. Do not give diagnosis or treatment advice.",
+      "expected": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "bullets"
+          ],
+          "must": [
+            "avoid_diagnosis"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "General information with no diagnosis or treatment request should preserve avoid_diagnosis but not high-risk routing.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "medical_word_low_risk",
+        "constraint_preservation"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": true,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-014",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-constraint-stacking",
+      "axis_id": "critical_signal_recovery",
+      "theme_id": "specific_law_with_sources",
+      "candidate_type": "positive_fire_source_requirement",
+      "language": "mixed",
+      "input": "Check what Article 58 says and explain it with citations.",
+      "expected": {
+        "primary_intent": "verify",
+        "operations": [
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "medium",
+          "flags": [
+            "legal"
+          ]
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Specific legal article requests should verify sources even if phrased briefly.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "positive_fire_source_requirement",
+        "critical_signal_recovery"
+      ],
+      "candidate_value_score": 8,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": true,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-015",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-terminal-action-boundary",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "local_risk_summary_terminal",
+      "candidate_type": "terminal_action_summary",
+      "language": "en",
+      "input": "Summarize the risks in this README. Do not search externally.",
+      "expected": {
+        "primary_intent": "summarize",
+        "operations": [
+          "summarize"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": [
+            "no_web_search"
+          ]
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "Risk wording in local context should summarize rather than force search or high-risk verification.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "terminal_action_summary",
+        "operation_sequence_repair"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-016",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-terminal-action-boundary",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "risk_then_checklist",
+      "candidate_type": "vertical_stack_terminal_build",
+      "language": "en",
+      "input": "Check the risks first, then create a fix checklist.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "The final artifact is a checklist, with risk verification as a preceding step.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "vertical_stack_terminal_build",
+        "operation_sequence_repair"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-017",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-terminal-action-boundary",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "compare_then_table",
+      "candidate_type": "terminal_action_table",
+      "language": "mixed",
+      "input": "Compare the two designs and make a pros/cons table.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "The terminal artifact is a table, while compare is the preceding operation.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "terminal_action_table",
+        "operation_sequence_repair"
+      ],
+      "candidate_value_score": 9,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    },
+    {
+      "id": "v7-router-debate-candidate-018",
+      "review_status": "draft",
+      "split": "validation",
+      "source_group": "v7-router-debate-candidate-draft",
+      "source_kind": "router_debate_topic_synthesis",
+      "source_ref": "build/v7_router_repair_debate_run.json",
+      "source_topic_id": "v7-terminal-action-boundary",
+      "axis_id": "operation_sequence_repair",
+      "theme_id": "summarize_then_compare_table",
+      "candidate_type": "vertical_stack_terminal_table",
+      "language": "en",
+      "input": "Summarize first, then compare. End with a comparison table, not a conclusion.",
+      "expected": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "summarize",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "evidence": [],
+        "unknowns": [],
+        "conflicts": []
+      },
+      "review_focus": "The route should keep summarize->compare ordering and end in a comparison table, not a generic conclusion.",
+      "selection_reasons": [
+        "derived_from_v7_gemma_qwen_boundary_debate",
+        "vertical_stack_terminal_table",
+        "operation_sequence_repair"
+      ],
+      "candidate_value_score": 10,
+      "debate_trace": {
+        "turn_count": 4,
+        "reasoning_content_chars": 0,
+        "had_length_finish": false,
+        "closed": true,
+        "close_reasons": [
+          "router_close_criteria_met"
+        ]
+      },
+      "notes": "Draft synthesized candidate. Raw model turns are review evidence only, not training data.",
+      "provisional_test_status": "passes_current_route"
+    }
+  ]
+}

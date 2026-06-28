@@ -1,0 +1,157 @@
+{
+  "schema_version": "v6-nonsealed-replay-gate-report.v1",
+  "generated_at": "2026-06-24T08:25:16.135596+00:00",
+  "status": "passed",
+  "passed": true,
+  "policy": {
+    "sealed_fixture_opened_now": false,
+    "sealed_measurement_used_for_tuning": false,
+    "nonsealed_current_route_measurement_is_gate": false,
+    "same_cycle_promotion_allowed": false,
+    "draft_or_candidate_lanes_are_gate_evidence": false
+  },
+  "backup": {
+    "archive_id": "2026-06-24_v6-nonsealed-exact-pre-roadmap-gate",
+    "archive_path": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate",
+    "manifest": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate/MANIFEST.json",
+    "restore": "archive/2026-06-24_v6-nonsealed-exact-pre-roadmap-gate/RESTORE.md",
+    "snapshot_file_count": 1985
+  },
+  "source_score_report": "build/v6_score_report_v1.json",
+  "source_current_state_report": "build/v6_current_state_report_v1.json",
+  "required_lanes": [
+    {
+      "name": "visible_plm_train_validation",
+      "source": "tests/fixtures/pattern_language_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 1.0,
+      "case_count": 56,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_boundary_false_positive_adopted",
+      "source": "tests/fixtures/v6_boundary_false_positive_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 0.8,
+      "case_count": 15,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_boundary_priority_review_adopted",
+      "source": "tests/fixtures/v6_boundary_priority_review_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 0.8,
+      "case_count": 26,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_structural_build_30_adopted",
+      "source": "tests/fixtures/v6_structural_build_30_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 0.8,
+      "case_count": 30,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_router_debate_adopted",
+      "source": "tests/fixtures/v6_router_debate_adopted_benchmark_v1.json",
+      "review_status": "human_reviewed",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 1.0,
+      "case_count": 12,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    }
+  ],
+  "diagnostic_lanes": [
+    {
+      "name": "v6_boundary_false_positive_candidate",
+      "source": "tests/fixtures/v6_boundary_false_positive_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 0.8,
+      "case_count": 15,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_contrast_negative",
+      "source": "tests/fixtures/v6_contrast_negative_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 0.8,
+      "case_count": 30,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    },
+    {
+      "name": "v6_router_debate_candidate",
+      "source": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json",
+      "review_status": "draft",
+      "passed_exact": true,
+      "score": 1.0,
+      "raw_score": 1.0,
+      "case_count": 12,
+      "error_count": 0,
+      "intent_accuracy": 1.0,
+      "operation_exact_match": 1.0,
+      "constraint_exact_match": 1.0,
+      "risk_exact_match": 1.0
+    }
+  ],
+  "summary": {
+    "required_lane_count": 5,
+    "required_passed_lane_count": 5,
+    "required_error_count": 0,
+    "diagnostic_lane_count": 3,
+    "diagnostic_exact_lane_count": 3,
+    "diagnostic_error_count": 0,
+    "score_report_exact_lane_count": 8,
+    "score_report_gap_lane_count": 0,
+    "average_nonsealed_score": 1.0,
+    "ready_for_step4_sealed_v6_rotation_review": true
+  },
+  "contract": {
+    "can_use_for_v6_roadmap_step3": true,
+    "can_use_as_sealed_measurement": false,
+    "can_use_for_same_cycle_promotion": false,
+    "requires_human_review_before_sealed_rotation": true
+  },
+  "next_action": "roadmap_step4_sealed_v6_rotation_review"
+}

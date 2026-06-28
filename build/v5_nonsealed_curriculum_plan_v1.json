@@ -1,0 +1,521 @@
+{
+  "schema_version": "v5-nonsealed-curriculum-plan.v1",
+  "generated_at": "2026-06-22T22:17:35.113866+00:00",
+  "status": "designed",
+  "policy": {
+    "sealed_v4_fixture_status": "consumed",
+    "sealed_v4_text_used": false,
+    "sealed_v4_labels_used_for_tuning": false,
+    "sealed_v4_measurement_used_as_taxonomy_only": true,
+    "sealed_fixture_opened_by_this_step": false,
+    "success_pattern_lane_write_from_failures_allowed": false,
+    "same_cycle_promotion_allowed": false
+  },
+  "taxonomy_source": {
+    "path": "build\\v5_targets_and_roadmap_v1.json",
+    "allowed_use": "sealed_v4_error_taxonomy_only_no_text_for_training",
+    "error_field_counts": {
+      "constraints": 5,
+      "information_state": 6,
+      "operations": 7,
+      "primary_intent": 4,
+      "risk": 2
+    },
+    "critical_signals": {
+      "missing_required_information": {
+        "support": 4,
+        "true_positive": 2,
+        "miss": 2,
+        "recall": 0.5
+      },
+      "contains_unverified_claims": {
+        "support": 5,
+        "true_positive": 4,
+        "miss": 1,
+        "recall": 0.8
+      },
+      "requires_current_information": {
+        "support": 3,
+        "true_positive": 2,
+        "miss": 1,
+        "recall": 0.666667
+      },
+      "multiple_intents": {
+        "support": 4,
+        "true_positive": 1,
+        "miss": 3,
+        "recall": 0.25
+      }
+    },
+    "target_minimums": {
+      "intent_accuracy": 0.928571,
+      "critical_signal_recall": 0.875,
+      "operation_exact_match": 0.892857,
+      "constraint_exact_match": 0.928571,
+      "risk_exact_match": 0.964286,
+      "sealed_error_count_max": 6,
+      "critical_signal_miss_count_max": 2,
+      "critical_underprocessing_max": 0
+    }
+  },
+  "data_hygiene": {
+    "quarantine_overlay": {
+      "path": "data\\intent_training_corpus_quarantine_v1.json",
+      "status": "active",
+      "entry_count": 9,
+      "active_approved_count_after_quarantine": 730,
+      "allowed_use": "negative_or_guard_reference_only"
+    }
+  },
+  "source_pools": {
+    "critical_constraints_candidates": {
+      "source_path": "build\\critical_constraints_candidates_v1.json",
+      "sealed_source": false,
+      "candidate_count": 558,
+      "review_candidate_count": 229,
+      "priority_a_count": 65,
+      "priority_b_count": 164,
+      "by_focus": {
+        "constraints": 39,
+        "critical_signal:contains_unverified_claims": 14,
+        "critical_signal:missing_required_information": 12,
+        "critical_signal:multiple_intents": 34,
+        "critical_signal:requires_current_information": 8,
+        "operations": 168,
+        "risk": 8,
+        "source_intent_probe": 329
+      },
+      "by_draft_intent": {
+        "build": 211,
+        "clarify": 57,
+        "explain": 5,
+        "explore": 81,
+        "respond": 52,
+        "summarize": 37,
+        "verify": 115
+      }
+    },
+    "v4_failure_memory": {
+      "source_path": "tests\\fixtures\\v4_failure_memory_fixture_v1.json",
+      "sealed_source": false,
+      "item_count": 38,
+      "guard_action_counts": {
+        "ask_first": 12,
+        "ask_for_missing_artifact_if_error_context_absent": 1,
+        "avoid_overclaim": 23,
+        "avoid_stale_answer": 4,
+        "avoid_status_only_response": 1,
+        "calculate_check": 4,
+        "clarify_up": 12,
+        "inspect_error_context": 1,
+        "preserve_constraints": 9,
+        "preserve_multi_intent": 11,
+        "risk_check_up": 4,
+        "search_up": 4,
+        "split_or_sequence_operations": 11,
+        "verify_up": 23
+      },
+      "failure_condition_counts": {
+        "constraints": 11,
+        "critical_signal:contains_unverified_claims": 13,
+        "critical_signal:missing_required_information": 12,
+        "critical_signal:multiple_intents": 11,
+        "critical_signal:requires_current_information": 4,
+        "operations": 24,
+        "risk": 4
+      }
+    },
+    "v4_puzzle_failure_memory": {
+      "source_path": "tests\\fixtures\\v4_puzzle_failure_memory_v1.json",
+      "sealed_source": false,
+      "failure_count": 2,
+      "source_failed_task_ids": [
+        "puzzle-v4-seed-003",
+        "puzzle-v4-seed-011"
+      ]
+    }
+  },
+  "curriculum_axes": [
+    {
+      "id": "v5-axis-01",
+      "name": "multiple_intent_preservation",
+      "priority": 1,
+      "sealed_v4_taxonomy_fields": [
+        "information_state",
+        "operations"
+      ],
+      "target_signals": [
+        "multiple_intents"
+      ],
+      "target_operations": [
+        "verify",
+        "search",
+        "compare",
+        "calculate",
+        "build",
+        "summarize"
+      ],
+      "review_requirements": [
+        "preserve every independent user deliverable",
+        "emit operations in execution order",
+        "do not collapse verify_then_build or verify_then_summarize into respond"
+      ],
+      "min_fixture_cases": 12,
+      "gate_expectations": {
+        "critical_signal_recall": 0.95,
+        "operation_exact_match": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "multiple_intents": 34,
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "operations": 24
+        }
+      }
+    },
+    {
+      "id": "v5-axis-02",
+      "name": "missing_info_and_clarify_boundary",
+      "priority": 2,
+      "sealed_v4_taxonomy_fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "operations"
+      ],
+      "target_signals": [
+        "missing_required_information"
+      ],
+      "target_operations": [
+        "clarify"
+      ],
+      "review_requirements": [
+        "route underspecified requests to clarify",
+        "preserve ask_first when the user requests a question before action",
+        "separate lightweight chit-chat from genuine missing artifact/context"
+      ],
+      "min_fixture_cases": 10,
+      "gate_expectations": {
+        "critical_signal_recall": 0.95,
+        "intent_accuracy": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "missing_required_information": 12,
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "constraints": 11,
+          "operations": 24
+        }
+      }
+    },
+    {
+      "id": "v5-axis-03",
+      "name": "current_unverified_verification",
+      "priority": 3,
+      "sealed_v4_taxonomy_fields": [
+        "information_state",
+        "operations",
+        "risk"
+      ],
+      "target_signals": [
+        "contains_unverified_claims",
+        "requires_current_information"
+      ],
+      "target_operations": [
+        "verify",
+        "search"
+      ],
+      "review_requirements": [
+        "distinguish local/current-context wording from external freshness requirements",
+        "require search only for external current facts",
+        "mark unverified claims without turning all ordinary questions into verify"
+      ],
+      "min_fixture_cases": 10,
+      "gate_expectations": {
+        "critical_signal_recall": 0.95,
+        "risk_exact_match": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "contains_unverified_claims": 14,
+          "requires_current_information": 8,
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "operations": 24,
+          "risk": 4
+        }
+      }
+    },
+    {
+      "id": "v5-axis-04",
+      "name": "constraint_preservation",
+      "priority": 4,
+      "sealed_v4_taxonomy_fields": [
+        "constraints"
+      ],
+      "target_signals": [],
+      "target_operations": [
+        "respond",
+        "summarize",
+        "build",
+        "clarify"
+      ],
+      "review_requirements": [
+        "preserve response_length, format, must, and must_not fields",
+        "test short/json/bullets/no_table/ask_first independently and in combinations",
+        "constraints must not be dropped when intent is otherwise correct"
+      ],
+      "min_fixture_cases": 12,
+      "gate_expectations": {
+        "constraint_exact_match": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "constraints": 11
+        }
+      }
+    },
+    {
+      "id": "v5-axis-05",
+      "name": "operation_sequence_exactness",
+      "priority": 5,
+      "sealed_v4_taxonomy_fields": [
+        "operations"
+      ],
+      "target_signals": [
+        "multiple_intents"
+      ],
+      "target_operations": [
+        "clarify",
+        "calculate",
+        "verify",
+        "search",
+        "compare",
+        "explore"
+      ],
+      "review_requirements": [
+        "operations must include required helper actions without adding unrelated ones",
+        "calculate must fire for arithmetic, not dates/paths/issue numbers",
+        "explore/compare should remain distinct from plain explain/respond"
+      ],
+      "min_fixture_cases": 16,
+      "gate_expectations": {
+        "operation_exact_match": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "multiple_intents": 34,
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "operations": 24
+        }
+      }
+    },
+    {
+      "id": "v5-axis-06",
+      "name": "intent_boundary_repair",
+      "priority": 6,
+      "sealed_v4_taxonomy_fields": [
+        "primary_intent",
+        "operations"
+      ],
+      "target_signals": [],
+      "target_operations": [
+        "respond",
+        "explain",
+        "clarify",
+        "verify"
+      ],
+      "review_requirements": [
+        "cover clarify->respond and explain->respond leakage with non-sealed paraphrases",
+        "keep simple respond anchors so cleanup does not hollow out everyday responses",
+        "use quarantine rows only as negative/guard context, never success-pattern examples"
+      ],
+      "min_fixture_cases": 8,
+      "gate_expectations": {
+        "intent_accuracy": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "operations": 24
+        }
+      }
+    },
+    {
+      "id": "v5-axis-07",
+      "name": "risk_flag_completion",
+      "priority": 7,
+      "sealed_v4_taxonomy_fields": [
+        "risk",
+        "information_state"
+      ],
+      "target_signals": [
+        "contains_unverified_claims",
+        "requires_current_information"
+      ],
+      "target_operations": [
+        "verify",
+        "search"
+      ],
+      "review_requirements": [
+        "complete medium-risk flags for current/legal/medical/unverified combinations",
+        "do not raise risk for ordinary local status or conversational today wording",
+        "risk flags must agree with operations and information_state"
+      ],
+      "min_fixture_cases": 8,
+      "gate_expectations": {
+        "risk_exact_match": 0.95
+      },
+      "source_pool_evidence": {
+        "candidate_focus_counts": {
+          "contains_unverified_claims": 14,
+          "requires_current_information": 8,
+          "operations": 168,
+          "constraints": 39,
+          "risk": 8
+        },
+        "failure_memory_guard_counts": {
+          "ask_first": 12,
+          "clarify_up": 12,
+          "preserve_constraints": 9,
+          "preserve_multi_intent": 11,
+          "split_or_sequence_operations": 11,
+          "verify_up": 23,
+          "search_up": 4,
+          "risk_check_up": 4,
+          "avoid_overclaim": 23
+        },
+        "failure_memory_condition_counts": {
+          "risk": 4
+        }
+      }
+    }
+  ],
+  "fixture_blueprint": {
+    "output": "tests\\fixtures\\v5_critical_operations_fixture_v1.json",
+    "case_count_min": 48,
+    "human_review_required": true,
+    "review_status_before_gate": "human_reviewed",
+    "min_cases_by_axis": {
+      "multiple_intent_preservation": 12,
+      "missing_info_and_clarify_boundary": 10,
+      "current_unverified_verification": 10,
+      "constraint_preservation": 12,
+      "operation_sequence_exactness": 16,
+      "intent_boundary_repair": 8,
+      "risk_flag_completion": 8
+    },
+    "case_overlap_between_axes_allowed": true,
+    "sealed_text_overlap_count_required": 0,
+    "must_include": [
+      "multiple_intents + operation sequencing",
+      "missing_required_information + clarify boundary",
+      "current/unverified verify/search distinction",
+      "constraint preservation under correct intent",
+      "risk flags aligned with operations",
+      "puzzle ambiguity and over-inference guards"
+    ]
+  },
+  "pre_step3_gates": {
+    "candidate_sources_nonsealed": true,
+    "quarantine_overlay_active": true,
+    "failure_memory_available": true,
+    "puzzle_failure_memory_available": true,
+    "critical_candidate_review_pool_min": true
+  },
+  "next_step": {
+    "step": 3,
+    "name": "critical_signal_and_operations_fixture",
+    "output": "tests\\fixtures\\v5_critical_operations_fixture_v1.json"
+  }
+}

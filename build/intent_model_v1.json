@@ -14094,6 +14094,13 @@
     "epochs": 24,
     "learning_rate": 0.35,
     "seed": 17,
-    "source": "human-approved intent corpus only"
+    "source": "human-approved intent corpus only",
+    "metrics": {
+      "kfold_accuracy": 0.6359945872801083,
+      "kfold_macro_accuracy": 0.6361417014558252,
+      "folds": 5,
+      "evaluated_examples": 739
+    },
+    "trained_at": "2026-06-18T10:38:43.499784+00:00"
   }
 }

@@ -1,0 +1,71 @@
+{
+  "schema_version": "v6-router-debate-candidate-import-report.v1",
+  "generated_at": "2026-06-23T10:45:54.260463+00:00",
+  "status": "import_lane_ready_pending_human_review",
+  "candidate_readiness": true,
+  "adoption_plan": "build/v6_router_debate_candidate_adoption_plan_v1.json",
+  "import_benchmark": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "import_benchmark_is_directly_trainable": false
+  },
+  "summary": {
+    "case_count": 12,
+    "by_intent": {
+      "build": 2,
+      "clarify": 1,
+      "explore": 4,
+      "verify": 5
+    },
+    "by_operation": {
+      "build": 2,
+      "clarify": 1,
+      "compare": 1,
+      "explain": 4,
+      "explore": 4,
+      "search": 1,
+      "verify": 11
+    },
+    "by_constraint": {
+      "must:ask_first": 1,
+      "must:avoid_overclaim": 12,
+      "must:cite_sources": 2,
+      "must:preserve_neutrality": 3,
+      "must_not:no_web_search": 1
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 8,
+      "missing_required_information": 1,
+      "multiple_intents": 12,
+      "requires_current_information": 3
+    },
+    "by_risk": {
+      "high": 4,
+      "medium": 8
+    }
+  },
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "case_count": 12,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0
+  },
+  "errors": [],
+  "next_step": {
+    "name": "human_review_then_adopt_nonsealed_router_debate_candidates",
+    "input": "build/v6_router_debate_candidate_adoption_worksheet_v1.md",
+    "output": "tests/fixtures/v6_router_debate_candidate_benchmark_v1.json"
+  }
+}

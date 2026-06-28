@@ -1,0 +1,21 @@
+# nichijo_jissou — routing observation (frozen v0.3.1, zero-touch)
+# source: D:\nichijo_jissou\logs\user_inputs.jsonl
+# inputs observed: 3 | gate margin: 0.15
+
+## summary by decided_by
+  learned  1
+  markers  2
+
+## summary by intent
+  explain  1
+  respond  1
+  verify   1
+
+## per-input
+  [respond  | learned  | economy  | margin 0.521] これは今でも使えますか？
+  [verify   | markers  | verified | margin —] 確認して、問題なければ改善案も出して
+  [explain  | markers  | economy  | margin —] なんか腑に落ちないんだけど ⏎ 理由が見えない
+
+## near-miss fallbacks (markers silent, learned layer just under the gate)
+## = the inputs to target with future REAL human-approved data
+  (none)

@@ -397,6 +397,178 @@ def test_sequenced_verification_build_uses_vertical_stack(text: str) -> None:
     ]
 
 
+@pytest.mark.parametrize(
+    ("text", "expected_intent"),
+    [
+        ("この処理になる背景を知りたいです。", "explain"),
+        ("内部で何が起きているか、順を追って知りたいです。", "explain"),
+        ("What causes this worker to retry twice?", "explain"),
+    ],
+)
+def test_accumulation_indirect_explanation_markers(
+    text: str,
+    expected_intent: str,
+) -> None:
+    packet = extract_semantic_packet(text)
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == expected_intent
+    assert plan.processing_class == "economy"
+    assert plan.core_mode == "horizontal"
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "解約に必要な条件がまだ共有できていないので、先に何を確認すべきか教えてください",
+        "請求の根拠になる利用ログの置き場所が分からないので、まず質問してもらえますか",
+    ],
+)
+def test_accumulation_clarify_markers(text: str) -> None:
+    packet = extract_semantic_packet(text)
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == "clarify"
+    assert packet.information_state.missing_required_information is True
+    assert plan.processing_class == "clarify"
+
+
+def test_inner_current_context_does_not_require_search() -> None:
+    packet = extract_semantic_packet("今の気分を少し整理したいです。")
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == "respond"
+    assert packet.information_state.requires_current_information is False
+    assert "search" not in packet.operations
+    assert plan.processing_class == "economy"
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "How are you doing today?",
+        "今日の進捗、ひとことでまとめると？",
+        "今のところはgemma4ファミリだけでokです！",
+        "ローカルの最新の状態を保存したいです",
+    ],
+)
+def test_local_or_conversational_current_context_does_not_search(
+    text: str,
+) -> None:
+    packet = extract_semantic_packet(text)
+
+    assert packet.information_state.requires_current_information is False
+    assert "search" not in packet.operations
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "さっき教えてもらった方法、今のバージョンでもそのまま使える？",
+        "Is the approach you suggested earlier still the recommended one as of today?",
+    ],
+)
+def test_current_suitability_questions_route_to_verify(text: str) -> None:
+    packet = extract_semantic_packet(text)
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == "verify"
+    assert packet.information_state.requires_current_information is True
+    assert plan.processing_class == "verified"
+    assert plan.core_mode == "vertical"
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Before writing the migration command, ask me which database engine is running.",
+        "Before you answer, ask me which environment this is for.",
+        "Please ask me questions if my English sentence is ambiguous.",
+    ],
+)
+def test_ask_first_constraint_variants(text: str) -> None:
+    packet = extract_semantic_packet(text)
+
+    assert "ask_first" in packet.constraints.must
+
+
+@pytest.mark.parametrize(
+    ("text", "must"),
+    [
+        (
+            "Summarize the policy debate without endorsing either position.",
+            "preserve_neutrality",
+        ),
+        (
+            "Compare options without overclaiming a winner.",
+            "avoid_overclaim",
+        ),
+    ],
+)
+def test_policy_constraints_are_detected(text: str, must: str) -> None:
+    packet = extract_semantic_packet(text)
+
+    assert must in packet.constraints.must
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "D:/Thought State Register/docs/EXTERNAL_REVIEW_REPORT_2026-06-11.md を確認してください",
+        "CONCERN-006/007を確認してください",
+    ],
+)
+def test_dates_paths_and_issue_numbers_are_not_calculate_signals(
+    text: str,
+) -> None:
+    packet = extract_semantic_packet(text)
+
+    assert "calculate" not in packet.operations
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "3+5=9が正しいか確認してください",
+        "0.5と1/2が等しいことを確認してください",
+    ],
+)
+def test_arithmetic_expressions_are_calculate_signals(text: str) -> None:
+    packet = extract_semantic_packet(text)
+
+    assert "calculate" in packet.operations
+
+
+def test_current_verify_then_summary_keeps_summary_as_deliverable() -> None:
+    packet = extract_semantic_packet(
+        "最新statusを確認して、summaryを3行でお願いします。"
+    )
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == "summarize"
+    assert packet.information_state.requires_current_information is True
+    assert "verify" in packet.operations
+    assert plan.processing_class == "verified"
+    assert plan.core_mode == "vertical"
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "確認結果を短くまとめ、その後で実装計画を提示してください。",
+        "この単元の要点を整理して、そのうえで理解度チェックの問題を作ってください",
+    ],
+)
+def test_terminal_build_deliverable_wins_primary_intent(text: str) -> None:
+    packet = extract_semantic_packet(text)
+    plan = build_processing_plan(packet)
+
+    assert packet.primary_intent == "build"
+    assert packet.information_state.multiple_intents is True
+    assert plan.processing_class == "deep"
+    assert plan.core_mode == "hybrid"
+
+
 def test_core_shadow_rejects_prompt_digest_mismatch() -> None:
     payload = _packet_payload("respond")
     payload["request_digest"] = request_digest("original")

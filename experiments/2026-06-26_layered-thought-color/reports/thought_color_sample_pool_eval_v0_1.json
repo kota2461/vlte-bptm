@@ -1,0 +1,668 @@
+{
+  "all_fit": {
+    "base_accuracy": 1.0,
+    "by_lane": {
+      "collision_should_share": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "collision_should_split": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "missing_context": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "same_base_different_operation": {
+        "base_accuracy": 1.0,
+        "case_count": 8,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "same_base_different_stance": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "same_operation_different_base": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "supportive_modifier": {
+        "base_accuracy": 1.0,
+        "case_count": 5,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      }
+    },
+    "case_count": 32,
+    "errors": [],
+    "full_code_accuracy": 1.0,
+    "intensity_accuracy": 1.0,
+    "operation_accuracy": 1.0,
+    "schema_version": "thought-color-sample-evaluation.v0.1",
+    "stance_accuracy": 1.0
+  },
+  "group_holdout": {
+    "base_accuracy": 0.21875,
+    "by_group": {
+      "build_operation_variants": {
+        "base_accuracy": 0.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "code_request_split": {
+        "base_accuracy": 0.333333,
+        "case_count": 3,
+        "full_code_accuracy": 0.333333,
+        "intensity_accuracy": 0.333333,
+        "operation_accuracy": 0.333333,
+        "stance_accuracy": 0.333333
+      },
+      "empathy_across_bases": {
+        "base_accuracy": 0.2,
+        "case_count": 5,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.6,
+        "operation_accuracy": 0.2,
+        "stance_accuracy": 0.0
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.5
+      },
+      "missing_context_variants": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      }
+    },
+    "case_count": 32,
+    "errors": [
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "neutral"
+        },
+        "group_id": "build_operation_variants",
+        "id": "tc-v01-005",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "compare",
+          "stance": "explore"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "verify",
+          "stance": "neutral"
+        },
+        "group_id": "build_operation_variants",
+        "id": "tc-v01-006",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "high",
+          "operation": "verify",
+          "stance": "challenge"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        },
+        "group_id": "build_operation_variants",
+        "id": "tc-v01-007",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "route",
+          "stance": "neutral"
+        },
+        "group_id": "build_operation_variants",
+        "id": "tc-v01-008",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "medium",
+          "operation": "verify",
+          "stance": "empathize"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 110,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "neutral"
+        },
+        "group_id": "code_request_split",
+        "id": "tc-v01-022",
+        "lane": "collision_should_split",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "neutral"
+        },
+        "group_id": "code_request_split",
+        "id": "tc-v01-023",
+        "lane": "collision_should_split",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 170,
+          "intensity": "medium",
+          "operation": "route",
+          "stance": "empathize"
+        },
+        "group_id": "empathy_across_bases",
+        "id": "tc-v01-028",
+        "lane": "supportive_modifier",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "empathize"
+        },
+        "group_id": "empathy_across_bases",
+        "id": "tc-v01-029",
+        "lane": "supportive_modifier",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "medium",
+          "operation": "verify",
+          "stance": "challenge"
+        },
+        "group_id": "empathy_across_bases",
+        "id": "tc-v01-030",
+        "lane": "supportive_modifier",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 170,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "empathize"
+        },
+        "group_id": "empathy_across_bases",
+        "id": "tc-v01-031",
+        "lane": "supportive_modifier",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "high",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "high",
+          "operation": "verify",
+          "stance": "challenge"
+        },
+        "group_id": "empathy_across_bases",
+        "id": "tc-v01-032",
+        "lane": "supportive_modifier",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "explore"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "compare",
+          "stance": "explore"
+        },
+        "group_id": "explore_operation_variants",
+        "id": "tc-v01-009",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "explore"
+        },
+        "group_id": "explore_operation_variants",
+        "id": "tc-v01-011",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "explore"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 160,
+          "intensity": "hold",
+          "operation": "compare",
+          "stance": "reserve"
+        },
+        "group_id": "explore_operation_variants",
+        "id": "tc-v01-012",
+        "lane": "same_base_different_operation",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "low",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "neutral"
+        },
+        "group_id": "generate_across_bases",
+        "id": "tc-v01-013",
+        "lane": "same_operation_different_base",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "explore"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "low",
+          "operation": "generate",
+          "stance": "neutral"
+        },
+        "group_id": "generate_across_bases",
+        "id": "tc-v01-015",
+        "lane": "same_operation_different_base",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "low",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "generate",
+          "stance": "explore"
+        },
+        "group_id": "generate_across_bases",
+        "id": "tc-v01-016",
+        "lane": "same_operation_different_base",
+        "predicted": {
+          "base_id": 120,
+          "intensity": "medium",
+          "operation": "route",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 160,
+          "intensity": "hold",
+          "operation": "compare",
+          "stance": "clarify"
+        },
+        "group_id": "missing_context_variants",
+        "id": "tc-v01-024",
+        "lane": "missing_context",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 130,
+          "intensity": "hold",
+          "operation": "route",
+          "stance": "clarify"
+        },
+        "group_id": "missing_context_variants",
+        "id": "tc-v01-025",
+        "lane": "missing_context",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        },
+        "group_id": "missing_context_variants",
+        "id": "tc-v01-026",
+        "lane": "missing_context",
+        "predicted": {
+          "base_id": 140,
+          "intensity": "medium",
+          "operation": "verify",
+          "stance": "empathize"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 120,
+          "intensity": "medium",
+          "operation": "route",
+          "stance": "clarify"
+        },
+        "group_id": "missing_context_variants",
+        "id": "tc-v01-027",
+        "lane": "missing_context",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "explore"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 150,
+          "intensity": "low",
+          "operation": "remember",
+          "stance": "neutral"
+        },
+        "group_id": "summary_share_variants",
+        "id": "tc-v01-017",
+        "lane": "collision_should_share",
+        "predicted": {
+          "base_id": 160,
+          "intensity": "hold",
+          "operation": "compare",
+          "stance": "reserve"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        },
+        "group_id": "summary_share_variants",
+        "id": "tc-v01-018",
+        "lane": "collision_should_share",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 150,
+          "intensity": "high",
+          "operation": "remember",
+          "stance": "neutral"
+        },
+        "group_id": "summary_share_variants",
+        "id": "tc-v01-019",
+        "lane": "collision_should_share",
+        "predicted": {
+          "base_id": 170,
+          "intensity": "medium",
+          "operation": "reason",
+          "stance": "empathize"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 150,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "clarify"
+        },
+        "group_id": "summary_share_variants",
+        "id": "tc-v01-020",
+        "lane": "collision_should_share",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "medium",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "high",
+          "operation": "verify",
+          "stance": "challenge"
+        },
+        "group_id": "verify_stance_variants",
+        "id": "tc-v01-002",
+        "lane": "same_base_different_stance",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "hold",
+          "operation": "route",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "hold",
+          "operation": "verify",
+          "stance": "clarify"
+        },
+        "group_id": "verify_stance_variants",
+        "id": "tc-v01-003",
+        "lane": "same_base_different_stance",
+        "predicted": {
+          "base_id": 130,
+          "intensity": "hold",
+          "operation": "route",
+          "stance": "clarify"
+        }
+      },
+      {
+        "expected": {
+          "base_id": 140,
+          "intensity": "medium",
+          "operation": "verify",
+          "stance": "empathize"
+        },
+        "group_id": "verify_stance_variants",
+        "id": "tc-v01-004",
+        "lane": "same_base_different_stance",
+        "predicted": {
+          "base_id": 150,
+          "intensity": "low",
+          "operation": "remember",
+          "stance": "neutral"
+        }
+      }
+    ],
+    "full_code_accuracy": 0.125,
+    "group_count": 8,
+    "intensity_accuracy": 0.65625,
+    "operation_accuracy": 0.34375,
+    "schema_version": "thought-color-sample-group-holdout.v0.1",
+    "stance_accuracy": 0.34375
+  },
+  "model": {
+    "dimension": 2048,
+    "kind": "prototype_1nn",
+    "note": "All-fit is a label/sanity check. Group holdout is the generalization check across sample groups."
+  },
+  "sample_pool": {
+    "base_counts": {
+      "artifact_generation": 8,
+      "clarification_gate": 1,
+      "exploration_tradeoff": 7,
+      "mechanism_explanation": 1,
+      "summary_compression": 5,
+      "supportive_processing": 2,
+      "verification_review": 8
+    },
+    "case_count": 32,
+    "collision_profile": {
+      "base_colliding_sample_count": 30,
+      "base_collision_bucket_count": 5,
+      "exact_duplicate_count": 7,
+      "modifier_separated_base_count": 5,
+      "sample_count": 32,
+      "unique_base_count": 7,
+      "unique_full_count": 25
+    },
+    "group_count": 8,
+    "lane_counts": {
+      "collision_should_share": 4,
+      "collision_should_split": 3,
+      "missing_context": 4,
+      "same_base_different_operation": 8,
+      "same_base_different_stance": 4,
+      "same_operation_different_base": 4,
+      "supportive_modifier": 5
+    },
+    "language_counts": {
+      "en": 23,
+      "ja": 9
+    },
+    "multi_case_group_count": 8,
+    "path": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_sample_pool_v0_1.json",
+    "schema_version": "thought-color-sample-pool-summary.v0.1"
+  },
+  "schema_version": "thought-color-sample-pool-eval-report.v0.1"
+}

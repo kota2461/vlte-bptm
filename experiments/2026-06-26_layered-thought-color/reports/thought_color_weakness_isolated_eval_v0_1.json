@@ -1,0 +1,635 @@
+{
+  "adopted_baseline_group_holdout": {
+    "base_accuracy": 0.59375,
+    "case_count": 32,
+    "full_code_accuracy": 0.4375,
+    "group_count": 8,
+    "intensity_accuracy": 0.625,
+    "operation_accuracy": 0.59375,
+    "stance_accuracy": 0.59375
+  },
+  "adopted_plus_weakness_group_holdout": {
+    "base_accuracy": 0.71875,
+    "case_count": 32,
+    "full_code_accuracy": 0.65625,
+    "group_count": 8,
+    "intensity_accuracy": 0.78125,
+    "operation_accuracy": 0.75,
+    "stance_accuracy": 0.71875
+  },
+  "by_group": {
+    "adopted_baseline": {
+      "build_operation_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      },
+      "code_request_split": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "empathy_across_bases": {
+        "base_accuracy": 0.2,
+        "case_count": 5,
+        "full_code_accuracy": 0.2,
+        "intensity_accuracy": 0.4,
+        "operation_accuracy": 0.4,
+        "stance_accuracy": 0.4
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.75
+      },
+      "missing_context_variants": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 0.75
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.25,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.5
+      }
+    },
+    "adopted_plus_weakness": {
+      "build_operation_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      },
+      "code_request_split": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "empathy_across_bases": {
+        "base_accuracy": 0.6,
+        "case_count": 5,
+        "full_code_accuracy": 0.6,
+        "intensity_accuracy": 0.8,
+        "operation_accuracy": 0.8,
+        "stance_accuracy": 0.8
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.75
+      },
+      "missing_context_variants": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 0.75
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      }
+    },
+    "delta": {
+      "build_operation_variants": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.0
+      },
+      "code_request_split": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.0
+      },
+      "empathy_across_bases": {
+        "base_accuracy": 0.4,
+        "full_code_accuracy": 0.4,
+        "intensity_accuracy": 0.4,
+        "operation_accuracy": 0.4,
+        "stance_accuracy": 0.4
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.0
+      },
+      "missing_context_variants": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.0
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.25,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": -0.25
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.25,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.25
+      }
+    },
+    "weakness_only_to_hand": {
+      "build_operation_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.75
+      },
+      "code_request_split": {
+        "base_accuracy": 0.333333,
+        "case_count": 3,
+        "full_code_accuracy": 0.333333,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.666667,
+        "stance_accuracy": 0.666667
+      },
+      "empathy_across_bases": {
+        "base_accuracy": 0.8,
+        "case_count": 5,
+        "full_code_accuracy": 0.8,
+        "intensity_accuracy": 0.8,
+        "operation_accuracy": 0.8,
+        "stance_accuracy": 0.8
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.75
+      },
+      "missing_context_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.5,
+        "case_count": 4,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.5,
+        "operation_accuracy": 0.5,
+        "stance_accuracy": 0.25
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.75,
+        "case_count": 4,
+        "full_code_accuracy": 0.75,
+        "intensity_accuracy": 0.75,
+        "operation_accuracy": 0.75,
+        "stance_accuracy": 0.75
+      }
+    }
+  },
+  "changed_groups": {
+    "improved": {
+      "empathy_across_bases": {
+        "base_accuracy": 0.4,
+        "full_code_accuracy": 0.4,
+        "intensity_accuracy": 0.4,
+        "operation_accuracy": 0.4,
+        "stance_accuracy": 0.4
+      },
+      "explore_operation_variants": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.5
+      },
+      "generate_across_bases": {
+        "base_accuracy": 0.0,
+        "full_code_accuracy": 0.25,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.0,
+        "stance_accuracy": 0.0
+      },
+      "summary_share_variants": {
+        "base_accuracy": 0.25,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": -0.25
+      },
+      "verify_stance_variants": {
+        "base_accuracy": 0.25,
+        "full_code_accuracy": 0.5,
+        "intensity_accuracy": 0.25,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": 0.25
+      }
+    },
+    "regressed": {
+      "summary_share_variants": {
+        "base_accuracy": 0.25,
+        "full_code_accuracy": 0.0,
+        "intensity_accuracy": 0.0,
+        "operation_accuracy": 0.25,
+        "stance_accuracy": -0.25
+      }
+    }
+  },
+  "created_at": "2026-06-27T04:33:07.028903+00:00",
+  "delta_adopted_plus_vs_adopted_baseline": {
+    "base_accuracy": 0.125,
+    "full_code_accuracy": 0.21875,
+    "intensity_accuracy": 0.15625,
+    "operation_accuracy": 0.15625,
+    "stance_accuracy": 0.125
+  },
+  "direct_fit_checks": {
+    "adopted_plus_to_hand": {
+      "base_accuracy": 0.6875,
+      "case_count": 32,
+      "full_code_accuracy": 0.65625,
+      "intensity_accuracy": 0.8125,
+      "operation_accuracy": 0.71875,
+      "stance_accuracy": 0.71875
+    },
+    "adopted_to_hand": {
+      "base_accuracy": 0.53125,
+      "case_count": 32,
+      "full_code_accuracy": 0.34375,
+      "intensity_accuracy": 0.59375,
+      "operation_accuracy": 0.53125,
+      "stance_accuracy": 0.5
+    },
+    "weakness_to_hand": {
+      "base_accuracy": 0.59375,
+      "case_count": 32,
+      "full_code_accuracy": 0.4375,
+      "intensity_accuracy": 0.6875,
+      "operation_accuracy": 0.59375,
+      "stance_accuracy": 0.65625
+    }
+  },
+  "inputs": {
+    "ablation_count": 353,
+    "adopted_count": 281,
+    "hand_sample_count": 32,
+    "weakness_count": 72
+  },
+  "paths": {
+    "adopted_baseline": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_corrected_v0_1.json",
+    "adopted_plus_weakness_ablation": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_adopted_plus_weakness_ablation_v0_1.json",
+    "plan": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_weakness_isolated_plan_v0_1.json",
+    "weakness_samples": "D:\\Thought State Register\\experiments\\2026-06-26_layered-thought-color\\data\\thought_color_weakness_isolated_samples_v0_1.json"
+  },
+  "policy": {
+    "ablation_only": true,
+    "adopted_baseline_unchanged": true,
+    "mix_with_adopted_set_by_default": false,
+    "weakness_samples_are_isolated": true
+  },
+  "schema_version": "thought-color-weakness-isolated-eval.v0.1",
+  "target_group_deltas": {
+    "empathy_across_bases": {
+      "base_accuracy": 0.4,
+      "full_code_accuracy": 0.4,
+      "intensity_accuracy": 0.4,
+      "operation_accuracy": 0.4,
+      "stance_accuracy": 0.4
+    },
+    "explore_operation_variants": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.5,
+      "intensity_accuracy": 0.25,
+      "operation_accuracy": 0.25,
+      "stance_accuracy": 0.5
+    },
+    "generate_across_bases": {
+      "base_accuracy": 0.0,
+      "full_code_accuracy": 0.25,
+      "intensity_accuracy": 0.25,
+      "operation_accuracy": 0.0,
+      "stance_accuracy": 0.0
+    },
+    "summary_share_variants": {
+      "base_accuracy": 0.25,
+      "full_code_accuracy": 0.0,
+      "intensity_accuracy": 0.0,
+      "operation_accuracy": 0.25,
+      "stance_accuracy": -0.25
+    },
+    "verify_stance_variants": {
+      "base_accuracy": 0.25,
+      "full_code_accuracy": 0.5,
+      "intensity_accuracy": 0.25,
+      "operation_accuracy": 0.25,
+      "stance_accuracy": 0.25
+    }
+  },
+  "weakness_by_group": {
+    "base_accuracy": 1.0,
+    "by_group": {
+      "weak-empathy-summary-empathize": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-empathy-support-reason": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-empathy-support-route": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-empathy-verify-hard-risk": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-empathy-verify-kind-challenge": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-explore-compare": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-explore-generate": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-explore-reason": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-explore-reserve-hold": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-generate-artifact-low": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-generate-artifact-medium": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-generate-explore-alternatives": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-generate-explore-generate": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-summary-clarify-medium": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-summary-neutral-high": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-summary-neutral-low": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-summary-neutral-medium": {
+        "base_accuracy": 1.0,
+        "case_count": 4,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-verify-challenge-high": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-verify-clarify-hold": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-verify-empathize": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      },
+      "weak-verify-neutral": {
+        "base_accuracy": 1.0,
+        "case_count": 3,
+        "full_code_accuracy": 1.0,
+        "intensity_accuracy": 1.0,
+        "operation_accuracy": 1.0,
+        "stance_accuracy": 1.0
+      }
+    },
+    "case_count": 72,
+    "full_code_accuracy": 1.0,
+    "group_count": 21,
+    "intensity_accuracy": 1.0,
+    "operation_accuracy": 1.0,
+    "stance_accuracy": 1.0
+  },
+  "weakness_only_group_holdout": {
+    "base_accuracy": 0.694444,
+    "case_count": 72,
+    "full_code_accuracy": 0.138889,
+    "group_count": 21,
+    "intensity_accuracy": 0.541667,
+    "operation_accuracy": 0.569444,
+    "stance_accuracy": 0.527778
+  },
+  "weakness_only_to_hand_group_holdout": {
+    "base_accuracy": 0.59375,
+    "case_count": 32,
+    "full_code_accuracy": 0.4375,
+    "group_count": 8,
+    "intensity_accuracy": 0.71875,
+    "operation_accuracy": 0.625,
+    "stance_accuracy": 0.625
+  },
+  "weakness_sample_summary": {
+    "base_counts": {
+      "artifact_generation": 6,
+      "exploration_tradeoff": 18,
+      "summary_compression": 20,
+      "supportive_processing": 8,
+      "verification_review": 20
+    },
+    "human_review_required_count": 72,
+    "lane_counts": {
+      "empathy_across_bases_isolated": 20,
+      "explore_operation_variants_isolated": 12,
+      "generate_across_bases_isolated": 12,
+      "summary_share_variants_isolated": 16,
+      "verify_stance_variants_isolated": 12
+    },
+    "language_counts": {
+      "en": 72
+    },
+    "sample_count": 72,
+    "training_allowed_count": 0
+  }
+}

@@ -1,0 +1,1014 @@
+{
+  "schema_version": "intent-data-cleaning-impact.v1",
+  "generated_at": "2026-06-28T05:28:14.997995+00:00",
+  "policy": {
+    "diagnostic_only": true,
+    "sealed_fixtures_used": false,
+    "writes_training_corpus": false,
+    "writes_deployed_model": false,
+    "writes_candidate_model": false,
+    "same_batch_tuning": false,
+    "recommended_workflow": "quarantine or relabel candidates only after human review and non-sealed ablation evidence"
+  },
+  "inputs": {
+    "corpus": "data\\intent_training_corpus_v1.json",
+    "suspect_review": "build\\intent_corpus_suspect_review_v1.json",
+    "conversation_accumulation": "data\\conversation_accumulation_v1.json",
+    "conversation_reviews": "data\\conversation_accumulation_reviews_v1.json",
+    "foundation_fixture": "tests\\fixtures\\intent_foundation_anchors_v1.json",
+    "hybrid_fixture": "tests\\fixtures\\intent_hybrid_regression_v1.json"
+  },
+  "suspect_review": {
+    "suspect_count": 47,
+    "high_priority_count": 9,
+    "by_recommendation": {
+      "exclude_or_negative": 3,
+      "exclude_or_relabel_clarify": 6,
+      "keep_if_directive_but_anonymize_path": 13,
+      "keep_if_intent_is_unambiguous": 17,
+      "review": 8
+    },
+    "by_flag": {
+      "ack_only": 1,
+      "bare_path_or_url": 6,
+      "path_or_url": 19,
+      "very_short_le_8": 17,
+      "weak_question_suffix": 10
+    }
+  },
+  "baseline": {
+    "filtered_examples": 739,
+    "filtered_by_intent": {
+      "build": 213,
+      "clarify": 65,
+      "explain": 80,
+      "explore": 89,
+      "respond": 172,
+      "summarize": 32,
+      "verify": 88
+    },
+    "gate": {
+      "foundation_accuracy": 1.0,
+      "foundation_passed": true,
+      "hybrid_accuracy": 1.0,
+      "hybrid_passed": true,
+      "passed": true
+    },
+    "kfold": {
+      "kfold_accuracy": 0.6359945872801083,
+      "kfold_macro_accuracy": 0.6361417014558252,
+      "folds": 5,
+      "evaluated_examples": 739
+    },
+    "accumulation_route_eval": {
+      "case_count": 50,
+      "reviewed_count": 50,
+      "semantic_intent_accuracy": 0.98,
+      "processing_plan_accuracy": 0.98,
+      "end_to_end_route_accuracy": 0.98,
+      "passed": 49,
+      "failed": 1,
+      "critical_underprocessing": 0,
+      "category_failures": {
+        "indirect_explanation": 1
+      }
+    }
+  },
+  "scenario_ablations": [
+    {
+      "name": "high_priority_actionable",
+      "description": "Rows already flagged as exclude/exclude_or_negative/exclude_or_relabel_clarify.",
+      "proposed_action": "quarantine_for_review",
+      "removed_indices": [
+        90,
+        462,
+        473,
+        528,
+        551,
+        627,
+        659,
+        687,
+        717
+      ],
+      "removed_count": 9,
+      "removed_by_intent": {
+        "clarify": 1,
+        "explain": 1,
+        "explore": 1,
+        "respond": 4,
+        "verify": 2
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6712328767123288,
+        "kfold_macro_accuracy": 0.6713660847321874,
+        "folds": 5,
+        "evaluated_examples": 730
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.035238,
+        "kfold_macro_accuracy": 0.035224,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate"
+    },
+    {
+      "name": "exclude_or_negative",
+      "description": "Weak/ack rows better stored as negative or guard memory.",
+      "proposed_action": "move_to_negative_or_failure_memory",
+      "removed_indices": [
+        90,
+        627,
+        659
+      ],
+      "removed_count": 3,
+      "removed_by_intent": {
+        "respond": 1,
+        "verify": 2
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6345108695652174,
+        "kfold_macro_accuracy": 0.6348493558870777,
+        "folds": 5,
+        "evaluated_examples": 736
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.001484,
+        "kfold_macro_accuracy": -0.001292,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal"
+    },
+    {
+      "name": "exclude_or_relabel_clarify",
+      "description": "Bare path/URL rows likely mislabeled as a direct intent.",
+      "proposed_action": "quarantine_or_relabel",
+      "removed_indices": [
+        462,
+        473,
+        528,
+        551,
+        687,
+        717
+      ],
+      "removed_count": 6,
+      "removed_by_intent": {
+        "clarify": 1,
+        "explain": 1,
+        "explore": 1,
+        "respond": 3
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.635743519781719,
+        "kfold_macro_accuracy": 0.6357910055326864,
+        "folds": 5,
+        "evaluated_examples": 733
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.000251,
+        "kfold_macro_accuracy": -0.000351,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal"
+    },
+    {
+      "name": "bare_path_or_url",
+      "description": "Rows with a path/URL but no clear directive marker.",
+      "proposed_action": "quarantine_or_relabel",
+      "removed_indices": [
+        462,
+        473,
+        528,
+        551,
+        687,
+        717
+      ],
+      "removed_count": 6,
+      "removed_by_intent": {
+        "clarify": 1,
+        "explain": 1,
+        "explore": 1,
+        "respond": 3
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.635743519781719,
+        "kfold_macro_accuracy": 0.6357910055326864,
+        "folds": 5,
+        "evaluated_examples": 733
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.000251,
+        "kfold_macro_accuracy": -0.000351,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal"
+    },
+    {
+      "name": "weak_question_respond_verify",
+      "description": "Short weak questions carrying respond/verify labels.",
+      "proposed_action": "quarantine_or_negative",
+      "removed_indices": [
+        627,
+        659
+      ],
+      "removed_count": 2,
+      "removed_by_intent": {
+        "verify": 2
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6404341926729986,
+        "kfold_macro_accuracy": 0.6405873296594288,
+        "folds": 5,
+        "evaluated_examples": 737
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.00444,
+        "kfold_macro_accuracy": 0.004446,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate"
+    },
+    {
+      "name": "very_short_control",
+      "description": "Very short rows are a control group; many are legitimate anchors.",
+      "proposed_action": "do_not_bulk_remove",
+      "removed_indices": [
+        87,
+        89,
+        93,
+        94,
+        97,
+        437,
+        519,
+        522,
+        538,
+        579,
+        622,
+        675,
+        677,
+        680,
+        686,
+        694,
+        718
+      ],
+      "removed_count": 17,
+      "removed_by_intent": {
+        "build": 8,
+        "respond": 7,
+        "verify": 2
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6398891966759003,
+        "kfold_macro_accuracy": 0.6397472664584143,
+        "folds": 5,
+        "evaluated_examples": 722
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.003895,
+        "kfold_macro_accuracy": 0.003606,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "control_group_review_only"
+    },
+    {
+      "name": "all_suspects_diagnostic",
+      "description": "All suspect rows removed; broad diagnostic only.",
+      "proposed_action": "diagnostic_only_do_not_adopt_as_a_bulk_delete",
+      "removed_indices": [
+        87,
+        89,
+        90,
+        93,
+        94,
+        97,
+        418,
+        422,
+        428,
+        437,
+        462,
+        473,
+        479,
+        481,
+        490,
+        500,
+        519,
+        522,
+        525,
+        528,
+        530,
+        538,
+        542,
+        551,
+        569,
+        570,
+        571,
+        575,
+        579,
+        599,
+        622,
+        627,
+        651,
+        658,
+        659,
+        675,
+        677,
+        680,
+        686,
+        687,
+        694,
+        717,
+        718,
+        719,
+        725,
+        726,
+        737
+      ],
+      "removed_count": 47,
+      "removed_by_intent": {
+        "build": 15,
+        "clarify": 1,
+        "explain": 5,
+        "explore": 7,
+        "respond": 14,
+        "verify": 5
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6661849710982659,
+        "kfold_macro_accuracy": 0.6660978434607342,
+        "folds": 5,
+        "evaluated_examples": 692
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.03019,
+        "kfold_macro_accuracy": 0.029956,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "diagnostic_only_too_broad"
+    }
+  ],
+  "individual_high_priority": [
+    {
+      "name": "single_corpus_90",
+      "description": "exclude_or_negative",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        90
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "respond": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6273712737127372,
+        "kfold_macro_accuracy": 0.6276583388319954,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.008623,
+        "kfold_macro_accuracy": -0.008483,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal",
+      "row": {
+        "corpus_index": 90,
+        "input": "ありがとうございます",
+        "intent": "respond",
+        "source": "pattern-db-remap",
+        "flags": [
+          "ack_only"
+        ],
+        "recommendation": "exclude_or_negative"
+      }
+    },
+    {
+      "name": "single_corpus_462",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        462
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "clarify": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6422764227642277,
+        "kfold_macro_accuracy": 0.6425363857007692,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.006282,
+        "kfold_macro_accuracy": 0.006395,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "row": {
+        "corpus_index": 462,
+        "input": "きました！ありがとうございます。ここで質問するのもなんですが、\"D:\\Thought State Register\"側のサンプル集めに、どの様な種類の質問が良いでしょう。",
+        "intent": "clarify",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    },
+    {
+      "name": "single_corpus_473",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        473
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "respond": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6422764227642277,
+        "kfold_macro_accuracy": 0.6424440521527637,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.006282,
+        "kfold_macro_accuracy": 0.006302,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "row": {
+        "corpus_index": 473,
+        "input": "\"D:\\nichijo_jissou\\05_post_impl\\handoff_to_code_2026-05-30.md\" mypyベースライン109errorsも環境による物以外修正済みです",
+        "intent": "respond",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    },
+    {
+      "name": "single_corpus_528",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        528
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "respond": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6314363143631436,
+        "kfold_macro_accuracy": 0.6318075609094811,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.004558,
+        "kfold_macro_accuracy": -0.004334,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal",
+      "row": {
+        "corpus_index": 528,
+        "input": "すみませんフォルダが重なってたので短縮しました。D:\\models\\gemma-4-12B-it",
+        "intent": "respond",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    },
+    {
+      "name": "single_corpus_551",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        551
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "explain": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6558265582655827,
+        "kfold_macro_accuracy": 0.6563081163355136,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.019832,
+        "kfold_macro_accuracy": 0.020166,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "row": {
+        "corpus_index": 551,
+        "input": "質問です！__D:\\Topic packaging\\backend\\app\\domain\\enums.pyここを取り入れてるってことは、topic packaging内の学習データを利用可能ってことですよね？__ だとしたら、そちらも近いうちにUIまで仕上げて学習させるのがよさそうですね",
+        "intent": "explain",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    },
+    {
+      "name": "single_corpus_627",
+      "description": "exclude_or_negative",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        627
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "verify": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6355013550135501,
+        "kfold_macro_accuracy": 0.6355266180161248,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.000493,
+        "kfold_macro_accuracy": -0.000615,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal",
+      "row": {
+        "corpus_index": 627,
+        "input": "内容的に区分けしたかった＋確証バイアスの内容なのでナンバリングにしたのですが、どうでしょう",
+        "intent": "verify",
+        "source": "claudelog-harvest",
+        "flags": [
+          "weak_question_suffix"
+        ],
+        "recommendation": "exclude_or_negative"
+      }
+    },
+    {
+      "name": "single_corpus_659",
+      "description": "exclude_or_negative",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        659
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "verify": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6544715447154471,
+        "kfold_macro_accuracy": 0.6545954967721619,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": 0.018477,
+        "kfold_macro_accuracy": 0.018454,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "neutral_but_safe_review_candidate",
+      "row": {
+        "corpus_index": 659,
+        "input": "現状の学習をまずアーカイブ化(backup)して戻れる状態でQの解決案＋人間レビューに進むというのはどうですか",
+        "intent": "verify",
+        "source": "claudelog-harvest",
+        "flags": [
+          "weak_question_suffix"
+        ],
+        "recommendation": "exclude_or_negative"
+      }
+    },
+    {
+      "name": "single_corpus_687",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        687
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "explore": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6273712737127372,
+        "kfold_macro_accuracy": 0.6276986641814227,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.008623,
+        "kfold_macro_accuracy": -0.008443,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal",
+      "row": {
+        "corpus_index": 687,
+        "input": "D:\\nichijo_jissouこちらのprojectにチャットとの会話データがあるのですが、ところどころテストを踏まえたチャットがあるのでClaudeさんが採用出来る入力チャットと出力チャットを採用するというのはどうでしょう",
+        "intent": "explore",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    },
+    {
+      "name": "single_corpus_717",
+      "description": "exclude_or_relabel_clarify",
+      "proposed_action": "row_level_review",
+      "removed_indices": [
+        717
+      ],
+      "removed_count": 1,
+      "removed_by_intent": {
+        "respond": 1
+      },
+      "gate": {
+        "foundation_accuracy": 1.0,
+        "foundation_passed": true,
+        "hybrid_accuracy": 1.0,
+        "hybrid_passed": true,
+        "passed": true
+      },
+      "kfold": {
+        "kfold_accuracy": 0.6300813008130082,
+        "kfold_macro_accuracy": 0.6304187128101303,
+        "folds": 5,
+        "evaluated_examples": 738
+      },
+      "accumulation_route_eval": {
+        "case_count": 50,
+        "reviewed_count": 50,
+        "semantic_intent_accuracy": 0.98,
+        "processing_plan_accuracy": 0.98,
+        "end_to_end_route_accuracy": 0.98,
+        "passed": 49,
+        "failed": 1,
+        "critical_underprocessing": 0,
+        "category_failures": {
+          "indirect_explanation": 1
+        }
+      },
+      "delta_vs_baseline": {
+        "kfold_accuracy": -0.005913,
+        "kfold_macro_accuracy": -0.005723,
+        "accumulation_end_to_end_accuracy": 0.0,
+        "accumulation_failed": 0,
+        "critical_underprocessing": 0
+      },
+      "evidence_label": "needs_more_evidence_before_removal",
+      "row": {
+        "corpus_index": 717,
+        "input": "@\"C:\\Users\\kota\\Desktop\\テキストsample.txt\" とりあえず一万文字拾ってきました",
+        "intent": "respond",
+        "source": "claudelog-harvest",
+        "flags": [
+          "path_or_url",
+          "bare_path_or_url"
+        ],
+        "recommendation": "exclude_or_relabel_clarify"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-baseline-report.v1",
-  "generated_at": "2026-06-13T05:41:32.165614+00:00",
+  "generated_at": "2026-06-23T06:30:30.671775+00:00",
   "benchmark": {
     "path": "tests\\fixtures\\pattern_language_benchmark_v1.json",
     "sha256": "558ab43f8f64722d4ef6cb4bb73ef41b2f4812ac26c87c8c553ee7ff52d87c65",
@@ -13,7 +13,7 @@
     "evaluated_case_count": 56,
     "sealed_case_count": 28,
     "sealed_status": "consumed",
-    "sealed_successor": "pattern_language_sealed_v2.json",
+    "sealed_successor": "pattern_language_sealed_v3.json",
     "sealed_evaluated": false
   },
   "adapter": {
@@ -23,10 +23,26 @@
   "data_isolation": {
     "approved_pattern_overlap_count": 0,
     "approved_pattern_overlap": [],
-    "active_sealed_v2_overlap_count": 0,
-    "active_sealed_v2_overlap": [],
-    "active_plm_sealed_v2_overlap_count": 0,
-    "active_plm_sealed_v2_overlap": []
+    "active_sealed_v2_opened": false,
+    "active_sealed_v2_name": "sealed_boundary_slice_v2.json",
+    "active_sealed_v2_sha256": "410D3576DC9AA80C0C950492FF0C28207088EC5229E0D5E44B9C446D8CE3D341",
+    "active_sealed_v2_status": "active",
+    "active_sealed_v2_overlap_checked": false,
+    "active_sealed_v2_overlap_count": null,
+    "active_sealed_v2_overlap": null,
+    "active_sealed_v2_overlap_check_skipped_reason": "active sealed boundary fixture remains unopened",
+    "consumed_plm_sealed_v2_overlap_count": 0,
+    "consumed_plm_sealed_v2_overlap": [],
+    "active_plm_sealed_available": false,
+    "active_plm_sealed_opened": false,
+    "active_plm_sealed_name": null,
+    "active_plm_sealed_sha256": null,
+    "active_plm_sealed_status": null,
+    "active_plm_sealed_measured": null,
+    "active_plm_sealed_overlap_checked": false,
+    "active_plm_sealed_overlap_count": null,
+    "active_plm_sealed_overlap": null,
+    "active_plm_sealed_overlap_check_skipped_reason": "active sealed fixture remains unopened"
   },
   "measurements": {
     "train": {

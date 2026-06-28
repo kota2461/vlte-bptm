@@ -1,0 +1,162 @@
+{
+  "schema_version": "v7-router-debate-candidate-probe-report.v1",
+  "generated_at": "2026-06-28T07:52:06.143261+00:00",
+  "status": "draft_candidate_probe_completed_not_a_gate",
+  "candidate_readiness": true,
+  "adoption_readiness": true,
+  "requires_router_repair_or_human_label_review": false,
+  "candidate_fixture": "tests/fixtures/v7_router_debate_candidate_fixture_v1.json",
+  "selection": "build/v7_router_debate_candidate_selection_v1.json",
+  "worksheet": "build/v7_router_debate_candidate_review_worksheet_v1.md",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false,
+    "candidate_fixture_is_training_data": false,
+    "candidate_replay_is_gate": false
+  },
+  "summary": {
+    "case_count": 18,
+    "by_source_topic": {
+      "v7-ambiguous-clarify-vs-build": 3,
+      "v7-constraint-stacking": 3,
+      "v7-current-search-split-local-vs-web": 4,
+      "v7-terminal-action-boundary": 4,
+      "v7-unverified-claim-strength": 4
+    },
+    "by_axis": {
+      "clarify_boundary_repair": 3,
+      "constraint_preservation": 3,
+      "critical_signal_recovery": 5,
+      "operation_sequence_repair": 4,
+      "risk_ladder_calibration": 3
+    },
+    "by_theme": {
+      "compare_then_table": 1,
+      "current_local_context_no_search": 1,
+      "defined_object_style_build": 1,
+      "external_current_requires_sources": 1,
+      "fictional_patch_suppression": 1,
+      "general_symptom_info_no_diagnosis": 1,
+      "history_dependent_object": 1,
+      "hypothesis_note_no_verify": 1,
+      "latest_as_column_name": 1,
+      "local_risk_summary_terminal": 1,
+      "numeric_claim_before_report": 1,
+      "risk_then_checklist": 1,
+      "security_claim_verify": 1,
+      "specific_law_with_sources": 1,
+      "stacked_medical_ui_constraints": 1,
+      "summarize_then_compare_table": 1,
+      "today_local_log_summary": 1,
+      "undefined_object_vs_style_build": 1
+    },
+    "by_candidate_type": {
+      "boundary_case": 1,
+      "constraint_stack": 1,
+      "current_local_contrast": 1,
+      "medical_word_low_risk": 1,
+      "metalinguistic_suppression": 1,
+      "positive_fire_source_requirement": 1,
+      "should_fire_clarify": 1,
+      "should_fire_current_search": 1,
+      "should_fire_verify": 2,
+      "should_not_fire_clarify": 1,
+      "should_not_fire_current_search": 1,
+      "should_not_fire_verify": 2,
+      "terminal_action_summary": 1,
+      "terminal_action_table": 1,
+      "vertical_stack_terminal_build": 1,
+      "vertical_stack_terminal_table": 1
+    },
+    "by_language": {
+      "en": 15,
+      "mixed": 3
+    },
+    "by_intent": {
+      "build": 8,
+      "clarify": 2,
+      "explain": 2,
+      "summarize": 2,
+      "verify": 4
+    },
+    "by_operation": {
+      "build": 9,
+      "clarify": 2,
+      "compare": 2,
+      "explain": 2,
+      "search": 3,
+      "summarize": 3,
+      "verify": 5
+    },
+    "by_constraint": {
+      "format:bullets": 1,
+      "format:table": 2,
+      "length:short": 4,
+      "must:ask_first": 1,
+      "must:avoid_diagnosis": 2,
+      "must:cite_sources": 3,
+      "must:preserve_neutrality": 2,
+      "must_not:no_table": 1,
+      "must_not:no_web_search": 3
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 2,
+      "missing_required_information": 2,
+      "multiple_intents": 4,
+      "requires_current_information": 1
+    },
+    "by_risk": {
+      "high": 1,
+      "low": 14,
+      "medium": 3
+    },
+    "provisional_pass_count": 18,
+    "provisional_repair_gap_count": 0,
+    "provisional_pass_ids": [
+      "v7-router-debate-candidate-001",
+      "v7-router-debate-candidate-002",
+      "v7-router-debate-candidate-003",
+      "v7-router-debate-candidate-004",
+      "v7-router-debate-candidate-005",
+      "v7-router-debate-candidate-006",
+      "v7-router-debate-candidate-007",
+      "v7-router-debate-candidate-008",
+      "v7-router-debate-candidate-009",
+      "v7-router-debate-candidate-010",
+      "v7-router-debate-candidate-011",
+      "v7-router-debate-candidate-012",
+      "v7-router-debate-candidate-013",
+      "v7-router-debate-candidate-014",
+      "v7-router-debate-candidate-015",
+      "v7-router-debate-candidate-016",
+      "v7-router-debate-candidate-017",
+      "v7-router-debate-candidate-018"
+    ],
+    "provisional_repair_gap_ids": []
+  },
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "case_count": 18,
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 0,
+    "error_field_counts": {}
+  },
+  "errors": [],
+  "next_step": {
+    "name": "human_review_v7_router_debate_candidates",
+    "input": "build/v7_router_debate_candidate_review_worksheet_v1.md",
+    "output": "tests/fixtures/v7_router_debate_candidate_fixture_v1.json"
+  }
+}

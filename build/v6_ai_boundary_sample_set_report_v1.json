@@ -1,0 +1,770 @@
+{
+  "schema_version": "v6-ai-boundary-sample-set-report.v1",
+  "generated_at": "2026-06-23T08:12:42.107261+00:00",
+  "fixture": "tests\\fixtures\\v6_ai_boundary_candidate_fixture_v1.json",
+  "worksheet": "build\\v6_ai_boundary_candidate_review_worksheet_v1.md",
+  "status": "draft_candidate_fixture_created_not_a_gate",
+  "current_route_measurement_is_gate": false,
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_notes_direct_training_allowed": false,
+    "cut_paste_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "summary": {
+    "case_count": 50,
+    "by_intent": {
+      "build": 11,
+      "clarify": 4,
+      "explain": 6,
+      "explore": 12,
+      "summarize": 2,
+      "verify": 15
+    },
+    "by_operation": {
+      "build": 13,
+      "clarify": 4,
+      "compare": 12,
+      "explain": 13,
+      "explore": 18,
+      "search": 10,
+      "summarize": 6,
+      "verify": 33
+    },
+    "by_axis": {
+      "actionable_feedback": 1,
+      "advice_boundary": 1,
+      "agentic_risk": 1,
+      "aging_autonomy": 1,
+      "ai_accelerator": 1,
+      "ai_ethics": 1,
+      "ai_ethics_guideline": 1,
+      "ai_relationship_boundary": 1,
+      "ai_romance": 1,
+      "ai_safety": 1,
+      "ai_society": 1,
+      "anthropic": 1,
+      "app_idea_review": 1,
+      "architecture_boundary": 1,
+      "architecture_compare": 1,
+      "ask_first": 1,
+      "avoid_overclaim": 4,
+      "avoid_stereotype": 2,
+      "backup_branching": 1,
+      "chronic_pain": 1,
+      "cite_sources": 3,
+      "code_request": 1,
+      "cognitive_architecture": 1,
+      "cognitive_architecture_research": 1,
+      "compare_design": 2,
+      "copy_separation": 1,
+      "copyright_distillation_guard": 1,
+      "core6_architecture": 1,
+      "core6_implementation": 1,
+      "country_analysis": 1,
+      "critical_review": 1,
+      "current_information": 7,
+      "current_tooling": 1,
+      "decision_request": 1,
+      "demographic_claim": 1,
+      "embedding_adoption": 1,
+      "embodied_ai_risk": 1,
+      "emotion_layer": 1,
+      "emotion_thought_architecture": 1,
+      "eu_ai_act": 1,
+      "evaluation_plan": 1,
+      "explain_and_full_code": 1,
+      "explain_build": 1,
+      "explore": 1,
+      "family_memory": 1,
+      "future_economy": 1,
+      "future_prediction": 1,
+      "future_scenario": 2,
+      "game_engine_llm": 1,
+      "guarded_analysis": 1,
+      "guarded_comparison": 1,
+      "guarded_explore": 1,
+      "hardware_speculation": 1,
+      "holes_and_improvements": 1,
+      "hostile_user_handling": 1,
+      "hybrid_bridge": 1,
+      "hybrid_core": 1,
+      "implementation_choice": 1,
+      "integration_plan": 1,
+      "jobs_ai": 1,
+      "langchain_mem0": 1,
+      "legal_current": 2,
+      "legal_risk": 1,
+      "level_schema": 1,
+      "llm_frontend": 2,
+      "local_llm_guard": 1,
+      "local_model_training": 1,
+      "market_ethics": 1,
+      "medical_guard": 1,
+      "medical_mental_guard": 1,
+      "memory_packaging": 1,
+      "memory_tagging": 1,
+      "mental_health_guard": 4,
+      "model_behavior_compare": 1,
+      "model_comparison": 2,
+      "multi_model_experiment": 1,
+      "negative_visualization": 1,
+      "neutrality_guard": 2,
+      "news_check": 1,
+      "news_claim_check": 1,
+      "over_agreement": 1,
+      "parallel_events": 1,
+      "parasocial_guard": 1,
+      "personal_values": 1,
+      "philosophy_explain": 1,
+      "physical_execution": 1,
+      "physics_uncertainty": 1,
+      "plugin_orchestrator": 1,
+      "political_ai_future": 1,
+      "political_behavior": 1,
+      "preserve_neutrality": 1,
+      "profile_customization": 1,
+      "project_review": 1,
+      "project_state_summary": 1,
+      "prototype_plan": 1,
+      "psychological_explain": 1,
+      "psychological_feedback_loop": 1,
+      "psychology_explain": 1,
+      "reality_check_request": 1,
+      "relationship_life_choice": 1,
+      "research_check": 1,
+      "roadmap": 2,
+      "safe_dialogue": 1,
+      "safety_guard": 1,
+      "safety_policy": 1,
+      "sample_adoption_policy": 1,
+      "sample_generation": 1,
+      "sample_growth": 1,
+      "sample_reference": 1,
+      "scenario_check": 1,
+      "sensitive_reflection": 1,
+      "service_load_inference": 1,
+      "similar_project_search": 1,
+      "similar_research": 1,
+      "skill_request": 1,
+      "social_dynamics": 1,
+      "social_split": 1,
+      "speculative_hardware": 1,
+      "speculative_macro": 1,
+      "stoicism": 1,
+      "summarize": 1,
+      "task_manager": 1,
+      "timeline_estimate": 1,
+      "topic_boundary": 1,
+      "training_conversation_seed": 1,
+      "unverified_claim": 2,
+      "unverified_psychology_claim": 1
+    },
+    "by_constraint": {
+      "format:code": 1,
+      "length:short": 1,
+      "must:ask_first": 1,
+      "must:avoid_overclaim": 24,
+      "must:cite_sources": 9,
+      "must:preserve_neutrality": 7
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 18,
+      "missing_required_information": 4,
+      "multiple_intents": 39,
+      "requires_current_information": 11
+    },
+    "by_risk": {
+      "high": 5,
+      "low": 18,
+      "medium": 27
+    },
+    "by_risk_flag": {
+      "abuse_handling": 1,
+      "current_information": 11,
+      "future_prediction": 3,
+      "legal": 3,
+      "market_claim": 1,
+      "medical": 2,
+      "mental_health": 9,
+      "political": 2,
+      "safety": 3,
+      "unverified_claim": 13
+    }
+  },
+  "current_route_measurement": {
+    "case_count": 50,
+    "intent_accuracy": 0.46,
+    "critical_signal_recall": 0.083333,
+    "operation_exact_match": 0.14,
+    "constraint_exact_match": 0.4,
+    "risk_exact_match": 0.42,
+    "valid_packet_rate": 1.0,
+    "error_count": 48
+  },
+  "errors": [
+    {
+      "id": "v6-ai-boundary-001",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-002",
+      "kind": "mismatch",
+      "fields": [
+        "constraints",
+        "risk"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-ai-boundary-003",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-004",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-006",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "summarize",
+      "predicted_intent": "summarize"
+    },
+    {
+      "id": "v6-ai-boundary-007",
+      "kind": "mismatch",
+      "fields": [
+        "constraints",
+        "risk"
+      ],
+      "expected_intent": "summarize",
+      "predicted_intent": "summarize"
+    },
+    {
+      "id": "v6-ai-boundary-008",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-009",
+      "kind": "mismatch",
+      "fields": [
+        "constraints",
+        "risk"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-010",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-011",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-012",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-013",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-014",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-015",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-016",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-017",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-ai-boundary-018",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-019",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-020",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-021",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-ai-boundary-022",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-023",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-024",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-ai-boundary-025",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-026",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-ai-boundary-027",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-028",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-029",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-030",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-ai-boundary-031",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explain",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-ai-boundary-033",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-034",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-ai-boundary-035",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-036",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "summarize"
+    },
+    {
+      "id": "v6-ai-boundary-037",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-038",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-ai-boundary-039",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-040",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-041",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-042",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-043",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-044",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-045",
+      "kind": "mismatch",
+      "fields": [
+        "constraints"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "verify"
+    },
+    {
+      "id": "v6-ai-boundary-046",
+      "kind": "mismatch",
+      "fields": [
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-ai-boundary-047",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-048",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-ai-boundary-049",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "build"
+    },
+    {
+      "id": "v6-ai-boundary-050",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "respond"
+    }
+  ],
+  "next_step": {
+    "name": "human_review_v6_ai_boundary_samples",
+    "input": "build\\v6_ai_boundary_candidate_review_worksheet_v1.md",
+    "output": "tests\\fixtures\\v6_ai_boundary_candidate_fixture_v1.json"
+  }
+}

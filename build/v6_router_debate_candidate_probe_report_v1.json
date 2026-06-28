@@ -1,0 +1,283 @@
+{
+  "schema_version": "v6-router-debate-candidate-probe-report.v1",
+  "generated_at": "2026-06-23T10:19:07.165453+00:00",
+  "status": "promoted_to_candidate_fixture",
+  "candidate_readiness": true,
+  "selection": "build/v6_router_debate_candidate_selection_v1.json",
+  "fixture": "tests/fixtures/v6_router_debate_candidate_fixture_v1.json",
+  "worksheet": "build/v6_router_debate_candidate_review_worksheet_v1.md",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "topic_synthesis_used": true,
+    "llm_turn_text_direct_training_allowed": false,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_promotion_allowed": false
+  },
+  "summary": {
+    "case_count": 12,
+    "by_intent": {
+      "build": 2,
+      "clarify": 1,
+      "explore": 4,
+      "verify": 5
+    },
+    "by_operation": {
+      "build": 2,
+      "clarify": 1,
+      "compare": 1,
+      "explain": 4,
+      "explore": 4,
+      "search": 1,
+      "verify": 11
+    },
+    "by_axis": {
+      "ai_ethics": 1,
+      "ai_relationship_boundary": 2,
+      "ask_first": 1,
+      "avoid_overclaim": 2,
+      "avoid_persona_claim": 2,
+      "balanced_framing": 1,
+      "cite_sources": 1,
+      "dependency_risk": 2,
+      "empathy_boundary": 1,
+      "future_prediction": 2,
+      "hostile_user_handling": 2,
+      "human_review_required": 1,
+      "legal_current": 2,
+      "license_guard": 2,
+      "local_llm_guard": 1,
+      "medical_guard": 1,
+      "mental_health_guard": 2,
+      "political": 2,
+      "practical_advice_boundary": 1,
+      "preserve_neutrality": 3,
+      "requires_current_information": 1,
+      "safety_policy": 1,
+      "sample_adoption_policy": 1,
+      "support_without_overclaim": 1
+    },
+    "by_constraint": {
+      "must:ask_first": 1,
+      "must:avoid_overclaim": 12,
+      "must:cite_sources": 2,
+      "must:preserve_neutrality": 3,
+      "must_not:no_web_search": 1
+    },
+    "critical_signal_support": {
+      "contains_unverified_claims": 8,
+      "missing_required_information": 1,
+      "multiple_intents": 12,
+      "requires_current_information": 3
+    },
+    "by_risk": {
+      "high": 4,
+      "medium": 8
+    },
+    "by_risk_flag": {
+      "ai_ethics": 1,
+      "current_information": 3,
+      "dependency_risk": 2,
+      "future_prediction": 2,
+      "hostile_user": 2,
+      "legal": 3,
+      "license": 2,
+      "medical": 1,
+      "mental_health": 4,
+      "persona_claim": 1,
+      "political": 2,
+      "safety": 1,
+      "unverified_claim": 7,
+      "values": 1
+    },
+    "by_retrieval_domain": {
+      "ai_relationship_boundary": 3,
+      "legal_guard": 3,
+      "medical_guard": 1,
+      "political_future": 3
+    }
+  },
+  "selection_summary": {
+    "source_topics": 20,
+    "selected_topics": 12,
+    "held_topics": 8,
+    "issue_topics": 0
+  },
+  "current_route_measurement_is_gate": false,
+  "current_route_measurement": {
+    "case_count": 12,
+    "intent_accuracy": 0.0,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": 0.0,
+    "constraint_exact_match": 0.0,
+    "risk_exact_match": 0.0,
+    "valid_packet_rate": 1.0,
+    "error_count": 12
+  },
+  "errors": [
+    {
+      "id": "v6-router-debate-001",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-002",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "build",
+      "predicted_intent": "explore"
+    },
+    {
+      "id": "v6-router-debate-003",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-004",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-005",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-006",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-007",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-008",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "verify",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-router-debate-009",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-010",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "respond"
+    },
+    {
+      "id": "v6-router-debate-011",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "explore",
+      "predicted_intent": "explain"
+    },
+    {
+      "id": "v6-router-debate-012",
+      "kind": "mismatch",
+      "fields": [
+        "primary_intent",
+        "information_state",
+        "constraints",
+        "risk",
+        "operations"
+      ],
+      "expected_intent": "clarify",
+      "predicted_intent": "respond"
+    }
+  ],
+  "next_step": {
+    "name": "human_review_v6_router_debate_candidates",
+    "input": "build/v6_router_debate_candidate_review_worksheet_v1.md",
+    "output": "tests/fixtures/v6_router_debate_candidate_fixture_v1.json"
+  }
+}

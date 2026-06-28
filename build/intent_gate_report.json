@@ -19,8 +19,8 @@
       "passed": true,
       "comparisons": {
         "kfold_accuracy": {
-          "current": 0.7328431372549019,
-          "candidate": 0.7186761229314421,
+          "current": 0.6359945872801083,
+          "candidate": 0.6359945872801083,
           "tolerance": 0.02,
           "passed": true
         }
@@ -79,15 +79,15 @@
     }
   },
   "hashes": {
-    "candidate_sha256": "D2C5E780BF378F6C0E51FE895A589BEE0CD67218A9EC65CC7CFE9D0BC3413B86",
-    "deployed_sha256": "055D1708CFB605AD5A449283BC05D81FF1C6BB59415F37E362FE06E7DF84091F",
+    "candidate_sha256": "6FFA4E7733B151DF6EB74AB0E472C3FEF12E4032BBE0F629E31FD3EA5F3AC2DB",
+    "deployed_sha256": "6FFA4E7733B151DF6EB74AB0E472C3FEF12E4032BBE0F629E31FD3EA5F3AC2DB",
     "fixtures": {
       "intent_foundation_anchors_v1.json": "50291010B430088CC56EA52F3EEAEB2E9000C4B99FC1E8EFB53E531CA7F0817C",
       "intent_hybrid_regression_v1.json": "3A861349F0DAC7BB0FE1638AEB38DCF162D79907A4CB8C999F65A607654AF49E"
     }
   },
   "candidate_path": "D:\\Thought State Register\\build\\intent_model_v1_candidate.json",
-  "candidate_trained_at": "2026-06-16T10:39:36.019440+00:00",
-  "candidate_sample_count": 423,
-  "evaluated_at": "2026-06-16T10:39:36.292373+00:00"
+  "candidate_trained_at": "2026-06-18T10:38:43.499784+00:00",
+  "candidate_sample_count": 739,
+  "evaluated_at": "2026-06-18T11:20:54.066304+00:00"
 }
