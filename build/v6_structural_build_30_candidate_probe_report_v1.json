@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-structural-build-30-candidate-probe-report.v1",
-  "generated_at": "2026-06-28T07:52:05.522881+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "candidate_extraction_complete_review_required",
   "queue": "build/v6_structural_build_30_candidate_queue_v1.json",
   "benchmark": "tests/fixtures/v6_structural_build_30_candidate_benchmark_v1.json",

@@ -1,6 +1,6 @@
 {
   "schema_version": "v9-accumulated-primary-review-adoption-decision.v1",
-  "generated_at": "2026-06-28T07:52:07.716519+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "adopted_for_nonsealed_replay",
   "review_status": "human_reviewed",
   "reviewed_by": "user_confirmation_in_codex_thread",

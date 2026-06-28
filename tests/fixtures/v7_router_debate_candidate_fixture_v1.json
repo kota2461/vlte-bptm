@@ -1,7 +1,7 @@
 {
   "schema_version": "v7-router-debate-candidate-fixture.v1",
   "fixture_id": "v7-router-debate-candidate-fixture-v1",
-  "created_at": "2026-06-28T07:52:06.143261+00:00",
+  "created_at": "2026-01-01T00:00:00+00:00",
   "status": "draft_candidate_ready_for_human_review",
   "review_status": "draft",
   "source": {

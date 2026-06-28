@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:07.312425+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "Human-confirmed V8 priority queue rewritten into short self-contained non-sealed samples from topic metadata; raw debate prose excluded",
   "review_status": "human_reviewed",
   "policy": "Provisional non-sealed replay lane. Raw Gemma/Qwen debate turns are not training data. This is not a sealed fixture, not gate evidence, and not same-cycle promotion evidence.",

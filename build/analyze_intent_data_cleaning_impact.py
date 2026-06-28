@@ -9,7 +9,6 @@ import io
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Sequence, Set
 
@@ -19,6 +18,7 @@ sys.path.insert(0, str(ROOT))
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from semantic_routing import run_core_shadow  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.accumulation_review_store import (  # noqa: E402
     campaign_sha256,
     review_overlay,
@@ -513,7 +513,7 @@ def main() -> None:
 
     report = {
         "schema_version": "intent-data-cleaning-impact.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "policy": {
             "diagnostic_only": True,
             "sealed_fixtures_used": False,

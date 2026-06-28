@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +20,7 @@ from semantic_routing import (  # noqa: E402
     parse_puzzle_failure_memory,
     parse_puzzle_solver_trace_report,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOLVER_VERSION = "baseline-puzzle-solver.v1"
 
@@ -222,7 +222,7 @@ def _update_adoption(trace_summary: dict[str, Any], failure_summary: dict[str, A
 def main() -> None:
     seed = load_puzzle_task_seed(SEED_PATH).as_dict()
     tasks = seed["tasks"]
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     traces = [_solve(task, index) for index, task in enumerate(tasks, start=1)]
     trace_summary = _summary(traces)
     trace_payload = {

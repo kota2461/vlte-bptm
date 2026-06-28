@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:07.997144+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "User-requested V9 non-sealed focused extension for constraint_exact_match and operation_exact_match.",
   "review_status": "human_reviewed",
   "policy": "Human-reviewed non-sealed replay lane. No sealed text or labels used. Samples are short self-contained router repair probes, not gate evidence and not same-cycle promotion evidence.",

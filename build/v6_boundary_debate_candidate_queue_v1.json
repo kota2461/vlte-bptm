@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-boundary-debate-candidate-queue.v1",
-  "generated_at": "2026-06-28T07:52:03.374372+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "candidate_queue_ready_for_human_review",
   "source_log": "build/router_debate_live_31stock_r3.json",
   "source_topics": "debate_lab/topics_seed.json",

@@ -14,7 +14,6 @@ import io
 import json
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
@@ -24,6 +23,7 @@ sys.path.insert(0, str(ROOT))
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from semantic_routing import route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 SOURCES = (
@@ -362,7 +362,7 @@ def main() -> None:
     )
     report = {
         "schema_version": "critical-constraints-candidates.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "policy": {
             "sealed_fixtures_used": False,
             "candidate_status": (

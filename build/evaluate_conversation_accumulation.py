@@ -17,6 +17,7 @@ from semantic_routing import (
     route,
     run_core_shadow,
 )
+from semantic_routing.reproducibility import reproducible_now
 from semantic_routing.accumulation_review_store import (
     campaign_sha256,
     review_overlay,
@@ -68,7 +69,7 @@ def main() -> None:
             return review["expected"]
         return case.expected.as_dict()
 
-    now = datetime.now(timezone.utc)
+    now = reproducible_now()
     deadline = datetime.fromisoformat(campaign.deadline_at).astimezone(
         timezone.utc
     )

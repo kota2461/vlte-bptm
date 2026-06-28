@@ -3,13 +3,14 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+
+from semantic_routing.reproducibility import reproducible_now_iso
 sys.path.insert(0, str(ROOT / "build"))
 
 from v7_measurement_state import preserve_step8_measurement_state  # noqa: E402
@@ -232,7 +233,7 @@ def _summaries(cases: List[Dict[str, Any]]) -> Dict[str, Any]:
 def _benchmark_payload(cases: List[Dict[str, Any]]) -> Dict[str, Any]:
     return {
         "schema_version": "pattern-language-benchmark.v1",
-        "frozen_at": datetime.now(timezone.utc).isoformat(),
+        "frozen_at": reproducible_now_iso(),
         "authoring_method": "self-authored non-sealed V7 router repair draft; no sealed text or labels",
         "review_status": "draft",
         "policy": "Diagnostic non-sealed replay only. Human review is required before gate use.",
@@ -380,7 +381,7 @@ def main() -> None:
     cases = _cases()
     _validate_no_overlap(cases)
     summary = _summaries(cases)
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
     payload = {
         "schema_version": "v7-router-repair-fixture.v1",
         "fixture_id": "v7-router-repair-fixture-v1",

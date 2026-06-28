@@ -4,7 +4,6 @@ import json
 import re
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SELECTION_PATH = ROOT / "build" / "cowork_v6_candidate_selection_v1.json"
 REPORT_PATH = ROOT / "build" / "cowork_v6_candidate_probe_report.json"
@@ -232,7 +232,7 @@ def write_worksheet(payload: dict[str, Any], report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     selection = json.loads(SELECTION_PATH.read_text(encoding="utf-8"))
     source_items = [item for item in selection["items"] if item["decision"] == "adopt_nonsealed"]
 

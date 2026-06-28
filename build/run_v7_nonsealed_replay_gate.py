@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "build"))
 
 from semantic_routing import evaluate_plm_extractor, load_plm_benchmark, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 from v7_measurement_state import preserve_step8_measurement_state  # noqa: E402
 
 VISIBLE_PLM_PATH = ROOT / "tests" / "fixtures" / "pattern_language_benchmark_v1.json"
@@ -512,7 +512,7 @@ def _update_roadmaps(report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     required_lanes = _required_lanes()
     diagnostic_lanes = _diagnostic_lanes()
     summary = _summary(required_lanes, diagnostic_lanes)

@@ -7,7 +7,6 @@ human-reviewed, non-sealed lane for replay and improvement planning.
 
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 IMPORT_BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "v6_router_debate_candidate_benchmark_v1.json"
 ADOPTION_PLAN_PATH = ROOT / "build" / "v6_router_debate_candidate_adoption_plan_v1.json"
@@ -67,7 +67,7 @@ def _assert_review_ready(plan: dict[str, Any], benchmark: dict[str, Any]) -> Non
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     plan = _load(ADOPTION_PLAN_PATH)
     import_benchmark = _load(IMPORT_BENCHMARK_PATH)
     parse_plm_benchmark(import_benchmark)

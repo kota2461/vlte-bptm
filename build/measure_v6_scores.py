@@ -8,7 +8,6 @@ gate.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, load_plm_benchmark, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 VISIBLE_PLM_PATH = ROOT / "tests" / "fixtures" / "pattern_language_benchmark_v1.json"
 V6_BOUNDARY_FP_ADOPTED_PATH = ROOT / "tests" / "fixtures" / "v6_boundary_false_positive_adopted_benchmark_v1.json"
@@ -202,7 +202,7 @@ def sealed_v5_existing() -> dict[str, Any]:
 
 
 def build_report() -> dict[str, Any]:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     lanes = {
         "visible_plm_train_validation": measure_visible_plm(),
         "v6_boundary_false_positive_adopted": measure_benchmark(V6_BOUNDARY_FP_ADOPTED_PATH),

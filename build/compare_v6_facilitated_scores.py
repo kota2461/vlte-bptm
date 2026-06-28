@@ -1,6 +1,5 @@
 import json
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 import sys
 
@@ -8,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import route
+from semantic_routing.reproducibility import reproducible_now_iso
 
 QUEUE_PATH = ROOT / "build" / "v6_boundary_debate_candidate_queue_v1.json"
 REVIEW_PATH = ROOT / "build" / "router_debate_v6_facilitated_contrast_repair_review_v1.json"
@@ -162,7 +162,7 @@ def main() -> None:
     }
     report = {
         "schema_version": "router-debate-facilitated-score-comparison.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "completed",
         "source_review": rel(REVIEW_PATH),
         "policy": {

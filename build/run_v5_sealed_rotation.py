@@ -5,7 +5,6 @@ import importlib.util
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import parse_plm_sealed_fixture  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 GENERATOR_PATH = ROOT / "build" / "generate_plm_sealed_v5.py"
@@ -237,7 +237,7 @@ def _refresh_readiness_review() -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     gate = _validate_step5_gate()
     payload = _write_fixture()
     fixture = parse_plm_sealed_fixture(payload)

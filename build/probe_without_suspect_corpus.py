@@ -7,7 +7,6 @@ training corpus, or any sealed fixture.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -15,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import run_core_shadow
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.accumulation_review_store import (
     campaign_sha256,
     review_overlay,
@@ -141,7 +141,7 @@ def main() -> None:
     model = IntentModel.train(filtered_examples)
     metrics = evaluate_intent_kfold(filtered_examples)
     model.metadata["metrics"] = metrics
-    model.metadata["trained_at"] = datetime.now(timezone.utc).isoformat()
+    model.metadata["trained_at"] = reproducible_now_iso()
     model.metadata["probe"] = "without_47_suspect_examples"
 
     gate = evaluate_intent_gate(
@@ -154,7 +154,7 @@ def main() -> None:
 
     report = {
         "schema_version": "intent-corpus-suspect-ablation-probe.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "mutation": "exclude_all_47_suspect_examples_from_training_only",
         "writes_deployed_model": False,
         "active_sealed_v2_read": False,

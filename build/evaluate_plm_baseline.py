@@ -4,7 +4,6 @@ import hashlib
 import json
 import sqlite3
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +14,7 @@ from semantic_routing import (
     extract_semantic_packet,
     load_plm_benchmark,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 BENCHMARK_PATH = (
@@ -95,7 +95,7 @@ def main() -> None:
     )
     report = {
         "schema_version": "pattern-language-baseline-report.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "benchmark": {
             "path": str(BENCHMARK_PATH.relative_to(ROOT)),
             "sha256": hashlib.sha256(benchmark_bytes).hexdigest(),

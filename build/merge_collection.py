@@ -10,7 +10,6 @@ import io
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,8 +18,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from semantic_routing.collection_store import (
     DEFAULT_CORPUS, DEFAULT_STAGING, approved_corpus_examples,
-    load_campaign_inputs, load_corpus_inputs, load_staging, normalize,
+    load_campaign_inputs, load_staging, normalize,
 )
+from semantic_routing.reproducibility import reproducible_now, reproducible_now_iso
 
 CORPUS = ROOT / DEFAULT_CORPUS
 
@@ -45,7 +45,7 @@ def main() -> None:
     dup = len(approved) - len(fresh)
 
     backup = CORPUS.with_name(
-        f"intent_training_corpus_v1.pre-merge-{datetime.now(timezone.utc):%Y%m%dT%H%M%S}.json"
+        f"intent_training_corpus_v1.pre-merge-{reproducible_now():%Y%m%dT%H%M%S}.json"
     )
     backup.write_text(CORPUS.read_text(encoding="utf-8"), encoding="utf-8")
 
@@ -55,7 +55,7 @@ def main() -> None:
         "total": len(corpus["examples"]),
         "by_intent": dict(sorted(by_intent.items())),
     }
-    corpus["generated_at"] = datetime.now(timezone.utc).isoformat()
+    corpus["generated_at"] = reproducible_now_iso()
     note = corpus.get("note", "")
     corpus["note"] = (note + " | merged real-log batch "
                       f"+{len(fresh)} ({staging.get('provenance')})").strip(" |")

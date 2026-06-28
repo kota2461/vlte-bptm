@@ -8,7 +8,6 @@ Processing Router, Core shadow bridge, and the frozen Legacy Router.
 import json
 import sys
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Tuple
 
@@ -22,6 +21,7 @@ from semantic_routing import (
     extract_semantic_packet,
     run_core_shadow,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 MODEL_PATH = ROOT / "build" / "pattern_router_model.json"
@@ -259,7 +259,7 @@ def main() -> None:
 
     report = {
         "schema_version": "conversation-smoke-report.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "scope": (
             "deterministic Semantic Adapter -> Processing Router -> "
             "Core shadow; answer generation is not evaluated"

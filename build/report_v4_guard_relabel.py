@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +13,7 @@ REPORT_PATH = ROOT / "build" / "v4_guard_relabel_implementation_report.json"
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 def _rel(path: Path) -> str:
@@ -75,7 +75,7 @@ def main() -> None:
     }
     report = {
         "schema_version": "v4-guard-relabel-implementation-report.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "policy": {
             "sealed_fixtures_used_as_sources": False,
             "success_pattern_lane_write_allowed": False,

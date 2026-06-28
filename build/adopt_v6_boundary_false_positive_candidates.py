@@ -7,7 +7,6 @@ improvements and replay checks.
 
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "v6_boundary_false_positive_candidate_benchmark_v1.json"
 SOURCE_REPORT_PATH = ROOT / "build" / "v6_boundary_false_positive_candidate_report_v1.json"
@@ -69,7 +69,7 @@ def assert_ready_for_adoption(source_benchmark: dict[str, Any], source_report: d
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     source_benchmark = load_json(SOURCE_BENCHMARK_PATH)
     source_report = load_json(SOURCE_REPORT_PATH)
     parse_plm_benchmark(source_benchmark)

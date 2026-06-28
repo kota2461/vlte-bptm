@@ -2,7 +2,6 @@
 
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +13,7 @@ ADOPTION_PATH = ROOT / "build" / "v4_failure_memory_adoption_v1.json"
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 def _packet_dict(routed: Any) -> dict[str, Any]:
@@ -74,7 +74,7 @@ def main() -> None:
 
     report = {
         "schema_version": "v4-failure-memory-replay.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "fixture": str(FIXTURE_PATH.relative_to(ROOT)),
         "summary": {
             "item_count": len(measurements),

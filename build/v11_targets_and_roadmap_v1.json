@@ -1,6 +1,6 @@
 {
   "schema_version": "v11-targets-and-roadmap.v1",
-  "generated_at": "2026-06-28T07:52:02.349982+00:00",
+  "generated_at": "2026-06-28T08:11:14.567855+00:00",
   "status": "step1_post_v10_value_diff_transfer_taxonomy_completed_step2_curriculum_next",
   "sources": {
     "sealed_v10_measurement": "build\\pattern_language_sealed_v10_measurement_report.json",
@@ -904,7 +904,7 @@
   },
   "profile_literal_patch_audit": {
     "schema_version": "v11-profile-literal-patch-audit.v1",
-    "generated_at": "2026-06-28T07:52:01.925579+00:00",
+    "generated_at": "2026-06-28T08:11:14.076956+00:00",
     "status": "literal_profile_patch_overfit_confirmed",
     "policy": {
       "diagnostic_only": true,
@@ -1055,7 +1055,7 @@
   },
   "code_audit_triage": {
     "schema_version": "v11-code-audit-triage.v1",
-    "generated_at": "2026-06-28T07:52:01.169960+00:00",
+    "generated_at": "2026-06-28T08:11:13.348151+00:00",
     "status": "step1b_baseline_source_recovery_completed",
     "source_report": {
       "attachment_available": true,

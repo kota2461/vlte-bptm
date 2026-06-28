@@ -1,6 +1,6 @@
 {
   "schema_version": "v7-targets-and-roadmap.v1",
-  "generated_at": "2026-06-28T07:52:05.841561+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "step8_sealed_v7_measurement_completed_v8_rotation_required",
   "sources": {
     "sealed_v6_measurement": "build\\pattern_language_sealed_v6_measurement_report.json",

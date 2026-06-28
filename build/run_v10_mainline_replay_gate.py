@@ -9,7 +9,6 @@ measure any sealed fixture.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -17,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 V9_GATE_PATH = ROOT / "build" / "v9_nonsealed_replay_gate_report_v1.json"
@@ -143,7 +143,7 @@ def build_report() -> dict[str, Any]:
     passed = summary["ready_for_step4_sealed_v10_rotation_review"] and policy_ok
     report = {
         "schema_version": "v10-mainline-replay-gate-report.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "passed" if passed else "failed",
         "passed": passed,
         "sources": {

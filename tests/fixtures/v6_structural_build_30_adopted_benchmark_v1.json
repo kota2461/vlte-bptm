@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:05.236249+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "V6 structural build-vs-respond candidates adopted after user confirmation; short prompts synthesized from non-sealed router debate topic metadata",
   "review_status": "human_reviewed",
   "policy": "Human-reviewed non-sealed structural-build replay lane. Raw debate turns are not direct training data. This is not a sealed fixture, not a promotion gate, and not same-cycle promotion evidence.",

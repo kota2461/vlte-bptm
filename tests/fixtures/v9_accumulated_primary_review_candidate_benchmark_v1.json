@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:07.716519+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "User-confirmed V9 primary_review 34-row set rewritten into short self-contained non-sealed samples from selection metadata; raw debate prose excluded",
   "review_status": "human_reviewed",
   "policy": "Human-reviewed non-sealed replay lane. Raw Gemma/Qwen debate turns are not training data. Only the 34 primary_review rows are used; rerun_before_use and reserve_review rows are excluded. This is not a sealed fixture, not gate evidence, and not same-cycle promotion evidence.",

@@ -3,12 +3,13 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+
+from semantic_routing.reproducibility import reproducible_now_iso
 PLAN_PATH = ROOT / "build" / "v5_nonsealed_curriculum_plan_v1.json"
 FIXTURE_PATH = ROOT / "tests" / "fixtures" / "v5_critical_operations_fixture_v1.json"
 REPORT_PATH = ROOT / "build" / "v5_critical_operations_fixture_report_v1.json"
@@ -145,7 +146,7 @@ def _summaries(cases: List[Dict[str, Any]]) -> Dict[str, Any]:
 def _benchmark_payload(cases: List[Dict[str, Any]]) -> Dict[str, Any]:
     return {
         "schema_version": "pattern-language-benchmark.v1",
-        "frozen_at": datetime.now(timezone.utc).isoformat(),
+        "frozen_at": reproducible_now_iso(),
         "authoring_method": "self-authored non-sealed V5 draft fixture; no sealed text, labels, teacher answers, logits, or hidden reasoning",
         "review_status": "draft",
         "policy": "Non-sealed challenge fixture for V5 Step 3. Human review is required before gate use.",
@@ -211,7 +212,7 @@ def main() -> None:
     plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
     cases = _cases()
     summary = _summaries(cases)
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
     payload = {
         "schema_version": "v5-critical-operations-fixture.v1",
         "fixture_id": "v5-critical-operations-fixture-v1",

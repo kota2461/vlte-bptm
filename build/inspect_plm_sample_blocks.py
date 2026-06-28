@@ -7,8 +7,7 @@ rules, or sealed measurement state. Sealed fixtures are intentionally excluded.
 import json
 import re
 import sys
-from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import extract_semantic_packet, load_plm_benchmark  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 OUTPUT_JSON = ROOT / "build" / "plm_sample_block_negative_scan_v1.json"
 OUTPUT_MD = ROOT / "build" / "plm_sample_block_negative_scan_v1.md"
@@ -454,7 +454,7 @@ def main() -> None:
     }
     report = {
         "schema_version": "plm-sample-block-negative-scan.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "diagnostic_completed_no_mutation",
         "policy": {
             "diagnostic_only": True,

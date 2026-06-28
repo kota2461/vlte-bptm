@@ -3,13 +3,13 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from semantic_routing import evaluate_plm_extractor
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.adapter import route
 from semantic_routing.benchmark import parse_plm_benchmark
 FIXTURE_PATH = ROOT / "tests" / "fixtures" / "v5_critical_operations_fixture_v1.json"
@@ -99,7 +99,7 @@ def main() -> None:
     after = _compact(after_full)
     delta = {key: round(after[key] - before[key], 6) for key in METRIC_KEYS}
     delta["error_count"] = after["error_count"] - before["error_count"]
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
 
     report = {
         "schema_version": "v5-router-generalization-report.v1",

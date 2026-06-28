@@ -8,7 +8,6 @@ quarantine baseline.
 
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "build"))
 
-from semantic_routing.intent_model import load_intent_corpus  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 import analyze_intent_data_cleaning_impact as impact  # noqa: E402
 
 CORPUS_PATH = ROOT / "data" / "intent_training_corpus_v1.json"
@@ -261,7 +260,7 @@ def main() -> None:
 
     report = {
         "schema_version": "intent-pruning-candidates-post-quarantine.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "policy": {
             "diagnostic_only": True,
             "sealed_fixtures_used": False,

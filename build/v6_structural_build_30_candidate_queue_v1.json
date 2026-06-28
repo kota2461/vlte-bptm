@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-structural-build-30-candidate-queue.v1",
-  "generated_at": "2026-06-28T07:52:05.522881+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "candidate_queue_ready_for_human_review",
   "target_set": "structural_build_repair_30",
   "source_review": "build/router_debate_v6_structural_build_30_review_with_rerun_v1.json",

@@ -10,7 +10,6 @@ router diagnostically.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_SELECTION_PATH = ROOT / "build" / "v10_thought_color_bridge_candidate_selection_v1.json"
 ISOLATED_BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "v10_thought_color_bridge_isolated_benchmark_v1.json"
@@ -246,7 +246,7 @@ def build_outputs() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         raise ValueError("bridge rows must be review-only before rewrite adoption")
 
     cases = _build_cases(primary_rows)
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
     benchmark_payload = {
         "schema_version": "pattern-language-benchmark.v1",
         "frozen_at": now,

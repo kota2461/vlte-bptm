@@ -10,7 +10,6 @@ import hashlib
 import json
 import runpy
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -29,6 +28,7 @@ from semantic_routing import (  # noqa: E402
     parse_puzzle_failure_memory,
     route,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "pattern_language_benchmark_v1.json"
@@ -252,7 +252,7 @@ def _update_adoption(now: str, candidate: dict[str, Any], rotation: dict[str, An
 
 
 def main() -> None:
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
     visible = _visible_plm_eval()
     guard = _failure_guard_eval()
     puzzle = _puzzle_failure_eval()

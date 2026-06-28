@@ -1,6 +1,6 @@
 {
   "schema_version": "v10-thought-color-bridge-isolated-adoption-decision.v1",
-  "generated_at": "2026-06-28T07:52:00.907594+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "adopted_for_isolated_provisional_replay",
   "review_status": "human_reviewed_for_isolated_rewrite",
   "adopted_count": 72,

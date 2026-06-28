@@ -9,7 +9,6 @@ and writes build/intent_model_v1_candidate.json. Does NOT deploy.
 import io
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from semantic_routing.intent_model import IntentModel, load_intent_corpus
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.intent_deployment import evaluate_intent_kfold, DEFAULT_CANDIDATE
 
 CORPUS = ROOT / "data" / "intent_training_corpus_v1.json"
@@ -28,7 +28,7 @@ def main() -> None:
     metrics = evaluate_intent_kfold(examples)
     model = IntentModel.train(examples)
     model.metadata["metrics"] = metrics
-    model.metadata["trained_at"] = datetime.now(timezone.utc).isoformat()
+    model.metadata["trained_at"] = reproducible_now_iso()
     model.save(OUT)
 
     print(f"candidate -> {OUT.name}")

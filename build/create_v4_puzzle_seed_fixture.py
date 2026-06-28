@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +19,7 @@ from semantic_routing.puzzle_task import (  # noqa: E402
     PUZZLE_OPERATIONS,
     parse_puzzle_task_seed,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 def _rel(path: Path) -> str:
@@ -289,7 +289,7 @@ def _update_adoption(summary: dict[str, Any]) -> None:
 def main() -> None:
     tasks = _seed_tasks()
     summary = _summary(tasks)
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     payload = {
         "schema_version": "v4-puzzle-task-seed.v1",
         "generated_at": generated_at,

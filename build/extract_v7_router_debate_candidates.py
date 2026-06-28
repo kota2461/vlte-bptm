@@ -8,7 +8,6 @@ route() replay.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_LOG_PATH = ROOT / "build" / "v7_router_repair_debate_run.json"
 FIXTURE_PATH = ROOT / "tests" / "fixtures" / "v7_router_debate_candidate_fixture_v1.json"
@@ -465,7 +465,7 @@ def _write_worksheet(fixture: dict[str, Any], selection: dict[str, Any], report:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     source_log = _load(SOURCE_LOG_PATH)
     cases = _cases(source_log)
     summary = _summary(cases)

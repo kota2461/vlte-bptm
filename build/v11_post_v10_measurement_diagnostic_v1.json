@@ -1,6 +1,6 @@
 {
   "schema_version": "v11-post-v10-measurement-diagnostic.v1",
-  "generated_at": "2026-06-28T07:52:02.182590+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "diagnostic_completed_v11_step1_ready",
   "sources": {
     "sealed_v10_measurement": "build\\pattern_language_sealed_v10_measurement_report.json",

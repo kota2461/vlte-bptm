@@ -5,7 +5,6 @@ import importlib.util
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import parse_plm_sealed_fixture  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 GENERATOR_PATH = ROOT / "build" / "generate_plm_sealed_v8.py"
@@ -310,7 +310,7 @@ V8 uses sealed v7 measurement only as aggregate taxonomy. The approved V8 priori
 
 
 def main() -> None:
-    rotated_at = datetime.now(timezone.utc).isoformat()
+    rotated_at = reproducible_now_iso()
     _validate_step6_review()
     fixture = _write_fixture()
     sealed_hash = _sha256(SEALED_V8_PATH)

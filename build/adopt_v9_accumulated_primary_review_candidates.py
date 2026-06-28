@@ -11,7 +11,6 @@ training data. This is not a sealed fixture and not a same-cycle promotion gate.
 import json
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -19,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_SELECTION_PATH = ROOT / "build" / "v9_accumulated_log_candidate_selection_v1.json"
 ADOPTED_BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "v9_accumulated_primary_review_candidate_benchmark_v1.json"
@@ -526,7 +526,7 @@ def _write_worksheet(report: dict[str, Any], results: Sequence[dict[str, Any]]) 
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     selection = _load(SOURCE_SELECTION_PATH)
     if selection["schema_version"] != "v9-accumulated-log-candidate-selection.v1":
         raise ValueError("unsupported V9 accumulated selection schema")

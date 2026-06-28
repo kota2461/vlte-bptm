@@ -16,7 +16,6 @@ import io
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +26,7 @@ from pattern_learning.database import PatternDatabase
 from semantic_routing.conversation_accumulation import (
     load_conversation_accumulation,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.explain_curriculum import explain_examples
 from semantic_routing.intent_conversational_curriculum import (
     conversational_examples,
@@ -150,7 +150,7 @@ def main() -> None:
 
     corpus = {
         "schema_version": "intent-training-corpus.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "note": (
             "6-intent base remapped from approved Pattern DB (already "
             "human-approved as routes); explain set PENDING review. Disjoint "

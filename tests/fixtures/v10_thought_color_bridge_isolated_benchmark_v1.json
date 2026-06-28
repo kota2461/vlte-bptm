@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:00.907594+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "User-approved V10 Thought Color bridge primary_review rows rewritten from packet hints into isolated non-sealed mainline samples; raw Thought Color inputs are not copied into the fixture.",
   "review_status": "human_reviewed",
   "policy": "Quarantined V10 bridge replay lane. Thought Color sources are experiment-only boundary judgments; raw rows are not direct training data. This isolated fixture is not trainable, not sealed, not gate evidence, and not same-cycle promotion evidence.",

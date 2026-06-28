@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
@@ -13,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "build"))
 
 from semantic_routing import evaluate_plm_extractor
+from semantic_routing.reproducibility import reproducible_now_iso
 from semantic_routing.adapter import route
 from semantic_routing.benchmark import parse_plm_benchmark
 from v7_measurement_state import preserve_step8_measurement_state  # noqa: E402
@@ -101,7 +101,7 @@ def main() -> None:
     after = _compact(after_full)
     delta = {key: round(after[key] - before[key], 6) for key in METRIC_KEYS}
     delta["error_count"] = after["error_count"] - before["error_count"]
-    now = datetime.now(timezone.utc).isoformat()
+    now = reproducible_now_iso()
     meets_step5_entry_threshold = (
         after["intent_accuracy"] >= 0.95
         and after["critical_signal_recall"] >= 0.90

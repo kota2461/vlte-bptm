@@ -1,6 +1,6 @@
 {
   "schema_version": "v7-router-debate-candidate-selection.v1",
-  "generated_at": "2026-06-28T07:52:06.143261+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "source_log": "build/v7_router_repair_debate_run.json",
   "status": "candidate_queue_prepared_from_nonsealed_debate_log",
   "policy": {

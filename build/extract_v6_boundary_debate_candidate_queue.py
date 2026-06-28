@@ -8,7 +8,6 @@ contrast_negative_repair topics after they are run.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_LOG_PATH = ROOT / "build" / "router_debate_live_31stock_r3.json"
 TOPICS_PATH = ROOT / "debate_lab" / "topics_seed.json"
@@ -480,7 +480,7 @@ def write_worksheet(payload: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     source = load_json(SOURCE_LOG_PATH)
     topics_payload = load_json(TOPICS_PATH)
     metadata_by_id = {topic["id"]: topic for topic in topics_payload["topics"]}

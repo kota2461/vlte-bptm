@@ -8,7 +8,6 @@ approve before training or gate use.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 CANDIDATE_FIXTURE_PATH = ROOT / "tests" / "fixtures" / "v6_router_debate_candidate_fixture_v1.json"
 SELECTION_PATH = ROOT / "build" / "v6_router_debate_candidate_selection_v1.json"
@@ -162,7 +162,7 @@ def _write_worksheet(plan: dict[str, Any], benchmark: dict[str, Any], report: di
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     candidate_fixture = _load(CANDIDATE_FIXTURE_PATH)
     selection = _load(SELECTION_PATH)
     cases = candidate_fixture["cases"]

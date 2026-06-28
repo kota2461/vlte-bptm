@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-boundary-debate-log-selection.v1",
-  "generated_at": "2026-06-28T07:52:03.781611+00:00",
+  "generated_at": "2026-06-28T08:11:16.027821+00:00",
   "status": "selection_ready_for_human_review",
   "source_log": "build/router_debate_live_31stock_r3.json",
   "source_topics": "debate_lab/topics_seed.json",

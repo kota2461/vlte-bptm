@@ -8,7 +8,6 @@ can be human-reviewed before any training or gate use.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 REVIEW_PATH = ROOT / "build" / "router_debate_v6_structural_build_30_review_with_rerun_v1.json"
 TOPICS_PATH = ROOT / "debate_lab" / "topics_v6_structural_build_30.json"
@@ -407,7 +407,7 @@ def write_worksheet(queue: dict[str, Any], report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     review = load_json(REVIEW_PATH)
     topics_payload = load_json(TOPICS_PATH)
     topics = topics_payload["topics"]

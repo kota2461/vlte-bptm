@@ -1,6 +1,6 @@
 {
   "schema_version": "v10-thought-color-bridge-isolated-replay-report.v1",
-  "generated_at": "2026-06-28T07:52:00.907594+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "completed_with_provisional_scores",
   "source_selection": "build\\v10_thought_color_bridge_candidate_selection_v1.json",
   "isolated_benchmark": "tests\\fixtures\\v10_thought_color_bridge_isolated_benchmark_v1.json",

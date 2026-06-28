@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-boundary-priority-review-adopted-replay-report.v1",
-  "generated_at": "2026-06-28T07:52:04.617877+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "completed_without_route_gaps",
   "adoption_decision": "build/v6_boundary_priority_review_adoption_decision_v1.json",
   "adopted_benchmark": "tests/fixtures/v6_boundary_priority_review_adopted_benchmark_v1.json",

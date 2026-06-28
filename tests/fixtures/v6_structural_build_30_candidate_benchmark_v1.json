@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:05.522881+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "Manual short-prompt synthesis from V6 structural build debate review; non-sealed draft",
   "review_status": "draft",
   "policy": "Non-sealed candidate lane. Human review required before training; not a gate or sealed measurement.",

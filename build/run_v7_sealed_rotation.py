@@ -5,7 +5,6 @@ import importlib.util
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +14,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "build"))
 
 from semantic_routing import parse_plm_sealed_fixture  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 from v7_measurement_state import preserve_step8_measurement_state  # noqa: E402
 
 
@@ -341,7 +341,7 @@ def _preserve_step8_state() -> None:
 
 
 def main() -> None:
-    rotated_at = datetime.now(timezone.utc).isoformat()
+    rotated_at = reproducible_now_iso()
     review = _validate_step6_review()
     fixture = _write_fixture()
     sealed_hash = _sha256(SEALED_V7_PATH)

@@ -7,7 +7,6 @@ self-contained topic prompts synthesized from the debate topic metadata.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_LOG_PATH = ROOT / "build" / "router_debate_live_31stock_r3.json"
 REPORT_PATH = ROOT / "build" / "v6_router_debate_candidate_probe_report_v1.json"
@@ -371,7 +371,7 @@ def write_worksheet(fixture: dict[str, Any], selection: dict[str, Any], report: 
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     source = json.loads(SOURCE_LOG_PATH.read_text(encoding="utf-8"))
     topics_by_id = {topic["topic_id"]: topic for topic in source["topics"]}
 

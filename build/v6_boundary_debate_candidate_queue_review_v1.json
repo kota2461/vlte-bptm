@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-boundary-debate-candidate-queue-review.v1",
-  "generated_at": "2026-06-28T07:52:03.661342+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "review_ready_for_human_decision",
   "source_queue": "build/v6_boundary_debate_candidate_queue_v1.json",
   "worksheet": "build/v6_boundary_debate_candidate_queue_review_v1.md",

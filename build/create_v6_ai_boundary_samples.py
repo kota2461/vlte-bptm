@@ -3,7 +3,6 @@
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 FIXTURE_PATH = ROOT / "tests" / "fixtures" / "v6_ai_boundary_candidate_fixture_v1.json"
 REPORT_PATH = ROOT / "build" / "v6_ai_boundary_sample_set_report_v1.json"
@@ -482,7 +482,7 @@ def write_worksheet(fixture: dict[str, Any], report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     source = find_source_file()
     source_line_count = 0
     if source is not None:

@@ -8,7 +8,6 @@ non-training/non-gate until human review.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 QUEUE_PATH = ROOT / "build" / "v6_boundary_debate_candidate_queue_v1.json"
 WORKSHEET_PATH = ROOT / "build" / "v6_boundary_debate_candidate_queue_v1.md"
@@ -339,7 +339,7 @@ def write_worksheet(payload: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     queue = load_json(QUEUE_PATH)
     repair_log = load_json(REPAIR_LOG_PATH)
     topics = load_json(TOPICS_PATH)

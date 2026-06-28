@@ -8,7 +8,6 @@ benchmark lane. It is not a sealed fixture, gate, or direct training corpus.
 import json
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import evaluate_plm_extractor, parse_plm_benchmark, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 SOURCE_REVIEW_PATH = ROOT / "build" / "v6_boundary_debate_candidate_queue_review_v1.json"
 ADOPTED_BENCHMARK_PATH = ROOT / "tests" / "fixtures" / "v6_boundary_priority_review_adopted_benchmark_v1.json"
@@ -213,7 +213,7 @@ def write_worksheet(items: Sequence[dict[str, Any]], report: dict[str, Any]) -> 
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = reproducible_now_iso()
     review = load_json(SOURCE_REVIEW_PATH)
     if review["schema_version"] != "v6-boundary-debate-candidate-queue-review.v1":
         raise ValueError("unsupported review report schema")

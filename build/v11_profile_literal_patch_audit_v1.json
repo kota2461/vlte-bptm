@@ -1,6 +1,6 @@
 {
   "schema_version": "v11-profile-literal-patch-audit.v1",
-  "generated_at": "2026-06-28T07:52:01.925579+00:00",
+  "generated_at": "2026-06-28T08:11:14.076956+00:00",
   "status": "literal_profile_patch_overfit_confirmed",
   "policy": {
     "diagnostic_only": true,

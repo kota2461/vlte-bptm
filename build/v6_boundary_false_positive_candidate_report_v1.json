@@ -1,6 +1,6 @@
 {
   "schema_version": "v6-boundary-false-positive-candidate-report.v1",
-  "generated_at": "2026-06-28T07:52:04.331599+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "candidate_lane_ready_for_human_review",
   "benchmark": "tests/fixtures/v6_boundary_false_positive_candidate_benchmark_v1.json",
   "worksheet": "build/v6_boundary_false_positive_candidate_review_worksheet_v1.md",
@@ -97,7 +97,7 @@
   },
   "candidate_artifact": {
     "schema_version": "v6-boundary-false-positive-candidate-artifact.v1",
-    "created_at": "2026-06-28T07:52:04.331599+00:00",
+    "created_at": "2026-01-01T00:00:00+00:00",
     "status": "draft_candidate_ready_for_human_review",
     "review_status": "draft",
     "policy": {

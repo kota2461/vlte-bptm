@@ -1,6 +1,6 @@
 {
   "schema_version": "v9-constraint-operation-extension-replay-report.v1",
-  "generated_at": "2026-06-28T07:52:07.997144+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "completed_without_route_gaps",
   "adopted_benchmark": "tests/fixtures/v9_constraint_operation_extension_benchmark_v1.json",
   "worksheet": "build/v9_constraint_operation_extension_worksheet_v1.md",

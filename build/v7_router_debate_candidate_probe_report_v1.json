@@ -1,6 +1,6 @@
 {
   "schema_version": "v7-router-debate-candidate-probe-report.v1",
-  "generated_at": "2026-06-28T07:52:06.143261+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "draft_candidate_probe_completed_not_a_gate",
   "candidate_readiness": true,
   "adoption_readiness": true,

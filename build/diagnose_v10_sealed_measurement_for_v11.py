@@ -8,7 +8,6 @@ promotion evidence.
 import json
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -17,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from semantic_routing import parse_plm_sealed_fixture, route  # noqa: E402
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 SEALED_V10_PATH = ROOT / "tests" / "fixtures" / "pattern_language_sealed_v10.json"
@@ -323,7 +323,7 @@ def build_payload() -> dict[str, Any]:
 
     return {
         "schema_version": "v11-post-v10-measurement-diagnostic.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "diagnostic_completed_v11_step1_ready",
         "sources": {
             "sealed_v10_measurement": _rel(MEASUREMENT_PATH),

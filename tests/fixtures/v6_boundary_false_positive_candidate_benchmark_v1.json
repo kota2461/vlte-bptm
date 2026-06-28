@@ -1,6 +1,6 @@
 {
   "schema_version": "pattern-language-benchmark.v1",
-  "frozen_at": "2026-06-28T07:52:04.331599+00:00",
+  "frozen_at": "2026-01-01T00:00:00+00:00",
   "authoring_method": "Manual short-prompt synthesis from V6 boundary debate log selection; non-sealed draft",
   "review_status": "draft",
   "policy": "Non-sealed false-positive candidate lane. Human review required before training; not a gate or sealed measurement.",

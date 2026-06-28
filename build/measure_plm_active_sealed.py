@@ -10,7 +10,6 @@ uses this report.
 import hashlib
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
@@ -25,6 +24,7 @@ from semantic_routing import (  # noqa: E402
     parse_plm_sealed_fixture,
     route,
 )
+from semantic_routing.reproducibility import reproducible_now_iso
 
 
 REGISTRY_PATH = (
@@ -90,7 +90,7 @@ def _update_registry(
 
 
 def main() -> None:
-    measured_at = datetime.now(timezone.utc).isoformat()
+    measured_at = reproducible_now_iso()
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
     registry_name, entry = _active_fixture(registry)
     if entry["measured"] or entry["reviewed"]:

@@ -1,6 +1,6 @@
 {
   "schema_version": "v7-nonsealed-replay-gate-report.v1",
-  "generated_at": "2026-06-28T07:52:05.841561+00:00",
+  "generated_at": "2026-01-01T00:00:00+00:00",
   "status": "passed",
   "passed": true,
   "policy": {

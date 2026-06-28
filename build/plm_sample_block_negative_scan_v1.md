@@ -1,6 +1,6 @@
 # PLM Sample Block Negative Scan v1
 
-Generated: 2026-06-28T07:51:58.482270+00:00
+Generated: 2026-01-01T00:00:00+00:00
 
 ## Policy
 
