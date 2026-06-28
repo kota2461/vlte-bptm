@@ -1,11 +1,13 @@
 """Create the V8 recovery 100-topic round-4 debate stock."""
 
 import json
-from datetime import datetime, timezone
+import sys
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from semantic_routing.reproducibility import reproducible_now_iso
 OUTPUT_PATH = ROOT / "debate_lab" / "topics_v8_recovery_100.json"
 
 CATEGORY_CASES: list[tuple[str, str, str, list[tuple[str, str, list[str], str]]]] = [
@@ -218,7 +220,7 @@ def main() -> None:
     payload = {
         "schema_version": "router-debate-topics.v1",
         "purpose": "V8 recovery round-4 debate stock after sealed v7 measurement misses",
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": reproducible_now_iso(),
         "source_measurement": "build/pattern_language_sealed_v7_measurement_report.json",
         "policy": {
             "sealed_text_used": False,

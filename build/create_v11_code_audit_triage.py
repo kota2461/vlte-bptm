@@ -6,11 +6,13 @@ training data, fixtures, or sealed state.
 
 import hashlib
 import json
-from datetime import datetime, timezone
+import sys
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from semantic_routing.reproducibility import reproducible_now_iso
 BASELINE_PATH = ROOT / "semantic_routing" / "baseline.py"
 KNOWLEDGE_INDEX_PATH = ROOT / "semantic_routing" / "knowledge_index.py"
 CACHE = ROOT / "semantic_routing" / "__pycache__"
@@ -135,7 +137,7 @@ def build_payload() -> dict[str, Any]:
     )
     return {
         "schema_version": "v11-code-audit-triage.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "p0_baseline_source_recovery_required" if blockers else "step1b_baseline_source_recovery_completed",
         "source_report": {
             "attachment_available": ATTACHMENT_PATH.exists(),

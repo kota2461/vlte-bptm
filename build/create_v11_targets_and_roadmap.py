@@ -6,12 +6,14 @@ not training data, not a replay gate, and not same-cycle promotion evidence.
 """
 
 import json
-from datetime import datetime, timezone
+import sys
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from semantic_routing.reproducibility import reproducible_now_iso
 V10_MEASUREMENT_PATH = ROOT / "build" / "pattern_language_sealed_v10_measurement_report.json"
 V10_TARGETS_PATH = ROOT / "build" / "v10_targets_and_roadmap_v1.json"
 V10_DIAGNOSTIC_PATH = ROOT / "build" / "v11_post_v10_measurement_diagnostic_v1.json"
@@ -356,7 +358,7 @@ def build_payload() -> dict[str, Any]:
     metrics = measurement["measurements"]
     return {
         "schema_version": "v11-targets-and-roadmap.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": ("step1_post_v10_value_diff_transfer_taxonomy_completed_p0_source_recovery_next" if code_audit_triage and code_audit_triage.get("step2_blockers") else "step1_post_v10_value_diff_transfer_taxonomy_completed_step2_curriculum_next"),
         "sources": {
             "sealed_v10_measurement": _rel(V10_MEASUREMENT_PATH),

@@ -6,13 +6,15 @@ as roadmap evidence. It does not copy sealed case text or labels.
 """
 
 import json
+import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from semantic_routing.reproducibility import reproducible_now_iso
 MEASUREMENT_PATH = ROOT / "build" / "pattern_language_sealed_v7_measurement_report.json"
 READINESS_PATH = ROOT / "build" / "plm_measurement_readiness_review.json"
 REGISTRY_PATH = ROOT / "tests" / "fixtures" / "pattern_language_fixture_registry.json"
@@ -247,7 +249,7 @@ def build_payload() -> dict[str, Any]:
 
     return {
         "schema_version": "v8-targets-and-roadmap.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "step5_v8_nonsealed_replay_gate_passed_step6_rotation_review_next",
         "sources": {
             "sealed_v7_measurement": _rel(MEASUREMENT_PATH),

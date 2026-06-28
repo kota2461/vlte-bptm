@@ -8,11 +8,13 @@ general routing model. The report is diagnostic metadata only.
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+import sys
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from semantic_routing.reproducibility import reproducible_now_iso
 INSPECTION_PATH = ROOT / "build" / "baseline_pyc_recovery_inspection_v1.json"
 DISASSEMBLY_PATH = ROOT / "build" / "baseline_pyc_recovery_disassembly_v1.txt"
 OUTPUT_JSON = ROOT / "build" / "v11_profile_literal_patch_audit_v1.json"
@@ -97,7 +99,7 @@ def build_payload() -> dict[str, Any]:
     }
     return {
         "schema_version": "v11-profile-literal-patch-audit.v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": reproducible_now_iso(),
         "status": "literal_profile_patch_overfit_confirmed",
         "policy": {
             "diagnostic_only": True,
