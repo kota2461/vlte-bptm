@@ -6,6 +6,11 @@ __pycache__/
 pytest-cache-files-*/
 *.egg-info/
 
+# Tracked exception: legacy baseline bytecode is the source of truth for
+# baseline_snapshot.py recovery (S2). See build/recovery_assets/README.md.
+!build/recovery_assets/
+!build/recovery_assets/baseline_legacy_cpython310.pyc
+
 # --- runtime data / models produced at runtime ---
 data/*.db
 data/*.db-*

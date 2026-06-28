@@ -21,7 +21,11 @@ sys.path.insert(0, str(ROOT))
 from semantic_routing.baseline_snapshot import LEGACY_PACKET_BY_DIGEST
 from semantic_routing.semantic_packet import request_digest
 
-PYC_PATH = ROOT / "semantic_routing" / "__pycache__" / "baseline.cpython-310.pyc.2207508733360"
+# Legacy baseline bytecode, preserved under version control (S2). Previously
+# this pointed at an ignored __pycache__ blob with a nondeterministic numeric
+# suffix, which made baseline_snapshot.py unreproducible from a clean clone.
+# See build/recovery_assets/README.md for provenance (sha256, original path).
+PYC_PATH = ROOT / "build" / "recovery_assets" / "baseline_legacy_cpython310.pyc"
 SNAPSHOT_PATH = ROOT / "semantic_routing" / "baseline_snapshot.py"
 REPORT_PATH = ROOT / "build" / "v11_baseline_source_recovery_report_v1.json"
 EXTENSION_REPORT_PATH = ROOT / "build" / "baseline_source_recovery_snapshot_extension_v1.json"
