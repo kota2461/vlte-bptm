@@ -1,5 +1,6 @@
 ﻿import json
 import subprocess
+import pytest
 import sys
 from collections import Counter
 from pathlib import Path
@@ -22,6 +23,19 @@ def _load(path: Path):
 
 def _normalize(text: str) -> str:
     return " ".join(text.split()).lower()
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _regenerate_artifact():
+    """Regenerate the build/ artifact before the read-asserts so these tests do
+    not depend on stale on-disk state left by a prior test or manual run (S4)."""
+    subprocess.run(
+        [sys.executable, "-B", str(SCRIPT_PATH)],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
+    )
 
 
 def test_v10_bridge_isolated_adoption_contract() -> None:

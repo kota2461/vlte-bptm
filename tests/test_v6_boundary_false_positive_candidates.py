@@ -1,5 +1,6 @@
 import json
 import subprocess
+import pytest
 import sys
 from pathlib import Path
 
@@ -15,6 +16,19 @@ WORKSHEET_PATH = ROOT / "build" / "v6_boundary_false_positive_candidate_review_w
 
 def _load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _regenerate_artifact():
+    """Regenerate the build/ artifact before the read-asserts so these tests do
+    not depend on stale on-disk state left by a prior test or manual run (S4)."""
+    subprocess.run(
+        [sys.executable, "-B", str(SCRIPT_PATH)],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
+    )
 
 
 def test_v6_boundary_false_positive_benchmark_is_plm_draft() -> None:

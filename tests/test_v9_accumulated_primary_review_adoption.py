@@ -1,5 +1,6 @@
 import json
 import subprocess
+import pytest
 import sys
 from collections import Counter
 from pathlib import Path
@@ -18,6 +19,19 @@ WORKSHEET_PATH = ROOT / "build" / "v9_accumulated_primary_review_worksheet_v1.md
 
 def _load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _regenerate_artifact():
+    """Regenerate the build/ artifact before the read-asserts so these tests do
+    not depend on stale on-disk state left by a prior test or manual run (S4)."""
+    subprocess.run(
+        [sys.executable, "-B", str(SCRIPT_PATH)],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
+    )
 
 
 def test_v9_primary_review_adoption_uses_only_34_selected_rows() -> None:

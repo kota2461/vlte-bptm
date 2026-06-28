@@ -1,5 +1,6 @@
 ﻿import json
 import subprocess
+import pytest
 import sys
 from pathlib import Path
 
@@ -48,6 +49,19 @@ def _measurement_for_lane(lane):
     else:
         cases = parse_plm_benchmark(_fixture_payload(payload)).cases
     return evaluate_plm_extractor(cases, lambda text: route(text).packet)
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _regenerate_artifact():
+    """Regenerate the build/ artifact before the read-asserts so these tests do
+    not depend on stale on-disk state left by a prior test or manual run (S4)."""
+    subprocess.run(
+        [sys.executable, "-B", str(SCRIPT_PATH)],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
+    )
 
 
 def test_v7_nonsealed_replay_gate_passes_contract() -> None:
