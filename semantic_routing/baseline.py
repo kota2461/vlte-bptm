@@ -142,7 +142,10 @@ def _intent_scores(text: str) -> tuple[list[IntentCandidate], list[tuple[str, in
     lower = text.casefold()
     if re.search(r"\b(?:build|create|draft|write|make|design|patch|fix|implement)\b", text, re.I):
         scores["build"] = max(scores.get("build", 0.0), 0.9)
-    if re.search(r"\b(?:explain|what is|what does|why|walk me through|causes?)\b", text, re.I):
+    # "what is/what does" are definitional (-> respond), not explanatory; keep
+    # only genuine explanation cues here so "What is a semaphore?" does not route
+    # to explain (the explanation_request marker already omits "what is").
+    if re.search(r"\b(?:explain|why|walk me through|causes?)\b", text, re.I):
         scores["explain"] = max(scores.get("explain", 0.0), 0.9)
     if re.search(r"\b(?:summarize|summary|recap)\b", text, re.I) or "summary" in lower:
         scores["summarize"] = max(scores.get("summarize", 0.0), 0.9)
