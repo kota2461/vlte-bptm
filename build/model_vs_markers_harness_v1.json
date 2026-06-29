@@ -1,0 +1,26 @@
+{
+  "schema_version": "model-vs-markers-harness.v1",
+  "generated_at": "2026-06-29T06:51:57.530103+00:00",
+  "gate_margin": 0.2,
+  "intent_accuracy": {
+    "validation": {
+      "markers_only": 0.964286,
+      "model_only": 0.678571,
+      "model_gated": 0.464286,
+      "hybrid_current": 0.964286
+    },
+    "train": {
+      "markers_only": 0.964286,
+      "model_only": 0.642857,
+      "model_gated": 0.535714,
+      "hybrid_current": 0.964286
+    }
+  },
+  "model_confidence_on_validation": {
+    "confident_count": 14,
+    "validation_total": 28,
+    "confident_rate": 0.5,
+    "precision_when_confident": 0.714286
+  },
+  "note": "validation is held-out (never tuned on); train is a reference ceiling only."
+}
