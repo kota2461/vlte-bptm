@@ -1,0 +1,51 @@
+{
+  "schema_version": "honest-validation-harness.v1",
+  "generated_at": "2026-06-29T06:30:09.556586+00:00",
+  "fixture": "pattern_language_benchmark_v1.json",
+  "split_sizes": {
+    "sealed": 28,
+    "train": 28,
+    "validation": 28
+  },
+  "policy": {
+    "measured_split": "validation",
+    "never_tuned_on": "validation/sealed",
+    "judge_rule": "gate_off validation metrics must rise; fixture 1.000 is not the goal"
+  },
+  "validation_gate_on": {
+    "intent_accuracy": 1.0,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 1.0,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 1.0
+  },
+  "validation_gate_off": {
+    "intent_accuracy": 0.964286,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 0.857143,
+    "constraint_exact_match": 0.964286,
+    "risk_exact_match": 0.892857
+  },
+  "train_gate_off_reference": {
+    "intent_accuracy": 0.964286,
+    "critical_signal_recall": 1.0,
+    "operation_exact_match": 0.857143,
+    "constraint_exact_match": 1.0,
+    "risk_exact_match": 0.928571
+  },
+  "validation_intent_failures_gate_off": [
+    {
+      "id": "plm-validation-verify-04",
+      "input": "Make sure the proposed limit is safe.",
+      "expected_intent": "verify",
+      "predicted_intent": "build"
+    }
+  ],
+  "snapshot_gap_on_minus_off": {
+    "intent_accuracy": 0.035714,
+    "critical_signal_recall": 0.0,
+    "operation_exact_match": 0.142857,
+    "constraint_exact_match": 0.035714,
+    "risk_exact_match": 0.107143
+  }
+}
