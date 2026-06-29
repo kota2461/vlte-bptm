@@ -1,0 +1,18 @@
+{
+  "schema_version": "sealed-fixture-integrity-manifest.v1",
+  "note": "Timestamp-normalized content digests of sealed/blind fixtures. A change here must be a deliberate, reviewed re-seal.",
+  "files": {
+    "tests/fixtures/pattern_language_sealed_v10.json": "61e41557fd32444c060dd59812f6fa797e5072556f6e566644087d3578949cc9",
+    "tests/fixtures/pattern_language_sealed_v2.json": "e0537a79e13dd5a70d6760ecff4aba913e65e428d4593d6aed4986d03427f5b0",
+    "tests/fixtures/pattern_language_sealed_v3.json": "f3c5c91cddd6b54ed637230540a6952fed77eed896d0a94387fb1692439915cb",
+    "tests/fixtures/pattern_language_sealed_v4.json": "97c9312a60a2dc08c3c518aa0ebf0b965ce28f693c35a4b35e8774e6332603c3",
+    "tests/fixtures/pattern_language_sealed_v5.json": "ceb1dcbdb66bae9303161a594907151865554219464ed114c32be8c148bfc165",
+    "tests/fixtures/pattern_language_sealed_v6.json": "a4979289d325447043bc218b70b2b0d3d0759ee1adb6b23af409ac3ffdaefac0",
+    "tests/fixtures/pattern_language_sealed_v7.json": "c929ee25a31625720888cc009ad9bf4b498a7c18f679917e856ab5bc6595031d",
+    "tests/fixtures/pattern_language_sealed_v8.json": "4aae8418f039c02a1aa7a7e48cc8f7c79ac69abd6ac959182637cc02e3c4b98b",
+    "tests/fixtures/pattern_language_sealed_v9.json": "28f594107d6d74a3899d47d52627a1babeb1a0a707a98a5362dff962ab3cc111",
+    "tests/fixtures/sealed_boundary_slice_v1.json": "38426fb383a539f5c4e28f276ffc3ff91384c8418822cfa596c498fa4bc10b53",
+    "tests/fixtures/sealed_boundary_slice_v2.json": "d800f4c4a10959040af44efa331f93219019ced083c3a5a6bdf367cf441c291a",
+    "data/conversation_accumulation_v1.json": "ea439149ec3069e92a5e9058bd346b2be21e6c5c305e5ca686600822ae65557e"
+  }
+}
