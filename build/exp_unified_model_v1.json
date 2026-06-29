@@ -1,7 +1,17 @@
 {
   "schema_version": "exp-unified-model.v1",
-  "generated_at": "2026-06-29T06:58:31.529694+00:00",
-  "train_corpus_size": 739,
+  "generated_at": "2026-06-29T07:14:01.854283+00:00",
+  "base_corpus_size": 739,
+  "extra_pairs_added": 229,
+  "extra_by_intent": {
+    "build": 116,
+    "clarify": 17,
+    "explain": 26,
+    "explore": 11,
+    "respond": 18,
+    "summarize": 16,
+    "verify": 25
+  },
   "labels": [
     "build",
     "clarify",
@@ -12,17 +22,56 @@
     "verify"
   ],
   "results": {
-    "baseline_features": {
+    "corpus_only__baseline_features": {
       "validation_intent_accuracy": 0.678571,
       "train_split_intent_accuracy": 0.714286
     },
-    "unified_features": {
+    "corpus_only__unified_features": {
       "validation_intent_accuracy": 0.928571,
       "train_split_intent_accuracy": 0.964286
+    },
+    "corpus_only__unified_rich": {
+      "validation_intent_accuracy": 0.928571,
+      "train_split_intent_accuracy": 0.928571
+    },
+    "corpus_plus_assets__baseline_features": {
+      "validation_intent_accuracy": 0.714286,
+      "train_split_intent_accuracy": 1.0
+    },
+    "corpus_plus_assets__unified_features": {
+      "validation_intent_accuracy": 1.0,
+      "train_split_intent_accuracy": 1.0
+    },
+    "corpus_plus_assets__unified_rich": {
+      "validation_intent_accuracy": 0.892857,
+      "train_split_intent_accuracy": 1.0
+    }
+  },
+  "kfold5_combined_pool": {
+    "unified_features": {
+      "mean": 0.712793,
+      "folds": [
+        0.71134,
+        0.721649,
+        0.721649,
+        0.746114,
+        0.663212
+      ]
+    },
+    "baseline_features": {
+      "mean": 0.659062,
+      "folds": [
+        0.670103,
+        0.670103,
+        0.664948,
+        0.668394,
+        0.621762
+      ]
     }
   },
   "reference": {
     "markers_only_validation": 0.964286,
     "deployed_model_only_validation": 0.678571
-  }
+  },
+  "honesty_note": "validation is 28 cases from the same benchmark family as the added assets; a 1.000 there is distribution-overfit, not proven real-world generalization. True confirmation needs a fresh sealed set the model has seen nothing similar to. kfold5 is a more robust in-distribution estimate."
 }
