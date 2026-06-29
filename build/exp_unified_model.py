@@ -86,6 +86,9 @@ def _features(text: str, *, mode: str) -> dict[int, float]:
         feats.update(_marker_votes(text))
     elif mode == "rich":
         feats.update(_marker_rich(text))
+    elif mode == "markers_tcfeat":
+        feats.update(_marker_votes(text))
+        feats.update(_tc_feats(text))
     return feats
 
 
@@ -181,6 +184,42 @@ def _kfold(pairs, labels, *, mode: str, k: int = 5) -> dict:
     return {"mean": round(sum(accs) / len(accs), 6), "folds": [round(a, 6) for a in accs]}
 
 
+_TC_DIR = ROOT / "experiments" / "2026-06-26_layered-thought-color"
+_TC_LABELS = {
+    "operation": ("respond", "reason", "compare", "verify", "generate", "remember", "route", "reserve"),
+    "stance": ("neutral", "affirm", "negate", "explore", "clarify", "empathize", "challenge", "reserve"),
+    "intensity": ("low", "medium", "high", "hold"),
+}
+# dedicated, collision-free feature indices for thought-color channels
+_TC_FEAT_BASE = {"operation": DIM + 300, "stance": DIM + 320, "intensity": DIM + 340}
+TC_MODELS: dict | None = None  # built in main() when tc features are used
+
+
+def _build_tc_models():
+    """Train per-channel CentroidClassifiers on the 366 thought-color samples
+    (disjoint from validation/sealed, verified). Returns {channel: model}."""
+    sys.path.insert(0, str(_TC_DIR))
+    from layered_thought_color.model import CentroidClassifier  # noqa: E402
+
+    samples = json.loads((_TC_DIR / "data" / "thought_color_adopted_full_v0_2.json").read_text(encoding="utf-8"))["samples"]
+    models = {}
+    for channel, labels in _TC_LABELS.items():
+        idx = {lab: i for i, lab in enumerate(labels)}
+        ex = [(s["input"], idx[s["expected"][channel]]) for s in samples if s["expected"].get(channel) in idx]
+        models[channel] = CentroidClassifier.train(ex, dimension=DIM)
+    return models
+
+
+def _tc_feats(text: str) -> dict[int, float]:
+    feats: dict[int, float] = {}
+    if TC_MODELS is None:
+        return feats
+    for channel, base in _TC_FEAT_BASE.items():
+        pred = TC_MODELS[channel].predict(text)  # int label index
+        feats[base + pred] = 1.0
+    return feats
+
+
 _OP_TO_INTENT = {
     "respond": "respond", "reason": "explain", "route": "clarify",
     "generate": "build", "verify": "verify", "remember": "summarize",
@@ -256,11 +295,16 @@ def main() -> None:
     # k-fold CV on the combined pool: a more robust (still in-distribution)
     # generalization estimate than a single 28-case validation. Guards against
     # reading too much into a small-set 1.000.
+    global TC_MODELS
+    TC_MODELS = _build_tc_models()
     out["kfold5_combined_pool"] = {
         "assets_unified": _kfold(pairs_plus, labels, mode="markers", k=5),
         "assets_baseline": _kfold(pairs_plus, labels, mode="plain", k=5),
-        "assets_plus_tc_unified": _kfold(pairs_all, labels, mode="markers", k=5),
-        "assets_plus_tc_baseline": _kfold(pairs_all, labels, mode="plain", k=5),
+        "assets_plus_tc_data_unified": _kfold(pairs_all, labels, mode="markers", k=5),
+        # isolate the channel-FEATURE effect (same data as assets_unified, + tc channel features)
+        "assets_unified_plus_tc_features": _kfold(pairs_plus, labels, mode="markers_tcfeat", k=5),
+        # both: tc data pooled AND tc channel features
+        "assets_plus_tc_data_and_features": _kfold(pairs_all, labels, mode="markers_tcfeat", k=5),
     }
     out["reference"] = {"markers_only_validation": 0.964286, "deployed_model_only_validation": 0.678571}
     out["honesty_note"] = (

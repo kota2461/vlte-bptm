@@ -1,6 +1,6 @@
 {
   "schema_version": "exp-unified-model.v1",
-  "generated_at": "2026-06-29T07:31:50.915644+00:00",
+  "generated_at": "2026-06-29T07:43:39.240683+00:00",
   "base_corpus_size": 739,
   "extra_pairs_added": 229,
   "thought_color_pairs_added": 366,
@@ -81,7 +81,7 @@
         0.621762
       ]
     },
-    "assets_plus_tc_unified": {
+    "assets_plus_tc_data_unified": {
       "mean": 0.72865,
       "folds": [
         0.719101,
@@ -91,14 +91,24 @@
         0.74812
       ]
     },
-    "assets_plus_tc_baseline": {
-      "mean": 0.688167,
+    "assets_unified_plus_tc_features": {
+      "mean": 0.715875,
       "folds": [
+        0.716495,
+        0.726804,
+        0.737113,
+        0.735751,
+        0.663212
+      ]
+    },
+    "assets_plus_tc_data_and_features": {
+      "mean": 0.715161,
+      "folds": [
+        0.707865,
         0.700375,
-        0.685393,
-        0.636704,
-        0.715356,
-        0.703008
+        0.707865,
+        0.719101,
+        0.740602
       ]
     }
   },
