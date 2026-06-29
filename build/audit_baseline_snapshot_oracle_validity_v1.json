@@ -37,6 +37,6 @@
     "regex_only_full_match_rate": 0.0,
     "regex_only_core_match_rate": 0.188542,
     "regex_only_primary_intent_match_rate": 0.816667,
-    "note": "Committed compare_baseline_source_recovery_oracle.py runs WITH the snapshot, comparing snapshot output against the pyc the snapshot was built from -> trivially 0 mismatches. These rows disable the snapshot to test whether the recovered regex itself reproduces the pyc."
+    "note": "Committed compare_baseline_source_recovery_oracle.py runs WITH the snapshot, comparing snapshot output against the pyc the snapshot was built from -> trivially 0 mismatches. These rows gate the snapshot off to test whether the recovered regex itself reproduces the pyc."
   }
 }

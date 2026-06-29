@@ -53,12 +53,16 @@ def route(
     intent_model: Optional[IntentModel] = None,
     model_path: Path = DEFAULT_INTENT_MODEL_PATH,
     knowledge_index_path: Path = DEFAULT_KNOWLEDGE_INDEX_PATH,
+    use_legacy_snapshot: Optional[bool] = None,
 ) -> RouteResult:
     """Run the v0.3 hybrid adapter on `text` and return packet + plan.
 
     Pass `intent_model` to inject one explicitly (tests / pinned models).
     Otherwise the deployed model at `model_path` is used if present; if it is
     missing, the adapter runs markers-only.
+
+    `use_legacy_snapshot` gates the exact-match memorization snapshot in
+    extract_semantic_packet (None -> baseline.LEGACY_SNAPSHOT_DEFAULT).
     """
     model = (
         intent_model
@@ -66,7 +70,9 @@ def route(
         else _load_intent_model(str(model_path))
     )
     trace: Dict[str, Any] = {"adapter_version": ADAPTER_VERSION}
-    packet = extract_semantic_packet(text, model, trace=trace)
+    packet = extract_semantic_packet(
+        text, model, trace=trace, use_legacy_snapshot=use_legacy_snapshot
+    )
     guard = derive_failure_guard(text, packet)
     retrieval = build_retrieval_packet(text, index_path=knowledge_index_path)
     trace["failure_guard"] = guard.as_dict()
