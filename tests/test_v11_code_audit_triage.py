@@ -47,7 +47,7 @@ def test_v11_code_audit_triage_records_completed_baseline_source_recovery() -> N
     assert baseline["blocks_step2"] is False
     assert baseline["recovery_status"] == "completed"
     assert baseline["file"] == "semantic_routing/baseline.py"
-    assert baseline["chosen_pyc"]["path"].startswith("semantic_routing/__pycache__/baseline.cpython-310.pyc.")
+    assert baseline["chosen_pyc"]["path"] == "build/recovery_assets/baseline_legacy_cpython310.pyc"
     assert baseline["chosen_pyc"]["size"] > 50000
     assert report["step2_blockers"] == []
 

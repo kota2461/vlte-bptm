@@ -12,7 +12,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from semantic_routing.reproducibility import reproducible_now_iso
+from semantic_routing.reproducibility import reproducible_now_iso  # noqa: E402
+
 BASELINE_PATH = ROOT / "semantic_routing" / "baseline.py"
 KNOWLEDGE_INDEX_PATH = ROOT / "semantic_routing" / "knowledge_index.py"
 CACHE = ROOT / "semantic_routing" / "__pycache__"
@@ -35,7 +36,15 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+RECOVERY_PYC = ROOT / "build" / "recovery_assets" / "baseline_legacy_cpython310.pyc"
+
+
 def _chosen_baseline_pyc() -> Path | None:
+    # Prefer the version-controlled legacy bytecode (S2) so this diagnostic is
+    # reproducible from a clean clone. Fall back to the (gitignored) __pycache__
+    # blobs only if the tracked copy is absent.
+    if RECOVERY_PYC.exists():
+        return RECOVERY_PYC
     candidates = sorted(
         (p for p in CACHE.glob("baseline.cpython-310.pyc.*") if p.stat().st_size > 50000),
         key=lambda p: p.stat().st_mtime,
@@ -60,7 +69,9 @@ def build_payload() -> dict[str, Any]:
             "path": _rel(chosen_pyc),
             "sha256": _sha256(chosen_pyc),
             "size": chosen_pyc.stat().st_size,
-            "mtime": chosen_pyc.stat().st_mtime,
+            # mtime intentionally omitted: it is checkout-dependent for the
+            # version-controlled pyc and would churn the report; sha256 is the
+            # stable identity.
         }
     profile_literal_audit = (
         json.loads(PROFILE_LITERAL_AUDIT_PATH.read_text(encoding="utf-8"))

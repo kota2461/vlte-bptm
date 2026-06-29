@@ -1074,10 +1074,9 @@
         "confirmed": false,
         "file": "semantic_routing/baseline.py",
         "chosen_pyc": {
-          "path": "semantic_routing/__pycache__/baseline.cpython-310.pyc.2207508733360",
+          "path": "build/recovery_assets/baseline_legacy_cpython310.pyc",
           "sha256": "780881fe474b2eaef0887d7234af6977b5953353fcccf8164fdc87eebce7b01b",
-          "size": 58260,
-          "mtime": 1782539421.91354
+          "size": 58260
         },
         "risk": "router import depends on ignored __pycache__ bytecode and unreadable v7-v9 logic",
         "blocks_step2": false,

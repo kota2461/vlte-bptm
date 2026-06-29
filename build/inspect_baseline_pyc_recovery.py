@@ -12,7 +12,14 @@ OUT_JSON = ROOT / "build" / "baseline_pyc_recovery_inspection_v1.json"
 OUT_DIS = ROOT / "build" / "baseline_pyc_recovery_disassembly_v1.txt"
 
 
+RECOVERY_PYC = ROOT / "build" / "recovery_assets" / "baseline_legacy_cpython310.pyc"
+
+
 def _chosen_pyc() -> Path:
+    # Prefer the version-controlled legacy bytecode (S2); fall back to the
+    # gitignored __pycache__ blobs only if the tracked copy is absent.
+    if RECOVERY_PYC.exists():
+        return RECOVERY_PYC
     candidates = sorted(
         (p for p in CACHE.glob("baseline.cpython-310.pyc.*") if p.stat().st_size > 50000),
         key=lambda p: p.stat().st_mtime,

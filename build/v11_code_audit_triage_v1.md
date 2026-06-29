@@ -26,7 +26,7 @@ Generated: 2026-01-01T00:00:00+00:00
 
 ## Chosen Baseline Pyc
 
-- path: `semantic_routing/__pycache__/baseline.cpython-310.pyc.2207508733360`
+- path: `build/recovery_assets/baseline_legacy_cpython310.pyc`
 - sha256: `780881fe474b2eaef0887d7234af6977b5953353fcccf8164fdc87eebce7b01b`
 - size: 58260
 
