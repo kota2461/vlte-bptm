@@ -44,3 +44,6 @@ experiments/2026-06-19_role-split-detectors/
 # Canonical V6 fixtures/reports live in build/v6_* and tests/fixtures/v6_*.
 # Raw LM Studio/router debate runs are local evidence and can be regenerated.
 build/router_debate_*.json
+
+# local backup archives
+backups/
