@@ -6,6 +6,10 @@ __pycache__/
 pytest-cache-files-*/
 *.egg-info/
 
+# setuptools build-staging output (regenerable; not source)
+build/lib/
+/dist/
+
 # Tracked exception: legacy baseline bytecode is the source of truth for
 # baseline_snapshot.py recovery (S2). See build/recovery_assets/README.md.
 !build/recovery_assets/
