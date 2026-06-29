@@ -1,0 +1,2017 @@
+{
+  "schema_version": "weakpoint-explain-english-debate-candidate-selection.v1",
+  "generated_at": "2026-06-29T13:24:29.123396+00:00",
+  "status": "candidate_queue_prepared_from_debate_log",
+  "source_log": "build\\weakpoint_explain_english_debate_v1.json",
+  "topics_source": "debate_lab\\topics_weakpoint_explain_english_v1.json",
+  "policy": {
+    "sealed_fixtures_used_as_sources": false,
+    "sealed_text_used": false,
+    "sealed_labels_used": false,
+    "raw_debate_logs_direct_training_allowed": false,
+    "llm_turn_text_direct_training_allowed": false,
+    "topic_metadata_synthesis_used": true,
+    "human_review_required_before_training": true,
+    "human_review_required_before_gate": true,
+    "same_cycle_gate_use_allowed": false,
+    "candidate_queue_is_training_data": false
+  },
+  "selection_rules": {
+    "min_rounds": 4,
+    "min_score": 45,
+    "top": null,
+    "raw_llm_text_is_training_data": false,
+    "candidate_queue_requires_human_rewrite": true
+  },
+  "summary": {
+    "source_topic_count": 26,
+    "candidate_count": 26,
+    "usable_review_candidate_count": 26,
+    "hold_for_manual_review_count": 0,
+    "not_enough_signal_count": 0,
+    "router_before_miss_count": 11,
+    "turn_count": 208,
+    "expected_rounds": 4,
+    "status_counts": {
+      "usable_review_candidate": 26
+    },
+    "focus_counts": {
+      "English explore recall": 1,
+      "English respond recall": 1,
+      "break_down disambiguation": 1,
+      "explain false-positive guard": 1,
+      "explain mixed-language": 1,
+      "explain paraphrase transfer": 1,
+      "explain recall (English colloquial)": 1,
+      "explain recall (English)": 9,
+      "explain vs build boundary": 1,
+      "explain vs explore boundary": 1,
+      "explain vs respond minimal pair": 1,
+      "explain vs verify boundary": 1,
+      "explore vs explain": 1,
+      "multi-intent build+explain": 1,
+      "multi-intent explore+explain": 1,
+      "multi-intent verify+explain": 1,
+      "respond vs explain minimal pair": 1,
+      "verify vs explain": 1
+    },
+    "target_intent_counts": {
+      "explain": 18,
+      "explore": 3,
+      "respond": 3,
+      "verify": 2
+    },
+    "top_axis_counts": {
+      "weakpoint": 26,
+      "english": 25,
+      "explain": 20,
+      "colloquial": 4,
+      "explain_false_positive": 3,
+      "respond": 3,
+      "explore": 3,
+      "multiple_intents": 3,
+      "verify": 2,
+      "explain_vs_respond": 2,
+      "explain_vs_build": 2,
+      "respond_vs_explain": 1,
+      "explain_vs_explore": 1,
+      "explain_vs_verify": 1,
+      "operation_terminal": 1,
+      "unverified_claim": 1,
+      "paraphrase": 1,
+      "mixed_language": 1
+    }
+  },
+  "candidates": [
+    {
+      "id": "weakpoint-explain-english-candidate-013",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-01",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain false-positive guard",
+      "theme": "English: 'Is 0.1 + 0.2 == 0.3 in Python?' route respond/verify, NOT explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain_false_positive",
+        "respond"
+      ],
+      "target_intent": "respond",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 23331,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify",
+          "calculate"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-014",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-02",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "verify vs explain",
+      "theme": "English: 'Check whether this regex is correct.' verify, not explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "verify",
+        "explain_false_positive"
+      ],
+      "target_intent": "verify",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 26366,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "ask_first",
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-015",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-03",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explore vs explain",
+      "theme": "English: 'Compare REST vs GraphQL for my use case.' explore, not explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explore",
+        "explain_false_positive"
+      ],
+      "target_intent": "explore",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 30448,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "medical",
+            "legal",
+            "security"
+          ]
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-016",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-04",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "respond vs explain minimal pair",
+      "theme": "English: 'What is a semaphore?' respond (definition), not explain (how-it-works).",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "respond",
+        "respond_vs_explain"
+      ],
+      "target_intent": "respond",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 22528,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "short",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-017",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-05",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "English explore recall",
+      "theme": "English: 'List a few ways to cache API responses.' explore, not explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explore"
+      ],
+      "target_intent": "explore",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 28574,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-018",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-bnd-06",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "English respond recall",
+      "theme": "English: 'Tell me the capital of Australia.' respond.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "respond"
+      ],
+      "target_intent": "respond",
+      "router_before_intent": "verify",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 22175,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "long",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-001",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-01",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "In English, a user asks why adding an index sped up a slow query. Route to explain (mechanism/cause), not respond (one-line fact) and not verify.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_respond"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 26468,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": false
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-002",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-02",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'Help me understand how OAuth refresh tokens actually work.' Route to explain, not respond.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 27918,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-003",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-03",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English colloquial)",
+      "theme": "English colloquial: 'I don't really get why my recursion overflows.' Route to explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "colloquial"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 28786,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.98
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-004",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-04",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain vs build boundary",
+      "theme": "English: 'Walk me through what causes cache invalidation bugs.' explain, not build.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_build"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "build",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 26190,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-005",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-05",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain vs respond minimal pair",
+      "theme": "English: 'Explain what a p-value actually means here' vs 'What is a p-value' -- explain (meaning-in-context) vs respond (definition).",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_respond"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 31364,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-006",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-06",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'Why is my Docker image so large?' Route to explain (cause), not respond.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 27336,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "security"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-007",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-07",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain vs explore boundary",
+      "theme": "English: 'Can you explain the difference between TCP and UDP and why it matters' -- explain, even though 'difference' hints explore/compare.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_explore"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 24885,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "explain",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-008",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-08",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'I never really understood why floating point is imprecise.' explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "colloquial"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 26221,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-009",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-09",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'How does gradient descent actually converge?' explain (how/why), not respond.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 27897,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-010",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-10",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain vs verify boundary",
+      "theme": "English: 'Explain why my unit test passes locally but fails in CI.' explain vs verify('check it').",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_verify"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 29383,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-011",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-11",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'What's the reasoning behind using a message queue here?' explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 29989,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-012",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-explain-12",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'Give me the intuition behind backpropagation.' explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 28260,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-019",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-multi-01",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "multi-intent build+explain",
+      "theme": "English: 'Draft a rollout plan, then explain the risky step.' multiple_intents: build then explain terminal.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "multiple_intents",
+        "explain",
+        "operation_terminal"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "build",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 30618,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "explain"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-020",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-multi-02",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "multi-intent explore+explain",
+      "theme": "English: 'Should I use Postgres or MongoDB? Explain your reasoning.' explore + explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "multiple_intents",
+        "explore",
+        "explain"
+      ],
+      "target_intent": "explore",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 30577,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "clarify",
+        "operations": [
+          "clarify",
+          "build",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": true,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "table"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-021",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-multi-03",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "multi-intent verify+explain",
+      "theme": "English: 'Verify these invoice totals and explain any discrepancy.' verify + explain, unverified_claim signal.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "multiple_intents",
+        "verify",
+        "explain",
+        "unverified_claim"
+      ],
+      "target_intent": "verify",
+      "router_before_intent": "explain",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 29012,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": true,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "legal",
+            "security",
+            "unverified_claim"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-022",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-para-01",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain paraphrase transfer",
+      "theme": "English paraphrase cluster for explain: 'why', 'how come', 'what's the reason', 'help me understand' -- all explain.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "paraphrase"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 26670,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "search"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": true,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-023",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-para-02",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain mixed-language",
+      "theme": "Mixed ja/en: 'このアルゴリズムが速い理由を explain して' -- explain (mixed language).",
+      "axis_ids": [
+        "weakpoint",
+        "mixed_language",
+        "explain"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 25782,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-024",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-para-03",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'I'm confused about how JWT signing works.' explain (colloquial confusion cue).",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "colloquial"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 27503,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [
+            "json"
+          ],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-025",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-para-04",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "break_down disambiguation",
+      "theme": "English boundary: 'break down why this approach scales better' = explain, vs 'break down the tasks' = build. Disambiguate 'break down'.",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "explain_vs_build"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "build",
+      "router_before_matches_target": false,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 30710,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "build",
+        "operations": [
+          "build",
+          "verify",
+          "compare"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "preserve_neutrality",
+            "avoid_overclaim"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "low",
+          "flags": []
+        },
+        "confidence": 0.99
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    },
+    {
+      "id": "weakpoint-explain-english-candidate-026",
+      "status": "usable_review_candidate",
+      "selection_score": 100,
+      "source_topic_id": "we-para-05",
+      "target_set": "weakpoint_explain_english_v1",
+      "priority": "high",
+      "recovery_focus": "explain recall (English)",
+      "theme": "English: 'what's going on when my container OOMs?' explain (cause).",
+      "axis_ids": [
+        "weakpoint",
+        "english",
+        "explain",
+        "colloquial"
+      ],
+      "target_intent": "explain",
+      "router_before_intent": "explain",
+      "router_before_matches_target": true,
+      "turn_count": 8,
+      "completed_rounds": 4,
+      "moderator_event_count": 4,
+      "content_chars": 24643,
+      "reasoning_content_chars": 0,
+      "router_closed": true,
+      "selection_reasons": [
+        "rounds_complete",
+        "router_closed_topic",
+        "final_content_only",
+        "enough_discussion_volume",
+        "moderator_guided_each_round",
+        "explicit_output_sections:classification_rule,should_fire_examples,should_not_fire_examples,boundary_cases,candidate_sample_notes,paraphrase_variants",
+        "high_priority_topic",
+        "explain_boundary_surface",
+        "candidate_stub_review_only"
+      ],
+      "cautions": [],
+      "router_packet_hint": {
+        "primary_intent": "explain",
+        "operations": [
+          "explain",
+          "verify"
+        ],
+        "information_state": {
+          "missing_required_information": false,
+          "contains_unverified_claims": false,
+          "requires_current_information": false,
+          "multiple_intents": true
+        },
+        "constraints": {
+          "response_length": "unspecified",
+          "formats": [],
+          "must": [
+            "cite_sources",
+            "avoid_overclaim",
+            "preserve_neutrality"
+          ],
+          "must_not": []
+        },
+        "risk": {
+          "level": "high",
+          "flags": [
+            "security"
+          ]
+        },
+        "confidence": 0.9
+      },
+      "sample_rewrite_instruction": "Human reviewer should rewrite this into a short self-contained non-sealed sample before fixture adoption.",
+      "desired_discussion": [
+        "should_fire / should_not_fire minimal pair",
+        "two paraphrase variants",
+        "produce short self-contained user-utterance samples (not debate prose)",
+        "positive-fire counterpart and a suppressor (false-positive) counterpart",
+        "terminal action and operation order"
+      ],
+      "training_status": "not_training_data"
+    }
+  ]
+}

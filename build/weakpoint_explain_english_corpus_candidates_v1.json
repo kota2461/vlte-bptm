@@ -1,0 +1,278 @@
+{
+ "schema_version": "weakpoint-corpus-candidates.v1",
+ "status": "draft_human_review_required",
+ "policy": {
+  "training_allowed": false,
+  "auto_adopt": false,
+  "note": "review_status=candidate; flip to approved only after human verifies the rewrite + label."
+ },
+ "source_selection": "build/weakpoint_explain_english_debate_candidate_selection_v1.json",
+ "integration_target": "data/intent_training_corpus_v1.json",
+ "row_count": 25,
+ "by_intent": {
+  "respond": 3,
+  "verify": 2,
+  "explore": 3,
+  "explain": 17
+ },
+ "by_language": {
+  "en": 24,
+  "ja": 1
+ },
+ "miss_rows": 11,
+ "needs_manual_authoring": [
+  "weakpoint-explain-english-candidate-001"
+ ],
+ "rows": [
+  {
+   "input": "Is 0.1 + 0.2 == 0.3 in Python?",
+   "intent": "respond",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-01"
+  },
+  {
+   "input": "Check whether this regex is correct.",
+   "intent": "verify",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-02"
+  },
+  {
+   "input": "Compare REST vs GraphQL for my use case.",
+   "intent": "explore",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-03"
+  },
+  {
+   "input": "What is a semaphore?",
+   "intent": "respond",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-04"
+  },
+  {
+   "input": "List a few ways to cache API responses.",
+   "intent": "explore",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-05"
+  },
+  {
+   "input": "Tell me the capital of Australia.",
+   "intent": "respond",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "verify",
+   "router_before_miss": true,
+   "source_topic_id": "we-bnd-06"
+  },
+  {
+   "input": "Help me understand how OAuth refresh tokens actually work.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-02"
+  },
+  {
+   "input": "t really get why my recursion overflows.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-03"
+  },
+  {
+   "input": "Walk me through what causes cache invalidation bugs.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "build",
+   "router_before_miss": true,
+   "source_topic_id": "we-explain-04"
+  },
+  {
+   "input": "Explain what a p-value actually means here",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-05"
+  },
+  {
+   "input": "Why is my Docker image so large?",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-06"
+  },
+  {
+   "input": "Can you explain the difference between TCP and UDP and why it matters",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-07"
+  },
+  {
+   "input": "I never really understood why floating point is imprecise.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-08"
+  },
+  {
+   "input": "How does gradient descent actually converge?",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-09"
+  },
+  {
+   "input": "Explain why my unit test passes locally but fails in CI.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-10"
+  },
+  {
+   "input": "s the reasoning behind using a message queue here?",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-11"
+  },
+  {
+   "input": "Give me the intuition behind backpropagation.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-explain-12"
+  },
+  {
+   "input": "Draft a rollout plan, then explain the risky step.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "build",
+   "router_before_miss": true,
+   "source_topic_id": "we-multi-01"
+  },
+  {
+   "input": "Should I use Postgres or MongoDB? Explain your reasoning.",
+   "intent": "explore",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-multi-02"
+  },
+  {
+   "input": "Verify these invoice totals and explain any discrepancy.",
+   "intent": "verify",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": true,
+   "source_topic_id": "we-multi-03"
+  },
+  {
+   "input": "how come",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-para-01"
+  },
+  {
+   "input": "このアルゴリズムが速い理由を explain して",
+   "intent": "explain",
+   "language": "ja",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-para-02"
+  },
+  {
+   "input": "m confused about how JWT signing works.",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-para-03"
+  },
+  {
+   "input": "break down why this approach scales better",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "build",
+   "router_before_miss": true,
+   "source_topic_id": "we-para-04"
+  },
+  {
+   "input": "s going on when my container OOMs?",
+   "intent": "explain",
+   "language": "en",
+   "source": "weakpoint_explain_english_debate_v1",
+   "review_status": "candidate",
+   "router_before_intent": "explain",
+   "router_before_miss": false,
+   "source_topic_id": "we-para-05"
+  }
+ ]
+}

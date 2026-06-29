@@ -47,3 +47,7 @@ build/router_debate_*.json
 
 # local backup archives
 backups/
+
+# agent worktrees / scratch (must not be tracked in main repo)
+.claude/
+**/.claude/
