@@ -1,0 +1,599 @@
+{
+ "schema_version": "router-debate-topics.v1",
+ "purpose": "Weak-point debate stock: explain intent (model 0/4) and English (0.57 vs ja 0.79). Diverse, boundary-aware English/explain themes to lift the learned model's weak areas. Human review required before any training use.",
+ "created_at": "2026-01-01T00:00:00+00:00",
+ "source_measurement": "build/model_vs_markers_harness_v1.json",
+ "policy": {
+  "sealed_text_used": false,
+  "sealed_labels_used": false,
+  "raw_debate_log_training_allowed": false,
+  "human_review_required_before_fixture": true,
+  "same_cycle_gate_use_allowed": false
+ },
+ "recommended_run": {
+  "target_set": "weakpoint_explain_english_v1",
+  "rounds": 4,
+  "expected_topics": 26,
+  "expected_turns": 208,
+  "output": "build/weakpoint_explain_english_debate_v1.json"
+ },
+ "summary": {
+  "topic_count": 26,
+  "categories": {
+   "english_explain": 12,
+   "english_boundary_guard": 6,
+   "english_multi_intent": 3,
+   "explain_paraphrase_mixed": 4
+  }
+ },
+ "topics": [
+  {
+   "id": "we-explain-01",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "In English, a user asks why adding an index sped up a slow query. Route to explain (mechanism/cause), not respond (one-line fact) and not verify.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_respond"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-02",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Help me understand how OAuth refresh tokens actually work.' Route to explain, not respond.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-03",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English colloquial: 'I don't really get why my recursion overflows.' Route to explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "colloquial"
+   ],
+   "recovery_focus": "explain recall (English colloquial)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-04",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Walk me through what causes cache invalidation bugs.' explain, not build.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_build"
+   ],
+   "recovery_focus": "explain vs build boundary",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-05",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Explain what a p-value actually means here' vs 'What is a p-value' -- explain (meaning-in-context) vs respond (definition).",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_respond"
+   ],
+   "recovery_focus": "explain vs respond minimal pair",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-06",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Why is my Docker image so large?' Route to explain (cause), not respond.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-07",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Can you explain the difference between TCP and UDP and why it matters' -- explain, even though 'difference' hints explore/compare.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_explore"
+   ],
+   "recovery_focus": "explain vs explore boundary",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-08",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'I never really understood why floating point is imprecise.' explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "colloquial"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-09",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'How does gradient descent actually converge?' explain (how/why), not respond.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-10",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Explain why my unit test passes locally but fails in CI.' explain vs verify('check it').",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_verify"
+   ],
+   "recovery_focus": "explain vs verify boundary",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-11",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'What's the reasoning behind using a message queue here?' explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-explain-12",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Give me the intuition behind backpropagation.' explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-01",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Is 0.1 + 0.2 == 0.3 in Python?' route respond/verify, NOT explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain_false_positive",
+    "respond"
+   ],
+   "recovery_focus": "explain false-positive guard",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-02",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Check whether this regex is correct.' verify, not explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "verify",
+    "explain_false_positive"
+   ],
+   "recovery_focus": "verify vs explain",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-03",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Compare REST vs GraphQL for my use case.' explore, not explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explore",
+    "explain_false_positive"
+   ],
+   "recovery_focus": "explore vs explain",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-04",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'What is a semaphore?' respond (definition), not explain (how-it-works).",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "respond",
+    "respond_vs_explain"
+   ],
+   "recovery_focus": "respond vs explain minimal pair",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-05",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'List a few ways to cache API responses.' explore, not explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explore"
+   ],
+   "recovery_focus": "English explore recall",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-bnd-06",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Tell me the capital of Australia.' respond.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "respond"
+   ],
+   "recovery_focus": "English respond recall",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-multi-01",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Draft a rollout plan, then explain the risky step.' multiple_intents: build then explain terminal.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "multiple_intents",
+    "explain",
+    "operation_terminal"
+   ],
+   "recovery_focus": "multi-intent build+explain",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-multi-02",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Should I use Postgres or MongoDB? Explain your reasoning.' explore + explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "multiple_intents",
+    "explore",
+    "explain"
+   ],
+   "recovery_focus": "multi-intent explore+explain",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-multi-03",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'Verify these invoice totals and explain any discrepancy.' verify + explain, unverified_claim signal.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "multiple_intents",
+    "verify",
+    "explain",
+    "unverified_claim"
+   ],
+   "recovery_focus": "multi-intent verify+explain",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-para-01",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English paraphrase cluster for explain: 'why', 'how come', 'what's the reason', 'help me understand' -- all explain.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "paraphrase"
+   ],
+   "recovery_focus": "explain paraphrase transfer",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-para-02",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "Mixed ja/en: 'このアルゴリズムが速い理由を explain して' -- explain (mixed language).",
+   "axis_ids": [
+    "weakpoint",
+    "mixed_language",
+    "explain"
+   ],
+   "recovery_focus": "explain mixed-language",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-para-03",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'I'm confused about how JWT signing works.' explain (colloquial confusion cue).",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "colloquial"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-para-04",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English boundary: 'break down why this approach scales better' = explain, vs 'break down the tasks' = build. Disambiguate 'break down'.",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "explain_vs_build"
+   ],
+   "recovery_focus": "break_down disambiguation",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  },
+  {
+   "id": "we-para-05",
+   "priority": "high",
+   "target_set": "weakpoint_explain_english_v1",
+   "theme": "English: 'what's going on when my container OOMs?' explain (cause).",
+   "axis_ids": [
+    "weakpoint",
+    "english",
+    "explain",
+    "colloquial"
+   ],
+   "recovery_focus": "explain recall (English)",
+   "desired_discussion": [
+    "should_fire / should_not_fire minimal pair",
+    "two paraphrase variants",
+    "produce short self-contained user-utterance samples (not debate prose)",
+    "positive-fire counterpart and a suppressor (false-positive) counterpart",
+    "terminal action and operation order"
+   ],
+   "training_status": "not_training_data",
+   "human_review_required": true
+  }
+ ]
+}
