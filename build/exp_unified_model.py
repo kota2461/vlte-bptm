@@ -181,6 +181,37 @@ def _kfold(pairs, labels, *, mode: str, k: int = 5) -> dict:
     return {"mean": round(sum(accs) / len(accs), 6), "folds": [round(a, 6) for a in accs]}
 
 
+_OP_TO_INTENT = {
+    "respond": "respond", "reason": "explain", "route": "clarify",
+    "generate": "build", "verify": "verify", "remember": "summarize",
+    "compare": "explore", "reserve": "respond",
+}
+_TC_FILE = ROOT / "experiments" / "2026-06-26_layered-thought-color" / "data" / "thought_color_adopted_full_v0_2.json"
+
+
+def _thought_color_pairs(have: set[str], heldout: set[str]) -> list[tuple[str, str]]:
+    """Thought-color adopted samples (training_allowed, human-reviewed) mapped
+    operation-channel -> intent. Excludes held-out and already-have."""
+    if not _TC_FILE.exists():
+        return []
+    d = json.loads(_TC_FILE.read_text(encoding="utf-8"))
+    out: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for s in d.get("samples", []):
+        if not s.get("training_allowed"):
+            continue
+        inp = s.get("input")
+        op = (s.get("expected") or {}).get("operation")
+        intent = _OP_TO_INTENT.get(op)
+        if not inp or intent not in INTENTS:
+            continue
+        if inp in heldout or inp in have or inp in seen:
+            continue
+        seen.add(inp)
+        out.append((inp, intent))
+    return out
+
+
 def main() -> None:
     corpus = json.loads(CORPUS.read_text(encoding="utf-8"))
     ex = corpus.get("examples", corpus)
@@ -193,21 +224,28 @@ def main() -> None:
     heldout = _heldout_inputs(bench)
     have = {i for i, _ in base_pairs}
     extra = _extra_pairs(have, heldout, bench)
+    tc = _thought_color_pairs(have | {i for i, _ in extra}, heldout)
     # leakage assertion: no training input may be in the held-out set
-    assert not ({i for i, _ in base_pairs + extra} & heldout), "LEAKAGE: training overlaps held-out"
+    assert not ({i for i, _ in base_pairs + extra + tc} & heldout), "LEAKAGE: training overlaps held-out"
     pairs_plus = base_pairs + extra
-    labels = sorted({i for _, i in pairs_plus})
+    pairs_all = base_pairs + extra + tc
+    labels = sorted({i for _, i in pairs_all})
 
     out = {
         "schema_version": "exp-unified-model.v1",
         "generated_at": reproducible_now_iso(),
         "base_corpus_size": len(base_pairs),
         "extra_pairs_added": len(extra),
-        "extra_by_intent": {k: sum(1 for _, l in extra if l == k) for k in sorted({l for _, l in extra})},
+        "thought_color_pairs_added": len(tc),
+        "tc_by_intent": {k: sum(1 for _, l in tc if l == k) for k in sorted({l for _, l in tc})},
         "labels": labels,
         "results": {},
     }
-    datasets = {"corpus_only": base_pairs, "corpus_plus_assets": pairs_plus}
+    datasets = {
+        "corpus_only": base_pairs,
+        "corpus_plus_assets": pairs_plus,
+        "corpus_plus_assets_plus_thoughtcolor": pairs_all,
+    }
     for dtag, dpairs in datasets.items():
         for ftag, mode in (("baseline_features", "plain"), ("unified_features", "markers"), ("unified_rich", "rich")):
             w, b = _train(dpairs, labels, mode=mode)
@@ -219,8 +257,10 @@ def main() -> None:
     # generalization estimate than a single 28-case validation. Guards against
     # reading too much into a small-set 1.000.
     out["kfold5_combined_pool"] = {
-        "unified_features": _kfold(pairs_plus, labels, mode="markers", k=5),
-        "baseline_features": _kfold(pairs_plus, labels, mode="plain", k=5),
+        "assets_unified": _kfold(pairs_plus, labels, mode="markers", k=5),
+        "assets_baseline": _kfold(pairs_plus, labels, mode="plain", k=5),
+        "assets_plus_tc_unified": _kfold(pairs_all, labels, mode="markers", k=5),
+        "assets_plus_tc_baseline": _kfold(pairs_all, labels, mode="plain", k=5),
     }
     out["reference"] = {"markers_only_validation": 0.964286, "deployed_model_only_validation": 0.678571}
     out["honesty_note"] = (
@@ -231,7 +271,7 @@ def main() -> None:
         "estimate."
     )
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"base_corpus_size": out["base_corpus_size"], "extra_pairs_added": out["extra_pairs_added"], "extra_by_intent": out["extra_by_intent"], "results": out["results"], "reference": out["reference"]}, ensure_ascii=False, indent=2))
+    print(json.dumps({"base_corpus_size": out["base_corpus_size"], "extra_pairs_added": out["extra_pairs_added"], "thought_color_pairs_added": out["thought_color_pairs_added"], "kfold5_combined_pool": out["kfold5_combined_pool"]}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
