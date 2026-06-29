@@ -1,6 +1,6 @@
 {
   "schema_version": "honest-validation-harness.v1",
-  "generated_at": "2026-06-29T06:30:09.556586+00:00",
+  "generated_at": "2026-06-29T06:36:07.864601+00:00",
   "fixture": "pattern_language_benchmark_v1.json",
   "split_sizes": {
     "sealed": 28,
