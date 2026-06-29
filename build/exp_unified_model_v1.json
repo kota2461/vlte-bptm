@@ -1,0 +1,28 @@
+{
+  "schema_version": "exp-unified-model.v1",
+  "generated_at": "2026-06-29T06:58:31.529694+00:00",
+  "train_corpus_size": 739,
+  "labels": [
+    "build",
+    "clarify",
+    "explain",
+    "explore",
+    "respond",
+    "summarize",
+    "verify"
+  ],
+  "results": {
+    "baseline_features": {
+      "validation_intent_accuracy": 0.678571,
+      "train_split_intent_accuracy": 0.714286
+    },
+    "unified_features": {
+      "validation_intent_accuracy": 0.928571,
+      "train_split_intent_accuracy": 0.964286
+    }
+  },
+  "reference": {
+    "markers_only_validation": 0.964286,
+    "deployed_model_only_validation": 0.678571
+  }
+}
