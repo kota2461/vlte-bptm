@@ -1,0 +1,1223 @@
+{
+  "schema_version": "diagnose-overfit-literals.v1",
+  "generated_at": "2026-06-29T05:40:16.672267+00:00",
+  "corpus_input_count": 1034,
+  "total_branches": 453,
+  "summary": {
+    "dead_0_matches": 119,
+    "pure_overfit_1_match": 116,
+    "narrow_2_3_matches": 75,
+    "general_4plus_matches": 143
+  },
+  "by_signal_overfit_counts": {
+    "explanation_request": 32,
+    "terminal_build_deliverable": 20,
+    "missing_information": 17,
+    "current_context_blocker": 16,
+    "multiple_intents": 16,
+    "implementation_request": 15,
+    "exploration_request": 13,
+    "verification_request": 12,
+    "conversation_response": 12,
+    "constraint_ask_first": 9,
+    "unverified_claim": 9,
+    "current_information": 7,
+    "long_response": 7,
+    "short_response": 6,
+    "financial_risk": 5,
+    "security_risk": 4,
+    "terminal_explain_deliverable": 4,
+    "emergency_risk": 4,
+    "format_json": 3,
+    "format_code": 3,
+    "constraint_avoid_overclaim": 3,
+    "constraint_no_code": 3,
+    "terminal_summary_deliverable": 3,
+    "constraint_cite_sources": 2,
+    "constraint_no_web_search": 2,
+    "medical_risk": 2,
+    "constraint_preserve_neutrality": 2,
+    "legal_risk": 2,
+    "summary_request": 1,
+    "constraint_no_table": 1
+  },
+  "dead_literals": [
+    {
+      "signal": "constraint_avoid_overclaim",
+      "branch": "(?<![A-Za-z])avoid\\ overclaim(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_avoid_overclaim",
+      "branch": "(?<![A-Za-z])do\\ not\\ overclaim(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_cite_sources",
+      "branch": "出典を",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_no_code",
+      "branch": "コードは不要",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_no_table",
+      "branch": "表を使わず",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_no_web_search",
+      "branch": "検索せず",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_preserve_neutrality",
+      "branch": "どちらかを支持せず",
+      "match_count": 0
+    },
+    {
+      "signal": "constraint_preserve_neutrality",
+      "branch": "(?<![A-Za-z])preserve\\ neutrality(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "こんばんは",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "心配",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "落ち込",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "困っています",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "つらい",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])good\\ evening(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])thanks(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])appreciate(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])anxious(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])worried(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "(?<![A-Za-z])feeling\\ stuck(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今の気分",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今の気持ち",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今の考え",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今の状態を整理",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今日の進捗",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今日の会話",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今日のうち",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今の所",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "今のところ",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "最新の状態を保存",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "ローカルの最新の状態",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "(?<![A-Za-z])how\\ are\\ you\\ doing\\ today(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "today's\\ progress",
+      "match_count": 0
+    },
+    {
+      "signal": "current_information",
+      "branch": "現在は",
+      "match_count": 0
+    },
+    {
+      "signal": "current_information",
+      "branch": "本日時点",
+      "match_count": 0
+    },
+    {
+      "signal": "current_information",
+      "branch": "(?<![A-Za-z])right\\ now(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "emergency_risk",
+      "branch": "緊急",
+      "match_count": 0
+    },
+    {
+      "signal": "emergency_risk",
+      "branch": "命に関わる",
+      "match_count": 0
+    },
+    {
+      "signal": "emergency_risk",
+      "branch": "(?<![A-Za-z])emergency(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "emergency_risk",
+      "branch": "(?<![A-Za-z])life\\-threatening(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "どのように機能",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "どういう仕組み",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "どういう理由",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])how\\ it\\ works(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])what\\ makes(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])help\\ me\\ understand(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "背景を知りたい",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "背景が知りたい",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "何が起きている",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "順を追って知りたい",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "なんで",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "ピンとこない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "ピンと来ない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "腑に落ち",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "しっくりこない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "しっくり来ない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "実感がわかない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "実感が湧かない",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "腹落ち",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "don't\\ get",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "don't\\ really\\ get",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])never\\ really\\ got(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "can't\\ see\\ why",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])what\\ causes(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])what\\ caused(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "比べて",
+      "match_count": 0
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "挙げて比べ",
+      "match_count": 0
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "どっちがおすすめ",
+      "match_count": 0
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "どちらがおすすめ",
+      "match_count": 0
+    },
+    {
+      "signal": "financial_risk",
+      "branch": "投資",
+      "match_count": 0
+    },
+    {
+      "signal": "financial_risk",
+      "branch": "融資",
+      "match_count": 0
+    },
+    {
+      "signal": "financial_risk",
+      "branch": "税金",
+      "match_count": 0
+    },
+    {
+      "signal": "financial_risk",
+      "branch": "(?<![A-Za-z])investment(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "financial_risk",
+      "branch": "(?<![A-Za-z])loan(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "format_code",
+      "branch": "コードで",
+      "match_count": 0
+    },
+    {
+      "signal": "format_code",
+      "branch": "(?<![A-Za-z])code\\ sample(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "format_json",
+      "branch": "JSON形式",
+      "match_count": 0
+    },
+    {
+      "signal": "format_json",
+      "branch": "(?<![A-Za-z])json\\ object(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "組ん",
+      "match_count": 0
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "問題を作",
+      "match_count": 0
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "問題作成",
+      "match_count": 0
+    },
+    {
+      "signal": "legal_risk",
+      "branch": "契約違反",
+      "match_count": 0
+    },
+    {
+      "signal": "legal_risk",
+      "branch": "(?<![A-Za-z])lawsuit(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "詳細に",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "網羅的",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "丁寧に",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "(?<![A-Za-z])in\\ detail(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "(?<![A-Za-z])comprehensive(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "long_response",
+      "branch": "(?<![A-Za-z])thorough(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "medical_risk",
+      "branch": "症状",
+      "match_count": 0
+    },
+    {
+      "signal": "missing_information",
+      "branch": "情報がありません",
+      "match_count": 0
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])not\\ shared(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "そのうえで",
+      "match_count": 0
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "その後に",
+      "match_count": 0
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "続けて",
+      "match_count": 0
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "して、リスク",
+      "match_count": 0
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])and\\ also(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "security_risk",
+      "branch": "脆弱性",
+      "match_count": 0
+    },
+    {
+      "signal": "security_risk",
+      "branch": "認証情報",
+      "match_count": 0
+    },
+    {
+      "signal": "security_risk",
+      "branch": "(?<![A-Za-z])security\\ vulnerability(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])brief(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後に実装計画",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "そのうえで実装計画",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その上で実装計画",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後で\\.\\*作って",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後に\\.\\*作って",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "そのうえで\\.\\*作って",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その上で\\.\\*作って",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後で\\.\\*提示してください",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後に\\.\\*提示してください",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "そのうえで\\.\\*提示してください",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その上で\\.\\*提示してください",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "問題を作って",
+      "match_count": 0
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "問題を作成",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "正しければ",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "使えますか",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "推奨",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "おすすめ",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "(?<![A-Za-z])recommended\\ one(?![A-Za-z])",
+      "match_count": 0
+    },
+    {
+      "signal": "verification_request",
+      "branch": "見てもらって",
+      "match_count": 0
+    }
+  ],
+  "pure_overfit_literals": [
+    {
+      "signal": "constraint_ask_first",
+      "branch": "質問して確認",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "希望する形式を聞いて",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ first(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ me\\ before(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ me\\ what(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ me\\ questions(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ whether(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ for\\ what(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_ask_first",
+      "branch": "(?<![A-Za-z])ask\\ for\\ the(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_avoid_overclaim",
+      "branch": "過断定",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_cite_sources",
+      "branch": "根拠を示",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_no_code",
+      "branch": "(?<![A-Za-z])without\\ code(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_no_code",
+      "branch": "(?<![A-Za-z])no\\ code(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "constraint_no_web_search",
+      "branch": "(?<![A-Za-z])without\\ web\\ search(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "conversation_response",
+      "branch": "助かりました",
+      "match_count": 1
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "today's\\ conversation",
+      "match_count": 1
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "(?<![A-Za-z])current\\ context(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "current_context_blocker",
+      "branch": "(?<![A-Za-z])in\\ this\\ chat(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "current_information",
+      "branch": "今日時点",
+      "match_count": 1
+    },
+    {
+      "signal": "current_information",
+      "branch": "今の",
+      "match_count": 1
+    },
+    {
+      "signal": "current_information",
+      "branch": "現時点",
+      "match_count": 1
+    },
+    {
+      "signal": "current_information",
+      "branch": "(?<![A-Za-z])as\\ of(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "どうして",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])how\\ does(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])walk\\ me\\ through(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])what\\ the\\ number\\ means(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])why\\ it\\ matters(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])deciding\\ factor(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "explanation_request",
+      "branch": "(?<![A-Za-z])detailed\\ explanation(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "複数の案",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "いくつかの方法",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "別の方法",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "洗い出して",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "洗い出してください",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "(?<![A-Za-z])different\\ approaches(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "(?<![A-Za-z])several\\ options(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "(?<![A-Za-z])failure\\ modes(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "exploration_request",
+      "branch": "(?<![A-Za-z])tradeoffs(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "format_code",
+      "branch": "(?<![A-Za-z])code\\ block(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "format_json",
+      "branch": "JSONで",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "導入計画",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "(?<![A-Za-z])break\\ down(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "(?<![A-Za-z])build\\ plan(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "用意",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "ドラフト",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "段取り",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "組み立て",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "チェックリスト",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "提示して",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "提示してください",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "(?<![A-Za-z])follow\\-up\\ tasks(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "implementation_request",
+      "branch": "(?<![A-Za-z])list\\ follow\\-up\\ tasks(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "long_response",
+      "branch": "(?<![A-Za-z])detailed(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "medical_risk",
+      "branch": "薬",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "質問してもらえますか",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])did\\ not\\ share(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])did\\ not\\ provide(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])information\\ is\\ missing(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])ask\\ first(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])ask\\ whether(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])ask\\ for\\ what(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])ask\\ for\\ the(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])artifact\\ first(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])which\\ api\\ version(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])which\\ user\\ group(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])target\\ database(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "(?<![A-Za-z])success\\ metric(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "まだ伝わっていません",
+      "match_count": 1
+    },
+    {
+      "signal": "missing_information",
+      "branch": "まだ共有できていない",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "その上で",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "その後で",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "して、その",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "挙げてから",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])then\\ briefly(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])then\\ draft\\ the\\ deployment(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])then\\ recommend(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])then\\ list(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])then\\ provide(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])before\\ calculating(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "multiple_intents",
+      "branch": "(?<![A-Za-z])before\\ you\\ explain(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "security_risk",
+      "branch": "(?<![A-Za-z])credentials(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])one\\-sentence(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])three\\ lines(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])only\\ the\\ result(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])return\\ only\\ the\\ result(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "short_response",
+      "branch": "(?<![A-Za-z])only\\ a\\ short(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "summary_request",
+      "branch": "(?<![A-Za-z])boil(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "その後で実装計画",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])then\\ recommend(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])then\\ list(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])then\\ provide(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])provide\\ a\\ json\\ template(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])list\\ follow\\-up\\ tasks(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_build_deliverable",
+      "branch": "(?<![A-Za-z])recommend\\ a\\ build\\ plan(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_explain_deliverable",
+      "branch": "(?<![A-Za-z])what\\ the\\ number\\ means(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_explain_deliverable",
+      "branch": "(?<![A-Za-z])why\\ it\\ matters(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_explain_deliverable",
+      "branch": "(?<![A-Za-z])deciding\\ factor(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_explain_deliverable",
+      "branch": "(?<![A-Za-z])detailed\\ explanation(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_summary_deliverable",
+      "branch": "summaryを",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_summary_deliverable",
+      "branch": "(?<![A-Za-z])summarize\\ the\\ current\\ status(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "terminal_summary_deliverable",
+      "branch": "(?<![A-Za-z])summarize\\ the\\ risk(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])claim\\ below(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])totals\\ add\\ up(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])totals\\ actually\\ add\\ up(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])totals\\ are\\ right(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])reported\\ totals(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])invoice\\ totals(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])was\\ proposed(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])reported\\ figures(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "unverified_claim",
+      "branch": "(?<![A-Za-z])report\\ says(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "見てほしい",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "チェックして",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "(?<![A-Za-z])make\\ sure(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "(?<![A-Za-z])plausible(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "(?<![A-Za-z])still\\ the\\ recommended(?![A-Za-z])",
+      "match_count": 1
+    },
+    {
+      "signal": "verification_request",
+      "branch": "(?<![A-Za-z])still\\ recommended(?![A-Za-z])",
+      "match_count": 1
+    }
+  ]
+}
