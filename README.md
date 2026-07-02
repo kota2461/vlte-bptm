@@ -165,5 +165,9 @@ $env:PYTHONPATH="."; python build\router_eval.py
 - `docs/PROCESSING_ROUTER_roadmap.md`: 処理経路・予算Routerのロードマップ
 - `docs/LLM_INTEGRATION_roadmap.md`: Core・Runtime・LLM接続と品質費用評価
 - `docs/HANDOVER_2026-06-11_session12.md`: 境界候補v2・DB状態・次の学習地点
+- `docs/BIT_SYSTEMS_PROPOSALS_2026-07-02.md`: bitベース新システム12案の提案・批評・選定レポート
+- `docs/ROUTE_CAM_v0_1_design.md`: SIG-64署名 + TCAM型ルート昇格 (route-cam.v1) の契約
+- `docs/THOUGHT_JOURNAL_v0_1_design.md`: TSRターン間XORデルタジャーナルの契約
 
-旧`thought_register`は移行比較用として残しています。
+旧`thought_register`は移行比較用として残しています (Thought Journalは同
+パッケージへの後方互換拡張)。

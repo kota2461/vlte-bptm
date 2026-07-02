@@ -9,6 +9,13 @@ def select_mode(state: ThoughtState) -> str:
     if state.has(ThoughtBit.NEED_VERIFY) and state.has(ThoughtBit.CAUTION):
         return "verify"
 
+    # Journal revisit: a near-identical thought state was seen earlier in
+    # the session — reference that context instead of starting over. Sits
+    # BELOW verify on purpose (safety-first: a revisited verification
+    # request must still verify), above the constructive modes.
+    if state.has(ThoughtBit.RETRIEVE_MEMORY):
+        return "recall"
+
     # Explicit construction intent wins over general curiosity.
     if state.has(ThoughtBit.NEED_DECOMPOSE) and state.has(ThoughtBit.PLAN):
         return "build"

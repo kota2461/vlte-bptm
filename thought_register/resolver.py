@@ -35,4 +35,14 @@ def resolve_conflicts(state: ThoughtState) -> ThoughtState:
     elif state.has(ThoughtBit.ANSWER_POSSIBLE):
         state.set(ThoughtBit.FINAL_ANSWER, 0.8, "resolver.answer_possible")
 
+    # Loop repair (journal feedback): the register is flapping between
+    # actions on an unchanged context — stop finalising and ask instead.
+    # The encoder never sets these bits, so this branch is unreachable in
+    # the single-turn pipeline and only fires on journal injection.
+    if state.has(ThoughtBit.REPAIR_DRIVE) and state.has(
+        ThoughtBit.CONTRADICTION_DETECTED
+    ):
+        state.clear(ThoughtBit.FINAL_ANSWER)
+        state.set(ThoughtBit.ASK_QUESTION, 0.85, "resolver.loop_repair")
+
     return state

@@ -1,8 +1,9 @@
 from dataclasses import dataclass
-from typing import List
+from typing import List, Optional
 
 from .bits import ThoughtBit
 from .encoder import encode_initial_bits
+from .journal import ThoughtJournal
 from .mode_selector import select_mode
 from .order_builder import build_llm_order
 from .resolver import resolve_conflicts
@@ -58,9 +59,26 @@ def _trace(stage: str, before: int, after: int) -> TraceStep:
     )
 
 
-def process(user_input: str) -> ThoughtResult:
+def process(
+    user_input: str,
+    journal: Optional[ThoughtJournal] = None,
+) -> ThoughtResult:
+    """Run the register pipeline on one input.
+
+    Without a journal this is the original single-turn pure function
+    (byte-identical output). With a journal, detection feedback is injected
+    after encoding (recorded as a `journal_feedback` trace step) and the
+    turn is appended to the journal afterwards — the function stays pure in
+    (user_input, journal history).
+    """
     state = encode_initial_bits(user_input)
     trace = [_trace("encode", 0, state.value)]
+    encoded_value = state.value
+
+    if journal is not None:
+        for flag, intensity, source in journal.feedback(encoded_value):
+            state.set(flag, intensity, source)
+        trace.append(_trace("journal_feedback", encoded_value, state.value))
 
     before_resolve = state.value
     resolve_conflicts(state)
@@ -69,5 +87,8 @@ def process(user_input: str) -> ThoughtResult:
     mode = select_mode(state)
     order = build_llm_order(user_input, state, mode)
     trace.append(_trace(f"select_mode:{mode}", state.value, state.value))
+
+    if journal is not None:
+        journal.append(encoded_value, state.value)
 
     return ThoughtResult(state=state, mode=mode, order=order, trace=trace)
