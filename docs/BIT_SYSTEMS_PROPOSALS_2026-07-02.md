@@ -152,6 +152,25 @@ python -m pytest -q  ->  345 passed (回帰0)
 鳩の巣距離3保証と距離4の限界 / 再訪→recall / 検証依頼の再訪はverify維持 /
 ループ→ASK_QUESTION / ループ警報の自己抑制。
 
+**採用前後A/B実測 (2026-07-02、`build/bit_systems_adoption_ab_report_v1.json`)**:
+backup tag 928a18e (採用前) と main c8370d9 (採用後) を同一成果物・同一の
+非sealedコーパス784入力 (claudelog approved + intent corpus + anchors +
+hybrid regression + v1_0a、text重複排除) で比較:
+
+```text
+adapter route: packet hash差分 0 / plan hash差分 0 / 全フィールド差分 0
+               intent精度 (778ラベル) 0.866324 -> 0.866324 (差0)
+               decided_by: markers 345 / learned 414 / fallback 25 (両側同一)
+tsr process:   784入力の結果hash差分 0 (mode分布も同一)
+accuracy_audit: 全数値フィールド同一 (acceptance 1.0 / cross-boundary 0.36 /
+               boundary regression 1.0 / cross_core 0.75)
+```
+
+= スコア差ゼロ。空CAM store + journal=None既定の「採用はbyte同一」という
+設計主張を、単体テストに加えて実コーパスでも確認。スコアが動き始めるのは
+CAMエントリ起票以降であり、その時は同じA/B手順がエントリごとの
+held-out/shadow評価の土台になる。
+
 ## 6. 次の一手 (優先順)
 
 1. **SIG-64初期エントリ起票** — 収集済みのgate落ち座標から。サンプル収集は
