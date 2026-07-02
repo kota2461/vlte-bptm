@@ -1,0 +1,1058 @@
+{
+ "schema_version": "route-cam-candidates.v1",
+ "generated_at": "2026-07-02",
+ "care_design": "SimHash(32) + language(2) + information_state(4) + risk(3) = 41 care bits; intent bits excluded (default guard)",
+ "shadow_sets": {
+  "approved_corpus": 739,
+  "junk_dropped": 35
+ },
+ "candidates": [
+  {
+   "entry": {
+    "entry_id": "cam_v1_verify_01",
+    "value": "0x65A6347A00020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "verified",
+    "evidence_fixture": "corpus#sha16=c04f6a1a18c69a45",
+    "notes": "gate-under fallback (margin 0.182); label=verify"
+   },
+   "evidence_text": "実装が要件を満たすかテストしてください",
+   "label": "verify",
+   "margin": 0.181769,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_verify_02",
+    "value": "0x0374DAB600020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "verified",
+    "evidence_fixture": "claudelog#sha16=3f95562bb4e43c26",
+    "notes": "gate-under fallback (margin 0.094); label=verify"
+   },
+   "evidence_text": "ログ確認お願いします！問題なければまた明日よろしくお願いします！",
+   "label": "verify",
+   "margin": 0.093752,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_01",
+    "value": "0x870AF28C00020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "corpus#sha16=5eb73517a9ffcd96",
+    "notes": "gate-under fallback (margin 0.185); label=explore"
+   },
+   "evidence_text": "障害対策を一つに絞らず、異なる回復戦略を検討してください",
+   "label": "explore",
+   "margin": 0.185042,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_02",
+    "value": "0x2997D92C00060000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "claudelog#sha16=d91da186e38554d7",
+    "notes": "gate-under fallback (margin 0.172); label=explore"
+   },
+   "evidence_text": "まずは現状でbackup、より、アーカイブ化のほうがいい？をして実働参照用として残しましょう。",
+   "label": "explore",
+   "margin": 0.171735,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_03",
+    "value": "0xE8E9A5AC00020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "claudelog#sha16=323d067b24065041",
+    "notes": "gate-under fallback (margin 0.170); label=explore"
+   },
+   "evidence_text": "こちら使えますか！",
+   "label": "explore",
+   "margin": 0.17003,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "rejected",
+   "review_note": "human review 2026-07-02: 文脈依存の断片。同型再来時にdeep昇格は過剰提供の恐れ"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_04",
+    "value": "0xCD7700D700060000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "claudelog#sha16=773dbe94c1e7ad8c",
+    "notes": "gate-under fallback (margin 0.159); label=explore"
+   },
+   "evidence_text": "Aはコストがかかりそうなので、B、Cを片付けてから行く方向でどうでしょう",
+   "label": "explore",
+   "margin": 0.158666,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "rejected",
+   "review_note": "human review 2026-07-02: 文脈依存の断片。同型再来時にdeep昇格は過剰提供の恐れ"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_05",
+    "value": "0xCF1ACE8200020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "corpus#sha16=b6141e0d28e64227",
+    "notes": "gate-under fallback (margin 0.156); label=explore"
+   },
+   "evidence_text": "三角関数の問題の解き方を複数の方針で検討してください",
+   "label": "explore",
+   "margin": 0.156265,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 2,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_explore_06",
+    "value": "0xE286DD3800020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "deep",
+    "evidence_fixture": "corpus#sha16=84628491806d42a0",
+    "notes": "gate-under fallback (margin 0.103); label=explore"
+   },
+   "evidence_text": "他の解き方はありますか",
+   "label": "explore",
+   "margin": 0.10326,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 1,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_clarify_01",
+    "value": "0xDBB092D500020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "clarify",
+    "evidence_fixture": "claudelog#sha16=9b4ff823cb48ffb3",
+    "notes": "gate-under fallback (margin 0.167); label=clarify"
+   },
+   "evidence_text": "残エラーの処理って出来ますか？それとも進めてから処理した方が良い？",
+   "label": "clarify",
+   "margin": 0.167401,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_clarify_02",
+    "value": "0xA292389A00040000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "clarify",
+    "evidence_fixture": "corpus#sha16=c92472eb67d1ece4",
+    "notes": "gate-under fallback (margin 0.081); label=clarify"
+   },
+   "evidence_text": "Estimate the runtime, but the input size and hardware have not been provided.",
+   "label": "clarify",
+   "margin": 0.080696,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_clarify_03",
+    "value": "0x62E0DD1000020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "clarify",
+    "evidence_fixture": "corpus#sha16=b2d262f2ab694f91",
+    "notes": "gate-under fallback (margin 0.055); label=clarify"
+   },
+   "evidence_text": "数に何かを足すといくつになりますか",
+   "label": "clarify",
+   "margin": 0.054651,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_clarify_04",
+    "value": "0xC352922700020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 2,
+    "plan_class": "clarify",
+    "evidence_fixture": "claudelog#sha16=c3336215b19e22a3",
+    "notes": "gate-under fallback (margin 0.046); label=clarify"
+   },
+   "evidence_text": "こちらの判断をおねがいします！",
+   "label": "clarify",
+   "margin": 0.046351,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 1,
+     "junk": 0,
+     "bad_examples": [
+      {
+       "text": "アーカイブおねがいします！",
+       "label": "build"
+      }
+     ]
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_clarify_05",
+    "value": "0xAE6E98B000060000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "clarify",
+    "evidence_fixture": "claudelog#sha16=5f9aa340a340b2f3",
+    "notes": "gate-under fallback (margin 0.024); label=clarify"
+   },
+   "evidence_text": "LMStudioのトークン量を変更できるのでサイズ10G程度で増やしました。それ以外で変更したい項目があれば指示ください！",
+   "label": "clarify",
+   "margin": 0.024467,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_build_01",
+    "value": "0x05AE93CD00060000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "standard",
+    "evidence_fixture": "claudelog#sha16=262056504da95eea",
+    "notes": "gate-under fallback (margin 0.167); label=build"
+   },
+   "evidence_text": "時間空けて五時間制限もfullで使えるので一気に進めてください！",
+   "label": "build",
+   "margin": 0.16735,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 1,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 1,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_build_02",
+    "value": "0x8844130000020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "standard",
+    "evidence_fixture": "claudelog#sha16=78117ae0b541fc25",
+    "notes": "gate-under fallback (margin 0.155); label=build"
+   },
+   "evidence_text": "後は②人間学習・③契約系で合成でおねがいします！その部分の学習も欲しいので！",
+   "label": "build",
+   "margin": 0.154887,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_build_03",
+    "value": "0x071849A200020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "standard",
+    "evidence_fixture": "corpus#sha16=3c09e82ce81d13b5",
+    "notes": "gate-under fallback (margin 0.152); label=build"
+   },
+   "evidence_text": "確率の問題を解く計画を立ててください",
+   "label": "build",
+   "margin": 0.152028,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  },
+  {
+   "entry": {
+    "entry_id": "cam_v1_build_04",
+    "value": "0xA88F8F4200020000",
+    "care": "0xFFFFFFFF00063F80",
+    "max_distance": 4,
+    "plan_class": "standard",
+    "evidence_fixture": "claudelog#sha16=574820b7539f4f30",
+    "notes": "gate-under fallback (margin 0.120); label=build"
+   },
+   "evidence_text": "保守閾値0.15で進めて",
+   "label": "build",
+   "margin": 0.12037,
+   "baseline_plan": "economy",
+   "sweep": {
+    "0": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "1": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "2": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "3": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "4": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    },
+    "6": {
+     "good": 0,
+     "neutral": 0,
+     "bad": 0,
+     "junk": 0,
+     "bad_examples": []
+    }
+   },
+   "review_status": "approved",
+   "review_note": "human review 2026-07-02: approved"
+  }
+ ],
+ "review_summary": {
+  "approved": 15,
+  "rejected": 2,
+  "reviewed_at": "2026-07-02"
+ }
+}

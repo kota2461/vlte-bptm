@@ -1,4 +1,140 @@
 {
-  "schema_version": "route-cam.v1",
-  "entries": []
+ "schema_version": "route-cam.v1",
+ "entries": [
+  {
+   "entry_id": "cam_v1_verify_01",
+   "value": "0x65A6347A00020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "verified",
+   "evidence_fixture": "corpus#sha16=c04f6a1a18c69a45",
+   "notes": "gate-under fallback (margin 0.182); label=verify"
+  },
+  {
+   "entry_id": "cam_v1_verify_02",
+   "value": "0x0374DAB600020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "verified",
+   "evidence_fixture": "claudelog#sha16=3f95562bb4e43c26",
+   "notes": "gate-under fallback (margin 0.094); label=verify"
+  },
+  {
+   "entry_id": "cam_v1_explore_01",
+   "value": "0x870AF28C00020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "deep",
+   "evidence_fixture": "corpus#sha16=5eb73517a9ffcd96",
+   "notes": "gate-under fallback (margin 0.185); label=explore"
+  },
+  {
+   "entry_id": "cam_v1_explore_02",
+   "value": "0x2997D92C00060000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "deep",
+   "evidence_fixture": "claudelog#sha16=d91da186e38554d7",
+   "notes": "gate-under fallback (margin 0.172); label=explore"
+  },
+  {
+   "entry_id": "cam_v1_explore_05",
+   "value": "0xCF1ACE8200020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "deep",
+   "evidence_fixture": "corpus#sha16=b6141e0d28e64227",
+   "notes": "gate-under fallback (margin 0.156); label=explore"
+  },
+  {
+   "entry_id": "cam_v1_explore_06",
+   "value": "0xE286DD3800020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "deep",
+   "evidence_fixture": "corpus#sha16=84628491806d42a0",
+   "notes": "gate-under fallback (margin 0.103); label=explore"
+  },
+  {
+   "entry_id": "cam_v1_clarify_01",
+   "value": "0xDBB092D500020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "clarify",
+   "evidence_fixture": "claudelog#sha16=9b4ff823cb48ffb3",
+   "notes": "gate-under fallback (margin 0.167); label=clarify"
+  },
+  {
+   "entry_id": "cam_v1_clarify_02",
+   "value": "0xA292389A00040000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "clarify",
+   "evidence_fixture": "corpus#sha16=c92472eb67d1ece4",
+   "notes": "gate-under fallback (margin 0.081); label=clarify"
+  },
+  {
+   "entry_id": "cam_v1_clarify_03",
+   "value": "0x62E0DD1000020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "clarify",
+   "evidence_fixture": "corpus#sha16=b2d262f2ab694f91",
+   "notes": "gate-under fallback (margin 0.055); label=clarify"
+  },
+  {
+   "entry_id": "cam_v1_clarify_04",
+   "value": "0xC352922700020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 2,
+   "plan_class": "clarify",
+   "evidence_fixture": "claudelog#sha16=c3336215b19e22a3",
+   "notes": "gate-under fallback (margin 0.046); label=clarify"
+  },
+  {
+   "entry_id": "cam_v1_clarify_05",
+   "value": "0xAE6E98B000060000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "clarify",
+   "evidence_fixture": "claudelog#sha16=5f9aa340a340b2f3",
+   "notes": "gate-under fallback (margin 0.024); label=clarify"
+  },
+  {
+   "entry_id": "cam_v1_build_01",
+   "value": "0x05AE93CD00060000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "standard",
+   "evidence_fixture": "claudelog#sha16=262056504da95eea",
+   "notes": "gate-under fallback (margin 0.167); label=build"
+  },
+  {
+   "entry_id": "cam_v1_build_02",
+   "value": "0x8844130000020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "standard",
+   "evidence_fixture": "claudelog#sha16=78117ae0b541fc25",
+   "notes": "gate-under fallback (margin 0.155); label=build"
+  },
+  {
+   "entry_id": "cam_v1_build_03",
+   "value": "0x071849A200020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "standard",
+   "evidence_fixture": "corpus#sha16=3c09e82ce81d13b5",
+   "notes": "gate-under fallback (margin 0.152); label=build"
+  },
+  {
+   "entry_id": "cam_v1_build_04",
+   "value": "0xA88F8F4200020000",
+   "care": "0xFFFFFFFF00063F80",
+   "max_distance": 4,
+   "plan_class": "standard",
+   "evidence_fixture": "claudelog#sha16=574820b7539f4f30",
+   "notes": "gate-under fallback (margin 0.120); label=build"
+  }
+ ]
 }

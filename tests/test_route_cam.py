@@ -196,9 +196,16 @@ def test_store_rejects_bad_shapes() -> None:
         )
 
 
-def test_shipped_default_store_is_empty() -> None:
+def test_shipped_default_store_has_approved_entries() -> None:
+    # 2026-07-02 human review: 15 approved (17 drafted, explore_03/04
+    # rejected as context-dependent fragments). The strict parser is the
+    # load path, so this doubles as schema validation of the live store.
     store = load_route_cam(DEFAULT_ROUTE_CAM_PATH)
-    assert len(store) == 0
+    assert len(store) == 15
+    assert all(
+        entry.plan_class in {"verified", "deep", "clarify", "standard"}
+        for entry in store.entries
+    )
 
 
 # --- lookup ----------------------------------------------------------------
@@ -305,13 +312,55 @@ def test_apply_route_cam_escalates_but_never_deescalates() -> None:
 
 
 def test_route_with_empty_store_is_byte_identical() -> None:
+    from pathlib import Path
+
     text = "やっと終わってほっとした"
-    baseline = route(text)
+    # baseline = CAM machinery absent (missing store path), not the shipped
+    # store — this pins the mechanism guarantee independent of live entries
+    baseline = route(text, route_cam_path=Path("does_not_exist_cam.json"))
     with_empty = route(text, route_cam=RouteCamStore(entries=()))
     assert baseline.plan.as_dict() == with_empty.plan.as_dict()
     assert baseline.packet.as_dict() == with_empty.packet.as_dict()
     assert "route_cam" not in baseline.trace
     assert "route_cam" not in with_empty.trace
+
+
+def test_shipped_entries_escalate_their_evidence() -> None:
+    """Adoption regression: every approved entry escalates its evidence
+    input to the target class through the live default store, and rejected
+    candidates are NOT in the store."""
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    staged = json.loads(
+        (root / "build/route_cam_entry_candidates_v1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    store = load_route_cam(DEFAULT_ROUTE_CAM_PATH)
+    store_ids = {entry.entry_id for entry in store.entries}
+    approved = [
+        item
+        for item in staged["candidates"]
+        if item["review_status"] == "approved"
+    ]
+    rejected = [
+        item
+        for item in staged["candidates"]
+        if item["review_status"] == "rejected"
+    ]
+    assert len(approved) == 15
+    assert {item["entry"]["entry_id"] for item in approved} == store_ids
+    assert all(
+        item["entry"]["entry_id"] not in store_ids for item in rejected
+    )
+    for item in approved:
+        result = route(item["evidence_text"])
+        entry_id = item["entry"]["entry_id"]
+        assert result.plan.processing_class == item["entry"]["plan_class"]
+        assert f"route_cam_{entry_id}" in result.plan.reason_codes
+        assert result.trace["route_cam"]["hit"] == entry_id
 
 
 def test_route_applies_cam_hit_and_traces_it() -> None:
